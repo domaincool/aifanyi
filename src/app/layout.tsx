@@ -1,4 +1,5 @@
-﻿import type { Metadata } from 'next';
+import type { Metadata } from 'next';
+import Script from 'next/script';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -23,6 +24,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <footer className="site-footer">
           <p>爱翻译 · aifanyi.com · AI 翻译，认真翻译 © 2026</p>
         </footer>
+        {/* 百度统计：页面交互后加载，不阻塞首屏 */}
+        <Script id="baidu-analytics" strategy="afterInteractive">
+          {`var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?aa2fa4ed30a027cf6f63ee44aef428eb";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();`}
+        </Script>
       </body>
     </html>
   );
