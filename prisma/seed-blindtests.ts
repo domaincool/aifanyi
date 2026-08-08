@@ -37,12 +37,23 @@ const texts: { text: string; scenario: string }[] = [
   { text: '人工智能大模型正在重塑翻译行业，垂直领域的术语库成为新的竞争壁垒。', scenario: 'tech' },
   { text: '遇见你之后，我才知道原来喜欢一个人是这种感觉。', scenario: 'romantic' },
   { text: '非常抱歉给您带来不便，我们已为您安排加急补发，预计明天送达，感谢您的耐心等待。', scenario: 'customer-service' },
-];
+  { text: '亲，这款商品支持七天无理由退换，请您放心下单哦。', scenario: 'ecommerce' },
+  { text: '他这套操作我只能说六个六，太秀了。', scenario: 'meme' },
+  { text: '成年人的崩溃，往往就在一瞬间。', scenario: 'general' },
+  { text: '这个需求很简单的，明天能上线吧？', scenario: 'workplace' },
+  { text: '他家的螺蛳粉，臭是真臭，香也是真香。', scenario: 'review' },];
 
 async function main() {
   let created = 0;
   let skipped = 0;
   for (const item of texts) {
+    // 去重：同原文已存在则跳过（脚本可重复运行）
+    const dup = await prisma.blindtest.findFirst({ where: { sourceText: item.text } });
+    if (dup) {
+      console.log(`跳过（已存在）：${item.text.slice(0, 18)}...`);
+      skipped++;
+      continue;
+    }
     const results: { model: string; text: string; error?: string }[] = await translator.translateAll(
       { text: item.text, sourceLang: 'zh', targetLang: 'en', scenario: 'general' },
       ['deepseek', 'glm', 'google']
