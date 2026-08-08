@@ -1,0 +1,27 @@
+// 梗词条批量数据 #003（22 条）— 运营侧产出，2026-08-09
+// 运营初选 56 条，term 级查重剔除 33 条已在库，剩余 22 条 term+slug 双确认
+import type { MemeSeed } from './meme-data';
+
+export const memeBatch003: MemeSeed[] = [
+  { term: '键盘侠', slug: 'jian-pan-xia', meaning: '网上重拳出击、现实中唯唯诺诺的人。', translation: '"keyboard warrior"', examples: [{ zh: '他现实唯唯诺诺，网上却是键盘侠。', en: 'He\'s timid in person but a total keyboard warrior online.' }], tags: ['吐槽', '网络'], popularity: 65 },
+  { term: '锦鲤', slug: 'jin-li', meaning: '好运象征，转发锦鲤求好运。', translation: '"the lucky koi" / "a lucky charm"', examples: [{ zh: '考试前转发锦鲤求好运。', en: 'Reposting the lucky koi before exams for good luck.' }], tags: ['夸赞', '网络'], popularity: 65 },
+  { term: '欧皇', slug: 'ou-huang', meaning: '抽卡/抽奖运气爆棚的人。', translation: '"gacha god" / "the luckiest person alive"', examples: [{ zh: '十连双黄蛋，欧皇本皇了。', en: 'Two SSRs in one ten-pull — the gacha god himself.' }], tags: ['游戏', '夸赞'], popularity: 55 },
+  { term: '非酋', slug: 'fei-qiu', meaning: '抽卡永远抽不到好东西的人。', translation: '"gacha cursed" / "the unluckiest player"', examples: [{ zh: '两百抽没出货，非酋实锤。', en: 'Two hundred pulls and nothing — officially cursed.' }], tags: ['游戏', '自嘲'], popularity: 55 },
+  { term: '氪金', slug: 'ke-jin', meaning: '游戏内大量充值，花钱买强度。', translation: '"whaling" / "pay-to-win spending"', examples: [{ zh: '这游戏不氪金根本玩不动。', en: 'This game is unplayable without some pay-to-win spending.' }], tags: ['游戏', '吐槽'], popularity: 50 },
+  { term: '爆肝', slug: 'bao-gan', meaning: '熬夜拼命刷游戏或赶工。', translation: '"grinding all night" / "crunching"', examples: [{ zh: '为了活动奖励爆肝三天。', en: 'Grinding all night for three days straight for the event rewards.' }], tags: ['游戏', '自嘲'], popularity: 50 },
+  { term: '老六', slug: 'lao-liu', meaning: '游戏中阴险猥琐、专搞偷袭的玩家，也指人太狗。', translation: '"the sneaky camper" / "a dirty player"', examples: [{ zh: '对面老六又蹲草丛阴人。', en: 'That sneaky camper is bush-camping and ganking again.' }], tags: ['游戏', '吐槽'], popularity: 55 },
+  { term: '卷王', slug: 'juan-wang', meaning: '内卷之王，拼命竞争、疯狂加班的人。', translation: '"the grind king" / "relentless overachiever"', examples: [{ zh: '组里那个卷王又加班到十一点。', en: 'The grind king in our team is at it again, working till 11pm.' }], tags: ['职场', '自嘲', '吐槽'], popularity: 65 },
+  { term: '精神离职', slug: 'jing-shen-li-zhi', meaning: '人在工位、心已离职，只做分内事。', translation: '"quiet quitting"', examples: [{ zh: '我已经精神离职了，到点就走。', en: 'I\'m quiet quitting — I leave the moment the clock hits five.' }], tags: ['职场', '自嘲'], popularity: 55 },
+  { term: '搭子', slug: 'da-zi', meaning: '一起做某件事的伙伴，如饭搭子、学习搭子。', translation: '"activity buddy" / "partner for [activity]"', examples: [{ zh: '找个饭搭子一起干饭。', en: 'Looking for a lunch buddy to grab grub with.' }], tags: ['社交', '生活'], popularity: 65 },
+  { term: '铁子', slug: 'tie-zi', meaning: '北方方言，铁哥们、好兄弟。', translation: '"my bro" / "my ride-or-die"', examples: [{ zh: '铁子，这事儿就拜托你了。', en: 'My bro, I\'m counting on you for this.' }], tags: ['称呼', '社交'], popularity: 45 },
+  { term: '直男', slug: 'zhi-nan', meaning: '不解风情、不懂女生心思的直男，常带调侃。', translation: '"a clueless straight guy"', examples: [{ zh: '他太直男了，完全听不懂暗示。', en: 'He\'s so clueless — totally misses every hint.' }], tags: ['性格', '吐槽'], popularity: 60 },
+  { term: '渣男', slug: 'zha-nan', meaning: '玩弄感情、不负责任的男人。', translation: '"a trash guy" / "a player"', examples: [{ zh: '她前男友是个彻头彻尾的渣男。', en: 'Her ex is a complete trash guy.' }], tags: ['恋爱', '吐槽'], popularity: 60 },
+  { term: '小奶狗', slug: 'xiao-nai-gou', meaning: '奶萌黏人的年下男友类型。', translation: '"a puppy-type boyfriend"', examples: [{ zh: '她喜欢小奶狗类型的男朋友。', en: 'She\'s into the puppy-type boyfriend.' }], tags: ['恋爱', '称呼'], popularity: 45 },
+  { term: '妈宝', slug: 'ma-bao', meaning: '什么都听妈妈的成年子女，带贬义。', translation: '"a mommy\'s boy"', examples: [{ zh: '他是个妈宝，连约会都要问妈妈。', en: 'He\'s a total mommy\'s boy — even asks his mom about dates.' }], tags: ['吐槽', '性格'], popularity: 50 },
+  { term: '巨婴', slug: 'ju-ying', meaning: '心理不成熟、任性自我的成年人。', translation: '"a giant baby"', examples: [{ zh: '成年人还撒泼打滚，典型巨婴。', en: 'Throwing tantrums as an adult — a classic giant baby.' }], tags: ['吐槽', '社会现象'], popularity: 55 },
+  { term: '双标', slug: 'shuang-biao', meaning: '双重标准，对人对己两套标准。', translation: '"double standards"', examples: [{ zh: '他对自己一套标准对别人一套，太双标了。', en: 'One standard for himself, another for everyone else — such double standards.' }], tags: ['吐槽', '社交'], popularity: 60 },
+  { term: '剁手', slug: 'duo-shou', meaning: '忍不住买买买，「再买就剁手」。', translation: '"cutting off my own hands" (can\'t stop shopping)', examples: [{ zh: '双十一又没忍住，真想剁手。', en: 'Couldn\'t resist again on Singles\' Day — I might as well cut off my hands.' }], tags: ['购物', '自嘲'], popularity: 50 },
+  { term: '赢麻了', slug: 'ying-ma-le', meaning: '赢到麻木，大获全胜的得意。', translation: '"winning so hard I\'m numb"', examples: [{ zh: '这波操作赢麻了。', en: 'This move had us winning so hard we went numb.' }], tags: ['网络', '情绪', '夸赞'], popularity: 55 },
+  { term: '寄了', slug: 'ji-le', meaning: '完蛋了、没戏了，游戏黑话出圈。', translation: '"we\'re cooked" / "it\'s over"', examples: [{ zh: '开局送一血，这把寄了。', en: 'First blood given in the first minute — this game\'s cooked.' }], tags: ['网络', '自嘲', '游戏'], popularity: 60 },
+  { term: '笑不活了', slug: 'xiao-bu-huo-le', meaning: '笑到不行，「笑死我了」的夸张版。', translation: '"I\'m dying of laughter"', examples: [{ zh: '看他翻车视频，笑不活了。', en: 'Watching his fail video — I\'m dying of laughter.' }], tags: ['大笑', '情绪'], popularity: 55 },
+];
