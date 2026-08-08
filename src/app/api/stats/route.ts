@@ -1,0 +1,51 @@
+import { NextResponse } from 'next/server';
+import { prisma } from '@/lib/db';
+
+/**
+ * GET /api/stats
+ * 只读运营统计：盲测投票量 / 翻译调用量 / 模型分布 / 成本
+ * 用途：运营监控基线（每周快照 / 任意时刻自查）
+ */
+export async function GET() {
+  try {
+    const [blindtestCount, voteCount, voteByModel, jobCount, jobByModel, jobCost, cachedCount, recentDaily] =
+      await Promise.all([
+        prisma.blindtest.count(),
+        prisma.vote.count(),
+        prisma.vote.groupBy({ by: ['model'], _count: { _all: true } }),
+        prisma.translationJob.count(),
+        prisma.translationJob.groupBy({ by: ['model'], _count: { _all: true }, _sum: { costUsd: true } }),
+        prisma.translationJob.aggregate({ _sum: { costUsd: true } }),
+        prisma.translationJob.count({ where: { cached: true } }),
+        prisma.translationJob.groupBy({
+          by: ['createdAt'],
+          where: { createdAt: { gte: new Date(Date.now() - 7 * 86400000) } },
+          _count: { _all: true },
+        }),
+      ]);
+
+    // 近 7 天按日聚合（groupBy createdAt 是精确时间戳，这里转日期）
+    const dailyMap = new Map<string, number>();
+    for (const d of recentDaily) {
+      const day = d.createdAt.toISOString().slice(0, 10);
+      dailyMap.set(day, (dailyMap.get(day) ?? 0) + d._count._all);
+    }
+    const daily = [...dailyMap.entries()].map(([date, count]) => ({ date, count })).sort((a, b) => a.date.localeCompare(b.date));
+
+    return NextResponse.json({
+      ok: true,
+      ts: new Date().toISOString(),
+      blindtest: { total: blindtestCount, votes: voteCount, votesByModel: Object.fromEntries(voteByModel.map((v) => [v.model, v._count._all])) },
+      translation: {
+        total: jobCount,
+        cached: cachedCount,
+        cacheHitRate: jobCount > 0 ? Number((cachedCount / jobCount).toFixed(4)) : 0,
+        byModel: Object.fromEntries(jobByModel.map((j) => [j.model, { calls: j._count._all, costUsd: Number((j._sum.costUsd ?? 0).toFixed(6)) }])),
+        costUsdTotal: Number((jobCost._sum.costUsd ?? 0).toFixed(6)),
+        last7Days: daily,
+      },
+    });
+  } catch (e) {
+    return NextResponse.json({ ok: false, error: (e as Error).message }, { status: 500 });
+  }
+}

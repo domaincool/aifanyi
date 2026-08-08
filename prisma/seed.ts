@@ -1,17 +1,19 @@
-﻿/**
+/**
  * 梗词条种子数据（200 条）
  * 运行：npm run db:seed
  * 数据源：prisma/meme-data.ts（批量 upsert，按 slug 去重）
  */
 import { PrismaClient } from '@prisma/client';
 import { memeData } from './meme-data';
+import { memeBatch001 } from './meme-batch-001';
 
 const prisma = new PrismaClient();
 
 async function main() {
   let created = 0;
   let updated = 0;
-  for (const m of memeData) {
+  const allEntries = [...memeData, ...memeBatch001];
+  for (const m of allEntries) {
     const existing = await prisma.memeEntry.findUnique({ where: { slug: m.slug } });
     if (existing) {
       await prisma.memeEntry.update({ where: { slug: m.slug }, data: m as any });
