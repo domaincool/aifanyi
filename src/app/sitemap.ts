@@ -1,0 +1,34 @@
+﻿import type { MetadataRoute } from 'next';
+import { prisma } from '@/lib/db';
+
+// 动态生成 sitemap：每次请求从数据库读取词条，加新词条自动出现在地图里
+export const dynamic = 'force-dynamic';
+
+const BASE = process.env.NEXT_PUBLIC_SITE_URL || 'https://aifanyi.com';
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const now = new Date();
+  const entries: MetadataRoute.Sitemap = [
+    { url: BASE, lastModified: now, changeFrequency: 'daily', priority: 1 },
+    { url: `${BASE}/blindtest`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
+  ];
+
+  // 200 个梗词条 SEO 页
+  let memes: { slug: string; updatedAt: Date }[] = [];
+  try {
+    memes = await prisma.memeEntry.findMany({ select: { slug: true, updatedAt: true } });
+  } catch {
+    // 数据库暂不可用时只返回基础页，不让 sitemap 挂掉
+  }
+
+  for (const m of memes) {
+    entries.push({
+      url: `${BASE}/meme/${m.slug}`,
+      lastModified: m.updatedAt,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    });
+  }
+
+  return entries;
+}

@@ -1,0 +1,29 @@
+{
+  "name": "aifanyi",
+  "version": "0.1.0",
+  "private": true,
+  "description": "aifanyi.com — AI 翻译工作台 + 盲测擂台 + 梗翻译 + 数据飞轮",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "db:generate": "prisma generate",
+    "db:push": "prisma db push",
+    "db:seed": "tsx prisma/seed.ts",
+    "deploy:fc": "powershell -ExecutionPolicy Bypass -File scripts/deploy-fc.ps1"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.22.0",
+    "next": "^15.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "prisma": "^5.22.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}
