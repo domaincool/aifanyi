@@ -177,3 +177,19 @@ button.primary:disabled { opacity: 0.5; cursor: wait; }
   .footer-cols { grid-template-columns: repeat(2, 1fr); gap: 20px; }
   .footer-top { flex-direction: column; gap: 24px; }
 }
+/* 翻译工具栏目页 */
+.tools-page { max-width: 1080px; margin: 0 auto; padding: 48px 20px 24px; }
+.tools-hero { text-align: center; margin-bottom: 40px; }
+.tools-hero h1 { font-size: 30px; margin-bottom: 12px; }
+.tools-hero p { color: var(--muted); font-size: 15px; }
+.tools-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.tool-card { background: var(--panel); border: 1px solid var(--border); border-radius: 14px; padding: 24px 20px; display: flex; flex-direction: column; transition: transform .15s ease, border-color .15s ease; }
+.tool-card:hover { transform: translateY(-3px); border-color: var(--accent2); }
+.tool-emoji { font-size: 30px; margin-bottom: 12px; }
+.tool-card h2 { font-size: 17px; margin-bottom: 8px; }
+.tool-card p { color: var(--muted); font-size: 13.5px; flex: 1; margin-bottom: 16px; }
+.tool-btn { display: inline-flex; align-items: center; gap: 8px; color: var(--accent2); font-size: 14px; font-weight: 600; text-decoration: none; }
+.tool-btn:hover { text-decoration: underline; }
+.tool-soon { font-size: 11px; font-weight: 400; color: var(--muted); border: 1px solid var(--border); border-radius: 999px; padding: 1px 8px; }
+@media (max-width: 900px) { .tools-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .tools-grid { grid-template-columns: 1fr; } .tools-hero h1 { font-size: 24px; } }

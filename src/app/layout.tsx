@@ -15,6 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <header className="site-header">
           <a href="/" className="logo">爱翻译<span> · aifanyi.com</span></a>
           <nav>
+            <a href="/tools">翻译工具</a>
             <a href="/blindtest">AI翻译擂台</a>
             <a href="/meme">网络用语翻译</a>
             <a href="/#workbench">跨境电商工作台</a>
@@ -31,10 +32,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <div className="footer-col">
                 <h4>产品</h4>
                 <a href="/">AI翻译</a>
-                <a href="#">PDF翻译</a>
-                <a href="#">图片翻译</a>
-                <a href="#">字幕翻译</a>
-                <a href="#">网页翻译</a>
+                <a href="/tools#pdf">PDF翻译</a>
+                <a href="/tools#image">图片翻译</a>
+                <a href="/tools#subtitle">字幕翻译</a>
+                <a href="/tools#web">网页翻译</a>
                 <a href="/">AI润色</a>
               </div>
               <div className="footer-col">
