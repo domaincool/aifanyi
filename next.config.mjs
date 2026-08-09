@@ -4,7 +4,7 @@ const nextConfig = {
   output: 'standalone',
   reactStrictMode: true,
   // pdfjs-dist 的可选依赖 canvas（Node 渲染用）在服务器不存在，排除打包
-  serverExternalPackages: ['canvas'],
+  serverExternalPackages: ['pdfjs-dist', 'canvas'],
   webpack: (config, { isServer }) => {
     if (isServer) {
       // pdfjs-dist 内部对 canvas 是可选 require，标记为外部避免打包失败
