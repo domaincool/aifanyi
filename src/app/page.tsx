@@ -16,7 +16,7 @@ export default async function HomePage() {
     <>
       <section className="hero">
         <h1>爱翻译 · AI翻译</h1>
-        <p>跨境电商 Listing 本地化 · 译文盲测擂台 · 网络用语翻译。</p>
+        <p>让 AI 帮你把话说得像当地人。Let AI help you speak like a local.</p>
       </section>
 
       <TranslatorBox />
