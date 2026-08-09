@@ -4,6 +4,7 @@
  * 阶段 2 起接入：轮询进度 / 翻译 / 双语阅读 / 多模型对比 / 下载
  */
 import { useState, useRef, useCallback, useEffect } from 'react';
+import PdfReader from '@/components/PdfReader';
 
 interface UploadResult {
   taskId: string;
@@ -154,7 +155,7 @@ export default function PdfTranslatorPage() {
                   {job.result.stats.failedBlocks > 0 && ` · ${job.result.stats.failedBlocks} 块失败`}
                 </p>
               )}
-              <p className="pdf-coming">双语阅读器即将接入（阶段 3）——上线后此处将展示原文/译文对照阅读。</p>
+              {job.result && <PdfReader result={job.result} />}
             </div>
           )}
           {job && job.status === 'failed' && (

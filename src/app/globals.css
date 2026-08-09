@@ -276,3 +276,50 @@ button.primary:disabled { opacity: 0.5; cursor: wait; }
 .pdf-done { margin-top: 16px; }
 .pdf-done p { color: var(--accent2); font-size: 14px; }
 .pdf-done-stats { color: var(--muted) !important; font-size: 13px !important; margin-top: 4px; }
+
+/* ===== PDF 双语阅读器（阶段 3） ===== */
+.reader { margin-top: 20px; border: 1px solid var(--border); border-radius: 14px; overflow: hidden; background: var(--panel); }
+.reader-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 16px; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+.reader-top-info { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.reader-fname { font-weight: 600; font-size: 14px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.reader-meta { color: var(--muted); font-size: 12px; }
+.reader-top-controls { display: flex; gap: 10px; align-items: center; }
+.reader-viewswitch { display: flex; background: rgba(255,255,255,0.04); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+.reader-viewswitch button { background: none; border: none; color: var(--muted); padding: 6px 12px; font-size: 12.5px; cursor: pointer; }
+.reader-viewswitch button.active { background: var(--accent); color: #fff; }
+.reader-fontsize { display: flex; gap: 4px; }
+.reader-fontsize button { background: rgba(255,255,255,0.04); border: 1px solid var(--border); color: var(--text); border-radius: 6px; padding: 4px 10px; cursor: pointer; font-size: 12.5px; }
+.reader-limitations { padding: 8px 16px; background: rgba(251, 191, 36, 0.08); border-bottom: 1px solid var(--border); font-size: 12.5px; color: #fbbf24; display: flex; gap: 16px; flex-wrap: wrap; }
+.reader-body { display: flex; height: 640px; }
+.reader-nav { width: 200px; flex-shrink: 0; border-right: 1px solid var(--border); overflow-y: auto; padding: 14px 10px; }
+.reader-nav-title { font-size: 12px; color: var(--muted); margin: 10px 0 6px; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; }
+.reader-nav ul { list-style: none; padding: 0; margin: 0; }
+.reader-nav li { margin-bottom: 2px; }
+.reader-nav button { width: 100%; text-align: left; background: none; border: none; color: var(--text); font-size: 12.5px; padding: 6px 8px; border-radius: 6px; cursor: pointer; }
+.reader-nav button:hover { background: rgba(255,255,255,0.05); }
+.reader-nav button.active { background: rgba(79, 140, 255, 0.15); color: var(--accent); }
+.reader-nav-empty { color: var(--muted); font-size: 12.5px; }
+.reader-main { flex: 1; overflow-y: auto; padding: 18px 22px; }
+.reader-page { margin-bottom: 28px; }
+.reader-page-title { font-size: 13px; color: var(--muted); font-weight: 600; margin-bottom: 10px; }
+.reader-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.reader-page.source .reader-cols { grid-template-columns: 1fr; }
+.reader-page.target .reader-cols { grid-template-columns: 1fr; }
+.reader-col-label { font-size: 11.5px; color: var(--muted); margin-bottom: 8px; letter-spacing: .05em; text-transform: uppercase; }
+.reader-block { position: relative; padding: 8px 10px; border-radius: 8px; margin-bottom: 4px; line-height: 1.75; transition: background .12s ease; }
+.reader-block:hover { background: rgba(255,255,255,0.04); }
+.reader-block:hover .reader-actions { opacity: 1; }
+.reader-heading { font-weight: 700; font-size: 1.08em; margin-top: 8px; }
+.reader-list-item { padding-left: 18px; }
+.reader-table { border: 1px dashed var(--border); }
+.reader-image-ph { color: var(--muted); font-style: italic; }
+.reader-skipped { color: var(--muted); font-style: italic; }
+.reader-missing { color: #f87171; font-size: 12px; }
+.reader-actions { position: absolute; right: 6px; top: -10px; display: flex; gap: 4px; opacity: 0; transition: opacity .12s ease; }
+.reader-actions button { background: var(--accent); border: none; color: #fff; border-radius: 6px; padding: 3px 8px; font-size: 12px; cursor: pointer; }
+.reader-actions button:hover { opacity: .85; }
+@media (max-width: 760px) {
+  .reader-body { flex-direction: column; height: auto; }
+  .reader-nav { width: 100%; border-right: none; border-bottom: 1px solid var(--border); max-height: 160px; }
+  .reader-cols { grid-template-columns: 1fr; }
+}
