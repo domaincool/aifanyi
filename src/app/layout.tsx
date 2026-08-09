@@ -17,7 +17,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <nav>
             <a href="/blindtest">AI翻译擂台</a>
             <a href="/meme">网络用语翻译</a>
-            <a href="/#workbench">工作台</a>
+            <a href="/#workbench">跨境电商工作台</a>
           </nav>
         </header>
         <main>{children}</main>
