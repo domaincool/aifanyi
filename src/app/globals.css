@@ -26,7 +26,7 @@ body {
   align-items: center;
   padding: 16px 24px;
   border-bottom: 1px solid var(--border);
-  max-width: 1080px;
+  max-width: 1200px;
   margin: 0 auto;
   width: 100%;
 }
@@ -42,7 +42,7 @@ body {
 }
 .site-header nav a:hover { color: var(--accent2); }
 
-main { flex: 1; width: 100%; max-width: 1080px; margin: 0 auto; padding: 32px 24px; }
+main { flex: 1; width: 100%; max-width: 1200px; margin: 0 auto; padding: 32px 28px; }
 
 .site-footer {
   border-top: 1px solid var(--border);
@@ -61,7 +61,7 @@ main { flex: 1; width: 100%; max-width: 1080px; margin: 0 auto; padding: 32px 24
   border: 1px solid var(--border);
   border-radius: 14px;
   padding: 20px;
-  max-width: 760px;
+  max-width: 960px;
   margin: 20px auto;
 }
 
@@ -107,7 +107,7 @@ button.primary:disabled { opacity: 0.5; cursor: wait; }
 .section-title { margin: 36px 0 12px; font-size: 22px; }
 
 /* 梗翻译栏目页 */
-.search-box { display: flex; gap: 10px; justify-content: center; margin-top: 20px; max-width: 560px; margin-left: auto; margin-right: auto; }
+.search-box { display: flex; gap: 10px; justify-content: center; margin-top: 20px; max-width: 680px; margin-left: auto; margin-right: auto; }
 .search-box input[type="search"] {
   flex: 1; background: #0c0f1d; border: 1px solid var(--border); border-radius: 10px;
   color: var(--text); padding: 10px 14px; font-size: 15px; font-family: inherit; outline: none;
@@ -163,7 +163,7 @@ button.primary:disabled { opacity: 0.5; cursor: wait; }
 .explain-why { margin-top: 6px; padding: 10px 12px; background: rgba(79,140,255,.08); border: 1px solid rgba(79,140,255,.25); border-radius: 8px; font-size: 13.5px; line-height: 1.7; color: var(--text); }
 /* 页脚：品牌 + 四列导航 */
 .site-footer { border-top: 1px solid var(--border); margin-top: 48px; padding: 40px 24px 20px; }
-.footer-top { display: flex; flex-wrap: wrap; gap: 32px; justify-content: space-between; max-width: 1080px; margin: 0 auto; }
+.footer-top { display: flex; flex-wrap: wrap; gap: 32px; justify-content: space-between; max-width: 1200px; margin: 0 auto; }
 .footer-brand { min-width: 220px; }
 .footer-brand-name { font-size: 18px; font-weight: 700; color: var(--text); }
 .footer-brand-name span { color: var(--muted); font-weight: 400; font-size: 15px; }
@@ -172,13 +172,13 @@ button.primary:disabled { opacity: 0.5; cursor: wait; }
 .footer-col h4 { font-size: 13.5px; color: var(--text); margin-bottom: 10px; font-weight: 600; }
 .footer-col a { display: block; color: var(--muted); font-size: 13px; text-decoration: none; padding: 4px 0; }
 .footer-col a:hover { color: var(--accent2); }
-.footer-bottom { max-width: 1080px; margin: 28px auto 0; padding-top: 16px; border-top: 1px solid var(--border); color: var(--muted); font-size: 12.5px; text-align: center; }
+.footer-bottom { max-width: 1200px; margin: 28px auto 0; padding-top: 16px; border-top: 1px solid var(--border); color: var(--muted); font-size: 12.5px; text-align: center; }
 @media (max-width: 720px) {
   .footer-cols { grid-template-columns: repeat(2, 1fr); gap: 20px; }
   .footer-top { flex-direction: column; gap: 24px; }
 }
 /* 翻译工具栏目页 */
-.tools-page { max-width: 1080px; margin: 0 auto; padding: 48px 20px 24px; }
+.tools-page { max-width: 1200px; margin: 0 auto; padding: 48px 20px 24px; }
 .tools-hero { text-align: center; margin-bottom: 40px; }
 .tools-hero h1 { font-size: 30px; margin-bottom: 12px; }
 .tools-hero p { color: var(--muted); font-size: 15px; }
