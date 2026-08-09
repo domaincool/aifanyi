@@ -6,7 +6,7 @@ export default function TranslatorBox() {
   const [text, setText] = useState('');
   const [sourceLang, setSourceLang] = useState('zh');
   const [targetLang, setTargetLang] = useState('en');
-  const [scenario, setScenario] = useState('general');
+  const [scenario, setScenario] = useState('auto');
   const [result, setResult] = useState('');
   const [meta, setMeta] = useState('');
   const [loading, setLoading] = useState(false);
@@ -77,9 +77,11 @@ export default function TranslatorBox() {
           <option value="es">西班牙语</option>
         </select>
         <select value={scenario} onChange={(e) => setScenario(e.target.value)}>
-          <option value="general">通用翻译</option>
-          <option value="ecommerce">电商 Listing</option>
-          <option value="meme">网络用语翻译</option>
+          <option value="auto">AI 自动判断</option>
+          <option value="business">商务翻译</option>
+          <option value="academic">学术翻译</option>
+          <option value="casual">口语翻译</option>
+          <option value="gaming">游戏翻译</option>
         </select>
         <button className="primary" onClick={doTranslate} disabled={loading}>
           {loading ? '翻译中…' : '翻译'}
