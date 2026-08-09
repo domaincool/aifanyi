@@ -340,3 +340,7 @@ button.primary:disabled { opacity: 0.5; cursor: wait; }
 .reader-adopt { background: var(--accent2); border: none; color: #06231b; font-weight: 700; border-radius: 8px; padding: 8px 0; cursor: pointer; font-size: 13px; }
 .reader-adopt:hover { opacity: .88; }
 @media (max-width: 760px) { .reader-modal-cols { grid-template-columns: 1fr; } }
+
+.reader-download { display: flex; gap: 6px; }
+.reader-download button { background: rgba(34, 211, 164, 0.12); border: 1px solid rgba(34,211,164,.35); color: var(--accent2); border-radius: 8px; padding: 6px 10px; font-size: 12.5px; cursor: pointer; }
+.reader-download button:hover { background: rgba(34, 211, 164, 0.2); }

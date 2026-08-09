@@ -1,9 +1,10 @@
-﻿'use client';
+'use client';
 /**
  * PDF 双语阅读器（阶段 3+4）
  * 双栏阅读 + 视图切换 + 字号 + 段落复制 + 多模型对比浮层（DeepSeek/GLM/Google）+ 采用
  */
 import { useState } from 'react';
+import { Document, Packer, Paragraph, HeadingLevel } from 'docx';
 
 export interface PdfReaderResult {
   fileName: string;
@@ -86,6 +87,62 @@ export default function PdfReader({ result }: { result: PdfReaderResult }) {
     setCompare(null);
   };
 
+  // ---- 下载（阶段 5）：译文 DOCX / 双语 DOCX / TXT ----
+  const downloadBlob = (blob: Blob, filename: string) => {
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+
+  const collectBlocks = () => {
+    const items: { type: string; src: string; dst: string }[] = [];
+    for (const p of result.pages) {
+      for (const b of p.blocks) {
+        const dst = overrides[b.id]?.text ?? b.translations?.deepseek?.text ?? '';
+        items.push({ type: b.type, src: b.text, dst });
+      }
+    }
+    return items;
+  };
+
+  const downloadDocx = async (dual: boolean) => {
+    const items = collectBlocks();
+    const children: import('docx').Paragraph[] = [];
+    for (const it of items) {
+      const isHeading = it.type === 'heading';
+      const mk = (text: string, head: boolean) => head
+        ? new Paragraph({ text, heading: HeadingLevel.HEADING_2 })
+        : new Paragraph({ text, spacing: { after: 120 } });
+      if (dual) {
+        children.push(mk(it.src, isHeading));
+        if (it.dst) children.push(mk(it.dst, false));
+      } else if (it.dst) {
+        children.push(mk(it.dst, isHeading));
+      }
+    }
+    const doc = new Document({ sections: [{ children }] });
+    const blob = await Packer.toBlob(doc);
+    const base = result.fileName.replace(/\.pdf$/i, '');
+    downloadBlob(blob, dual ? `${base}-双语.docx` : `${base}-译文.docx`);
+  };
+
+  const downloadTxt = () => {
+    const items = collectBlocks();
+    const lines: string[] = [];
+    for (const it of items) {
+      if (it.type === 'heading') lines.push(`\n${it.dst || it.src}\n${'='.repeat(20)}`);
+      else if (it.dst) lines.push(it.dst);
+      else lines.push(`[未翻译] ${it.src}`);
+    }
+    const blob = new Blob([lines.join('\n')], { type: 'text/plain;charset=utf-8' });
+    downloadBlob(blob, result.fileName.replace(/\.pdf$/i, '-译文.txt'));
+  };
+
   // 任务 id：从 result 里没有，需要页面传入。用 props 扩展
   // （页面层传 taskId，见页面改动）
 
@@ -153,6 +210,11 @@ export default function PdfReader({ result }: { result: PdfReaderResult }) {
           <div className="reader-fontsize">
             <button onClick={() => setFontSize((s) => Math.max(12, s - 1))} aria-label="减小字号">A-</button>
             <button onClick={() => setFontSize((s) => Math.min(22, s + 1))} aria-label="增大字号">A+</button>
+          </div>
+          <div className="reader-download">
+            <button onClick={() => downloadDocx(false)} title="下载译文 DOCX">⬇ 译文</button>
+            <button onClick={() => downloadDocx(true)} title="下载双语 DOCX">⬇ 双语</button>
+            <button onClick={downloadTxt} title="下载纯译文 TXT">⬇ TXT</button>
           </div>
         </div>
       </div>
