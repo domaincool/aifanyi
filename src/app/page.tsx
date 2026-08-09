@@ -72,6 +72,37 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
+
+      <section className="scenes-section">
+        <h2 className="section-title">为不同场景打造</h2>
+        <div className="scenes-grid">
+          <div className="scene-card">
+            <div className="scene-emoji">🎓</div>
+            <h3>学生</h3>
+            <p>留学 / 论文 / 阅读</p>
+          </div>
+          <div className="scene-card">
+            <div className="scene-emoji">💼</div>
+            <h3>职场</h3>
+            <p>邮件 / 文档 / 商务沟通</p>
+          </div>
+          <div className="scene-card">
+            <div className="scene-emoji">🎬</div>
+            <h3>创作者</h3>
+            <p>字幕 / 视频 / 社交媒体</p>
+          </div>
+          <div className="scene-card">
+            <div className="scene-emoji">🛒</div>
+            <h3>跨境卖家</h3>
+            <p>Listing / 客服 / 营销</p>
+          </div>
+          <div className="scene-card">
+            <div className="scene-emoji">💻</div>
+            <h3>开发者</h3>
+            <p>API / 文档 / 本地化</p>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

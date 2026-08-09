@@ -204,3 +204,13 @@ button.primary:disabled { opacity: 0.5; cursor: wait; }
 .why-card p { color: var(--muted); font-size: 13.5px; line-height: 1.7; }
 @media (max-width: 900px) { .why-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px) { .why-grid { grid-template-columns: 1fr; } }
+/* 为不同场景打造 */
+.scenes-section { margin-top: 48px; }
+.scenes-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
+.scene-card { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 20px 16px; text-align: center; transition: transform .15s ease, border-color .15s ease; }
+.scene-card:hover { transform: translateY(-3px); border-color: var(--accent2); }
+.scene-emoji { font-size: 26px; margin-bottom: 10px; }
+.scene-card h3 { font-size: 15.5px; margin-bottom: 6px; }
+.scene-card p { color: var(--muted); font-size: 12.5px; }
+@media (max-width: 900px) { .scenes-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 620px) { .scenes-grid { grid-template-columns: repeat(2, 1fr); } }
