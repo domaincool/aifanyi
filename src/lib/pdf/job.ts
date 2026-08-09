@@ -82,6 +82,12 @@ function buildResult(doc: PdfDocument, job: any): PdfJobSummary['result'] {
     (s, p) => s + p.blocks.filter((b) => b.translations && (b.translations as any).deepseek).length,
     0
   );
+  // 可翻译块 = 过滤结构性块（header/footer/image），与 translate.ts errorType 口径一致
+  const translatableBlocks = doc.pages.reduce(
+    (s, p) => s + p.blocks.filter((b) => b.type !== 'header' && b.type !== 'footer' && b.type !== 'image').length,
+    0
+  );
+  const failedBlocks = Math.max(0, translatableBlocks - translatedBlocks);
   return {
     documentId: doc.documentId,
     fileName: doc.fileName,
@@ -92,8 +98,8 @@ function buildResult(doc: PdfDocument, job: any): PdfJobSummary['result'] {
     pages: doc.pages,
     stats: {
       totalBlocks: job.totalBlocks,
-      translatedBlocks: job.translatedBlocks || translatedBlocks,
-      failedBlocks: job.apiErrorCount || 0,
+      translatedBlocks,
+      failedBlocks,
       totalInputTokens: job.totalInputTokens || 0,
       totalOutputTokens: job.totalOutputTokens || 0,
       totalCostUsd: job.totalCostUsd || 0,
