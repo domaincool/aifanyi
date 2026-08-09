@@ -31,6 +31,7 @@ export default function PdfTranslatorPage() {
     setError(null);
     setResult(null);
     setJob(null);
+    track('pdf_upload', { fileName: file.name });
     try {
       const fd = new FormData();
       fd.append('file', file);
@@ -38,9 +39,12 @@ export default function PdfTranslatorPage() {
       const data = await res.json();
       if (!res.ok) {
         setError({ errorType: data.errorType || 'parse_failed', message: data.message || '上传失败，请稍后重试。' });
+        track('pdf_parse_failed', { errorType: data.errorType });
         return;
       }
       setResult(data as UploadResult);
+      track('pdf_parse_success', { taskId: data.taskId, pageCount: data.pageCount, sourceLang: data.sourceLang, targetLang: data.targetLang });
+      track('translation_started', { taskId: data.taskId });
       pollTask(data.taskId);
     } catch {
       setError({ errorType: 'parse_failed', message: '网络异常，上传失败，请稍后重试。' });
@@ -49,13 +53,21 @@ export default function PdfTranslatorPage() {
     }
   }, []);
 
-    const pollTask = useCallback(async (taskId: string) => {
+    const track = (event: string, data: Record<string, unknown> = {}) => {
+    fetch('/api/pdf/track', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ event, ...data }) }).catch(() => {});
+  };
+
+  const pollTask = useCallback(async (taskId: string) => {
     try {
       const res = await fetch(`/api/pdf/tasks/${taskId}`);
       const data = await res.json();
       setJob(data);
       if (data.status === 'processing' || data.status === 'queued') {
         setTimeout(() => pollTask(taskId), 1500);
+      } else if (data.status === 'completed') {
+        track('translation_completed', { taskId, durationMs: data.result?.stats?.durationMs, costUsd: data.result?.stats?.totalCostUsd });
+      } else if (data.status === 'failed') {
+        track('translation_failed', { taskId });
       }
     } catch {
       // 轮询失败静默重试一次
@@ -119,7 +131,7 @@ export default function PdfTranslatorPage() {
               <span className="pdf-ocr-coming">OCR PDF 翻译即将推出</span>
             </p>
           )}
-          <button className="pdf-btn" onClick={() => { setError(null); inputRef.current?.click(); }}>重新选择文件</button>
+          <button className="pdf-btn" onClick={() => { track('retry_clicked'); setError(null); inputRef.current?.click(); }}>重新选择文件</button>
         </div>
       )}
 

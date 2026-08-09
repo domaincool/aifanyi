@@ -8,7 +8,7 @@ import { prisma } from '@/lib/db';
  */
 export async function GET() {
   try {
-    const [blindtestCount, voteCount, voteByModel, jobCount, jobByModel, jobCost, cachedCount, recentDaily] =
+    const [blindtestCount, voteCount, voteByModel, jobCount, jobByModel, jobCost, cachedCount, recentDaily, pdfJobCount, pdfAgg, pdfDurations, pdfEvents] =
       await Promise.all([
         prisma.blindtest.count(),
         prisma.vote.count(),
@@ -22,6 +22,10 @@ export async function GET() {
           where: { createdAt: { gte: new Date(Date.now() - 7 * 86400000) } },
           _count: { _all: true },
         }),
+        prisma.pdfJob.count(),
+        prisma.pdfJob.aggregate({ _sum: { totalCostUsd: true }, _avg: { durationMs: true } }),
+        prisma.pdfJob.findMany({ where: { status: 'completed', durationMs: { not: null } }, select: { durationMs: true }, take: 200 }),
+        prisma.pdfEvent.groupBy({ by: ['event'], _count: { _all: true } }),
       ]);
 
     // 近 7 天按日聚合（groupBy createdAt 是精确时间戳，这里转日期）
@@ -44,8 +48,23 @@ export async function GET() {
         costUsdTotal: Number((jobCost._sum.costUsd ?? 0).toFixed(6)),
         last7Days: daily,
       },
+      pdf: {
+        jobs: pdfJobCount,
+        costUsdTotal: Number((pdfAgg._sum.totalCostUsd ?? 0).toFixed(6)),
+        avgDurationMs: pdfAgg._avg.durationMs ? Math.round(pdfAgg._avg.durationMs) : 0,
+        p50DurationMs: percentile(pdfDurations.map((d) => d.durationMs as number), 50),
+        p95DurationMs: percentile(pdfDurations.map((d) => d.durationMs as number), 95),
+        events: Object.fromEntries(pdfEvents.map((e) => [e.event, e._count._all])),
+      },
     });
   } catch (e) {
     return NextResponse.json({ ok: false, error: (e as Error).message }, { status: 500 });
   }
+}
+
+function percentile(arr: number[], p: number): number {
+  if (!arr.length) return 0;
+  const sorted = [...arr].sort((a, b) => a - b);
+  const idx = Math.min(sorted.length - 1, Math.floor((p / 100) * sorted.length));
+  return sorted[idx];
 }

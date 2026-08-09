@@ -185,3 +185,20 @@ model PdfJob {
   @@index([status])
   @@index([clientKey])
 }
+
+// ---------- PDF 埋点（匿名统计，不记录 PDF 内容） ----------
+model PdfEvent {
+  id         String   @id @default(cuid())
+  event      String // pdf_upload / pdf_parse_success / pdf_parse_failed / translation_started / translation_completed / translation_failed / model_compare_clicked / model_compare_completed / model_adopted / docx_downloaded / bilingual_docx_downloaded / txt_downloaded / retry_clicked
+  taskId     String?
+  pageCount  Int?
+  sourceLang String?
+  targetLang String?
+  durationMs Int?
+  costUsd    Float?
+  model      String?
+  createdAt  DateTime @default(now())
+
+  @@index([event])
+  @@index([createdAt])
+}

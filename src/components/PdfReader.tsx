@@ -44,6 +44,10 @@ export default function PdfReader({ result }: { result: PdfReaderResult }) {
   const [compareData, setCompareData] = useState<Record<string, { text: string; model: string }> | null>(null);
   const [comparing, setComparing] = useState(false);
 
+  const track = (event: string, data: Record<string, unknown> = {}) => {
+    fetch('/api/pdf/track', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ event, ...data }) }).catch(() => {});
+  };
+
   const copy = async (text: string) => {
     try { await navigator.clipboard.writeText(text); }
     catch {
@@ -58,6 +62,7 @@ export default function PdfReader({ result }: { result: PdfReaderResult }) {
 
   const openCompare = async (taskId: string | undefined, pageNumber: number, blockId: string, sourceText: string) => {
     if (!taskId) return;
+    track('model_compare_clicked', { taskId, blockId });
     setCompare({ pageNumber, blockId, sourceText });
     setCompareData(null);
     setComparing(true);
@@ -74,6 +79,7 @@ export default function PdfReader({ result }: { result: PdfReaderResult }) {
         return;
       }
       setCompareData(data.translations || {});
+      track('model_compare_completed', { taskId, blockId });
     } catch {
       alert('网络异常，对比失败，请稍后重试。');
       setCompare(null);
@@ -83,6 +89,7 @@ export default function PdfReader({ result }: { result: PdfReaderResult }) {
   };
 
   const adopt = (blockId: string, text: string, model: string) => {
+    track('model_adopted', { model });
     setOverrides((prev) => ({ ...prev, [blockId]: { text, model } }));
     setCompare(null);
   };
@@ -141,6 +148,7 @@ export default function PdfReader({ result }: { result: PdfReaderResult }) {
     }
     const blob = new Blob([lines.join('\n')], { type: 'text/plain;charset=utf-8' });
     downloadBlob(blob, result.fileName.replace(/\.pdf$/i, '-译文.txt'));
+    track('txt_downloaded', {});
   };
 
   // 任务 id：从 result 里没有，需要页面传入。用 props 扩展
