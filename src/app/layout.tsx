@@ -22,7 +22,45 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </header>
         <main>{children}</main>
         <footer className="site-footer">
-          <p>爱翻译 · AI翻译 · aifanyi.com © 2026</p>
+          <div className="footer-top">
+            <div className="footer-brand">
+              <div className="footer-brand-name">爱翻译 <span>· aifanyi.com</span></div>
+              <div className="footer-brand-slogan">懂语境的 AI 翻译与本地化工具</div>
+            </div>
+            <nav className="footer-cols">
+              <div className="footer-col">
+                <h4>产品</h4>
+                <a href="/">AI翻译</a>
+                <a href="#">PDF翻译</a>
+                <a href="#">图片翻译</a>
+                <a href="#">字幕翻译</a>
+                <a href="#">网页翻译</a>
+                <a href="/">AI润色</a>
+              </div>
+              <div className="footer-col">
+                <h4>解决方案</h4>
+                <a href="/#workbench">跨境电商</a>
+                <a href="#">内容创作</a>
+                <a href="#">企业翻译</a>
+                <a href="#">个人用户</a>
+              </div>
+              <div className="footer-col">
+                <h4>资源</h4>
+                <a href="/meme">翻译术语</a>
+                <a href="#">AI翻译指南</a>
+                <a href="#">帮助中心</a>
+                <a href="#">API</a>
+              </div>
+              <div className="footer-col">
+                <h4>关于</h4>
+                <a href="#">关于我们</a>
+                <a href="#">联系我们</a>
+                <a href="#">隐私政策</a>
+                <a href="#">服务条款</a>
+              </div>
+            </nav>
+          </div>
+          <div className="footer-bottom">© 2026 爱翻译 · aifanyi.com</div>
         </footer>
         {/* 百度统计：页面交互后加载，不阻塞首屏 */}
         <Script id="baidu-analytics" strategy="afterInteractive">

@@ -161,3 +161,19 @@ button.primary:disabled { opacity: 0.5; cursor: wait; }
 .explain-k { flex: 0 0 56px; color: var(--muted); }
 .explain-v { color: var(--text); }
 .explain-why { margin-top: 6px; padding: 10px 12px; background: rgba(79,140,255,.08); border: 1px solid rgba(79,140,255,.25); border-radius: 8px; font-size: 13.5px; line-height: 1.7; color: var(--text); }
+/* 页脚：品牌 + 四列导航 */
+.site-footer { border-top: 1px solid var(--border); margin-top: 48px; padding: 40px 24px 20px; }
+.footer-top { display: flex; flex-wrap: wrap; gap: 32px; justify-content: space-between; max-width: 1080px; margin: 0 auto; }
+.footer-brand { min-width: 220px; }
+.footer-brand-name { font-size: 18px; font-weight: 700; color: var(--text); }
+.footer-brand-name span { color: var(--muted); font-weight: 400; font-size: 15px; }
+.footer-brand-slogan { margin-top: 8px; color: var(--muted); font-size: 13.5px; }
+.footer-cols { display: grid; grid-template-columns: repeat(4, minmax(120px, 1fr)); gap: 24px; flex: 1; max-width: 640px; }
+.footer-col h4 { font-size: 13.5px; color: var(--text); margin-bottom: 10px; font-weight: 600; }
+.footer-col a { display: block; color: var(--muted); font-size: 13px; text-decoration: none; padding: 4px 0; }
+.footer-col a:hover { color: var(--accent2); }
+.footer-bottom { max-width: 1080px; margin: 28px auto 0; padding-top: 16px; border-top: 1px solid var(--border); color: var(--muted); font-size: 12.5px; text-align: center; }
+@media (max-width: 720px) {
+  .footer-cols { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .footer-top { flex-direction: column; gap: 24px; }
+}
