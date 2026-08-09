@@ -22,7 +22,7 @@ export default function PdfTranslatorPage() {
   const [uploading, setUploading] = useState(false);
   const [result, setResult] = useState<UploadResult | null>(null);
   const [error, setError] = useState<{ errorType: string; message: string } | null>(null);
-  const [job, setJob] = useState<{ status: string; progress: number; currentPage: number; totalPages: number; translatedBlocks: number; totalBlocks: number; errorType?: string; message?: string; result?: any } | null>(null);
+  const [job, setJob] = useState<{ taskId: string; status: string; progress: number; currentPage: number; totalPages: number; translatedBlocks: number; totalBlocks: number; errorType?: string; message?: string; result?: any } | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
   const handleFile = useCallback(async (file: File) => {
@@ -155,7 +155,7 @@ export default function PdfTranslatorPage() {
                   {job.result.stats.failedBlocks > 0 && ` · ${job.result.stats.failedBlocks} 块失败`}
                 </p>
               )}
-              {job.result && <PdfReader result={job.result} />}
+              {job.result && <PdfReader result={{ ...job.result, taskId: job.taskId } as any} />}
             </div>
           )}
           {job && job.status === 'failed' && (

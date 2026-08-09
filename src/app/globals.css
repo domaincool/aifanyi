@@ -323,3 +323,20 @@ button.primary:disabled { opacity: 0.5; cursor: wait; }
   .reader-nav { width: 100%; border-right: none; border-bottom: 1px solid var(--border); max-height: 160px; }
   .reader-cols { grid-template-columns: 1fr; }
 }
+
+/* 对比浮层 */
+.reader-model-tag { display: inline-block; font-size: 10.5px; color: var(--accent2); border: 1px solid rgba(34,211,164,.35); border-radius: 4px; padding: 0 5px; margin-right: 6px; vertical-align: 1px; }
+.reader-modal-mask { position: fixed; inset: 0; background: rgba(0,0,0,.55); z-index: 100; display: flex; align-items: center; justify-content: center; padding: 20px; }
+.reader-modal { background: #12162a; border: 1px solid var(--border); border-radius: 14px; max-width: 860px; width: 100%; max-height: 80vh; overflow-y: auto; padding: 22px 24px; position: relative; }
+.reader-modal-close { position: absolute; top: 12px; right: 14px; background: none; border: none; color: var(--muted); font-size: 16px; cursor: pointer; }
+.reader-modal h4 { font-size: 16px; margin-bottom: 10px; }
+.reader-modal-src { color: var(--muted); font-size: 13.5px; line-height: 1.7; padding: 10px 12px; background: rgba(255,255,255,.03); border-radius: 8px; margin-bottom: 16px; }
+.reader-modal-loading { color: var(--muted); font-size: 13.5px; }
+.reader-modal-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.reader-modal-col { border: 1px solid var(--border); border-radius: 10px; padding: 14px; display: flex; flex-direction: column; gap: 8px; }
+.reader-modal-col.empty { opacity: .6; }
+.reader-modal-model { font-weight: 700; font-size: 13.5px; color: var(--accent); }
+.reader-modal-text { font-size: 13.5px; line-height: 1.75; flex: 1; }
+.reader-adopt { background: var(--accent2); border: none; color: #06231b; font-weight: 700; border-radius: 8px; padding: 8px 0; cursor: pointer; font-size: 13px; }
+.reader-adopt:hover { opacity: .88; }
+@media (max-width: 760px) { .reader-modal-cols { grid-template-columns: 1fr; } }
