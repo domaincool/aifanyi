@@ -134,3 +134,5 @@ button.primary:disabled { opacity: 0.5; cursor: wait; }
 .empty-state { text-align: center; padding: 48px 0; color: var(--muted); }
 .empty-state .empty-sub { font-size: 13px; margin-top: 8px; }
 .empty-state a { color: var(--accent); }
+.swap-btn { cursor: pointer; font-size: 16px; padding: 8px 12px; line-height: 1; }
+.swap-btn:hover { border-color: var(--accent2); color: var(--accent2); }

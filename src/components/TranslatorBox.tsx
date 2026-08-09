@@ -48,8 +48,27 @@ export default function TranslatorBox() {
           <option value="zh">中文</option>
           <option value="en">英语</option>
           <option value="ja">日语</option>
+          <option value="de">德语</option>
+          <option value="es">西班牙语</option>
         </select>
-        <span>→</span>
+        <button
+          type="button"
+          className="swap-btn"
+          title="交换语言"
+          aria-label="交换源语言和目标语言"
+          onClick={() => {
+            setSourceLang(targetLang);
+            setTargetLang(sourceLang);
+            // 已有译文时把译文挪回输入框，方便反向翻译
+            if (result) {
+              setText(result);
+              setResult('');
+              setMeta('');
+            }
+          }}
+        >
+          ⇄
+        </button>
         <select value={targetLang} onChange={(e) => setTargetLang(e.target.value)}>
           <option value="en">英语</option>
           <option value="zh">中文</option>
