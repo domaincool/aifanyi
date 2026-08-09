@@ -45,6 +45,33 @@ export default async function HomePage() {
       <p style={{ color: 'var(--muted)' }}>
         标题 / 五点描述 / 客服邮件本地化，按目标市场风格档输出。MVP 开发中，敬请期待。
       </p>
+
+      <section className="why-section">
+        <h2 className="section-title">为什么选择爱翻译</h2>
+        <p className="why-lead">✨ 翻译，不应该只是逐字替换</p>
+        <div className="why-grid">
+          <div className="why-card">
+            <div className="why-emoji">🧠</div>
+            <h3>理解上下文</h3>
+            <p>AI 根据上下文、场景和语气理解真正含义。</p>
+          </div>
+          <div className="why-card">
+            <div className="why-emoji">🎯</div>
+            <h3>自动匹配语气</h3>
+            <p>商务、口语、学术、电商、社交媒体，自动选择合适表达。</p>
+          </div>
+          <div className="why-card">
+            <div className="why-emoji">🌍</div>
+            <h3>真正的本地化</h3>
+            <p>不只是翻译语言，更翻译文化和表达习惯。</p>
+          </div>
+          <div className="why-card">
+            <div className="why-emoji">⚡</div>
+            <h3>一个入口，处理所有内容</h3>
+            <p>文本、PDF、图片、字幕、网页，一站式完成。</p>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

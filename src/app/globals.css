@@ -193,3 +193,14 @@ button.primary:disabled { opacity: 0.5; cursor: wait; }
 .tool-soon { font-size: 11px; font-weight: 400; color: var(--muted); border: 1px solid var(--border); border-radius: 999px; padding: 1px 8px; }
 @media (max-width: 900px) { .tools-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px) { .tools-grid { grid-template-columns: 1fr; } .tools-hero h1 { font-size: 24px; } }
+/* 为什么选择爱翻译 */
+.why-section { margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--border); }
+.why-lead { text-align: center; color: var(--accent2); font-size: 17px; font-weight: 600; margin-bottom: 28px; }
+.why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.why-card { background: var(--panel); border: 1px solid var(--border); border-radius: 14px; padding: 24px 20px; transition: transform .15s ease, border-color .15s ease; }
+.why-card:hover { transform: translateY(-3px); border-color: var(--accent2); }
+.why-emoji { font-size: 28px; margin-bottom: 12px; }
+.why-card h3 { font-size: 16px; margin-bottom: 8px; }
+.why-card p { color: var(--muted); font-size: 13.5px; line-height: 1.7; }
+@media (max-width: 900px) { .why-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .why-grid { grid-template-columns: 1fr; } }
