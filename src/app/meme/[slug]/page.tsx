@@ -1,4 +1,4 @@
-﻿import { prisma } from '@/lib/db';
+import { prisma } from '@/lib/db';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 
@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!m) return { title: '梗翻译 | 爱翻译 aifanyi.com' };
   return {
     title: `${m.term} 英文怎么说？${m.term} → ${m.translation} | 爱翻译`,
-    description: `${m.term}（${m.meaning}）的地道英文表达是「${m.translation}」。含例句与使用场景，爱翻译，认真翻译。`,
+    description: `${m.term}（${m.meaning}）的地道英文表达是「${m.translation}」。含例句与使用场景，爱翻译 · AI翻译。`,
   };
 }
 

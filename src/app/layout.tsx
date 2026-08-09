@@ -4,7 +4,7 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: '爱翻译 aifanyi — AI 翻译工作台 · 盲测擂台 · 梗翻译',
-  description: '爱翻译（aifanyi.com）—— AI 翻译工作台、译文盲测擂台、网络用语翻译。跨境电商 Listing 本地化、梗翻译、多模型对比，让翻译被爱。',
+  description: '爱翻译 · AI翻译 —— AI 翻译工作台、译文盲测擂台、网络用语翻译。跨境电商 Listing 本地化、梗翻译、多模型对比。',
   keywords: ['AI翻译', '跨境电商翻译', 'Listing本地化', '梗翻译', 'YYDS英文', '机翻对比'],
 };
 
@@ -22,7 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </header>
         <main>{children}</main>
         <footer className="site-footer">
-          <p>爱翻译 · aifanyi.com · AI 翻译，认真翻译 © 2026</p>
+          <p>爱翻译 · AI翻译 · aifanyi.com © 2026</p>
         </footer>
         {/* 百度统计：页面交互后加载，不阻塞首屏 */}
         <Script id="baidu-analytics" strategy="afterInteractive">

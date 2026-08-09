@@ -1,4 +1,4 @@
-﻿import TranslatorBox from '@/components/TranslatorBox';
+import TranslatorBox from '@/components/TranslatorBox';
 import { prisma } from '@/lib/db';
 
 export const dynamic = 'force-dynamic';
@@ -15,8 +15,8 @@ export default async function HomePage() {
   return (
     <>
       <section className="hero">
-        <h1>爱翻译，认真翻译</h1>
-        <p>跨境电商 Listing 本地化 · 译文盲测擂台 · 网络用语翻译 —— 让翻译被爱。</p>
+        <h1>爱翻译 · AI翻译</h1>
+        <p>跨境电商 Listing 本地化 · 译文盲测擂台 · 网络用语翻译。</p>
       </section>
 
       <TranslatorBox />
