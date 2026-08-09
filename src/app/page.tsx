@@ -36,7 +36,7 @@ export default async function HomePage() {
         )}
       </div>
 
-      <h2 className="section-title">⚔️ 译文盲测擂台</h2>
+      <h2 className="section-title">⚔️ AI翻译擂台</h2>
       <p style={{ color: 'var(--muted)' }}>
         同一句话，多家 AI 谁译得最好？<a href="/blindtest" style={{ color: 'var(--accent2)' }}>去投票 →</a>
       </p>

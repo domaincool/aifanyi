@@ -12,7 +12,7 @@ export default async function BlindtestListPage() {
 
   return (
     <>
-      <h1>⚔️ 译文盲测擂台</h1>
+      <h1>⚔️ AI翻译擂台</h1>
       <p style={{ color: 'var(--muted)', margin: '10px 0 24px' }}>
         同一段原文，多家 AI 匿名翻译。你觉得谁译得最好，就投谁。投票数据会用来改进翻译路由。
       </p>
