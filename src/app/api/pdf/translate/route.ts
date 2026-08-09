@@ -7,7 +7,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { randomUUID } from 'crypto';
 import { parsePdf } from '@/lib/pdf/parser';
-import { createPdfJob } from '@/lib/pdf/job';
+import { createPdfJob, cleanupExpiredPdfJobs } from '@/lib/pdf/job';
 import { startPdfJob } from '@/lib/pdf/translate';
 import { checkPdfQuota, checkGlobalDailyCap } from '@/lib/pdf/quota';
 import { PdfError } from '@/lib/pdf/types';
@@ -59,6 +59,9 @@ export async function POST(req: NextRequest) {
 
     // 后台启动翻译（fire-and-forget，PM2 常驻进程内执行）
     startPdfJob(taskId);
+
+    // 隐私清理（惰性）：每次上传顺手清一次 24h 过期任务的完整原文（保留匿名统计）
+    void cleanupExpiredPdfJobs().catch(() => {});
 
     return NextResponse.json({
       taskId,

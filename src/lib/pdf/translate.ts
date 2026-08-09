@@ -1,4 +1,4 @@
-﻿/**
+/**
  * PDF 翻译执行器（阶段 2）
  * 后台处理 queued Job：组级翻译（同页 3-5 block 合并）→ DeepSeek 主/GLM 备 → 进度回写 → 汇总
  * 并发 ≤3；单组失败重试 1 次后降级 GLM；部分失败任务仍 completed（stats 标记）
@@ -141,34 +141,50 @@ async function translateGroup(g: TranslationGroup, sourceLang: string, targetLan
 
   const prompt = buildPdfGroupPrompt(sourceLang, targetLang);
   const input = `${prompt}\n\n${g.sourceText}`;
-  const attempt = async (provider: DeepSeekProvider | GlmProvider, model: string) => {
-    const r = await provider.translate({ text: input, sourceLang, targetLang, scenario: 'pdf', maxTokens: 4096 });
-    return r;
+  // 60s 超时（provider_timeout）——provider 内部 fetch 无超时，这里包一层 AbortController 不可行（provider 不接收 signal），
+  // 改为 Promise.race 超时保护；429 识别降级
+  const attempt = async (provider: DeepSeekProvider | GlmProvider, model: string): Promise<{ r: any; timedOut: boolean; rateLimited: boolean }> => {
+    const timer = new Promise<null>((res) => setTimeout(() => res(null), 60000));
+    const call = provider.translate({ text: input, sourceLang, targetLang, scenario: 'pdf', maxTokens: 4096 });
+    const r = await Promise.race([call, timer]);
+    if (r === null) return { r: null, timedOut: true, rateLimited: false };
+    const rr = r as any;
+    const rateLimited = !!(rr.error && (/429|rate limit|too many requests/i.test(rr.error)));
+    return { r: rr, timedOut: false, rateLimited };
   };
 
-  // DeepSeek 主，失败重试 1 次
-  let r = await attempt(deepseek, 'deepseek');
-  if (r.error || !r.text) r = await attempt(deepseek, 'deepseek');
-  let model = 'deepseek';
-  if (r.error || !r.text) {
-    // GLM 降级
-    const r2 = await attempt(glm, 'glm');
-    if (r2.error || !r2.text) {
-      return { model: 'none', segments: [], inputTokens: r.promptTokens + r2.promptTokens, outputTokens: r.completionTokens + r2.completionTokens, costUsd: r.costUsd + r2.costUsd, latencyMs: 0, apiErrors: 2 };
-    }
-    r = r2; model = 'glm';
+  // DeepSeek 主，失败重试 1 次（429 等待 1s 重试）
+  let a = await attempt(deepseek, 'deepseek');
+  if (a.timedOut) await sleep(500);
+  if (!a.r || a.r.error || !a.r.text) {
+    if (a.rateLimited) await sleep(1000);
+    a = await attempt(deepseek, 'deepseek');
   }
-  if (!r.error && r.text) {
+  let r = a.r;
+  let model = 'deepseek';
+  let timedOut = a.timedOut;
+  if (!r || r.error || !r.text) {
+    // GLM 降级
+    const a2 = await attempt(glm, 'glm');
+    if (!a2.r || a2.r.error || !a2.r.text) {
+      const tokIn = (r?.promptTokens || 0) + (a2.r?.promptTokens || 0);
+      const tokOut = (r?.completionTokens || 0) + (a2.r?.completionTokens || 0);
+      const cost = (r?.costUsd || 0) + (a2.r?.costUsd || 0);
+      return { model: 'none', segments: [], inputTokens: tokIn, outputTokens: tokOut, costUsd: cost, latencyMs: 0, apiErrors: 2 };
+    }
+    r = a2.r; model = 'glm'; timedOut = a2.timedOut;
+  }
+  if (r && !r.error && r.text) {
     setCache(key, r.text, model);
   }
   return {
     model,
-    segments: splitSegments(r.text, g.blockIds.length),
-    inputTokens: r.promptTokens,
-    outputTokens: r.completionTokens,
-    costUsd: r.costUsd,
-    latencyMs: r.latencyMs,
-    apiErrors: r.error ? 1 : 0,
+    segments: r && r.text ? splitSegments(r.text, g.blockIds.length) : [],
+    inputTokens: r?.promptTokens || 0,
+    outputTokens: r?.completionTokens || 0,
+    costUsd: r?.costUsd || 0,
+    latencyMs: r?.latencyMs || 0,
+    apiErrors: (r?.error || timedOut) ? 1 : 0,
   };
 }
 
