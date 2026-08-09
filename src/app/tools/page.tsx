@@ -59,17 +59,20 @@ export default function ToolsPage() {
         <p>不管是一句话、一份 PDF，还是一整段视频字幕，都能交给 AI。</p>
       </section>
       <section className="tools-grid">
-        {tools.map((t) => (
-          <div className="tool-card" key={t.id} id={t.id}>
-            <div className="tool-emoji">{t.emoji}</div>
-            <h2>{t.name}</h2>
-            <p>{t.desc}</p>
-            <a className="tool-btn" href="#">
-              {t.action}
-              <span className="tool-soon">即将上线</span>
-            </a>
-          </div>
-        ))}
+        {tools.map((t) => {
+          const live = t.id === 'pdf';
+          return (
+            <div className="tool-card" key={t.id} id={t.id}>
+              <div className="tool-emoji">{t.emoji}</div>
+              <h2>{t.name}</h2>
+              <p>{t.desc}</p>
+              <a className="tool-btn" href={live ? '/tools/pdf-translator' : '#'}>
+                {t.action}
+                {live ? <span className="tool-soon tool-live">可用</span> : <span className="tool-soon">即将上线</span>}
+              </a>
+            </div>
+          );
+        })}
       </section>
     </div>
   );
