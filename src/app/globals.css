@@ -214,3 +214,29 @@ button.primary:disabled { opacity: 0.5; cursor: wait; }
 .scene-card p { color: var(--muted); font-size: 12.5px; }
 @media (max-width: 900px) { .scenes-grid { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 620px) { .scenes-grid { grid-template-columns: repeat(2, 1fr); } }
+/* 常用 AI 翻译区 */
+.quick-links-section { margin-top: 48px; }
+.quick-sub { font-size: 14px; color: var(--muted); margin: 14px 0 10px; font-weight: 500; }
+.quick-links { display: flex; flex-wrap: wrap; gap: 10px; }
+.quick-links a { display: inline-block; background: var(--panel); border: 1px solid var(--border); border-radius: 999px; padding: 8px 18px; color: var(--text); font-size: 14px; text-decoration: none; transition: border-color .15s ease, color .15s ease; }
+.quick-links a:hover { border-color: var(--accent2); color: var(--accent2); }
+
+/* 语言对 SEO 页 */
+.tp-page { max-width: 1080px; margin: 0 auto; padding: 40px 20px 24px; }
+.tp-hero { text-align: center; margin-bottom: 24px; }
+.tp-hero h1 { font-size: 28px; margin-bottom: 12px; }
+.tp-hero p { color: var(--muted); font-size: 14.5px; max-width: 760px; margin: 0 auto; line-height: 1.8; }
+.tp-scenes, .tp-examples, .tp-others { margin-top: 40px; }
+.tp-scenes h2, .tp-examples h2, .tp-others h2 { font-size: 19px; margin-bottom: 16px; }
+.tp-scene-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.tp-scene { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 18px 16px; }
+.tp-scene h3 { font-size: 15px; margin-bottom: 6px; color: var(--accent2); }
+.tp-scene p { color: var(--muted); font-size: 13.5px; line-height: 1.7; }
+.tp-examples ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.tp-examples li { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; }
+.tp-ex-src { color: var(--text); font-size: 14.5px; }
+.tp-ex-dst { color: var(--accent2); font-size: 14px; margin-top: 6px; }
+.tp-other-links { display: flex; flex-wrap: wrap; gap: 10px; }
+.tp-other-links a { display: inline-block; background: var(--panel); border: 1px solid var(--border); border-radius: 999px; padding: 7px 16px; color: var(--text); font-size: 13px; text-decoration: none; }
+.tp-other-links a:hover { border-color: var(--accent2); color: var(--accent2); }
+@media (max-width: 760px) { .tp-scene-grid { grid-template-columns: 1fr; } .tp-hero h1 { font-size: 23px; } }

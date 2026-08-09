@@ -103,6 +103,28 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
+
+      <section className="quick-links-section">
+        <h2 className="section-title">常用 AI 翻译</h2>
+        <h3 className="quick-sub">语言对</h3>
+        <div className="quick-links">
+          <a href="/translate/chinese-to-english">中文 → 英语</a>
+          <a href="/translate/english-to-chinese">英语 → 中文</a>
+          <a href="/translate/japanese-to-chinese">中文 → 日语</a>
+          <a href="/translate/japanese-to-chinese">日语 → 中文</a>
+          <a href="/translate/korean-to-chinese">中文 → 韩语</a>
+          <a href="/translate/korean-to-chinese">韩语 → 中文</a>
+        </div>
+        <h3 className="quick-sub">工具</h3>
+        <div className="quick-links">
+          <a href="/tools">PDF翻译</a>
+          <a href="/tools">图片翻译</a>
+          <a href="/tools">视频字幕翻译</a>
+          <a href="/tools">Word翻译</a>
+          <a href="/tools">PPT翻译</a>
+          <a href="/tools">网页翻译</a>
+        </div>
+      </section>
     </>
   );
 }

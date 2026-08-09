@@ -27,10 +27,16 @@ const TTS_LANG: Record<string, string> = {
   ko: 'ko-KR',
 };
 
-export default function TranslatorBox() {
+export default function TranslatorBox({
+  defaultSourceLang = 'zh',
+  defaultTargetLang = 'en',
+}: {
+  defaultSourceLang?: string;
+  defaultTargetLang?: string;
+}) {
   const [text, setText] = useState('');
-  const [sourceLang, setSourceLang] = useState('zh');
-  const [targetLang, setTargetLang] = useState('en');
+  const [sourceLang, setSourceLang] = useState(defaultSourceLang);
+  const [targetLang, setTargetLang] = useState(defaultTargetLang);
   const [scenario, setScenario] = useState('auto');
   const [result, setResult] = useState('');
   const [meta, setMeta] = useState('');
