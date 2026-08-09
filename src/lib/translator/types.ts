@@ -39,7 +39,9 @@ export function buildSystemPrompt(req: TranslateRequest): string {
     '你是一位专业翻译，输出只有译文本身，不要解释、不要加引号。',
     `翻译方向：${req.sourceLang} → ${req.targetLang}。`,
   ];
-  if (req.scenario === 'auto') {
+  if (req.scenario === 'polish') {
+    parts.push('场景：译文润色。保持原意与风格，修正生硬、不地道的表达，让译文更流畅自然、更像母语者所写。只输出润色后的译文，不要解释改动。');
+  } else if (req.scenario === 'auto') {
     parts.push('场景：AI 自动判断。先识别原文所属场景与语体（商务/学术/口语/游戏/网络用语等），再按最贴合的风格翻译，不要机械直译。');
   } else if (req.scenario === 'business') {
     parts.push('场景：商务翻译。保持正式、专业、得体的商务语气，符合商务邮件/合同/报价/会议等沟通习惯，术语准确，避免口语化。');

@@ -136,3 +136,17 @@ button.primary:disabled { opacity: 0.5; cursor: wait; }
 .empty-state a { color: var(--accent); }
 .swap-btn { cursor: pointer; font-size: 16px; padding: 8px 12px; line-height: 1; }
 .swap-btn:hover { border-color: var(--accent2); color: var(--accent2); }
+
+/* 翻译结果卡片 */
+.result-card { margin-top: 14px; background: #0c0f1d; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+.result-head { display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; border-bottom: 1px solid var(--border); font-size: 13px; }
+.result-lang { font-weight: 600; color: var(--accent2); }
+.result-ok { color: var(--accent2); }
+.result-status { color: var(--muted); }
+.result-body { padding: 16px 14px; white-space: pre-wrap; min-height: 60px; font-size: 15px; line-height: 1.8; }
+.result-actions { display: flex; gap: 8px; padding: 10px 14px; border-top: 1px solid var(--border); flex-wrap: wrap; }
+.result-actions button { background: #0c0f1d; border: 1px solid var(--border); color: var(--text); border-radius: 8px; padding: 6px 12px; font-size: 13px; cursor: pointer; font-family: inherit; }
+.result-actions button:hover:not(:disabled) { border-color: var(--accent2); color: var(--accent2); }
+.result-actions button:disabled { opacity: 0.45; cursor: not-allowed; }
+.result-meta { padding: 0 14px 10px; color: var(--muted); font-size: 12px; }
+.toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); background: var(--accent); color: #fff; padding: 8px 18px; border-radius: 999px; font-size: 13px; z-index: 99; box-shadow: 0 4px 16px rgba(0,0,0,.4); }

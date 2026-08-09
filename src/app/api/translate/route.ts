@@ -11,7 +11,7 @@ import { ingestCorpus } from '@/lib/corpus/ingest';
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { text, sourceLang = 'zh', targetLang = 'en', scenario = 'general', style, glossary } = body;
+    const { text, sourceLang = 'zh', targetLang = 'en', scenario = 'general', style, glossary, polish } = body;
 
     if (!text || typeof text !== 'string' || text.trim().length === 0) {
       return NextResponse.json({ error: 'text 不能为空' }, { status: 400 });
@@ -20,7 +20,10 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: '单次翻译文本过长（上限 5000 字符）' }, { status: 400 });
     }
 
-    const result = await translator.translate({ text, sourceLang, targetLang, scenario, style, glossary });
+    // AI 润色模式：输入为已有译文，按原风格润色（复用路由器：缓存/预算/落库一致）
+    const reqScenario = polish ? 'polish' : scenario;
+    const reqSourceLang = polish ? targetLang : sourceLang;
+    const result = await translator.translate({ text, sourceLang: reqSourceLang, targetLang, scenario: reqScenario, style, glossary });
 
     if (result.error) {
       return NextResponse.json({ error: result.error }, { status: 502 });
@@ -31,9 +34,9 @@ export async function POST(req: NextRequest) {
       data: {
         sourceHash: hashText(text),
         sourceText: text.slice(0, 2000),
-        sourceLang,
+        sourceLang: reqSourceLang,
         targetLang,
-        scenario,
+        scenario: reqScenario,
         style,
         model: result.model.replace(/^cache:/, ''),
         resultText: result.text.slice(0, 5000),
@@ -50,7 +53,7 @@ export async function POST(req: NextRequest) {
       await ingestCorpus({
         sourceText: text.slice(0, 2000),
         targetText: result.text.slice(0, 5000),
-        sourceLang,
+        sourceLang: reqSourceLang,
         targetLang,
         scenario: 'workbench',
         quality: 3,
