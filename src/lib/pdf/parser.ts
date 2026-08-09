@@ -1,4 +1,4 @@
-﻿/**
+/**
  * PDF 解析器（阶段 1 核心）
  * pdfjs-dist → 页/块级 Document Model（bbox/字号/结构分类/页眉页脚/双栏检测/扫描版检测）
  *
@@ -40,6 +40,7 @@ export async function parsePdf(data: ArrayBuffer, fileName: string): Promise<Pdf
   try {
     pdf = await getDocument({ data: new Uint8Array(data), isEvalSupported: false }).promise;
   } catch (e: any) {
+    console.error('[pdf-parse] getDocument error:', e?.name, e?.message?.slice(0, 200));
     if (e?.name === 'PasswordException') {
       throw new PdfError('encrypted', '该 PDF 已加密，需要密码才能打开。请先解除密码保护后再上传。');
     }
