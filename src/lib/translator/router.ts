@@ -1,4 +1,4 @@
-﻿import { TranslateProvider, TranslateRequest, TranslateResult } from './types';
+import { TranslateProvider, TranslateRequest, TranslateResult } from './types';
 import { DeepSeekProvider } from './providers/deepseek';
 import { GlmProvider } from './providers/glm';
 import { GoogleTranslateProvider } from './providers/google';
@@ -44,8 +44,8 @@ export class TranslatorRouter {
   }
 
   async translate(req: TranslateRequest): Promise<TranslateResult> {
-    // 1. 缓存命中（原文哈希去重）
-    const hash = hashText(req.text);
+    // 1. 缓存命中（原文+语言+场景哈希，避免跨语言错用译文 2026-08-09）
+    const hash = hashText(req.text, req.sourceLang, req.targetLang, req.scenario);
     const hit = getCache(hash);
     if (hit) {
       return { model: `cache:${hit.model}`, text: hit.result, promptTokens: 0, completionTokens: 0, costUsd: 0, latencyMs: 0, cached: true } as TranslateResult & { cached: boolean };
