@@ -1,6 +1,6 @@
 # PDF 翻译功能交付文档
 
-> 版本：P1 完整交付（阶段 1-9）｜提交：7771c82 → 3c500fc（errorType 修复）｜日期：2026-08-10
+> 版本：P1 完整交付（阶段 1-9）｜提交：7771c82 → 3c500fc（errorType 修复）→ c988ab4（stats.failedBlocks 口径修复）｜日期：2026-08-10
 > 线上地址：https://aifanyi.com/tools/pdf-translator
 
 ## 一、功能概览
@@ -32,7 +32,7 @@
 - 200：`{ taskId, status: queued|processing|completed|failed, progress, currentPage, translatedBlocks, totalInputTokens, totalOutputTokens, totalCostUsd, apiErrorCount, errorType, errorMessage, durationMs, document? }`（completed 时含双语 document）
 - 404：taskId 不存在
 - `errorType` 取值：`null`（成功）、`partial_translation_failed`（仅部分可翻译块失败）、`translation_failed`（整体失败）、`quota_exceeded`、`no_text_layer`、`encrypted`、`corrupt`
-- 结构性块（header/footer/image）不参与翻译、不计入失败（3c500fc 修复）
+- 结构性块（header/footer/image）不参与翻译、不计入失败（3c500fc 修复）；result.stats.failedBlocks 与顶层 errorType 同口径（可翻译块-已翻译块，c988ab4 修复，原误用 apiErrorCount）
 
 ### POST /api/pdf/compare
 段落级三模型对比。JSON：`{ taskId, blockId, sourceText, translatedText }`。
