@@ -39,7 +39,9 @@ export function buildSystemPrompt(req: TranslateRequest): string {
     '你是一位专业翻译，输出只有译文本身，不要解释、不要加引号。',
     `翻译方向：${req.sourceLang} → ${req.targetLang}。`,
   ];
-  if (req.scenario === 'polish') {
+  if (req.scenario === 'explain') {
+    parts.push('场景：翻译讲解。输入为「原文\\n---\\n译文」两段。请用中文讲解这段译文：先判断语气（如 自然/口语/正式/幽默），再判断场景（如 社交媒体/商务沟通/学术论文），再说明本地化方向（如 美国英语/英式英语），最后用 1-2 句话说明关键翻译决策（比如哪些表达没有直译，而是转换成了目标语言文化中更地道的说法）。输出严格为四行，格式：「语气：xxx」换行「场景：xxx」换行「本地化：xxx」换行「为什么：xxx」，不要输出其他任何内容。');
+  } else if (req.scenario === 'polish') {
     parts.push('场景：译文润色。保持原意与风格，修正生硬、不地道的表达，让译文更流畅自然、更像母语者所写。只输出润色后的译文，不要解释改动。');
   } else if (req.scenario === 'auto') {
     parts.push('场景：AI 自动判断。先识别原文所属场景与语体（商务/学术/口语/游戏/网络用语等），再按最贴合的风格翻译，不要机械直译。');

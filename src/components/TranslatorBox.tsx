@@ -28,6 +28,9 @@ export default function TranslatorBox() {
   const [polishing, setPolishing] = useState(false);
   const [status, setStatus] = useState(''); // 卡片头部状态：已完成 / 已润色 / 已复制
   const [toast, setToast] = useState(''); // 轻提示
+  const [explainOpen, setExplainOpen] = useState(false);
+  const [explainLoading, setExplainLoading] = useState(false);
+  const [explain, setExplain] = useState<{ tone: string; scene: string; localization: string; why: string } | null>(null);
 
   function showToast(msg: string) {
     setToast(msg);
@@ -54,6 +57,8 @@ export default function TranslatorBox() {
         setResult(data.text);
         setMeta(`模型：${data.model}${data.cached ? '（缓存命中）' : ''} · 耗时 ${data.latencyMs}ms`);
         setStatus('已完成');
+        setExplain(null);
+        setExplainOpen(false);
       }
     } catch (e: any) {
       setResult(`网络错误：${e.message}`);
@@ -81,6 +86,8 @@ export default function TranslatorBox() {
         setResult(data.text);
         setMeta(`已润色 · 模型：${data.model}${data.cached ? '（缓存命中）' : ''}`);
         setStatus('已润色 ✨');
+        setExplain(null);
+        setExplainOpen(false);
       }
     } catch (e: any) {
       setStatus('润色失败');
@@ -111,6 +118,28 @@ export default function TranslatorBox() {
       showToast('已复制到剪贴板');
     } catch {
       showToast('复制失败，请手动选择复制');
+    }
+  }
+
+  async function loadExplain() {
+    if (explain || explainLoading) return;
+    setExplainLoading(true);
+    try {
+      const res = await fetch('/api/explain', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ sourceText: text, targetText: result, sourceLang, targetLang, scenario }),
+      });
+      const data = await res.json();
+      if (data.error) {
+        setExplain({ tone: '', scene: '', localization: '', why: '暂时无法生成讲解，稍后再试。' });
+      } else {
+        setExplain({ tone: data.tone || '', scene: data.scene || '', localization: data.localization || '', why: data.why || '' });
+      }
+    } catch {
+      setExplain({ tone: '', scene: '', localization: '', why: '暂时无法生成讲解，稍后再试。' });
+    } finally {
+      setExplainLoading(false);
     }
   }
 
@@ -199,6 +228,35 @@ export default function TranslatorBox() {
             <button type="button" onClick={doShare} disabled={!result}>↗ 分享</button>
           </div>
           {meta && <div className="result-meta">{meta}</div>}
+          <div className="explain-box">
+            <button
+              type="button"
+              className="explain-toggle"
+              onClick={() => {
+                const next = !explainOpen;
+                setExplainOpen(next);
+                if (next) loadExplain();
+              }}
+            >
+              AI为什么这样翻译？ <span className="explain-arrow">{explainOpen ? '▲' : '▼'}</span>
+            </button>
+            {explainOpen && (
+              <div className="explain-content">
+                {explainLoading ? (
+                  <div className="explain-loading">分析中…</div>
+                ) : explain ? (
+                  <>
+                    {explain.tone && <div className="explain-row"><span className="explain-k">语气</span><span className="explain-v">{explain.tone}</span></div>}
+                    {explain.scene && <div className="explain-row"><span className="explain-k">场景</span><span className="explain-v">{explain.scene}</span></div>}
+                    {explain.localization && <div className="explain-row"><span className="explain-k">本地化</span><span className="explain-v">{explain.localization}</span></div>}
+                    {explain.why && <div className="explain-why">{explain.why}</div>}
+                  </>
+                ) : (
+                  <div className="explain-loading">分析中…</div>
+                )}
+              </div>
+            )}
+          </div>
         </div>
       )}
       {toast && <div className="toast">{toast}</div>}
