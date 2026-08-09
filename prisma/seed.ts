@@ -8,13 +8,14 @@ import { memeData } from './meme-data';
 import { memeBatch001 } from './meme-batch-001';
 import { memeBatch002 } from './meme-batch-002';
 import { memeBatch003 } from './meme-batch-003';
+import { memeBatch004 } from './meme-batch-004';
 
 const prisma = new PrismaClient();
 
 async function main() {
   let created = 0;
   let updated = 0;
-  const allEntries = [...memeData, ...memeBatch001, ...memeBatch002, ...memeBatch003];
+  const allEntries = [...memeData, ...memeBatch001, ...memeBatch002, ...memeBatch003, ...memeBatch004];
   for (const m of allEntries) {
     const existing = await prisma.memeEntry.findUnique({ where: { slug: m.slug } });
     if (existing) {
