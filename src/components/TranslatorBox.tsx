@@ -8,6 +8,11 @@ const LANG_LABEL: Record<string, string> = {
   ja: '日本語',
   de: 'Deutsch',
   es: 'Español',
+  fr: 'Français',
+  ru: 'Русский',
+  ar: 'العربية',
+  pt: 'Português',
+  ko: '한국어',
 };
 const TTS_LANG: Record<string, string> = {
   zh: 'zh-CN',
@@ -15,6 +20,11 @@ const TTS_LANG: Record<string, string> = {
   ja: 'ja-JP',
   de: 'de-DE',
   es: 'es-ES',
+  fr: 'fr-FR',
+  ru: 'ru-RU',
+  ar: 'ar-SA',
+  pt: 'pt-PT',
+  ko: 'ko-KR',
 };
 
 export default function TranslatorBox() {
@@ -175,6 +185,11 @@ export default function TranslatorBox() {
           <option value="ja">日语</option>
           <option value="de">德语</option>
           <option value="es">西班牙语</option>
+          <option value="fr">法语</option>
+          <option value="ru">俄语</option>
+          <option value="ar">阿拉伯语</option>
+          <option value="pt">葡萄牙语</option>
+          <option value="ko">韩语</option>
         </select>
         <button
           type="button"
@@ -200,6 +215,11 @@ export default function TranslatorBox() {
           <option value="ja">日语</option>
           <option value="de">德语</option>
           <option value="es">西班牙语</option>
+          <option value="fr">法语</option>
+          <option value="ru">俄语</option>
+          <option value="ar">阿拉伯语</option>
+          <option value="pt">葡萄牙语</option>
+          <option value="ko">韩语</option>
         </select>
         <select value={scenario} onChange={(e) => setScenario(e.target.value)}>
           <option value="auto">AI 自动判断</option>
