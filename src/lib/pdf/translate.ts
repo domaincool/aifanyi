@@ -90,7 +90,12 @@ async function processJob(taskId: string): Promise<void> {
     }
 
     // 完成：部分失败也 completed（stats.failedBlocks 标识）
-    const failedBlocks = totalBlocks - translatedBlocks;
+    // 结构性块（header/footer/image）不参与翻译，不计入失败分母
+    const translatableBlocks = doc.pages.reduce(
+      (s: number, p: any) => s + p.blocks.filter((b: PdfBlock) => b.type !== 'header' && b.type !== 'footer' && b.type !== 'image').length,
+      0
+    );
+    const failedBlocks = translatableBlocks - translatedBlocks;
     await prisma.pdfJob.update({
       where: { taskId },
       data: {
@@ -103,7 +108,7 @@ async function processJob(taskId: string): Promise<void> {
         totalCostUsd: Math.round(totalCost * 1e6) / 1e6,
         apiErrorCount: apiErrors,
         errorType: failedBlocks > 0 ? 'partial_translation_failed' : null,
-        errorMessage: failedBlocks > 0 ? `部分内容翻译失败（${failedBlocks}/${totalBlocks} 块），可重新翻译失败部分。` : null,
+        errorMessage: failedBlocks > 0 ? `部分内容翻译失败（${failedBlocks}/${translatableBlocks} 可翻译块），可重新翻译失败部分。` : null,
       },
     });
     console.log(`[pdf-job] ${taskId} 完成: ${translatedBlocks}/${totalBlocks} 块, ¥${(totalCost * 7.2).toFixed(3)}, ${Date.now() - started}ms`);
