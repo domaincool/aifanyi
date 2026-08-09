@@ -1,4 +1,4 @@
-﻿/**
+/**
  * POST /api/pdf/translate
  * 上传 PDF → 限制校验（大小/页数/字符数）→ 解析（Document Model）→ 创建 PdfJob（queued）
  * 返回 { taskId, status: "queued", pageCount, totalBlocks, sourceLang }
@@ -8,6 +8,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import { randomUUID } from 'crypto';
 import { parsePdf } from '@/lib/pdf/parser';
 import { createPdfJob } from '@/lib/pdf/job';
+import { startPdfJob } from '@/lib/pdf/translate';
+import { checkPdfQuota, checkGlobalDailyCap } from '@/lib/pdf/quota';
 import { PdfError } from '@/lib/pdf/types';
 import { PDF_CONFIG } from '@/lib/pdf/config';
 
@@ -43,8 +45,20 @@ export async function POST(req: NextRequest) {
     const ua = req.headers.get('user-agent') || '';
     const clientKey = require('crypto').createHash('sha256').update(`${ip}|${ua}`).digest('hex').slice(0, 32);
 
+    // 免费额度校验（先到为准：5 文件/日 且 50 页/日）+ 全站日熔断
+    const quota = await checkPdfQuota(clientKey, doc.pageCount);
+    if (!quota.ok) {
+      return NextResponse.json({ errorType: 'quota_exceeded', message: quota.reason }, { status: 429 });
+    }
+    if (!(await checkGlobalDailyCap())) {
+      return NextResponse.json({ errorType: 'quota_exceeded', message: '今日服务繁忙，请明天再试。' }, { status: 429 });
+    }
+
     const taskId = `pdf_${Date.now().toString(36)}_${randomUUID().slice(0, 8)}`;
     const { status } = await createPdfJob({ taskId, fileName, fileSize: pdfFile.size, doc, clientKey });
+
+    // 后台启动翻译（fire-and-forget，PM2 常驻进程内执行）
+    startPdfJob(taskId);
 
     return NextResponse.json({
       taskId,
@@ -55,8 +69,6 @@ export async function POST(req: NextRequest) {
       sourceLang: doc.sourceLang,
       targetLang: doc.targetLang,
       limitations: doc.limitations,
-      // 阶段 1：解析完成即返回摘要；翻译阶段 2 起由后台执行
-      parseDurationMs: Date.now(),
     });
   } catch (e: any) {
     if (e instanceof PdfError) {

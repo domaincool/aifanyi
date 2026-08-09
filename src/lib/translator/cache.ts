@@ -11,8 +11,8 @@ import { createHash } from 'crypto';
 const memCache = new Map<string, { result: string; model: string; ts: number }>();
 const MEM_TTL_MS = 60 * 60 * 1000; // 内存缓存 1 小时
 
-export function hashText(text: string, sourceLang = '', targetLang = '', scenario = ''): string {
-  return createHash('sha256').update(`${text.trim()}|${sourceLang}|${targetLang}|${scenario}`).digest('hex');
+export function hashText(text: string, sourceLang = '', targetLang = '', scenario = '', model = '', promptVersion = ''): string {
+  return createHash('sha256').update(`${text.trim()}|${sourceLang}|${targetLang}|${scenario}|${model}|${promptVersion}`).digest('hex');
 }
 
 export function getCache(hash: string): { result: string; model: string } | null {

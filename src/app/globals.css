@@ -268,3 +268,11 @@ button.primary:disabled { opacity: 0.5; cursor: wait; }
 .pdf-limitations p { color: #fbbf24; font-size: 13px; margin-top: 4px; }
 .pdf-coming { margin-top: 14px; color: var(--muted); font-size: 13px; }
 @media (max-width: 760px) { .pdf-summary-grid { grid-template-columns: 1fr 1fr; } .pdf-hero h1 { font-size: 23px; } }
+
+.pdf-progress { margin-top: 16px; }
+.pdf-progress-bar { height: 8px; background: var(--border); border-radius: 99px; overflow: hidden; }
+.pdf-progress-fill { height: 100%; background: linear-gradient(90deg, var(--accent), var(--accent2)); border-radius: 99px; transition: width .4s ease; }
+.pdf-progress p { margin-top: 8px; color: var(--muted); font-size: 13px; }
+.pdf-done { margin-top: 16px; }
+.pdf-done p { color: var(--accent2); font-size: 14px; }
+.pdf-done-stats { color: var(--muted) !important; font-size: 13px !important; margin-top: 4px; }

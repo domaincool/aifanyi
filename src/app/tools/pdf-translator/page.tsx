@@ -1,9 +1,9 @@
-﻿'use client';
+'use client';
 /**
  * 爱翻译 AI PDF 翻译阅读器（P1 阶段 1：上传 → 校验 → 解析 → Job 创建）
  * 阶段 2 起接入：轮询进度 / 翻译 / 双语阅读 / 多模型对比 / 下载
  */
-import { useState, useRef, useCallback } from 'react';
+import { useState, useRef, useCallback, useEffect } from 'react';
 
 interface UploadResult {
   taskId: string;
@@ -21,6 +21,7 @@ export default function PdfTranslatorPage() {
   const [uploading, setUploading] = useState(false);
   const [result, setResult] = useState<UploadResult | null>(null);
   const [error, setError] = useState<{ errorType: string; message: string } | null>(null);
+  const [job, setJob] = useState<{ status: string; progress: number; currentPage: number; totalPages: number; translatedBlocks: number; totalBlocks: number; errorType?: string; message?: string; result?: any } | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
   const handleFile = useCallback(async (file: File) => {
@@ -28,6 +29,7 @@ export default function PdfTranslatorPage() {
     setUploading(true);
     setError(null);
     setResult(null);
+    setJob(null);
     try {
       const fd = new FormData();
       fd.append('file', file);
@@ -38,10 +40,25 @@ export default function PdfTranslatorPage() {
         return;
       }
       setResult(data as UploadResult);
+      pollTask(data.taskId);
     } catch {
       setError({ errorType: 'parse_failed', message: '网络异常，上传失败，请稍后重试。' });
     } finally {
       setUploading(false);
+    }
+  }, []);
+
+    const pollTask = useCallback(async (taskId: string) => {
+    try {
+      const res = await fetch(`/api/pdf/tasks/${taskId}`);
+      const data = await res.json();
+      setJob(data);
+      if (data.status === 'processing' || data.status === 'queued') {
+        setTimeout(() => pollTask(taskId), 1500);
+      }
+    } catch {
+      // 轮询失败静默重试一次
+      setTimeout(() => pollTask(taskId), 3000);
     }
   }, []);
 
@@ -122,7 +139,31 @@ export default function PdfTranslatorPage() {
               {result.limitations.map((l, i) => <p key={i}>ℹ️ {l}</p>)}
             </div>
           )}
-          <p className="pdf-coming">翻译引擎接入中（阶段 2）——上线后此处将自动开始翻译并进入双语阅读。</p>
+          {job && (job.status === 'queued' || job.status === 'processing') && (
+            <div className="pdf-progress">
+              <div className="pdf-progress-bar"><div className="pdf-progress-fill" style={{ width: `${job.progress}%` }} /></div>
+              <p>翻译中… {job.progress}%（第 {job.currentPage || 1}/{job.totalPages} 页 · {job.translatedBlocks}/{job.totalBlocks} 块）</p>
+            </div>
+          )}
+          {job && job.status === 'completed' && (
+            <div className="pdf-done">
+              <p>✅ 翻译完成！{job.result?.stats?.translatedBlocks ?? job.translatedBlocks}/{job.totalBlocks} 块</p>
+              {job.result?.stats && (
+                <p className="pdf-done-stats">
+                  成本 ¥{((job.result.stats.totalCostUsd || 0) * 7.2).toFixed(3)} · 耗时 {Math.round((job.result.stats.durationMs || 0) / 1000)}s
+                  {job.result.stats.failedBlocks > 0 && ` · ${job.result.stats.failedBlocks} 块失败`}
+                </p>
+              )}
+              <p className="pdf-coming">双语阅读器即将接入（阶段 3）——上线后此处将展示原文/译文对照阅读。</p>
+            </div>
+          )}
+          {job && job.status === 'failed' && (
+            <div className="pdf-error">
+              <p className="pdf-error-title">⚠️ 翻译失败</p>
+              <p>{job.message || '翻译过程中出现错误，请稍后重试。'}</p>
+              <button className="pdf-btn" onClick={() => inputRef.current?.click()}>重新选择文件</button>
+            </div>
+          )}
         </div>
       )}
     </div>
