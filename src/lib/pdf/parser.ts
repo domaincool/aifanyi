@@ -59,6 +59,27 @@ export async function parsePdf(data: ArrayBuffer, fileName: string): Promise<Pdf
   // 先扫一遍收集所有行的字号（求正文基准字号）
   const allFontSizes: number[] = [];
 
+  // Pass 1：收集全部 item 归一化 x，检测多栏（item 级双峰，避免双栏同行被行聚类合并）
+  const allItemXs: number[] = [];
+  for (let p = 1; p <= pdf.numPages; p++) {
+    const pg = await pdf.getPage(p);
+    const vp = pg.getViewport({ scale: 1 });
+    const content = await pg.getTextContent();
+    for (const item of content.items as any[]) {
+      if (!item.str || !item.str.trim() || item.str.trim().length < 5) continue;
+      allItemXs.push((item.transform?.[4] || 0) / vp.width);
+    }
+  }
+  let isDualColumn = false;
+  if (allItemXs.length > 20) {
+    // 双峰 + 栏间空白：左右两栏 item 起点分居 0.45/0.5 两侧，栏 gap（0.45-0.5）应基本无 item
+    const left = allItemXs.filter((x) => x < 0.45).length;
+    const right = allItemXs.filter((x) => x > 0.5).length;
+    const mid = allItemXs.filter((x) => x >= 0.45 && x <= 0.5).length;
+    isDualColumn = left > allItemXs.length * 0.2 && right > allItemXs.length * 0.2 && mid < allItemXs.length * 0.05;
+  }
+  const splitX = 0.475;
+
   for (let p = 1; p <= pdf.numPages; p++) {
     let page: any;
     try {
@@ -85,10 +106,10 @@ export async function parsePdf(data: ArrayBuffer, fileName: string): Promise<Pdf
       if (!byY.has(key)) byY.set(key, []);
       byY.get(key)!.push({ text: item.str, x, y: topY, width: item.width || 0, height: item.height || fontSize, fontSize, fontName: item.fontName || '', items: 1 });
     }
-    // 按 y 排序，行内按 x 排序拼接
+    // 按 y 排序；双栏时同行按中线拆左/右两行，行内按 x 排序拼接
     const sortedYs = [...byY.keys()].sort((a, b) => a - b);
-    for (const yKey of sortedYs) {
-      const row = byY.get(yKey)!;
+    const pushLine = (row: RawLine[]) => {
+      if (!row.length) return;
       row.sort((a, b) => a.x - b.x);
       const first = row[0];
       const last = row[row.length - 1];
@@ -103,6 +124,17 @@ export async function parsePdf(data: ArrayBuffer, fileName: string): Promise<Pdf
         items: row.length,
       });
       allFontSizes.push(lines[lines.length - 1].fontSize);
+    };
+    for (const yKey of sortedYs) {
+      const row = byY.get(yKey)!;
+      if (isDualColumn) {
+        const leftRow = row.filter((r) => r.x < splitX * pageWidth);
+        const rightRow = row.filter((r) => r.x >= splitX * pageWidth);
+        if (leftRow.length && rightRow.length) { pushLine(leftRow); pushLine(rightRow); }
+        else pushLine(row);
+      } else {
+        pushLine(row);
+      }
     }
     totalCharacters += lines.reduce((s, l) => s + l.text.length, 0);
     if (totalCharacters > PDF_CONFIG.maxCharacters) {
@@ -172,19 +204,9 @@ export async function parsePdf(data: ArrayBuffer, fileName: string): Promise<Pdf
     pages.push({ pageNumber: p, pageWidth, pageHeight, blocks });
   }
 
-  // 双栏检测（粗）：非 header/footer 行 x 起点双峰
-  const bodyXs: number[] = [];
-  for (const page of pages) {
-    for (const b of page.blocks) {
-      if (b.type !== 'header' && b.type !== 'footer' && b.text.length > 10) bodyXs.push(b.bbox.x / page.pageWidth);
-    }
-  }
-  if (bodyXs.length > 8) {
-    const left = bodyXs.filter((x) => x < 0.45).length;
-    const right = bodyXs.filter((x) => x > 0.5).length;
-    if (left > bodyXs.length * 0.25 && right > bodyXs.length * 0.25 && Math.abs(left - right) < bodyXs.length * 0.3) {
-      limitations.push('该 PDF 包含多栏布局，部分内容阅读顺序可能与原文不同。');
-    }
+  // 双栏提示（Pass 1 item 级检测；行聚类已按中线拆栏，块级 x 不再被合并污染）
+  if (isDualColumn) {
+    limitations.push('该 PDF 包含多栏布局，部分内容阅读顺序可能与原文不同。');
   }
 
   // 扫描版：整篇无文本
