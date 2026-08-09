@@ -1,4 +1,4 @@
-﻿import type { MetadataRoute } from 'next';
+import type { MetadataRoute } from 'next';
 import { prisma } from '@/lib/db';
 
 // 动态生成 sitemap：每次请求从数据库读取词条，加新词条自动出现在地图里
@@ -11,6 +11,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const entries: MetadataRoute.Sitemap = [
     { url: BASE, lastModified: now, changeFrequency: 'daily', priority: 1 },
     { url: `${BASE}/blindtest`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${BASE}/meme`, lastModified: now, changeFrequency: 'daily', priority: 0.9 },
   ];
 
   // 200 个梗词条 SEO 页
