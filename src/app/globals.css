@@ -344,3 +344,16 @@ button.primary:disabled { opacity: 0.5; cursor: wait; }
 .reader-download { display: flex; gap: 6px; }
 .reader-download button { background: rgba(34, 211, 164, 0.12); border: 1px solid rgba(34,211,164,.35); color: var(--accent2); border-radius: 8px; padding: 6px 10px; font-size: 12.5px; cursor: pointer; }
 .reader-download button:hover { background: rgba(34, 211, 164, 0.2); }
+
+/* ===== PDF 阅读器移动端完善（阶段 8） ===== */
+@media (max-width: 480px) {
+  .reader-top { flex-direction: column; align-items: flex-start; }
+  .reader-top-controls { width: 100%; flex-wrap: wrap; }
+  .reader-download { margin-left: auto; }
+  .reader-main { padding: 12px; }
+  .reader-block { font-size: 14px; }
+  .reader-actions { position: static; opacity: 1; margin-top: 4px; }
+  .reader-page-title { margin-top: 8px; }
+  .pdf-page { padding: 24px 14px 40px; }
+  .pdf-summary-grid { grid-template-columns: 1fr; }
+}
