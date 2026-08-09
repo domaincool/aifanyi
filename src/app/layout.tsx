@@ -3,9 +3,9 @@ import Script from 'next/script';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: '爱翻译 aifanyi — AI 翻译工作台 · 盲测擂台 · 梗翻译',
+  title: '爱翻译 aifanyi — AI 翻译工作台 · 盲测擂台 · 网络用语翻译',
   description: '爱翻译 · AI翻译 —— AI 翻译工作台、译文盲测擂台、网络用语翻译。跨境电商 Listing 本地化、梗翻译、多模型对比。',
-  keywords: ['AI翻译', '跨境电商翻译', 'Listing本地化', '梗翻译', 'YYDS英文', '机翻对比'],
+  keywords: ['AI翻译', '跨境电商翻译', 'Listing本地化', '网络用语翻译', 'YYDS英文', '机翻对比'],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -16,7 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <a href="/" className="logo">爱翻译<span> · aifanyi.com</span></a>
           <nav>
             <a href="/blindtest">盲测擂台</a>
-            <a href="/meme">梗翻译</a>
+            <a href="/meme">网络用语翻译</a>
             <a href="/#workbench">工作台</a>
           </nav>
         </header>

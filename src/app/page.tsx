@@ -21,7 +21,7 @@ export default async function HomePage() {
 
       <TranslatorBox />
 
-      <h2 className="section-title">🔥 热梗翻译</h2>
+      <h2 className="section-title">🔥 网络用语翻译</h2>
       <div className="entry-grid">
         {hotMemes.length > 0 ? (
           hotMemes.map((m) => (

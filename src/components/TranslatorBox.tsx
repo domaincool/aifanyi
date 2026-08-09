@@ -60,7 +60,7 @@ export default function TranslatorBox() {
         <select value={scenario} onChange={(e) => setScenario(e.target.value)}>
           <option value="general">通用翻译</option>
           <option value="ecommerce">电商 Listing</option>
-          <option value="meme">网络梗翻译</option>
+          <option value="meme">网络用语翻译</option>
         </select>
         <button className="primary" onClick={doTranslate} disabled={loading}>
           {loading ? '翻译中…' : '翻译'}

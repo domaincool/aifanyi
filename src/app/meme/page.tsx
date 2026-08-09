@@ -4,9 +4,9 @@ import Link from 'next/link';
 export const dynamic = 'force-dynamic';
 
 export const metadata = {
-  title: '梗翻译大全 · 网络用语英文怎么说 | 爱翻译',
+  title: '网络用语翻译大全 · 网络用语英文怎么说 | 爱翻译',
   description: '网络热梗地道英文翻译大全：职场、恋爱、游戏、影视、网络用语全覆盖。YYDS、破防、班味、情绪价值……一句中文梗，一句地道英文。',
-  keywords: ['梗翻译', '网络用语英文', 'YYDS英文', '热梗翻译', '网络流行语翻译'],
+  keywords: ['网络用语英文', '网络流行语翻译', '网络热梗翻译'],
 };
 
 const PAGE_SIZE = 48;
@@ -67,7 +67,7 @@ export default async function MemeIndexPage({
     <div>
       {/* 顶部 */}
       <section className="hero">
-        <h1>梗翻译大全</h1>
+        <h1>网络用语翻译大全</h1>
         <p>一句中文梗，一句地道英文 —— {total} 个网络热梗等你来翻</p>
         <form className="search-box" action="/meme" method="get">
           <input type="search" name="q" placeholder="搜梗：YYDS / 破防 / 班味 / 情绪价值…" defaultValue={q} />
@@ -104,7 +104,7 @@ export default async function MemeIndexPage({
 
       {/* 词条列表 */}
       <h2 className="section-title">
-        {q ? `搜索结果：${total} 条` : tag ? `「${tag}」分类：${total} 条` : `全部梗翻译（${total} 条）`}
+        {q ? `搜索结果：${total} 条` : tag ? `「${tag}」分类：${total} 条` : `全部网络用语翻译（${total} 条）`}
       </h2>
       {memes.length > 0 ? (
         <div className="entry-grid">
@@ -118,7 +118,7 @@ export default async function MemeIndexPage({
         </div>
       ) : (
         <div className="empty-state">
-          <p>没有找到相关梗翻译</p>
+          <p>没有找到相关网络用语翻译</p>
           <p className="empty-sub">换个关键词试试，或<a href="/meme">浏览全部</a></p>
         </div>
       )}
