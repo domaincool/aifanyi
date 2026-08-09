@@ -32,7 +32,7 @@ export async function POST(req: NextRequest) {
     // 任务落库（成本计量 + 后续质量分析的数据源）
     await prisma.translationJob.create({
       data: {
-        sourceHash: hashText(text),
+        sourceHash: hashText(text, reqSourceLang, targetLang, reqScenario),
         sourceText: text.slice(0, 2000),
         sourceLang: reqSourceLang,
         targetLang,

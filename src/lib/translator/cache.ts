@@ -4,13 +4,15 @@ import { createHash } from 'crypto';
  * 缓存与去重：
  * 1. 原文 SHA-256 哈希 → 命中直接返回历史结果（梗翻译 100% 走这里，零成本）
  * 2. 简单内存缓存 + 数据库兜底（TranslationJob 表）
+ *
+ * 注意：hash 必须包含语言与场景，否则 zh→ja 会错误命中 zh→en 的结果（2026-08-09 修复）
  */
 
 const memCache = new Map<string, { result: string; model: string; ts: number }>();
 const MEM_TTL_MS = 60 * 60 * 1000; // 内存缓存 1 小时
 
-export function hashText(text: string): string {
-  return createHash('sha256').update(text.trim()).digest('hex');
+export function hashText(text: string, sourceLang = '', targetLang = '', scenario = ''): string {
+  return createHash('sha256').update(`${text.trim()}|${sourceLang}|${targetLang}|${scenario}`).digest('hex');
 }
 
 export function getCache(hash: string): { result: string; model: string } | null {
