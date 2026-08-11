@@ -39,7 +39,7 @@ const tools = [
     id: 'doc',
     emoji: '📝',
     name: 'Word / PPT',
-    desc: '文档内容快速本地化',
+    desc: 'Word/PPT 文档一键翻译，双语对照',
     action: '上传文档 →',
   },
   {
@@ -60,13 +60,13 @@ export default function ToolsPage() {
       </section>
       <section className="tools-grid">
         {tools.map((t) => {
-          const live = t.id === 'pdf' || t.id === 'subtitle' || t.id === 'polish' || t.id === 'image' || t.id === 'web';
+          const live = t.id === 'pdf' || t.id === 'subtitle' || t.id === 'polish' || t.id === 'image' || t.id === 'web' || t.id === 'doc';
           return (
             <div className="tool-card" key={t.id} id={t.id}>
               <div className="tool-emoji">{t.emoji}</div>
               <h2>{t.name}</h2>
               <p>{t.desc}</p>
-              <a className="tool-btn" href={live ? (t.id === 'subtitle' ? '/tools/subtitle-translator' : t.id === 'polish' ? '/tools/ai-polish' : t.id === 'image' ? '/tools/image-translator' : t.id === 'web' ? '/tools/web-translator' : '/tools/pdf-translator') : '#'}>
+              <a className="tool-btn" href={live ? (t.id === 'subtitle' ? '/tools/subtitle-translator' : t.id === 'polish' ? '/tools/ai-polish' : t.id === 'image' ? '/tools/image-translator' : t.id === 'web' ? '/tools/web-translator' : t.id === 'doc' ? '/tools/doc-translator' : '/tools/pdf-translator') : '#'}>
                 {t.action}
                 {live ? <span className="tool-soon tool-live">可用</span> : <span className="tool-soon">即将上线</span>}
               </a>
