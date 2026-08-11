@@ -5,7 +5,7 @@
 import { prisma } from '../db';
 import { AuthContext } from './types';
 
-const SECRET_KEY = process.env.SESSION_CRET || '';
+const SECRET_KEY = process.env.SESSION_SECRET || '';
 
 /** 惰性校验：真正签名/验签时才要求强密钥（避免 next build 收集 page data 时因 env 缺失中断） */
 function requireSecretKey(): string {
