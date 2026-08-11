@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --bg: #0f1220;
   --panel: #171b2e;
   --border: #2a3054;
@@ -476,4 +476,52 @@ button.primary:disabled { opacity: 0.5; cursor: wait; }
   .job-actions { margin-left: 0; width: 100%; justify-content: flex-end; }
   .login-modal { padding: 24px; }
   .btn-google { font-size: 14px; padding: 10px 20px; }
+}
+
+/* ===== PDF SEO 内容区 ===== */
+.pdf-seo {
+  max-width: 840px;
+  margin: 48px auto 0;
+  padding: 0 16px 64px;
+}
+.pdf-seo h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 40px 0 16px;
+  color: #1a1a2e;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e8ecf1;
+}
+.pdf-seo h2:first-child { margin-top: 0; }
+.pdf-seo h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0 0 6px;
+  color: #1a1a2e;
+}
+.pdf-seo p { margin: 0 0 8px; color: #555; line-height: 1.65; }
+
+.pdf-seo-steps { display: flex; gap: 16px; flex-wrap: wrap; }
+.pdf-seo-step { flex: 1; min-width: 200px; background: #f7f8fb; border-radius: 12px; padding: 20px; }
+.pdf-seo-step-num {
+  display: inline-flex; width: 32px; height: 32px; border-radius: 50%;
+  background: #0066ff; color: #fff; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 0.9rem; margin-bottom: 10px;
+}
+.pdf-seo-step strong { display: block; margin-bottom: 4px; }
+
+.pdf-seo-features, .pdf-seo-scenarios { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
+.pdf-seo-feature, .pdf-seo-scenario { background: #f7f8fb; border-radius: 12px; padding: 20px; }
+
+.pdf-seo-faq-item { margin-bottom: 16px; }
+.pdf-seo-faq-item h3 { color: #0066ff; }
+.pdf-seo-faq-item p { margin-bottom: 4px; }
+
+.pdf-seo-limits { padding-left: 20px; }
+.pdf-seo-limits li { color: #777; margin-bottom: 6px; line-height: 1.55; }
+
+@media (max-width: 768px) {
+  .pdf-seo { padding: 0 16px 48px; }
+  .pdf-seo-steps { flex-direction: column; }
+  .pdf-seo-features, .pdf-seo-scenarios { grid-template-columns: 1fr; }
 }

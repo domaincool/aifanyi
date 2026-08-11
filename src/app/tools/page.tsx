@@ -10,8 +10,8 @@ const tools = [
   {
     id: 'pdf',
     emoji: '📄',
-    name: 'PDF 翻译',
-    desc: '保留原文结构，快速翻译完整 PDF',
+    name: 'PDF 翻译 · 三模型对比',
+    desc: 'DeepSeek/GLM/Google 三模型对比，双语对照阅读，支持 DOCX/TXT 下载 · 免费额度',
     action: '开始翻译 →',
   },
   {

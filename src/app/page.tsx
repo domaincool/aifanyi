@@ -117,7 +117,7 @@ export default async function HomePage() {
         </div>
         <h3 className="quick-sub">工具</h3>
         <div className="quick-links">
-          <a href="/tools">PDF翻译</a>
+          <a href="/tools/pdf-translator">PDF 翻译 · 三模型对比 · 免费额度</a>
           <a href="/tools">图片翻译</a>
           <a href="/tools">视频字幕翻译</a>
           <a href="/tools">Word翻译</a>
