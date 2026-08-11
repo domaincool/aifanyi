@@ -99,7 +99,8 @@ async function sendOtpEmail(to: string, otp: string): Promise<boolean> {
   try {
     const nodemailer = require('nodemailer');
     const transporter = nodemailer.createTransport({
-      host: smtpHost, port: Number(process.env.SMTP_PORT || 587), secure: false,
+      host: smtpHost, port: Number(process.env.SMTP_PORT || 587),
+      secure: process.env.SMTP_SECURE === 'true', // QQ 邮箱 465 需 SSL；587 用 STARTTLS
       auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS },
     });
     await transporter.sendMail({
