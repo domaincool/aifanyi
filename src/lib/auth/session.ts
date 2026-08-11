@@ -1,13 +1,18 @@
 /**
  * Session 管理：JWT + DB 双写（Node crypto API，无需 jose）
- * Phase 0 加固：SESSION_SECRET fail-fast（拒绝空/弱密钥）
+ * Phase 0 加固：SESSION_SECRET 惰性校验（build 阶段不抛错，运行时强校验）
  */
 import { prisma } from '../db';
 import { AuthContext } from './types';
 
 const SECRET_KEY = process.env.SESSION_CRET || '';
-if (!SECRET_KEY || SECRET_KEY.length < 32) {
-  throw new Error('[auth] SESSION_SECRET 未配置或长度不足 32 字符（安全策略：拒绝使用弱密钥）。请在生产环境设置强随机 SESSION_SECRET。');
+
+/** 惰性校验：真正签名/验签时才要求强密钥（避免 next build 收集 page data 时因 env 缺失中断） */
+function requireSecretKey(): string {
+  if (!SECRET_KEY || SECRET_KEY.length < 32) {
+    throw new Error('[auth] SESSION_SECRET 未配置或长度不足 32 字符（安全策略：拒绝使用弱密钥）。请在生产环境设置强随机 SESSION_SECRET。');
+  }
+  return SECRET_KEY;
 }
 
 function base64url(buf: Buffer): string {
@@ -17,7 +22,7 @@ function base64url(buf: Buffer): string {
 function signJwt(payload: Record<string, unknown>, expiresAt: Date): string {
   const header = base64url(Buffer.from(JSON.stringify({ alg: 'HS256', typ: 'JWT' })));
   const body = base64url(Buffer.from(JSON.stringify({ ...payload, iat: Math.floor(Date.now() / 1000), exp: Math.floor(expiresAt.getTime() / 1000) })));
-  const hmac = require('crypto').createHmac('sha256', SECRET_KEY).update(`${header}.${body}`).digest();
+  const hmac = require('crypto').createHmac('sha256', requireSecretKey()).update(`${header}.${body}`).digest();
   return `${header}.${body}.${base64url(hmac)}`;
 }
 
@@ -25,7 +30,7 @@ function verifyJwt(token: string): Record<string, unknown> | null {
   try {
     const parts = token.split('.');
     if (parts.length !== 3) return null;
-    const hmac = require('crypto').createHmac('sha256', SECRET_KEY).update(`${parts[0]}.${parts[1]}`).digest();
+    const hmac = require('crypto').createHmac('sha256', requireSecretKey()).update(`${parts[0]}.${parts[1]}`).digest();
     if (base64url(hmac) !== parts[2]) return null;
     const payload = JSON.parse(Buffer.from(parts[1], 'base64url').toString('utf-8'));
     if (payload.exp && payload.exp * 1000 < Date.now()) return null;
