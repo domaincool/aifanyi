@@ -46,7 +46,7 @@ const tools = [
     id: 'polish',
     emoji: '✨',
     name: 'AI润色',
-    desc: '翻译后继续优化表达，让文字更自然',
+    desc: '译文/草稿 AI 润色，保持原意、表达更地道',
     action: '开始润色 →',
   },
 ];
@@ -60,13 +60,13 @@ export default function ToolsPage() {
       </section>
       <section className="tools-grid">
         {tools.map((t) => {
-          const live = t.id === 'pdf' || t.id === 'subtitle';
+          const live = t.id === 'pdf' || t.id === 'subtitle' || t.id === 'polish';
           return (
             <div className="tool-card" key={t.id} id={t.id}>
               <div className="tool-emoji">{t.emoji}</div>
               <h2>{t.name}</h2>
               <p>{t.desc}</p>
-              <a className="tool-btn" href={live ? (t.id === 'subtitle' ? '/tools/subtitle-translator' : '/tools/pdf-translator') : '#'}>
+              <a className="tool-btn" href={live ? (t.id === 'subtitle' ? '/tools/subtitle-translator' : t.id === 'polish' ? '/tools/ai-polish' : '/tools/pdf-translator') : '#'}>
                 {t.action}
                 {live ? <span className="tool-soon tool-live">可用</span> : <span className="tool-soon">即将上线</span>}
               </a>

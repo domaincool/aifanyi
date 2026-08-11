@@ -402,7 +402,7 @@ button.primary:disabled { opacity: 0.5; cursor: wait; }
 
 /* Header auth */
 .header-auth { margin-left: auto; display: flex; align-items: center; gap: 12px; }
-.btn-login-header { padding: 6px 18px; border: 1px solid #d0d5dd; border-radius: 8px; background: #fff; cursor: pointer; font-size: 14px; color: var(--text); }
+.btn-login-header { padding: 6px 18px; border: 1px solid #d0d5dd; border-radius: 8px; background: #fff; cursor: pointer; font-size: 14px; color: #1e293b; }
 .btn-login-header:hover { border-color: var(--muted); }
 
 /* User Menu */
@@ -445,7 +445,7 @@ button.primary:disabled { opacity: 0.5; cursor: wait; }
 .guest-prompt { background: linear-gradient(135deg, #eff6ff, #dbeafe); border-radius: 12px; padding: 20px 24px; margin: 20px 0; }
 .guest-prompt-body strong { display: block; font-size: 15px; margin-bottom: 12px; }
 .guest-prompt-actions { display: flex; gap: 10px; margin-bottom: 8px; }
-.btn-google-sm, .btn-email-sm { padding: 8px 16px; border-radius: 8px; cursor: pointer; font-size: 13px; border: 1px solid #d0d5dd; background: #fff; }
+.btn-google-sm, .btn-email-sm { padding: 8px 16px; border-radius: 8px; cursor: pointer; font-size: 13px; border: 1px solid #d0d5dd; background: #fff; color: #1e293b; }
 .btn-google-sm:hover, .btn-email-sm:hover { background: #f0f0f0; }
 .guest-prompt-muted { font-size: 12px; color: var(--muted); }
 .link-btn { background: none; border: none; color: var(--accent); cursor: pointer; font-size: inherit; padding: 0; }
