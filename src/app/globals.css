@@ -525,3 +525,139 @@ button.primary:disabled { opacity: 0.5; cursor: wait; }
   .pdf-seo-steps { flex-direction: column; }
   .pdf-seo-features, .pdf-seo-scenarios { grid-template-columns: 1fr; }
 }
+
+
+/* ═══════════════ 设计 Token（设计专家 2026-08-12） ═══════════════ */
+:root{
+  --brand-50:#eff6ff;--brand-100:#dbeafe;--brand-500:#3b82f6;
+  --brand-600:#2563eb;--brand-700:#1d4ed8;--brand-800:#1e40af;
+  --neutral-50:#f9fafb;--neutral-100:#f3f4f6;--neutral-200:#e5e7eb;
+  --neutral-300:#d1d5db;--neutral-500:#6b7280;--neutral-700:#374151;--neutral-900:#111827;
+  --success:#16a34a;--warning:#d97706;--danger:#dc2626;
+  --radius-sm:8px;--radius-md:10px;--radius-lg:16px;
+  --shadow-sm:0 1px 2px rgba(17,24,39,.06);
+  --shadow-md:0 4px 12px rgba(17,24,39,.08);
+  --shadow-lg:0 8px 24px rgba(17,24,39,.10),0 2px 6px rgba(17,24,39,.06);
+  --space-2:8px;--space-3:12px;--space-4:16px;--space-6:24px;--space-8:32px;
+  --fs-xs:12px;--fs-sm:14px;--fs-base:16px;--fs-lg:18px;--fs-xl:24px;--fs-2xl:32px;
+}
+
+/* ═══════════════ 登录弹窗 v2（设计专家方案） ═══════════════ */
+.login-overlay {
+  position: fixed; inset: 0; background: rgba(17,24,39,.5);
+  display: grid; place-items: center; padding: 20px; z-index: 200;
+  animation: login-fade-in .15s ease-out;
+  backdrop-filter: blur(2px); -webkit-backdrop-filter: blur(2px);
+}
+@keyframes login-fade-in { from { opacity: 0; } to { opacity: 1; } }
+.login-modal {
+  background: #fff; border-radius: var(--radius-lg); padding: 32px 28px;
+  max-width: min(420px, 100vw - 32px); width: 100%; position: relative;
+  border: 1px solid var(--neutral-200);
+  box-shadow: var(--shadow-lg);
+  max-height: 90vh; overflow-y: auto;
+  animation: login-pop .2s ease-out;
+}
+@keyframes login-pop { from { opacity: 0; transform: scale(.96); } to { opacity: 1; transform: scale(1); } }
+.login-close {
+  position: absolute; top: 12px; right: 16px; background: none; border: none;
+  font-size: 22px; cursor: pointer; color: var(--neutral-500); line-height: 1;
+  padding: 6px 8px; border-radius: var(--radius-sm);
+}
+.login-close:hover { background: var(--neutral-100); color: var(--neutral-900); }
+.login-modal h2 { margin: 0 0 8px; font-size: var(--fs-xl); color: var(--neutral-900); }
+.login-subtitle { color: var(--neutral-500); font-size: var(--fs-sm); margin: 0 0 24px; }
+
+/* Google 主按钮：全宽、白底、官方四色 G */
+.btn-google {
+  display: inline-flex; align-items: center; justify-content: center; gap: 12px;
+  padding: 12px 24px; border: 1px solid var(--neutral-200); border-radius: var(--radius-md);
+  background: #fff; cursor: pointer; font-size: 15px; color: var(--neutral-700);
+  transition: background .15s, border-color .15s, box-shadow .15s;
+}
+.btn-google:hover { background: var(--neutral-50); border-color: var(--neutral-300); }
+.btn-google:active { background: var(--neutral-100); }
+.btn-google:focus-visible { outline: 2px solid var(--brand-600); outline-offset: 2px; }
+.btn-google-block { width: 100%; height: 48px; font-weight: 500; }
+
+/* 分隔线 */
+.login-divider { display: flex; align-items: center; gap: 12px; margin: 20px 0; color: var(--neutral-300); font-size: var(--fs-xs); }
+.login-divider::before, .login-divider::after { content: ""; flex: 1; height: 1px; background: var(--neutral-200); }
+
+/* 邮箱折叠入口 */
+.login-email-toggle {
+  width: 100%; padding: 12px; border: 1px dashed var(--neutral-300); border-radius: var(--radius-md);
+  background: var(--neutral-50); color: var(--neutral-500); cursor: pointer; font-size: var(--fs-sm);
+  transition: border-color .15s, color .15s, background .15s;
+}
+.login-email-toggle:hover { border-color: var(--brand-500); color: var(--brand-600); background: var(--brand-50); }
+
+/* 邮箱表单 */
+.login-email-section { display: flex; flex-direction: column; gap: 0; }
+.login-label { display: block; font-size: var(--fs-xs); color: var(--neutral-500); margin-bottom: 6px; }
+.login-input {
+  width: 100%; height: 44px; padding: 0 14px; box-sizing: border-box;
+  border: 1px solid var(--neutral-300); border-radius: var(--radius-md);
+  font-size: var(--fs-base); outline: none; color: var(--neutral-900);
+  transition: border-color .15s, box-shadow .15s;
+}
+.login-input:focus { border-color: var(--brand-600); box-shadow: 0 0 0 3px rgba(37,99,235,.15); }
+.login-input.has-error { border-color: var(--danger); }
+.login-input.has-error:focus { box-shadow: 0 0 0 3px rgba(220,38,38,.12); }
+.login-btn {
+  width: 100%; height: 44px; margin-top: 12px;
+  background: var(--brand-600); color: #fff; border: none; border-radius: var(--radius-md);
+  font-size: var(--fs-base); cursor: pointer; font-weight: 600;
+  transition: background .15s;
+}
+.login-btn:hover { background: var(--brand-700); }
+.login-btn:active { background: var(--brand-800); }
+.login-btn:disabled { opacity: .6; cursor: not-allowed; }
+
+/* 分段验证码 */
+.code-inputs { display: flex; gap: 8px; justify-content: space-between; margin: 4px 0 2px; }
+.code-input {
+  width: 44px; height: 48px; text-align: center; font-size: var(--fs-lg); font-weight: 600;
+  border: 1.5px solid var(--neutral-300); border-radius: var(--radius-md);
+  outline: none; color: var(--neutral-900); background: #fff;
+  transition: border-color .15s, box-shadow .15s;
+}
+.code-input:focus { border-color: var(--brand-600); box-shadow: 0 0 0 3px rgba(37,99,235,.15); }
+.code-input.has-error { border-color: var(--danger); }
+@media (max-width: 400px) {
+  .code-input { width: 40px; height: 44px; }
+  .code-inputs { gap: 6px; }
+}
+
+.login-code-sent { font-size: var(--fs-sm); color: var(--neutral-500); margin: 0 0 12px; word-break: break-all; }
+.login-code-sent strong { color: var(--neutral-900); }
+.login-code-actions { display: flex; justify-content: space-between; margin-top: 10px; }
+.login-link-btn {
+  background: none; border: none; color: var(--brand-600); cursor: pointer;
+  font-size: var(--fs-sm); padding: 4px 0; text-align: left;
+}
+.login-link-btn:hover { color: var(--brand-700); text-decoration: underline; }
+.login-link-btn:disabled { color: var(--neutral-300); cursor: not-allowed; text-decoration: none; }
+.login-error { color: var(--danger); font-size: var(--fs-sm); margin: 6px 0 0; }
+
+/* 登录好处 */
+.login-benefits {
+  display: flex; flex-wrap: wrap; gap: 6px 14px; margin: 20px 0 4px;
+  font-size: var(--fs-xs); color: var(--neutral-500);
+}
+.login-benefits span { white-space: nowrap; }
+
+/* 协议 */
+.login-footer-text { font-size: var(--fs-xs); color: var(--neutral-500); margin: 14px 0 0; text-align: center; line-height: 1.6; }
+.login-footer-text a { color: var(--brand-600); text-decoration: underline; }
+.login-footer-text a:hover { color: var(--brand-700); }
+
+/* 登录成功态 */
+.login-success { text-align: center; padding: 24px 0 16px; }
+.login-success-icon {
+  width: 56px; height: 56px; margin: 0 auto 14px; border-radius: 50%;
+  background: var(--success); color: #fff; font-size: 28px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  animation: login-pop .25s ease-out;
+}
+.login-success p { color: var(--neutral-700); font-size: var(--fs-base); }
