@@ -1,10 +1,14 @@
 /**
  * Session 管理：JWT + DB 双写（Node crypto API，无需 jose）
+ * Phase 0 加固：SESSION_SECRET fail-fast（拒绝空/弱密钥）
  */
 import { prisma } from '../db';
 import { AuthContext } from './types';
 
-const SECRET_KEY = process.env.JWT_SECRET || '';
+const SECRET_KEY = process.env.SESSION_CRET || '';
+if (!SECRET_KEY || SECRET_KEY.length < 32) {
+  throw new Error('[auth] SESSION_SECRET 未配置或长度不足 32 字符（安全策略：拒绝使用弱密钥）。请在生产环境设置强随机 SESSION_SECRET。');
+}
 
 function base64url(buf: Buffer): string {
   return buf.toString('base64url');

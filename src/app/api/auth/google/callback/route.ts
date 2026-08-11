@@ -5,24 +5,44 @@ import { migrateGuestTasks } from '@/lib/auth/migrate';
 
 export const runtime = 'nodejs';
 
+const STATE_COOKIE = 'aifanyi_oauth_state';
+
 export async function GET(req: NextRequest) {
+  const site = process.env.NEXT_PUBLIC_SITE_URL || 'https://aifanyi.com';
   const code = req.nextUrl.searchParams.get('code');
+  const state = req.nextUrl.searchParams.get('state');
+  const cookieState = req.cookies.get(STATE_COOKIE)?.value;
+
+  // state 校验：防 OAuth CSRF / Authorization Code Injection
+  if (!state || !cookieState || state !== cookieState) {
+    const res = NextResponse.redirect(`${site}?login_error=${encodeURIComponent('登录状态校验失败，请重新登录。')}`);
+    res.cookies.delete(STATE_COOKIE);
+    return res;
+  }
+
   if (!code) {
     const msg = 'Google 登录失败，请重试。';
-    return NextResponse.redirect(`${process.env.NEXT_PUBLIC_SITE_URL || 'https://aifanyi.com'}?login_error=${encodeURIComponent(msg)}`);
+    const res = NextResponse.redirect(`${site}?login_error=${encodeURIComponent(msg)}`);
+    res.cookies.delete(STATE_COOKIE);
+    return res;
   }
 
   try {
-    const redirectUri = `${process.env.NEXT_PUBLIC_SITE_URL || 'https://aifanyi.com'}/api/auth/google/callback`;
+    const redirectUri = `${site}/api/auth/google/callback`;
     const { userId, sessionToken, expiresAt } = await exchangeGoogleCode(code, redirectUri);
 
     const guestId = await getGuestCookie();
     if (guestId) await migrateGuestTasks(guestId, userId);
 
-    const res = NextResponse.redirect(`${process.env.NEXT_PUBLIC_SITE_URL || 'https://aifanyi.com'}/account?login=success`);
+    const res = NextResponse.redirect(`${site}/account?login=success`);
     res.cookies.set('aifanyi_session', sessionToken, { httpOnly: true, secure: true, sameSite: 'lax', path: '/', expires: expiresAt });
+    res.cookies.delete(STATE_COOKIE);
     return res;
   } catch (e: any) {
-    return NextResponse.redirect(`${process.env.NEXT_PUBLIC_SITE_URL || 'https://aifanyi.com'}?login_error=${encodeURIComponent('登录失败：' + (e?.message || '未知错误'))}`);
+    // 用户侧只给通用错误，细节记服务端日志
+    console.error('[auth/google/callback]', e?.message || e);
+    const res = NextResponse.redirect(`${site}?login_error=${encodeURIComponent('Google 登录失败，请重试。')}`);
+    res.cookies.delete(STATE_COOKIE);
+    return res;
   }
 }
