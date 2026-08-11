@@ -1,5 +1,6 @@
-// aifanyi.com 数据模型 v0.1
+// aifanyi.com 数据模型 v0.2 - 统一用户账户体系
 // 设计原则：业务表与语料库分离；所有翻译行为都可回溯（成本/模型/原文哈希）
+// User/Auth/Usage/Translation Job 解耦；所有额度配置化
 
 generator client {
   provider = "prisma-client-js"
@@ -10,28 +11,66 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-// ---------- 账号 ----------
+// ═══════════════════ 用户账户 ═══════════════════
 model User {
-  id        String   @id @default(cuid())
-  email     String?  @unique
-  nickname  String?
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id            String    @id @default(cuid())
+  email         String?   @unique
+  emailVerified DateTime?
+  nickname      String?
+  avatar        String?
+  authProvider  String?
+  status        String    @default("active")
+  lastLoginAt   DateTime?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
 
-  votes       Vote[]
-  corrections Correction[]
-  glossaries  Glossary[]
+  sessions          Session[]
+  usageLedgers      UsageLedger[]
+  translationJobs   PdfJob[]           @relation("UserPdfJobs")
+  documentProgress  DocumentProgress[]
+  votes             Vote[]
+  corrections       Correction[]
+  glossaries        Glossary[]
+  creditAccount     CreditAccount?
+  creditLedgers     CreditLedger[]
+
+  @@index([email])
+  @@index([status])
 }
 
-// ---------- 盲测擂台 ----------
+// ═══════════════════ 认证会话 ═══════════════════
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expiresAt    DateTime
+  createdAt    DateTime @default(now())
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([sessionToken])
+}
+
+// ═══════════════════ OTP 验证码 ═══════════════════
+model VerificationToken {
+  id         String   @id @default(cuid())
+  identifier String
+  tokenHash  String
+  expiresAt  DateTime
+  used       Boolean  @default(false)
+  createdAt  DateTime @default(now())
+
+  @@index([identifier])
+}
+
+// ═══════════════════ 盲测擂台 ═══════════════════
 model Blindtest {
   id           String   @id @default(cuid())
-  sourceText   String // 原文
+  sourceText   String
   sourceLang   String   @default("zh")
   targetLang   String   @default("en")
-  // 多模型匿名译文：JSONB [{model:"deepseek", text:"...", anonymousId:"A"}]
   translations Json
-  winnerModel  String? // 当前领先模型
+  winnerModel  String?
   voteCount    Int      @default(0)
   createdAt    DateTime @default(now())
   updatedAt    DateTime @updatedAt
@@ -42,8 +81,8 @@ model Blindtest {
 model Vote {
   id          String   @id @default(cuid())
   blindtestId String
-  model       String // 投给哪个模型
-  ipHash      String? // 匿名防刷（IP + UA 哈希）
+  model       String
+  ipHash      String?
   createdAt   DateTime @default(now())
 
   blindtest Blindtest @relation(fields: [blindtestId], references: [id], onDelete: Cascade)
@@ -54,38 +93,38 @@ model Vote {
   @@index([ipHash])
 }
 
-// ---------- 梗翻译 ----------
+// ═══════════════════ 梗翻译 ═══════════════════
 model MemeEntry {
   id          String   @id @default(cuid())
-  term        String   @unique // YYDS
-  slug        String   @unique // yyds（SEO 页 URL）
+  term        String   @unique
+  slug        String   @unique
   lang        String   @default("zh-CN")
-  meaning     String // 含义解释
-  translation String // 地道英文
-  examples    Json // 例句 JSONB [{zh, en}]
-  tags        String[] // 分类标签
-  popularity  Int      @default(0) // 搜索热度
+  meaning     String
+  translation String
+  examples    Json
+  tags        String[]
+  popularity  Int      @default(0)
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 }
 
-// ---------- 翻译任务（成本与质量计量） ----------
+// ═══════════════════ 文本翻译任务 ═══════════════════
 model TranslationJob {
   id               String   @id @default(cuid())
-  sourceHash       String // 原文 SHA-256，用于去重
+  sourceHash       String
   sourceText       String
   sourceLang       String
   targetLang       String
-  scenario         String   @default("general") // ecommerce / meme / subtitle ...
-  style            String? // 风格档：us-direct / eu-formal ...
-  model            String // 实际使用的模型
+  scenario         String   @default("general")
+  style            String?
+  model            String
   resultText       String
   promptTokens     Int      @default(0)
   completionTokens Int      @default(0)
-  costUsd          Float    @default(0) // 本次调用成本
+  costUsd          Float    @default(0)
   latencyMs        Int      @default(0)
   cached           Boolean  @default(false)
-  qualityScore     Float? // 自评/人工评分
+  qualityScore     Float?
   createdAt        DateTime @default(now())
 
   @@index([sourceHash])
@@ -93,15 +132,15 @@ model TranslationJob {
   @@index([createdAt])
 }
 
-// ---------- 数据飞轮：语料库 ----------
+// ═══════════════════ 语料库 ═══════════════════
 model CorpusEntry {
   id         String   @id @default(cuid())
   sourceText String
   targetText String
   sourceLang String
   targetLang String
-  scenario   String // 来源场景：blindtest / workbench / correction / community
-  quality    Int      @default(3) // 1-5 质量分，低分隔离
+  scenario   String
+  quality    Int      @default(3)
   votes      Int      @default(0)
   createdAt  DateTime @default(now())
 
@@ -112,11 +151,11 @@ model CorpusEntry {
 model Correction {
   id         String   @id @default(cuid())
   sourceText String
-  badText    String // 错误译文（机翻/低质）
-  goodText   String // 人工修正
+  badText    String
+  goodText   String
   sourceLang String   @default("zh")
   targetLang String   @default("en")
-  status     String   @default("pending") // pending / accepted / rejected
+  status     String   @default("pending")
   createdAt  DateTime @default(now())
 
   user   User?   @relation(fields: [userId], references: [id])
@@ -125,10 +164,10 @@ model Correction {
   @@index([status])
 }
 
-// ---------- 术语库 ----------
+// ═══════════════════ 术语库 ═══════════════════
 model TermbaseEntry {
   id        String   @id @default(cuid())
-  domain    String // ecommerce / gaming / legal / medical ...
+  domain    String
   termZh    String
   termEn    String
   note      String?
@@ -138,12 +177,11 @@ model TermbaseEntry {
   @@unique([domain, termZh])
 }
 
-// ---------- 工作台用户词库 ----------
 model Glossary {
   id        String   @id @default(cuid())
   termZh    String
   termEn    String
-  locked    Boolean  @default(true) // 品牌词锁定：所有译文强制遵守
+  locked    Boolean  @default(true)
   createdAt DateTime @default(now())
 
   user   User?   @relation(fields: [userId], references: [id])
@@ -152,7 +190,7 @@ model Glossary {
   @@index([userId])
 }
 
-// ---------- PDF 翻译任务（P1） ----------
+// ═══════════════════ PDF 翻译任务 ═══════════════════
 model PdfJob {
   id                String    @id @default(cuid())
   taskId            String    @unique
@@ -161,44 +199,116 @@ model PdfJob {
   pageCount         Int
   sourceLang        String    @default("auto")
   targetLang        String    @default("zh")
-  status            String    @default("queued") // queued / processing / completed / failed
+  status            String    @default("queued")
   progress          Int       @default(0)
   currentPage       Int       @default(0)
   totalBlocks       Int       @default(0)
   translatedBlocks  Int       @default(0)
   errorType         String?
   errorMessage      String?
-  limitations       Json? // 双栏/表格等 limitation 提示
-  document          Json? // Document Model（含原文，24h TTL 后清空；不保留完整原文）
+  limitations       Json?
+  document          Json?
   totalInputTokens  Int       @default(0)
   totalOutputTokens Int       @default(0)
   totalCostUsd      Float     @default(0)
   apiErrorCount     Int       @default(0)
-  compareCount      Int       @default(0) // 段落级多模型对比次数（20段/日额度）
+  compareCount      Int       @default(0)
   durationMs        Int?
-  clientKey         String? // 防滥用维度（IP+session 哈希）
+  clientKey         String?
+  userId            String?
+  guestSessionId    String?
+  expiresAt         DateTime?
+  saved             Boolean   @default(false)
   createdAt         DateTime  @default(now())
   completedAt       DateTime?
   updatedAt         DateTime  @updatedAt
 
+  user User? @relation("UserPdfJobs", fields: [userId], references: [id])
+
   @@index([createdAt])
   @@index([status])
   @@index([clientKey])
+  @@index([userId])
+  @@index([guestSessionId])
+  @@index([userId, createdAt])
 }
 
-// ---------- PDF 埋点（匿名统计，不记录 PDF 内容） ----------
+// ═══════════════════ PDF 埋点 ═══════════════════
 model PdfEvent {
-  id         String   @id @default(cuid())
-  event      String // pdf_upload / pdf_parse_success / pdf_parse_failed / translation_started / translation_completed / translation_failed / model_compare_clicked / model_compare_completed / model_adopted / docx_downloaded / bilingual_docx_downloaded / txt_downloaded / retry_clicked
-  taskId     String?
-  pageCount  Int?
-  sourceLang String?
-  targetLang String?
-  durationMs Int?
-  costUsd    Float?
-  model      String?
-  createdAt  DateTime @default(now())
+  id              String   @id @default(cuid())
+  event           String
+  taskId          String?
+  pageCount       Int?
+  sourceLang      String?
+  targetLang      String?
+  durationMs      Int?
+  costUsd         Float?
+  model           String?
+  userId          String?
+  guestSessionId  String?
+  createdAt       DateTime @default(now())
 
   @@index([event])
   @@index([createdAt])
+  @@index([userId])
+  @@index([guestSessionId])
+}
+
+// ═══════════════════ 额度账本 ═══════════════════
+model UsageLedger {
+  id             String   @id @default(cuid())
+  userId         String?
+  guestSessionId String?
+  type           String
+  amount         Int
+  unit           String
+  taskId         String?
+  description    String?
+  createdAt      DateTime @default(now())
+
+  user User? @relation(fields: [userId], references: [id])
+
+  @@index([userId])
+  @@index([guestSessionId])
+  @@index([createdAt])
+  @@index([userId, createdAt])
+}
+
+// ═══════════════════ 阅读进度 ═══════════════════
+model DocumentProgress {
+  id          String   @id @default(cuid())
+  userId      String
+  documentId  String
+  lastPage    Int
+  lastBlockId String?
+  updatedAt   DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, documentId])
+  @@index([userId, documentId])
+}
+
+// ═══════════════════ 积分账户 ═══════════════════
+model CreditAccount {
+  id        String   @id @default(cuid())
+  userId    String   @unique
+  balance   Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model CreditLedger {
+  id          String   @id @default(cuid())
+  userId      String
+  type        String
+  amount      Int
+  description String?
+  createdAt   DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id])
+
+  @@index([userId])
 }

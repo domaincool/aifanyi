@@ -1,0 +1,204 @@
+// aifanyi.com 数据模型 v0.1
+// 设计原则：业务表与语料库分离；所有翻译行为都可回溯（成本/模型/原文哈希）
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ---------- 账号 ----------
+model User {
+  id        String   @id @default(cuid())
+  email     String?  @unique
+  nickname  String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  votes       Vote[]
+  corrections Correction[]
+  glossaries  Glossary[]
+}
+
+// ---------- 盲测擂台 ----------
+model Blindtest {
+  id           String   @id @default(cuid())
+  sourceText   String // 原文
+  sourceLang   String   @default("zh")
+  targetLang   String   @default("en")
+  // 多模型匿名译文：JSONB [{model:"deepseek", text:"...", anonymousId:"A"}]
+  translations Json
+  winnerModel  String? // 当前领先模型
+  voteCount    Int      @default(0)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  votes Vote[]
+}
+
+model Vote {
+  id          String   @id @default(cuid())
+  blindtestId String
+  model       String // 投给哪个模型
+  ipHash      String? // 匿名防刷（IP + UA 哈希）
+  createdAt   DateTime @default(now())
+
+  blindtest Blindtest @relation(fields: [blindtestId], references: [id], onDelete: Cascade)
+  user      User?     @relation(fields: [userId], references: [id])
+  userId    String?
+
+  @@index([blindtestId])
+  @@index([ipHash])
+}
+
+// ---------- 梗翻译 ----------
+model MemeEntry {
+  id          String   @id @default(cuid())
+  term        String   @unique // YYDS
+  slug        String   @unique // yyds（SEO 页 URL）
+  lang        String   @default("zh-CN")
+  meaning     String // 含义解释
+  translation String // 地道英文
+  examples    Json // 例句 JSONB [{zh, en}]
+  tags        String[] // 分类标签
+  popularity  Int      @default(0) // 搜索热度
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+// ---------- 翻译任务（成本与质量计量） ----------
+model TranslationJob {
+  id               String   @id @default(cuid())
+  sourceHash       String // 原文 SHA-256，用于去重
+  sourceText       String
+  sourceLang       String
+  targetLang       String
+  scenario         String   @default("general") // ecommerce / meme / subtitle ...
+  style            String? // 风格档：us-direct / eu-formal ...
+  model            String // 实际使用的模型
+  resultText       String
+  promptTokens     Int      @default(0)
+  completionTokens Int      @default(0)
+  costUsd          Float    @default(0) // 本次调用成本
+  latencyMs        Int      @default(0)
+  cached           Boolean  @default(false)
+  qualityScore     Float? // 自评/人工评分
+  createdAt        DateTime @default(now())
+
+  @@index([sourceHash])
+  @@index([model])
+  @@index([createdAt])
+}
+
+// ---------- 数据飞轮：语料库 ----------
+model CorpusEntry {
+  id         String   @id @default(cuid())
+  sourceText String
+  targetText String
+  sourceLang String
+  targetLang String
+  scenario   String // 来源场景：blindtest / workbench / correction / community
+  quality    Int      @default(3) // 1-5 质量分，低分隔离
+  votes      Int      @default(0)
+  createdAt  DateTime @default(now())
+
+  @@index([scenario])
+  @@index([sourceLang, targetLang])
+}
+
+model Correction {
+  id         String   @id @default(cuid())
+  sourceText String
+  badText    String // 错误译文（机翻/低质）
+  goodText   String // 人工修正
+  sourceLang String   @default("zh")
+  targetLang String   @default("en")
+  status     String   @default("pending") // pending / accepted / rejected
+  createdAt  DateTime @default(now())
+
+  user   User?   @relation(fields: [userId], references: [id])
+  userId String?
+
+  @@index([status])
+}
+
+// ---------- 术语库 ----------
+model TermbaseEntry {
+  id        String   @id @default(cuid())
+  domain    String // ecommerce / gaming / legal / medical ...
+  termZh    String
+  termEn    String
+  note      String?
+  verified  Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  @@unique([domain, termZh])
+}
+
+// ---------- 工作台用户词库 ----------
+model Glossary {
+  id        String   @id @default(cuid())
+  termZh    String
+  termEn    String
+  locked    Boolean  @default(true) // 品牌词锁定：所有译文强制遵守
+  createdAt DateTime @default(now())
+
+  user   User?   @relation(fields: [userId], references: [id])
+  userId String?
+
+  @@index([userId])
+}
+
+// ---------- PDF 翻译任务（P1） ----------
+model PdfJob {
+  id                String    @id @default(cuid())
+  taskId            String    @unique
+  fileName          String
+  fileSize          Int
+  pageCount         Int
+  sourceLang        String    @default("auto")
+  targetLang        String    @default("zh")
+  status            String    @default("queued") // queued / processing / completed / failed
+  progress          Int       @default(0)
+  currentPage       Int       @default(0)
+  totalBlocks       Int       @default(0)
+  translatedBlocks  Int       @default(0)
+  errorType         String?
+  errorMessage      String?
+  limitations       Json? // 双栏/表格等 limitation 提示
+  document          Json? // Document Model（含原文，24h TTL 后清空；不保留完整原文）
+  totalInputTokens  Int       @default(0)
+  totalOutputTokens Int       @default(0)
+  totalCostUsd      Float     @default(0)
+  apiErrorCount     Int       @default(0)
+  compareCount      Int       @default(0) // 段落级多模型对比次数（20段/日额度）
+  durationMs        Int?
+  clientKey         String? // 防滥用维度（IP+session 哈希）
+  createdAt         DateTime  @default(now())
+  completedAt       DateTime?
+  updatedAt         DateTime  @updatedAt
+
+  @@index([createdAt])
+  @@index([status])
+  @@index([clientKey])
+}
+
+// ---------- PDF 埋点（匿名统计，不记录 PDF 内容） ----------
+model PdfEvent {
+  id         String   @id @default(cuid())
+  event      String // pdf_upload / pdf_parse_success / pdf_parse_failed / translation_started / translation_completed / translation_failed / model_compare_clicked / model_compare_completed / model_adopted / docx_downloaded / bilingual_docx_downloaded / txt_downloaded / retry_clicked
+  taskId     String?
+  pageCount  Int?
+  sourceLang String?
+  targetLang String?
+  durationMs Int?
+  costUsd    Float?
+  model      String?
+  createdAt  DateTime @default(now())
+
+  @@index([event])
+  @@index([createdAt])
+}

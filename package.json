@@ -15,7 +15,9 @@
   "dependencies": {
     "@prisma/client": "^5.22.0",
     "docx": "^9.7.1",
+    "jose": "^6.2.8",
     "next": "^15.1.0",
+    "nodemailer": "^9.0.5",
     "pdfjs-dist": "^3.11.174",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
