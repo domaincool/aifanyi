@@ -1,6 +1,7 @@
 /**
  * Session 管理：JWT + DB 双写（Node crypto API，无需 jose）
  * Phase 0 加固：SESSION_SECRET 惰性校验（build 阶段不抛错，运行时强校验）
+ * Phase 6 修复：validateSession 增加 revokedAt 检查（撤销的会话立即失效）
  */
 import { prisma } from '../db';
 import { AuthContext } from './types';
@@ -55,7 +56,8 @@ export async function validateSession(sessionToken: string): Promise<AuthContext
   if (!payload || !payload.sub) return null;
 
   const session = await prisma.session.findUnique({ where: { sessionToken } });
-  if (!session || session.expiresAt < new Date()) return null;
+  // Phase 6: revokedAt 非空 = 已被「退出设备」撤销，立即失效
+  if (!session || session.expiresAt < new Date() || session.revokedAt) return null;
 
   const user = await prisma.user.findUnique({ where: { id: String(payload.sub) } });
   if (!user || user.status !== 'active') return null;
