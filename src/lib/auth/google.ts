@@ -42,6 +42,50 @@ export async function verifyIdToken(idToken: string): Promise<GoogleIdToken> {
   };
 }
 
+/** 根据 verified Google identity 查找或创建 User（AuthIdentity 驱动，支持账户合并） */
+async function findOrCreateUserByGoogle(profile: GoogleIdToken): Promise<{ userId: string }> {
+  // 1) 按 (provider='google', providerAccountId=sub) 查身份
+  let identity = await prisma.authIdentity.findUnique({
+    where: { provider_providerAccountId: { provider: 'google', providerAccountId: profile.sub } },
+  });
+
+  if (identity) {
+    const user = await prisma.user.findUnique({ where: { id: identity.userId } });
+    if (!user || user.status === 'deleted') throw new Error('账户已注销，无法登录。');
+    return { userId: user.id };
+  }
+
+  // 2) 身份不存在：按 verified email 找已有 User（账户合并，Google+Email 同邮箱不重复建号）
+  const existing = await prisma.user.findUnique({ where: { email: profile.email } });
+
+  let userId: string;
+  if (existing) {
+    if (existing.status === 'deleted') throw new Error('账户已注销，无法登录。');
+    userId = existing.id;
+    // 补全资料
+    const patch: Record<string, unknown> = { lastLoginAt: new Date(), emailVerified: new Date() };
+    if (!existing.avatar && profile.picture) patch.avatar = profile.picture;
+    if (!existing.nickname && profile.name) patch.nickname = profile.name;
+    await prisma.user.update({ where: { id: userId }, data: patch });
+  } else {
+    const user = await prisma.user.create({
+      data: {
+        email: profile.email, emailVerified: new Date(),
+        nickname: profile.name || profile.email.split('@')[0],
+        avatar: profile.picture, status: 'active', lastLoginAt: new Date(),
+      },
+    });
+    userId = user.id;
+  }
+
+  // 3) 绑定 google 身份
+  await prisma.authIdentity.create({
+    data: { userId, provider: 'google', providerAccountId: profile.sub, providerEmail: profile.email },
+  });
+
+  return { userId };
+}
+
 export async function exchangeGoogleCode(code: string, redirectUri: string): Promise<{ userId: string; sessionToken: string; expiresAt: Date }> {
   const tokenRes = await fetch(GOOGLE_TOKEN_URL, {
     method: 'POST',
@@ -54,18 +98,7 @@ export async function exchangeGoogleCode(code: string, redirectUri: string): Pro
   if (!token.id_token) throw new Error('Google token 交换缺少 id_token');
   const profile = await verifyIdToken(token.id_token);
 
-  let user = await prisma.user.findUnique({ where: { email: profile.email } });
-  if (!user) {
-    user = await prisma.user.create({ data: { email: profile.email, emailVerified: new Date(), nickname: profile.name || profile.email.split('@')[0], avatar: profile.picture, authProvider: 'google', status: 'active', lastLoginAt: new Date() } });
-  } else {
-    const patch: Record<string, unknown> = { lastLoginAt: new Date(), emailVerified: new Date() };
-    if (!user.avatar && profile.picture) patch.avatar = profile.picture;
-    if (!user.nickname && profile.name) patch.nickname = profile.name;
-    if (!user.authProvider) patch.authProvider = 'google';
-    await prisma.user.update({ where: { id: user.id }, data: patch });
-    if (user.status === 'deleted') throw new Error('账户已注销，无法登录。');
-  }
-
-  const session = await createSession(user.id);
-  return { userId: user.id, ...session };
+  const { userId } = await findOrCreateUserByGoogle(profile);
+  const session = await createSession(userId);
+  return { userId, ...session };
 }

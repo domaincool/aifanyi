@@ -24,6 +24,7 @@ model User {
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
 
+  identities        AuthIdentity[]
   sessions          Session[]
   usageLedgers      UsageLedger[]
   translationJobs   PdfJob[]           @relation("UserPdfJobs")
@@ -40,12 +41,16 @@ model User {
 
 // ═══════════════════ 认证会话 ═══════════════════
 model Session {
-  id           String   @id @default(cuid())
-  sessionToken String   @unique
-  userId       String
-  expiresAt    DateTime
-  createdAt    DateTime @default(now())
-  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  id            String    @id @default(cuid())
+  sessionToken  String    @unique
+  userId        String
+  createdAt     DateTime  @default(now())
+  lastUsedAt    DateTime  @default(now())
+  expiresAt     DateTime
+  revokedAt     DateTime?
+  ipHash        String?
+  userAgentHash String?
+  user          User      @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@index([userId])
   @@index([sessionToken])
@@ -58,6 +63,7 @@ model VerificationToken {
   tokenHash  String
   expiresAt  DateTime
   used       Boolean  @default(false)
+  attempts   Int      @default(0)
   createdAt  DateTime @default(now())
 
   @@index([identifier])
@@ -310,5 +316,21 @@ model CreditLedger {
 
   user User @relation(fields: [userId], references: [id])
 
+  @@index([userId])
+}
+// ═══════════════════ 认证身份（多 Provider） ═══════════════════
+// Phase 1 新增：User 与登录方式解耦；未来 Apple/微信/邮箱 直接加 provider
+model AuthIdentity {
+  id                String   @id @default(cuid())
+  userId            String
+  provider          String   // google | email | apple | wechat | ...
+  providerAccountId String   // Google sub / 邮箱 / Apple sub
+  providerEmail     String?
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
   @@index([userId])
 }

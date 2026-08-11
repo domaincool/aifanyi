@@ -44,7 +44,7 @@ export async function createSession(userId: string): Promise<{ sessionToken: str
 
   const sessionToken = signJwt({ sub: userId, jti: sessionId }, expiresAt);
 
-  await prisma.session.create({ data: { sessionToken, userId, expiresAt } });
+  await prisma.session.create({ data: { sessionToken, userId, expiresAt, lastUsedAt: new Date() } });
   await prisma.user.update({ where: { id: userId }, data: { lastLoginAt: new Date() } });
 
   return { sessionToken, expiresAt };
