@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>aifanyi.com 认证系统生产化改造 · 交付总览</title>
+<style>
+  :root { --bg:#0f172a; --card:#1e293b; --card2:#16213a; --line:#334155; --text:#e2e8f0; --muted:#94a3b8; --blue:#38bdf8; --green:#34d399; --amber:#fbbf24; --red:#f87171; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; line-height:1.65; padding:32px 16px; }
+  .wrap { max-width:960px; margin:0 auto; }
+  header { text-align:center; padding:32px 0 24px; }
+  h1 { font-size:28px; background:linear-gradient(90deg,#38bdf8,#34d399); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .sub { color:var(--muted); margin-top:8px; font-size:14px; }
+  .metrics { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; margin:24px 0; }
+  .metric { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px; text-align:center; }
+  .metric .num { font-size:26px; font-weight:700; }
+  .metric .lab { font-size:12px; color:var(--muted); margin-top:4px; }
+  .green { color:var(--green); } .blue { color:var(--blue); } .amber { color:var(--amber); }
+  section { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:20px; margin:16px 0; }
+  h2 { font-size:18px; margin-bottom:14px; color:var(--blue); }
+  .timeline { position:relative; padding-left:28px; }
+  .timeline::before { content:""; position:absolute; left:8px; top:4px; bottom:4px; width:2px; background:var(--line); }
+  .step { position:relative; margin-bottom:18px; }
+  .step::before { content:""; position:absolute; left:-26px; top:6px; width:14px; height:14px; border-radius:50%; background:var(--green); border:3px solid var(--bg); }
+  .step.pending::before { background:var(--amber); }
+  .step .t { font-weight:600; }
+  .step .d { color:var(--muted); font-size:13px; margin-top:2px; }
+  .badge { display:inline-block; padding:1px 8px; border-radius:20px; font-size:12px; margin-left:6px; vertical-align:1px; }
+  .badge-ok { background:rgba(52,211,153,.15); color:var(--green); }
+  .badge-pending { background:rgba(251,191,36,.15); color:var(--amber); }
+  table { width:100%; border-collapse:collapse; font-size:13px; }
+  th,td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); }
+  th { color:var(--muted); font-weight:500; }
+  .ok { color:var(--green); } .no { color:var(--red); }
+  .p0 { color:var(--red); font-weight:600; }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  @media(max-width:640px){ .grid2{grid-template-columns:1fr;} }
+  ul { padding-left:20px; } li { margin:4px 0; font-size:14px; }
+  code { background:#0b1220; border:1px solid var(--line); border-radius:4px; padding:1px 6px; font-size:12px; color:var(--green); }
+  .footer { text-align:center; color:var(--muted); font-size:12px; margin-top:28px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>爱翻译 aifanyi.com · 认证系统生产化改造</h1>
+  <div class="sub">Production Authentication Architecture Redesign · 交付总览 · 2026-08-12</div>
+</header>
+
+<div class="metrics">
+  <div class="metric"><div class="num green">7</div><div class="lab">Phase 全部完成</div></div>
+  <div class="metric"><div class="num blue">4</div><div class="lab">P0 漏洞修复</div></div>
+  <div class="metric"><div class="num green">26/26</div><div class="lab">验收测试通过</div></div>
+  <div class="metric"><div class="num blue">12</div><div class="lab">交付文档</div></div>
+  <div class="metric"><div class="num amber">1</div><div class="lab">待办：SMTP</div></div>
+</div>
+
+<section>
+  <h2>实施时间线</h2>
+  <div class="timeline">
+    <div class="step"><div class="t">Phase 0 · P0 安全热修复 <span class="badge badge-ok">已上线</span></div><div class="d">SESSION_SECRET 强密钥强制（含变量名拼写修复）、PDF 任务 ownership 404、OAuth state 防 CSRF、id_token tokeninfo 验签</div></div>
+    <div class="step"><div class="t">Phase 1 · Schema 迁移 <span class="badge badge-ok">已上线</span></div><div class="d">AuthIdentity 多身份模型、Session 扩展（lastUsedAt/revokedAt/ipHash）、VerificationToken.attempts、存量用户回填</div></div>
+    <div class="step"><div class="t">Phase 2 · Google OAuth 生产化 <span class="badge badge-ok">已完成</span></div><div class="d">Client ID 修正、应用 Testing→In production 发布、/privacy /terms 上线、真实账号 E2E 登录闭环通过</div></div>
+    <div class="step"><div class="t">Phase 3 · OTP 加固 <span class="badge badge-ok">已上线</span></div><div class="d">attempts≤5 / 10min 过期 / 60s 冷却 / IP+email 多维限流</div></div>
+    <div class="step"><div class="t">Phase 4 · 账户中心 <span class="badge badge-ok">已上线</span></div><div class="d">设备列表/单设备退出/退出全部、删除账户（级联）、昵称更新、「安全」tab</div></div>
+    <div class="step"><div class="t">Phase 5 · Rate Limit <span class="badge badge-ok">已完成</span></div><div class="d">通用滑动窗口限流器，每小时自动清理</div></div>
+    <div class="step"><div class="t">Phase 6 · 验收 + 文档 <span class="badge badge-ok">已完成</span></div><div class="d">26 项全链路测试全绿；12 份交付文档</div></div>
+  </div>
+</section>
+
+<section>
+  <h2>验收测试结果（26/26）</h2>
+  <table>
+    <tr><th>分组</th><th>覆盖</th><th>结果</th></tr>
+    <tr><td>A · 认证基础</td><td>首页/重定向/me/logout/OAuth 发起/state 拒绝</td><td class="ok">6/6 ✅</td></tr>
+    <tr><td>B · Email OTP</td><td>邮箱校验/请求受理/60s 冷却</td><td class="ok">3/3 ✅</td></tr>
+    <tr><td>C · 设备管理</td><td>设备列表/退出全部/单设备退出/不能退当前</td><td class="ok">8/8 ✅</td></tr>
+    <tr><td>D · Ownership</td><td>未登录 404/他人任务 404/本人任务 200</td><td class="ok">3/3 ✅</td></tr>
+    <tr><td>E · 账户</td><td>昵称更新/删除账户/级联清理</td><td class="ok">5/5 ✅</td></tr>
+    <tr><td>F · 限流</td><td>IP 第 5 次后 429</td><td class="ok">1/1 ✅</td></tr>
+  </table>
+  <p style="margin-top:10px;font-size:13px;color:var(--muted)">测试中发现并修复 4 个真 Bug：SESSION_SECRET 变量名拼写、validateSession 未校验 revokedAt、devices 路由被覆盖 405、重复的删除账户路由。</p>
+</section>
+
+<section>
+  <h2>安全修复一览</h2>
+  <table>
+    <tr><th>级别</th><th>问题</th><th>状态</th></tr>
+    <tr><td class="p0">P0</td><td>SESSION_SECRET 为空 → JWT 可伪造</td><td class="ok">已修复</td></tr>
+    <tr><td class="p0">P0</td><td>PDF 任务接口无所有权检查</td><td class="ok">已修复（404）</td></tr>
+    <tr><td class="p0">P0</td><td>OAuth 无 state → Login CSRF</td><td class="ok">已修复</td></tr>
+    <tr><td class="p0">P0</td><td>id_token 未验签</td><td class="ok">已修复（tokeninfo）</td></tr>
+    <tr><td>高</td><td>Google Testing 模式（100 用户上限）</td><td class="ok">已发布正式版</td></tr>
+    <tr><td>中</td><td>退出设备后会话仍有效（revokedAt 未校验）</td><td class="ok">已修复</td></tr>
+    <tr><td>中</td><td>OTP 无 IP 限流 / 无尝试上限</td><td class="ok">已修复</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2>架构核心</h2>
+  <div class="grid2">
+    <div>
+      <h2 style="font-size:15px;margin-bottom:8px">统一账户模型</h2>
+      <ul>
+        <li><code>User</code> 统一账户（未来 Subscription/Credit owner）</li>
+        <li><code>AuthIdentity</code> 多身份绑定：google / email / 未来 apple / wechat</li>
+        <li>账户合并仅基于 <strong>verified email</strong>，绝不自动合并未验证字符串</li>
+        <li>Google 仅作 Authentication Provider，登录态由自有 Session 维持</li>
+      </ul>
+    </div>
+    <div>
+      <h2 style="font-size:15px;margin-bottom:8px">会话与安全</h2>
+      <ul>
+        <li>JWT(HS256)+DB 双写，30 天过期，可撤销（revokedAt）</li>
+        <li>Cookie HttpOnly + Secure + SameSite=Lax，无 localStorage token</li>
+        <li>最小 scope：openid email profile，无 refresh token</li>
+        <li>所有资源 API 强制 ownership 检查</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>待办（上线前）</h2>
+  <ul>
+    <li><span class="amber">■</span> 配置 <strong>SMTP</strong> 启用 email OTP 通道（当前未配时发送失败且不打印验证码，Google 登录不受影响）</li>
+    <li><span class="amber">■</span> 正式运营邮箱替换 domaincool@gmail.com（支持/通知邮箱）</li>
+    <li><span class="amber">■</span> 多实例扩容前将内存限流换 Redis</li>
+  </ul>
+</section>
+
+<div class="footer">爱翻译 aifanyi.com · 认证系统生产化改造交付 · 文档：docs/auth-production/01-12</div>
+</div>
+</body>
+</html>
