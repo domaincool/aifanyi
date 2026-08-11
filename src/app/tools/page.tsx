@@ -18,7 +18,7 @@ const tools = [
     id: 'image',
     emoji: '🖼',
     name: '图片翻译',
-    desc: '自动识别图片文字并翻译',
+    desc: '截图/海报/菜单 AI 识别翻译，逐行对照',
     action: '上传图片 →',
   },
   {
@@ -60,13 +60,13 @@ export default function ToolsPage() {
       </section>
       <section className="tools-grid">
         {tools.map((t) => {
-          const live = t.id === 'pdf' || t.id === 'subtitle' || t.id === 'polish';
+          const live = t.id === 'pdf' || t.id === 'subtitle' || t.id === 'polish' || t.id === 'image';
           return (
             <div className="tool-card" key={t.id} id={t.id}>
               <div className="tool-emoji">{t.emoji}</div>
               <h2>{t.name}</h2>
               <p>{t.desc}</p>
-              <a className="tool-btn" href={live ? (t.id === 'subtitle' ? '/tools/subtitle-translator' : t.id === 'polish' ? '/tools/ai-polish' : '/tools/pdf-translator') : '#'}>
+              <a className="tool-btn" href={live ? (t.id === 'subtitle' ? '/tools/subtitle-translator' : t.id === 'polish' ? '/tools/ai-polish' : t.id === 'image' ? '/tools/image-translator' : '/tools/pdf-translator') : '#'}>
                 {t.action}
                 {live ? <span className="tool-soon tool-live">可用</span> : <span className="tool-soon">即将上线</span>}
               </a>
