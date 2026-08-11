@@ -3,7 +3,7 @@
  * SSRF 防护：仅 http/https + 拒绝内网地址；15s 超时；响应 ≤2MB
  */
 
-const MAX_RESPONSE = 2 * 1024 * 1024;
+const MAX_RESPONSE = 4 * 1024 * 1024;
 const MAX_PARAGRAPHS = 50;
 
 function isBlockedHost(hostname: string): boolean {
@@ -43,8 +43,22 @@ export async function fetchWebPage(url: string): Promise<{ title: string; paragr
     if (!ct.includes('text/html') && !ct.includes('application/xhtml')) {
       return { title: '', paragraphs: [], error: '该地址不是网页（可能是文件或其他类型）。' };
     }
-    const buf = await res.arrayBuffer();
-    if (buf.byteLength > MAX_RESPONSE) return { title: '', paragraphs: [], error: '网页内容过大（超过 2MB）。' };
+    // 流式读取，超限立即停止
+    if (!res.body) return { title: '', paragraphs: [], error: '网页内容读取失败。' };
+    const reader = res.body.getReader();
+    const chunks: Uint8Array[] = [];
+    let total = 0;
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      total += value.byteLength;
+      if (total > MAX_RESPONSE) {
+        await reader.cancel();
+        return { title: '', paragraphs: [], error: '网页内容过大（超过 4MB）。' };
+      }
+      chunks.push(value);
+    }
+    const buf = Buffer.concat(chunks);
     // 编码：优先 UTF-8，其次按 charset 猜测
     let html = new TextDecoder('utf-8').decode(buf);
     const charsetMatch = html.match(/charset=["']?([\w-]+)/i);
