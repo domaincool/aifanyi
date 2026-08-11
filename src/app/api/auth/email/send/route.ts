@@ -12,16 +12,16 @@ export async function POST(req: NextRequest) {
     }
     const normalized = email.toLowerCase().trim();
 
-    // 多维限流：IP（5 次/小时）+ email（3 次/小时，库内还有 60s 冷却）
+    // 多维限流（2026-08-12 调参：IP 20次/h、邮箱 5次/h，配合库内 60s 冷却已足够防刷）
     const ip = getClientIp(req.headers);
     const ipKey = hashKey(['otp_send', ip]);
     const emailKey = hashKey(['otp_send', normalized]);
 
-    const ipLimit = rateLimit(ipKey, { windowMs: 3600_000, max: 5 });
+    const ipLimit = rateLimit(ipKey, { windowMs: 3600_000, max: 20 });
     if (!ipLimit.ok) {
       return NextResponse.json({ ok: false, message: '请求过于频繁，请稍后再试。' }, { status: 429 });
     }
-    const emailLimit = rateLimit(emailKey, { windowMs: 3600_000, max: 3 });
+    const emailLimit = rateLimit(emailKey, { windowMs: 3600_000, max: 5 });
     if (!emailLimit.ok) {
       return NextResponse.json({ ok: false, message: '该邮箱发送次数过多，请 1 小时后再试。' }, { status: 429 });
     }
