@@ -18,6 +18,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE}/translate/french-to-chinese`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${BASE}/translate/german-to-chinese`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${BASE}/translate/russian-to-chinese`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${BASE}/tools/pdf-translator`, lastModified: now, changeFrequency: 'weekly', priority: 0.7 },
+    { url: `${BASE}/tools/subtitle-translator`, lastModified: now, changeFrequency: 'weekly', priority: 0.7 },
     { url: `${BASE}/blindtest`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${BASE}/meme`, lastModified: now, changeFrequency: 'daily', priority: 0.9 },
   ];
