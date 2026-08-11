@@ -47,6 +47,7 @@ export default function TranslatorBox({
   const [explainOpen, setExplainOpen] = useState(false);
   const [explainLoading, setExplainLoading] = useState(false);
   const [explain, setExplain] = useState<{ tone: string; scene: string; localization: string; why: string } | null>(null);
+  const [promptLogin, setPromptLogin] = useState(false); // 翻译完成挽留条（未登录时）
 
   function showToast(msg: string) {
     setToast(msg);
@@ -75,6 +76,12 @@ export default function TranslatorBox({
         setStatus('已完成');
         setExplain(null);
         setExplainOpen(false);
+        // 未登录时显示保存挽留条（每会话一次，可关闭）
+        try {
+          fetch('/api/auth/me').then(r => r.json()).then(d => {
+            if (!d.user && !sessionStorage.getItem('aifanyi_login_prompt_dismissed')) setPromptLogin(true);
+          }).catch(() => {});
+        } catch {}
       }
     } catch (e: any) {
       setResult(`网络错误：${e.message}`);
@@ -283,6 +290,30 @@ export default function TranslatorBox({
               </div>
             )}
           </div>
+        </div>
+      )}
+      {promptLogin && (
+        <div className="save-prompt" role="status">
+          <div className="save-prompt-text">
+            <strong>登录即可保存翻译记录</strong>
+            <span>跨设备同步，随时回来查看</span>
+          </div>
+          <button
+            className="save-prompt-btn"
+            onClick={() => {
+              setPromptLogin(false);
+              sessionStorage.setItem('aifanyi_login_prompt_dismissed', '1');
+              window.dispatchEvent(new CustomEvent('open-login-modal'));
+            }}
+          >登录保存</button>
+          <button
+            className="save-prompt-close"
+            aria-label="关闭提示"
+            onClick={() => {
+              setPromptLogin(false);
+              sessionStorage.setItem('aifanyi_login_prompt_dismissed', '1');
+            }}
+          >×</button>
         </div>
       )}
       {toast && <div className="toast">{toast}</div>}

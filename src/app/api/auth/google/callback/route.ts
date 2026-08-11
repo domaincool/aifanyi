@@ -34,9 +34,13 @@ export async function GET(req: NextRequest) {
     const guestId = await getGuestCookie();
     if (guestId) await migrateGuestTasks(guestId, userId);
 
-    const res = NextResponse.redirect(`${site}/account?login=success`);
+    // ?next= 回跳：登录前所在页面（aifanyi_next cookie，仅同站相对路径）
+    const next = req.cookies.get('aifanyi_next')?.value;
+    const dest = next && next.startsWith('/') ? `${site}${next}` : `${site}/account?login=success`;
+    const res = NextResponse.redirect(dest);
     res.cookies.set('aifanyi_session', sessionToken, { httpOnly: true, secure: true, sameSite: 'lax', path: '/', expires: expiresAt });
     res.cookies.delete(STATE_COOKIE);
+    res.cookies.delete('aifanyi_next');
     return res;
   } catch (e: any) {
     // 用户侧只给通用错误，细节记服务端日志

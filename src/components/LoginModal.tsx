@@ -110,7 +110,12 @@ export default function LoginModal({ onClose }: { onClose: () => void }) {
       const data = await res.json();
       if (data.ok) {
         setStatus('success');
-        setTimeout(() => { window.location.href = '/account?login=success'; }, 600);
+        let dest = '/account?login=success';
+        try {
+          const m = document.cookie.match(/(?:^|;\\s*)aifanyi_next=([^;]*)/);
+          if (m && m[1]) { dest = decodeURIComponent(m[1]); document.cookie = 'aifanyi_next=; path=/; max-age=0'; }
+        } catch {}
+        setTimeout(() => { window.location.href = dest; }, 600);
       } else {
         setCodeError(data.message);
       }

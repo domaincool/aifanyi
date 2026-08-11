@@ -11,7 +11,14 @@ export default function ClientLayout({ children, serverUser }: { children: React
   const [showLogin, setShowLogin] = useState(false);
 
   useEffect(() => {
-    const openLogin = () => setShowLogin(true);
+    // 打开登录弹窗时记录当前页面（登录成功后回跳）
+    const rememberNext = () => {
+      try {
+        document.cookie = `aifanyi_next=${encodeURIComponent(window.location.pathname + window.location.search)}; path=/; max-age=1800; samesite=lax`;
+      } catch {}
+    };
+    const openLogin = () => { rememberNext(); setShowLogin(true); };
+    const openFromHeader = () => { rememberNext(); setShowLogin(true); };
     window.addEventListener('open-login-modal', openLogin);
     return () => window.removeEventListener('open-login-modal', openLogin);
   }, []);
@@ -35,7 +42,10 @@ export default function ClientLayout({ children, serverUser }: { children: React
           {user ? (
             <UserMenu user={user} onLogout={handleLogout} />
           ) : (
-            <button className="btn-login-header" onClick={() => setShowLogin(true)}>登录</button>
+            <button className="btn-login-header" onClick={() => {
+            try { document.cookie = `aifanyi_next=${encodeURIComponent(window.location.pathname + window.location.search)}; path=/; max-age=1800; samesite=lax`; } catch {}
+            setShowLogin(true);
+          }}>登录</button>
           )}
         </div>
       </header>
