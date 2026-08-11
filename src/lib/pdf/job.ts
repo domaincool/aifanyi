@@ -1,6 +1,5 @@
 /**
  * PDF Job 管理（Prisma 持久化，异步 Job 模式）
- * 阶段 1：创建（parse 后）/ 查询；阶段 2：进度更新
  */
 import { Prisma } from '@prisma/client';
 import { prisma } from '../db';
@@ -13,6 +12,8 @@ export async function createPdfJob(input: {
   fileSize: number;
   doc: PdfDocument;
   clientKey: string;
+  userId?: string | null;
+  guestSessionId?: string | null;
 }): Promise<{ taskId: string; status: PdfJobStatus }> {
   await prisma.pdfJob.create({
     data: {
@@ -27,6 +28,9 @@ export async function createPdfJob(input: {
       limitations: input.doc.limitations,
       document: input.doc as unknown as object,
       clientKey: input.clientKey,
+      userId: input.userId ?? null,
+      guestSessionId: input.guestSessionId ?? null,
+      expiresAt: new Date(Date.now() + 24 * 3600_000),
     },
   });
   return { taskId: input.taskId, status: 'queued' };
@@ -79,13 +83,10 @@ export async function getPdfJob(taskId: string): Promise<PdfJobSummary | null> {
 
 function buildResult(doc: PdfDocument, job: any): PdfJobSummary['result'] {
   const translatedBlocks = doc.pages.reduce(
-    (s, p) => s + p.blocks.filter((b) => b.translations && (b.translations as any).deepseek).length,
-    0
+    (s, p) => s + p.blocks.filter((b) => b.translations && (b.translations as any).deepseek).length, 0
   );
-  // 可翻译块 = 过滤结构性块（header/footer/image），与 translate.ts errorType 口径一致
   const translatableBlocks = doc.pages.reduce(
-    (s, p) => s + p.blocks.filter((b) => b.type !== 'header' && b.type !== 'footer' && b.type !== 'image').length,
-    0
+    (s, p) => s + p.blocks.filter((b) => b.type !== 'header' && b.type !== 'footer' && b.type !== 'image').length, 0
   );
   const failedBlocks = Math.max(0, translatableBlocks - translatedBlocks);
   return {
@@ -109,7 +110,6 @@ function buildResult(doc: PdfDocument, job: any): PdfJobSummary['result'] {
   };
 }
 
-/** 24h TTL 清理：删除过期任务的 document（不保留完整原文），保留匿名统计行 */
 export async function cleanupExpiredPdfJobs(): Promise<number> {
   const cutoff = new Date(Date.now() - PDF_CONFIG.taskTtlMs);
   const res = await prisma.pdfJob.updateMany({

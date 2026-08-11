@@ -1,4 +1,4 @@
-﻿/**
+/**
  * PDF 翻译 · 配置（限制/价格/额度全部配置化，env 可覆盖）
  */
 
@@ -15,6 +15,8 @@ export const PDF_CONFIG = {
   quota: {
     dailyFiles: Number(process.env.PDF_DAILY_FILES || 5),
     dailyPages: Number(process.env.PDF_DAILY_PAGES || 50),
+    guestDailyFiles: Number(process.env.PDF_GUEST_DAILY_FILES || 1),
+    guestDailyPages: Number(process.env.PDF_GUEST_DAILY_PAGES || 10),
     dailyCompareSegments: Number(process.env.PDF_DAILY_COMPARE_SEGMENTS || 20),
     maxConcurrent: Number(process.env.PDF_MAX_CONCURRENT || 3),
   },
