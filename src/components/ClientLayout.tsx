@@ -31,6 +31,7 @@ export default function ClientLayout({ children, serverUser }: { children: React
   return (
     <>
       <header className="site-header">
+
         <a href="/" className="logo">爱翻译<span> · aifanyi.com</span></a>
         <nav>
           <a href="/tools">翻译工具</a>
@@ -38,6 +39,17 @@ export default function ClientLayout({ children, serverUser }: { children: React
           <a href="/meme">网络用语翻译</a>
           <a href="/#workbench">跨境电商工作台</a>
         </nav>
+        <button
+          className="theme-toggle"
+          aria-label="切换深浅色主题"
+          title="切换深浅色主题"
+          onClick={() => {
+            const cur = document.documentElement.getAttribute('data-theme');
+            const next = cur === 'light' ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', next);
+            try { localStorage.setItem('aifanyi_theme', next); } catch {}
+          }}
+        >◐</button>
         <div className="header-auth">
           {user ? (
             <UserMenu user={user} onLogout={handleLogout} />

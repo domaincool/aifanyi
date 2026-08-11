@@ -6,6 +6,46 @@
   --muted: #9aa3c7;
   --accent: #2563eb;
   --accent2: #22d3a4;
+  --header-bg: rgba(13, 17, 30, .82);
+  --card-hover: rgba(0,0,0,.2);
+  --input-bg: #0c0f1d;
+  --input-border: var(--border);
+  --toast-bg: rgba(17,24,39,.92);
+  --overlay-bg: rgba(17,24,39,.5);
+}
+/* 浅色主题 */
+:root[data-theme='light'] {
+  --bg: #f6f8fb;
+  --panel: #ffffff;
+  --border: #e2e8f0;
+  --text: #1e293b;
+  --muted: #64748b;
+  --accent: #2563eb;
+  --accent2: #0d9488;
+  --header-bg: rgba(255,255,255,.85);
+  --card-hover: rgba(15,23,42,.08);
+  --input-bg: #ffffff;
+  --input-border: #cbd5e1;
+  --toast-bg: rgba(30,41,59,.92);
+  --overlay-bg: rgba(15,23,42,.4);
+}
+/* 跟随系统：无手动选择时浅色系统用浅色主题 */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) {
+    --bg: #f6f8fb;
+    --panel: #ffffff;
+    --border: #e2e8f0;
+    --text: #1e293b;
+    --muted: #64748b;
+    --accent: #2563eb;
+    --accent2: #0d9488;
+    --header-bg: rgba(255,255,255,.85);
+    --card-hover: rgba(15,23,42,.08);
+    --input-bg: #ffffff;
+    --input-border: #cbd5e1;
+    --toast-bg: rgba(30,41,59,.92);
+    --overlay-bg: rgba(15,23,42,.4);
+  }
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -68,8 +108,8 @@ main { flex: 1; width: 100%; max-width: 1200px; margin: 0 auto; padding: 32px 28
 .translator-box textarea {
   width: 100%;
   min-height: 160px;
-  background: var(--bg);
-  border: 1px solid var(--border);
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
   border-radius: 10px;
   color: var(--text);
   padding: 14px;
@@ -544,7 +584,7 @@ button.primary:disabled { opacity: 0.5; cursor: wait; }
 
 /* ═══════════════ 登录弹窗 v2（设计专家方案） ═══════════════ */
 .login-overlay {
-  position: fixed; inset: 0; background: rgba(17,24,39,.5);
+  position: fixed; inset: 0; background: var(--overlay-bg);
   display: grid; place-items: center; padding: 20px; z-index: 200;
   animation: login-fade-in .15s ease-out;
   backdrop-filter: blur(2px); -webkit-backdrop-filter: blur(2px);
@@ -666,7 +706,7 @@ button.primary:disabled { opacity: 0.5; cursor: wait; }
 /* ═══════════════ 页面整体打磨（设计专家 2026-08-12） ═══════════════ */
 .site-header {
   position: sticky; top: 0; z-index: 100;
-  background: rgba(13, 17, 30, .82);
+  background: var(--header-bg);
   backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(148,163,184,.15);
   transition: box-shadow .2s;
@@ -680,6 +720,7 @@ button.primary:disabled { opacity: 0.5; cursor: wait; }
   background: linear-gradient(120deg, #f8fafc 20%, #93c5fd 60%, #38bdf8);
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
+:root[data-theme='light'] .hero h1 { background: linear-gradient(120deg, #0f172a 20%, #1d4ed8 60%, #2563eb); -webkit-background-clip: text; background-clip: text; color: transparent; }
 @media (max-width: 640px) { .hero h1 { font-size: 30px; } }
 .hero p { color: var(--muted); font-size: 16px; }
 
@@ -714,3 +755,12 @@ button.primary:disabled { opacity: 0.5; cursor: wait; }
 .primary { transition: background .15s, transform .1s; }
 .primary:hover { filter: brightness(1.1); }
 .primary:active { transform: scale(.98); }
+
+/* 主题切换按钮 */
+.theme-toggle {
+  background: none; border: 1px solid var(--border); border-radius: 8px;
+  color: var(--muted); cursor: pointer; font-size: 16px;
+  width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center;
+  margin-left: 12px; transition: background .15s, color .15s;
+}
+.theme-toggle:hover { background: var(--panel); color: var(--text); }
