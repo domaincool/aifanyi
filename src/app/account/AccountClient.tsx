@@ -5,12 +5,16 @@ import UsageBar from '@/components/UsageBar';
 
 interface UserInfo { id: string; email?: string; nickname?: string; avatar?: string; }
 interface JobItem { taskId: string; fileName: string; status: string; pageCount: number; sourceLang: string; targetLang: string; createdAt: string; }
+interface DeviceItem { id: string; createdAt: string; lastUsedAt: string; expiresAt: string; current: boolean; }
 
 export default function AccountClient({ user }: { user: UserInfo }) {
   const [tab, setTab] = useState('overview');
   const [jobs, setJobs] = useState<JobItem[]>([]);
   const [usage, setUsage] = useState<any>(null);
   const [loading, setLoading] = useState(true);
+  const [devices, setDevices] = useState<DeviceItem[]>([]);
+  const [devicesLoading, setDevicesLoading] = useState(false);
+  const [actionMsg, setActionMsg] = useState('');
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -28,10 +32,42 @@ export default function AccountClient({ user }: { user: UserInfo }) {
       fetch('/api/account/history').then(r => r.json()).then(d => { if (d.jobs) setJobs(d.jobs); setLoading(false); }).catch(() => setLoading(false));
     } else if (tab === 'usage') {
       fetch('/api/account/usage').then(r => r.json()).then(d => { setUsage(d); setLoading(false); }).catch(() => setLoading(false));
+    } else if (tab === 'security') {
+      setLoading(false);
+      loadDevices();
     } else {
       setLoading(false);
     }
   }, [tab]);
+
+  const loadDevices = async () => {
+    setDevicesLoading(true);
+    try {
+      const r = await fetch('/api/auth/devices');
+      const d = await r.json();
+      if (d.devices) setDevices(d.devices);
+    } catch {}
+    setDevicesLoading(false);
+  };
+
+  const handleLogoutAll = async (exceptCurrent: boolean) => {
+    if (!confirm(exceptCurrent ? '确定要退出其他所有设备吗？' : '确定要退出所有设备吗？')) return;
+    const r = await fetch('/api/auth/logout-all', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ exceptCurrent }) });
+    const d = await r.json();
+    setActionMsg('已退出' + (exceptCurrent ? '其他设备' : '所有设备'));
+    if (d.currentRevoked) {
+      window.location.href = '/';
+    } else {
+      loadDevices();
+    }
+  };
+
+  const handleDeleteAccount = async () => {
+    if (!confirm('确定要注销账户吗？此操作无法撤销！')) return;
+    if (!confirm('再次确认：所有翻译记录、上传文件、账户数据都将被永久删除。')) return;
+    const r = await fetch('/api/account', { method: 'DELETE' });
+    if (r.ok) window.location.href = '/';
+  };
 
   const handleDelete = async (taskId: string) => {
     if (!confirm('确定要删除这个翻译吗？')) return;
@@ -58,8 +94,11 @@ export default function AccountClient({ user }: { user: UserInfo }) {
           <button className={`account-tab ${tab === 'history' ? 'active' : ''}`} onClick={() => setTab('history')}>我的翻译</button>
           <button className={`account-tab ${tab === 'usage' ? 'active' : ''}`} onClick={() => setTab('usage')}>使用额度</button>
           <button className={`account-tab ${tab === 'settings' ? 'active' : ''}`} onClick={() => setTab('settings')}>账户设置</button>
+          <button className={`account-tab ${tab === 'security' ? 'active' : ''}`} onClick={() => setTab('security')}>安全</button>
         </nav>
       </div>
+
+      {actionMsg && <div className="account-action-msg">{actionMsg}</div>}
 
       {tab === 'overview' && (
         <div className="account-section">
@@ -141,13 +180,41 @@ export default function AccountClient({ user }: { user: UserInfo }) {
           <div className="settings-danger">
             <h3>注销账户</h3>
             <p>注销后，你的账户、翻译历史和相关数据将被删除，此操作无法撤销。</p>
-            <button className="btn-danger" onClick={async () => {
-              if (!confirm('确定要注销账户吗？此操作无法撤销！')) return;
-              if (!confirm('再次确认：所有翻译记录、文件都将被删除。')) return;
-              await fetch('/api/account/delete', { method: 'DELETE' });
-              window.location.href = '/';
-            }}>注销账户</button>
+            <button className="btn-danger" onClick={handleDeleteAccount}>注销账户</button>
           </div>
+        </div>
+      )}
+
+      {tab === 'security' && (
+        <div className="account-section">
+          <h2>安全</h2>
+          <div className="settings-group">
+            <label>登录设备</label>
+            <span className="settings-value">{devices.length} 台设备在线</span>
+            <div className="device-list">
+              {devicesLoading && <p className="empty-state">加载中...</p>}
+              {!devicesLoading && devices.length === 0 && <p className="empty-state">暂无其他设备</p>}
+              {devices.map(d => (
+                <div key={d.id} className="device-item">
+                  <div>
+                    <strong>{d.current ? '当前设备' : '其他设备'}</strong>
+                    <span className="device-meta">最后活跃：{new Date(d.lastUsedAt).toLocaleString('zh-CN')}</span>
+                  </div>
+                  {!d.current && (
+                    <button className="btn-sm" onClick={async () => {
+                      await fetch('/api/auth/devices', { method: 'DELETE', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ deviceId: d.id }) });
+                      loadDevices();
+                    }}>退出该设备</button>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="settings-group">
+            <button className="btn" onClick={() => handleLogoutAll(true)}>退出其他设备</button>
+            <button className="btn" onClick={() => handleLogoutAll(false)}>退出所有设备</button>
+          </div>
+          <p className="settings-hint">退出所有设备后，当前浏览器也会退出登录。</p>
         </div>
       )}
     </div>
