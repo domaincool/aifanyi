@@ -5,6 +5,7 @@
  */
 import { useState } from 'react';
 import { Document, Packer, Paragraph, HeadingLevel } from 'docx';
+import GuestPrompt from '@/components/GuestPrompt';
 
 export interface PdfReaderResult {
   fileName: string;
@@ -300,6 +301,9 @@ export default function PdfReader({ result }: { result: PdfReaderResult }) {
           </div>
         </div>
       )}
+
+      {/* 登录挽留条：PDF 阅读完成时提示保存 */}
+      <GuestPrompt />
     </div>
   );
 }

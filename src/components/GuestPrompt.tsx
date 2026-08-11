@@ -17,7 +17,7 @@ export default function GuestPrompt() {
   return (
     <div className="guest-prompt">
       <div className="guest-prompt-body">
-        <strong>翻译完成！登录后译文保存 7 天，随时回来查看</strong>
+        <strong>登录后译文长期保存，随时回来查看</strong>
         <div className="guest-prompt-actions">
           <button className="btn-google-sm" onClick={handleLogin}>用 Google 登录</button>
           <button className="btn-email-sm" onClick={handleLogin}>用邮箱登录</button>
