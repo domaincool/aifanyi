@@ -24,7 +24,7 @@ export async function ocrImage(base64: string, mime: string): Promise<{ text: st
         },
       ],
       temperature: 0.1,
-      max_tokens: 2000,
+      max_tokens: 1024,
     }),
   });
   const data = await res.json();
