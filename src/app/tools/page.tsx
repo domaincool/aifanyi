@@ -25,7 +25,7 @@ const tools = [
     id: 'subtitle',
     emoji: '🎬',
     name: '字幕翻译',
-    desc: 'SRT / VTT 字幕一键翻译',
+    desc: 'SRT / VTT 字幕一键翻译，双语对照，保留时间轴，免费额度',
     action: '翻译字幕 →',
   },
   {
@@ -60,13 +60,13 @@ export default function ToolsPage() {
       </section>
       <section className="tools-grid">
         {tools.map((t) => {
-          const live = t.id === 'pdf';
+          const live = t.id === 'pdf' || t.id === 'subtitle';
           return (
             <div className="tool-card" key={t.id} id={t.id}>
               <div className="tool-emoji">{t.emoji}</div>
               <h2>{t.name}</h2>
               <p>{t.desc}</p>
-              <a className="tool-btn" href={live ? '/tools/pdf-translator' : '#'}>
+              <a className="tool-btn" href={live ? (t.id === 'subtitle' ? '/tools/subtitle-translator' : '/tools/pdf-translator') : '#'}>
                 {t.action}
                 {live ? <span className="tool-soon tool-live">可用</span> : <span className="tool-soon">即将上线</span>}
               </a>

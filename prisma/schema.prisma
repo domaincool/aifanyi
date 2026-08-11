@@ -239,6 +239,40 @@ model PdfJob {
   @@index([userId, createdAt])
 }
 
+
+// ═══════════════════ 字幕翻译任务 ═══════════════════
+model SubtitleJob {
+  id                String   @id @default(cuid())
+  taskId            String   @unique
+  fileName          String
+  fileSize          Int
+  status            String   @default("queued")
+  progress          Int      @default(0)
+  totalCues         Int      @default(0)
+  translatedCues    Int      @default(0)
+  sourceLang        String   @default("auto")
+  targetLang        String   @default("zh")
+  errorType         String?
+  errorMessage      String?
+  document          Json?    // { cues: [{ index, start, end, text, translation? }] }
+  totalInputTokens  Int      @default(0)
+  totalOutputTokens Int      @default(0)
+  totalCostUsd      Float    @default(0)
+  apiErrorCount     Int      @default(0)
+  durationMs        Int?
+  clientKey         String?
+  userId            String?
+  guestSessionId    String?
+  createdAt         DateTime @default(now())
+  completedAt       DateTime?
+  updatedAt         DateTime @updatedAt
+
+  @@index([taskId])
+  @@index([userId])
+  @@index([guestSessionId])
+  @@index([createdAt])
+}
+
 // ═══════════════════ PDF 埋点 ═══════════════════
 model PdfEvent {
   id              String   @id @default(cuid())
