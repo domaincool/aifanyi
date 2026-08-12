@@ -61,8 +61,12 @@ function Panel({ session, side, accent, label }: { session: ReturnType<typeof us
       <WaveCanvas rms={s.rms} active={s.phase === 'RECORDING'} />
       <button
         type="button"
-        onClick={() => { if (s.phase === 'RECORDING' || busy) return; s.startListen(side); }}
-        disabled={s.phase === 'RECORDING' || busy}
+        className="voice-record-btn"
+        onPointerDown={(e) => { if (s.phase === 'RECORDING' || busy) return; if (s.holdMode) { s.pressStart(side, e); } else { s.startListen(side); } }}
+        onPointerUp={() => { if (s.holdMode) s.pressEnd(); }}
+        onPointerCancel={() => { if (s.holdMode) s.pressEnd(); }}
+        onContextMenu={(e) => e.preventDefault()}
+        
         style={{
           width: '100%', padding: '20px 0', fontSize: 17, borderRadius: 12, cursor: 'pointer',
           border: 'none', background: s.phase === 'RECORDING' ? '#ef4444' : accent, color: '#fff', fontWeight: 600,

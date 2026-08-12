@@ -128,8 +128,12 @@ export default function VoiceMobileView() {
         <canvas ref={waveRef} width={200} height={34} style={{ width: '70%', height: 34, display: 'block', margin: '0 auto 6px' }} />
         <button
           type="button"
-          onClick={() => { if (s.phase === 'RECORDING' || busy) return; s.startListen('a'); }}
-          disabled={s.phase === 'RECORDING' || busy}
+          className="voice-record-btn"
+        onPointerDown={(e) => { if (s.phase === 'RECORDING' || busy) return; if (s.holdMode) { s.pressStart('a', e); } else { s.startListen('a'); } }}
+        onPointerUp={() => { if (s.holdMode) s.pressEnd(); }}
+        onPointerCancel={() => { if (s.holdMode) s.pressEnd(); }}
+        onContextMenu={(e) => e.preventDefault()}
+          
           style={{
             width: 84, height: 84, borderRadius: '50%', cursor: 'pointer', border: 'none',
             background: s.phase === 'RECORDING' ? '#ef4444' : 'var(--accent)',

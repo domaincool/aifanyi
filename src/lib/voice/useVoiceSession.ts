@@ -395,6 +395,28 @@ export function useVoiceSession(initialSource = 'zh', initialTarget = 'en') {
     }
   }, [cancelListen, submitListen]);
 
+  /* ---------- 按住模式：document 级松手兜底（手指滑出按钮/取消按钮豁免） ---------- */
+  useEffect(() => {
+    const up = () => { if (pressingRef.current) pressEnd(); };
+    const down = (e: PointerEvent) => {
+      // 点按「取消」时不触发松手提交（voice-cancel 豁免）
+      const t = e.target as HTMLElement | null;
+      if (t && t.closest && t.closest('.voice-cancel')) { pressingRef.current = false; return; }
+    };
+    document.addEventListener('pointerup', up);
+    document.addEventListener('pointercancel', up);
+    document.addEventListener('touchend', up);
+    document.addEventListener('touchcancel', up);
+    document.addEventListener('pointerdown', down);
+    return () => {
+      document.removeEventListener('pointerup', up);
+      document.removeEventListener('pointercancel', up);
+      document.removeEventListener('touchend', up);
+      document.removeEventListener('touchcancel', up);
+      document.removeEventListener('pointerdown', down);
+    };
+  }, [pressEnd]);
+
   /* ---------- 切后台 / 来电 / 锁屏 ---------- */
   useEffect(() => {
     const onHide = () => { if (document.hidden && recRef.current) cancelListen(); };
