@@ -34,6 +34,8 @@ model User {
   glossaries        Glossary[]
   creditAccount     CreditAccount?
   creditLedgers     CreditLedger[]
+  creditGrants      CreditGrant[]
+  usageRecords      UsageRecord[]
 
   @@index([email])
   @@index([status])
@@ -131,6 +133,10 @@ model TranslationJob {
   latencyMs        Int      @default(0)
   cached           Boolean  @default(false)
   qualityScore     Float?
+  creditState      String?
+  reservedCredits  Int      @default(0)
+  consumedCredits  Int      @default(0)
+  pricingRuleVersion Int    @default(1)
   createdAt        DateTime @default(now())
 
   @@index([sourceHash])
@@ -225,6 +231,10 @@ model PdfJob {
   guestSessionId    String?
   expiresAt         DateTime?
   saved             Boolean   @default(false)
+  creditState       String?
+  reservedCredits   Int       @default(0)
+  consumedCredits   Int       @default(0)
+  pricingRuleVersion Int      @default(1)
   createdAt         DateTime  @default(now())
   completedAt       DateTime?
   updatedAt         DateTime  @updatedAt
@@ -263,6 +273,10 @@ model SubtitleJob {
   clientKey         String?
   userId            String?
   guestSessionId    String?
+  creditState       String?
+  reservedCredits   Int       @default(0)
+  consumedCredits   Int       @default(0)
+  pricingRuleVersion Int      @default(1)
   createdAt         DateTime @default(now())
   completedAt       DateTime?
   updatedAt         DateTime @updatedAt
@@ -331,26 +345,35 @@ model DocumentProgress {
 
 // ═══════════════════ 积分账户 ═══════════════════
 model CreditAccount {
-  id        String   @id @default(cuid())
-  userId    String   @unique
-  balance   Int      @default(0)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id               String   @id @default(cuid())
+  userId           String   @unique
+  balance          Int      @default(0) // 可用额度（性能缓存，唯一事实来源 = CreditLedger）
+  reservedBalance  Int      @default(0) // 已预留未结算
+  version          Int      @default(0) // 乐观锁
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
 
 model CreditLedger {
-  id          String   @id @default(cuid())
-  userId      String
-  type        String
-  amount      Int
-  description String?
-  createdAt   DateTime @default(now())
+  id             String   @id @default(cuid())
+  userId         String
+  type           String   // reserve | consume | release | refund | grant | expire | admin_adjust
+  amount         Int      // 正=增加可用，负=减少可用
+  grantId        String?
+  usageId        String?
+  jobId          String?
+  referenceId    String?
+  idempotencyKey String   @unique // 幂等：jobId:op[:seq]，重复插入即冲突
+  description    String?
+  metadata       Json?
+  createdAt      DateTime @default(now())
 
   user User @relation(fields: [userId], references: [id])
 
-  @@index([userId])
+  @@index([userId, createdAt])
+  @@index([jobId])
 }
 // ═══════════════════ 认证身份（多 Provider） ═══════════════════
 // Phase 1 新增：User 与登录方式解耦；未来 Apple/微信/邮箱 直接加 provider
@@ -367,4 +390,95 @@ model AuthIdentity {
 
   @@unique([provider, providerAccountId])
   @@index([userId])
+}
+
+
+// ═══════════════════ Credit 额度批次 ═══════════════════
+model CreditGrant {
+  id              String    @id @default(cuid())
+  userId          String
+  type            String    // FREE_MONTHLY | BONUS | SUBSCRIPTION | PURCHASED | ADMIN_ADJUSTMENT | REFUND
+  source          String    // 注册赠送 | 免费额度 | Pro月度 | 购买 | 活动 | 客服补偿 | 退款
+  totalAmount     Int
+  remainingAmount Int
+  reservedAmount  Int       @default(0)
+  expiresAt       DateTime? // null = 永久
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, expiresAt])
+  @@index([userId, type])
+}
+
+// ═══════════════════ Usage 使用记录 ═══════════════════
+model UsageRecord {
+  id                 String    @id @default(cuid())
+  userId             String?
+  guestSessionId     String?
+  feature            String    // text_translation | pdf_translation | image_translation | subtitle_translation | doc_translation | web_translation | polish | blindtest
+  jobId              String?
+  documentId         String?
+  inputCharacters    Int       @default(0)
+  inputTokens        Int       @default(0)
+  outputTokens       Int       @default(0)
+  provider           String?
+  model              String?
+  pageCount          Int?
+  imageCount         Int?
+  durationSeconds    Int?
+  segmentCount       Int?
+  paragraphCount     Int?
+  estimatedCredits   Int       @default(0)
+  reservedCredits    Int       @default(0)
+  consumedCredits    Int       @default(0)
+  releasedCredits    Int       @default(0)
+  refundedCredits    Int       @default(0)
+  status             String    @default("reserved") // reserved|consumed|released|refunded|partial
+  costUsd            Float     @default(0)
+  pricingRuleVersion Int       @default(1)
+  appliedUnitPrice   Int?
+  metadata           Json?
+  createdAt          DateTime  @default(now())
+  completedAt        DateTime?
+
+  user User? @relation(fields: [userId], references: [id])
+
+  @@index([userId, createdAt])
+  @@index([feature, createdAt])
+  @@index([jobId])
+}
+
+// ═══════════════════ Pricing 定价规则 ═══════════════════
+model PricingRule {
+  id          String    @id @default(cuid())
+  feature     String    // text_translation | pdf_translation | ...
+  unit        String    // per_1000_chars | per_page | per_image | per_minute | per_file | per_segment
+  creditRate  Int       // 每 unit 多少 credit
+  minCharge   Int       @default(1)
+  maxCharge   Int?
+  version     Int       @default(1)
+  active      Boolean   @default(true)
+  effectiveAt DateTime  @default(now())
+  createdAt   DateTime  @default(now())
+
+  @@unique([feature, version])
+}
+
+// ═══════════════════ Reconciliation 对账记录 ═══════════════════
+model ReconciliationRecord {
+  id          String    @id @default(cuid())
+  checkType   String    // account_vs_ledger | grants_vs_account | stuck_reserve
+  userId      String?
+  expected    Int?
+  actual      Int?
+  diff        Int?
+  detail      String?
+  status      String    @default("open") // open | resolved
+  createdAt   DateTime  @default(now())
+  resolvedAt  DateTime?
+
+  @@index([status])
+  @@index([createdAt])
 }
