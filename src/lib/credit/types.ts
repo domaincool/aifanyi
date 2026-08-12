@@ -36,6 +36,8 @@ export const FEATURES = {
   WEB: 'web_translation',
   POLISH: 'polish',
   BLINDTEST: 'blindtest',
+  STT: 'speech_to_text',
+  TTS: 'text_to_speech',
 } as const;
 export type Feature = (typeof FEATURES)[keyof typeof FEATURES];
 

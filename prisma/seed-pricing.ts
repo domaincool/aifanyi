@@ -21,6 +21,10 @@ const RULES = [
   // 润色：2 credits / 千字符
   { feature: 'polish', unit: 'per_1000_chars', creditRate: 2, minCharge: 1, maxCharge: null },
   // 盲测：0（获客功能，无定价规则 = 免费）
+  // 语音识别：1 credit / 分钟（GLM-ASR 0.06 元/分）
+  { feature: 'speech_to_text', unit: 'per_minute', creditRate: 1, minCharge: 1, maxCharge: null },
+  // 语音合成：1 credit / 千字符（GLM-TTS 约 0.04 元档）
+  { feature: 'text_to_speech', unit: 'per_1000_chars', creditRate: 1, minCharge: 1, maxCharge: null },
 ];
 
 async function main() {
