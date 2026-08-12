@@ -8,8 +8,8 @@ import VoiceDesktopView from './VoiceDesktopView';
 
 type View = 'mobile' | 'face' | 'desktop';
 
-export default function VoiceRouter() {
-  const [view, setView] = useState<View>('mobile');
+export default function VoiceRouter({ ssrMobile = false }: { ssrMobile?: boolean }) {
+  const [view, setView] = useState<View>(ssrMobile ? 'mobile' : 'desktop');
 
   useEffect(() => {
     const update = () => {

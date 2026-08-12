@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { headers } from 'next/headers';
 import VoiceRouter from '@/components/voice/VoiceRouter';
 
 export const metadata: Metadata = {
@@ -9,12 +10,15 @@ export const metadata: Metadata = {
 // 强制按请求动态渲染：极简头部 CSS 保底依赖 SSR
 export const dynamic = 'force-dynamic';
 
-export default function VoicePage() {
+export default async function VoicePage() {
+  // SSR 阶段用 UA 判定初始视图（桌面双面板 / 移动单手），横竖屏旋转由客户端修正
+  const ua = (await headers()).get('user-agent') || '';
+  const ssrMobile = /Mobile|Android|iPhone|iPod/i.test(ua);
   return (
     <>
       {/* 极简头部保底：SSR 首屏即隐藏导航与主题切换 */}
       <style>{'.site-header nav, .site-header .theme-toggle { display: none !important; }'}</style>
-      <VoiceRouter />
+      <VoiceRouter ssrMobile={ssrMobile} />
     </>
   );
 }
