@@ -402,37 +402,37 @@ button.primary:disabled { opacity: 0.5; cursor: wait; }
 
 /* Header auth */
 .header-auth { margin-left: auto; display: flex; align-items: center; gap: 12px; }
-.btn-login-header { padding: 6px 18px; border: 1px solid #d0d5dd; border-radius: 8px; background: #fff; cursor: pointer; font-size: 14px; color: #1e293b; }
+.btn-login-header { padding: 6px 18px; border: 1px solid var(--border); border-radius: 8px; background: var(--input-bg); cursor: pointer; font-size: 14px; color: var(--text); }
 .btn-login-header:hover { border-color: var(--muted); }
 
 /* User Menu */
 .user-menu { position: relative; }
 .user-menu-trigger { display: flex; align-items: center; gap: 8px; background: none; border: none; cursor: pointer; padding: 4px 8px; border-radius: 8px; }
-.user-menu-trigger:hover { background: #f5f5f5; }
+.user-menu-trigger:hover { background: var(--card-hover); }
 .user-avatar { width: 28px; height: 28px; border-radius: 50%; object-fit: cover; }
 .user-avatar-placeholder { width: 28px; height: 28px; border-radius: 50%; background: var(--accent); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600; }
 .user-name { font-size: 14px; color: var(--text); max-width: 120px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .user-arrow { font-size: 10px; color: var(--muted); }
-.user-dropdown { position: absolute; right: 0; top: 42px; background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,.12); min-width: 160px; z-index: 100; overflow: hidden; }
+.user-dropdown { position: absolute; right: 0; top: 42px; background: var(--panel); border: 1px solid var(--border); border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,.18); min-width: 160px; z-index: 100; overflow: hidden; }
 .dropdown-item { display: block; padding: 10px 16px; font-size: 14px; color: var(--text); text-decoration: none; cursor: pointer; border: none; background: none; width: 100%; text-align: left; }
-.dropdown-item:hover { background: #f5f5f5; }
+.dropdown-item:hover { background: var(--card-hover); }
 .dropdown-item.logout { color: var(--danger); }
-.dropdown-divider { border: none; border-top: 1px solid #e5e7eb; margin: 4px 0; }
+.dropdown-divider { border: none; border-top: 1px solid var(--border); margin: 4px 0; }
 
 /* Login Modal */
 .login-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.4); z-index: 200; display: flex; align-items: center; justify-content: center; padding: 20px; }
-.login-modal { background: #fff; border-radius: 16px; padding: 32px; max-width: 420px; width: 100%; position: relative; box-shadow: 0 20px 60px rgba(0,0,0,.2); }
+.login-modal { background: var(--panel); border-radius: 16px; padding: 32px; max-width: 420px; width: 100%; position: relative; box-shadow: 0 20px 60px rgba(0,0,0,.2); }
 .login-close { position: absolute; top: 12px; right: 16px; background: none; border: none; font-size: 24px; cursor: pointer; color: var(--muted); }
 .login-modal h2 { margin: 0 0 8px; font-size: 22px; }
 .login-subtitle { color: var(--muted); font-size: 14px; margin: 0 0 20px; }
-.login-tabs { display: flex; gap: 0; border-bottom: 2px solid #e5e7eb; margin-bottom: 20px; }
+.login-tabs { display: flex; gap: 0; border-bottom: 2px solid var(--border); margin-bottom: 20px; }
 .login-tab { flex: 1; padding: 10px; border: none; background: none; cursor: pointer; font-size: 14px; color: var(--muted); }
 .login-tab.active { color: var(--accent); border-bottom: 2px solid var(--accent); margin-bottom: -2px; font-weight: 600; }
 .login-google-section { text-align: center; }
-.btn-google { display: inline-flex; align-items: center; gap: 12px; padding: 12px 24px; border: 1px solid #dadce0; border-radius: 8px; background: #fff; cursor: pointer; font-size: 15px; color: var(--text); }
-.btn-google:hover { background: #f8f9fa; }
+.btn-google { display: inline-flex; align-items: center; gap: 12px; padding: 12px 24px; border: 1px solid var(--border); border-radius: 8px; background: var(--input-bg); cursor: pointer; font-size: 15px; color: var(--text); }
+.btn-google:hover { background: var(--card-hover); }
 .login-email-section { display: flex; flex-direction: column; gap: 12px; }
-.login-input { padding: 10px 14px; border: 1px solid #d0d5dd; border-radius: 8px; font-size: 15px; outline: none; }
+.login-input { padding: 10px 14px; border: 1px solid var(--input-border); border-radius: 8px; font-size: 15px; outline: none; background: var(--input-bg); color: var(--text); }
 .login-input:focus { border-color: var(--accent); }
 .login-btn { padding: 10px 0; background: var(--accent); color: #fff; border: none; border-radius: 8px; font-size: 15px; cursor: pointer; font-weight: 600; }
 .login-btn:disabled { opacity: .6; cursor: not-allowed; }
@@ -445,8 +445,8 @@ button.primary:disabled { opacity: 0.5; cursor: wait; }
 .guest-prompt { background: linear-gradient(135deg, #eff6ff, #dbeafe); border-radius: 12px; padding: 20px 24px; margin: 20px 0; }
 .guest-prompt-body strong { display: block; font-size: 15px; margin-bottom: 12px; }
 .guest-prompt-actions { display: flex; gap: 10px; margin-bottom: 8px; }
-.btn-google-sm, .btn-email-sm { padding: 8px 16px; border-radius: 8px; cursor: pointer; font-size: 13px; border: 1px solid #d0d5dd; background: #fff; color: #1e293b; }
-.btn-google-sm:hover, .btn-email-sm:hover { background: #f0f0f0; }
+.btn-google-sm, .btn-email-sm { padding: 8px 16px; border-radius: 8px; cursor: pointer; font-size: 13px; border: 1px solid var(--border); background: var(--input-bg); color: var(--text); }
+.btn-google-sm:hover, .btn-email-sm:hover { background: var(--card-hover); }
 .guest-prompt-muted { font-size: 12px; color: var(--muted); }
 .link-btn { background: none; border: none; color: var(--accent); cursor: pointer; font-size: inherit; padding: 0; }
 
@@ -457,9 +457,9 @@ button.primary:disabled { opacity: 0.5; cursor: wait; }
 .user-avatar-lg { width: 48px; height: 48px; border-radius: 50%; background: var(--accent); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 700; flex-shrink: 0; }
 .account-user-info h1 { margin: 0; font-size: 22px; }
 .account-email { font-size: 14px; color: var(--muted); }
-.account-tabs { display: flex; gap: 4px; border-bottom: 1px solid #e5e7eb; padding-bottom: 0; flex-wrap: wrap; }
+.account-tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--border); padding-bottom: 0; flex-wrap: wrap; }
 .account-tab { padding: 8px 16px; border: none; background: none; cursor: pointer; font-size: 14px; color: var(--muted); border-radius: 8px 8px 0 0; }
-.account-tab.active { color: var(--accent); font-weight: 600; background: #f0f4ff; border-bottom: 2px solid var(--accent); margin-bottom: -1px; }
+.account-tab.active { color: var(--accent); font-weight: 600; background: var(--card-hover); border-bottom: 2px solid var(--accent); margin-bottom: -1px; }
 .account-section { padding: 20px 0; }
 .account-section h2 { margin: 0 0 20px; font-size: 20px; }
 .account-section h3 { margin: 16px 0 8px; font-size: 16px; }
@@ -479,8 +479,8 @@ button.primary:disabled { opacity: 0.5; cursor: wait; }
 .job-status-processing, .job-status-queued { background: #fef3c7; color: #92400e; }
 .job-status-failed { background: #fef2f2; color: #991b1b; }
 .job-actions { display: flex; gap: 8px; margin-left: auto; }
-.btn-sm { padding: 6px 14px; border-radius: 6px; font-size: 13px; border: 1px solid #d0d5dd; background: #fff; cursor: pointer; text-decoration: none; color: var(--text); }
-.btn-sm:hover { background: #f0f0f0; }
+.btn-sm { padding: 6px 14px; border-radius: 6px; font-size: 13px; border: 1px solid var(--border); background: var(--input-bg); cursor: pointer; text-decoration: none; color: var(--text); }
+.btn-sm:hover { background: var(--card-hover); }
 .btn-danger { background: var(--danger); color: #fff; border-color: var(--danger); }
 .btn-danger:hover { background: #b91c1c; }
 
@@ -497,10 +497,10 @@ button.primary:disabled { opacity: 0.5; cursor: wait; }
 /* Settings */
 .settings-group { margin-bottom: 16px; }
 .settings-group label { display: block; font-size: 14px; font-weight: 500; margin-bottom: 6px; }
-.settings-input { padding: 8px 12px; border: 1px solid #d0d5dd; border-radius: 8px; font-size: 14px; width: 280px; outline: none; }
+.settings-input { padding: 8px 12px; border: 1px solid var(--input-border); border-radius: 8px; font-size: 14px; width: 280px; outline: none; background: var(--input-bg); color: var(--text); }
 .settings-input:focus { border-color: var(--accent); }
 .settings-value { font-size: 14px; color: var(--muted); }
-.settings-divider { border: none; border-top: 1px solid #e5e7eb; margin: 24px 0; }
+.settings-divider { border: none; border-top: 1px solid var(--border); margin: 24px 0; }
 .settings-danger h3 { color: var(--danger); margin: 0 0 8px; }
 .settings-danger p { font-size: 14px; color: var(--muted); margin: 0 0 12px; }
 
