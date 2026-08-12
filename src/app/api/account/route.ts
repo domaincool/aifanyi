@@ -72,7 +72,7 @@ export async function DELETE(req: NextRequest) {
     where: { id: userId },
     data: {
       status: 'deleted',
-      email: `deleted_${userId.slice(0, 8)}@deleted.local`,
+      email: `deleted_${userId.slice(0, 8)}_${Date.now().toString(36)}@deleted.local`,
       nickname: '已注销用户',
       emailVerified: null,
     },
