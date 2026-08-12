@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import FileTranslator from './FileTranslator';
 import VoiceInputButton from './VoiceInputButton';
 import VoiceTranslateButton from './VoiceTranslateButton';
@@ -51,6 +51,31 @@ export default function TranslatorBox({
   const [explainLoading, setExplainLoading] = useState(false);
   const [explain, setExplain] = useState<{ tone: string; scene: string; localization: string; why: string } | null>(null);
   const [promptLogin, setPromptLogin] = useState(false); // 翻译完成挽留条（未登录时）
+  const [loggedIn, setLoggedIn] = useState(false); // 登录态（决定是否显示预计额度）
+  const [est, setEst] = useState<number | null>(null); // 预计消耗额度
+  const estTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  // 挂载时探测登录态
+  useEffect(() => {
+    fetch('/api/auth/me').then(r => r.json()).then((d: any) => { if (d && d.user) setLoggedIn(true); }).catch(() => {});
+    return () => { if (estTimer.current) clearTimeout(estTimer.current); };
+  }, []);
+
+  // 输入变化 → 服务端估算（前端永不算价；debounce 400ms）
+  useEffect(() => {
+    if (estTimer.current) clearTimeout(estTimer.current);
+    const t = text.trim();
+    if (!loggedIn || !t) { setEst(null); return; }
+    estTimer.current = setTimeout(async () => {
+      try {
+        const feature = scenario === 'polish' ? 'polish' : 'text';
+        const res = await fetch('/api/credit/estimate?feature=' + feature + '&chars=' + t.length);
+        const d = await res.json();
+        setEst(typeof d.credits === 'number' && d.credits > 0 ? d.credits : null);
+      } catch { setEst(null); }
+    }, 400);
+    return () => { if (estTimer.current) clearTimeout(estTimer.current); };
+  }, [text, scenario, loggedIn]);
 
   function showToast(msg: string) {
     setToast(msg);
@@ -257,6 +282,11 @@ export default function TranslatorBox({
           {loading ? '处理中…' : scenario === 'polish' ? '润色' : '翻译'}
         </button>
       </div>
+      {loggedIn && est !== null && (
+        <div style={{ fontSize: 12, color: 'var(--muted)', marginTop: 6 }}>
+          预计消耗约 {est} 额度（登录用户按次计费，翻译完成结算）
+        </div>
+      )}
       <FileTranslator targetLang={targetLang} />
       {result && (
         <div className="result-card">
