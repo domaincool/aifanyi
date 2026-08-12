@@ -16,7 +16,34 @@ interface Props {
 
 type Phase = 'idle' | 'recording' | 'processing' | 'error';
 
-function encodeWav(samples: Float32Array, sampleRate: number): Blob {
+/**
+ * 编码 WAV：清洗 NaN/Infinity + 线性插值重采样到 16kHz（ASR 最佳实践，文件更小更稳）
+ */
+const TARGET_SR = 16000;
+
+function encodeWav(raw: Float32Array, sampleRate: number): Blob {
+  // 1) 清洗异常采样值
+  const cleaned = new Float32Array(raw.length);
+  for (let i = 0; i < raw.length; i++) {
+    const s = raw[i];
+    cleaned[i] = Number.isFinite(s) ? s : 0;
+  }
+  // 2) 重采样到 16k（线性插值）
+  let samples: Float32Array = cleaned;
+  if (sampleRate !== TARGET_SR && sampleRate > 0) {
+    const outLen = Math.max(1, Math.round((cleaned.length * TARGET_SR) / sampleRate));
+    const out = new Float32Array(outLen);
+    for (let i = 0; i < outLen; i++) {
+      const p = (i * sampleRate) / TARGET_SR;
+      const i0 = Math.floor(p);
+      const i1 = Math.min(i0 + 1, cleaned.length - 1);
+      const f = p - i0;
+      out[i] = cleaned[i0] * (1 - f) + cleaned[i1] * f;
+    }
+    samples = out;
+  }
+  // 3) 编码 16bit PCM WAV
+  const sr = TARGET_SR;
   const buffer = new ArrayBuffer(44 + samples.length * 2);
   const view = new DataView(buffer);
   const writeStr = (off: number, s: string) => { for (let i = 0; i < s.length; i++) view.setUint8(off + i, s.charCodeAt(i)); };
@@ -27,8 +54,8 @@ function encodeWav(samples: Float32Array, sampleRate: number): Blob {
   view.setUint32(16, 16, true);
   view.setUint16(20, 1, true);
   view.setUint16(22, 1, true);
-  view.setUint32(24, sampleRate, true);
-  view.setUint32(28, sampleRate * 2, true);
+  view.setUint32(24, sr, true);
+  view.setUint32(28, sr * 2, true);
   view.setUint16(32, 2, true);
   view.setUint16(34, 16, true);
   writeStr(36, 'data');
