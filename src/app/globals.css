@@ -812,3 +812,15 @@ button.primary:disabled { opacity: 0.5; cursor: wait; }
 .file-image-col-title { padding: 8px 12px; font-size: 12px; color: var(--muted); border-bottom: 1px solid var(--border); background: rgba(255,255,255,.03); }
 .file-image-col-body { padding: 10px 12px; font-size: 13px; color: var(--text); line-height: 1.7; max-height: 200px; overflow-y: auto; white-space: pre-wrap; }
 .file-image-actions { display: flex; gap: 8px; margin-top: 10px; }
+
+.file-web-input { display: flex; gap: 8px; }
+.file-web-input input {
+  flex: 1; padding: 9px 12px; border-radius: 8px; font-size: 13px; outline: none;
+  background: var(--input-bg); color: var(--text); border: 1px solid var(--input-border);
+}
+.file-web-input input:focus { border-color: var(--accent); }
+.file-web-btn {
+  padding: 0 16px; border-radius: 8px; font-size: 13px; cursor: pointer; white-space: nowrap;
+  background: var(--accent); color: #fff; border: none;
+}
+.file-web-btn:disabled { opacity: .6; cursor: not-allowed; }

@@ -65,7 +65,13 @@ export default function TranslatorBox({
       const res = await fetch('/api/translate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ text, sourceLang, targetLang, scenario }),
+        body: JSON.stringify({
+          text,
+          sourceLang,
+          targetLang: scenario === 'polish' ? sourceLang : targetLang,
+          scenario,
+          polish: scenario === 'polish' ? true : undefined,
+        }),
       });
       const data = await res.json();
       if (data.error) {
@@ -74,7 +80,7 @@ export default function TranslatorBox({
       } else {
         setResult(data.text);
         setMeta(`模型：${data.model}${data.cached ? '（缓存命中）' : ''} · 耗时 ${data.latencyMs}ms`);
-        setStatus('已完成');
+        setStatus(scenario === 'polish' ? '已润色 ✨' : '已完成');
         setExplain(null);
         setExplainOpen(false);
         // 未登录时显示保存挽留条（每会话一次，可关闭）
@@ -241,9 +247,10 @@ export default function TranslatorBox({
           <option value="academic">学术翻译</option>
           <option value="casual">口语翻译</option>
           <option value="gaming">游戏翻译</option>
+          <option value="polish">✨ 润色文字</option>
         </select>
         <button className="primary" onClick={doTranslate} disabled={loading || polishing}>
-          {loading ? '翻译中…' : '翻译'}
+          {loading ? '处理中…' : scenario === 'polish' ? '润色' : '翻译'}
         </button>
       </div>
       <FileTranslator targetLang={targetLang} />

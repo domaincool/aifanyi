@@ -49,17 +49,22 @@ export default function FileTranslator({ targetLang }: { targetLang: string }) {
   const [error, setError] = useState('');
   const [dragOver, setDragOver] = useState(false);
   const [toast, setToast] = useState('');
+  const [webOpen, setWebOpen] = useState(false);
+  const [webUrl, setWebUrl] = useState('');
+  const [webTitle, setWebTitle] = useState('');
+  const [webWorking, setWebWorking] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
+  const webInputRef = useRef<HTMLInputElement>(null);
   const pollTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const showToast = (msg: string) => { setToast(msg); setTimeout(() => setToast(''), 2000); };
-  const reset = () => { if (pollTimer.current) clearTimeout(pollTimer.current); setPhase('idle'); setError(''); setPairs([]); setImageResult(null); setSubtitleCues([]); setProgress(0); };
+  const reset = () => { if (pollTimer.current) clearTimeout(pollTimer.current); setPhase('idle'); setError(''); setPairs([]); setImageResult(null); setSubtitleCues([]); setProgress(0); setWebOpen(false); setWebTitle(''); };
 
   // 统一结果卡片：段落对照
-  const renderPairs = (items: DocPair[], limit: number, toolBtn: boolean) => (
+  const renderPairs = (items: DocPair[], limit: number, toolBtn: boolean, headTitle?: string) => (
     <div className="file-result">
       <div className="file-result-head">
-        <span>{TYPE_LABEL[fileType]}翻译完成 ✓</span>
+        <span>{headTitle || TYPE_LABEL[fileType] + '翻译完成 ✓'}</span>
         <div className="file-result-actions">
           <button type="button" className="btn-google-sm" onClick={() => copyPairs(items)}>📋 复制全文</button>
           <a className="btn-google-sm" href={TOOL_URL[fileType]} style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>完整工具 →</a>
@@ -154,6 +159,29 @@ export default function FileTranslator({ targetLang }: { targetLang: string }) {
     }
   }, [targetLang]);
 
+  async function translateWeb() {
+    const u = webUrl.trim();
+    if (!u) { setError('请输入网页地址'); setPhase('error'); return; }
+    setFileType('doc'); setPhase('working'); setError(''); setProgress(0); setWebWorking(true);
+    try {
+      const res = await fetch('/api/web/translate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ url: u, targetLang }),
+      });
+      const d = await res.json();
+      if (!d.ok) { setError(d.error || '翻译失败'); setPhase('error'); return; }
+      setWebTitle(d.title || '网页内容');
+      setPairs((d.paragraphs || []).map((tp: string, i: number) => ({ source: '', text: tp, translation: d.translations[i] || tp })));
+      setProgress(100);
+      setPhase('done');
+    } catch (e: any) {
+      setError(e?.message || '网络错误，请重试'); setPhase('error');
+    } finally {
+      setWebWorking(false);
+    }
+  }
+
   return (
     <div className="file-translator">
       {/* 入口行 */}
@@ -161,6 +189,7 @@ export default function FileTranslator({ targetLang }: { targetLang: string }) {
         <div className="file-entry">
           <div className="file-entry-types">
             <span className="file-entry-label">📎 文件翻译：</span>
+            <button key="web" type="button" className="file-type-btn" onClick={() => { setWebOpen(v => !v); setError(''); }} title="输入网址翻译网页">🌐 网页</button>
             {(Object.keys(ACCEPT) as FileType[]).map(t => (
               <button key={t} type="button" className="file-type-btn" onClick={() => inputRef.current?.click()}
                 data-type={t} title={`上传 ${TYPE_LABEL[t]}（${ACCEPT[t]}）`}>
@@ -177,6 +206,20 @@ export default function FileTranslator({ targetLang }: { targetLang: string }) {
           >
             或拖拽文件到这里（PDF / 图片 / SRT·VTT 字幕 / Word·PPT）
           </div>
+          {webOpen && (
+            <div className="file-web-input">
+              <input
+                ref={webInputRef}
+                value={webUrl}
+                onChange={e => setWebUrl(e.target.value)}
+                onKeyDown={e => { if (e.key === 'Enter') translateWeb(); }}
+                placeholder="粘贴网页地址，如 https://en.wikipedia.org/wiki/Artificial_intelligence"
+              />
+              <button type="button" className="file-web-btn" onClick={translateWeb} disabled={webWorking}>
+                {webWorking ? '翻译中…' : '翻译网页'}
+              </button>
+            </div>
+          )}
         </div>
       )}
 
@@ -217,7 +260,7 @@ export default function FileTranslator({ targetLang }: { targetLang: string }) {
               </div>
             </div>
           )}
-          {fileType === 'doc' && renderPairs(pairs, 50, true)}
+          {fileType === 'doc' && renderPairs(pairs, 50, true, webTitle ? '🌐 ' + webTitle : undefined)}
           {fileType === 'subtitle' && (
             <div className="file-result">
               <div className="file-result-head">
