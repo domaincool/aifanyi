@@ -57,7 +57,7 @@ export default function ClientLayout({ children, serverUser }: { children: React
             <button className="btn-login-header" onClick={() => {
             try { document.cookie = `aifanyi_next=${encodeURIComponent(window.location.pathname + window.location.search)}; path=/; max-age=1800; samesite=lax`; } catch {}
             setShowLogin(true);
-          }}>登录</button>
+          }}>登录 / 注册</button>
           )}
         </div>
       </header>
