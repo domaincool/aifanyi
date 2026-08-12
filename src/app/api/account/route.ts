@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getSessionCookie } from '@/lib/auth/cookie';
-import { validateSession } from '@/lib/auth/session';
+import { validateSession, revokeAllUserSessions } from '@/lib/auth/session';
 import { prisma } from '@/lib/db';
 
 export const runtime = 'nodejs';
