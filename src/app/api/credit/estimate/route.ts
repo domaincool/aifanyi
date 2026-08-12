@@ -21,6 +21,14 @@ export async function GET(req: NextRequest) {
   else if (feature === 'subtitle') credits = (await estimateCredits(FEATURES.SUBTITLE, Math.max(0, Math.round(minutes / 1))))?.credits ?? null;
   else if (feature === 'doc') credits = (await estimateCredits(FEATURES.DOC, Math.max(0, Math.round(chars / 1000))))?.credits ?? null;
   else if (feature === 'web') credits = (await estimateCredits(FEATURES.WEB, Math.max(0, Math.round(chars / 1000))))?.credits ?? null;
+  else if (feature === 'voice') {
+    // 语音组合估算：STT(按秒) + 翻译(代表值1千字) + TTS(代表值1千字)
+    const secs = Math.max(1, Math.min(120, parseInt(sp.get('seconds') || '15', 10)));
+    const stt = (await estimateCredits(FEATURES.STT, Math.ceil(secs / 60)))?.credits ?? 1;
+    const txt = (await estimateCredits(FEATURES.TEXT, 1))?.credits ?? 1;
+    const tts = (await estimateCredits(FEATURES.TTS, 1))?.credits ?? 1;
+    credits = stt + txt + tts;
+  }
 
   return NextResponse.json({ feature, credits });
 }
