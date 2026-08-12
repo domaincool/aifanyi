@@ -10,5 +10,11 @@ export const metadata: Metadata = {
 };
 
 export default function VoicePage() {
-  return <VoicePageClient />;
+  return (
+    <>
+      {/* 极简头部保底：SSR 首屏即隐藏导航与主题切换（usePathname 在 SSR 阶段拿不到真实路径，靠 CSS 兜底防闪烁） */}
+      <style>{'.site-header nav, .site-header .theme-toggle { display: none !important; }'}</style>
+      <VoicePageClient />
+    </>
+  );
 }
