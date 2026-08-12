@@ -21,7 +21,7 @@ export default function UserMenu({ user, onLogout }: { user: UserInfo; onLogout:
       {open && (
         <div className="user-dropdown">
           <a href="/account" className="dropdown-item">我的翻译</a>
-          <a href="/account?tab=usage" className="dropdown-item">使用额度</a>
+          <a href="/credit" className="dropdown-item">我的额度</a>
           <a href="/account?tab=settings" className="dropdown-item">账户设置</a>
           <hr className="dropdown-divider" />
           <button className="dropdown-item logout" onClick={onLogout}>退出登录</button>
