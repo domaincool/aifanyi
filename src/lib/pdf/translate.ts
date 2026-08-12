@@ -48,6 +48,9 @@ async function processJob(taskId: string): Promise<void> {
     const totalBlocks = doc.pages.reduce((s: number, p: any) => s + p.blocks.length, 0);
 
     for (const page of doc.pages) {
+      // 取消检查：已取消则立即停止（不结算，取消时已退回）
+      const curJob = await prisma.pdfJob.findUnique({ where: { taskId }, select: { status: true } });
+      if (curJob?.status === 'cancelled') return;
       // 跳过 header/footer/image（不翻译，保留原文）
       const translatable = page.blocks.filter((b: PdfBlock) => b.type !== 'header' && b.type !== 'footer' && b.type !== 'image');
       const groups = buildGroups(page.pageNumber, translatable);

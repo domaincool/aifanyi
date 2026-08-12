@@ -48,6 +48,9 @@ export async function runSubtitleJob(taskId: string): Promise<void> {
     let apiErrors = 0;
 
     for (const batch of batches) {
+      // 取消检查：已取消则立即停止（不结算，取消时已退回）
+      const curJob = await prisma.subtitleJob.findUnique({ where: { taskId }, select: { status: true } });
+      if (curJob?.status === 'cancelled') return;
       const prompt = `你是专业字幕翻译。把下面的字幕逐条翻译成${targetLabel}。\n要求：\n1. 逐条翻译，输出格式固定为 [序号] 译文，一行一条，序号必须与输入一致\n2. 口语化、贴合语境，译文长度适中（不要明显长于原文）\n3. 人名/品牌名保留原文或使用通用译法，不要加解释\n\n字幕内容：\n${batch.content}`;
 
       // 60s 超时保护（同 PDF translate.ts 模式）
