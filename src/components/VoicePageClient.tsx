@@ -123,6 +123,7 @@ export default function VoicePageClient() {
     let stream: MediaStream;
     try { stream = await navigator.mediaDevices.getUserMedia({ audio: true }); }
     catch (e: any) {
+      pressingRef.current = false; // 失败后允许再次按住
       if (e && (e.name === 'NotAllowedError' || e.name === 'PermissionDeniedError')) errSet('麦克风权限被拒绝，请在浏览器设置中允许后重试。');
       else if (e && e.name === 'NotFoundError') errSet('未检测到麦克风设备。');
       else errSet('无法访问麦克风。');
@@ -143,11 +144,19 @@ export default function VoicePageClient() {
       recRef.current = { side, rec };
       (side === 'a' ? setPhaseA : setPhaseB)('recording');
       setSecSafe(0);
-      timerRef.current = setInterval(() => { setSecSafe(Math.round((Date.now() - rec.start) / 1000)); }, 500);
+      timerRef.current = setInterval(() => {
+        const el = Math.round((Date.now() - rec.start) / 1000);
+        setSecSafe(el);
+        // 按住模式 30s 上限兜底：超长自动断句翻译
+        if (!autoMode && el >= 30 && recRef.current && recRef.current.rec === rec) {
+          stopAndTranslate(side);
+        }
+      }, 500);
       // VAD 循环（自动模式）或仅计时（按住模式）
       if (autoMode) startVadLoop(rec, side);
     } catch {
       stream.getTracks().forEach((t) => t.stop());
+      pressingRef.current = false;
       errSet('录音初始化失败，请重试。');
     }
   }
@@ -174,6 +183,7 @@ export default function VoicePageClient() {
   }
 
   async function stopAndTranslate(side: 'a' | 'b') {
+    pressingRef.current = false;
     const cur = recRef.current;
     if (!cur || cur.side !== side) return;
     const rec = cur.rec;
@@ -259,6 +269,8 @@ export default function VoicePageClient() {
   // 按住说话（touch/mouse）
   function pressStart(side: 'a' | 'b', e: React.PointerEvent) {
     e.preventDefault();
+    // 捕获指针：即使手指移出按钮 / 组件状态变化，松手（pointerup）也一定送达
+    try { e.currentTarget.setPointerCapture(e.pointerId); } catch {}
     if (pressingRef.current) return;
     pressingRef.current = true;
     startRec(side);
