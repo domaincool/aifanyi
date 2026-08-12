@@ -2,8 +2,6 @@
 
 import { useEffect, useRef, useState } from 'react';
 import FileTranslator from './FileTranslator';
-import VoiceInputButton from './VoiceInputButton';
-import VoiceTranslateButton from './VoiceTranslateButton';
 
 const LANG_LABEL: Record<string, string> = {
   zh: '中文',
@@ -226,8 +224,6 @@ export default function TranslatorBox({
         onChange={(e) => setText(e.target.value)}
       />
       <div className="row">
-        <VoiceInputButton sourceLang={sourceLang} onResult={(txt) => { setText(txt); showToast('已识别，可编辑后翻译'); }} disabled={loading || polishing} />
-        <VoiceTranslateButton sourceLang={sourceLang} targetLang={targetLang} disabled={loading || polishing} />
         <select value={sourceLang} onChange={(e) => setSourceLang(e.target.value)}>
           <option value="zh">中文</option>
           <option value="en">英语</option>
