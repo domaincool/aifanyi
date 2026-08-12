@@ -2,7 +2,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import { prisma } from '@/lib/db';
 import { getOrCreateGuestCookie } from '@/lib/auth/cookie';
 import { parseSubtitle } from '@/lib/subtitle-lib';
-import { checkSubtitleQuota, runSubtitleJob } from '@/lib/subtitle-job';
+import { runSubtitleJob } from '@/lib/subtitle-job';
+import { getAuthUserId, authErrorBody, beginSync, endSyncSuccess, endSyncFail, FEATURES } from '@/lib/credit/sync-settle';
 
 export const runtime = 'nodejs';
 export const maxDuration = 60;
@@ -11,24 +12,15 @@ const MAX_SIZE = 5 * 1024 * 1024; // 5MB
 const MAX_CUES = 2000;
 
 export async function POST(req: NextRequest) {
+  let creditCtx: { jobId: string; usageId: string; estimated: number; userId: string } | null = null;
   try {
+    const auth = await getAuthUserId();
+    if (!auth) return NextResponse.json({ ok: false, code: 'auth_required', error: '请先登录后再使用该功能。登录后新用户可获赠 300 免费额度。' }, { status: 401 });
+    const userId = auth.userId;
     // 身份：优先登录态（cookie session），否则 guest cookie
-    let userId: string | null = null;
-    let guestSessionId: string | null = null;
-    const { getSessionCookie } = await import('@/lib/auth/cookie');
-    const { validateSession } = await import('@/lib/auth/session');
-    const token = await getSessionCookie();
-    const session = token ? await validateSession(token).catch(() => null) : null;
-    if (session?.userId) userId = session.userId;
-    const guest = await getOrCreateGuestCookie();
-    if (guest) guestSessionId = guest;
+    const guestSessionId: string | null = null;
 
     const clientKey = (req.headers.get('x-forwarded-for') || 'local') + '|' + (req.headers.get('user-agent') || '').slice(0, 80);
-    const quota = await checkSubtitleQuota(clientKey);
-    if (!quota.ok) {
-      return NextResponse.json({ ok: false, error: `今日免费额度已用完（${quota.used}/${quota.limit} 个文件），请明天再来。` }, { status: 429 });
-    }
-
     const form = await req.formData();
     const file = form.get('file') as File | null;
     const targetLang = String(form.get('targetLang') || 'zh');
@@ -55,6 +47,20 @@ export async function POST(req: NextRequest) {
 
     const taskId = 'sub_' + Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
 
+    // 额度：按字幕时长 1/分钟 → reserve（原子检查余额）
+    const first = cues[0], last = cues[cues.length - 1];
+    const parseTime = (t: string): number => {
+      const mm = t.match(/(\d+):(\d{2}):(\d{2})[,.]?(\d{0,3})/);
+      if (!mm) return 0;
+      return (+mm[1]) * 3600 + (+mm[2]) * 60 + (+mm[3]) + (+(mm[4] || '0')) / 1000;
+    };
+    const durationSec = Math.max(0, parseTime(last.end) - parseTime(first.start));
+    const durationMin = Math.max(1, Math.round(durationSec / 60) || 1);
+    const estCredits = Math.min(durationMin, 300);
+    const begin = await beginSync({ userId, jobId: taskId, feature: FEATURES.SUBTITLE, estimatedCredits: estCredits });
+    if (!begin.ok) return NextResponse.json({ ok: false, code: 'insufficient', error: begin.error }, { status: 402 });
+    creditCtx = { jobId: taskId, usageId: begin.usageId, estimated: begin.estimated, userId };
+
     await prisma.subtitleJob.create({
       data: {
         taskId,
@@ -67,6 +73,8 @@ export async function POST(req: NextRequest) {
         clientKey,
         userId,
         guestSessionId,
+        creditState: 'reserved',
+        reservedCredits: estCredits,
       },
     });
 
@@ -75,6 +83,7 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({ ok: true, taskId, totalCues: cues.length });
   } catch (e: any) {
+    if (creditCtx) await endSyncFail({ userId: creditCtx.userId, jobId: creditCtx.jobId, usageId: creditCtx.usageId, estimated: creditCtx.estimated });
     console.error('[subtitle/translate]', e?.message || e);
     return NextResponse.json({ ok: false, error: '服务器繁忙，请稍后再试。' }, { status: 500 });
   }

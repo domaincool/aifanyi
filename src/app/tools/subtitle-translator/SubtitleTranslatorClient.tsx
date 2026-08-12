@@ -29,6 +29,7 @@ export default function SubtitleTranslatorClient() {
   const [progress, setProgress] = useState(0);
   const [translated, setTranslated] = useState(0);
   const [total, setTotal] = useState(0);
+  const [taskId, setTaskId] = useState('');
   const [cues, setCues] = useState<Cue[]>([]);
   const [error, setError] = useState('');
   const [dragOver, setDragOver] = useState(false);
@@ -54,6 +55,7 @@ export default function SubtitleTranslatorClient() {
       const data = await res.json();
       if (!data.ok) { setError(data.error || '上传失败'); setPhase('error'); return; }
       setTotal(data.totalCues);
+      setTaskId(data.taskId);
       poll(data.taskId);
     } catch (e: any) {
       setError(e?.message || '网络错误，请重试'); setPhase('error');
@@ -76,10 +78,29 @@ export default function SubtitleTranslatorClient() {
         } else if (data.task.status === 'failed') {
           if (timerRef.current) clearInterval(timerRef.current);
           setError(data.task.errorMessage || '翻译失败'); setPhase('error');
+        } else if (data.task.status === 'cancelled') {
+          if (timerRef.current) clearInterval(timerRef.current);
+          setError('任务已取消，额度已退回。'); setPhase('error');
         }
       } catch { /* 网络抖动，下轮重试 */ }
     }, 1500);
   }, []);
+
+  const cancelTask = useCallback(async () => {
+    if (!taskId) return;
+    try {
+      const res = await fetch(`/api/subtitle/tasks/${taskId}`, { method: 'PATCH' });
+      const data = await res.json();
+      if (data.ok) {
+        if (timerRef.current) clearInterval(timerRef.current);
+        setPhase('error'); setError('任务已取消，额度已退回。');
+      } else {
+        setError(data.error || '取消失败，请稍后再试。');
+      }
+    } catch {
+      setError('网络错误，取消失败。');
+    }
+  }, [taskId]);
 
   const download = useCallback((content: string, name: string, type: string) => {
     const blob = new Blob([content], { type });
@@ -148,13 +169,14 @@ export default function SubtitleTranslatorClient() {
         >
           <div style={{ fontSize: 40, marginBottom: 12 }}>🎬</div>
           <p style={{ fontSize: 16, margin: '0 0 6px' }}>点击或拖拽字幕文件到这里</p>
-          <p style={{ fontSize: 13, color: 'var(--muted)', margin: 0 }}>支持 SRT / VTT · 最大 5MB · 单文件最多 2000 条 · 每日免费 5 个文件</p>
+          <p style={{ fontSize: 13, color: 'var(--muted)', margin: 0 }}>支持 SRT / VTT · 最大 5MB · 单文件最多 2000 条 · 额度制：仅翻译成功才扣费，失败自动退回</p>
           <input ref={inputRef} type="file" accept=".srt,.vtt" hidden onChange={e => { const f = e.target.files?.[0]; if (f) upload(f); }} />
         </div>
       )}
 
       {phase === 'working' && (
         <div style={{ background: 'var(--panel)', border: '1px solid var(--border)', borderRadius: 16, padding: 28 }}>
+          <button style={{ marginBottom: 12, background: 'none', border: '1px solid var(--border)', borderRadius: 8, padding: '6px 14px', color: 'var(--muted)', cursor: 'pointer', fontSize: 13 }} onClick={cancelTask}>✕ 取消任务（退回额度）</button>
           <p style={{ margin: '0 0 12px', fontSize: 14, color: 'var(--muted)' }}>正在翻译《{fileName}》…（{translated}/{total} 条）</p>
           <div style={{ height: 8, background: 'var(--border)', borderRadius: 4, overflow: 'hidden' }}>
             <div style={{ height: '100%', width: `${progress}%`, background: 'var(--accent)', borderRadius: 4, transition: 'width .5s' }} />

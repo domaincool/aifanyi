@@ -75,6 +75,21 @@ export default function PdfTranslatorPage() {
     }
   }, []);
 
+  const cancelTask = useCallback(async () => {
+    if (!job?.taskId) return;
+    try {
+      const res = await fetch(`/api/pdf/tasks/${job.taskId}`, { method: 'PATCH' });
+      const data = await res.json();
+      if (data.ok) {
+        setJob((prev: any) => (prev ? { ...prev, status: 'cancelled', message: '任务已取消，额度已退回。' } : prev));
+      } else {
+        setError({ errorType: 'cancel_failed', message: data.error || '取消失败，请稍后再试。' });
+      }
+    } catch {
+      setError({ errorType: 'cancel_failed', message: '网络错误，取消失败。' });
+    }
+  }, [job?.taskId]);
+
   const onDrop = useCallback((e: React.DragEvent) => {
     e.preventDefault();
     setDragging(false);
@@ -149,7 +164,7 @@ export default function PdfTranslatorPage() {
 
         <h2>常见问题</h2>
         <div className="pdf-seo-faq">
-          <div className="pdf-seo-faq-item"><h3>免费吗？有次数限制吗？</h3><p>完全免费使用，无需登录。每日免费额度：5 个文件 / 累计 50 页（以先达到者为准）。</p></div>
+          <div className="pdf-seo-faq-item"><h3>免费吗？有次数限制吗？</h3><p>登录后使用额度制计费：新用户注册即送 300 免费额度（30 天有效）。仅翻译成功的部分扣费，失败自动退回，额度消耗透明可查。</p></div>
           <div className="pdf-seo-faq-item"><h3>支持多大文件？</h3><p>单个文件 {String.fromCharCode(8804)} 20MB，{String.fromCharCode(8804)} 100 页，文本量 {String.fromCharCode(8804)} 100 万字符。超过任一限制会在上传时直接提示，不会浪费等待时间。</p></div>
           <div className="pdf-seo-faq-item"><h3>扫描版 PDF 支持吗？</h3><p>当前版本仅支持文本型 PDF（Word / Google Docs 等导出的单栏文档效果最佳）。如果上传扫描版（纯图片）PDF，页面会明确提示{String.fromCharCode(8220)}暂不支持{String.fromCharCode(8221)}，并引导到即将推出的 OCR 功能。</p></div>
           <div className="pdf-seo-faq-item"><h3>能保留原 PDF 的排版吗？</h3><p>当前版本为双语阅读器模式（左右对照阅读），不输出原版式 PDF。原版式 PDF 重建功能在后续版本规划中。</p></div>
@@ -204,6 +219,7 @@ export default function PdfTranslatorPage() {
           )}
           {job && (job.status === 'queued' || job.status === 'processing') && (
             <div className="pdf-progress">
+              <button className="pdf-btn" style={{ marginBottom: 8 }} onClick={cancelTask}>✕ 取消任务（退回额度）</button>
               <div className="pdf-progress-bar"><div className="pdf-progress-fill" style={{ width: `${job.progress}%` }} /></div>
               <p>翻译中… {job.progress}%（第 {job.currentPage || 1}/{job.totalPages} 页 · {job.translatedBlocks}/{job.totalBlocks} 块）</p>
             </div>

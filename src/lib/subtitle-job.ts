@@ -1,4 +1,5 @@
 import { prisma } from '@/lib/db';
+import { endSyncSuccess, endSyncFail } from '@/lib/credit/sync-settle';
 import { DeepSeekProvider } from '@/lib/translator/providers/deepseek';
 import { GlmProvider } from '@/lib/translator/providers/glm';
 import { SubtitleCue } from '@/lib/subtitle-lib';
@@ -17,6 +18,7 @@ const BATCH_MAX_CHARS = 1500;
 export async function runSubtitleJob(taskId: string): Promise<void> {
   const startedAt = Date.now();
   let job = await prisma.subtitleJob.findUnique({ where: { taskId } });
+  let estCredits = 0;
   if (!job) return;
 
   try {
@@ -40,6 +42,7 @@ export async function runSubtitleJob(taskId: string): Promise<void> {
     if (current.length) batches.push({ items: current, content: currentText.trim() });
 
     const targetLabel = job.targetLang === 'zh' ? '简体中文' : job.targetLang;
+    estCredits = job.reservedCredits || 0;
     let translated = 0;
     let totalIn = 0, totalOut = 0, totalCost = 0;
     let apiErrors = 0;
@@ -108,6 +111,16 @@ export async function runSubtitleJob(taskId: string): Promise<void> {
 
     const failedBatches = apiErrors > batches.length ? apiErrors - batches.length : 0;
     const errorType = failedBatches > 0 ? 'subtitle_partial_failed' : undefined;
+
+    // 额度结算：按成功翻译 cue 比例 consume，差额退回；全失败全退
+    if (job.userId && estCredits > 0) {
+      const usage = await prisma.usageRecord.findFirst({ where: { jobId: taskId }, select: { id: true } });
+      if (usage) {
+        const actual = cues.length > 0 ? Math.round((translated / cues.length) * estCredits) : 0;
+        await endSyncSuccess({ userId: job.userId, jobId: taskId, usageId: usage.id, estimated: estCredits, actualCredits: actual });
+      }
+    }
+
     await prisma.subtitleJob.update({
       where: { taskId },
       data: {
@@ -122,6 +135,10 @@ export async function runSubtitleJob(taskId: string): Promise<void> {
     });
   } catch (e: any) {
     console.error('[subtitle-job]', taskId, e?.message || e);
+    if (job.userId && estCredits > 0) {
+      const usage = await prisma.usageRecord.findFirst({ where: { jobId: taskId }, select: { id: true } });
+      if (usage) await endSyncFail({ userId: job.userId, jobId: taskId, usageId: usage.id, estimated: estCredits });
+    }
     await prisma.subtitleJob.update({
       where: { taskId },
       data: { status: 'failed', errorType: 'subtitle_job_error', errorMessage: String(e?.message || e).slice(0, 500) },

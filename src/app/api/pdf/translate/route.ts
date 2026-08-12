@@ -8,19 +8,24 @@ import { randomUUID } from 'crypto';
 import { parsePdf } from '@/lib/pdf/parser';
 import { createPdfJob, cleanupExpiredPdfJobs } from '@/lib/pdf/job';
 import { startPdfJob } from '@/lib/pdf/translate';
-import { checkPdfQuota, checkGlobalDailyCap } from '@/lib/pdf/quota';
+import { checkGlobalDailyCap } from '@/lib/pdf/quota';
 import { PdfError } from '@/lib/pdf/types';
 import { PDF_CONFIG } from '@/lib/pdf/config';
 import { getSessionCookie } from '@/lib/auth/cookie';
 import { validateSession } from '@/lib/auth/session';
 import { getOrCreateGuestCookie } from '@/lib/auth/cookie';
 import { prisma } from '@/lib/db';
+import { getAuthUserId, authErrorBody, beginSync, endSyncSuccess, endSyncFail, FEATURES } from '@/lib/credit/sync-settle';
 
 export const runtime = 'nodejs';
 export const maxDuration = 120;
 
 export async function POST(req: NextRequest) {
+  let creditCtx: { jobId: string; usageId: string; estimated: number; userId: string } | null = null;
   try {
+    const auth = await getAuthUserId();
+    if (!auth) return NextResponse.json({ errorType: 'auth_required', message: '请先登录后再使用该功能。登录后新用户可获赠 300 免费额度。' }, { status: 401 });
+    const userId = auth.userId;
     const form = await req.formData();
     const file = form.get('file');
     if (!file || typeof file === 'string') {
@@ -40,32 +45,26 @@ export async function POST(req: NextRequest) {
     const doc = await parsePdf(buffer, fileName);
 
     // 认证注入
-    let userId: string | null = null;
-    let guestSessionId: string | null = null;
-    const sessionToken = await getSessionCookie();
-    if (sessionToken) {
-      const user = await validateSession(sessionToken);
-      if (user) userId = user.userId;
-    }
-    if (!userId) {
-      guestSessionId = await getOrCreateGuestCookie();
-    }
+    const guestSessionId: string | null = null;
 
     // 额度校验
     const ip = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || req.headers.get('x-real-ip') || 'unknown';
     const ua = req.headers.get('user-agent') || '';
     const clientKey = require('crypto').createHash('sha256').update(`${ip}|${ua}`).digest('hex').slice(0, 32);
 
-    const quota = await checkPdfQuota(clientKey, doc.pageCount, userId, guestSessionId);
-    if (!quota.ok) {
-      return NextResponse.json({ errorType: 'quota_exceeded', message: quota.reason }, { status: 429 });
-    }
     if (!(await checkGlobalDailyCap())) {
       return NextResponse.json({ errorType: 'quota_exceeded', message: '今日服务繁忙，请明天再试。' }, { status: 429 });
     }
 
     const taskId = `pdf_${Date.now().toString(36)}_${randomUUID().slice(0, 8)}`;
-    await createPdfJob({ taskId, fileName, fileSize: pdfFile.size, doc, clientKey, userId, guestSessionId });
+
+    // 额度：2/页（封顶 200）→ reserve（原子检查余额）
+    const estCredits = Math.min(doc.pageCount * 2, 200);
+    const begin = await beginSync({ userId, jobId: taskId, feature: FEATURES.PDF, estimatedCredits: estCredits });
+    if (!begin.ok) return NextResponse.json({ errorType: 'insufficient', message: begin.error }, { status: 402 });
+    creditCtx = { jobId: taskId, usageId: begin.usageId, estimated: begin.estimated, userId };
+
+    await createPdfJob({ taskId, fileName, fileSize: pdfFile.size, doc, clientKey, userId, guestSessionId, creditState: 'reserved', reservedCredits: estCredits });
 
     // 记账（用户或游客）
     await prisma.usageLedger.create({
@@ -95,6 +94,7 @@ export async function POST(req: NextRequest) {
       isAuthenticated: !!userId,
     });
   } catch (e: any) {
+    if (creditCtx) await endSyncFail({ userId: creditCtx.userId, jobId: creditCtx.jobId, usageId: creditCtx.usageId, estimated: creditCtx.estimated });
     if (e instanceof PdfError) {
       return NextResponse.json({ errorType: e.errorType, message: e.message }, { status: e.errorType === 'oversize' ? 413 : 422 });
     }

@@ -9,6 +9,7 @@ import { hashText, getCache, setCache } from '../translator/cache';
 import { buildPdfGroupPrompt, PDF_CONFIG } from './config';
 import { PdfBlock, PdfDocument, PdfTranslation, TranslationGroup } from './types';
 import { prisma } from '../db';
+import { endSyncSuccess, endSyncFail } from '../credit/sync-settle';
 
 const deepseek = new DeepSeekProvider();
 const glm = new GlmProvider();
@@ -96,6 +97,17 @@ async function processJob(taskId: string): Promise<void> {
       0
     );
     const failedBlocks = translatableBlocks - translatedBlocks;
+
+    // 额度结算：按成功翻译块比例 consume，差额退回；全失败全退
+    if (job.userId) {
+      const usage = await prisma.usageRecord.findFirst({ where: { jobId: taskId }, select: { id: true } });
+      const est = job.reservedCredits || 0;
+      if (usage && est > 0) {
+        const actual = translatableBlocks > 0 ? Math.round((translatedBlocks / translatableBlocks) * est) : 0;
+        await endSyncSuccess({ userId: job.userId, jobId: taskId, usageId: usage.id, estimated: est, actualCredits: actual });
+      }
+    }
+
     await prisma.pdfJob.update({
       where: { taskId },
       data: {
@@ -114,6 +126,13 @@ async function processJob(taskId: string): Promise<void> {
     console.log(`[pdf-job] ${taskId} 完成: ${translatedBlocks}/${totalBlocks} 块, ¥${(totalCost * 7.2).toFixed(3)}, ${Date.now() - started}ms`);
   } catch (e: any) {
     console.error(`[pdf-job] ${taskId} 失败:`, e?.message);
+    // 额度：失败全退
+    if (job?.userId) {
+      const usage = await prisma.usageRecord.findFirst({ where: { jobId: taskId }, select: { id: true } });
+      if (usage && (job?.reservedCredits || 0) > 0) {
+        await endSyncFail({ userId: job.userId, jobId: taskId, usageId: usage.id, estimated: job.reservedCredits });
+      }
+    }
     await prisma.pdfJob.update({
       where: { taskId },
       data: {

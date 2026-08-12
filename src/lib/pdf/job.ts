@@ -14,6 +14,8 @@ export async function createPdfJob(input: {
   clientKey: string;
   userId?: string | null;
   guestSessionId?: string | null;
+  creditState?: string | null;
+  reservedCredits?: number;
 }): Promise<{ taskId: string; status: PdfJobStatus }> {
   await prisma.pdfJob.create({
     data: {
@@ -30,6 +32,8 @@ export async function createPdfJob(input: {
       clientKey: input.clientKey,
       userId: input.userId ?? null,
       guestSessionId: input.guestSessionId ?? null,
+      creditState: input.creditState ?? null,
+      reservedCredits: input.reservedCredits ?? 0,
       expiresAt: new Date(Date.now() + 24 * 3600_000),
     },
   });
