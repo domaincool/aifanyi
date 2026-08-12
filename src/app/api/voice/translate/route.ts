@@ -35,6 +35,10 @@ export async function POST(req: NextRequest) {
     if (file.size > VOICE_LIMITS.maxBytes) return NextResponse.json({ ok: false, error: '录音过大（限 25MB）。' }, { status: 400 });
 
     const buf = Buffer.from(await file.arrayBuffer());
+    // 空/过小文件：在 ASR 前拦截（避免空音频打到智谱产生 502）
+    if (buf.length < 1024) {
+      return NextResponse.json({ ok: false, error: '录音太短或没有声音，请重新录制。' }, { status: 400 });
+    }
 
     /* --- 1) STT --- */
     const sttJob = 'vstt_' + crypto.randomUUID();
