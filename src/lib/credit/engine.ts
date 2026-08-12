@@ -93,7 +93,7 @@ export async function reserve(input: ReserveInput): Promise<{ ok: true; reserved
         data: {
           userId: input.userId,
           type: LEDGER_TYPES.RESERVE,
-          amount: -x,
+          amount: 0, // 形态变化：available→reserved，总价值不变
           jobId: input.jobId,
           usageId: usage.id,
           idempotencyKey: input.idempotencyKey,
@@ -243,7 +243,7 @@ export async function release(input: ReleaseInput): Promise<{ ok: true; released
         data: {
           userId: input.userId,
           type: LEDGER_TYPES.RELEASE,
-          amount: z,
+          amount: 0, // 形态变化：reserved→available，总价值不变
           jobId: input.jobId,
           usageId: input.usageId,
           idempotencyKey: input.idempotencyKey,
