@@ -17,7 +17,7 @@ export default async function VoicePage() {
   return (
     <>
       {/* 极简头部保底：SSR 首屏即隐藏导航与主题切换 */}
-      <style>{'.site-header nav, .site-header .theme-toggle { display: none !important; } .voice-record-btn, .voice-record-btn * { -webkit-touch-callout: none !important; -webkit-user-select: none !important; user-select: none !important; -webkit-tap-highlight-color: transparent; }'}</style>
+      <style>{'.site-header nav, .site-header .theme-toggle { display: none !important; } .site-footer { display: none !important; } .voice-record-btn, .voice-record-btn * { -webkit-touch-callout: none !important; -webkit-user-select: none !important; user-select: none !important; -webkit-tap-highlight-color: transparent; }'}</style>
       <VoiceRouter ssrMobile={ssrMobile} />
     </>
   );
