@@ -99,6 +99,7 @@ export default function VoicePageClient() {
   const secRef = useRef(0);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const pressingRef = useRef(false);
+  const pressStartTimeRef = useRef(0); // 按下时间（误触守卫：极短按不触发）
 
   // 滚动到底部
   useEffect(() => {
@@ -127,6 +128,11 @@ export default function VoicePageClient() {
       if (e && (e.name === 'NotAllowedError' || e.name === 'PermissionDeniedError')) errSet('麦克风权限被拒绝，请在浏览器设置中允许后重试。');
       else if (e && e.name === 'NotFoundError') errSet('未检测到麦克风设备。');
       else errSet('无法访问麦克风。');
+      return;
+    }
+    // 误触守卫（仅按住模式）：按下已松手（<250ms 短按）→ 静默取消，不启动录音
+    if (!autoMode && (!pressingRef.current || Date.now() - pressStartTimeRef.current < 250)) {
+      stream.getTracks().forEach((t) => t.stop());
       return;
     }
     try {
@@ -287,13 +293,15 @@ export default function VoicePageClient() {
     try { e.currentTarget.setPointerCapture(e.pointerId); } catch {}
     if (pressingRef.current) return;
     pressingRef.current = true;
+    pressStartTimeRef.current = Date.now();
     startRec(side);
   }
   function pressEnd(side: 'a' | 'b') {
     if (!pressingRef.current) return;
     pressingRef.current = false;
     if (recRef.current && recRef.current.side === side && recRef.current.rec.autoMode === false) {
-      stopAndTranslate(side);
+      if (Date.now() - pressStartTimeRef.current < 250) cancelRec(); // 极短误触 → 取消
+      else stopAndTranslate(side);
     }
   }
 
@@ -307,7 +315,7 @@ export default function VoicePageClient() {
 
   return (
     <main style={{ maxWidth: 720, margin: '0 auto', padding: '20px 16px 48px' }}>
-      <h1 style={{ fontSize: 24, margin: '0 0 4px' }}>面对面语音翻译</h1>
+      <h1 style={{ fontSize: 26, margin: '0 0 4px' }}>面对面语音翻译</h1>
       <p style={{ color: 'var(--muted)', fontSize: 14, margin: '0 0 16px' }}>
         一人说一句，自动识别并翻译。适合中英文（或任意语言）双人交流。
       </p>
@@ -334,14 +342,14 @@ export default function VoicePageClient() {
       </div>
 
       {/* 对话流 */}
-      <div ref={listRef} style={{ minHeight: 180, maxHeight: 320, overflowY: 'auto', border: '1px solid var(--border)', borderRadius: 12, padding: 12, marginBottom: 16, background: 'var(--panel)', display: 'flex', flexDirection: 'column', gap: 8 }}>
+      <div ref={listRef} style={{ minHeight: 180, maxHeight: 'min(340px, 42vh)', overflowY: 'auto', border: '1px solid var(--border)', borderRadius: 12, padding: 12, marginBottom: 16, background: 'var(--panel)', display: 'flex', flexDirection: 'column', gap: 8 }}>
         {msgs.length === 0 && <div style={{ color: 'var(--muted)', fontSize: 13, textAlign: 'center', padding: '40px 0' }}>对话记录会显示在这里，开始说话吧 🎙️</div>}
         {msgs.map((m) => (
           <div key={m.id} style={{ display: 'flex', flexDirection: m.side === 'a' ? 'row' : 'row-reverse' }}>
             <div style={{ maxWidth: '85%', background: m.side === 'a' ? 'rgba(37,99,235,.12)' : 'rgba(34,211,164,.12)', border: '1px solid var(--border)', borderRadius: 12, padding: '8px 12px' }}>
-              <div style={{ fontSize: 11, color: 'var(--muted)', marginBottom: 2 }}>{m.side === 'a' ? 'A · ' + (LANG_MAP[sideA.sourceLang] || sideA.sourceLang) : 'B · ' + (LANG_MAP[sideB.sourceLang] || sideB.sourceLang)} · {m.time}</div>
-              <div style={{ fontSize: 14, fontWeight: 600 }}>{m.text}</div>
-              <div style={{ fontSize: 14, color: 'var(--muted)', marginTop: 2 }}>{m.translation}</div>
+              <div style={{ fontSize: 12, color: 'var(--muted)', marginBottom: 2 }}>{m.side === 'a' ? 'A · ' + (LANG_MAP[sideA.sourceLang] || sideA.sourceLang) : 'B · ' + (LANG_MAP[sideB.sourceLang] || sideB.sourceLang)} · {m.time}</div>
+              <div style={{ fontSize: 16, fontWeight: 600 }}>{m.text}</div>
+              <div style={{ fontSize: 15, color: 'var(--muted)', marginTop: 2 }}>{m.translation}</div>
               <div style={{ display: 'flex', gap: 10, alignItems: 'center', marginTop: 6 }}>
                 {m.audioBase64 && (
                   <button type="button" onClick={() => playAudio(m)} style={{ padding: '2px 10px', fontSize: 12, borderRadius: 6, border: '1px solid var(--border)', background: 'var(--input-bg)', color: 'var(--text)', cursor: 'pointer' }}>
@@ -406,11 +414,11 @@ function VoicePanel(props: {
 }) {
   const { title, accent, lang, onLang, phase, err, sec, isRec, autoMode, onPressStart, onPressEnd, onAutoStart, onCancel } = props;
   const langs = LANGS;
-  const selectStyle = { padding: '6px 10px', borderRadius: 8, border: '1px solid var(--border)', background: 'var(--input-bg)', color: 'var(--text)', fontSize: 13 };
+  const selectStyle = { padding: '8px 12px', borderRadius: 8, border: '1px solid var(--border)', background: 'var(--input-bg)', color: 'var(--text)', fontSize: 15 };
   return (
     <div style={{ border: '1px solid var(--border)', borderRadius: 12, padding: 16, marginBottom: 12, background: 'var(--panel)' }}>
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, alignItems: 'center', marginBottom: 12 }}>
-        <span style={{ fontSize: 14, fontWeight: 600, color: accent, minWidth: 60 }}>{title}</span>
+        <span style={{ fontSize: 15, fontWeight: 600, color: accent, minWidth: 60 }}>{title}</span>
         <select value={lang.sourceLang} onChange={(e) => onLang({ ...lang, sourceLang: e.target.value })} style={selectStyle} aria-label="源语言">
           {langs.map((l) => <option key={l.code} value={l.code}>{l.label}</option>)}
         </select>
@@ -430,7 +438,7 @@ function VoicePanel(props: {
             onPointerCancel={autoMode ? undefined : onPressEnd}
             onClick={autoMode && phase === 'idle' ? onAutoStart : undefined}
             style={{
-              width: '100%', padding: '18px 0', fontSize: 16, borderRadius: 12, cursor: 'pointer', touchAction: 'none',
+              width: '100%', padding: '22px 0', fontSize: 18, borderRadius: 12, cursor: 'pointer', touchAction: 'none',
               border: phase === 'recording' ? '1px solid var(--accent)' : '1px dashed var(--border)',
               background: phase === 'recording' ? 'rgba(37,99,235,.08)' : 'transparent',
               color: 'var(--text)', fontWeight: 600, WebkitTapHighlightColor: 'transparent',

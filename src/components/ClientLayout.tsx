@@ -1,12 +1,15 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import LoginModal from './LoginModal';
 import UserMenu from './UserMenu';
 
 interface UserInfo { id: string; email?: string; nickname?: string; avatar?: string; }
 
 export default function ClientLayout({ children, serverUser }: { children: React.ReactNode; serverUser: UserInfo | null }) {
+  const pathname = usePathname();
+  const isVoiceMinimal = pathname === '/voice'; // 语音翻译页：极简头部（仅品牌+域名+登录注册）
   const [user, setUser] = useState<UserInfo | null>(serverUser);
   const [showLogin, setShowLogin] = useState(false);
 
