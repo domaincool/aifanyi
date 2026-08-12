@@ -55,6 +55,18 @@ export async function POST(req: NextRequest) {
       }).catch(() => {}); // 重复入库忽略
     }
 
+    // 盲测 0 额度（获客），但写 UsageRecord 供统计
+    await prisma.usageRecord.create({
+      data: {
+        feature: 'blindtest',
+        inputCharacters: (sourceText || '').length,
+        estimatedCredits: 0,
+        reservedCredits: 0,
+        consumedCredits: 0,
+        status: 'consumed',
+      },
+    }).catch(() => {});
+
     return NextResponse.json({
       id: blindtest.id,
       sourceText: blindtest.sourceText,
