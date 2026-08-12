@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { DeepSeekProvider } from '@/lib/translator/providers/deepseek';
 import { GlmProvider } from '@/lib/translator/providers/glm';
 import { parseDocFile } from '@/lib/doc-parser';
+import { getAuthUserId, authErrorBody, beginSync, endSyncSuccess, endSyncFail, estimateByChars, FEATURES } from '@/lib/credit/sync-settle';
 
 export const runtime = 'nodejs';
 export const maxDuration = 120;
@@ -13,7 +14,10 @@ const deepseek = new DeepSeekProvider();
 const glm = new GlmProvider();
 
 export async function POST(req: NextRequest) {
+  let creditCtx: { jobId: string; usageId: string; estimated: number; userId: string } | null = null;
   try {
+    const auth = await getAuthUserId();
+    if (!auth) return NextResponse.json(authErrorBody(), { status: 401 });
     const form = await req.formData();
     const file = form.get('file') as File | null;
     const targetLang = String(form.get('targetLang') || 'zh');
@@ -49,6 +53,15 @@ export async function POST(req: NextRequest) {
     }
     if (lines.length) batches.push({ start: startIdx, end: limited.length - 1, content: lines.join('\n') });
 
+    // 额度：按总字符估算 → reserve（原子检查余额）
+    const totalChars = limited.reduce((s: number, p: any) => s + (p.text || '').length, 0);
+    const estCredits = await estimateByChars(FEATURES.DOC, totalChars);
+    const jobId = `doc_${crypto.randomUUID()}`;
+    const begin = await beginSync({ userId: auth.userId, jobId, feature: FEATURES.DOC, estimatedCredits: estCredits });
+    if (!begin.ok) return NextResponse.json({ ok: false, error: begin.error }, { status: 402 });
+    creditCtx = { jobId, usageId: begin.usageId, estimated: begin.estimated, userId: auth.userId };
+    let okChars = 0;
+
     const translations: string[] = new Array(limited.length).fill('');
     const prompt = `把下面的${format === 'docx' ? 'Word 文档段落' : 'PPT 幻灯片文本'}逐条翻译成${targetLabel}。\n要求：\n1. 逐条翻译，输出格式固定为 [序号] 译文，一行一条，序号必须与输入一致\n2. 保持文档语气与专业术语的准确性，专有名词保留或使用通用译法\n3. 只输出译文本身，不要解释\n\n内容：\n`;
 
@@ -68,6 +81,7 @@ export async function POST(req: NextRequest) {
         if (r2 && !r2.error && !t2) r = r2;
       }
       if (r && !r.error) {
+        okChars += limited.slice(batch.start, batch.end + 1).reduce((s: number, p: any) => s + (p.text || '').length, 0);
         const map = new Map<number, string>();
         for (const line of (r.text || '').split('\n')) {
           const mm = line.match(/^\s*\[(\d+)\]\s*(.+)$/);
@@ -82,6 +96,10 @@ export async function POST(req: NextRequest) {
       }
     }
 
+    const actualCredits = await estimateByChars(FEATURES.DOC, okChars);
+    const settled = await endSyncSuccess({ userId: auth.userId, jobId, usageId: begin.usageId, estimated: begin.estimated, actualCredits });
+    if (!settled.ok) return NextResponse.json({ ok: false, error: settled.error }, { status: 500 });
+
     return NextResponse.json({
       ok: true,
       format,
@@ -89,8 +107,10 @@ export async function POST(req: NextRequest) {
       paragraphs: limited.map(p => ({ kind: p.kind, source: p.source, text: p.text })),
       translations,
       total: limited.length,
+      credits: settled ? settled.consumed : undefined,
     });
   } catch (e: any) {
+    if (creditCtx) await endSyncFail({ userId: creditCtx.userId, jobId: creditCtx.jobId, usageId: creditCtx.usageId, estimated: creditCtx.estimated });
     console.error('[doc/translate]', e?.message || e);
     return NextResponse.json({ ok: false, error: '服务器繁忙，请稍后再试。' }, { status: 500 });
   }

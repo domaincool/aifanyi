@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { DeepSeekProvider } from '@/lib/translator/providers/deepseek';
 import { GlmProvider } from '@/lib/translator/providers/glm';
 import { ocrImage } from '@/lib/image-ocr';
+import { getAuthUserId, authErrorBody, beginSync, endSyncSuccess, endSyncFail, estimateByChars, FEATURES } from '@/lib/credit/sync-settle';
 
 export const runtime = 'nodejs';
 export const maxDuration = 90;
@@ -13,7 +14,10 @@ const deepseek = new DeepSeekProvider();
 const glm = new GlmProvider();
 
 export async function POST(req: NextRequest) {
+  let creditCtx: { jobId: string; usageId: string; estimated: number; userId: string } | null = null;
   try {
+    const auth = await getAuthUserId();
+    if (!auth) return NextResponse.json(authErrorBody(), { status: 401 });
     const form = await req.formData();
     const file = form.get('file') as File | null;
     const targetLang = String(form.get('targetLang') || 'zh');
@@ -40,6 +44,12 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ ok: false, error: '这张图片里没有识别到文字。' }, { status: 422 });
     }
 
+    // 额度：图片固定 3 额度/张 → reserve（原子检查余额）
+    const jobId = `img_${crypto.randomUUID()}`;
+    const begin = await beginSync({ userId: auth.userId, jobId, feature: FEATURES.IMAGE, estimatedCredits: 3 });
+    if (!begin.ok) return NextResponse.json({ ok: false, error: begin.error }, { status: 402 });
+    creditCtx = { jobId, usageId: begin.usageId, estimated: begin.estimated, userId: auth.userId };
+
     // 翻译（DeepSeek 主，60s 超时；失败降级 GLM）
     const targetLabel = targetLang === 'zh' ? '简体中文' : targetLang;
     const prompt = `把下面从图片中识别出的文字逐行翻译成${targetLabel}。\n要求：\n1. 逐行对应翻译，保持原有行数与顺序，每行一条译文\n2. 广告语/招牌等按自然表达翻译，不要逐字硬译\n3. 只输出译文本身，不要解释\n\n识别文字：\n${text}`;
@@ -58,13 +68,15 @@ export async function POST(req: NextRequest) {
     if (!r || r.error || timedOut) {
       const { r: r2, timedOut: t2 } = await attempt(glm);
       if (r2 && !r2.error && !t2) { translation = r2.text; model = 'glm'; }
-      else return NextResponse.json({ ok: false, error: '翻译服务繁忙，请稍后再试。' }, { status: 502 });
+      else { await endSyncFail({ userId: auth.userId, jobId, usageId: begin.usageId, estimated: begin.estimated }); return NextResponse.json({ ok: false, error: '翻译服务繁忙，请稍后再试。' }, { status: 502 }); }
     } else {
       translation = r.text;
     }
 
-    return NextResponse.json({ ok: true, text, translation, model });
+    await endSyncSuccess({ userId: auth.userId, jobId, usageId: begin.usageId, estimated: begin.estimated, actualCredits: 3 });
+    return NextResponse.json({ ok: true, text, translation, model, credits: 3 });
   } catch (e: any) {
+    if (creditCtx) await endSyncFail({ userId: creditCtx.userId, jobId: creditCtx.jobId, usageId: creditCtx.usageId, estimated: creditCtx.estimated });
     console.error('[image/translate]', e?.message || e);
     return NextResponse.json({ ok: false, error: '服务器繁忙，请稍后再试。' }, { status: 500 });
   }
