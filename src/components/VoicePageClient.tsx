@@ -142,6 +142,20 @@ export default function VoicePageClient() {
       proc.connect(ctx.destination);
       const rec: Rec = { ctx, source, proc, analyser, stream, chunks, start: Date.now(), silenceStart: null, autoMode };
       recRef.current = { side, rec };
+      // 按住模式：document 级松手兜底——无论 pointerup 目标如何（组件重渲染/移出按钮），页面任意位置松手都触发翻译
+      if (!autoMode) {
+        const onUp = (ev: Event) => {
+          document.removeEventListener('pointerup', onUp);
+          document.removeEventListener('pointercancel', onUp);
+          document.removeEventListener('touchend', onUp);
+          const t = ev.target as HTMLElement | null;
+          if (t && t.closest && t.closest('.voice-cancel-btn')) return; // 点在取消按钮上 → 由取消逻辑处理
+          if (recRef.current && recRef.current.side === side) stopAndTranslate(side);
+        };
+        document.addEventListener('pointerup', onUp);
+        document.addEventListener('pointercancel', onUp);
+        document.addEventListener('touchend', onUp);
+      }
       (side === 'a' ? setPhaseA : setPhaseB)('recording');
       setSecSafe(0);
       timerRef.current = setInterval(() => {
@@ -406,31 +420,33 @@ function VoicePanel(props: {
         </select>
       </div>
 
-      {phase === 'idle' && (
-        <button
-          type="button"
-          onPointerDown={autoMode ? undefined : onPressStart}
-          onPointerUp={autoMode ? undefined : onPressEnd}
-          onPointerLeave={autoMode ? undefined : onPressEnd}
-          onPointerCancel={autoMode ? undefined : onPressEnd}
-          onClick={autoMode ? onAutoStart : undefined}
-          style={{
-            width: '100%', padding: '18px 0', fontSize: 16, borderRadius: 12, cursor: 'pointer', touchAction: 'none',
-            border: '1px dashed var(--border)', background: 'transparent', color: 'var(--text)', fontWeight: 600,
-            WebkitTapHighlightColor: 'transparent',
-          }}
-        >
-          {autoMode ? '🎙️ 点击开始（说完自动停止）' : '🎙️ 按住说话（松手翻译）'}
-        </button>
-      )}
-      {phase === 'recording' && (
-        <div style={{ textAlign: 'center', padding: '18px 0' }}>
-          <span style={{ display: 'inline-block', width: 10, height: 10, borderRadius: '50%', background: '#ef4444', marginRight: 8, animation: 'voicePulse 1s infinite' }} />
-          <span style={{ color: 'var(--text)', fontWeight: 600 }}>正在录音 {sec}s</span>
-          {autoMode && <div style={{ fontSize: 12, color: 'var(--muted)', marginTop: 6 }}>说完停顿片刻会自动翻译</div>}
-          <div style={{ marginTop: 10 }}>
-            <button type="button" onClick={onCancel} style={{ padding: '4px 16px', fontSize: 13, borderRadius: 8, border: '1px solid var(--border)', background: 'var(--input-bg)', color: 'var(--muted)', cursor: 'pointer' }}>取消</button>
-          </div>
+      {(phase === 'idle' || phase === 'recording') && (
+        <div>
+          <button
+            type="button"
+            onPointerDown={autoMode ? undefined : onPressStart}
+            onPointerUp={autoMode ? undefined : onPressEnd}
+            onPointerLeave={autoMode ? undefined : onPressEnd}
+            onPointerCancel={autoMode ? undefined : onPressEnd}
+            onClick={autoMode && phase === 'idle' ? onAutoStart : undefined}
+            style={{
+              width: '100%', padding: '18px 0', fontSize: 16, borderRadius: 12, cursor: 'pointer', touchAction: 'none',
+              border: phase === 'recording' ? '1px solid var(--accent)' : '1px dashed var(--border)',
+              background: phase === 'recording' ? 'rgba(37,99,235,.08)' : 'transparent',
+              color: 'var(--text)', fontWeight: 600, WebkitTapHighlightColor: 'transparent',
+            }}
+          >
+            {phase === 'recording'
+              ? (autoMode ? '🎙️ 正在录音 ' + sec + 's（说完自动停止）' : '🎙️ 正在录音 ' + sec + 's（松手翻译）')
+              : (autoMode ? '🎙️ 点击开始（说完自动停止）' : '🎙️ 按住说话（松手翻译）')}
+          </button>
+          {phase === 'recording' && (
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12, marginTop: 8 }}>
+              <span style={{ display: 'inline-block', width: 8, height: 8, borderRadius: '50%', background: '#ef4444', animation: 'voicePulse 1s infinite' }} />
+              {autoMode && <span style={{ fontSize: 12, color: 'var(--muted)' }}>说完停顿片刻会自动翻译</span>}
+              <button type="button" className="voice-cancel-btn" onClick={onCancel} style={{ padding: '4px 16px', fontSize: 13, borderRadius: 8, border: '1px solid var(--border)', background: 'var(--input-bg)', color: 'var(--muted)', cursor: 'pointer' }}>取消</button>
+            </div>
+          )}
         </div>
       )}
       {phase === 'translating' && (
