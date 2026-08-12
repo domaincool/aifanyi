@@ -2,12 +2,11 @@
 node_modules/
 .next/
 out/
-
 # env
 .env
 .env.local
-
 # misc
 *.log
 .DS_Store
 next-env.d.ts
+tsconfig.tsbuildinfo
