@@ -98,6 +98,7 @@ export default function ClientLayout({ children, serverUser }: { children: React
               <a href="#">联系我们</a>
               <a href="/privacy">隐私政策</a>
               <a href="/terms">服务条款</a>
+              <a href="/updates">上线公告</a>
             </div>
           </nav>
         </div>
