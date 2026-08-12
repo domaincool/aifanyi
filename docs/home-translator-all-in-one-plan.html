@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>首页翻译框全能化改造方案 — 爱翻译 aifanyi.com</title>
+<style>
+  :root{ --bg:#0f1220; --panel:#171b2e; --border:#2a3054; --text:#e8eaf6; --muted:#9aa3c7; --accent:#2563eb; --accent2:#22d3a4; --danger:#dc2626; --warning:#d97706; }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  body{ background:var(--bg); color:var(--text); font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif; line-height:1.75; padding:40px 20px; }
+  .wrap{ max-width:1000px; margin:0 auto; }
+  h1{ font-size:26px; margin-bottom:6px; }
+  .sub{ color:var(--muted); font-size:14px; margin-bottom:28px; }
+  h2{ font-size:19px; margin:32px 0 12px; padding-left:12px; border-left:4px solid var(--accent); }
+  h3{ font-size:15px; margin:18px 0 8px; color:var(--accent2); }
+  p{ margin-bottom:10px; font-size:14px; }
+  .panel{ background:var(--panel); border:1px solid var(--border); border-radius:12px; padding:18px 20px; margin:14px 0; }
+  table{ width:100%; border-collapse:collapse; font-size:13px; margin:12px 0; }
+  th,td{ border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+  th{ background:rgba(37,99,235,.15); color:#93c5fd; }
+  .tag{ display:inline-block; padding:1px 8px; border-radius:6px; font-size:12px; margin-right:6px; }
+  .tag-ok{ background:rgba(34,211,164,.15); color:var(--accent2); }
+  .tag-new{ background:rgba(37,99,235,.2); color:#93c5fd; }
+  .tag-warn{ background:rgba(217,119,6,.15); color:#fbbf24; }
+  .flow{ display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin:12px 0; font-size:13px; }
+  .flow .node{ background:var(--panel); border:1px solid var(--accent); border-radius:8px; padding:6px 12px; color:#93c5fd; }
+  .flow .arrow{ color:var(--muted); }
+  ul{ margin:6px 0 10px 20px; font-size:14px; }
+  li{ margin-bottom:4px; }
+  code{ background:rgba(255,255,255,.08); border-radius:4px; padding:1px 6px; font-size:12.5px; font-family:Consolas,monospace; }
+  .compare{ display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:14px 0; }
+  @media(max-width:720px){ .compare{ grid-template-columns:1fr; } }
+  .option{ background:var(--panel); border:1px solid var(--border); border-radius:12px; padding:16px; }
+  .option.recommend{ border-color:var(--accent2); }
+  .option h4{ font-size:15px; margin-bottom:8px; }
+  .option .badge{ font-size:11px; padding:1px 8px; border-radius:6px; margin-left:6px; }
+  .option.recommend .badge{ background:rgba(34,211,164,.2); color:var(--accent2); }
+  .metrics{ display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:12px; margin:14px 0; }
+  .metric{ background:var(--panel); border:1px solid var(--border); border-radius:10px; padding:14px; text-align:center; }
+  .metric .num{ font-size:24px; font-weight:700; color:var(--accent); }
+  .metric .label{ font-size:12px; color:var(--muted); margin-top:2px; }
+  .warn{ border-left:4px solid var(--warning); }
+  .risk{ border-left:4px solid var(--danger); }
+  .footer-note{ color:var(--muted); font-size:12px; margin-top:30px; text-align:center; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>📎 首页翻译框「全能化」改造方案</h1>
+  <p class="sub">方案版本 v1.0 · 2026-08-12 · 目标：文本 / PDF / 图片 / 字幕 / Word-PPT 一次入口完成翻译</p>
+
+  <div class="metrics">
+    <div class="metric"><div class="num">0</div><div class="label">后端新 API 开发</div></div>
+    <div class="metric"><div class="num">5</div><div class="label">可复用的既有能力</div></div>
+    <div class="metric"><div class="num">1</div><div class="label">统一前端入口</div></div>
+    <div class="metric"><div class="num">~2h</div><div class="label">预计开发工作量</div></div>
+  </div>
+
+  <h2>一、结论先行</h2>
+  <div class="panel">
+    <p><b>可行，且成本很低。</b>因为 6 个工具页背后的解析 + 翻译能力（PDF / 图片 OCR / 字幕 / Word-PPT / 网页 / 文本）已经全部上线，各自有独立 API。首页改造的本质是：<b>加一个统一文件入口 + 按类型路由到既有 API + 复用结果区渲染</b>，属于纯前端工作，不需要任何新的后端服务。</p>
+    <p>推荐方案：<span class="tag tag-ok">轻量内嵌版</span>——首页给出「段落级双语对照」结果卡片 + 「打开完整工具」按钮，保留 PDF 阅读器等重交互在工具页完成，首页不膨胀。</p>
+  </div>
+
+  <h2>二、目标体验</h2>
+  <div class="panel">
+    <p>首页翻译框变成「万能翻译入口」，文本粘贴或拖文件进来都能翻译：</p>
+    <div class="flow">
+      <span class="node">输入框</span><span class="arrow">→</span>
+      <span class="node">文本</span><span class="arrow">→</span><span class="node">文本翻译 API</span>
+      <span class="arrow">→</span><span class="node">结果卡片</span>
+    </div>
+    <div class="flow">
+      <span class="node">📄 PDF</span><span class="arrow">→</span><span class="node">PDF API（进度轮询）</span>
+      <span class="arrow">→</span><span class="node">摘要对照 + 完整阅读器入口</span>
+    </div>
+    <div class="flow">
+      <span class="node">🖼 图片</span><span class="arrow">→</span><span class="node">图片 API（OCR）</span>
+      <span class="arrow">→</span><span class="node">识别/译文对照</span>
+    </div>
+    <div class="flow">
+      <span class="node">🎬 字幕</span><span class="arrow">→</span><span class="node">字幕 API（进度轮询）</span>
+      <span class="arrow">→</span><span class="node">双语字幕列表</span>
+    </div>
+    <div class="flow">
+      <span class="node">📝 Word/PPT</span><span class="arrow">→</span><span class="node">文档 API</span>
+      <span class="arrow">→</span><span class="node">段落对照</span>
+    </div>
+  </div>
+
+  <h2>三、交互设计（推荐：轻量内嵌版）</h2>
+  <div class="panel">
+    <h3>① 输入区改造</h3>
+    <ul>
+      <li>textarea 下方/右侧加<b>「📎 文件」按钮</b> + 整框支持<b>拖拽投放</b>（拖 PDF/图片/字幕/文档进来自动识别）</li>
+      <li>移动端：输入框下加一行小图标按钮（📄 🖼 🎬 📝），点击唤起文件选择</li>
+      <li>上传时立即校验类型与大小（各类型上限见下表），错误就地提示</li>
+    </ul>
+    <h3>② 类型路由（前端判断，零后端改动）</h3>
+    <table>
+      <tr><th>用户输入</th><th>识别方式</th><th>路由到</th><th>结果渲染</th></tr>
+      <tr><td>纯文本粘贴</td><td>无文件</td><td>POST /api/translate（现有）</td><td>现有翻译结果卡片（不变）</td></tr>
+      <tr><td>PDF</td><td>.pdf</td><td>POST /api/pdf/translate</td><td>进度条 + 前 10 段对照 + 「完整阅读器」按钮</td></tr>
+      <tr><td>图片</td><td>.png/.jpg/.webp/.gif</td><td>POST /api/image/translate</td><td>图片缩略图 + 识别文字/译文两栏</td></tr>
+      <tr><td>字幕</td><td>.srt/.vtt</td><td>POST /api/subtitle/translate</td><td>进度条 + 前 15 条对照 + 完整导出入口</td></tr>
+      <tr><td>Word/PPT</td><td>.docx/.pptx</td><td>POST /api/doc/translate</td><td>段落对照（含标题/列表标签）</td></tr>
+    </table>
+    <h3>③ 结果区策略</h3>
+    <ul>
+      <li>首页统一「轻量结果卡片」：原文/译文段落对照 + 复制 + 「打开完整工具 →」按钮</li>
+      <li>重交互（PDF 双栏阅读器、字幕导出 SRT、Word 下载）留在各工具页，首页只做「能看、能复制、能跳转」</li>
+      <li>PDF / 字幕走 taskId 轮询（现有 API 已支持），图片 / 文档为单次请求直接返回</li>
+    </ul>
+  </div>
+
+  <h2>四、两种方案对比</h2>
+  <div class="compare">
+    <div class="option recommend">
+      <h4>方案 A：轻量内嵌版（推荐）<span class="badge">推荐</span></h4>
+      <p>首页结果区为统一对照卡片，重功能跳转工具页。</p>
+      <ul>
+        <li>✅ 开发量小（~2h），首页保持轻快</li>
+        <li>✅ 5 类文件全部覆盖，转化闭环（首页 → 工具页）</li>
+        <li>✅ 与现有 6 个工具页零冲突</li>
+        <li>⚠️ PDF/字幕结果在首页是「摘要级」，完整功能要跳转</li>
+      </ul>
+    </div>
+    <div class="option">
+      <h4>方案 B：全功能内嵌版<span class="badge">备选</span></h4>
+      <p>把 PDF 阅读器、字幕导出等完整组件搬进首页结果区。</p>
+      <ul>
+        <li>✅ 首页即完整工作台，不跳转</li>
+        <li>⚠️ 首页 JS/视觉重量明显增加（PDF 阅读器 ~30KB+）</li>
+        <li>⚠️ 与工具页功能重复，维护双份</li>
+        <li>⚠️ 开发量 ~1 天，移动端适配压力大</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>五、各类型边界与限制（沿用现有额度）</h2>
+  <table>
+    <tr><th>类型</th><th>大小上限</th><th>条数/页数限制</th><th>每日额度</th><th>耗时（实测）</th></tr>
+    <tr><td>PDF</td><td>20MB</td><td>100 页 / 100 万字符</td><td>5 文件</td><td>~10s / 页</td></tr>
+    <tr><td>图片</td><td>5MB</td><td>—</td><td>不限</td><td>~10-20s</td></tr>
+    <tr><td>字幕</td><td>5MB</td><td>2000 条</td><td>5 文件</td><td>~2s / 20 条</td></tr>
+    <tr><td>Word/PPT</td><td>10MB</td><td>300 段</td><td>不限</td><td>~10-30s</td></tr>
+    <tr><td>文本</td><td>5000 字符/次</td><td>—</td><td>不限</td><td>~1-3s</td></tr>
+  </table>
+
+  <h2>六、实施步骤（方案 A 落地拆解）</h2>
+  <div class="panel">
+    <table>
+      <tr><th>步骤</th><th>内容</th><th>工作量</th></tr>
+      <tr><td>1</td><td>TranslatorBox 加文件按钮 + 拖拽区 + 类型/大小校验（纯前端）</td><td>~40min</td></tr>
+      <tr><td>2</td><td>文件类型路由：4 个 API 的调用封装（图片/文档同步、PDF/字幕轮询）</td><td>~40min</td></tr>
+      <tr><td>3</td><td>统一结果卡片：段落对照 + 复制 + 「打开完整工具」跳转</td><td>~30min</td></tr>
+      <tr><td>4</td><td>移动端按钮行适配 + 深浅色主题样式</td><td>~20min</td></tr>
+      <tr><td>5</td><td>部署 + 五类输入浏览器实测（含失败路径）</td><td>~30min</td></tr>
+    </table>
+  </div>
+
+  <h2>七、风险与注意点</h2>
+  <div class="panel risk">
+    <ul>
+      <li><b>额度共享</b>：PDF / 字幕每日 5 文件是 IP+UA 计数，首页入口与工具页共享同一额度（不新增），需在 UI 明确提示剩余额度</li>
+      <li><b>同步接口耗时</b>：图片 / 文档单次请求 10-30s，需清晰的 loading 状态与超时兜底</li>
+      <li><b>首页重量</b>：只引入类型路由逻辑（&lt;5KB），不引入 PDF 阅读器等重组件（方案 A 已规避）</li>
+      <li><b>多文件批量</b>：本轮只做「单文件」，一次拖多个文件提示「每次一个」；批量上传可作为二期</li>
+    </ul>
+  </div>
+
+  <h2>八、二期可选扩展</h2>
+  <div class="panel">
+    <ul>
+      <li>批量文件队列（多 PDF / 多字幕依次翻译）</li>
+      <li>「识别语言自动选目标语言」智能默认</li>
+      <li>文件历史（登录用户可在账户中心查看最近翻译文件）</li>
+      <li>直接粘贴图片（Clipboard API 从剪贴板拖图翻译）</li>
+    </ul>
+  </div>
+
+  <p class="footer-note">爱翻译 aifanyi.com · 产品方案 · 待评审</p>
+</div>
+</body>
+</html>

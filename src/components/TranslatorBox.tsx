@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import FileTranslator from './FileTranslator';
 
 const LANG_LABEL: Record<string, string> = {
   zh: '中文',
@@ -245,6 +246,7 @@ export default function TranslatorBox({
           {loading ? '翻译中…' : '翻译'}
         </button>
       </div>
+      <FileTranslator targetLang={targetLang} />
       {result && (
         <div className="result-card">
           <div className="result-head">

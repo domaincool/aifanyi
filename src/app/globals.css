@@ -764,3 +764,51 @@ button.primary:disabled { opacity: 0.5; cursor: wait; }
   margin-left: 12px; transition: background .15s, color .15s;
 }
 .theme-toggle:hover { background: var(--panel); color: var(--text); }
+
+/* ═══════ 首页文件翻译（FileTranslator）═══════ */
+.file-translator { margin-top: 12px; }
+.file-entry { display: flex; flex-direction: column; gap: 8px; }
+.file-entry-types { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-size: 13px; }
+.file-entry-label { color: var(--muted); font-size: 13px; }
+.file-type-btn {
+  padding: 5px 12px; border-radius: 8px; cursor: pointer; font-size: 13px;
+  border: 1px solid var(--border); background: var(--panel); color: var(--text);
+  transition: border-color .15s, color .15s;
+}
+.file-type-btn:hover { border-color: var(--accent); color: var(--accent); }
+.file-dropzone {
+  border: 1.5px dashed var(--border); border-radius: 10px; padding: 12px 16px;
+  text-align: center; font-size: 12.5px; color: var(--muted); cursor: pointer;
+  transition: border-color .15s, background .15s;
+}
+.file-dropzone:hover { border-color: var(--accent); color: var(--text); }
+.file-dropzone.drag { border-color: var(--accent); background: rgba(37,99,235,.08); color: var(--text); }
+.file-working { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
+.file-working-title { font-size: 13.5px; color: var(--text); margin-bottom: 10px; }
+.file-progress { height: 6px; background: var(--border); border-radius: 4px; overflow: hidden; }
+.file-progress-bar { height: 100%; background: var(--accent); border-radius: 4px; transition: width .5s; }
+.file-working-hint { font-size: 12px; color: var(--muted); margin-top: 8px; }
+.file-error { display: flex; align-items: center; justify-content: space-between; gap: 12px; background: var(--panel); border: 1px solid var(--danger); border-radius: 12px; padding: 12px 16px; font-size: 13px; color: var(--danger); }
+.file-done { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; background: var(--panel); }
+.file-done-head { display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; border-bottom: 1px solid var(--border); background: rgba(37,99,235,.06); }
+.file-done-name { font-size: 13px; color: var(--text); font-weight: 500; }
+.file-done-close { background: none; border: none; color: var(--muted); font-size: 18px; cursor: pointer; line-height: 1; padding: 2px 6px; }
+.file-done-close:hover { color: var(--text); }
+.file-result-head { display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; border-bottom: 1px solid var(--border); font-size: 13px; color: var(--muted); }
+.file-result-actions { display: flex; gap: 8px; }
+.file-pairs { max-height: 360px; overflow-y: auto; }
+.file-pair { padding: 10px 14px; border-bottom: 1px solid var(--border); }
+.file-pair:last-child { border-bottom: none; }
+.file-pair-src { font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 3px; }
+.file-pair-time { font-size: 11px; color: var(--accent2); font-variant-numeric: tabular-nums; margin-right: 6px; }
+.file-pair-dst { font-size: 14px; color: var(--text); line-height: 1.7; }
+.file-more { padding: 10px 14px; font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--border); }
+.file-image-result { padding: 12px 14px; }
+.file-image-preview { margin-bottom: 10px; }
+.file-image-preview img { max-width: 100%; max-height: 220px; border-radius: 8px; border: 1px solid var(--border); }
+.file-image-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+@media (max-width: 640px) { .file-image-cols { grid-template-columns: 1fr; } }
+.file-image-col { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+.file-image-col-title { padding: 8px 12px; font-size: 12px; color: var(--muted); border-bottom: 1px solid var(--border); background: rgba(255,255,255,.03); }
+.file-image-col-body { padding: 10px 12px; font-size: 13px; color: var(--text); line-height: 1.7; max-height: 200px; overflow-y: auto; white-space: pre-wrap; }
+.file-image-actions { display: flex; gap: 8px; margin-top: 10px; }
