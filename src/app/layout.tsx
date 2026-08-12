@@ -6,9 +6,18 @@ import ClientLayout from '@/components/ClientLayout';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: '爱翻译 aifanyi — AI 翻译工作台 · AI翻译擂台 · 网络用语翻译',
-  description: '爱翻译 · AI翻译 —— AI 翻译工作台、AI翻译擂台、网络用语翻译。跨境电商 Listing 本地化、梗翻译、多模型对比。',
-  keywords: ['AI翻译', '跨境电商翻译', 'Listing本地化', '网络用语翻译', 'YYDS英文', '机翻对比'],
+  title: '爱翻译 - 在线翻译,英文翻译成中文,智能翻译,实时翻译',
+  description: '爱翻译提供免费在线翻译服务：英文翻译成中文、中文翻译成英文，支持实时智能翻译，翻译准确自然。跨境电商文案、外文文档、网络用语都能翻，多模型对比选更佳译文。',
+  keywords: ['在线翻译', '英文翻译成中文', '中文翻译成英文', '智能翻译', '实时翻译', '免费翻译', '爱翻译'],
+  openGraph: {
+    title: '爱翻译 - 在线翻译,英文翻译成中文,智能翻译,实时翻译',
+    description: '爱翻译提供免费在线翻译服务：英文翻译成中文、中文翻译成英文，支持实时智能翻译，翻译准确自然。跨境电商文案、外文文档、网络用语都能翻，多模型对比选更佳译文。',
+    url: 'https://aifanyi.com',
+    siteName: '爱翻译',
+    type: 'website',
+    locale: 'zh_CN',
+    images: [{ url: 'https://aifanyi.com/og-image.png', width: 1200, height: 630, alt: '爱翻译 - 在线翻译,智能翻译,实时翻译' }],
+  },
 };
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
