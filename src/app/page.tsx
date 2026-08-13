@@ -118,11 +118,11 @@ export default async function HomePage() {
         <h3 className="quick-sub">工具</h3>
         <div className="quick-links">
           <a href="/tools/pdf-translator">PDF 翻译 · 三模型对比 · 免费额度</a>
-          <a href="/tools">图片翻译</a>
-          <a href="/tools">视频字幕翻译</a>
-          <a href="/tools">Word翻译</a>
-          <a href="/tools">PPT翻译</a>
-          <a href="/tools">网页翻译</a>
+          <a href="/tools/image-translator">图片翻译</a>
+          <a href="/tools/subtitle-translator">视频字幕翻译</a>
+          <a href="/tools/doc-translator">Word翻译</a>
+          <a href="/tools/doc-translator">PPT翻译</a>
+          <a href="/tools/web-translator">网页翻译</a>
         </div>
       </section>
     </>
