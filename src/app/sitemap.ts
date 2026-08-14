@@ -15,6 +15,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE}/translate/chinese-to-english`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${BASE}/translate/japanese-to-chinese`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${BASE}/translate/korean-to-chinese`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${BASE}/translate/chinese-to-japanese`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${BASE}/translate/chinese-to-korean`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${BASE}/translate/french-to-chinese`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${BASE}/translate/german-to-chinese`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${BASE}/translate/russian-to-chinese`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },

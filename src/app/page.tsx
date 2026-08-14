@@ -110,9 +110,9 @@ export default async function HomePage() {
         <div className="quick-links">
           <a href="/translate/chinese-to-english">中文 → 英语</a>
           <a href="/translate/english-to-chinese">英语 → 中文</a>
-          <a href="/translate/japanese-to-chinese">中文 → 日语</a>
+          <a href="/translate/chinese-to-japanese">中文 → 日语</a>
           <a href="/translate/japanese-to-chinese">日语 → 中文</a>
-          <a href="/translate/korean-to-chinese">中文 → 韩语</a>
+          <a href="/translate/chinese-to-korean">中文 → 韩语</a>
           <a href="/translate/korean-to-chinese">韩语 → 中文</a>
         </div>
         <h3 className="quick-sub">工具</h3>
