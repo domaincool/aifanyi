@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import type { FormEvent } from 'react';
 import ListingStudio from './ListingStudio';
+import AssetPanel from './AssetPanel';
 
 interface UserInfo { id: string; email?: string; nickname?: string; avatar?: string; }
 
@@ -252,6 +253,8 @@ export default function EcommerceWorkbench({ serverUser }: { serverUser: UserInf
           ) : null}
 
           <ListingStudio productId={selected.id} />
+
+          <AssetPanel productId={selected.id} />
         </div>
       )}
 

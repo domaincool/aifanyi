@@ -929,3 +929,25 @@ button.primary:disabled { opacity: 0.5; cursor: wait; }
 .ecom-export { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; padding-top: 4px; }
 .ecom-export .ecom-btn-ghost { padding: 6px 14px; font-size: 13px; }
 
+/* ═══════════════ 商品图片翻译 ═══════════════ */
+.ecom-asset { margin-top: 24px; border-top: 1px solid var(--border); padding-top: 20px; }
+.ecom-asset-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; margin-bottom: 16px; }
+.ecom-asset-card { display: flex; flex-direction: column; gap: 4px; background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; cursor: pointer; text-align: left; font-family: inherit; color: var(--text); }
+.ecom-asset-card:hover { border-color: var(--accent2); }
+.ecom-asset-active { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+.ecom-asset-name { font-size: 13.5px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.ecom-asset-detail { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; }
+@media (max-width: 720px) { .ecom-asset-detail { grid-template-columns: 1fr; } }
+.ecom-asset-preview { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 12px; display: flex; align-items: center; justify-content: center; min-height: 120px; }
+.ecom-asset-img { max-width: 100%; max-height: 320px; border-radius: 8px; object-fit: contain; }
+.ecom-asset-side { display: flex; flex-direction: column; gap: 14px; }
+.ecom-asset-side .ecom-gen-row { flex-wrap: wrap; }
+.ecom-asset-side .ecom-gen-row .ecom-select { max-width: 120px; }
+.ecom-asset-result { display: flex; flex-direction: column; gap: 8px; }
+.ecom-asset-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+@media (max-width: 720px) { .ecom-asset-row { grid-template-columns: 1fr; } }
+.ecom-asset-src, .ecom-asset-dst { padding: 10px 12px; border-radius: 8px; font-size: 13.5px; line-height: 1.6; }
+.ecom-asset-src { background: var(--bg); border: 1px solid var(--border); color: var(--text); }
+.ecom-asset-dst { background: rgba(37,99,235,.06); border: 1px solid rgba(37,99,235,.25); color: var(--text); }
+
