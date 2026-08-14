@@ -4,13 +4,13 @@
  * 强制产生 Grant + Ledger，记录 adminId
  */
 import { NextRequest, NextResponse } from 'next/server';
-import { requireAdmin } from '@/lib/credit/admin-auth';
+import { requireOpsOrAdmin } from '@/lib/admin/ops-auth';
 import { adminAdjustment } from '@/lib/credit/engine';
 import { GRANT_TYPES } from '@/lib/credit/types';
 
 export async function POST(req: NextRequest) {
-  const admin = await requireAdmin();
-  if (!admin) return NextResponse.json({ error: '无权限' }, { status: 403 });
+  const identity = await requireOpsOrAdmin(req);
+  if (!identity) return NextResponse.json({ error: '无权限' }, { status: 401 });
 
   const body = await req.json().catch(() => ({}));
   const { userId, amount, reason } = body || {};
@@ -25,7 +25,7 @@ export async function POST(req: NextRequest) {
     source: '管理员调整',
     amount: amt,
     reason: reason.trim(),
-    adminId: admin.userId,
+    adminId: identity.kind === 'admin' ? identity.userId : null,
     idempotencyKey: `admin_adj_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`,
   });
 

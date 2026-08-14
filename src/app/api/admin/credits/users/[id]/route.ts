@@ -3,11 +3,11 @@
  */
 import { NextRequest, NextResponse } from 'next/server';
 import { prisma } from '@/lib/db';
-import { requireAdmin } from '@/lib/credit/admin-auth';
+import { requireOpsOrAdmin } from '@/lib/admin/ops-auth';
 
 export async function GET(_req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
-  const admin = await requireAdmin();
-  if (!admin) return NextResponse.json({ error: '无权限' }, { status: 403 });
+  const identity = await requireOpsOrAdmin(_req);
+  if (!identity) return NextResponse.json({ error: '无权限' }, { status: 401 });
   const { id } = await params;
 
   const user = await prisma.user.findUnique({ where: { id } });
