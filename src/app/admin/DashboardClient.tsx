@@ -59,6 +59,16 @@ export default function DashboardClient() {
 
   return (
     <div style={{ display: 'grid', gap: 20 }}>
+      {/* 工具栏 */}
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 12 }}>
+        <div style={{ fontSize: 15, fontWeight: 600 }}>运营看板</div>
+        <a
+          href="/api/admin/export"
+          style={{ display: 'inline-flex', alignItems: 'center', gap: 6, background: 'var(--accent)', color: '#fff', padding: '8px 14px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none' }}
+        >
+          导出 CSV
+        </a>
+      </div>
       {/* 指标卡 */}
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: 12 }}>
         {metric('用户', stats.users.total, `${stats.users.activeSessions} 活跃会话 · ${stats.users.creditAccounts} 额度账户`)}
