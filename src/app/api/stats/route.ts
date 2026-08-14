@@ -1,34 +1,46 @@
-import { NextResponse } from 'next/server';
-import { prisma } from '@/lib/db';
-
 /**
- * GET /api/stats
- * 只读运营统计：盲测投票量 / 翻译调用量 / 模型分布 / 成本
- * 用途：运营监控基线（每周快照 / 任意时刻自查）
+ * GET /api/stats — 只读运营统计（盲测/翻译/成本/PDF/用户/内容）
+ * 权限：requireOpsOrAdmin（运营 Agent Bearer token 或 admin session）——修复审计 P1「stats 无认证」
+ * 用途：运营监控基线（每周快照 / 任意时刻自查）+ 管理看板
  */
-export async function GET() {
-  try {
-    const [blindtestCount, voteCount, voteByModel, jobCount, jobByModel, jobCost, cachedCount, recentDaily, pdfJobCount, pdfAgg, pdfDurations, pdfEvents] =
-      await Promise.all([
-        prisma.blindtest.count(),
-        prisma.vote.count(),
-        prisma.vote.groupBy({ by: ['model'], _count: { _all: true } }),
-        prisma.translationJob.count(),
-        prisma.translationJob.groupBy({ by: ['model'], _count: { _all: true }, _sum: { costUsd: true } }),
-        prisma.translationJob.aggregate({ _sum: { costUsd: true } }),
-        prisma.translationJob.count({ where: { cached: true } }),
-        prisma.translationJob.groupBy({
-          by: ['createdAt'],
-          where: { createdAt: { gte: new Date(Date.now() - 7 * 86400000) } },
-          _count: { _all: true },
-        }),
-        prisma.pdfJob.count(),
-        prisma.pdfJob.aggregate({ _sum: { totalCostUsd: true }, _avg: { durationMs: true } }),
-        prisma.pdfJob.findMany({ where: { status: 'completed', durationMs: { not: null } }, select: { durationMs: true }, take: 200 }),
-        prisma.pdfEvent.groupBy({ by: ['event'], _count: { _all: true } }),
-      ]);
+import { NextRequest, NextResponse } from 'next/server';
+import { prisma } from '@/lib/db';
+import { requireOpsOrAdmin } from '@/lib/admin/ops-auth';
 
-    // 近 7 天按日聚合（groupBy createdAt 是精确时间戳，这里转日期）
+export async function GET(req: NextRequest) {
+  const identity = await requireOpsOrAdmin(req);
+  if (!identity) return NextResponse.json({ error: '无权限' }, { status: 401 });
+
+  try {
+    const [
+      blindtestCount, voteCount, voteByModel, jobCount, jobByModel, jobCost, cachedCount, recentDaily,
+      pdfJobCount, pdfAgg, pdfDurations, pdfEvents,
+      userCount, activeSessions, memeCount, memeByStatus, blindtestByStatus, accountCount,
+    ] = await Promise.all([
+      prisma.blindtest.count(),
+      prisma.vote.count(),
+      prisma.vote.groupBy({ by: ['model'], _count: { _all: true } }),
+      prisma.translationJob.count(),
+      prisma.translationJob.groupBy({ by: ['model'], _count: { _all: true }, _sum: { costUsd: true } }),
+      prisma.translationJob.aggregate({ _sum: { costUsd: true } }),
+      prisma.translationJob.count({ where: { cached: true } }),
+      prisma.translationJob.groupBy({
+        by: ['createdAt'],
+        where: { createdAt: { gte: new Date(Date.now() - 7 * 86400000) } },
+        _count: { _all: true },
+      }),
+      prisma.pdfJob.count(),
+      prisma.pdfJob.aggregate({ _sum: { totalCostUsd: true }, _avg: { durationMs: true } }),
+      prisma.pdfJob.findMany({ where: { status: 'completed', durationMs: { not: null } }, select: { durationMs: true }, take: 200 }),
+      prisma.pdfEvent.groupBy({ by: ['event'], _count: { _all: true } }),
+      prisma.user.count(),
+      prisma.session.count({ where: { expiresAt: { gt: new Date() } } }),
+      prisma.memeEntry.count(),
+      prisma.memeEntry.groupBy({ by: ['status'], _count: { _all: true } }),
+      prisma.blindtest.groupBy({ by: ['status'], _count: { _all: true } }),
+      prisma.creditAccount.count(),
+    ]);
+
     const dailyMap = new Map<string, number>();
     for (const d of recentDaily) {
       const day = d.createdAt.toISOString().slice(0, 10);
@@ -39,6 +51,13 @@ export async function GET() {
     return NextResponse.json({
       ok: true,
       ts: new Date().toISOString(),
+      operator: identity.operator,
+      users: { total: userCount, activeSessions, creditAccounts: accountCount },
+      content: {
+        memes: memeCount,
+        memesByStatus: Object.fromEntries(memeByStatus.map((m) => [m.status, m._count._all])),
+        blindtestsByStatus: Object.fromEntries(blindtestByStatus.map((b) => [b.status, b._count._all])),
+      },
       blindtest: { total: blindtestCount, votes: voteCount, votesByModel: Object.fromEntries(voteByModel.map((v) => [v.model, v._count._all])) },
       translation: {
         total: jobCount,

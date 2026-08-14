@@ -8,7 +8,7 @@ export const dynamic = 'force-dynamic';
 export default async function BlindtestDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const b = await prisma.blindtest.findUnique({ where: { id } });
-  if (!b) notFound();
+  if (!b || b.status !== 'published') notFound();
 
   const translations = (b.translations as { anonymousId: string; text: string }[]) || [];
 

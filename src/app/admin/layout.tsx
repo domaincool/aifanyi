@@ -10,7 +10,10 @@ export default async function AdminLayout({ children }: { children: React.ReactN
   if (!admin) notFound();
 
   const nav = [
+    { href: '/admin', label: '数据看板' },
     { href: '/admin/memes', label: '词条管理' },
+    { href: '/admin/blindtests', label: '盲测管理' },
+    { href: '/admin/audit', label: '审计日志' },
     { href: '/admin/credits', label: '额度管理' },
   ];
 

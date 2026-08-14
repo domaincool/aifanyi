@@ -16,7 +16,7 @@ export async function POST(req: NextRequest) {
     }
 
     const blindtest = await prisma.blindtest.findUnique({ where: { id: blindtestId } });
-    if (!blindtest) {
+    if (!blindtest || blindtest.status !== 'published') {
       return NextResponse.json({ error: '盲测不存在' }, { status: 404 });
     }
 

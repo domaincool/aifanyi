@@ -5,6 +5,7 @@ export const dynamic = 'force-dynamic';
 /** 盲测擂台：最近盲测题列表 */
 export default async function BlindtestListPage() {
   const list = await prisma.blindtest.findMany({
+      where: { status: 'published' },
     orderBy: { createdAt: 'desc' },
     take: 20,
     select: { id: true, sourceText: true, sourceLang: true, targetLang: true, voteCount: true, createdAt: true },

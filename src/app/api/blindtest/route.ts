@@ -81,6 +81,7 @@ export async function POST(req: NextRequest) {
 export async function GET(req: NextRequest) {
   const limit = Math.min(50, Number(req.nextUrl.searchParams.get('limit') || 10));
   const list = await prisma.blindtest.findMany({
+    where: { status: 'published' },
     orderBy: { createdAt: 'desc' },
     take: limit,
     select: { id: true, sourceText: true, sourceLang: true, targetLang: true, voteCount: true, winnerModel: true, createdAt: true },
