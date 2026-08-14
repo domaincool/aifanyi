@@ -897,3 +897,35 @@ button.primary:disabled { opacity: 0.5; cursor: wait; }
 .ecom-credit-text { font-size: 14.5px; color: var(--text); line-height: 1.8; margin-bottom: 4px; }
 .ecom-credit-text b { color: #d97706; }
 
+/* ═══════════════ Listing Studio ═══════════════ */
+.ecom-listing { margin-top: 24px; border-top: 1px solid var(--border); padding-top: 20px; }
+.ecom-listing-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; flex-wrap: wrap; gap: 10px; }
+.ecom-listing-head h3 { font-size: 17px; }
+.ecom-listing-actions { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.ecom-select { padding: 8px 12px; border: 1px solid var(--input-border); border-radius: 8px; font-size: 13.5px; background: var(--input-bg); color: var(--text); outline: none; font-family: inherit; }
+.ecom-select:focus { border-color: var(--accent); }
+.ecom-muted-line { color: var(--muted); font-size: 13.5px; }
+
+.ecom-gen-form { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 16px; margin-bottom: 16px; display: flex; flex-direction: column; gap: 12px; }
+.ecom-gen-row { display: flex; align-items: center; gap: 12px; }
+.ecom-gen-row .ecom-label { margin: 0; min-width: 64px; }
+.ecom-gen-row .ecom-select { flex: 1; max-width: 240px; }
+
+.ecom-listing-body { display: flex; flex-direction: column; gap: 16px; }
+.ecom-history-bar { display: flex; justify-content: space-between; align-items: center; gap: 10px; background: rgba(37,99,235,.06); border: 1px dashed rgba(37,99,235,.3); border-radius: 10px; padding: 10px 14px; font-size: 13.5px; color: var(--muted); flex-wrap: wrap; }
+.ecom-listing-field { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; }
+.ecom-listing-field-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.ecom-listing-field-label { font-size: 13px; color: var(--muted); font-weight: 600; }
+.ecom-rewrite { background: none; border: 1px solid var(--border); color: var(--muted); border-radius: 6px; padding: 4px 10px; font-size: 12.5px; cursor: pointer; }
+.ecom-rewrite:hover { color: var(--accent); border-color: var(--accent); }
+.ecom-rewrite:disabled { opacity: .5; cursor: wait; }
+.ecom-listing-field-body { font-size: 14px; color: var(--text); }
+.ecom-listing-title { font-size: 15px; font-weight: 600; line-height: 1.6; margin: 0; }
+.ecom-listing-desc { line-height: 1.8; margin: 0; white-space: pre-wrap; }
+.ecom-kw-wrap { display: flex; flex-wrap: wrap; gap: 6px; }
+.ecom-bullets { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px; }
+.ecom-bullets li { padding-left: 16px; position: relative; line-height: 1.6; }
+.ecom-bullets li::before { content: "•"; position: absolute; left: 2px; color: var(--accent2); }
+.ecom-export { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; padding-top: 4px; }
+.ecom-export .ecom-btn-ghost { padding: 6px 14px; font-size: 13px; }
+

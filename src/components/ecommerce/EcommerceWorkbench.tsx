@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import type { FormEvent } from 'react';
+import ListingStudio from './ListingStudio';
 
 interface UserInfo { id: string; email?: string; nickname?: string; avatar?: string; }
 
@@ -249,6 +250,8 @@ export default function EcommerceWorkbench({ serverUser }: { serverUser: UserInf
               ) : null}
             </div>
           ) : null}
+
+          <ListingStudio productId={selected.id} />
         </div>
       )}
 
