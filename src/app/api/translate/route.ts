@@ -4,6 +4,7 @@ import { prisma } from '@/lib/db';
 import { hashText, getCache } from '@/lib/translator/cache';
 import { getAuthUserId, beginSync, endSyncSuccess, endSyncFail, estimateByChars, FEATURES } from '@/lib/credit/sync-settle';
 import { ingestCorpus } from '@/lib/corpus/ingest';
+import { checkGuestLimit, recordGuestUsage } from '@/lib/guest-limit';
 
 /**
  * POST /api/translate
@@ -33,6 +34,14 @@ export async function POST(req: NextRequest) {
     const hit = getCache(cacheKey);
     if (hit) {
       return NextResponse.json({ text: hit.result, model: 'cache:' + hit.model, cached: true, costUsd: 0, latencyMs: 0 });
+    }
+
+    // 游客限流（审计 P0 修复）：缓存命中不限制（零成本）；登录用户走 Credit 系统
+    if (!auth) {
+      const gl = await checkGuestLimit(req);
+      if (!gl.ok) {
+        return NextResponse.json({ error: gl.error, code: gl.code, retryAfterMs: gl.retryAfterMs }, { status: 429 });
+      }
     }
 
     // 登录用户：reserve（原子检查余额）；游客跳过
@@ -69,6 +78,9 @@ export async function POST(req: NextRequest) {
         cached: result.cached ?? false,
       },
     });
+
+    // 游客成功翻译：计次 + 计字符（DB 持久化，重启不绕过）
+    if (!auth) await recordGuestUsage(req, text.length);
 
     // 质量尚可的译文进语料库（general 场景默认 3 分）
     if (!result.error && result.text) {
