@@ -36,6 +36,14 @@ model User {
   creditLedgers     CreditLedger[]
   creditGrants      CreditGrant[]
   usageRecords      UsageRecord[]
+  ecommerceProjects          EcommerceProject[]
+  ecommerceProducts          EcommerceProduct[]
+  ecommerceListings          EcommerceListing[]
+  ecommerceListingRuns       EcommerceListingRun[]
+  ecommerceAssets            EcommerceAsset[]
+  ecommerceAssetTranslations EcommerceAssetTranslation[]
+  ecommerceCustomerMessages  EcommerceCustomerMessage[]
+  ecommerceJobs              EcommerceJob[]
 
   @@index([email])
   @@index([status])
@@ -482,3 +490,247 @@ model ReconciliationRecord {
   @@index([status])
   @@index([createdAt])
 }
+
+
+// ═══════════════════ 跨境电商工作台（V1） ═══════════════════
+// Product-first UX：Project 仅作 DB 归属（默认「默认项目」）；Product 是用户操作主体
+// 所有用户数据表带 userId（IDOR 防护）；Product/Asset 通过 Project 归属校验
+
+model EcommerceProject {
+  id          String   @id @default(cuid())
+  userId      String
+  name        String   @default("默认项目")
+  description String?
+  status      String   @default("active") // active | archived | deleted
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  user     User               @relation(fields: [userId], references: [id], onDelete: Cascade)
+  products EcommerceProduct[]
+  assets   EcommerceAsset[]
+  messages EcommerceCustomerMessage[]
+  jobs     EcommerceJob[]
+
+  @@index([userId])
+}
+
+model EcommerceProduct {
+  id                String    @id @default(cuid())
+  projectId         String
+  userId            String
+  productName       String
+  sourceDescription String?
+  category          String?
+  brand             String?
+  sku               String?
+  features          Json? // 卖点（string[]）
+  specifications    Json? // 规格（string[]）
+  materials         Json? // 材质（string[]）
+  dimensions        Json? // 尺寸（{length,width,height,unit}）
+  weight            String?
+  targetMarket      String?
+  platform          String?
+  sourceLang        String    @default("zh")
+  status            String    @default("active") // active | deleted
+  deletedAt         DateTime?
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+
+  project  EcommerceProject          @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  user     User                      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  listings EcommerceListing[]
+  runs     EcommerceListingRun[]
+  assets   EcommerceAsset[]
+  messages EcommerceCustomerMessage[]
+
+  @@index([userId])
+  @@index([projectId])
+  @@index([userId, createdAt])
+}
+
+// Listing = 商品在某平台/市场/语言下的销售内容（一个版本 = 一份完整 Draft）
+model EcommerceListing {
+  id              String   @id @default(cuid())
+  productId       String
+  userId          String
+  version         Int      @default(1)
+  draft           Json     // { title, bulletPoints[], description, keywords[], faqHighlights[] }
+  status          String   @default("current") // current | history
+  charCount       Int      @default(0)
+  warnings        Json?    // Fact Validation 待确认项（string[]）
+  creditState     String?
+  consumedCredits Int      @default(0)
+  metadata        Json?    // { platform, market, language, model }
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  product EcommerceProduct @relation(fields: [productId], references: [id], onDelete: Cascade)
+  user    User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([productId, version])
+  @@index([userId])
+  @@index([productId, status])
+}
+
+// 一次生成任务（含 Fact Validation + 幂等）
+model EcommerceListingRun {
+  id             String   @id @default(cuid())
+  productId      String
+  userId         String
+  platform       String?
+  market         String?
+  language       String?
+  inputSnapshot  Json? // 生成时输入快照（AI 提取后的商品资料）
+  output         Json? // 生成结果（完整 draft）
+  warnings       Json? // Fact Validation warnings
+  status         String   @default("pending") // pending | success | failed
+  errorType      String?
+  errorMessage   String?
+  idempotencyKey String   @unique
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  product EcommerceProduct @relation(fields: [productId], references: [id], onDelete: Cascade)
+  user    User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([productId])
+}
+
+// 素材（经 StorageService 落盘/对象存储；soft delete）
+model EcommerceAsset {
+  id           String    @id @default(cuid())
+  projectId    String
+  productId    String?
+  userId       String
+  type         String    // image | csv | other
+  mime         String
+  size         Int
+  storageKey   String
+  originalName String?
+  status       String    @default("active") // active | deleted
+  deletedAt    DateTime?
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  project      EcommerceProject           @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  product      EcommerceProduct?          @relation(fields: [productId], references: [id], onDelete: SetNull)
+  user         User                       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  translations EcommerceAssetTranslation[]
+
+  @@index([userId])
+  @@index([projectId])
+  @@index([productId])
+}
+
+model EcommerceAssetTranslation {
+  id              String   @id @default(cuid())
+  assetId         String
+  userId          String
+  targetLang      String
+  ocrText         Json? // OCR 识别结果（string[]）
+  translated      Json? // 翻译结果（string[]）
+  layout          Json? // 布局重建结果
+  status          String   @default("pending") // pending | success | failed
+  creditState     String?
+  reservedCredits Int      @default(0)
+  consumedCredits Int      @default(0)
+  errorType       String?
+  errorMessage    String?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  asset EcommerceAsset @relation(fields: [assetId], references: [id], onDelete: Cascade)
+  user  User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([assetId])
+  @@index([userId])
+}
+
+// 客户消息（productId 可空：既可挂 Project 也可挂具体 Product）
+model EcommerceCustomerMessage {
+  id          String   @id @default(cuid())
+  projectId   String
+  productId   String?
+  userId      String
+  sourceText  String
+  sourceLang  String   @default("auto")
+  translation String?
+  intent      String?
+  replyJson   Json? // { reply, tone }
+  tone        String? // professional | friendly | concise
+  status      String   @default("active")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  project EcommerceProject       @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  product EcommerceProduct?      @relation(fields: [productId], references: [id], onDelete: SetNull)
+  user    User                   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([projectId])
+  @@index([productId])
+}
+
+// 通用异步任务（图片翻译等）
+model EcommerceJob {
+  id              String    @id @default(cuid())
+  taskId          String    @unique
+  userId          String
+  projectId       String?
+  kind            String    // asset_translation | ...
+  status          String    @default("pending") // pending | running | completed | failed | cancelled
+  progress        Int       @default(0)
+  payload         Json?
+  result          Json?
+  errorType       String?
+  errorMessage    String?
+  creditState     String?
+  reservedCredits Int       @default(0)
+  consumedCredits Int       @default(0)
+  idempotencyKey  String    @unique
+  createdAt       DateTime  @default(now())
+  completedAt     DateTime?
+  updatedAt       DateTime  @updatedAt
+
+  user    User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  project EcommerceProject? @relation(fields: [projectId], references: [id], onDelete: SetNull)
+
+  @@index([userId])
+  @@index([status])
+  @@index([createdAt])
+}
+
+// 平台规则（长度/字段/格式）
+model EcommercePlatformRule {
+  id                String   @id @default(cuid())
+  platform          String   // amazon_us | amazon_uk | ...
+  market            String   // us | uk | ...
+  field             String   // title | bullet_points | description | keywords
+  minLength         Int?
+  maxLength         Int?
+  recommendedLength Int?
+  rules             Json? // 平台格式规则
+  version           Int      @default(1)
+  active            Boolean  @default(true)
+  updatedAt         DateTime @updatedAt
+
+  @@unique([platform, market, field, version])
+  @@index([platform, market])
+}
+
+// 合规规则（禁虚构/敏感声明/未验证功效）
+model EcommerceContentCompliance {
+  id        String   @id @default(cuid())
+  platform  String
+  market    String?
+  category  String?
+  ruleType  String   // no_fabrication | no_sensitive_claim | no_unverified_efficacy
+  ruleText  Json     // { zh, en? }
+  active    Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([platform, market])
+}
+
