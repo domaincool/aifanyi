@@ -764,3 +764,14 @@ model GuestUsage {
   @@unique([ipHash, date])
   @@index([date])
 }
+
+model VoiceRateUsage {
+  id        Int      @id @default(autoincrement())
+  userId    String   @db.VarChar(64)
+  minuteKey String   @db.VarChar(12)
+  count     Int      @default(0)
+  updatedAt DateTime @updatedAt
+
+  @@unique([userId, minuteKey])
+  @@index([minuteKey])
+}

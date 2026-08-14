@@ -1,19 +1,18 @@
 /**
  * 语音功能服务端限制（权威，前端只展示）
- * 每用户每分钟调用次数限制（内存滑动窗口，多实例部署时可用 Redis 升级）
+ * 每用户每分钟调用次数限制（DB 持久化：VoiceRateUsage 表按分钟计数，重启不绕过）
  */
-const buckets = new Map<string, number[]>();
+import { prisma } from '@/lib/db';
 
-export function checkRateLimit(userId: string, perMinute = 5): boolean {
-  const now = Date.now();
-  const arr = (buckets.get(userId) || []).filter((t) => now - t < 60_000);
-  if (arr.length >= perMinute) {
-    buckets.set(userId, arr);
-    return false;
-  }
-  arr.push(now);
-  buckets.set(userId, arr);
-  return true;
+export async function checkRateLimit(userId: string, perMinute = 5): Promise<boolean> {
+  const now = new Date(Date.now() + 8 * 3600_000);
+  const minuteKey = now.toISOString().slice(0, 13).replace(/[-:T]/g, '').slice(0, 12); // YYYYMMDDHHMM
+  const row = await prisma.voiceRateUsage.upsert({
+    where: { userId_minuteKey: { userId, minuteKey } },
+    create: { userId, minuteKey, count: 1 },
+    update: { count: { increment: 1 } },
+  });
+  return row.count <= perMinute;
 }
 
 export const VOICE_LIMITS = {

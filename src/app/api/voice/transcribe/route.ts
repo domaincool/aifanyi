@@ -12,7 +12,7 @@ export async function POST(req: NextRequest) {
   try {
     const auth = await getAuthUserId();
     if (!auth) return NextResponse.json(authErrorBody(), { status: 401 });
-    if (!checkRateLimit(auth.userId)) {
+    if (!(await checkRateLimit(auth.userId))) {
       return NextResponse.json({ ok: false, error: '操作太频繁，请稍后再试。' }, { status: 429 });
     }
 
