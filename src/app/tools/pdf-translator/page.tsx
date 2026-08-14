@@ -165,6 +165,7 @@ export default function PdfTranslatorPage() {
         <h2>常见问题</h2>
         <div className="pdf-seo-faq">
           <div className="pdf-seo-faq-item"><h3>免费吗？有次数限制吗？</h3><p>登录后使用额度制计费：新用户注册即送 300 免费额度（30 天有效）。仅翻译成功的部分扣费，失败自动退回，额度消耗透明可查。</p></div>
+          <div className="pdf-seo-faq-item"><h3>翻译需要多久？</h3><p>小文件通常几秒到十几秒即可完成；大文件（几十页 / 长文档）按批翻译，可能需要几分钟。页面会实时显示解析与翻译进度，完成即可对照阅读，无需一直等待。</p></div>
           <div className="pdf-seo-faq-item"><h3>支持多大文件？</h3><p>单个文件 {String.fromCharCode(8804)} 20MB，{String.fromCharCode(8804)} 100 页，文本量 {String.fromCharCode(8804)} 100 万字符。超过任一限制会在上传时直接提示，不会浪费等待时间。</p></div>
           <div className="pdf-seo-faq-item"><h3>扫描版 PDF 支持吗？</h3><p>当前版本仅支持文本型 PDF（Word / Google Docs 等导出的单栏文档效果最佳）。如果上传扫描版（纯图片）PDF，页面会明确提示{String.fromCharCode(8220)}暂不支持{String.fromCharCode(8221)}，并引导到即将推出的 OCR 功能。</p></div>
           <div className="pdf-seo-faq-item"><h3>能保留原 PDF 的排版吗？</h3><p>当前版本为双语阅读器模式（左右对照阅读），不输出原版式 PDF。原版式 PDF 重建功能在后续版本规划中。</p></div>
