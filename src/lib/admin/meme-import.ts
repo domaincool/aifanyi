@@ -103,6 +103,7 @@ export async function importMemes(input: {
   const skipped: { index: number; term: string; reason: string }[] = [];
   const created: string[] = [];
   const seenInBatch = new Set<string>();
+  const batchNormSeen = new Map<string, string>(); // norm -> slug（本批已接受，防批内归一冲突）
 
   valid.forEach((it, idx) => {
     if (seenInBatch.has(it.term)) {
@@ -124,11 +125,12 @@ export async function importMemes(input: {
       return;
     }
     const norm = slugNorm(it.slug);
-    const normConflict = slugNormMap.get(norm);
+    const normConflict = slugNormMap.get(norm) || batchNormSeen.get(norm);
     if (normConflict && normConflict !== it.slug) {
       conflicts.push({ index: idx, term: it.term, reason: `slug_conflict(${normConflict})` });
       return;
     }
+    batchNormSeen.set(norm, it.slug);
     toCreate.push(it);
     created.push(it.slug);
   });
