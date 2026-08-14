@@ -88,6 +88,7 @@ model Blindtest {
   translations Json
   winnerModel  String?
   voteCount    Int      @default(0)
+  status       String   @default("published")
   createdAt    DateTime @default(now())
   updatedAt    DateTime @updatedAt
 
@@ -120,6 +121,7 @@ model MemeEntry {
   examples    Json
   tags        String[]
   popularity  Int      @default(0)
+  status      String   @default("published")
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 }
@@ -735,3 +737,18 @@ model EcommerceContentCompliance {
   @@index([platform, market])
 }
 
+
+model AdminLog {
+  id        String   @id @default(cuid())
+  operator  String
+  action    String
+  targetId  String?
+  batchId   String?
+  params    Json?
+  result    Json?
+  ip        String?
+  createdAt DateTime @default(now())
+
+  @@unique([action, batchId])
+  @@index([operator, createdAt])
+}

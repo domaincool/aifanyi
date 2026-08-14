@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>aifanyi.com 阶段性开发审计报告（2026-08-15）</title>
+<style>
+  :root { --bg:#0f172a; --panel:#1e293b; --border:#334155; --text:#e2e8f0; --muted:#94a3b8; --accent:#3b82f6; --green:#22c55e; --amber:#f59e0b; --red:#ef4444; --purple:#a78bfa; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+  .wrap { max-width:1020px; margin:0 auto; padding:40px 24px 90px; }
+  h1 { font-size:26px; margin:0 0 6px; }
+  h2 { font-size:20px; margin:38px 0 14px; padding-bottom:8px; border-bottom:1px solid var(--border); }
+  h3 { font-size:16px; margin:20px 0 8px; }
+  .sub { color:var(--muted); font-size:14px; margin-bottom:22px; }
+  .badge { display:inline-block; padding:2px 11px; border-radius:999px; font-size:12px; margin-right:6px; }
+  .b-red { background:rgba(239,68,68,.15); color:var(--red); }
+  .b-amber { background:rgba(245,158,11,.15); color:var(--amber); }
+  .b-blue { background:rgba(59,130,246,.15); color:var(--accent); }
+  .b-green { background:rgba(34,197,94,.15); color:var(--green); }
+  .card { background:var(--panel); border:1px solid var(--border); border-radius:12px; padding:18px 20px; margin-bottom:14px; }
+  .metrics { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; margin:14px 0; }
+  .metric { background:var(--panel); border:1px solid var(--border); border-radius:10px; padding:14px 16px; }
+  .metric b { font-size:22px; display:block; }
+  .metric span { color:var(--muted); font-size:12.5px; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; }
+  th,td { text-align:left; padding:9px 12px; border-bottom:1px solid var(--border); vertical-align:top; }
+  th { color:var(--muted); font-weight:600; font-size:12.5px; }
+  .p0 { color:var(--red); font-weight:700; }
+  .p1 { color:var(--amber); font-weight:700; }
+  .p2 { color:var(--blue,var(--accent)); font-weight:700; }
+  code { background:rgba(59,130,246,.12); color:#93c5fd; padding:1px 6px; border-radius:4px; font-size:12.5px; font-family:Consolas,monospace; }
+  .ok { color:var(--green); font-weight:700; }
+  .warn { color:var(--amber); font-weight:700; }
+  .fact { color:var(--green); font-weight:600; }
+  .spec { color:var(--amber); font-weight:600; }
+  .legend { font-size:12.5px; color:var(--muted); margin:6px 0 18px; }
+  .concl { background:linear-gradient(135deg,rgba(59,130,246,.12),rgba(167,139,250,.12)); border:1px solid var(--border); border-radius:14px; padding:22px 24px; margin:20px 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>aifanyi.com 阶段性开发审计报告</h1>
+  <div class="sub">CTO 级全面审计 · 基于实际代码 / 数据库 / 配置 / 线上现状 · 2026-08-15</div>
+  <div>
+    <span class="badge b-blue">33 张表</span>
+    <span class="badge b-blue">57 个 API 路由</span>
+    <span class="badge b-green">6 大功能域全上线</span>
+    <span class="badge b-amber">商业化未启动</span>
+  </div>
+
+  <h2>一、阶段判断（核心结论）</h2>
+  <div class="concl">
+    <p style="margin:0 0 10px;font-size:16px"><b>当前阶段：产品 MVP 已完整成型、工程质量合格，但处于「商业化未启动、无真实用户验证」的临界点。</b></p>
+    <p style="margin:0;color:var(--muted)">功能开发完成度很高（文本/文件/语音翻译 + 盲测 + 梗库 + 跨境电商工作台 + Credit 系统全部上线），架构质量过硬（Provider 抽象、配置化定价、幂等结算、IDOR 防护、JWT 认证）。但运营数据几乎为零（19 用户、85 次翻译、2 次投票），且<b>没有支付/充值闭环</b>——Credit 系统完备却无法变现。</p>
+  </div>
+  <p><b>距离「真正可规模化运营」还差三个关键缺口</b>：① 变现闭环（无支付）② 成本控制（游客免费翻译无限制）③ 监控告警（无成本/错误/可用性告警）。下一阶段方向明确：<b>补基础 + 加固成本 + 启动商业化，而不是继续加新功能</b>。</p>
+
+  <h2>二、现状盘点</h2>
+  <h3>功能域完成度（已验证事实）</h3>
+  <table>
+    <tr><th>功能域</th><th>状态</th><th>说明</th></tr>
+    <tr><td>文本翻译（首页核心）</td><td class="ok">✅ 上线</td><td>5 场景 + 3 风格 + 缓存 + 润色 + 网页翻译集成</td></tr>
+    <tr><td>文件翻译（PDF/字幕/图片/Word·PPT/网页）</td><td class="ok">✅ 上线</td><td>6 工具页全部 200，异步 Job + 进度轮询</td></tr>
+    <tr><td>语音翻译（/voice）</td><td class="ok">✅ 上线</td><td>ASR→翻译→TTS，SSE 流式，移动端 Mobile-First 重构</td></tr>
+    <tr><td>盲测擂台 + 梗翻译</td><td class="ok">✅ 上线</td><td>19 盲测题 + 300 词条 + SEO 内链</td></tr>
+    <tr><td>跨境电商工作台</td><td class="ok">✅ 上线</td><td>17 路由 + 10 表 + AI 微调，但无真实用户数据</td></tr>
+    <tr><td>Credit &amp; Usage 系统</td><td class="ok">✅ 上线</td><td>reserve/consume/refund + 幂等 + 配置化定价 + 34 单测</td></tr>
+    <tr><td>认证（邮箱 OTP + Google OAuth）</td><td class="ok">✅ 上线</td><td>JWT + DB 双写 + revokedAt + 弱密钥拒绝</td></tr>
+    <tr><td>支付 / 充值</td><td class="warn">❌ 无</td><td>grep 无任何支付代码，Credit 无法变现</td></tr>
+  </table>
+
+  <h3>真实数据现状（数据库 n_live_tup）</h3>
+  <div class="metrics">
+    <div class="metric"><b>19</b><span>用户 User</span></div>
+    <div class="metric"><b>8</b><span>额度账户 CreditAccount</span></div>
+    <div class="metric"><b>85</b><span>翻译任务 TranslationJob</span></div>
+    <div class="metric"><b>2</b><span>盲测投票 Vote</span></div>
+    <div class="metric"><b>300</b><span>梗词条 MemeEntry</span></div>
+    <div class="metric"><b>0</b><span>平台规则 EcommercePlatformRule</span></div>
+  </div>
+  <p class="legend">跨境电商工作台数据（Project 1 / Product 2 / Listing 4 / Asset 1 / Message 2）基本是 E2E 测试残留；术语库/词库/纠错（TermbaseEntry/Glossary/Correction）全为 0，数据飞轮空转。</p>
+
+  <h2>三、质量合格的部分（已验证事实）</h2>
+  <table>
+    <tr><th>模块</th><th>亮点</th></tr>
+    <tr><td>Credit 结算引擎</td><td>reserve/consume/release/refund 全生命周期 + 幂等键；<code>SELECT FOR UPDATE</code> 行锁防并发超卖；对账不变量 available+reserved==ΣLedger</td></tr>
+    <tr><td>认证</td><td>手写 JWT（HS256）+ DB 双写 Session；SESSION_SECRET 弱密钥（&lt;32）拒绝；revokedAt 退出即失效；requireAdmin 邮箱白名单</td></tr>
+    <tr><td>IDOR 防护</td><td>ecommerce guard 所有资源访问 <code>findFirst where userId</code> 归属校验，跨用户全 404</td></tr>
+    <tr><td>翻译路由器</td><td>Provider 抽象（DeepSeek/GLM/Google/OpenAI/Claude 预留）+ 缓存去重 + 场景路由 + 预算超限降级 GLM</td></tr>
+    <tr><td>定价配置化</td><td>PricingRule 表驱动（17 条规则），前端永不算价，60s 缓存调价秒级生效</td></tr>
+    <tr><td>SEO</td><td>动态 sitemap（300+ URL）+ robots + og 标签 + 百度统计 + 词条页动态 title</td></tr>
+    <tr><td>部署</td><td>deploy.sh 一键（pull+build+干净重启+验证）+ crontab 3 任务（certbot/reconciler/cleanup）+ PM2 开机自启</td></tr>
+  </table>
+
+  <h2>四、问题分级（P0 / P1 / P2）</h2>
+  <table>
+    <tr><th>级别</th><th>问题</th><th>依据（事实/推测）</th></tr>
+    <tr><td class="p0">P0</td><td><b>游客免费翻译成本漏洞</b></td><td><span class="fact">事实</span>：<code>/api/translate</code> 代码注释「游客降级：不结算，照常翻译」，游客直连 DeepSeek 付费 API；且该 route <span class="fact">无 rate-limit</span>（grep 确认仅 auth/voice 有限流）。<span class="spec">推测</span>：可被无限刷产生真实成本</td></tr>
+    <tr><td class="p1">P1</td><td><b>预算计数器是进程内存</b></td><td><span class="fact">事实</span>：router.ts 的 <code>monthCostUsd</code> 是内存变量，PM2 重启清零 → 月度预算可被重启绕过</td></tr>
+    <tr><td class="p1">P1</td><td><b>/api/stats 无认证</b></td><td><span class="fact">事实</span>：线上未登录 GET 返回 200，暴露成本/调用量/模型分布等运营数据</td></tr>
+    <tr><td class="p1">P1</td><td><b>平台/合规规则表空</b></td><td><span class="fact">事实</span>：EcommercePlatformRule=0、EcommerceContentCompliance=0，无 seed；ai-edit route 从空表取规则 → 平台硬校验空转（仅靠 prompt 软约束）</td></tr>
+    <tr><td class="p1">P1</td><td><b>无支付/充值闭环</b></td><td><span class="fact">事实</span>：grep 无 stripe/alipay/wechat/payment/checkout；Credit 完备但无法变现</td></tr>
+    <tr><td class="p1">P1</td><td><b>高级功能无真实用户验证</b></td><td><span class="fact">事实</span>：跨境电商/语音/文件翻译数据几乎全为测试残留，<span class="spec">推测</span>：无真实场景验证</td></tr>
+    <tr><td class="p2">P2</td><td>内存限流（单进程 Map）</td><td><span class="fact">事实</span>：rate-limit.ts 注释明确「多实例需换 Redis」，当前单实例够用</td></tr>
+    <tr><td class="p2">P2</td><td>无全局 middleware</td><td><span class="fact">事实</span>：认证靠 route 手动调用（已审计：admin 用 requireAdmin、auth/公开接口正确分类），缺统一兜底</td></tr>
+    <tr><td class="p2">P2</td><td>votes 弱防刷</td><td><span class="fact">事实</span>：IP+UA 哈希 24h 一票，IP 来自可伪造的 x-forwarded-for</td></tr>
+    <tr><td class="p2">P2</td><td>内存 1.7GB 偏紧</td><td><span class="fact">事实</span>：free 显示 1734MB，build 时 max-old-space=1536 已逼近上限</td></tr>
+    <tr><td class="p2">P2</td><td>无监控告警</td><td><span class="fact">事实</span>：仅 crontab 日志，无 uptime/错误率/成本/额度异常告警</td></tr>
+    <tr><td class="p2">P2</td><td>数据飞轮空转</td><td><span class="fact">事实</span>：术语库/词库/纠错（TermbaseEntry/Glossary/Correction）=0</td></tr>
+  </table>
+
+  <h2>五、可停止 vs 必须补齐</h2>
+  <div class="card">
+    <p><b>可停止继续开发的：</b></p>
+    <ul>
+      <li>新增功能类开发（工具栏目 6/6 已满，跨境电商 V1 已收官）——功能已过剩，部分空转</li>
+      <li>AI 微调后续增强（已完成 Fact/Platform 双校验 + 预览应用两步，够用）</li>
+    </ul>
+    <p style="margin-top:14px"><b>必须补齐的：</b></p>
+    <ul>
+      <li>游客翻译限流（P0 成本漏洞）</li>
+      <li>支付/充值闭环（商业化前提）</li>
+      <li>监控告警（成本/错误/可用性）</li>
+      <li>平台/合规规则 seed（让校验硬起来）</li>
+    </ul>
+  </div>
+
+  <h2>六、商业化 / 体验短板</h2>
+  <table>
+    <tr><th>短板</th><th>影响</th></tr>
+    <tr><td>无支付入口</td><td>用户 300 免费额度用完即流失，无转化路径，无收入</td></tr>
+    <tr><td>游客免费翻译无限制</td><td>获客与成本失衡，可能被薅；也削弱「注册送 300」的吸引力（反正游客也能免费用）</td></tr>
+    <tr><td>高级功能无真实验证</td><td>跨境电商工作台/语音的体验、计费合理性未经真实用户检验</td></tr>
+    <tr><td>数据飞轮空转</td><td>术语库/纠错/语料质量分机制没有真实数据运转，差异化壁垒未建立</td></tr>
+  </table>
+
+  <h2>七、下一阶段最值得做的（按优先级）</h2>
+  <table>
+    <tr><th>#</th><th>事项</th><th>优先级</th><th>理由</th></tr>
+    <tr><td>1</td><td>游客翻译限流 + 游客额度</td><td class="p0">P0</td><td>堵成本漏洞：游客每日 N 次（IP 限流），超出引导登录；或游客走 GLM 免费档</td></tr>
+    <tr><td>2</td><td>预算计数器落库持久化</td><td class="p1">P1</td><td>monthCostUsd 写 DB，重启不丢，预算真正生效</td></tr>
+    <tr><td>3</td><td>监控告警体系</td><td class="p1">P1</td><td>日/月成本告警 + 错误率 + 可用性 + 额度异常，先接最轻的（cron 查库 + 邮件/IM 推送）</td></tr>
+    <tr><td>4</td><td>支付/充值闭环</td><td class="p1">P1</td><td>微信/支付宝/Stripe 至少接一个，让 Credit 变现；配套定价页</td></tr>
+    <tr><td>5</td><td>/api/stats 加认证</td><td class="p1">P1</td><td>改为 requireAdmin 或运营 token，运营数据不外泄</td></tr>
+    <tr><td>6</td><td>seed 平台/合规规则</td><td class="p1">P1</td><td>补 EcommercePlatformRule/ContentCompliance 数据，平台校验从软约束变硬校验</td></tr>
+    <tr><td>7</td><td>数据飞轮启动</td><td class="p2">P2</td><td>术语库/纠错功能接线，让语料库与用户偏好真正运转起来</td></tr>
+    <tr><td>8</td><td>限流 Redis 化</td><td class="p2">P2</td><td>为横向扩展做准备（当前单实例可缓）</td></tr>
+    <tr><td>9</td><td>真实用户验证</td><td class="p2">P2</td><td>找真实卖家试用跨境电商工作台、真实用户试用语音，验证体验与计费</td></tr>
+    <tr><td>10</td><td>内存监控 + 扩容预警</td><td class="p2">P2</td><td>1.7GB 内存偏紧，设阈值告警，必要时升配</td></tr>
+  </table>
+
+  <h2>八、路线图（未来 1-3 个阶段）</h2>
+  <table>
+    <tr><th>阶段</th><th>周期</th><th>目标</th><th>内容</th></tr>
+    <tr><td><b>A · 止血加固</b></td><td>1-2 周</td><td>消除生产风险</td><td>游客限流、预算持久化、/api/stats 认证、监控告警、seed 平台规则</td></tr>
+    <tr><td><b>B · 商业化启动</b></td><td>2-4 周</td><td>建立收入闭环</td><td>支付/充值 + 定价页 + 获客（SEO 内容/投放）+ 数据飞轮接线 + 真实用户验证</td></tr>
+    <tr><td><b>C · 规模化准备</b></td><td>1-2 月</td><td>支撑规模增长</td><td>限流 Redis 化、横向扩展、性能优化、跨境电商工作台深度打磨、术语库飞轮闭环</td></tr>
+  </table>
+
+  <div class="concl">
+    <p style="margin:0"><b>一句话结论</b>：功能已经「做多了」，现在缺的是「做对」——<b>停止加新功能，先补变现闭环、成本控制和监控告警这三块基础设施</b>，再用真实用户把已经建好的高级功能（跨境电商、语音、数据飞轮）验证起来。当前距离可规模化运营，差的不是代码，是商业化与运营的临门一脚。</p>
+  </div>
+</div>
+</body>
+</html>

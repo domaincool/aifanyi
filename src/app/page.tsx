@@ -7,7 +7,7 @@ export const dynamic = 'force-dynamic';
 export default async function HomePage() {
   let hotMemes: { term: string; slug: string; translation: string; meaning: string }[] = [];
   try {
-    hotMemes = await prisma.memeEntry.findMany({ orderBy: { popularity: 'desc' }, take: 6 });
+    hotMemes = await prisma.memeEntry.findMany({ where: { status: 'published' }, orderBy: { popularity: 'desc' }, take: 6 });
   } catch {
     // 数据库未初始化时首页仍可用
   }

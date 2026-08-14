@@ -22,6 +22,7 @@ export default async function MemeIndexPage({
   const page = Math.max(1, parseInt(sp.page ?? '1', 10) || 1);
 
   const where: any = {
+    status: 'published',
     ...(q
       ? {
           OR: [
@@ -42,9 +43,9 @@ export default async function MemeIndexPage({
       skip: (page - 1) * PAGE_SIZE,
       take: PAGE_SIZE,
     }),
-    prisma.memeEntry.findMany({ orderBy: { popularity: 'desc' }, take: 10 }),
+    prisma.memeEntry.findMany({ where: { status: 'published' }, orderBy: { popularity: 'desc' }, take: 10 }),
     prisma.$queryRaw<{ tag: string; cnt: bigint }[]>`
-      SELECT unnest(tags) AS tag, count(*) AS cnt FROM "MemeEntry" GROUP BY 1 ORDER BY 2 DESC
+      SELECT unnest(tags) AS tag, count(*) AS cnt FROM "MemeEntry" WHERE status = 'published' GROUP BY 1 ORDER BY 2 DESC
     `,
   ]);
 

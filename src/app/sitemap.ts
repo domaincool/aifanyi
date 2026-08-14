@@ -36,7 +36,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // 200 个梗词条 SEO 页
   let memes: { slug: string; updatedAt: Date }[] = [];
   try {
-    memes = await prisma.memeEntry.findMany({ select: { slug: true, updatedAt: true } });
+    memes = await prisma.memeEntry.findMany({ where: { status: 'published' }, select: { slug: true, updatedAt: true } });
   } catch {
     // 数据库暂不可用时只返回基础页，不让 sitemap 挂掉
   }

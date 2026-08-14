@@ -8,7 +8,7 @@ export const dynamic = 'force-dynamic';
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const m = await prisma.memeEntry.findUnique({ where: { slug } }).catch(() => null);
-  if (!m) return { title: '网络用语翻译 | 爱翻译 aifanyi.com' };
+  if (!m || m.status !== 'published') return { title: '网络用语翻译 | 爱翻译 aifanyi.com' };
   return {
     title: `${m.term} 英文怎么说？${m.term} → ${m.translation} | 爱翻译`,
     description: `${m.term}（${m.meaning}）的地道英文表达是「${m.translation}」。含例句与使用场景，爱翻译 · AI翻译。`,
@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function MemePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const m = await prisma.memeEntry.findUnique({ where: { slug } });
-  if (!m) notFound();
+  if (!m || m.status !== 'published') notFound();
 
   const examples = (m.examples as { zh: string; en: string }[]) || [];
 

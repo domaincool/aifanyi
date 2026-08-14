@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>管理后台实施方案（Admin Console Plan）· aifanyi.com</title>
+<style>
+  :root { --bg:#0f172a; --panel:#1e293b; --border:#334155; --text:#e2e8f0; --muted:#94a3b8; --accent:#3b82f6; --green:#22c55e; --amber:#f59e0b; --red:#ef4444; --purple:#a78bfa; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+  .wrap { max-width:1020px; margin:0 auto; padding:40px 24px 90px; }
+  h1 { font-size:26px; margin:0 0 6px; }
+  h2 { font-size:20px; margin:38px 0 14px; padding-bottom:8px; border-bottom:1px solid var(--border); }
+  h3 { font-size:16px; margin:20px 0 8px; }
+  .sub { color:var(--muted); font-size:14px; margin-bottom:22px; }
+  .badge { display:inline-block; padding:2px 11px; border-radius:999px; font-size:12px; margin-right:6px; }
+  .b-green { background:rgba(34,197,94,.15); color:var(--green); }
+  .b-amber { background:rgba(245,158,11,.15); color:var(--amber); }
+  .b-blue { background:rgba(59,130,246,.15); color:var(--accent); }
+  .b-purple { background:rgba(167,139,250,.15); color:var(--purple); }
+  .card { background:var(--panel); border:1px solid var(--border); border-radius:12px; padding:18px 20px; margin-bottom:14px; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; }
+  th,td { text-align:left; padding:9px 12px; border-bottom:1px solid var(--border); vertical-align:top; }
+  th { color:var(--muted); font-weight:600; font-size:12.5px; }
+  code { background:rgba(59,130,246,.12); color:#93c5fd; padding:1px 6px; border-radius:4px; font-size:12.5px; font-family:Consolas,monospace; }
+  .tl { margin:14px 0; }
+  .tl .step { display:flex; gap:14px; padding:12px 0; border-left:2px solid var(--border); margin-left:8px; padding-left:20px; position:relative; }
+  .tl .step::before { content:''; position:absolute; left:-7px; top:18px; width:12px; height:12px; border-radius:50%; background:var(--accent); }
+  .tl .step.a::before { background:var(--red); } .tl .step.b::before { background:var(--amber); } .tl .step.c::before { background:var(--green); } .tl .step.d::before { background:var(--purple); }
+  .tl .t { font-weight:700; font-size:14.5px; }
+  .tl .d { color:var(--muted); font-size:13px; }
+  .flow { background:var(--panel); border:1px solid var(--border); border-radius:12px; padding:16px 20px; font-size:13.5px; font-family:Consolas,monospace; color:#a5b4fc; white-space:pre; overflow-x:auto; }
+  .note { background:rgba(245,158,11,.08); border:1px solid rgba(245,158,11,.3); border-radius:10px; padding:12px 16px; font-size:13.5px; margin:10px 0; }
+  .ok { color:var(--green); font-weight:700; } .warn { color:var(--amber); font-weight:700; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>aifanyi.com 管理后台实施方案</h1>
+  <div class="sub">Admin Console Plan v1.0 · 2026-08-15 · 基于审计报告（audit-report-20260815.html）P1 缺口制定</div>
+  <div>
+    <span class="badge b-blue">4 个阶段</span>
+    <span class="badge b-blue">5 个新页面</span>
+    <span class="badge b-blue">~10 个新 API</span>
+    <span class="badge b-amber">预计 5-7 天</span>
+  </div>
+
+  <h2>一、背景与目标</h2>
+  <div class="card">
+    <p><b>现状痛点</b>：内容（梗词条/盲测题/定价）入库全靠 seed 脚本 + git + 部署，运营每批内容都要走开发流程；运营数据（/api/stats）公开无认证；用户视图只有额度，没有注册来源/活跃度。</p>
+    <p><b>方案目标</b>：让运营<b>脱离开发流程独立运转</b>——在后台直接建/改/删词条与盲测题（保存即生效，sitemap 自动收录）；管理员统一查看统计、用户、额度；全部管理操作留痕可审计。</p>
+  </div>
+
+  <h2>二、现状盘点（已验证）</h2>
+  <table>
+    <tr><th>已有</th><th>缺口</th></tr>
+    <tr><td>/admin/credits 额度管理页（查询/调整/对账）</td><td>无统计看板；/api/stats 公开无认证</td></tr>
+    <tr><td>requireAdmin 鉴权（ADMIN_EMAILS 白名单）</td><td>无内容管理（词条/盲测题只能 seed）</td></tr>
+    <tr><td>4 个 admin API（adjust/reconcile/users/users[id]）</td><td>用户视图缺注册来源/活跃度</td></tr>
+    <tr><td>crontab 对账/清理自动任务</td><td>无管理操作审计日志</td></tr>
+  </table>
+
+  <h2>三、方案总览（架构）</h2>
+  <div class="flow">/admin/layout.tsx（服务端 requireAdmin 守卫 + 侧边导航）
+ ├── /admin                统计看板 Dashboard（成本/调用/用户/内容）
+ ├── /admin/memes          词条管理（CRUD + 批量导入 + 上下架）
+ ├── /admin/blindtests     盲测题管理（CRUD）
+ ├── /admin/users          用户管理（增强列表 + 活跃度）
+ ├── /admin/credits        额度管理（现有，保留）
+ └── /admin/audit          审计日志（管理操作留痕）
+
+API 层（全部 requireAdmin + rate-limit + 审计）
+ /api/admin/stats          （迁移自 /api/stats，加鉴权）
+ /api/admin/memes          GET/POST + /[id] PATCH/DELETE
+ /api/admin/memes/import   POST（批量导入 JSON）
+ /api/admin/blindtests     GET/POST + /[id] PATCH/DELETE
+ /api/admin/users          GET（增强）
+ /api/admin/audit          GET（审计日志）</div>
+
+  <h2>四、页面与 API 设计</h2>
+  <h3>1. 统计看板 /admin（Phase A）</h3>
+  <table>
+    <tr><th>卡片</th><th>数据来源</th><th>说明</th></tr>
+    <tr><td>核心指标</td><td>/api/admin/stats</td><td>用户数/活跃会话/翻译任务/盲测投票/额度账户/词条数</td></tr>
+    <tr><td>成本面板</td><td>TranslationJob + CreditLedger 聚合</td><td>近 7 天/30 天成本、按模型分布、预算消耗进度</td></tr>
+    <tr><td>调用趋势</td><td>TranslationJob 按日聚合</td><td>折线图（内联 SVG，无外部依赖）</td></tr>
+    <tr><td>内容概况</td><td>MemeEntry/Blindtest 计数</td><td>总数 + 分类分布 + 上下架状态</td></tr>
+  </table>
+  <div class="note">⚠️ 兼容性：现 /api/stats 被运营每周快照 GET 使用。迁移方案——保留公开精简版（无成本/调用量敏感字段，仅盲测投票数等展示型数据），完整版收进 /api/admin/stats。</div>
+
+  <h3>2. 词条管理 /admin/memes（Phase B）</h3>
+  <table>
+    <tr><th>能力</th><th>说明</th></tr>
+    <tr><td>列表 + 搜索</td><td>按 term/slug/分类/tag 过滤，分页 48/页（复用 /meme 页聚合逻辑）</td></tr>
+    <tr><td>新建/编辑</td><td>全字段表单（term/slug/含义/译文/例句/tags/popularity/分类），slug 唯一校验（term + 两种 slug 风格查重，沿用 batch-005 经验）</td></tr>
+    <tr><td>上下架</td><td>MemeEntry 新增 status 字段（draft/published/archived），下架不进 sitemap/首页</td></tr>
+    <tr><td>批量导入</td><td>粘贴 JSON 数组（MemeSeed 格式）→ 服务端查重 → 预览冲突 → 确认入库（替代 meme-batch-XXX.ts 流程）</td></tr>
+    <tr><td>删除</td><td>软删除（archived）为主，硬删除仅限 draft</td></tr>
+  </table>
+
+  <h3>3. 盲测题管理 /admin/blindtests（Phase C）</h3>
+  <table>
+    <tr><th>能力</th><th>说明</th></tr>
+    <tr><td>列表 + 状态</td><td>题目、场景、三模型译文状态（已生成/待生成）</td></tr>
+    <tr><td>新建/编辑</td><td>sourceText + 场景 + 可选预置译文；保存时后端调用三模型生成匿名译文（复用 seed-blindtests 逻辑，异步任务）</td></tr>
+    <tr><td>上下架</td><td>下架题不参与盲测随机</td></tr>
+  </table>
+
+  <h3>4. 用户管理 /admin/users + 审计 /admin/audit（Phase C/D）</h3>
+  <table>
+    <tr><th>能力</th><th>说明</th></tr>
+    <tr><td>用户列表增强</td><td>现有 /api/admin/credits/users 扩展：注册时间/最近活跃（Session.updatedAt）/翻译任务数/余额</td></tr>
+    <tr><td>审计日志</td><td>新表 AdminLog（adminEmail/action/targetId/params/ip/createdAt），所有管理写操作落库</td></tr>
+  </table>
+
+  <h2>五、数据模型改动</h2>
+  <table>
+    <tr><th>表</th><th>改动</th><th>影响</th></tr>
+    <tr><td>MemeEntry</td><td>+ <code>status String @default("published")</code> + <code>updatedAt DateTime @updatedAt</code></td><td>db push 增量，300 行数据安全；sitemap/首页查询加 status 过滤</td></tr>
+    <tr><td>Blindtest</td><td>+ <code>status String @default("published")</code></td><td>盲测随机查询加过滤</td></tr>
+    <tr><td>AdminLog（新表）</td><td>id/adminEmail/action/targetId/params Json?/ip/createdAt</td><td>新建，无迁移风险</td></tr>
+  </table>
+
+  <h2>六、安全设计</h2>
+  <table>
+    <tr><th>项</th><th>方案</th></tr>
+    <tr><td>页面守卫</td><td>/admin/layout.tsx 服务端 requireAdmin，非 admin 返回 404（避免暴露后台存在）</td></tr>
+    <tr><td>API 守卫</td><td>每个 admin route 顶部 requireAdmin + 复用现有 admin-auth.ts</td></tr>
+    <tr><td>限流</td><td>管理写操作按邮箱维度限流（复用 rate-limit.ts 滑动窗口）</td></tr>
+    <tr><td>审计</td><td>写操作全部写 AdminLog；读操作不记（防日志膨胀）</td></tr>
+    <tr><td>CSRF</td><td>会话 Cookie SameSite=Lax（需确认现有配置）+ 敏感操作校验 Origin</td></tr>
+    <tr><td>内容校验</td><td>词条 slug 唯一 + term 查重（两种 slug 风格）+ 字段长度上限；导入 JSON 行级校验，坏行跳过不整批失败</td></tr>
+  </table>
+
+  <h2>七、实施阶段（时间线）</h2>
+  <div class="tl">
+    <div class="step a"><div><div class="t">Phase A · 统计看板（1 天）</div><div class="d">/api/stats 拆分（公开精简版 + admin 完整版）+ /admin 看板页面 + AdminLog 表 + 审计写入基础设施</div></div></div>
+    <div class="step b"><div><div class="t">Phase B · 词条管理（2-3 天）</div><div class="d">MemeEntry 加 status + /admin/memes 页面 + CRUD/导入/上下架 API + sitemap 过滤</div></div></div>
+    <div class="step c"><div><div class="t">Phase C · 盲测 + 用户（1-2 天）</div><div class="d">Blindtest 加 status + 管理页 + 异步译文生成 + 用户列表增强</div></div></div>
+    <div class="step d"><div><div class="t">Phase D · 打磨收尾（1 天）</div><div class="d">审计日志页 /admin/audit + E2E 验收（含运营协作演练）+ 交付文档</div></div></div>
+  </div>
+
+  <h2>八、验收标准</h2>
+  <table>
+    <tr><th>#</th><th>验收项</th><th>标准</th></tr>
+    <tr><td>1</td><td>运营建词条</td><td>后台新建 → 词条页/sitemap 实时可见，无需 git/seed/部署</td></tr>
+    <tr><td>2</td><td>批量导入</td><td>含重复 term/slug 的 50 条 JSON → 冲突全部检出，不坏行，入库数与预期一致</td></tr>
+    <tr><td>3</td><td>权限</td><td>非 admin 访问 /admin 与 admin API 全 404/403；未登录全 401</td></tr>
+    <tr><td>4</td><td>stats 收敛</td><td>公开精简版无成本/调用量字段；完整版仅 admin 可见</td></tr>
+    <tr><td>5</td><td>审计</td><td>所有管理写操作在 AdminLog 留痕（含 ip/params）</td></tr>
+    <tr><td>6</td><td>回归</td><td>首页/词条页/盲测/盲测投票/信用系统 E2E 全绿</td></tr>
+  </table>
+
+  <h2>九、风险与对策</h2>
+  <table>
+    <tr><th>风险</th><th>对策</th></tr>
+    <tr><td>运营直改 DB 引入脏数据影响线上展示</td><td>严格校验 + draft 先审后发 + 软删除；编辑页预览效果</td></tr>
+    <tr><td>sitemap 收录下架词条</td><td>status 过滤贯穿 sitemap/首页/词条页查询</td></tr>
+    <tr><td>运营 agent（agent-p6qd）协作模式变化</td><td>保留 handoff 文件通道，后台为并行通道；交接文档更新</td></tr>
+    <tr><td>管理 API 被爆破</td><td>requireAdmin + 邮箱限流 + 审计 + Origin 校验</td></tr>
+  </table>
+
+  <h2>十、运营流程变化（前后对比）</h2>
+  <table>
+    <tr><th>环节</th><th>改造前</th><th>改造后</th></tr>
+    <tr><td>词条入库</td><td>handoff 文件 → 我写 seed TS → git → 部署</td><td>后台粘贴 JSON 导入 / 逐条新建，保存即生效</td></tr>
+    <tr><td>盲测发题</td><td>seed-blindtests.ts 脚本 + 部署</td><td>后台建题，译文异步生成</td></tr>
+    <tr><td>数据快照</td><td>GET /api/stats（公开）</td><td>后台看板查看 / 导出</td></tr>
+    <tr><td>额度干预</td><td>/admin/credits（已有）</td><td>不变 + 审计留痕</td></tr>
+  </table>
+</div>
+</body>
+</html>

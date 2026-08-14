@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>管理后台 Phase B 详细设计 · 词条直录通道（Primary）</title>
+<style>
+  :root { --bg:#0f172a; --panel:#1e293b; --border:#334155; --text:#e2e8f0; --muted:#94a3b8; --accent:#3b82f6; --green:#22c55e; --amber:#f59e0b; --red:#ef4444; --purple:#a78bfa; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+  .wrap { max-width:1020px; margin:0 auto; padding:40px 24px 90px; }
+  h1 { font-size:26px; margin:0 0 6px; }
+  h2 { font-size:20px; margin:38px 0 14px; padding-bottom:8px; border-bottom:1px solid var(--border); }
+  h3 { font-size:16px; margin:20px 0 8px; }
+  .sub { color:var(--muted); font-size:14px; margin-bottom:22px; }
+  .badge { display:inline-block; padding:2px 11px; border-radius:999px; font-size:12px; margin-right:6px; }
+  .b-green { background:rgba(34,197,94,.15); color:var(--green); }
+  .b-amber { background:rgba(245,158,11,.15); color:var(--amber); }
+  .b-blue { background:rgba(59,130,246,.15); color:var(--accent); }
+  .b-red { background:rgba(239,68,68,.15); color:var(--red); }
+  .b-purple { background:rgba(167,139,250,.15); color:var(--purple); }
+  .card { background:var(--panel); border:1px solid var(--border); border-radius:12px; padding:18px 20px; margin-bottom:14px; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; }
+  th,td { text-align:left; padding:9px 12px; border-bottom:1px solid var(--border); vertical-align:top; }
+  th { color:var(--muted); font-weight:600; font-size:12.5px; }
+  code { background:rgba(59,130,246,.12); color:#93c5fd; padding:1px 6px; border-radius:4px; font-size:12.5px; font-family:Consolas,monospace; }
+  pre { background:#0b1220; border:1px solid var(--border); border-radius:10px; padding:14px 16px; overflow-x:auto; font-size:12.5px; color:#a5b4fc; font-family:Consolas,monospace; }
+  .flow { background:var(--panel); border:1px solid var(--border); border-radius:12px; padding:16px 20px; font-size:13.5px; font-family:Consolas,monospace; color:#a5b4fc; white-space:pre; overflow-x:auto; }
+  .note { background:rgba(245,158,11,.08); border:1px solid rgba(245,158,11,.3); border-radius:10px; padding:12px 16px; font-size:13.5px; margin:10px 0; }
+  .ok { color:var(--green); font-weight:700; } .warn { color:var(--amber); font-weight:700; }
+  .tl { margin:14px 0; }
+  .tl .step { display:flex; gap:14px; padding:12px 0; border-left:2px solid var(--border); margin-left:8px; padding-left:20px; position:relative; }
+  .tl .step::before { content:''; position:absolute; left:-7px; top:18px; width:12px; height:12px; border-radius:50%; background:var(--accent); }
+  .tl .t { font-weight:700; font-size:14.5px; }
+  .tl .d { color:var(--muted); font-size:13px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>管理后台 Phase B 详细设计：词条直录通道（Primary）</h1>
+  <div class="sub">Admin Console Phase B Design v1.0 · 2026-08-15 · 依据用户拍板决策（并行通道，Primary=后台直录 / Fallback=handoff）</div>
+  <div>
+    <span class="badge b-blue">1 个主录入端点</span>
+    <span class="badge b-blue">Bearer Ops Token</span>
+    <span class="badge b-green">batchId 幂等</span>
+    <span class="badge b-amber">自动回退 handoff</span>
+  </div>
+
+  <h2>一、决策回顾（已拍板）</h2>
+  <table>
+    <tr><th>#</th><th>决策</th></tr>
+    <tr><td>1</td><td>后台直录 = 运营 Agent 的 <b>Primary</b> 通道</td></tr>
+    <tr><td>2</td><td>handoff 保留 = <b>Fallback</b> / 异常兜底 / 人工审核通道</td></tr>
+    <tr><td>3</td><td>正常情况运营 Agent 优先直接写入后台，不再依赖 handoff 完成日常投递</td></tr>
+    <tr><td>4</td><td>后台录入失败/接口异常/校验失败/需人工确认 → 自动回退 handoff</td></tr>
+    <tr><td>5</td><td>双通道必须避免重复录入 → 后台具备<b>幂等/去重</b>机制</td></tr>
+    <tr><td>6</td><td>handoff 不是平级第二套数据源，<b>最终以后台数据为准</b></td></tr>
+    <tr><td>7</td><td>交接文档明确新流程：Primary=后台直录，Fallback=handoff</td></tr>
+    <tr><td>8</td><td>批量导入交互按「后台直录」为主设计，不为兼容 handoff 增加复杂 UI</td></tr>
+  </table>
+  <p><b>长期目标</b>：后台稳定后逐步降低 handoff 使用频率，最终让它只作为安全保险存在。</p>
+
+  <h2>二、架构总览（双通道数据流）</h2>
+  <div class="flow">运营 Agent（agent-p6qd）
+ │
+ ├─ [Primary]  POST /api/admin/memes/import   ←── Bearer OPS_API_TOKEN
+ │      │  校验 → 查重 → 事务 upsert → AdminLog → 结构化结果
+ │      ▼
+ │   后台数据（MemeEntry 表，唯一事实源）
+ │      ▼
+ │   sitemap / 首页热梗 / 词条页 / 盲测  （实时可见，无需部署）
+ │
+ └─ [Fallback] 检测失败（5xx/超时/校验不过/冲突过多/需人工）
+        │  写 handoff/meme-batch-XXX-日期.md（带处理状态节）+ 会话短通知
+        ▼
+      工程师读取 → 提取数据 → 调【同一个】/api/admin/memes/import
+        ▼
+      入库结果写回 handoff 状态节 + 会话确认（同一查重逻辑，不重复）</div>
+
+  <h2>三、Agent → Backend 录入接口</h2>
+  <h3>3.1 认证：Ops Token（Bearer）</h3>
+  <div class="card">
+    <p>运营 Agent 是机器调用方，不走浏览器 OTP 登录。方案：<b>Ops API Token</b>。</p>
+    <ul>
+      <li>服务器 .env 新增 <code>OPS_API_TOKEN</code>（随机 64 位 hex，不入 git，可轮换）；运营 Agent 侧通过会话安全交接（或写入其受保护的配置）</li>
+      <li>新统一入口 <code>src/lib/admin/ops-auth.ts</code> → <code>requireOpsOrAdmin()</code>：</li>
+      <li><code>Authorization: Bearer &lt;token&gt;</code> == OPS_API_TOKEN → <b>ops</b>（运营 Agent）</li>
+      <li>或浏览器 session 命中 ADMIN_EMAILS → <b>admin</b>（人工管理员）</li>
+      <li>两者同一权限面，同一审计通道（operator 区分 <code>ops-token</code> / 邮箱）</li>
+    </ul>
+  </div>
+  <h3>3.2 端点清单</h3>
+  <table>
+    <tr><th>方法</th><th>路径</th><th>用途</th><th>权限</th></tr>
+    <tr><td>POST</td><td><code>/api/admin/memes/import</code></td><td><b>批量导入（运营 Agent 主通道）</b></td><td>ops/admin</td></tr>
+    <tr><td>POST</td><td><code>/api/admin/memes</code></td><td>单条创建</td><td>ops/admin</td></tr>
+    <tr><td>PATCH</td><td><code>/api/admin/memes/[id]</code></td><td>编辑（含上下架 status）</td><td>ops/admin</td></tr>
+    <tr><td>DELETE</td><td><code>/api/admin/memes/[id]</code></td><td>删除（draft 硬删 / 其余软删）</td><td>admin 仅人工</td></tr>
+    <tr><td>GET</td><td><code>/api/admin/memes</code></td><td>列表/搜索/分页（运营验证用）</td><td>ops/admin</td></tr>
+    <tr><td>POST</td><td><code>/api/admin/blindtests/import</code></td><td>盲测题批量（译文异步生成）</td><td>ops/admin</td></tr>
+  </table>
+  <h3>3.3 批量导入请求 / 响应规范</h3>
+  <pre>POST /api/admin/memes/import
+Authorization: Bearer &lt;OPS_API_TOKEN&gt;
+Content-Type: application/json
+
+{
+  "batchId": "meme-batch-008-20260815",   // 幂等键，运营侧生成，UUID 或批次名
+  "dryRun": true,                          // true=只预览冲突，不写库
+  "updateExisting": false,                 // term 已存在时：false=跳过（默认），true=更新
+  "items": [
+    {
+      "term": "绝绝子",
+      "slug": "jue-jue-zi",
+      "meaning": "形容好到极致",
+      "translation": "Absolutely amazing / Top-notch",
+      "example": "这家店的服务绝绝子！",
+      "tags": ["流行", "感叹"],
+      "popularity": 95,
+      "category": "流行语"
+    }
+  ]
+}
+
+// 200 响应（dryRun=false）
+{
+  "ok": true,
+  "batchId": "meme-batch-008-20260815",
+  "imported": 45,          // 新入库
+  "updated": 0,            // updateExisting=true 时更新数
+  "skipped": 3,            // 重复跳过
+  "conflicts": [           // 需人工看的行
+    { "index": 4, "term": "绝绝子", "reason": "term_exists" },
+    { "index": 7, "term": "月光族", "reason": "slug_conflict(yueguangzu)" }
+  ],
+  "created": ["jue-jue-zi", "..."]
+}
+
+// 同 batchId 重复提交（幂等）→ 200，返回与首次相同的 imported/skipped/conflicts，不重复入库</pre>
+
+  <h2>四、批量导入流程（时序）</h2>
+  <div class="tl">
+    <div class="step"><div><div class="t">Step 1 · 运营准备数据</div><div class="d">整理 JSON 数组（MemeSeed 格式，与现有 meme-batch-XXX.ts 同构，运营已熟悉字段）</div></div></div>
+    <div class="step"><div><div class="t">Step 2 · dryRun 预览</div><div class="d">调 import 带 dryRun:true → 返回冲突清单（term 重复 / slug 双风格冲突 / 字段缺失）</div></div></div>
+    <div class="step"><div><div class="t">Step 3 · 修正 / 确认</div><div class="d">运营修掉可自动修的冲突（改 slug / 去重），无法判定的留给人工</div></div></div>
+    <div class="step"><div><div class="t">Step 4 · 正式导入</div><div class="d">dryRun:false → 服务端事务 upsert + AdminLog + 结构化结果</div></div></div>
+    <div class="step"><div><div class="t">Step 5 · 确认完成</div><div class="d">运营读 imported/skipped/conflicts → 会话回执「收到，已导入 N 条」；线上 sitemap/词条页实时可见</div></div></div>
+  </div>
+
+  <h2>五、幂等 / 去重策略</h2>
+  <table>
+    <tr><th>层级</th><th>机制</th><th>说明</th></tr>
+    <tr><td>请求级</td><td><b>batchId 幂等</b></td><td>AdminLog 记 batchId + result 摘要；同 batchId 重复请求直接返回首次结果（不重跑、不重复入库）</td></tr>
+    <tr><td>行级 · term</td><td>term 唯一约束</td><td>已存在 → skipped（或 updateExisting 更新）；不做双风格 term 归一（term 本身就是原始写法）</td></tr>
+    <tr><td>行级 · slug</td><td>slug 唯一 + 双风格查重</td><td>slug 冲突分两种：精确重复；无连字符风格（yueguangzu vs yue-guang-zu）→ 沿用 batch-003/005 经验，两种风格都查</td></tr>
+    <tr><td>批内去重</td><td>同批重复 term</td><td>首条生效，其余进 conflicts（reason: duplicate_in_batch）</td></tr>
+    <tr><td>双通道防重</td><td>handoff 也走同一 import</td><td>工程师读 handoff 提取数据后【不直接写 DB】，调同一个 import 接口 → 两个通道共享同一查重/幂等逻辑</td></tr>
+  </table>
+  <div class="note">⚠️ 数据唯一性设计：<code>term</code> 与 <code>slug</code> 都是唯一索引（现有约束保留）；新增 <code>MemeEntry.status</code>（draft/published/archived），下架不影响唯一约束。</div>
+
+  <h2>六、失败回退 handoff 机制</h2>
+  <h3>6.1 触发条件（运营 Agent 侧自动检测）</h3>
+  <table>
+    <tr><th>条件</th><th>处理</th></tr>
+    <tr><td>5xx / 网络超时</td><td>自动重试 3 次（指数退避），仍失败 → 回退</td></tr>
+    <tr><td>401/403（token 失效）</td><td>停止调用，会话通知工程师换 token → 回退 handoff 保数据不丢</td></tr>
+    <tr><td>校验失败且无法自动修正</td><td>（如字段缺失/格式错误）→ 回退 + 附错误明细</td></tr>
+    <tr><td>冲突率 &gt; 20%</td><td>可能数据版本错乱 → 回退 + 人工核对</td></tr>
+    <tr><td>运营判断需人工确认</td><td>（如疑似历史数据被误改）→ 回退标注「人工审核」</td></tr>
+  </table>
+  <h3>6.2 回退流程</h3>
+  <div class="flow">1. 运营检测失败 → 写 handoff/meme-batch-&lt;序号&gt;-&lt;日期&gt;.md（数据 + 状态节）
+2. 状态节：## 处理状态: PENDING（原因: xxx）
+3. 会话短通知（按现协议）
+4. 工程师读取 → 提取数据 → 调 POST /api/admin/memes/import（同一查重逻辑）
+5. 结果写回文件状态节：## 处理状态: IMPORTED（imported N / skipped M / conflicts: ...）
+6. 会话回执 → 运营归档</div>
+  <div class="note">⚠️ handoff 文件从此带<b>处理状态节</b>，是「搬运通道」不是「数据源」——数据永远经 import 接口落库，避免双通道分叉。</div>
+
+  <h2>七、权限与审计日志</h2>
+  <table>
+    <tr><th>项</th><th>设计</th></tr>
+    <tr><td>身份分层</td><td>人工管理员（session + ADMIN_EMAILS，现有）｜运营 Agent（Bearer OPS_API_TOKEN）｜两者均过 <code>requireOpsOrAdmin()</code></td></tr>
+    <tr><td>权限差异</td><td>DELETE 硬删除仅人工 admin；ops 只能 增/改/批量导入/上下架</td></tr>
+    <tr><td>审计</td><td>AdminLog 表：operator（邮箱 或 ops-token）/ action（memes.import / memes.create / memes.update / memes.delete）/ targetId / batchId / params(Json) / ip / createdAt；写操作全记录</td></tr>
+    <tr><td>限流</td><td>导入接口按 token 维度（滑动窗口，10 分钟 20 次），防误触发批量重放</td></tr>
+    <tr><td>Token 管理</td><td>OPS_API_TOKEN 存服务器 .env（不入 git）；轮换 = 两端同步改；泄露应急 = 立即轮换 + 审计日志排查</td></tr>
+  </table>
+
+  <h2>八、运营 Agent 交接文档更新（v2）</h2>
+  <div class="card">
+    <p><b>新建</b> <code>docs/运营内容投递协议-v2.md</code>（G 盘正式版）+ <b>更新</b> <code>handoff/README.md</code>（workspace 投递目录）：</p>
+    <ul>
+      <li><b>Primary 通道</b>：POST /api/admin/memes/import（附 curl 示例 + dryRun 用法 + 结果解读）</li>
+      <li><b>Fallback 通道</b>：handoff 文件（触发条件 + 状态节格式 + 命名约定沿用）</li>
+      <li><b>防重声明</b>：handoff 数据最终也经 import 接口入库，后台数据为准</li>
+      <li><b>回执协议</b>：运营回复「收到，已导入 N 条（skipped M）」确认完成（沿用「收到 xxx」协作标记）</li>
+      <li><b>盲测题</b>：POST /api/admin/blindtests/import（Phase C 接线）</li>
+      <li><b>过渡说明</b>：后台稳定前 handoff 照常可用，稳定后逐步只作保险</li>
+    </ul>
+  </div>
+
+  <h2>九、验收标准（E2E）</h2>
+  <table>
+    <tr><th>#</th><th>场景</th><th>标准</th></tr>
+    <tr><td>1</td><td>Bearer token 批量导入 50 条（含 5 条重复）</td><td>imported 45 / skipped 5 / conflicts 列全；线上词条页 + sitemap 实时可见</td></tr>
+    <tr><td>2</td><td>同 batchId 重复提交</td><td>返回首次结果，不重复入库（幂等）</td></tr>
+    <tr><td>3</td><td>slug 双风格冲突</td><td>yueguangzu 与 yue-guang-zu 互撞检出（沿用既有库风格）</td></tr>
+    <tr><td>4</td><td>模拟接口 500 → 回退 handoff</td><td>运营写状态节文件 → 工程师调 import 入库 → 无重复、状态节更新 IMPORTED</td></tr>
+    <tr><td>5</td><td>无 token / 错 token</td><td>401；非 admin 浏览器 session → 403；DELETE 硬删 ops 被拒</td></tr>
+    <tr><td>6</td><td>审计</td><td>所有导入/改动在 AdminLog 留痕（operator=ops-token + batchId + params）</td></tr>
+    <tr><td>7</td><td>回归</td><td>首页热梗 / /meme / 词条页 / sitemap / 盲测 / 信用系统 E2E 全绿</td></tr>
+  </table>
+
+  <h2>十、Phase B 实施清单（下一轮开工用）</h2>
+  <table>
+    <tr><th>类型</th><th>文件 / 改动</th></tr>
+    <tr><td>Schema</td><td>MemeEntry + status + updatedAt；Blindtest + status；新建 AdminLog；db push（增量安全）</td></tr>
+    <tr><td>鉴权</td><td>src/lib/admin/ops-auth.ts（requireOpsOrAdmin + Bearer 解析）</td></tr>
+    <tr><td>导入核心</td><td>src/lib/admin/meme-import.ts（校验/双风格查重/批内去重/batchId 幂等/事务 upsert）</td></tr>
+    <tr><td>API</td><td>/api/admin/memes/import + /memes + /memes/[id] + /api/admin/blindtests/import</td></tr>
+    <tr><td>页面</td><td>/admin/layout.tsx（守卫+侧边导航）+ /admin/memes 页 + MemesAdminClient.tsx（列表/导入面板/批量导入 dryRun 预览）</td></tr>
+    <tr><td>查询过滤</td><td>sitemap.ts / 首页热梗 / /meme 列表 / 词条页按 status=published 过滤（seed 兼容：seed 数据 status 默认 published）</td></tr>
+    <tr><td>文档</td><td>docs/运营内容投递协议-v2.md + handoff/README.md 更新</td></tr>
+    <tr><td>E2E</td><td>scripts/phase-b-e2e.cjs（覆盖验收 1-7）</td></tr>
+  </table>
+</div>
+</body>
+</html>
