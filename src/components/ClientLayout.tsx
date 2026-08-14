@@ -41,7 +41,7 @@ export default function ClientLayout({ children, serverUser }: { children: React
           <a href="/tools">翻译工具</a>
           <a href="/blindtest">AI翻译擂台</a>
           <a href="/meme">网络用语翻译</a>
-          <a href="/#workbench">跨境电商工作台</a>
+          <a href="/ecommerce">跨境电商工作台</a>
         </nav>
         <button
           className="theme-toggle"
