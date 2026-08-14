@@ -84,7 +84,7 @@ function buildEditSystem(field: ListingField): string {
     '3. 不得改变产品事实：不得虚构规格、认证、性能、销量、品牌信息。',
     '4. 不得改变目标市场与目标语言。',
     '5. 这不是「重写」，禁止大幅改动或重新生成一版完全不同的文案。',
-    '6. 用户要求与产品资料冲突时（如要求把 water-resistant 写成 waterproof），不执行该修改、保持原事实，并在 fact_conflicts 中说明冲突。',
+    '6. 用户要求与产品资料冲突时（如要求把 water-resistant 写成 waterproof），不执行该修改、content 保持原字段内容完全不变，并在 fact_conflicts 中说明冲突。硬性规则：fact_conflicts 非空时 content 必须等于输入的原内容。',
     '7. 用户要求与平台规则冲突时（如超出字段长度限制），优先遵守平台规则，并在 platform_issues 中说明。',
     '8. 若当前内容已符合用户要求，content 返回原内容，changes 为空数组，warnings 说明无需修改。',
     '9. 只修改用户指定的当前字段，不得改动其他字段。',
@@ -187,11 +187,21 @@ export async function editField(input: {
     .filter((c: EditChange) => c.description.length > 0)
     .slice(0, 20);
 
+  const warnings = normalizeList(r.data.warnings, 20);
+  const factConflicts = normalizeList(r.data.fact_conflicts, 20);
+
+  // 事实冲突兜底：存在冲突时不执行可能的事实升级，content 强制保持原内容（诚实原则，宁可问不编）
+  if (factConflicts.length > 0) {
+    content = isArrayField ? (Array.isArray(cur) ? (cur as string[]) : []) : (typeof cur === 'string' ? cur : '');
+    changes.length = 0;
+    warnings.push('检测到与产品资料冲突的修改要求，已保持原内容不变。如需修改，请先补充或更正产品资料后再试。');
+  }
+
   return {
     content,
     changes,
-    warnings: normalizeList(r.data.warnings, 20),
-    factConflicts: normalizeList(r.data.fact_conflicts, 20),
+    warnings,
+    factConflicts,
     platformIssues,
   };
 }

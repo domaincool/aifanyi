@@ -261,6 +261,9 @@ export default function ListingStudio({ productId }: { productId: string }) {
     showToast('已导出');
   };
 
+  const refineNewText = refinePreview ? (Array.isArray(refinePreview.content) ? refinePreview.content.join('') : String(refinePreview.content)) : '';
+  const refineNoChange = !!refinePreview && refineNewText === refinePreview.original;
+
   return (
     <div className="ecom-listing">
       <div className="ecom-listing-head">
@@ -411,7 +414,7 @@ export default function ListingStudio({ productId }: { productId: string }) {
                 ) : null}
                 <div className="ecom-modal-actions">
                   <button className="ecom-btn-ghost" onClick={() => { setRefinePreview(null); setRefineInstruction(''); }} disabled={refineBusy}>取消修改</button>
-                  <button className="primary" onClick={applyRefine} disabled={refineBusy}>{refineBusy ? '应用中…' : '应用修改'}</button>
+                  <button className="primary" onClick={applyRefine} disabled={refineBusy || refineNoChange}>{refineBusy ? '应用中…' : (refineNoChange ? '无需应用' : '应用修改')}</button>
                 </div>
               </div>
             ) : (
