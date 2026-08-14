@@ -38,6 +38,14 @@ export const FEATURES = {
   BLINDTEST: 'blindtest',
   STT: 'speech_to_text',
   TTS: 'text_to_speech',
+  // 跨境电商工作台（V1）
+  PRODUCT_ENRICH: 'product_enrich',
+  LISTING_GENERATION: 'listing_generation',
+  LISTING_REWRITE: 'listing_rewrite',
+  LISTING_TRANSLATION: 'listing_translation',
+  IMAGE_OCR: 'image_ocr',
+  CUSTOMER_TRANSLATION: 'customer_translation',
+  CUSTOMER_REPLY: 'customer_reply',
 } as const;
 export type Feature = (typeof FEATURES)[keyof typeof FEATURES];
 

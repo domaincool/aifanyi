@@ -25,6 +25,14 @@ const RULES = [
   { feature: 'speech_to_text', unit: 'per_minute', creditRate: 1, minCharge: 1, maxCharge: null },
   // 语音合成：1 credit / 千字符（GLM-TTS 约 0.04 元档）
   { feature: 'text_to_speech', unit: 'per_1000_chars', creditRate: 1, minCharge: 1, maxCharge: null },
+  // 跨境电商工作台（V1 seed，成本/计量锚定，非最终商业定价；配置化不硬编码）
+  { feature: 'product_enrich', unit: 'per_1000_chars', creditRate: 3, minCharge: 1, maxCharge: null },
+  { feature: 'listing_generation', unit: 'per_1000_chars', creditRate: 3, minCharge: 1, maxCharge: null },
+  { feature: 'listing_rewrite', unit: 'per_1000_chars', creditRate: 2, minCharge: 1, maxCharge: null },
+  { feature: 'listing_translation', unit: 'per_1000_chars', creditRate: 2, minCharge: 1, maxCharge: null },
+  { feature: 'image_ocr', unit: 'per_image', creditRate: 1, minCharge: 1, maxCharge: null },
+  { feature: 'customer_translation', unit: 'per_1000_chars', creditRate: 2, minCharge: 1, maxCharge: null },
+  { feature: 'customer_reply', unit: 'per_1000_chars', creditRate: 3, minCharge: 1, maxCharge: null },
 ];
 
 async function main() {
