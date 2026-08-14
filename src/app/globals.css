@@ -881,6 +881,12 @@ button.primary:disabled { opacity: 0.5; cursor: wait; }
 .ecom-need-confirm label { color: #d97706; }
 .ecom-need-confirm li { font-size: 13.5px; color: var(--text); padding-left: 16px; position: relative; }
 .ecom-need-confirm li::before { content: "⚠"; position: absolute; left: 0; }
+.ecom-muted-inline { color: var(--muted); font-size: 13px; }
+.ecom-followup { margin-top: 12px; padding: 12px 14px; background: rgba(37,99,235,.07); border: 1px solid rgba(37,99,235,.28); border-radius: 10px; }
+.ecom-followup label { color: var(--accent); }
+.ecom-followup ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.ecom-followup li { font-size: 13.5px; color: var(--text); padding-left: 16px; position: relative; }
+.ecom-followup li::before { content: "•"; position: absolute; left: 2px; color: var(--accent); }
 
 .ecom-mask { position: fixed; inset: 0; background: var(--overlay-bg); z-index: 150; display: grid; place-items: center; padding: 20px; }
 .ecom-modal { background: var(--panel); border: 1px solid var(--border); border-radius: 16px; padding: 24px; max-width: 480px; width: 100%; box-shadow: var(--shadow-lg); max-height: 86vh; overflow-y: auto; }

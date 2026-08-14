@@ -30,5 +30,7 @@ export interface EnrichOutput {
   sellingPoints?: string[];
   /** 需要用户确认的信息点（AI 不确定/需人工核实） */
   needConfirm?: string[];
+  /** 针对缺失关键信息的补充提问（引导卖家补充描述） */
+  followUpQuestions?: string[];
   [k: string]: unknown;
 }

@@ -39,6 +39,7 @@ interface EnrichResult {
   keywords?: string[];
   sellingPoints?: string[];
   needConfirm?: string[];
+  followUpQuestions?: string[];
 }
 
 export default function EcommerceWorkbench({ serverUser }: { serverUser: UserInfo | null }) {
@@ -203,10 +204,9 @@ export default function EcommerceWorkbench({ serverUser }: { serverUser: UserInf
           </div>
 
           <div className="ecom-fields">
-            <div className="ecom-field"><label>类别</label><span>{selected.category || '—'}</span></div>
-            <div className="ecom-field"><label>品牌</label><span>{selected.brand || '—'}</span></div>
-            <div className="ecom-field"><label>目标市场</label><span>{selected.targetMarket || '—'}</span></div>
-            <div className="ecom-field"><label>平台</label><span>{selected.platform || '—'}</span></div>
+            <div className="ecom-field"><label>类别</label><span>{selected.category || <span className="ecom-muted-inline">待补充</span>}</span></div>
+            <div className="ecom-field"><label>品牌</label><span>{selected.brand || <span className="ecom-muted-inline">待补充</span>}</span></div>
+            <div className="ecom-field"><label>目标市场</label><span>{selected.targetMarket || <span className="ecom-muted-inline">待补充</span>}</span></div>
           </div>
 
           {selected.sourceDescription ? (
@@ -232,9 +232,9 @@ export default function EcommerceWorkbench({ serverUser }: { serverUser: UserInf
           {enriched ? (
             <div className="ecom-enrich-result">
               <div className="ecom-enrich-title">✨ AI 提取结果</div>
-              {enriched.category ? <div className="ecom-enrich-row"><label>类别</label><span>{enriched.category}</span></div> : null}
-              {enriched.brand ? <div className="ecom-enrich-row"><label>品牌</label><span>{enriched.brand}</span></div> : null}
-              {enriched.targetMarket ? <div className="ecom-enrich-row"><label>目标市场</label><span>{enriched.targetMarket}</span></div> : null}
+              <div className="ecom-enrich-row"><label>类别</label><span>{enriched.category || <span className="ecom-muted-inline">未提取到</span>}</span></div>
+              <div className="ecom-enrich-row"><label>品牌</label><span>{enriched.brand || <span className="ecom-muted-inline">未提取到</span>}</span></div>
+              <div className="ecom-enrich-row"><label>目标市场</label><span>{enriched.targetMarket || <span className="ecom-muted-inline">未提取到</span>}</span></div>
               {Array.isArray(enriched.features) && enriched.features.length > 0 ? (
                 <div className="ecom-enrich-row"><label>卖点</label><span>{enriched.features.join('、')}</span></div>
               ) : null}
@@ -243,6 +243,12 @@ export default function EcommerceWorkbench({ serverUser }: { serverUser: UserInf
               ) : null}
               {Array.isArray(enriched.sellingPoints) && enriched.sellingPoints.length > 0 ? (
                 <div className="ecom-enrich-row"><label>差异化卖点</label><span>{enriched.sellingPoints.join('、')}</span></div>
+              ) : null}
+              {Array.isArray(enriched.followUpQuestions) && enriched.followUpQuestions.length > 0 ? (
+                <div className="ecom-followup">
+                  <label>💡 补充这些信息，AI 提取更准</label>
+                  <ul>{enriched.followUpQuestions.map((q, i) => <li key={i}>{q}</li>)}</ul>
+                </div>
               ) : null}
               {Array.isArray(enriched.needConfirm) && enriched.needConfirm.length > 0 ? (
                 <div className="ecom-need-confirm">
