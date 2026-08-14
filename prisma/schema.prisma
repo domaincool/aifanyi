@@ -775,3 +775,13 @@ model VoiceRateUsage {
   @@unique([userId, minuteKey])
   @@index([minuteKey])
 }
+
+model ErrorLog {
+  id        Int      @id @default(autoincrement())
+  type      String   @db.VarChar(32)
+  message   String   @db.VarChar(2000)
+  stack     String?  @db.Text
+  createdAt DateTime @default(now())
+
+  @@index([createdAt])
+}
