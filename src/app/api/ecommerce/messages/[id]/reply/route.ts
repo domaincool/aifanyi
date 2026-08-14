@@ -40,6 +40,7 @@ export async function POST(_req: Request, { params }: Ctx) {
       sourceText: message.sourceText,
       translation: message.translation || '',
       intent: message.intent || '',
+      sourceLang: message.sourceLang || 'auto',
     });
 
     const replyJson = { reply, tone } as unknown as object;

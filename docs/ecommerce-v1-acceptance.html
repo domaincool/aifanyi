@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>跨境电商工作台 V1 验收报告</title>
+<style>
+  :root { --bg:#0f172a; --panel:#1e293b; --border:#334155; --text:#e2e8f0; --muted:#94a3b8; --accent:#3b82f6; --ok:#22c55e; --warn:#f59e0b; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; padding: 40px 20px; }
+  .wrap { max-width: 880px; margin: 0 auto; }
+  h1 { font-size: 26px; margin-bottom: 6px; }
+  .sub { color: var(--muted); font-size: 14px; margin-bottom: 28px; }
+  h2 { font-size: 18px; margin: 30px 0 14px; padding-left: 10px; border-left: 3px solid var(--accent); }
+  .metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 8px; }
+  @media (max-width: 640px) { .metrics { grid-template-columns: repeat(2, 1fr); } }
+  .metric { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 16px; text-align: center; }
+  .metric .num { font-size: 26px; font-weight: 700; color: var(--accent); }
+  .metric .lbl { font-size: 12.5px; color: var(--muted); margin-top: 4px; }
+  .timeline { position: relative; padding-left: 28px; }
+  .timeline::before { content: ""; position: absolute; left: 8px; top: 6px; bottom: 6px; width: 2px; background: var(--border); }
+  .step { position: relative; margin-bottom: 18px; }
+  .step .dot { position: absolute; left: -24px; top: 4px; width: 14px; height: 14px; border-radius: 50%; background: var(--ok); border: 2px solid var(--bg); }
+  .step .t { font-weight: 600; font-size: 15px; }
+  .step .d { color: var(--muted); font-size: 13.5px; }
+  table { width: 100%; border-collapse: collapse; background: var(--panel); border-radius: 10px; overflow: hidden; }
+  th, td { padding: 10px 12px; text-align: left; font-size: 13.5px; border-bottom: 1px solid var(--border); }
+  th { background: rgba(59,130,246,.12); color: var(--text); font-weight: 600; }
+  tr:last-child td { border-bottom: none; }
+  .ok { color: var(--ok); font-weight: 600; }
+  .warn { color: var(--warn); font-weight: 600; }
+  .tag { display: inline-block; font-size: 11.5px; padding: 2px 8px; border-radius: 999px; background: rgba(59,130,246,.15); color: var(--accent); margin-left: 6px; }
+  .foot { margin-top: 30px; color: var(--muted); font-size: 13px; border-top: 1px solid var(--border); padding-top: 16px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>跨境电商工作台 V1 验收报告</h1>
+  <div class="sub">aifanyi.com · 爱翻译 — 2026-08-14 · 全部 5 阶段完成上线</div>
+
+  <div class="metrics">
+    <div class="metric"><div class="num">5/5</div><div class="lbl">阶段完成</div></div>
+    <div class="metric"><div class="num">3</div><div class="lbl">核心功能</div></div>
+    <div class="metric"><div class="num">17</div><div class="lbl">API 路由</div></div>
+    <div class="metric"><div class="num">6</div><div class="lbl">Credit 计费点</div></div>
+  </div>
+
+  <h2>阶段时间线</h2>
+  <div class="timeline">
+    <div class="step"><div class="dot"></div><div class="t">Phase 0 · 地基</div><div class="d">StorageService 抽象（本地/S3 接口）+ Credit 定价 seed（配置化）+ LanguageRegistry + 结算封装就位</div></div>
+    <div class="step"><div class="dot"></div><div class="t">Phase 1 · Product-first 工作台</div><div class="d">Quick/Advanced 建商品 + AI 提取（product_enrich）+ 权限/IDOR 全拦</div></div>
+    <div class="step"><div class="dot"></div><div class="t">Phase 2 · Listing Studio</div><div class="d">一次生成完整 Draft + Fact Validation + 逐字段重写 + 版本/恢复 + Export（Copy/TXT/CSV·JSON）</div></div>
+    <div class="step"><div class="dot"></div><div class="t">Phase 3 · 商品图片翻译</div><div class="d">上传 → OCR（GLM-4V-Flash）→ 逐行翻译 → 短期 Signed URL 鉴权访问</div></div>
+    <div class="step"><div class="dot"></div><div class="t">Phase 4 · Customer Assistant</div><div class="d">客户消息翻译 + 意图识别 + AI 回复建议 + 三档语气重写</div></div>
+    <div class="step"><div class="dot"></div><div class="t">Phase 5 · QA 收尾</div><div class="d">场景 1–8 回归 + IDOR 安全审计 + Storage 生命周期 cleanup job + cron 调度</div></div>
+  </div>
+
+  <h2>QA 场景验收（8 项）</h2>
+  <table>
+    <tr><th>#</th><th>场景</th><th>结果</th><th>证据</th></tr>
+    <tr><td>1</td><td>建商品 → AI 提取 → 生成 Draft → 编辑 → 导出 → 扣费</td><td class="ok">通过</td><td>Phase 1–2 E2E（10 项全过）</td></tr>
+    <tr><td>2</td><td>上传图片 → OCR → 翻译 → Signed URL 访问</td><td class="ok">通过</td><td>Phase 3 E2E（8 项全过）</td></tr>
+    <tr><td>3</td><td>客户消息 → 翻译 → 意图 → 回复 → 改语气 → 复制</td><td class="ok">通过</td><td>Phase 4 E2E（8 项全过）</td></tr>
+    <tr><td>4</td><td>额度不足 Reserve 拦截 + 中文文案</td><td class="ok">通过</td><td>本轮实测 402「预计 3 / 可用 0」</td></tr>
+    <tr><td>5</td><td>Provider 失败 → Refund 不扣费</td><td class="ok">通过</td><td>catch→endSyncFail 全路由 + engine 34 单测</td></tr>
+    <tr><td>6</td><td>重复点击幂等</td><td class="ok">通过</td><td>前端 busy 防抖 + reserve idempotencyKey</td></tr>
+    <tr><td>7</td><td>IDOR 全拦（Product/Listing/Asset/Message）</td><td class="ok">通过</td><td>本轮实测 4 端点跨用户全 404</td></tr>
+    <tr><td>8</td><td>Signed URL + soft delete → cleanup</td><td class="ok">通过</td><td>本轮实测 purged=1、文件删 + 硬删</td></tr>
+  </table>
+
+  <h2>交付统计</h2>
+  <table>
+    <tr><th>类别</th><th>数量</th><th>说明</th></tr>
+    <tr><td>数据库表</td><td>10 张</td><td>Project/Product/Listing/Run/Asset/AssetTranslation/CustomerMessage/Job + 关联</td></tr>
+    <tr><td>API 路由</td><td>17 个</td><td>projects/products/enrich/listings/regenerate/restore/assets/storage/messages/translate/reply/retone 等</td></tr>
+    <tr><td>前端组件</td><td>4 个</td><td>EcommerceWorkbench / ListingStudio / AssetPanel / CustomerAssistant</td></tr>
+    <tr><td>Credit 计费点</td><td>6 个</td><td>enrich 3 · generation 3 · rewrite 2 · image_ocr 1 · customer_translation 2 · customer_reply 3</td></tr>
+    <tr><td>cron 任务</td><td>2 个</td><td>credit-reconciler（30min）+ cleanup-storage（每日 4:00）</td></tr>
+  </table>
+
+  <h2>遗留项</h2>
+  <table>
+    <tr><th>项</th><th>状态</th><th>说明</th></tr>
+    <tr><td>移动端真机核查</td><td class="warn">待用户</td><td>桌面 1280×720 已验证；移动端/横屏真机交互待实测</td></tr>
+    <tr><td>S3 对象存储切换</td><td class="warn">后置</td><td>当前本地磁盘（Development）；生产切 S3/R2/OSS 时选定供应商</td></tr>
+  </table>
+
+  <div class="foot">跨境电商工作台 V1（AI Listing Studio · 商品图片翻译 · Customer Assistant）三个核心功能已全部上线，统一接入 Credit 生命周期与 IDOR 权限体系。</div>
+</div>
+</body>
+</html>

@@ -36,16 +36,31 @@ export interface ReplyResult {
   tone: string;
 }
 
-const REPLY_SYSTEM = [
-  '你是跨境电商客服，帮卖家回复海外客户。',
-  '基于商品资料与客户消息，生成一条专业的中文客服回复（后续可按需翻译成客户语言）。',
-  '只输出一个 JSON 对象：',
-  '{',
-  '  "reply": "客服回复正文（中文，自然友好、解决客户问题、基于商品真实资料不编造）",',
-  '  "tone": "professional"',
-  '}',
-  '严格只基于商品资料回答；不确定的信息（具体物流时效/库存）礼貌说明可进一步确认，不要编造。',
-].join('\n');
+const LANG_NAMES: Record<string, string> = {
+  en: '英语',
+  ja: '日语',
+  ko: '韩语',
+  fr: '法语',
+  de: '德语',
+  es: '西班牙语',
+};
+
+function buildReplySystem(sourceLang: string): string {
+  const langInstruction = sourceLang && sourceLang !== 'auto'
+    ? '请用「' + (LANG_NAMES[sourceLang] || sourceLang) + '」回复客户（与客户消息语言一致）。'
+    : '请根据客户消息原文判断其语言，并用该语言回复客户。';
+  return [
+    '你是跨境电商客服，帮卖家回复海外客户。',
+    langInstruction,
+    '基于商品资料与客户消息，生成一条自然友好、能直接发送给客户的客服回复。',
+    '只输出一个 JSON 对象：',
+    '{',
+    '  "reply": "客服回复正文（用客户语言，自然友好、解决客户问题、基于商品真实资料不编造）",',
+    '  "tone": "professional"',
+    '}',
+    '严格只基于商品资料回答；不确定的信息（具体物流时效/库存）礼貌说明可进一步确认，不要编造。',
+  ].join('\n');
+}
 
 export async function generateReply(input: {
   productName: string;
@@ -53,6 +68,7 @@ export async function generateReply(input: {
   sourceText: string;
   translation: string;
   intent: string;
+  sourceLang: string;
 }): Promise<ReplyResult> {
   const userContent = [
     `商品名称：${input.productName || '（未提供）'}`,
@@ -61,7 +77,7 @@ export async function generateReply(input: {
     `客户消息翻译：${input.translation || '（未翻译）'}`,
     `客户意图：${input.intent || '（未知）'}`,
   ].join('\n');
-  const r = await llmJson<ReplyResult>({ systemPrompt: REPLY_SYSTEM, userContent, temperature: 0.4, maxTokens: 1024 });
+  const r = await llmJson<ReplyResult>({ systemPrompt: buildReplySystem(input.sourceLang), userContent, temperature: 0.4, maxTokens: 1024 });
   if (!r.ok || !r.data) throw new Error(r.error || '生成回复失败');
   return r.data;
 }
@@ -69,7 +85,7 @@ export async function generateReply(input: {
 // ── 3. 语气重写 ────────────────────────────────────
 const RETONE_SYSTEM = [
   '你是跨境电商客服。',
-  '把给定回复改写为指定语气，保持信息不变。',
+  '把给定回复改写为指定语气，保持语言与信息不变（原回复是英文就仍用英文）。',
   '只输出一个 JSON 对象：',
   '{',
   '  "reply": "改写后的回复"',
