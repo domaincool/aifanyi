@@ -87,8 +87,8 @@ async function api(pathname, opts = {}) {
 
   // 5. 列表验证
   console.log('\n— 5. 列表查询 —');
-  r = await api('/api/admin/memes?q=' + t('A'));
-  check('搜索命中 1 条', r.status === 200 && r.data && r.data.total === 1);
+  r = await api('/api/admin/memes?q=' + t('A'), { token });
+  check('搜索命中 1 条', r.status === 200 && r.data && r.data.total === 1, 'status ' + r.status);
 
   // 6. 线上可见性
   console.log('\n— 6. 线上可见性 —');
