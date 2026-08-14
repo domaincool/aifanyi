@@ -42,6 +42,7 @@ export const FEATURES = {
   PRODUCT_ENRICH: 'product_enrich',
   LISTING_GENERATION: 'listing_generation',
   LISTING_REWRITE: 'listing_rewrite',
+  LISTING_AI_EDIT: 'listing_ai_edit',
   LISTING_TRANSLATION: 'listing_translation',
   IMAGE_OCR: 'image_ocr',
   CUSTOMER_TRANSLATION: 'customer_translation',

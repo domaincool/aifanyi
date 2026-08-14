@@ -29,6 +29,8 @@ const RULES = [
   { feature: 'product_enrich', unit: 'per_1000_chars', creditRate: 3, minCharge: 1, maxCharge: null },
   { feature: 'listing_generation', unit: 'per_1000_chars', creditRate: 3, minCharge: 1, maxCharge: null },
   { feature: 'listing_rewrite', unit: 'per_1000_chars', creditRate: 2, minCharge: 1, maxCharge: null },
+  // AI 微调：最小必要修改（按当前字段内容 + 用户指令字符计量）
+  { feature: 'listing_ai_edit', unit: 'per_1000_chars', creditRate: 2, minCharge: 1, maxCharge: null },
   { feature: 'listing_translation', unit: 'per_1000_chars', creditRate: 2, minCharge: 1, maxCharge: null },
   { feature: 'image_ocr', unit: 'per_image', creditRate: 1, minCharge: 1, maxCharge: null },
   { feature: 'customer_translation', unit: 'per_1000_chars', creditRate: 2, minCharge: 1, maxCharge: null },

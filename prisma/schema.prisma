@@ -555,6 +555,7 @@ model EcommerceListing {
   userId          String
   version         Int      @default(1)
   draft           Json     // { title, bulletPoints[], description, keywords[], faqHighlights[] }
+  pendingEdit     Json?    // 待应用的 AI 微调结果 { field, instruction, content, changes, warnings, factConflicts, platformIssues, createdAt }
   status          String   @default("current") // current | history
   charCount       Int      @default(0)
   warnings        Json?    // Fact Validation 待确认项（string[]）

@@ -24,6 +24,16 @@ interface ListingItem {
 
 type FieldKey = keyof ListingDraft;
 
+interface RefinePreview {
+  field: string;
+  original: string;
+  content: string | string[];
+  changes?: { type: string; description: string }[];
+  warnings?: string[];
+  factConflicts?: string[];
+  platformIssues?: string[];
+}
+
 const FIELDS: { key: FieldKey; label: string }[] = [
   { key: 'title', label: '标题' },
   { key: 'bulletPoints', label: '卖点要点' },
@@ -48,6 +58,11 @@ export default function ListingStudio({ productId }: { productId: string }) {
   const [busyField, setBusyField] = useState<FieldKey | null>(null);
   const [creditModal, setCreditModal] = useState<{ estimated: number; available: number } | null>(null);
   const [toast, setToast] = useState('');
+  const [refineField, setRefineField] = useState<FieldKey | null>(null);
+  const [refineInstruction, setRefineInstruction] = useState('');
+  const [refinePreview, setRefinePreview] = useState<RefinePreview | null>(null);
+  const [refineBusy, setRefineBusy] = useState(false);
+  const [refineIdemKey, setRefineIdemKey] = useState('');
 
   const showToast = (msg: string) => {
     setToast(msg);
@@ -135,6 +150,61 @@ export default function ListingStudio({ productId }: { productId: string }) {
       }
     } catch { showToast('网络错误，请重试'); }
     setBusy(false);
+  };
+
+  const openRefine = (field: FieldKey) => {
+    setRefineField(field);
+    setRefineInstruction('');
+    setRefinePreview(null);
+    setRefineBusy(false);
+    setRefineIdemKey(`${Date.now()}-${Math.random().toString(36).slice(2)}`);
+  };
+
+  const closeRefine = () => {
+    setRefineField(null);
+    setRefineInstruction('');
+    setRefinePreview(null);
+  };
+
+  const submitRefine = async () => {
+    if (!current || !refineField || refineBusy || !refineInstruction.trim()) return;
+    setRefineBusy(true);
+    try {
+      const res = await fetch(`/api/ecommerce/listings/${current.id}/ai-edit`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ field: refineField, instruction: refineInstruction.trim(), idempotencyKey: refineIdemKey }),
+      });
+      const data = await res.json();
+      if (data.ok) {
+        setRefinePreview(data.preview);
+      } else if (data.code === 'insufficient') {
+        setCreditModal({ estimated: data.estimated ?? 0, available: data.available ?? 0 });
+        closeRefine();
+      } else {
+        showToast(data.error || 'AI 微调失败');
+      }
+    } catch { showToast('网络错误，请重试'); }
+    setRefineBusy(false);
+  };
+
+  const applyRefine = async () => {
+    if (!current || !refineField || refineBusy) return;
+    setRefineBusy(true);
+    try {
+      const res = await fetch(`/api/ecommerce/listings/${current.id}/apply-edit`, { method: 'POST' });
+      const data = await res.json();
+      if (data.ok) {
+        showToast(`已应用修改（v${data.listing.version}）`);
+        setRefineField(null);
+        setRefinePreview(null);
+        setRefineInstruction('');
+        await loadListings();
+      } else {
+        showToast(data.error || '应用失败');
+      }
+    } catch { showToast('网络错误，请重试'); }
+    setRefineBusy(false);
   };
 
   const fullText = (d: ListingDraft) => [
@@ -261,9 +331,12 @@ export default function ListingStudio({ productId }: { productId: string }) {
                 <div className="ecom-listing-field-head">
                   <span className="ecom-listing-field-label">{f.label}</span>
                   {current.status === 'current' ? (
-                    <button className="ecom-rewrite" onClick={() => regenerate(f.key)} disabled={busyField !== null}>
-                      {busyField === f.key ? '重写中…' : '↻ 重写'}
-                    </button>
+                    <div className="ecom-listing-field-actions">
+                      <button className="ecom-refine" onClick={() => openRefine(f.key)} disabled={refineBusy || busyField !== null}>✦ AI 微调</button>
+                      <button className="ecom-rewrite" onClick={() => regenerate(f.key)} disabled={busyField !== null || refineBusy}>
+                        {busyField === f.key ? '重写中…' : '↻ 重写'}
+                      </button>
+                    </div>
                   ) : null}
                 </div>
                 <div className="ecom-listing-field-body">
@@ -303,6 +376,64 @@ export default function ListingStudio({ productId }: { productId: string }) {
           ) : null}
         </div>
       )}
+
+      {refineField ? (
+        <div className="ecom-mask" onClick={() => { if (!refineBusy) closeRefine(); }}>
+          <div className="ecom-modal ecom-refine-modal" onClick={(e) => e.stopPropagation()}>
+            <div className="ecom-modal-head">
+              <h3>AI 微调</h3>
+              <span className="ecom-muted-line">{FIELDS.find((f) => f.key === refineField)?.label}</span>
+            </div>
+            {refinePreview ? (
+              <div className="ecom-refine-preview">
+                <div className="ecom-refine-cmp">
+                  <label>原内容</label>
+                  <div className="ecom-refine-box ecom-refine-orig">{refinePreview.original}</div>
+                </div>
+                <div className="ecom-refine-cmp">
+                  <label>AI 微调后</label>
+                  <div className="ecom-refine-box ecom-refine-new">{Array.isArray(refinePreview.content) ? refinePreview.content.join('\n') : refinePreview.content}</div>
+                </div>
+                {Array.isArray(refinePreview.changes) && refinePreview.changes.length > 0 ? (
+                  <div className="ecom-refine-changes">
+                    <label>修改说明</label>
+                    <ul>{refinePreview.changes.map((c, i) => <li key={i}>{c.description}</li>)}</ul>
+                  </div>
+                ) : null}
+                {Array.isArray(refinePreview.factConflicts) && refinePreview.factConflicts.length > 0 ? (
+                  <div className="ecom-need-confirm"><label>⚠️ 事实冲突</label><ul>{refinePreview.factConflicts.map((w, i) => <li key={i}>{w}</li>)}</ul></div>
+                ) : null}
+                {Array.isArray(refinePreview.platformIssues) && refinePreview.platformIssues.length > 0 ? (
+                  <div className="ecom-need-confirm"><label>⚠️ 平台规则</label><ul>{refinePreview.platformIssues.map((w, i) => <li key={i}>{w}</li>)}</ul></div>
+                ) : null}
+                {Array.isArray(refinePreview.warnings) && refinePreview.warnings.length > 0 ? (
+                  <div className="ecom-need-confirm"><label>⚠️ 提示</label><ul>{refinePreview.warnings.map((w, i) => <li key={i}>{w}</li>)}</ul></div>
+                ) : null}
+                <div className="ecom-modal-actions">
+                  <button className="ecom-btn-ghost" onClick={() => { setRefinePreview(null); setRefineInstruction(''); }} disabled={refineBusy}>取消修改</button>
+                  <button className="primary" onClick={applyRefine} disabled={refineBusy}>{refineBusy ? '应用中…' : '应用修改'}</button>
+                </div>
+              </div>
+            ) : (
+              <div>
+                <p className="ecom-refine-hint">告诉 AI 你希望怎么修改（只改当前字段，不改变产品事实）。</p>
+                <textarea
+                  className="ecom-refine-input"
+                  value={refineInstruction}
+                  onChange={(e) => setRefineInstruction(e.target.value)}
+                  placeholder="例如：突出便携性，语气更专业，但不要改变产品信息。"
+                  rows={4}
+                  maxLength={1000}
+                />
+                <div className="ecom-modal-actions">
+                  <button className="ecom-btn-ghost" onClick={closeRefine} disabled={refineBusy}>取消</button>
+                  <button className="primary" onClick={submitRefine} disabled={refineBusy || !refineInstruction.trim()}>{refineBusy ? '生成中…' : '生成修改'}</button>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      ) : null}
 
       {creditModal ? (
         <div className="ecom-mask" onClick={() => setCreditModal(null)}>
