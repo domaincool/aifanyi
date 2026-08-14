@@ -33,6 +33,7 @@ export interface MemeImportResult {
   imported: number;
   updated: number;
   skipped: number;
+  skippedDetails?: { index: number; term: string; reason: string }[];
   conflicts: MemeConflict[];
   created: string[];
   repeated?: boolean;
@@ -188,7 +189,7 @@ export async function importMemes(input: {
     imported = toCreate.length; // dryRun 预览：可导入数量
   }
 
-  return { ok: true, batchId, imported, updated, skipped: skipped.length, conflicts, created };
+  return { ok: true, batchId, imported, updated, skipped: skipped.length, skippedDetails: skipped, conflicts, created };
 }
 
 function idxOf(items: MemeImportItem[], it: MemeImportItem): number {
