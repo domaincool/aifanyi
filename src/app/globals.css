@@ -1003,3 +1003,30 @@ button.primary:disabled { opacity: 0.5; cursor: wait; }
 .ecom-tone-btn:hover { border-color: var(--accent2); }
 .ecom-tone-active { background: var(--accent); color: #fff; border-color: var(--accent); }
 
+
+/* 输入框朗读按钮 */
+.read-btn {
+  min-width: 64px;
+  min-height: 40px;
+  padding: 8px 14px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  -webkit-tap-highlight-color: transparent;
+}
+.read-btn:hover { border-color: var(--accent); color: var(--accent); }
+.read-btn-active { background: var(--accent); border-color: var(--accent); color: #fff; }
+.read-btn-active:hover { color: #fff; filter: brightness(1.1); }
+.read-btn-stop { min-width: 40px; padding: 8px 10px; background: var(--panel); }
+.read-btn-stop:hover { border-color: var(--red, #f87171); color: var(--red, #f87171); }
+@media (max-width: 640px) {
+  .read-btn { min-height: 44px; font-size: 14px; padding: 10px 16px; }
+  .read-btn-stop { min-width: 44px; padding: 10px 12px; }
+}

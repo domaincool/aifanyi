@@ -79,6 +79,7 @@ export default function TranslatorBox({
   const [loggedIn, setLoggedIn] = useState(false); // 登录态（决定是否显示预计额度）
   const [est, setEst] = useState<number | null>(null); // 预计消耗额度
   const estTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const [readState, setReadState] = useState<'idle' | 'playing' | 'paused'>('idle'); // 输入朗读状态
 
   // 挂载时探测登录态
   useEffect(() => {
@@ -105,6 +106,52 @@ export default function TranslatorBox({
   function showToast(msg: string) {
     setToast(msg);
     setTimeout(() => setToast(''), 1600);
+  }
+
+  // 输入朗读：播放 / 暂停 / 继续 / 停止（Web Speech API）
+  function stopRead() {
+    if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+    setReadState('idle');
+  }
+
+  function toggleRead() {
+    if (!text.trim()) {
+      showToast('请输入要朗读的内容');
+      return;
+    }
+    if (!('speechSynthesis' in window)) {
+      showToast('当前浏览器不支持朗读');
+      return;
+    }
+    // 播放中 → 暂停；暂停中 → 继续
+    if (readState === 'playing') {
+      window.speechSynthesis.pause();
+      setReadState('paused');
+      return;
+    }
+    if (readState === 'paused') {
+      window.speechSynthesis.resume();
+      setReadState('playing');
+      return;
+    }
+    // 确定朗读语言：auto 时跟随检测结果
+    let lang = sourceLang;
+    if (lang === 'auto') {
+      const detected = detectLang(text);
+      if (!detected) {
+        showToast('未能识别输入语言，请手动选择源语言');
+        return;
+      }
+      lang = detected;
+    }
+    window.speechSynthesis.cancel(); // 清掉可能残留的旧朗读
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = TTS_LANG[lang] || 'en-US';
+    u.rate = 1;
+    u.onend = () => setReadState('idle');
+    u.onerror = () => { setReadState('idle'); showToast('朗读中断'); };
+    window.speechSynthesis.speak(u);
+    setReadState('playing');
   }
 
   async function doTranslate() {
@@ -254,11 +301,47 @@ export default function TranslatorBox({
 
   return (
     <div className="translator-box">
-      <textarea
-        placeholder="输入要翻译的内容…（示例：这款无线耳机降噪效果一流，续航 30 小时）"
-        value={text}
-        onChange={(e) => setText(e.target.value)}
-      />
+      <div style={{ position: 'relative' }}>
+        <textarea
+          placeholder="输入要翻译的内容…（示例：这款无线耳机降噪效果一流，续航 30 小时）"
+          value={text}
+          onChange={(e) => {
+            setText(e.target.value);
+            if (readState !== 'idle') stopRead(); // 输入变化停止朗读
+          }}
+        />
+        <div
+          style={{
+            position: 'absolute',
+            right: 10,
+            bottom: 10,
+            display: 'flex',
+            gap: 8,
+            zIndex: 2,
+          }}
+        >
+          <button
+            type="button"
+            className={"read-btn" + (readState !== 'idle' ? " read-btn-active" : "")}
+            onClick={toggleRead}
+            title={readState === 'playing' ? '暂停朗读' : readState === 'paused' ? '继续朗读' : '朗读输入内容'}
+            aria-label={readState === 'playing' ? '暂停朗读' : readState === 'paused' ? '继续朗读' : '朗读输入内容'}
+          >
+            {readState === 'playing' ? '⏸ 暂停' : readState === 'paused' ? '▶ 继续' : '🔊 朗读'}
+          </button>
+          {readState !== 'idle' && (
+            <button
+              type="button"
+              className="read-btn read-btn-stop"
+              onClick={stopRead}
+              title="停止朗读"
+              aria-label="停止朗读"
+            >
+              ✕
+            </button>
+          )}
+        </div>
+      </div>
       <div className="row">
         <select value={sourceLang} onChange={(e) => setSourceLang(e.target.value)}>
           <option value="auto">自动检测</option>
