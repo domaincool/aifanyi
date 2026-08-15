@@ -4,7 +4,7 @@
  * 换渠道 = 换 provider 实现 + 改 PAYMENT_PROVIDER 环境变量，不动业务代码
  */
 
-export type PaymentProviderCode = 'mock' | 'lemonsqueezy' | 'paddle' | 'creem';
+export type PaymentProviderCode = 'mock' | 'lemonsqueezy' | 'paddle' | 'creem' | 'disabled';
 
 export interface CreateCheckoutInput {
   orderId: string;

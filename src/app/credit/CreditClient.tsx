@@ -98,16 +98,23 @@ export default function CreditClient() {
       });
       const j = await r.json();
       if (!r.ok || !j.ok) { setErr(j.error || '下单失败，请重试。'); return; }
-      // 模拟支付确认（真实支付接入后改为跳转支付）
-      const c = await fetch('/api/credits/confirm', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ orderId: j.orderId }),
-      });
-      const cj = await c.json();
-      if (!c.ok || !cj.ok) { setErr(cj.error || '支付确认失败，请重试。'); return; }
-      setMsg(`✅ ${plan.name}已到账：+${cj.granted.purchased + cj.granted.bonus} 积分（含赠送 +${cj.granted.bonus}）`);
-      load();
+      if (j.mock) {
+        // 模拟支付（仅开发/测试环境）：确认即到账
+        const c = await fetch('/api/credits/confirm', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ orderId: j.orderId }),
+        });
+        const cj = await c.json();
+        if (!c.ok || !cj.ok) { setErr(cj.error || '支付确认失败，请重试。'); return; }
+        setMsg(`✅ ${plan.name}已到账：+${cj.granted.purchased + cj.granted.bonus} 积分（含赠送 +${cj.granted.bonus}）`);
+        load();
+      } else if (j.checkoutUrl) {
+        // 真实支付渠道：跳转支付页
+        window.location.href = j.checkoutUrl;
+      } else {
+        setErr('支付渠道暂未开通，暂不支持充值。');
+      }
     } catch (e) {
       setErr('网络异常，请稍后重试。');
     } finally {
@@ -173,7 +180,7 @@ export default function CreditClient() {
           {err && <p style={{ margin: '12px 0 0', color: 'var(--red, #dc2626)', fontSize: 13 }}>{err}</p>}
           {msg && <p style={{ margin: '12px 0 0', color: 'var(--green, #16a34a)', fontSize: 13 }}>{msg}</p>}
           <p style={{ margin: '12px 0 0', color: 'var(--muted)', fontSize: 12 }}>
-            * 当前为模拟支付（支付渠道接入中），确认后积分即刻到账。
+            * 支付渠道接入中，暂不支持在线充值。
           </p>
         </div>
       )}
