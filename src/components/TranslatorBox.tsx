@@ -15,6 +15,33 @@ const LANG_LABEL: Record<string, string> = {
   pt: 'Português',
   ko: '한국어',
 };
+/** 轻量语言检测（启发式字符集判定，零依赖零成本）
+ * 返回 'zh'|'en'|'ja'|'ko'|'ru'|'ar' 或 null（无法识别/文本过短）
+ */
+function detectLang(s: string): string | null {
+  const t = s.trim();
+  if (t.length < 2) return null; // 过短无法可靠判定
+  let han = 0, kana = 0, hangul = 0, cyrillic = 0, arabic = 0, latin = 0;
+  for (const ch of t) {
+    const c = ch.codePointAt(0)!;
+    if (c >= 0x4e00 && c <= 0x9fff) han++;
+    else if (c >= 0x3040 && c <= 0x30ff) kana++;
+    else if (c >= 0xac00 && c <= 0xd7af) hangul++;
+    else if (c >= 0x0400 && c <= 0x04ff) cyrillic++;
+    else if (c >= 0x0600 && c <= 0x06ff) arabic++;
+    else if (/[a-zA-Z]/.test(ch)) latin++;
+  }
+  const total = han + kana + hangul + cyrillic + arabic + latin;
+  if (total === 0) return null; // 纯符号/数字
+  if (kana > 0) return 'ja'; // 含假名 → 日语（日语文本常含汉字+假名，优先判）
+  if (han > 0 && hangul === 0) return 'zh';
+  if (hangul > 0) return 'ko';
+  if (cyrillic > 0) return 'ru';
+  if (arabic > 0) return 'ar';
+  if (latin > 0) return 'en'; // 拉丁字母 → 英语（德法西葡等归英，可手动覆盖）
+  return null;
+}
+
 const TTS_LANG: Record<string, string> = {
   zh: 'zh-CN',
   en: 'en-US',
@@ -29,7 +56,7 @@ const TTS_LANG: Record<string, string> = {
 };
 
 export default function TranslatorBox({
-  defaultSourceLang = 'zh',
+  defaultSourceLang = 'auto',
   defaultTargetLang = 'en',
 }: {
   defaultSourceLang?: string;
@@ -82,6 +109,15 @@ export default function TranslatorBox({
 
   async function doTranslate() {
     if (!text.trim()) return;
+    let effectiveSource = sourceLang;
+    if (sourceLang === 'auto') {
+      const detected = detectLang(text);
+      if (!detected) {
+        showToast('未能识别输入语言，请手动选择源语言');
+        return;
+      }
+      effectiveSource = detected;
+    }
     setLoading(true);
     setResult('');
     setMeta('');
@@ -92,8 +128,8 @@ export default function TranslatorBox({
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           text,
-          sourceLang,
-          targetLang: scenario === 'polish' ? sourceLang : targetLang,
+          sourceLang: effectiveSource,
+          targetLang: scenario === 'polish' ? effectiveSource : targetLang,
           scenario,
           polish: scenario === 'polish' ? true : undefined,
         }),
@@ -225,6 +261,7 @@ export default function TranslatorBox({
       />
       <div className="row">
         <select value={sourceLang} onChange={(e) => setSourceLang(e.target.value)}>
+          <option value="auto">自动检测</option>
           <option value="zh">中文</option>
           <option value="en">英语</option>
           <option value="ja">日语</option>
@@ -242,8 +279,14 @@ export default function TranslatorBox({
           title="交换语言"
           aria-label="交换源语言和目标语言"
           onClick={() => {
-            setSourceLang(targetLang);
-            setTargetLang(sourceLang);
+            if (sourceLang === 'auto') {
+              // 自动检测时交换：源语言取当前目标语言，目标语言回退中文
+              setSourceLang(targetLang);
+              setTargetLang('zh');
+            } else {
+              setSourceLang(targetLang);
+              setTargetLang(sourceLang);
+            }
             if (result) {
               setText(result);
               setResult('');

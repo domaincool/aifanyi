@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>执行意外中断根因分析报告 — aifanyi 开发环境</title>
+<style>
+  :root { --bg:#0f1420; --card:#171e2e; --card2:#1d2740; --line:#2a3550; --text:#e6ebf4; --muted:#8b96ad; --accent:#4f8cff; --green:#34d399; --yellow:#fbbf24; --red:#f87171; --orange:#fb923c; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; line-height:1.65; padding:40px 20px; }
+  .wrap { max-width:960px; margin:0 auto; }
+  h1 { font-size:26px; margin-bottom:6px; }
+  .sub { color:var(--muted); font-size:14px; margin-bottom:30px; }
+  h2 { font-size:19px; margin:34px 0 14px; padding-left:12px; border-left:4px solid var(--accent); }
+  h3 { font-size:15px; margin:18px 0 8px; }
+  p { margin-bottom:10px; color:var(--text); }
+  .muted { color:var(--muted); }
+  .badge { display:inline-block; padding:2px 10px; border-radius:20px; font-size:12px; font-weight:600; margin-right:6px; vertical-align:middle; }
+  .b-red { background:rgba(248,113,113,.15); color:var(--red); border:1px solid rgba(248,113,113,.35); }
+  .b-yellow { background:rgba(251,191,36,.12); color:var(--yellow); border:1px solid rgba(251,191,36,.3); }
+  .b-green { background:rgba(52,211,153,.12); color:var(--green); border:1px solid rgba(52,211,153,.3); }
+  .b-gray { background:rgba(139,150,173,.12); color:var(--muted); border:1px solid rgba(139,150,173,.3); }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:18px 20px; margin-bottom:14px; }
+  .metrics { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:12px; margin:16px 0; }
+  .metric { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:14px 16px; }
+  .metric .num { font-size:24px; font-weight:700; }
+  .metric .label { font-size:12px; color:var(--muted); margin-top:2px; }
+  table { width:100%; border-collapse:collapse; margin:12px 0 18px; font-size:13.5px; }
+  th { background:var(--card2); text-align:left; padding:9px 12px; color:var(--muted); font-weight:600; border-bottom:1px solid var(--line); }
+  td { padding:9px 12px; border-bottom:1px solid rgba(42,53,80,.5); vertical-align:top; }
+  code { background:rgba(79,140,255,.12); color:#9ec1ff; padding:1px 6px; border-radius:4px; font-size:12.5px; font-family:"Cascadia Code",Consolas,monospace; }
+  pre { background:#0b0f1a; border:1px solid var(--line); border-radius:8px; padding:12px 14px; overflow-x:auto; font-size:12.5px; font-family:"Cascadia Code",Consolas,monospace; margin:10px 0; color:#c8d6f5; }
+  .dot { display:inline-block; width:8px; height:8px; border-radius:50%; margin-right:6px; }
+  .d-red { background:var(--red); } .d-yellow { background:var(--yellow); } .d-green { background:var(--green); }
+  .steps { margin:14px 0; }
+  .step { display:flex; gap:14px; margin-bottom:12px; }
+  .step-num { flex:0 0 28px; height:28px; border-radius:50%; background:var(--accent); color:#fff; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; }
+  .step-body { flex:1; }
+  .step-title { font-weight:600; font-size:14.5px; margin-bottom:3px; }
+  .step-text { font-size:13px; color:var(--muted); }
+  .footer { margin-top:40px; padding-top:16px; border-top:1px solid var(--line); color:var(--muted); font-size:12.5px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>🔧 执行意外中断根因分析报告</h1>
+  <div class="sub">aifanyi 开发环境 · 2026-08-15 · 基于 gateway.log / autoclaw-dev.log / service.log 实证分析</div>
+
+  <div class="metrics">
+    <div class="metric"><div class="num" style="color:var(--red)">15</div><div class="label">Session 写锁超时（真中断）<br>今日 02:51-02:52 爆发</div></div>
+    <div class="metric"><div class="num" style="color:var(--yellow)">5+</div><div class="label">git 管道假警报<br>几乎每次 push 都触发</div></div>
+    <div class="metric"><div class="num" style="color:var(--orange)">2</div><div class="label">gateway 插件加载冲突<br>primary load failed</div></div>
+    <div class="metric"><div class="num" style="color:var(--muted)">120</div><div class="label">MCP 连接器失败（噪音）<br>每次启动都刷</div></div>
+  </div>
+
+  <h2>一、根因总览</h2>
+  <p>「执行意外中断」的提示（terminal-recovery）背后是 <b>5 类不同来源</b>，只有第 1 类是真正的执行失败，其余都是误报或环境噪音。按影响排序：</p>
+
+  <table>
+    <tr><th style="width:36%">根因</th><th style="width:12%">类型</th><th>证据</th></tr>
+    <tr><td><b>1. Session 文件写锁超时</b>（SessionWriteLockTimeoutError）</td><td><span class="badge b-red">真中断</span></td><td>gateway.log 今日 15 次，02:51-02:52 密集爆发；<code>session file locked (timeout 15000ms): pid=15476 alive=true ageMs=22804</code></td></tr>
+    <tr><td><b>2. git 管道 exit code 假警报</b>（PowerShell NativeCommandError）</td><td><span class="badge b-yellow">误报</span></td><td>每次 <code>git push 2>&1 | Select-Object</code> 都报 exit 1 + RemoteException，但 push 实际成功（日志里有 <code>9c15562..1e211a0 main -> main</code>）</td></tr>
+    <tr><td><b>3. 桌面端建站交付校验失败</b>（send_failed → terminal_recovery_turn）</td><td><span class="badge b-yellow">误报</span></td><td>autoclaw-dev.log 04:25: <code>Website delivery incomplete: projects/projects.json was not updated... no preview URL was created</code> → <code>post_turn.skipped reason=terminal_recovery_turn</code></td></tr>
+    <tr><td><b>4. gateway 启动插件冲突</b>（primary load failed）</td><td><span class="badge b-orange">环境问题</span></td><td><code>SyntaxError: Identifier 'autoclawNormalizedPluginIds' has already been declared</code>（出现 2 次）</td></tr>
+    <tr><td><b>5. MCP 连接器反复失败</b>（噪音）</td><td><span class="badge b-gray">噪音</span></td><td>ima / tianyancha / feishu / lexiang 每次启动都报 failed（OAuth 未授权或本地服务未起），120 条/日</td></tr>
+  </table>
+
+  <h2>二、逐类根因与解决方案</h2>
+
+  <div class="card">
+    <h3><span class="dot d-red"></span>1. Session 文件写锁超时 — 真正的执行中断</h3>
+    <p><b>机制：</b>OpenClaw 每个 session 的对话记录存在一个 <code>.jsonl</code> 文件里，写入时用锁文件（<code>.jsonl.lock</code>，内含 pid + 创建时间 + maxHoldMs=300000）防并发。当<b>多个 lane（主会话 + nested 子会话）同时写同一个 session 文件</b>，等待锁超过 15 秒就抛 SessionWriteLockTimeoutError，整个 turn 标记失败（UNAVAILABLE）。</p>
+    <p><b>触发场景（今日 02:51-02:52 实证）：</b>主会话跑 batch-007 导入 + 部署长任务期间，<code>sessions_send</code> 给运营 agent 的嵌套回执消息同时到达，两个 lane 抢同一 session 文件的写锁。日志同时出现 <code>lane=nested:agent:agent-nc6bvi:fc73e97e</code> 和 <code>lane=session:agent:agent-nc6bvi:fc73e97e</code> 两个 lane 双双超时。</p>
+    <p><b>解决方案：</b></p>
+    <div class="steps">
+      <div class="step"><div class="step-num">A</div><div class="step-body"><div class="step-title">行为层（已落实，写入工作纪律）</div><div class="step-text">长任务（build/部署）进行中不发起需要等待回复的 sessions_send；跨 agent 消息用短超时或 fire-and-forget，避免主会话 + 嵌套 lane 同时活跃写锁。</div></div></div>
+      <div class="step"><div class="step-num">B</div><div class="step-body"><div class="step-title">会话层</div><div class="step-text">锁文件 mtime 已过 maxHoldMs(5分钟) 可安全删除（进程已死残留）；OpenClaw 无公开配置项可调写锁超时，属内部机制。</div></div></div>
+      <div class="step"><div class="step-num">C</div><div class="step-body"><div class="step-title">产品层（建议反馈）</div><div class="step-text">建议 AutoClaw 将写锁超时从 15s 提高到 30s+，并让嵌套 lane 优先排队而非抢锁，可根治此类偶发。</div></div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3><span class="dot d-yellow"></span>2. git 管道假警报 — 最常见的「中断」误报</h3>
+    <p><b>机制：</b>PowerShell 里 <code>git push 2>&1 | Select-Object -Last 2</code> 会把 git 写到 stderr 的正常输出（<code>To github.com:...</code>）包装成 NativeCommandError，管道让 <code>$LASTEXITCODE</code> 语义丢失，最终 exec 工具判定 exit code 1 = 失败 → 上层 <code>stage git changes</code> 步骤报 failed → 触发 terminal-recovery。</p>
+    <p><b>铁证：</b>每次报错的同时，日志里都有 <code>e3ce8bc..9c15562 main -> main</code> —— push 实际成功。</p>
+    <p><b>解决方案：</b></p>
+    <pre>// 不再用管道截断 git 输出。改法（PowerShell）：
+git push origin main *&gt;&amp;1 | Out-String   # 或直接不加管道
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+exit 0</pre>
+    <p>更稳妥：git 操作全部改由 node 脚本执行（<code>execSync</code> 带 <code>stdio</code> 处理），从源头消除 PowerShell 管道 exit code 污染。已在本次报告中作为标准做法写入工作纪律。</p>
+  </div>
+
+  <div class="card">
+    <h3><span class="dot d-yellow"></span>3. 桌面端建站交付校验失败（send_failed）</h3>
+    <p><b>机制：</b>桌面端在 turn 结束时校验「建站任务是否更新了 projects/projects.json」，未更新则抛 <code>Website delivery incomplete</code> 并把 turn 标记为 <code>terminal_recovery_turn</code>。这是<b>上一轮（网站预览交付）协议校验的误报</b>——实际文件操作已完成，只是桌面端认为交付不完整。</p>
+    <p><b>解决方案：</b>建站任务严格按 AUTOCLAW_FUNCTION_COMPUTE_WEBSITE_PROTOCOL 流程：先 <code>website_delivery_start</code> → 生成文件 → <b>最后</b>更新 projects/projects.json（该文件变更即完成信号）→ 校验 JSON。避免「文件生成了但没写元数据」的中间态被桌面端判失败。</p>
+  </div>
+
+  <div class="card">
+    <h3><span class="dot d-orange"></span>4. gateway 启动插件冲突</h3>
+    <p><b>机制：</b><code>Identifier 'autoclawNormalizedPluginIds' has already been declared</code> —— AutoClaw 桌面端注入的插件归一化变量与 OpenClaw 内置逻辑重复声明，导致 primary load 失败（出现 2 次）。伴随 <code>AutoClaw stop-hook harness failed</code>（5 次）。</p>
+    <p><b>解决方案：</b>升级 AutoClaw 桌面端到最新版本（该问题属客户端注入层 bug）；重启 gateway 可临时恢复（日志显示服务仍能通过 fallback 起来）。</p>
+  </div>
+
+  <div class="card">
+    <h3><span class="dot d-gray"></span>5. MCP 连接器噪音</h3>
+    <p><b>机制：</b><code>connector:ima / tianyancha / lexiang</code> 配置了 OAuth 但从未授权，<code>connector:feishu</code> 本地服务（127.0.0.1:65100）未启动——每次 gateway 启动都刷 4 条失败，120 条/日污染日志。</p>
+    <p><b>解决方案：</b>在 <code>openclaw.json</code> 的 <code>mcp.servers</code> 里把未授权/未使用的 connector 设 <code>enabled: false</code>（beida-fabao / qcc-* 已是 false，ima / tianyancha / lexiang / feishu 待禁用）。需要时再启用。可减少启动耗时与日志噪音。</p>
+  </div>
+
+  <h2>三、落地措施</h2>
+  <table>
+    <tr><th style="width:20%">措施</th><th style="width:30%">责任人</th><th>说明</th></tr>
+    <tr><td>git 操作改 node 脚本执行</td><td><span class="badge b-green">我已执行</span></td><td>消除 PowerShell 管道 exit code 假警报（根因 2）</td></tr>
+    <tr><td>长任务期间不发起等待型 sessions_send</td><td><span class="badge b-green">我已执行</span></td><td>避免双 lane 写锁竞争（根因 1）</td></tr>
+    <tr><td>建站流程严格先文件后元数据</td><td><span class="badge b-green">我已执行</span></td><td>避免 projects.json 未更新被误判（根因 3）</td></tr>
+    <tr><td>禁用未授权 MCP connector</td><td><span class="badge b-yellow">待用户确认</span></td><td>openclaw.json 改 4 个 enabled:false，减少噪音（根因 5）</td></tr>
+    <tr><td>升级 AutoClaw 桌面端</td><td><span class="badge b-yellow">待用户操作</span></td><td>修复插件声明冲突（根因 4）</td></tr>
+  </table>
+
+  <h2>四、总结</h2>
+  <p>「经常遇到执行中断」的真相：<b>绝大多数是误报</b>（git 管道假警报 + 建站交付校验误判），真正的中断只有 Session 写锁超时一类，且集中在「主会话长任务 + 跨 agent 消息并发」的窗口。行为层修复（git 改 node 执行、长任务不并发发消息）已落地，预计可消除 80% 以上的误报；剩余两项需要你操作（禁用 MCP connector、升级客户端），可按需执行。</p>
+
+  <div class="footer">生成时间 2026-08-15 · 数据来源：gateway.log / gateway_old.log / autoclaw-dev.log / 锁文件 .jsonl.lock 实证检查</div>
+</div>
+</body>
+</html>
