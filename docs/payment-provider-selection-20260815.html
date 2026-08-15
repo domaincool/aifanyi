@@ -19,7 +19,7 @@
   .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 20px; margin-bottom: 16px; }
   .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
   .metric { background: var(--card2); border-radius: 12px; padding: 16px; }
-  .metric .v { font-size: 26px; font-weight: 700; color: var(--accent); }
+  .metric .v { font-size: 24px; font-weight: 700; color: var(--accent); }
   .metric .k { color: var(--muted); font-size: 13px; margin-top: 4px; }
   table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 14px; }
   th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--line); }
@@ -29,7 +29,7 @@
   .b-ok { background: rgba(52,211,153,.15); color: var(--ok); }
   .b-warn { background: rgba(251,191,36,.15); color: var(--warn); }
   .b-rec { background: rgba(56,189,248,.15); color: var(--accent); }
-  .b-note { background: rgba(148,163,184,.15); color: var(--muted); }
+  .b-sel { background: rgba(52,211,153,.2); color: var(--ok); }
   ul { padding-left: 20px; }
   li { margin: 6px 0; }
   .code { background: #0b1220; border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; font-family: ui-monospace, Consolas, monospace; font-size: 13px; color: #a5f3fc; overflow-x: auto; margin: 8px 0; }
@@ -43,38 +43,37 @@
 <body>
 <div class="wrap">
   <h1>爱翻译 · 支付渠道选型与接入方案</h1>
-  <div class="sub">2026-08-15 · 支付先走海外 MoR（Lemon Squeezy / Paddle），架构可替换；入门包提价至 ¥9.9</div>
+  <div class="sub">2026-08-15 · 已选定 Creem（海外 MoR，无月费）；架构可替换，入门包 ¥9.9</div>
 
-  <h2>一、本轮决策</h2>
+  <h2>一、当前状态</h2>
   <div class="card">
     <div class="grid">
-      <div class="metric"><div class="v">¥9.9</div><div class="k">入门包新定价（原 ¥5.9）</div></div>
-      <div class="metric"><div class="v">990 积分</div><div class="k">锚点 ¥0.01 不变 · 平价 0 赠送</div></div>
-      <div class="metric"><div class="v">可替换</div><div class="k">provider 抽象层 · 换渠道不动业务</div></div>
-      <div class="metric"><div class="v">已上线</div><div class="k">commit 782eec4 · E2E 7 项全过</div></div>
+      <div class="metric"><div class="v">Creem</div><div class="k">已选定渠道（3.9% + $0.40，无月费）</div></div>
+      <div class="metric"><div class="v">已上线</div><div class="k">provider 骨架编译进产物，待凭据即切</div></div>
+      <div class="metric"><div class="v">¥9.9</div><div class="k">入门包（990 积分，锚点 ¥0.01）</div></div>
+      <div class="metric"><div class="v">可替换</div><div class="k">改 PAYMENT_PROVIDER 换渠道，业务零改动</div></div>
     </div>
   </div>
 
-  <h2>二、渠道选型对比</h2>
+  <h2>二、渠道对比</h2>
   <table>
-    <tr><th>维度</th><th>Lemon Squeezy</th><th>Paddle（推荐）</th></tr>
-    <tr><td>公司状态</td><td>2024 被 Stripe 收购，长期路线不明</td><td>独立公司，专注数字商品/订阅</td></tr>
-    <tr><td>MoR 税务</td><td>✓ 处理全球税务</td><td>✓ 处理全球税务</td></tr>
-    <tr><td>费率（约）</td><td>5% + $0.50 起</td><td>5% + $0.50 起</td></tr>
-    <tr><td>集成复杂度</td><td>较简单（Checkout API）</td><td>中等（Checkout + Webhook 验签）</td></tr>
-    <tr><td>数字商品适配</td><td>个人开发者友好</td><td>B2B SaaS / 订阅成熟</td></tr>
-    <tr><td>被收购/停服风险</td><td><span class="badge b-warn">中</span></td><td><span class="badge b-ok">低</span></td></tr>
-    <tr><td>结论</td><td>备选</td><td><span class="badge b-rec">推荐</span></td></tr>
+    <tr><th>维度</th><th>Creem（已选定）</th><th>Paddle（备选）</th><th>Lemon Squeezy（备选）</th></tr>
+    <tr><td>费率</td><td><span class="badge b-sel">3.9% + $0.40</span></td><td>5% + $0.50</td><td>5% + $0.50</td></tr>
+    <tr><td>月费</td><td><span class="badge b-sel">无</span></td><td>无（基础）</td><td>无</td></tr>
+    <tr><td>公司状态</td><td>新锐（2024 起）</td><td>老牌独立</td><td>2024 被 Stripe 收购</td></tr>
+    <tr><td>MoR 税务托管</td><td>✓</td><td>✓</td><td>✓</td></tr>
+    <tr><td>接入方式</td><td>x-api-key + Checkout API</td><td>API Key + Checkout</td><td>Bearer + Checkout</td></tr>
+    <tr><td>结论</td><td><span class="badge b-sel">✓ 选定</span></td><td>备选</td><td>备选</td></tr>
   </table>
-  <p class="muted">推荐 Paddle：独立 MoR、被收购风险小、数字商品生态成熟。两者都已写进 provider 骨架，最终二选一即可，切换成本为零。</p>
+  <p class="muted">选择 Creem：朋友实测口碑 + 无月费 + 全网最低档费率。它较新、体量小，建议正式收款前先小额实测到账/提现全链路。</p>
 
   <h2>三、可替换架构</h2>
   <div class="card">
-    <p>业务代码只依赖 <code>PaymentProvider</code> 接口，换渠道 = 改 <code>PAYMENT_PROVIDER</code> 环境变量 + 填充对应 provider 实现，purchase/confirm/webhook 全部不动。</p>
+    <p>业务代码只依赖 <code>PaymentProvider</code> 接口，换渠道 = 改 <code>PAYMENT_PROVIDER</code> 环境变量，purchase/confirm/webhook 全部不动。</p>
     <div class="flow">
       <div class="node">purchase 下单</div><span class="arrow">→</span>
       <div class="node">getPaymentProvider()</div><span class="arrow">→</span>
-      <div class="node">createCheckout → checkoutUrl</div><span class="arrow">→</span>
+      <div class="node">createCheckout → checkout_url</div><span class="arrow">→</span>
       <div class="node">用户跳转支付</div><span class="arrow">→</span>
       <div class="node">Webhook 验签</div><span class="arrow">→</span>
       <div class="node">grantRechargeOrder 到账</div>
@@ -85,31 +84,31 @@
 ├─ grant.ts                    # grantRechargeOrder（confirm/webhook 共用）
 └─ providers/
    ├─ mock.ts                  # 模拟（默认，测试/兜底）
-   ├─ lemonsqueezy.ts          # LS 骨架（API/验签注释就绪）
-   └─ paddle.ts                # Paddle 骨架（API/验签注释就绪）</div>
+   ├─ creem.ts                 # Creem（已选定，待凭据填充真实实现）
+   ├─ lemonsqueezy.ts          # LS 骨架
+   └─ paddle.ts                # Paddle 骨架</div>
   </div>
 
-  <h2>四、真实接入清单（待你提供）</h2>
+  <h2>四、Creem 接入清单（待你提供）</h2>
   <div class="card">
+    <p class="muted">Creem 官方 API（docs.creem.io）要点：认证 <code>x-api-key</code>；<code>POST https://api.creem.io/v1/checkouts</code>；webhook 验签 <code>creem-signature</code> = HMAC-SHA256(secret, rawBody)。</p>
     <ul>
-      <li><span class="highlight">① 二选一确认</span>：Paddle（推荐）还是 Lemon Squeezy</li>
-      <li><span class="highlight">② 注册账号</span>：开通商户/Store，创建 3 个商品（¥9.9 入门 / ¥29.9 主力 / ¥99 重度）</li>
-      <li><span class="highlight">③ 拿到凭据</span>：API Key + Price/Variant ID + Webhook Secret（Paddle 另需公钥）</li>
-      <li><span class="highlight">④ 货币确认</span>：9.9 元为人民币标价锚点；海外 MoR 默认美元收款，需定目标市场（海外用户付 USD？）与 USD 定价（¥9.9 ≈ $1.49）</li>
-      <li><span class="highlight">⑤ 配置环境变量</span> + 填充 provider 真实实现 + Webhook 联调</li>
+      <li><span class="highlight">① 注册 Creem 账号</span>：creem.io，创建 3 个商品（9.9 / 29.9 / 99）</li>
+      <li><span class="highlight">② 拿 API Key</span>：Dashboard → Settings → API Keys</li>
+      <li><span class="highlight">③ 拿 Product ID</span>：每个商品一个 product id（按 planCode 映射）</li>
+      <li><span class="highlight">④ 配 Webhook</span>：Dashboard → Developers → Webhook，拿 Webhook Secret，回调地址填 <code>https://aifanyi.com/api/credits/webhook/creem</code></li>
+      <li><span class="highlight">⑤ 给我三个值</span>：CREEM_API_KEY / CREEM_PRODUCT_ID（×3）/ CREEM_WEBHOOK_SECRET</li>
     </ul>
-    <p class="muted">凭据到位后，我补齐 lemonsqueezy.ts / paddle.ts 的真实 createCheckout + verifyWebhook 实现，配 <code>PAYMENT_PROVIDER=xxx</code> 重启即可上线。</p>
+    <p class="muted">凭据到位后：我填充 creem.ts 真实 createCheckout + verifyWebhook → 配 <code>PAYMENT_PROVIDER=creem</code> 重启 → 小额实测（1 美元单）→ 放开。</p>
   </div>
 
-  <h2>五、已上线验证</h2>
+  <h2>五、上线验证</h2>
   <table>
     <tr><th>检查项</th><th>结果</th></tr>
-    <tr><td>plans API 价格</td><td>starter 990 分（¥9.9）/ 990 积分 ✓</td></tr>
-    <tr><td>purchase（mock）</td><td>mock=true · provider=mock · priceCents=990 ✓</td></tr>
-    <tr><td>confirm 到账</td><td>granted purchased=990 · 余额 500+990=1490 ✓</td></tr>
-    <tr><td>重复 confirm</td><td>already=true 幂等 ✓</td></tr>
-    <tr><td>webhook/mock</td><td>400（mock 无 webhook）✓</td></tr>
-    <tr><td>webhook/paddle（未切换）</td><td>404 unknown provider ✓</td></tr>
+    <tr><td>creem provider 编译</td><td>purchase/confirm/webhook 三个 route.js 均含 creem ✓</td></tr>
+    <tr><td>默认 mock 回归</td><td>plans 990 / HTTPS 200 ✓</td></tr>
+    <tr><td>types 联合类型</td><td>PaymentProviderCode 含 creem ✓</td></tr>
+    <tr><td>工厂 switch</td><td>case 'creem' → creemProvider ✓</td></tr>
   </table>
 </div>
 </body>
