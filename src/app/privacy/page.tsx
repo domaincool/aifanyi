@@ -20,7 +20,7 @@ export default function PrivacyPage() {
         <li><strong>账户信息：</strong>当您使用 Google 账号或邮箱验证码登录时，我们会获取您的邮箱地址、昵称和头像（用于创建和识别您的账户）。</li>
         <li><strong>翻译内容：</strong>您提交翻译的文本、PDF 文档及翻译结果，用于为您提供翻译服务。</li>
         <li><strong>使用数据：</strong>访问时间、页面操作、任务状态等，用于改进服务和统计。</li>
-        <li><strong>技术信息：</strong>IP 地址、浏览器类型等，用于安全防护和额度管理。</li>
+        <li><strong>技术信息：</strong>IP 地址、浏览器类型等，用于安全防护和积分管理。</li>
       </ul>
 
       <h2>二、我们如何使用信息</h2>

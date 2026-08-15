@@ -92,7 +92,7 @@ export default function AccountClient({ user }: { user: UserInfo }) {
         <nav className="account-tabs">
           <button className={`account-tab ${tab === 'overview' ? 'active' : ''}`} onClick={() => setTab('overview')}>概览</button>
           <button className={`account-tab ${tab === 'history' ? 'active' : ''}`} onClick={() => setTab('history')}>我的翻译</button>
-          <button className={`account-tab ${tab === 'usage' ? 'active' : ''}`} onClick={() => setTab('usage')}>使用额度</button>
+          <button className={`account-tab ${tab === 'usage' ? 'active' : ''}`} onClick={() => setTab('usage')}>使用积分</button>
           <button className={`account-tab ${tab === 'settings' ? 'active' : ''}`} onClick={() => setTab('settings')}>账户设置</button>
           <button className={`account-tab ${tab === 'security' ? 'active' : ''}`} onClick={() => setTab('security')}>安全</button>
         </nav>
@@ -147,7 +147,7 @@ export default function AccountClient({ user }: { user: UserInfo }) {
 
       {tab === 'usage' && usage && (
         <div className="account-section">
-          <h2>使用额度</h2>
+          <h2>使用积分</h2>
           <UsageBar used={usage.today.used} limit={usage.today.limit} label="今日已用文件" />
           <p className="usage-reset">{usage.today.resetAt}</p>
           {usage.history?.length > 0 && (

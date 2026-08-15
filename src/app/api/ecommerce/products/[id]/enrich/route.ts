@@ -55,7 +55,7 @@ export async function POST(_req: Request, { params }: Ctx) {
     // 结算：成功按实际 consume（enrich 固定单价，实际 = 预估）
     const settle = await endSyncSuccess({ userId, jobId, usageId: begin.usageId, estimated: begin.estimated, actualCredits: begin.estimated });
     if (!settle.ok) {
-      return NextResponse.json({ ok: false, error: settle.error || '额度结算异常' }, { status: 500 });
+      return NextResponse.json({ ok: false, error: settle.error || '积分结算异常' }, { status: 500 });
     }
 
     return NextResponse.json({ ok: true, enriched, consumedCredits: settle.consumed });

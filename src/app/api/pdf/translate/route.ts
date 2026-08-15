@@ -1,7 +1,7 @@
 /**
  * POST /api/pdf/translate
  * 上传 PDF → 限制校验 → 解析 → 认证注入 → 创建 PdfJob（queued）
- * 游客/登录用户差异化额度 + 自动记账 UsageLedger
+ * 游客/登录用户差异化积分 + 自动记账 UsageLedger
  */
 import { NextRequest, NextResponse } from 'next/server';
 import { randomUUID } from 'crypto';
@@ -24,7 +24,7 @@ export async function POST(req: NextRequest) {
   let creditCtx: { jobId: string; usageId: string; estimated: number; userId: string } | null = null;
   try {
     const auth = await getAuthUserId();
-    if (!auth) return NextResponse.json({ errorType: 'auth_required', message: '请先登录后再使用该功能。登录后新用户可获赠 500 免费额度。' }, { status: 401 });
+    if (!auth) return NextResponse.json({ errorType: 'auth_required', message: '请先登录后再使用该功能。登录后新用户可获赠 500 免费积分。' }, { status: 401 });
     const userId = auth.userId;
     const form = await req.formData();
     const file = form.get('file');
@@ -47,7 +47,7 @@ export async function POST(req: NextRequest) {
     // 认证注入
     const guestSessionId: string | null = null;
 
-    // 额度校验
+    // 积分校验
     const ip = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || req.headers.get('x-real-ip') || 'unknown';
     const ua = req.headers.get('user-agent') || '';
     const clientKey = require('crypto').createHash('sha256').update(`${ip}|${ua}`).digest('hex').slice(0, 32);
@@ -58,7 +58,7 @@ export async function POST(req: NextRequest) {
 
     const taskId = `pdf_${Date.now().toString(36)}_${randomUUID().slice(0, 8)}`;
 
-    // 额度：2/页（封顶 200）→ reserve（原子检查余额）
+    // 积分：2/页（封顶 200）→ reserve（原子检查余额）
     const estCredits = Math.min(doc.pageCount * 2, 200);
     const begin = await beginSync({ userId, jobId: taskId, feature: FEATURES.PDF, estimatedCredits: estCredits });
     if (!begin.ok) return NextResponse.json({ errorType: 'insufficient', message: begin.error }, { status: 402 });

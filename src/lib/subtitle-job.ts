@@ -115,7 +115,7 @@ export async function runSubtitleJob(taskId: string): Promise<void> {
     const failedBatches = apiErrors > batches.length ? apiErrors - batches.length : 0;
     const errorType = failedBatches > 0 ? 'subtitle_partial_failed' : undefined;
 
-    // 额度结算：按成功翻译 cue 比例 consume，差额退回；全失败全退
+    // 积分结算：按成功翻译 cue 比例 consume，差额退回；全失败全退
     if (job.userId && estCredits > 0) {
       const usage = await prisma.usageRecord.findFirst({ where: { jobId: taskId }, select: { id: true } });
       if (usage) {
@@ -149,7 +149,7 @@ export async function runSubtitleJob(taskId: string): Promise<void> {
   }
 }
 
-/** 每日额度校验（同 PDF：5 文件/日/IP+UA） */
+/** 每日积分校验（同 PDF：5 文件/日/IP+UA） */
 export async function checkSubtitleQuota(clientKey: string): Promise<{ ok: boolean; used: number; limit: number }> {
   const start = new Date();
   start.setHours(0, 0, 0, 0);

@@ -129,7 +129,7 @@ export default function EcommerceWorkbench({ serverUser }: { serverUser: UserInf
       const data = await res.json();
       if (data.ok) {
         setEnriched(data.enriched);
-        showToast(`AI 提取完成，本次使用 ${data.consumedCredits} 额度`);
+        showToast(`AI 提取完成，本次使用 ${data.consumedCredits} 积分`);
         await openDetail(selected.id);
       } else if (data.code === 'insufficient') {
         setCreditModal({ estimated: data.estimated ?? 0, available: data.available ?? 0 });
@@ -154,7 +154,7 @@ export default function EcommerceWorkbench({ serverUser }: { serverUser: UserInf
         <div className="ecom-login-gate">
           <div className="ecom-login-icon">🧳</div>
           <h2>登录后开始使用</h2>
-          <p>工作台数据仅你可见。新用户注册即送 500 免费额度，翻译成功才扣费，失败自动退回。</p>
+          <p>工作台数据仅你可见。新用户注册即送 500 免费积分，翻译成功才扣费，失败自动退回。</p>
           <button className="primary" onClick={openLogin}>登录 / 注册</button>
         </div>
       </div>
@@ -291,11 +291,11 @@ export default function EcommerceWorkbench({ serverUser }: { serverUser: UserInf
       {creditModal ? (
         <div className="ecom-mask" onClick={() => setCreditModal(null)}>
           <div className="ecom-modal" onClick={(e) => e.stopPropagation()}>
-            <div className="ecom-modal-head"><h3>额度不足</h3></div>
-            <p className="ecom-credit-text">本次预计需要 <b>{creditModal.estimated}</b> 额度，当前可用 <b>{creditModal.available}</b> 额度。</p>
+            <div className="ecom-modal-head"><h3>积分不足</h3></div>
+            <p className="ecom-credit-text">本次预计需要 <b>{creditModal.estimated}</b> 积分，当前可用 <b>{creditModal.available}</b> 积分。</p>
             <div className="ecom-modal-actions">
               <button className="ecom-btn-ghost" onClick={() => setCreditModal(null)}>取消</button>
-              <a className="primary" href="/credit">获取额度</a>
+              <a className="primary" href="/credit">获取积分</a>
             </div>
           </div>
         </div>

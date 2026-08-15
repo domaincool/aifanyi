@@ -55,7 +55,7 @@ export async function POST(req: NextRequest) {
       }).catch(() => {}); // 重复入库忽略
     }
 
-    // 盲测 0 额度（获客），但写 UsageRecord 供统计
+    // 盲测 0 积分（获客），但写 UsageRecord 供统计
     await prisma.usageRecord.create({
       data: {
         feature: 'blindtest',

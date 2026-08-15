@@ -15,7 +15,7 @@ export async function POST(req: NextRequest) {
   let creditCtx: { jobId: string; usageId: string; estimated: number; userId: string } | null = null;
   try {
     const auth = await getAuthUserId();
-    if (!auth) return NextResponse.json({ ok: false, code: 'auth_required', error: '请先登录后再使用该功能。登录后新用户可获赠 500 免费额度。' }, { status: 401 });
+    if (!auth) return NextResponse.json({ ok: false, code: 'auth_required', error: '请先登录后再使用该功能。登录后新用户可获赠 500 免费积分。' }, { status: 401 });
     const userId = auth.userId;
     // 身份：优先登录态（cookie session），否则 guest cookie
     const guestSessionId: string | null = null;
@@ -47,7 +47,7 @@ export async function POST(req: NextRequest) {
 
     const taskId = 'sub_' + Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
 
-    // 额度：按字幕时长 1/分钟 → reserve（原子检查余额）
+    // 积分：按字幕时长 1/分钟 → reserve（原子检查余额）
     const first = cues[0], last = cues[cues.length - 1];
     const parseTime = (t: string): number => {
       const mm = t.match(/(\d+):(\d{2}):(\d{2})[,.]?(\d{0,3})/);

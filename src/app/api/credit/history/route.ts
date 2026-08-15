@@ -21,8 +21,8 @@ export async function GET() {
     let label = r.description || '';
     if (r.type === 'grant') label = r.description || ('积分到账 +' + Math.abs(r.amount));
     else if (r.type === 'consume') label = `翻译完成，使用 ${Math.abs(r.amount)}`;
-    else if (r.type === 'release') label = '翻译未完成，额度已退回';
-    else if (r.type === 'expire') label = '免费额度到期';
+    else if (r.type === 'release') label = '翻译未完成，积分已退回';
+    else if (r.type === 'expire') label = '免费积分到期';
     else if (r.type === 'refund') label = '系统补偿';
     else if (r.type === 'admin_adjust') label = '管理员调整';
     return { id: r.id, type: r.type, amount: r.amount, label, createdAt: r.createdAt };

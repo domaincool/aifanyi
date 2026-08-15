@@ -47,7 +47,7 @@ export async function GET(req: NextRequest, { params }: { params: Promise<{ task
 }
 
 /**
- * PATCH /api/pdf/tasks/:taskId — 取消任务（未完成全量退回额度）
+ * PATCH /api/pdf/tasks/:taskId — 取消任务（未完成全量退回积分）
  */
 export async function PATCH(req: NextRequest, { params }: { params: Promise<{ taskId: string }> }) {
   try {
@@ -72,10 +72,10 @@ export async function PATCH(req: NextRequest, { params }: { params: Promise<{ ta
 
     await prisma.pdfJob.update({
       where: { taskId },
-      data: { status: 'cancelled', errorMessage: '任务已取消，已用额度已退回。', creditState: 'released' },
+      data: { status: 'cancelled', errorMessage: '任务已取消，已用积分已退回。', creditState: 'released' },
     });
 
-    // 额度全退（幂等）
+    // 积分全退（幂等）
     if (job.userId && (job.reservedCredits || 0) > 0) {
       const usage = await prisma.usageRecord.findFirst({ where: { jobId: taskId }, select: { id: true } });
       if (usage) {

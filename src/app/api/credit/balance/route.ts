@@ -1,7 +1,7 @@
 /**
  * GET /api/credit/balance
  * 登录：返回可用/预留/来源/本月已用；未登录：返回游客引导文案（登录送 500）
- * 注册赠送懒触发：首次访问额度时发放（幂等 signup_bonus:{userId}）
+ * 注册赠送懒触发：首次访问积分时发放（幂等 signup_bonus:{userId}）
  */
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/db';
@@ -18,7 +18,7 @@ export async function GET() {
     return NextResponse.json({
       loggedIn: false,
       signupBonus: SIGNUP_BONUS,
-      message: '登录后即可获得免费额度',
+      message: '登录后即可获得免费积分',
     });
   }
   const userId = auth.userId;

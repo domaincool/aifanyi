@@ -5,7 +5,7 @@
  * 状态：IDLE → RECORDING → TRANSCRIBING → TRANSLATING → SYNTHESIZING → PLAYING → COMPLETED → ERROR
  * 录音：AnalyserNode 音量（波形）+ ScriptProcessor 采集 + VAD 自动断句（标准/安静/嘈杂）
  * 处理：/api/voice/translate?stream=1 SSE 真实阶段事件
- * 额度：预计（服务端 estimate） + 本次（usedCredits），用户只见「额度」一词
+ * 积分：预计（服务端 estimate） + 本次（usedCredits），用户只见「积分」一词
  */
 import { useCallback, useEffect, useRef, useState } from 'react';
 
@@ -92,8 +92,8 @@ export function useVoiceSession(initialSource = 'zh', initialTarget = 'en') {
   const [direction, setDirection] = useState({ sourceLang: initialSource, targetLang: initialTarget });
   const [vadLevel, setVadLevelState] = useState<VadLevel>('standard');
   const [recentLangs, setRecentLangs] = useState<string[]>([]);
-  const [estCredits, setEstCredits] = useState<number | null>(null); // 预计额度
-  const [lastUsed, setLastUsed] = useState<number | null>(null); // 本次使用额度
+  const [estCredits, setEstCredits] = useState<number | null>(null); // 预计积分
+  const [lastUsed, setLastUsed] = useState<number | null>(null); // 本次使用积分
   const [holdMode, setHoldMode] = useState(false); // 按住说话（备用模式）
 
   const recRef = useRef<Rec | null>(null);
@@ -125,7 +125,7 @@ export function useVoiceSession(initialSource = 'zh', initialTarget = 'en') {
     try { localStorage.setItem('aifanyi_recent_langs', JSON.stringify(next)); } catch {}
   };
 
-  /* ---------- 预计额度（服务端算价） ---------- */
+  /* ---------- 预计积分（服务端算价） ---------- */
   useEffect(() => {
     let dead = false;
     fetch('/api/credit/estimate?feature=voice&seconds=15')
@@ -198,7 +198,7 @@ export function useVoiceSession(initialSource = 'zh', initialTarget = 'en') {
       }
       if (res.status === 402) {
         const d = await res.json().catch(() => ({}));
-        setPhaseSafe('ERROR'); setError((d && d.error) || '额度不足，请先补充额度。');
+        setPhaseSafe('ERROR'); setError((d && d.error) || '积分不足，请先补充积分。');
         return;
       }
       if (res.status === 429) {
@@ -238,7 +238,7 @@ export function useVoiceSession(initialSource = 'zh', initialTarget = 'en') {
       if (!result) { setPhaseSafe('ERROR'); setError('语音翻译失败，请重试。'); return; }
       if (!result.ok) {
         setPhaseSafe('ERROR');
-        if (result.status === 402) setError('额度不足，请先补充额度。');
+        if (result.status === 402) setError('积分不足，请先补充积分。');
         else if (result.status === 429) setError('操作太频繁，请稍等片刻再试。');
         else setError(result.error || '语音翻译失败，请重试。');
         return;

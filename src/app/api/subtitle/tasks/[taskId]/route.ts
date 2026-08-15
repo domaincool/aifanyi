@@ -36,7 +36,7 @@ export async function GET(_req: NextRequest, { params }: { params: Promise<{ tas
 }
 
 /**
- * PATCH /api/subtitle/tasks/:taskId — 取消任务（未完成全量退回额度）
+ * PATCH /api/subtitle/tasks/:taskId — 取消任务（未完成全量退回积分）
  */
 export async function PATCH(req: NextRequest, { params }: { params: Promise<{ taskId: string }> }) {
   try {
@@ -57,7 +57,7 @@ export async function PATCH(req: NextRequest, { params }: { params: Promise<{ ta
 
     await prisma.subtitleJob.update({
       where: { taskId },
-      data: { status: 'cancelled', errorMessage: '任务已取消，已用额度已退回。', creditState: 'released' },
+      data: { status: 'cancelled', errorMessage: '任务已取消，已用积分已退回。', creditState: 'released' },
     });
 
     if (job.userId && (job.reservedCredits || 0) > 0) {

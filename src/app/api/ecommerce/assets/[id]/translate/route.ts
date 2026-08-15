@@ -59,7 +59,7 @@ export async function POST(req: Request, { params }: Ctx) {
 
     const settle = await endSyncSuccess({ userId, jobId, usageId: begin.usageId, estimated: begin.estimated, actualCredits: begin.estimated });
     if (!settle.ok) {
-      return NextResponse.json({ ok: false, error: settle.error || '额度结算异常' }, { status: 500 });
+      return NextResponse.json({ ok: false, error: settle.error || '积分结算异常' }, { status: 500 });
     }
 
     return NextResponse.json({ ok: true, translation, consumedCredits: settle.consumed });

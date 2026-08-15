@@ -13,7 +13,7 @@ export type GuestLimitResult =
   | { ok: true }
   | { ok: false; retryAfterMs: number; error: string; code: string };
 
-/** 请求进入时的检查（翻译成功与否都消耗一次频率额度；日预算只在成功后计） */
+/** 请求进入时的检查（翻译成功与否都消耗一次频率积分；日预算只在成功后计） */
 export async function checkGuestLimit(req: NextRequest): Promise<GuestLimitResult> {
   const ipHash = getGuestIpHash(req);
 
@@ -35,7 +35,7 @@ export async function checkGuestLimit(req: NextRequest): Promise<GuestLimitResul
     return {
       ok: false,
       retryAfterMs: 0,
-      error: '今日游客免费翻译额度已用完（每天 ' + GUEST_LIMITS.dailyMax + ' 次 / ' + GUEST_LIMITS.dailyChars + ' 字符），登录后解锁更多额度',
+      error: '今日游客免费翻译积分已用完（每天 ' + GUEST_LIMITS.dailyMax + ' 次 / ' + GUEST_LIMITS.dailyChars + ' 字符），登录后解锁更多积分',
       code: 'DAILY_LIMIT',
     };
   }

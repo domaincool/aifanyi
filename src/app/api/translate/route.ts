@@ -29,7 +29,7 @@ export async function POST(req: NextRequest) {
     const reqSourceLang = polish ? targetLang : sourceLang;
     const feature = polish ? FEATURES.POLISH : FEATURES.TEXT;
 
-    // 缓存预检：命中直接返回（不产生 AI 调用，不扣额度）
+    // 缓存预检：命中直接返回（不产生 AI 调用，不扣积分）
     const cacheKey = hashText(text, reqSourceLang, targetLang, reqScenario);
     const hit = getCache(cacheKey);
     if (hit) {

@@ -1,5 +1,5 @@
 /**
- * PDF 翻译 · 配置（限制/价格/额度全部配置化，env 可覆盖）
+ * PDF 翻译 · 配置（限制/价格/积分全部配置化，env 可覆盖）
  */
 
 export const PDF_CONFIG = {
@@ -11,7 +11,7 @@ export const PDF_CONFIG = {
   /** 翻译组：同页合并 block 数 */
   groupSize: Number(process.env.PDF_GROUP_SIZE || 4), // 3-5 之间
 
-  /** 额度（免费额度，先到为准） */
+  /** 积分（免费积分，先到为准） */
   quota: {
     dailyFiles: Number(process.env.PDF_DAILY_FILES || 5),
     dailyPages: Number(process.env.PDF_DAILY_PAGES || 50),
@@ -30,7 +30,7 @@ export const PDF_CONFIG = {
     deepseekOut: Number(process.env.COST_DEEPSEEK_OUT || 1.1),
     glmIn: Number(process.env.COST_GLM_IN || 0.01),
     glmOut: Number(process.env.COST_GLM_OUT || 0.01),
-    googlePerChar: 0, // 免费额度内
+    googlePerChar: 0, // 免费积分内
   },
 
   /** prompt 版本（改 prompt 时 +1，缓存 key 随版本失效） */

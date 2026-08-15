@@ -101,7 +101,7 @@ async function processJob(taskId: string): Promise<void> {
     );
     const failedBlocks = translatableBlocks - translatedBlocks;
 
-    // 额度结算：按成功翻译块比例 consume，差额退回；全失败全退
+    // 积分结算：按成功翻译块比例 consume，差额退回；全失败全退
     if (job.userId) {
       const usage = await prisma.usageRecord.findFirst({ where: { jobId: taskId }, select: { id: true } });
       const est = job.reservedCredits || 0;
@@ -129,7 +129,7 @@ async function processJob(taskId: string): Promise<void> {
     console.log(`[pdf-job] ${taskId} 完成: ${translatedBlocks}/${totalBlocks} 块, ¥${(totalCost * 7.2).toFixed(3)}, ${Date.now() - started}ms`);
   } catch (e: any) {
     console.error(`[pdf-job] ${taskId} 失败:`, e?.message);
-    // 额度：失败全退
+    // 积分：失败全退
     if (job?.userId) {
       const usage = await prisma.usageRecord.findFirst({ where: { jobId: taskId }, select: { id: true } });
       if (usage && (job?.reservedCredits || 0) > 0) {

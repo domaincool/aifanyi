@@ -1,7 +1,7 @@
 ﻿/**
  * POST /api/pdf/compare
  * 段落级多模型对比：DeepSeek（已有，缓存命中零成本）+ GLM + Google
- * 额度：20 段/日（clientKey 维度）
+ * 积分：20 段/日（clientKey 维度）
  * 返回 { blockId, translations: { deepseek, glm, google } }
  */
 import { NextRequest, NextResponse } from 'next/server';
@@ -36,7 +36,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ errorType: 'task_not_found', message: '任务不存在或已过期。' }, { status: 404 });
     }
 
-    // 对比额度：今日该 clientKey 对比次数 < 20
+    // 对比积分：今日该 clientKey 对比次数 < 20
     const todayStart = new Date();
     todayStart.setHours(0, 0, 0, 0);
     const agg = await prisma.pdfJob.aggregate({
@@ -45,7 +45,7 @@ export async function POST(req: NextRequest) {
     });
     const usedToday = agg._sum.compareCount || 0;
     if (usedToday >= PDF_CONFIG.quota.dailyCompareSegments) {
-      return NextResponse.json({ errorType: 'quota_exceeded', message: `今日多模型对比额度已用完（${PDF_CONFIG.quota.dailyCompareSegments} 段/日）。明天再来吧！` }, { status: 429 });
+      return NextResponse.json({ errorType: 'quota_exceeded', message: `今日多模型对比积分已用完（${PDF_CONFIG.quota.dailyCompareSegments} 段/日）。明天再来吧！` }, { status: 429 });
     }
 
     const doc = job.document as unknown as PdfDocument;

@@ -144,7 +144,7 @@ export async function POST(req: Request, { params }: Ctx) {
 
     const settle = await endSyncSuccess({ userId, jobId, usageId: begin.usageId, estimated: begin.estimated, actualCredits: begin.estimated });
     if (!settle.ok) {
-      return NextResponse.json({ ok: false, error: settle.error || '额度结算异常' }, { status: 500 });
+      return NextResponse.json({ ok: false, error: settle.error || '积分结算异常' }, { status: 500 });
     }
 
     return NextResponse.json({
@@ -162,6 +162,6 @@ export async function POST(req: Request, { params }: Ctx) {
     });
   } catch (e: any) {
     await endSyncFail({ userId, jobId, usageId: begin.usageId, estimated: begin.estimated });
-    return NextResponse.json({ ok: false, error: e?.message || 'AI 修改失败，额度已退回，请稍后重试。' }, { status: 500 });
+    return NextResponse.json({ ok: false, error: e?.message || 'AI 修改失败，积分已退回，请稍后重试。' }, { status: 500 });
   }
 }

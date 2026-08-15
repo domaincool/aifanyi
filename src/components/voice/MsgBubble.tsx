@@ -1,7 +1,7 @@
 'use client';
 
 /** MsgBubble：对话气泡（三视图共用）
- * 原文 + 译文 + 播放/暂停/重播 + 复制 + 自动播放被拦 fallback + TTS 失败提示 + 额度
+ * 原文 + 译文 + 播放/暂停/重播 + 复制 + 自动播放被拦 fallback + TTS 失败提示 + 积分
  */
 import { useState } from 'react';
 import { LANG_LABEL, VoiceMsg } from '@/lib/voice/useVoiceSession';
@@ -64,7 +64,7 @@ export default function MsgBubble(props: {
             {copied ? '✓ 已复制' : '⧉ 复制'}
           </button>
           {msg.usedCredits > 0 && (
-            <span style={{ fontSize: 11, color: dark ? 'rgba(255,255,255,.5)' : 'var(--muted)' }}>本次使用 {msg.usedCredits} 个额度</span>
+            <span style={{ fontSize: 11, color: dark ? 'rgba(255,255,255,.5)' : 'var(--muted)' }}>本次使用 {msg.usedCredits} 个积分</span>
           )}
         </div>
         {msg.autoplayBlocked && (

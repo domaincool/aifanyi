@@ -53,7 +53,7 @@ export async function POST(req: NextRequest) {
     }
     if (lines.length) batches.push({ start: startIdx, end: limited.length - 1, content: lines.join('\n') });
 
-    // 额度：按总字符估算 → reserve（原子检查余额）
+    // 积分：按总字符估算 → reserve（原子检查余额）
     const totalChars = limited.reduce((s: number, p: any) => s + (p.text || '').length, 0);
     const estCredits = await estimateByChars(FEATURES.DOC, totalChars);
     const jobId = `doc_${crypto.randomUUID()}`;

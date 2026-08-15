@@ -1,7 +1,7 @@
 'use client';
 
 /** VoiceDesktopView：桌面双面板面对面（≥1024px）
- * A/B 各带方向 + 波形 + 大按钮 + 分段状态；下方共享对话流（MsgBubble）+ 清空 + 额度
+ * A/B 各带方向 + 波形 + 大按钮 + 分段状态；下方共享对话流（MsgBubble）+ 清空 + 积分
  */
 import { useEffect, useRef } from 'react';
 import { LANG_LABEL, LANGS, useVoiceSession } from '@/lib/voice/useVoiceSession';
@@ -86,7 +86,7 @@ function Panel({ session, side, accent, label }: { session: ReturnType<typeof us
         按住说话（备用）
       </label>
       {s.estCredits !== null && (
-        <div style={{ fontSize: 12, color: 'var(--muted)', marginTop: 4 }}>预计使用约 {s.estCredits} 个额度 / 次</div>
+        <div style={{ fontSize: 12, color: 'var(--muted)', marginTop: 4 }}>预计使用约 {s.estCredits} 个积分 / 次</div>
       )}
     </div>
   );

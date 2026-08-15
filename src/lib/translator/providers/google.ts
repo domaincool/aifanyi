@@ -2,7 +2,7 @@
 
 /**
  * Google Cloud Translation Provider（取代 DeepL）
- * 免费额度 50 万字符/月；超出后按 $20/百万字符 计费。
+ * 免费积分 50 万字符/月；超出后按 $20/百万字符 计费。
  * 用于保底/精翻，以及盲测多模型对比。
  *
  * 语言代码映射：Google 需要 zh-CN 而非 zh；ja/en/de/es 直接透传
@@ -22,7 +22,7 @@ const LANG_MAP: Record<string, string> = {
 export class GoogleTranslateProvider implements TranslateProvider {
   readonly id = 'google';
   readonly displayName = 'Google 翻译';
-  readonly costPerMTokIn = 0; // 按字符计费，免费额度内不计成本
+  readonly costPerMTokIn = 0; // 按字符计费，免费积分内不计成本
   readonly costPerMTokOut = 0;
 
   private apiKey: string;
@@ -60,7 +60,7 @@ export class GoogleTranslateProvider implements TranslateProvider {
         text: text.trim(),
         promptTokens: chars,
         completionTokens: chars,
-        costUsd: 0, // 免费额度内不计费；超量后按字符计，后续可细化
+        costUsd: 0, // 免费积分内不计费；超量后按字符计，后续可细化
         latencyMs: Date.now() - started,
       };
     } catch (e: any) {

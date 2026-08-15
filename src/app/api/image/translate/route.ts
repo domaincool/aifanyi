@@ -44,7 +44,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ ok: false, error: '这张图片里没有识别到文字。' }, { status: 422 });
     }
 
-    // 额度：图片固定 3 额度/张 → reserve（原子检查余额）
+    // 积分：图片固定 3 积分/张 → reserve（原子检查余额）
     const jobId = `img_${crypto.randomUUID()}`;
     const begin = await beginSync({ userId: auth.userId, jobId, feature: FEATURES.IMAGE, estimatedCredits: 3 });
     if (!begin.ok) return NextResponse.json({ ok: false, error: begin.error }, { status: 402 });

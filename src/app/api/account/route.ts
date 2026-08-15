@@ -34,7 +34,7 @@ export async function PATCH(req: NextRequest) {
  * 1. User.status='deleted'（validateSession 检查 status，会话立即失效）
  * 2. email 匿名化（防重新注册冲突）
  * 3. Sessions revoke + 本地 cookie 清理
- * 4. CreditGrant 额度归零 / CreditAccount 余额清零（写 Ledger「账户注销」审计行）
+ * 4. CreditGrant 积分归零 / CreditAccount 余额清零（写 Ledger「账户注销」审计行）
  * 5. CreditLedger / PdfJob / UsageLedger / Vote / Correction / Glossary 全部保留（历史审计）
  */
 export async function DELETE(req: NextRequest) {
@@ -45,7 +45,7 @@ export async function DELETE(req: NextRequest) {
 
   const userId = user.userId;
 
-  // 1) 额度归零：CreditAccount 余额清零（写 Ledger 审计行）+ CreditGrant 归零
+  // 1) 积分归零：CreditAccount 余额清零（写 Ledger 审计行）+ CreditGrant 归零
   await prisma.$transaction(async (tx) => {
     const acc = await tx.creditAccount.findUnique({ where: { userId } });
     if (acc && acc.balance + acc.reservedBalance > 0) {
@@ -56,7 +56,7 @@ export async function DELETE(req: NextRequest) {
           type: 'admin_adjust',
           amount: -(acc.balance + acc.reservedBalance),
           idempotencyKey: `account_close:${userId}:${Date.now()}`,
-          description: '账户注销，剩余额度清零',
+          description: '账户注销，剩余积分清零',
           metadata: { reason: 'account_deleted' },
         },
       });

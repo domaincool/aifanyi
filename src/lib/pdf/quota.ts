@@ -1,5 +1,5 @@
 /**
- * PDF 免费额度：游客/登录用户差异化，配置化
+ * PDF 免费积分：游客/登录用户差异化，配置化
  * 游客：1 文件/日 / 10 页/日
  * 登录：5 文件/日 / 50 页/日
  * 防滥用维度：clientKey（IP+UA 哈希）
@@ -35,7 +35,7 @@ export async function checkPdfQuota(
   const pagesToday = pagesAgg._sum.pageCount || 0;
 
   if (filesToday >= dailyFiles) {
-    return { ok: false, reason: `今日免费额度已用完（${filesToday}/${dailyFiles} 个文件）。${isGuest ? '登录后可获得更多额度。' : '明天自动恢复。'}` };
+    return { ok: false, reason: `今日免费积分已用完（${filesToday}/${dailyFiles} 个文件）。${isGuest ? '登录后可获得更多积分。' : '明天自动恢复。'}` };
   }
   if (pagesToday + pageCount > dailyPages) {
     return { ok: false, reason: `今日剩余页数不足（已用 ${pagesToday}/${dailyPages} 页，本次需 ${pageCount} 页）。` };

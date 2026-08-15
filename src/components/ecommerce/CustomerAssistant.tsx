@@ -91,7 +91,7 @@ export default function CustomerAssistant({ productId }: { productId: string }) 
     setBusy('translate');
     const r = await call(`/api/ecommerce/messages/${selected.id}/translate`, 'POST');
     if (r.json.ok) {
-      showToast(`已翻译，本次使用 ${r.json.consumedCredits} 额度`);
+      showToast(`已翻译，本次使用 ${r.json.consumedCredits} 积分`);
       await loadMessages();
     } else if (r.json.code === 'insufficient') {
       setCreditModal({ estimated: r.json.estimated ?? 0, available: r.json.available ?? 0 });
@@ -106,7 +106,7 @@ export default function CustomerAssistant({ productId }: { productId: string }) 
     setBusy('reply');
     const r = await call(`/api/ecommerce/messages/${selected.id}/reply`, 'POST');
     if (r.json.ok) {
-      showToast(`回复已生成，本次使用 ${r.json.consumedCredits} 额度`);
+      showToast(`回复已生成，本次使用 ${r.json.consumedCredits} 积分`);
       await loadMessages();
     } else if (r.json.code === 'insufficient') {
       setCreditModal({ estimated: r.json.estimated ?? 0, available: r.json.available ?? 0 });
@@ -121,7 +121,7 @@ export default function CustomerAssistant({ productId }: { productId: string }) 
     setBusy('retone');
     const r = await call(`/api/ecommerce/messages/${selected.id}/retone`, 'POST', { tone });
     if (r.json.ok) {
-      showToast(`语气已调整为「${toneLabel(tone)}」，本次使用 ${r.json.consumedCredits} 额度`);
+      showToast(`语气已调整为「${toneLabel(tone)}」，本次使用 ${r.json.consumedCredits} 积分`);
       await loadMessages();
     } else if (r.json.code === 'insufficient') {
       setCreditModal({ estimated: r.json.estimated ?? 0, available: r.json.available ?? 0 });
@@ -230,11 +230,11 @@ export default function CustomerAssistant({ productId }: { productId: string }) 
       {creditModal ? (
         <div className="ecom-mask" onClick={() => setCreditModal(null)}>
           <div className="ecom-modal" onClick={(e) => e.stopPropagation()}>
-            <div className="ecom-modal-head"><h3>额度不足</h3></div>
-            <p className="ecom-credit-text">本次预计需要 <b>{creditModal.estimated}</b> 额度，当前可用 <b>{creditModal.available}</b> 额度。</p>
+            <div className="ecom-modal-head"><h3>积分不足</h3></div>
+            <p className="ecom-credit-text">本次预计需要 <b>{creditModal.estimated}</b> 积分，当前可用 <b>{creditModal.available}</b> 积分。</p>
             <div className="ecom-modal-actions">
               <button className="ecom-btn-ghost" onClick={() => setCreditModal(null)}>取消</button>
-              <a className="primary" href="/credit">获取额度</a>
+              <a className="primary" href="/credit">获取积分</a>
             </div>
           </div>
         </div>

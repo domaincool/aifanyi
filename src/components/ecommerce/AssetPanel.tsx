@@ -103,7 +103,7 @@ export default function AssetPanel({ productId }: { productId: string }) {
       const data = await res.json();
       if (data.ok) {
         setTranslation(data.translation);
-        showToast(`翻译完成，本次使用 ${data.consumedCredits} 额度`);
+        showToast(`翻译完成，本次使用 ${data.consumedCredits} 积分`);
       } else if (data.code === 'insufficient') {
         setCreditModal({ estimated: data.estimated ?? 0, available: data.available ?? 0 });
       } else {
@@ -180,11 +180,11 @@ export default function AssetPanel({ productId }: { productId: string }) {
       {creditModal ? (
         <div className="ecom-mask" onClick={() => setCreditModal(null)}>
           <div className="ecom-modal" onClick={(e) => e.stopPropagation()}>
-            <div className="ecom-modal-head"><h3>额度不足</h3></div>
-            <p className="ecom-credit-text">本次预计需要 <b>{creditModal.estimated}</b> 额度，当前可用 <b>{creditModal.available}</b> 额度。</p>
+            <div className="ecom-modal-head"><h3>积分不足</h3></div>
+            <p className="ecom-credit-text">本次预计需要 <b>{creditModal.estimated}</b> 积分，当前可用 <b>{creditModal.available}</b> 积分。</p>
             <div className="ecom-modal-actions">
               <button className="ecom-btn-ghost" onClick={() => setCreditModal(null)}>取消</button>
-              <a className="primary" href="/credit">获取额度</a>
+              <a className="primary" href="/credit">获取积分</a>
             </div>
           </div>
         </div>

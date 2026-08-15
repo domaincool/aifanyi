@@ -212,7 +212,7 @@ export default function LoginModal({ onClose }: { onClose: () => void }) {
 
             <div className="login-benefits">
               <span>✓ 翻译记录跨设备同步</span>
-              <span>✓ 更多使用额度</span>
+              <span>✓ 更多使用积分</span>
               <span>✓ 擂台参赛与积分</span>
             </div>
 
