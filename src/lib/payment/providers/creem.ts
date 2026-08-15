@@ -62,7 +62,7 @@ export const creemProvider: PaymentProvider = {
       request_id: input.orderId, // 幂等键 = 我方订单 id，防重复下单
       customer: { email: input.email },
       metadata: { orderId: input.orderId, planCode: input.planCode, userId: input.userId },
-      success_url: process.env.CREEM_SUCCESS_URL || 'https://aifanyi.com/credit',
+      success_url: (process.env.CREEM_SUCCESS_URL || 'https://aifanyi.com/credit') + '?paid=' + input.orderId,
     };
     const res = await fetch(apiBase() + '/checkouts', {
       method: 'POST',

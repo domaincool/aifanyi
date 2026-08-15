@@ -44,6 +44,7 @@ export default function CreditClient() {
   const [history, setHistory] = useState<HistoryItem[]>([]);
   const [plans, setPlans] = useState<Plan[]>([]);
   const [buying, setBuying] = useState<string | null>(null);
+  const [paidPending, setPaidPending] = useState(false);
   const [msg, setMsg] = useState<string | null>(null);
   const [err, setErr] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
@@ -62,6 +63,45 @@ export default function CreditClient() {
   };
 
   useEffect(load, []);
+
+  // 支付成功跳回（?paid=<orderId>）：轮询订单到账状态
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const params = new URLSearchParams(window.location.search);
+    const orderId = params.get('paid');
+    if (!orderId) return;
+    setPaidPending(true);
+    let tries = 0;
+    const timer = setInterval(async () => {
+      tries++;
+      try {
+        const r = await fetch('/api/credits/order?orderId=' + encodeURIComponent(orderId));
+        const j = await r.json();
+        if (j.ok && j.status === 'granted') {
+          clearInterval(timer);
+          setPaidPending(false);
+          const g = j.granted || { purchased: 0, bonus: 0 };
+          setMsg('✅ 支付成功，积分已到账 +' + (g.purchased + g.bonus) + (g.bonus > 0 ? '（含赠送 +' + g.bonus + '）' : ''));
+          load();
+          return;
+        }
+        if (j.ok && (j.status === 'expired' || j.status === 'cancelled')) {
+          clearInterval(timer);
+          setPaidPending(false);
+          setErr('该订单未支付成功，如需购买请重新下单。');
+          return;
+        }
+      } catch (e) {
+        /* 网络抖动，继续轮询 */
+      }
+      if (tries >= 20) {
+        clearInterval(timer);
+        setPaidPending(false);
+        setMsg('支付已完成，积分到账可能有延迟，请稍后刷新页面查看。');
+      }
+    }, 4000);
+    return () => clearInterval(timer);
+  }, []);
 
   if (loading) return <p style={{ color: 'var(--muted)' }}>加载中…</p>;
 
@@ -124,6 +164,11 @@ export default function CreditClient() {
 
   return (
     <div style={{ maxWidth: 720, margin: '0 auto', display: 'grid', gap: 20 }}>
+      {paidPending && (
+        <div style={{ background: 'rgba(34,197,94,.12)', border: '1px solid rgba(34,197,94,.4)', borderRadius: 14, padding: '14px 16px', fontSize: 14, lineHeight: 1.6 }}>
+          ⏳ 支付成功，正在确认到账（通常几秒内）…页面会自动刷新。
+        </div>
+      )}
       {/* 顶部：可用积分 */}
       <div style={{ background: 'var(--panel)', border: '1px solid var(--border)', borderRadius: 20, padding: 28 }}>
         <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12 }}>
