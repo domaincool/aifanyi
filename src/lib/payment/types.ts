@@ -1,10 +1,10 @@
 /**
  * 支付渠道抽象层类型
- * 支持 mock / lemonsqueezy / paddle，未来可扩展 wechat / alipay / stripe
+ * 支持 mock / lemonsqueezy / paddle / creem，未来可扩展 wechat / alipay / stripe
  * 换渠道 = 换 provider 实现 + 改 PAYMENT_PROVIDER 环境变量，不动业务代码
  */
 
-export type PaymentProviderCode = 'mock' | 'lemonsqueezy' | 'paddle';
+export type PaymentProviderCode = 'mock' | 'lemonsqueezy' | 'paddle' | 'creem';
 
 export interface CreateCheckoutInput {
   orderId: string;
