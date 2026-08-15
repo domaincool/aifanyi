@@ -43,7 +43,8 @@ export default async function HomePage() {
 
       <h2 className="section-title" id="workbench">💼 跨境电商工作台</h2>
       <p style={{ color: 'var(--muted)' }}>
-        标题 / 五点描述 / 客服邮件本地化，按目标市场风格档输出。MVP 开发中，敬请期待。
+        产品标题 / 五点描述 / 客服回复 AI 本地化，按目标市场风格档输出，多语言一键切换。
+        <a href="/ecommerce" style={{ color: 'var(--accent2)' }}>去使用 →</a>
       </p>
 
       <section className="why-section">
