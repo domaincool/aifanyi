@@ -24,7 +24,7 @@ export async function POST(req: NextRequest) {
   let creditCtx: { jobId: string; usageId: string; estimated: number; userId: string } | null = null;
   try {
     const auth = await getAuthUserId();
-    if (!auth) return NextResponse.json({ errorType: 'auth_required', message: '请先登录后再使用该功能。登录后新用户可获赠 300 免费额度。' }, { status: 401 });
+    if (!auth) return NextResponse.json({ errorType: 'auth_required', message: '请先登录后再使用该功能。登录后新用户可获赠 500 免费额度。' }, { status: 401 });
     const userId = auth.userId;
     const form = await req.formData();
     const file = form.get('file');

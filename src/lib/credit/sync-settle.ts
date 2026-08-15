@@ -26,7 +26,7 @@ export function authErrorBody() {
   return {
     ok: false as const,
     code: 'auth_required',
-    error: '请先登录后再使用该功能。登录后新用户可获赠 300 免费额度，用完再按用量计费。',
+    error: '请先登录后再使用该功能。登录后新用户可获赠 500 免费额度，用完再按用量计费。',
   };
 }
 
@@ -122,7 +122,7 @@ export async function endSyncFail(input: {
 /** 按字符数估算（web/doc 共用：按 PricingRule，2 credits / 千字） */
 export async function estimateByChars(feature: Feature, chars: number): Promise<number> {
   const rule = await estimateCredits(feature, Math.max(0, Math.round(chars / 1000)));
-  return rule?.credits ?? Math.max(1, Math.ceil(chars / 1000) * 2);
+  return rule?.credits ?? Math.max(1, Math.ceil(chars / 1000) * 20);
 }
 
 export { FEATURES };

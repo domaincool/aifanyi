@@ -18,6 +18,7 @@ export type LedgerType = (typeof LEDGER_TYPES)[keyof typeof LEDGER_TYPES];
 /** CreditGrant.type 来源批次 */
 export const GRANT_TYPES = {
   FREE_MONTHLY: 'FREE_MONTHLY',
+  FREE_GRANT: 'FREE_GRANT',
   BONUS: 'BONUS',
   SUBSCRIPTION: 'SUBSCRIPTION',
   PURCHASED: 'PURCHASED',

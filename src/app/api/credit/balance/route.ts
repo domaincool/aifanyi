@@ -1,6 +1,6 @@
 /**
  * GET /api/credit/balance
- * 登录：返回可用/预留/来源/本月已用；未登录：返回游客引导文案（登录送 300）
+ * 登录：返回可用/预留/来源/本月已用；未登录：返回游客引导文案（登录送 500）
  * 注册赠送懒触发：首次访问额度时发放（幂等 signup_bonus:{userId}）
  */
 import { NextResponse } from 'next/server';
@@ -9,7 +9,7 @@ import { getAuthUserId } from '@/lib/credit/sync-settle';
 import { grantCredits } from '@/lib/credit/engine';
 import { GRANT_TYPES } from '@/lib/credit/types';
 
-const SIGNUP_BONUS = 300;
+const SIGNUP_BONUS = 500;
 const SIGNUP_TTL_DAYS = 30;
 
 export async function GET() {
@@ -25,12 +25,12 @@ export async function GET() {
 
   // 注册赠送懒触发（幂等）
   const existing = await prisma.creditGrant.findFirst({
-    where: { userId, type: GRANT_TYPES.BONUS, source: '注册赠送' },
+    where: { userId, type: GRANT_TYPES.FREE_GRANT, source: '注册赠送' },
   });
   if (!existing) {
     await grantCredits({
       userId,
-      type: GRANT_TYPES.BONUS,
+      type: GRANT_TYPES.FREE_GRANT,
       source: '注册赠送',
       amount: SIGNUP_BONUS,
       expiresAt: new Date(Date.now() + SIGNUP_TTL_DAYS * 86400_000),

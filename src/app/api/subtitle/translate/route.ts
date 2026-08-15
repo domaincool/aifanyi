@@ -15,7 +15,7 @@ export async function POST(req: NextRequest) {
   let creditCtx: { jobId: string; usageId: string; estimated: number; userId: string } | null = null;
   try {
     const auth = await getAuthUserId();
-    if (!auth) return NextResponse.json({ ok: false, code: 'auth_required', error: '请先登录后再使用该功能。登录后新用户可获赠 300 免费额度。' }, { status: 401 });
+    if (!auth) return NextResponse.json({ ok: false, code: 'auth_required', error: '请先登录后再使用该功能。登录后新用户可获赠 500 免费额度。' }, { status: 401 });
     const userId = auth.userId;
     // 身份：优先登录态（cookie session），否则 guest cookie
     const guestSessionId: string | null = null;

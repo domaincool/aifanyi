@@ -8,7 +8,8 @@ import { Prisma } from '@prisma/client';
 /** 批次类型优先级：数字越小越先消费（在「先过期」之后作为次级排序） */
 export const GRANT_TYPE_PRIORITY: Record<string, number> = {
   FREE_MONTHLY: 1, // 免费/月度额度先消费
-  BONUS: 2, // 赠送
+  FREE_GRANT: 1, // 注册赠送（新用户体验额度）先消费
+  BONUS: 2, // 充值赠送
   SUBSCRIPTION: 3,
   PURCHASED: 4, // 购买的永久额度最后消费
   REFUND: 5,

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>aifanyi.com 商业化方案 · 支付与定价规划</title>
+<style>
+  :root {
+    --bg: #f7f8fa; --panel: #ffffff; --border: #e6e8ec;
+    --text: #1a1d21; --muted: #6b7280;
+    --accent: #2563eb; --accent2: #0891b2; --gold: #d97706;
+    --green: #16a34a; --red: #dc2626;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+    font-family: -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    line-height: 1.7; }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 32px 20px 80px; }
+  header { padding: 28px 24px; background: linear-gradient(135deg, #1e3a8a, #2563eb 60%, #0891b2);
+    color: #fff; border-radius: 16px; margin-bottom: 24px; }
+  header h1 { margin: 0 0 8px; font-size: 26px; }
+  header .sub { opacity: .9; font-size: 14px; }
+  header .tag { display: inline-block; background: rgba(255,255,255,.18); padding: 3px 12px;
+    border-radius: 999px; font-size: 12px; margin-top: 10px; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-bottom: 28px; }
+  .card { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 18px; }
+  .card .k { font-size: 12px; color: var(--muted); }
+  .card .v { font-size: 22px; font-weight: 700; margin-top: 4px; }
+  .card .v small { font-size: 13px; font-weight: 400; color: var(--muted); }
+  .card.green .v { color: var(--green); } .card.gold .v { color: var(--gold); }
+  .card.blue .v { color: var(--accent); }
+  section { background: var(--panel); border: 1px solid var(--border); border-radius: 14px;
+    padding: 26px 28px; margin-bottom: 20px; }
+  h2 { font-size: 20px; margin: 0 0 14px; padding-left: 12px; border-left: 4px solid var(--accent); }
+  h3 { font-size: 16px; margin: 22px 0 10px; color: var(--accent); }
+  p { margin: 8px 0; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
+  th, td { border: 1px solid var(--border); padding: 9px 12px; text-align: left; }
+  th { background: #f1f5f9; font-weight: 600; }
+  tr:nth-child(even) td { background: #fafbfc; }
+  .hl { color: var(--accent); font-weight: 600; }
+  .muted { color: var(--muted); font-size: 13px; }
+  ul { margin: 8px 0; padding-left: 22px; }
+  li { margin: 5px 0; }
+  .pill { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: 12px;
+    font-weight: 600; margin-right: 6px; }
+  .pill.ok { background: #dcfce7; color: #166534; }
+  .pill.warn { background: #fef3c7; color: #92400e; }
+  .pill.info { background: #dbeafe; color: #1e40af; }
+  .pill.red { background: #fee2e2; color: #991b1b; }
+  .callout { background: #fff7ed; border: 1px solid #fed7aa; border-radius: 10px; padding: 14px 16px; margin: 14px 0; }
+  .callout b { color: var(--gold); }
+  .foot { text-align: center; color: var(--muted); font-size: 12px; margin-top: 8px; }
+  code { background: #f1f5f9; padding: 1px 6px; border-radius: 4px; font-size: 13px; }
+  .flow { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 10px 0; }
+  .flow span { background: #eff6ff; border: 1px solid #bfdbfe; color: #1e40af;
+    padding: 6px 14px; border-radius: 8px; font-size: 13px; font-weight: 600; }
+  .flow i { color: var(--muted); font-style: normal; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>aifanyi.com 商业化方案 · 支付与定价规划</h1>
+  <div class="sub">纯规划文档（不动代码）｜基于现有 Credit 系统与真实成本数据｜2026-08-15</div>
+  <span class="tag">变现 · 定价 · 支付 · 合规</span>
+</header>
+
+<div class="cards">
+  <div class="card green"><div class="k">翻译单次边际成本（实测）</div><div class="v">≈ ¥0.0002 <small>/ 次</small></div></div>
+  <div class="card gold"><div class="k">ASR / TTS 成本锚</div><div class="v">¥0.06<small>/分</small> · ¥0.04<small>/千字档</small></div></div>
+  <div class="card blue"><div class="k">已配置定价规则</div><div class="v">17 <small>个 feature</small></div></div>
+  <div class="card"><div class="k">当前注册用户</div><div class="v">19 <small>人（早期）</small></div></div>
+</div>
+
+<section>
+  <h2>一、现状盘点：已经打好的地基</h2>
+  <p>在动手接支付之前，先明确——<span class="hl">记账能力已经完备，缺的只是「充值」这一条腿</span>。现有 Credit 系统是这次商业化的最大资产：</p>
+  <ul>
+    <li><b>Credit 引擎全生命周期</b>：reserve / consume / release / refund / grant / expire / adminAdjust，34 单测全绿，含并发防超卖（行锁 + 应用层检查）。</li>
+    <li><b>定价全配置化</b>：<code>PricingRule</code> 表驱动 17 个 feature（文本/PDF/图片/字幕/文档/网页/润色/盲测/ASR/TTS/跨境电商 7 项），改价走表不改代码。</li>
+    <li><b>Grant 类型已预留商业化字段</b>：<code>PURCHASED</code>（充值）、<code>SUBSCRIPTION</code>（订阅）、<code>FREE_MONTHLY</code>、<code>BONUS</code>、<code>ADMIN_ADJUSTMENT</code>、<code>REFUND</code> —— 数据模型层面已经把「钱怎么进账户」的类型定义好了。</li>
+    <li><b>对账不变量</b>：<code>available + reserved == Σ Ledger.amount</code>，天然支持与支付侧对账。</li>
+    <li><b>获客与防滥用已就位</b>：新用户注册送 300 额度；游客限流（60s/15 次 + 日预算 30 次/5000 字符/IP）；盲测免费引流。</li>
+  </ul>
+  <div class="callout"><b>结论：</b>支付接入不是「从零建账」，而是「在已有的完整账本上补一个资金入口」。工程量比看起来小得多，风险主要集中在合规与收款主体，而不是技术。</div>
+</section>
+
+<section>
+  <h2>二、变现缺口：为什么现在做</h2>
+  <p>三个缺口，本质上是「有账没钱进」：</p>
+  <table>
+    <tr><th>缺口</th><th>现状</th><th>影响</th></tr>
+    <tr><td><b>支付（充值）</b></td><td>额度只能靠注册赠送，无购买入口</td><td>有用户价值，无收入</td></tr>
+    <tr><td><b>定价（SKU）</b></td><td>有内部 cost 规则，无面向用户的商品</td><td>用户不知道「值多少钱、怎么买」</td></tr>
+    <tr><td><b>合规（主体/税务）</b></td><td>无收款主体、无发票能力</td><td>无法正规收款</td></tr>
+  </table>
+  <p class="muted">关键优势：翻译边际成本极低（DeepSeek 单次约 0.0002 元），定价应走「价值定价」而非「成本加成」——毛利空间足够支撑免费额度拉新 + 订阅制锁客。</p>
+</section>
+
+<section>
+  <h2>三、定价锚点设计</h2>
+  <p>现有内部成本规则以 <code>credit</code> 为虚拟货币单位。第一步是把 credit 与人民币锚定，让用户形成「1 额度 = X 元」的心智。</p>
+
+  <h3>3.1 锚点建议</h3>
+  <table>
+    <tr><th>方案</th><th>锚点</th><th>文本翻译（2 cr/千字）</th><th>单次短翻译（min 1 cr）</th><th>评价</th></tr>
+    <tr><td>A（推荐）</td><td><b>1 credit = ¥0.10</b></td><td>¥0.20 / 千字</td><td>¥0.10</td><td>数字好记，与腾讯云翻译（~0.1 元/千字）对标，单次有感知价值</td></tr>
+    <tr><td>B</td><td>1 credit = ¥0.05</td><td>¥0.10 / 千字</td><td>¥0.05</td><td>更便宜，但单次 5 分显得「廉价」，不利于订阅溢价</td></tr>
+    <tr><td>C</td><td>1 credit = ¥0.20</td><td>¥0.40 / 千字</td><td>¥0.20</td><td>对标 DeepL Pro 溢价，但早期用户基数小时转化可能偏低</td></tr>
+  </table>
+  <p class="muted">对照成本：文本翻译实测单次 0.0002 元，锚点 A 下毛利 > 100 倍。这意味着定价的约束不是「会不会亏」，而是「用户觉得值不值」。</p>
+
+  <h3>3.2 各 feature 对外售价（锚点 A 换算）</h3>
+  <table>
+    <tr><th>功能</th><th>内部规则</th><th>对外售价</th><th>说明</th></tr>
+    <tr><td>文本 / 文档 / 网页 / 润色翻译</td><td>2 cr / 千字</td><td>¥0.20 / 千字</td><td>主力功能，低价走量</td></tr>
+    <tr><td>图片翻译（OCR + 翻译）</td><td>3 cr / 张</td><td>¥0.30 / 张</td><td>含 OCR 步骤</td></tr>
+    <tr><td>字幕翻译</td><td>1 cr / 分钟</td><td>¥0.10 / 分钟</td><td>长视频字幕量可观</td></tr>
+    <tr><td>语音识别 ASR</td><td>1 cr / 分钟</td><td>¥0.10 / 分钟</td><td>成本 0.06 元/分，毛利 ~40%</td></tr>
+    <tr><td>语音合成 TTS</td><td>1 cr / 千字</td><td>¥0.10 / 千字</td><td>成本 ~0.04 元/千字档</td></tr>
+    <tr><td>跨境电商（listing 生成/改写/AI 微调）</td><td>2-3 cr / 千字</td><td>¥0.20-0.30 / 千字</td><td><b>核心付费人群，可溢价</b></td></tr>
+    <tr><td>盲测</td><td>免费</td><td>免费</td><td>获客留存，不动</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2>四、商品 SKU 设计（双轨：点数包 + 订阅）</h2>
+  <p>目标人群画像：<span class="hl">跨境电商卖家</span>（工作台 V1 已上线，高频、付费意愿最强）为主力；普通翻译用户为长尾。</p>
+
+  <h3>4.1 点数包（按需，适合低频/长尾用户）</h3>
+  <table>
+    <tr><th>档位</th><th>售价</th><th>到账 credits</th><th>赠送</th><th>单 credit 成本</th><th>定位</th></tr>
+    <tr><td>入门</td><td>¥6</td><td>60</td><td>—</td><td>¥0.10</td><td>门槛试探，验证付费意愿</td></tr>
+    <tr><td>标准</td><td>¥30</td><td>330</td><td>+10%</td><td>¥0.091</td><td>主力档</td></tr>
+    <tr><td>进阶</td><td>¥98</td><td>1176</td><td>+20%</td><td>¥0.083</td><td>跨境卖家日常档</td></tr>
+    <tr><td>尊享</td><td>¥298</td><td>3874</td><td>+30%</td><td>¥0.077</td><td>重度/团队</td></tr>
+  </table>
+  <p class="muted">梯度赠送是「锚点效应」：让 ¥30 档看起来最划算，把用户从 ¥6 推向 ¥30。</p>
+
+  <h3>4.2 订阅（按月，适合跨境卖家高频用户）</h3>
+  <table>
+    <tr><th>档位</th><th>价格</th><th>每月额度</th><th>核心权益</th><th>目标</th></tr>
+    <tr><td>轻量版</td><td>¥15 / 月</td><td>1500 cr</td><td>文本/文档/图片/字幕全功能，标准模型</td><td>个人轻度用户</td></tr>
+    <tr><td>专业版（推荐）</td><td>¥49 / 月</td><td>6000 cr</td><td>全功能 + 跨境电商工作台 + 高级模型优先 + 无广告</td><td>跨境卖家主力</td></tr>
+    <tr><td>团队版</td><td>¥199 / 月</td><td>共享 30000 cr</td><td>5 席位共享额度池 + 用量报表 + 优先支持</td><td>小型团队/代运营</td></tr>
+  </table>
+  <p class="muted">订阅额度每月发放（<code>FREE_MONTHLY</code>/<code>SUBSCRIPTION</code> 类型已就绪），未用完是否结转是产品决策（建议：专业版以上结转，轻量版清零——制造升级动机）。</p>
+
+  <div class="callout"><b>推荐节奏：</b>先上「点数包」（工程量小、闭环快、验证付费意愿）→ 数据验证后再上「订阅」（锁客 + 稳定现金流）。不要一上来双轨齐上。</div>
+</section>
+
+<section>
+  <h2>五、支付渠道选型（关键决策）</h2>
+  <p>这一步的瓶颈不在技术，在<span class="hl">收款主体</span>。三个方案对比如下：</p>
+  <table>
+    <tr><th></th><th>方案 A：国内个体户 + 聚合支付</th><th>方案 B：海外 MoR（Lemon Squeezy / Paddle）</th><th>方案 C：香港主体 + Stripe</th></tr>
+    <tr><td>收款方式</td><td>微信支付 + 支付宝</td><td>信用卡 / PayPal（海外）</td><td>全渠道（微信/支付宝/信用卡/Apple Pay）</td></tr>
+    <tr><td>资质成本</td><td>个体户执照（可代办，几百元）</td><td>零（MoR 代你收）</td><td>香港公司（年费几千元 + 维护）</td></tr>
+    <tr><td>费率</td><td>0.38%~0.6%</td><td>5% + $0.5（较高）</td><td>2.9% + $0.3</td></tr>
+    <tr><td>合规负担</td><td>需个体户/企业资质、电子发票</td><td><b>零</b>（MoR 代缴全球税）</td><td>低（香港利得税简单）</td></tr>
+    <tr><td>用户习惯</td><td>⭐ 中文用户最熟悉、转化最高</td><td>❌ 中国用户不熟悉</td><td>⭐ 覆盖中外</td></tr>
+    <tr><td>结算</td><td>T+1 人民币</td><td>美元，周期较长</td><td>美元/多币种</td></tr>
+    <tr><td>适合阶段</td><td>规模化（主战场）</td><td>MVP 验证</td><td>全球化</td></tr>
+  </table>
+
+  <h3>推荐路线（分阶段）</h3>
+  <div class="flow">
+    <span>阶段 1 · MVP</span><i>→</i><span>MoR（Lemon Squeezy）零主体跑通付费闭环</span><i>→</i><span>阶段 2 · 规模化</span><i>→</i><span>个体户 + 微信/支付宝聚合</span><i>→</i><span>阶段 3 · 全球化</span><i>→</i><span>香港主体 + Stripe + 订阅</span>
+  </div>
+  <p class="muted">核心逻辑：<b>先低成本验证「有没有人愿意付费」，再为确定的需求投资资质</b>。避免一上来就办香港公司却没人买。</p>
+</section>
+
+<section>
+  <h2>六、技术实施路径（阶段拆分，供后续排期）</h2>
+  <table>
+    <tr><th>阶段</th><th>内容</th><th>复用现有</th><th>优先级</th></tr>
+    <tr><td><b>P0 · SKU 配置化</b></td><td>新增 <code>Sku</code>/<code>Order</code> 表，点数包与订阅商品配置化（价格/额度/赠送/有效策略走表）</td><td>PricingRule 模式</td><td class="hl">高</td></tr>
+    <tr><td><b>P1 · 支付网关抽象</b></td><td>定义统一 <code>PaymentProvider</code> 接口（下单/回调/查询/退款），首接一个渠道</td><td>—</td><td class="hl">高</td></tr>
+    <tr><td><b>P2 · 充值回调闭环</b></td><td>支付回调 → 幂等校验 → <code>grant(PURCHASED)</code> → 到账通知；超时补单/对账任务</td><td>Credit 幂等键 + 对账不变量</td><td class="hl">高</td></tr>
+    <tr><td><b>P3 · 用户中心额度页</b></td><td>余额/充值入口/账单流水/额度明细（复用 Ledger）</td><td>CreditLedger</td><td>中</td></tr>
+    <tr><td><b>P4 · 订阅与续费</b></td><td>订阅计划、周期 grant、自动续费/取消、逾期降级</td><td>GrantType.SUBSCRIPTION</td><td>中</td></tr>
+    <tr><td><b>P5 · 发票 + 促销 + 退款</b></td><td>电子发票、优惠码、原路退款（复用 refund）</td><td>Refund 流程</td><td>低</td></tr>
+  </table>
+  <div class="callout"><b>安全红线（沿用现有原则）：</b>支付凭证（token/密钥/回调签名）不入 git、不落业务库；订单与支付状态分离，到账以「我方 grant 成功」为准，不与第三方回调强耦合；所有入账走幂等键，防重复充值。</div>
+</section>
+
+<section>
+  <h2>七、合规要点</h2>
+  <ul>
+    <li><b>预付费（点数）定性</b>：点数属「预付式消费」，需在用户协议中明示<b>有效期、退款政策、余额处置</b>（当前 Credit 已有 expire 机制，可直接复用并公示）。</li>
+    <li><b>发票</b>：接入个体户主体后可开电子发票；MoR 阶段（海外）由平台代开收据。</li>
+    <li><b>数据与 PCI</b>：卡号/支付密码绝不落地，只存订单号与第三方流水号，走第三方 H5/JSAPI 收银台。</li>
+    <li><b>地区化定价</b>：海外用户用美元档（$1/$5/$15），国内用人民币档，避免单一币种。</li>
+    <li><b>退款风控</b>：已消费额度不退款，未消费余额支持原路退（Refund 流程已备）。</li>
+  </ul>
+</section>
+
+<section>
+  <h2>八、需要你拍板的决策点</h2>
+  <table>
+    <tr><th>#</th><th>决策项</th><th>选项</th><th>我的建议</th></tr>
+    <tr><td>1</td><td><b>收款主体</b>（最关键）</td><td>个体户 / 海外 MoR / 香港公司</td><td>先 MoR 验证，再办个体户规模化</td></tr>
+    <tr><td>2</td><td><b>定价锚点</b></td><td>1 cr = ¥0.05 / ¥0.10 / ¥0.20</td><td>¥0.10（方案 A）</td></tr>
+    <tr><td>3</td><td><b>上架节奏</b></td><td>先点数包 / 先订阅 / 双轨齐上</td><td>先点数包，验证后上订阅</td></tr>
+    <tr><td>4</td><td><b>目标市场优先级</b></td><td>国内跨境卖家 / 海外用户 / 两者</td><td>先国内跨境卖家（工作台已就绪）</td></tr>
+    <tr><td>5</td><td><b>免费额度策略</b></td><td>保留 300 赠送 / 下调 / 改「试用」标签</td><td>保留但打「新人礼」标签，配合点数包转化</td></tr>
+    <tr><td>6</td><td><b>订阅额度结转</b></td><td>清零 / 结转 / 分档</td><td>专业版以上结转，轻量版清零</td></tr>
+  </table>
+  <div class="callout"><b>下一步：</b>你只要先定「决策 1（收款主体）」和「决策 3（上架节奏）」，我就能把对应的技术实施方案（Phase 0-2 细化）写出来；其余可以边做边定。</div>
+</section>
+
+<p class="foot">aifanyi.com · 商业化规划 v1 · 2026-08-15 · 纯规划，未动任何代码</p>
+</div>
+</body>
+</html>

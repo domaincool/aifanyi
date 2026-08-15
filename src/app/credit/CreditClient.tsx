@@ -54,7 +54,7 @@ export default function CreditClient() {
       <div style={{ maxWidth: 640, margin: '0 auto' }}>
         <div style={{ background: 'var(--panel)', border: '1px solid var(--border)', borderRadius: 20, padding: '40px 32px', textAlign: 'center' }}>
           <div style={{ fontSize: 52, marginBottom: 12 }}>🎁</div>
-          <h2 style={{ margin: '0 0 8px', fontSize: 22 }}>登录即送 {data.signupBonus ?? 300} 免费额度</h2>
+          <h2 style={{ margin: '0 0 8px', fontSize: 22 }}>登录即送 {data.signupBonus ?? 500} 免费额度</h2>
           <p style={{ color: 'var(--muted)', margin: '0 0 24px', lineHeight: 1.7 }}>
             新老用户登录后自动到账，30 天内有效。<br />
             翻译成功才扣费，失败自动退回，用量透明可查。
@@ -69,7 +69,7 @@ export default function CreditClient() {
 
   const available = data?.available ?? 0;
   const monthUsed = data?.monthUsed ?? 0;
-  const low = available < 60; // 低余额轻提示（<20% 注册赠送 300）
+  const low = available < 100; // 低余额轻提示（<20% 注册赠送 500）
 
   return (
     <div style={{ maxWidth: 720, margin: '0 auto', display: 'grid', gap: 20 }}>
@@ -87,7 +87,7 @@ export default function CreditClient() {
         </div>
         {low && (
           <p style={{ margin: '16px 0 0', padding: '10px 14px', background: 'rgba(255,193,7,.12)', border: '1px solid rgba(255,193,7,.4)', borderRadius: 10, color: 'var(--text)', fontSize: 14 }}>
-            ⚡ 剩余额度不多了（{available}/300）。额度用完后按用量计费，用量透明可查。
+            ⚡ 剩余额度不多了（{available}/500）。额度用完后按用量计费，用量透明可查。
           </p>
         )}
       </div>

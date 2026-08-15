@@ -1,6 +1,6 @@
 /**
  * GET /api/credit/history
- * 用户友好明细：服务端把 Ledger 翻译成「PDF 翻译 -2」「注册赠送 +300」，不暴露内部术语
+ * 用户友好明细：服务端把 Ledger 翻译成「PDF 翻译 -2」「注册赠送 +500」，不暴露内部术语
  */
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/db';
@@ -19,7 +19,7 @@ export async function GET() {
 
   const items = rows.map(r => {
     let label = r.description || '';
-    if (r.type === 'grant') label = '注册赠送 +300';
+    if (r.type === 'grant') label = r.description || ('积分到账 +' + Math.abs(r.amount));
     else if (r.type === 'consume') label = `翻译完成，使用 ${Math.abs(r.amount)}`;
     else if (r.type === 'release') label = '翻译未完成，额度已退回';
     else if (r.type === 'expire') label = '免费额度到期';

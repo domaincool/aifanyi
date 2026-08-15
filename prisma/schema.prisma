@@ -407,7 +407,7 @@ model AuthIdentity {
 model CreditGrant {
   id              String    @id @default(cuid())
   userId          String
-  type            String    // FREE_MONTHLY | BONUS | SUBSCRIPTION | PURCHASED | ADMIN_ADJUSTMENT | REFUND
+  type            String    // FREE_MONTHLY | FREE_GRANT | BONUS | SUBSCRIPTION | PURCHASED | ADMIN_ADJUSTMENT | REFUND
   source          String    // 注册赠送 | 免费额度 | Pro月度 | 购买 | 活动 | 客服补偿 | 退款
   totalAmount     Int
   remainingAmount Int

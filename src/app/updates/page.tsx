@@ -2,13 +2,13 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: '上线公告 — 爱翻译 · AI翻译',
-  description: '爱翻译上线「使用额度」体系：登录即送 300 免费额度，翻译成功才计费，失败自动退回，用量透明可查。',
+  description: '爱翻译上线「使用额度」体系：登录即送 500 免费额度，翻译成功才计费，失败自动退回，用量透明可查。',
 };
 
 const faqs = [
   {
     q: '我之前没登录也能用 PDF 翻译，现在必须登录吗？',
-    a: '是的。登录即可获得 300 免费额度，比之前的每日文件数限制更宽松、更透明。',
+    a: '是的。登录即可获得 500 免费额度，比之前的每日文件数限制更宽松、更透明。',
   },
   {
     q: '额度用完了怎么办？',
@@ -37,8 +37,8 @@ export default function UpdatesPage() {
         <h2 style={{ fontSize: 20, margin: '0 0 16px' }}>你会看到的变化</h2>
 
         <div style={{ border: '1px solid var(--border)', borderRadius: 12, padding: '16px 20px', marginBottom: 12, background: 'var(--panel)' }}>
-          <div style={{ fontWeight: 600, marginBottom: 4 }}>1. 登录即送 300 免费额度</div>
-          <div style={{ fontSize: 14, color: 'var(--muted)' }}>新老用户登录后自动到账 300 使用额度（30 天内有效）。额度用完后仍可继续使用，按实际用量计费，用量透明可查。</div>
+          <div style={{ fontWeight: 600, marginBottom: 4 }}>1. 登录即送 500 免费额度</div>
+          <div style={{ fontSize: 14, color: 'var(--muted)' }}>新老用户登录后自动到账 500 使用额度（30 天内有效）。额度用完后仍可继续使用，按实际用量计费，用量透明可查。</div>
         </div>
 
         <div style={{ border: '1px solid var(--border)', borderRadius: 12, padding: '16px 20px', marginBottom: 12, background: 'var(--panel)' }}>
@@ -51,7 +51,7 @@ export default function UpdatesPage() {
         <div style={{ border: '1px solid var(--border)', borderRadius: 12, padding: '16px 20px', marginBottom: 12, background: 'var(--panel)' }}>
           <div style={{ fontWeight: 600, marginBottom: 4 }}>3. 文件翻译需登录使用</div>
           <div style={{ fontSize: 14, color: 'var(--muted)' }}>
-            PDF / 字幕 / 图片 / 网页 / Word·PPT 翻译现在需要登录后使用（登录即送 300 额度，足够日常使用）。这是为了防止服务被滥用、保证翻译质量与速度。
+            PDF / 字幕 / 图片 / 网页 / Word·PPT 翻译现在需要登录后使用（登录即送 500 额度，足够日常使用）。这是为了防止服务被滥用、保证翻译质量与速度。
           </div>
         </div>
 
