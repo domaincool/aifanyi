@@ -58,7 +58,20 @@ export async function POST(req: NextRequest) {
     const durationMin = Math.max(1, Math.round(durationSec / 60) || 1);
     const estCredits = Math.min(durationMin, 300);
     const begin = await beginSync({ userId, jobId: taskId, feature: FEATURES.SUBTITLE, estimatedCredits: estCredits });
-    if (!begin.ok) return NextResponse.json({ ok: false, code: 'insufficient', error: begin.error }, { status: 402 });
+    if (!begin.ok) {
+      // 余额不足：保存为 paused 任务，充值后从 taskId 续做
+      await prisma.subtitleJob.create({
+        data: {
+          taskId, fileName: file.name, fileSize: file.size, targetLang,
+          status: 'paused', totalCues: cues.length,
+          document: { format, cues } as unknown as object,
+          clientKey, userId, guestSessionId,
+          creditState: 'paused', reservedCredits: estCredits,
+        },
+      });
+      const acc = await prisma.creditAccount.findUnique({ where: { userId } });
+      return NextResponse.json({ ok: true, taskId, status: 'paused', totalCues: cues.length, requiredCredits: estCredits, available: acc?.balance ?? 0, message: '本次翻译预计消耗约 ' + estCredits + ' 积分，当前剩余 ' + (acc?.balance ?? 0) + ' 积分。任务已保存，充值后可直接续做。' });
+    }
     creditCtx = { jobId: taskId, usageId: begin.usageId, estimated: begin.estimated, userId };
 
     await prisma.subtitleJob.create({

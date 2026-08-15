@@ -58,7 +58,7 @@ export interface TranslationGroup {
 }
 
 /** Job 状态机：queued → processing → completed / failed */
-export type PdfJobStatus = 'queued' | 'processing' | 'completed' | 'failed' | 'cancelled';
+export type PdfJobStatus = 'queued' | 'processing' | 'completed' | 'failed' | 'cancelled' | 'paused';
 
 export interface PdfJobSummary {
   taskId: string;

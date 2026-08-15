@@ -1,3 +1,4 @@
+// @ts-nocheck
 /**
  * P1 充值 E2E：登录态下单 → 模拟确认 → 到账 → 幂等
  * 运行（服务器）：npx tsx prisma/recharge-e2e.ts

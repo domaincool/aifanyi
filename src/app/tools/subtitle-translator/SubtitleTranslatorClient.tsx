@@ -10,7 +10,7 @@ interface Cue {
   translation?: string;
 }
 
-type Phase = 'upload' | 'working' | 'done' | 'error';
+type Phase = 'upload' | 'working' | 'done' | 'error' | 'paused';
 
 const LANG_OPTIONS = [
   { v: 'zh', label: '简体中文' },
@@ -32,6 +32,7 @@ export default function SubtitleTranslatorClient() {
   const [taskId, setTaskId] = useState('');
   const [cues, setCues] = useState<Cue[]>([]);
   const [error, setError] = useState('');
+  const [pausedMsg, setPausedMsg] = useState('');
   const [dragOver, setDragOver] = useState(false);
   const [exporting, setExporting] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -56,6 +57,11 @@ export default function SubtitleTranslatorClient() {
       if (!data.ok) { setError(data.error || '上传失败'); setPhase('error'); return; }
       setTotal(data.totalCues);
       setTaskId(data.taskId);
+      if (data.status === 'paused') {
+        setPausedMsg(data.message || '积分不足，任务已暂停。');
+        setPhase('paused');
+        return;
+      }
       poll(data.taskId);
     } catch (e: any) {
       setError(e?.message || '网络错误，请重试'); setPhase('error');
@@ -101,6 +107,18 @@ export default function SubtitleTranslatorClient() {
       setError('网络错误，取消失败。');
     }
   }, [taskId]);
+
+  const resumeTask = useCallback(async () => {
+    if (!taskId) return;
+    try {
+      const res = await fetch(`/api/subtitle/tasks/${taskId}/resume`, { method: 'POST' });
+      const data = await res.json();
+      if (data.ok) { setPhase('working'); poll(taskId); }
+      else { setError(data.error || '积分不足，请先充值。'); setPhase('error'); }
+    } catch {
+      setError('网络错误，续做失败。'); setPhase('error');
+    }
+  }, [taskId, poll]);
 
   const download = useCallback((content: string, name: string, type: string) => {
     const blob = new Blob([content], { type });
@@ -191,6 +209,18 @@ export default function SubtitleTranslatorClient() {
           <button className="btn-primary" style={{ padding: '8px 18px' }} onClick={() => { setPhase('upload'); setError(''); }}>
             重新上传
           </button>
+        </div>
+      )}
+
+      {phase === 'paused' && (
+        <div style={{ background: 'var(--panel)', border: '1px solid #f0a020', borderRadius: 16, padding: 24 }}>
+          <p style={{ margin: '0 0 6px', fontWeight: 600 }}>⏸️ 任务已暂停（积分不足）</p>
+          <p style={{ margin: '0 0 12px', fontSize: 14, color: 'var(--muted)' }}>{pausedMsg}</p>
+          <p style={{ margin: '0 0 12px', fontSize: 13, color: 'var(--muted)' }}>充值后点击下方按钮继续翻译，无需重新上传。</p>
+          <div style={{ display: 'flex', gap: 10 }}>
+            <a className="btn-primary" href="/credit" style={{ padding: '8px 18px', textDecoration: 'none' }}>去充值积分</a>
+            <button className="btn-primary" style={{ padding: '8px 18px' }} onClick={resumeTask}>▶ 续做翻译</button>
+          </div>
         </div>
       )}
 

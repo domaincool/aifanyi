@@ -15,6 +15,9 @@ interface UploadResult {
   sourceLang: string;
   targetLang: string;
   limitations?: string[];
+  requiredCredits?: number;
+  available?: number;
+  message?: string;
 }
 
 export default function PdfTranslatorPage() {
@@ -43,6 +46,10 @@ export default function PdfTranslatorPage() {
         return;
       }
       setResult(data as UploadResult);
+      if (data.status === 'paused') {
+        setJob({ taskId: data.taskId, status: 'paused', progress: 0, currentPage: 0, totalPages: data.pageCount || 0, translatedBlocks: 0, totalBlocks: data.totalBlocks || 0, message: data.message });
+        return;
+      }
       track('pdf_parse_success', { taskId: data.taskId, pageCount: data.pageCount, sourceLang: data.sourceLang, targetLang: data.targetLang });
       track('translation_started', { taskId: data.taskId });
       pollTask(data.taskId);
@@ -89,6 +96,22 @@ export default function PdfTranslatorPage() {
       setError({ errorType: 'cancel_failed', message: '网络错误，取消失败。' });
     }
   }, [job?.taskId]);
+
+  const resumeTask = useCallback(async () => {
+    if (!job?.taskId) return;
+    try {
+      const res = await fetch(`/api/pdf/tasks/${job.taskId}/resume`, { method: 'POST' });
+      const data = await res.json();
+      if (data.ok) {
+        setJob((prev: any) => (prev ? { ...prev, status: 'queued' } : prev));
+        pollTask(job.taskId);
+      } else {
+        setError({ errorType: 'insufficient', message: data.message || data.error || '积分不足，请先充值。' });
+      }
+    } catch {
+      setError({ errorType: 'resume_failed', message: '网络错误，续做失败。' });
+    }
+  }, [job?.taskId, pollTask]);
 
   const onDrop = useCallback((e: React.DragEvent) => {
     e.preventDefault();
@@ -242,6 +265,17 @@ export default function PdfTranslatorPage() {
               <p className="pdf-error-title">⚠️ 翻译失败</p>
               <p>{job.message || '翻译过程中出现错误，请稍后重试。'}</p>
               <button className="pdf-btn" onClick={() => inputRef.current?.click()}>重新选择文件</button>
+            </div>
+          )}
+          {job && job.status === 'paused' && (
+            <div className="pdf-summary" style={{ border: '1px solid #f0a020' }}>
+              <h2>⏸️ 任务已暂停（积分不足）</h2>
+              <p style={{ margin: '8px 0' }}>{job.message || '积分不足，任务已暂停。'}</p>
+              <p style={{ margin: '8px 0', fontSize: 14 }}>充值后点击下方按钮继续翻译，无需重新上传。</p>
+              <div style={{ display: 'flex', gap: 10, marginTop: 12 }}>
+                <a className="pdf-btn" href="/credit">去充值积分</a>
+                <button className="pdf-btn" onClick={resumeTask}>▶ 续做翻译</button>
+              </div>
             </div>
           )}
         </div>

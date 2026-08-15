@@ -61,7 +61,24 @@ export async function POST(req: NextRequest) {
     // 积分：2/页（封顶 200）→ reserve（原子检查余额）
     const estCredits = Math.min(doc.pageCount * 2, 200);
     const begin = await beginSync({ userId, jobId: taskId, feature: FEATURES.PDF, estimatedCredits: estCredits });
-    if (!begin.ok) return NextResponse.json({ errorType: 'insufficient', message: begin.error }, { status: 402 });
+    if (!begin.ok) {
+      // 余额不足：保存为 paused 任务，充值后从 taskId 续做（不要求重新上传）
+      await createPdfJob({ taskId, fileName, fileSize: pdfFile.size, doc, clientKey, userId, guestSessionId, creditState: 'paused', reservedCredits: estCredits, status: 'paused' });
+      const acc = await prisma.creditAccount.findUnique({ where: { userId } });
+      return NextResponse.json({
+        taskId,
+        status: 'paused',
+        pageCount: doc.pageCount,
+        totalBlocks: doc.pages.reduce((s, p) => s + p.blocks.length, 0),
+        totalCharacters: doc.totalCharacters,
+        sourceLang: doc.sourceLang,
+        targetLang: doc.targetLang,
+        limitations: doc.limitations,
+        requiredCredits: estCredits,
+        available: acc?.balance ?? 0,
+        message: '本次翻译预计消耗约 ' + estCredits + ' 积分，当前剩余 ' + (acc?.balance ?? 0) + ' 积分。任务已保存，充值后可直接续做，无需重新上传。',
+      });
+    }
     creditCtx = { jobId: taskId, usageId: begin.usageId, estimated: begin.estimated, userId };
 
     await createPdfJob({ taskId, fileName, fileSize: pdfFile.size, doc, clientKey, userId, guestSessionId, creditState: 'reserved', reservedCredits: estCredits });

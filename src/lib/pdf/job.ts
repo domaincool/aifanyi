@@ -16,6 +16,7 @@ export async function createPdfJob(input: {
   guestSessionId?: string | null;
   creditState?: string | null;
   reservedCredits?: number;
+  status?: PdfJobStatus;
 }): Promise<{ taskId: string; status: PdfJobStatus }> {
   await prisma.pdfJob.create({
     data: {
@@ -25,7 +26,7 @@ export async function createPdfJob(input: {
       pageCount: input.doc.pageCount,
       sourceLang: input.doc.sourceLang,
       targetLang: input.doc.targetLang,
-      status: 'queued',
+      status: input.status ?? 'queued',
       totalBlocks: input.doc.pages.reduce((s, p) => s + p.blocks.length, 0),
       limitations: input.doc.limitations,
       document: input.doc as unknown as object,
