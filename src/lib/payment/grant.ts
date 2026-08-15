@@ -13,15 +13,29 @@ export interface GrantResult {
   error?: string;
 }
 
-export async function grantRechargeOrder(orderId: string): Promise<GrantResult> {
+export interface GrantRechargeOrderOptions {
+  /** webhook 场景传 true：钱已收到，即使我方订单已标 expired 也要到账（渠道 checkout 有效期可能长于我方 15 分钟） */
+  allowExpired?: boolean;
+  /** 渠道侧订单号（checkout id）：与订单落库的 providerOrderId 不一致时拒绝，防 metadata 配错跨单到账 */
+  expectedProviderOrderId?: string;
+}
+
+export async function grantRechargeOrder(orderId: string, opts?: GrantRechargeOrderOptions): Promise<GrantResult> {
   const order = await prisma.rechargeOrder.findUnique({ where: { id: orderId } });
   if (!order) return { ok: false, error: 'not_found' };
   if (order.status === 'granted') {
     return { ok: true, already: true, granted: { purchased: order.purchasedCredits, bonus: order.bonusCredits } };
   }
-  // 仅 pending / paid 可到账；expired / cancelled 不可
-  if (order.status !== 'pending' && order.status !== 'paid') {
+  // cancelled 永不到账（已取消/退款）；expired 仅 webhook（钱已收）可到账，confirm 场景保持拒绝
+  if (order.status === 'cancelled') {
     return { ok: false, error: 'invalid_state' };
+  }
+  if (order.status === 'expired' && !opts?.allowExpired) {
+    return { ok: false, error: 'invalid_state' };
+  }
+  // 渠道订单号校验：订单已有 providerOrderId 且与 webhook 不一致 → 拒绝（防跨单到账）
+  if (opts?.expectedProviderOrderId && order.providerOrderId && opts.expectedProviderOrderId !== order.providerOrderId) {
+    return { ok: false, error: 'provider_order_mismatch' };
   }
 
   // 1) 标记 paid（幂等）

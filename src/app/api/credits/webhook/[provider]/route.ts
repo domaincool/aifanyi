@@ -36,7 +36,10 @@ export async function POST(req: Request, { params }: { params: Promise<{ provide
     return NextResponse.json({ ok: true, ignored: true, event: result.event });
   }
 
-  const grant = await grantRechargeOrder(result.orderId);
+  const grant = await grantRechargeOrder(result.orderId, {
+    allowExpired: true,
+    expectedProviderOrderId: result.providerOrderId || undefined,
+  });
   if (!grant.ok) {
     return NextResponse.json({ error: grant.error }, { status: 500 });
   }
