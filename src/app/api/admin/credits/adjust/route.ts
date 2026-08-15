@@ -29,6 +29,6 @@ export async function POST(req: NextRequest) {
     idempotencyKey: `admin_adj_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`,
   });
 
-  if (!result.ok) return NextResponse.json({ error: result.error === 'insufficient' ? '扣减超过用户当前可用额度' : '调整失败' }, { status: 400 });
+  if (!result.ok) return NextResponse.json({ error: result.error === 'insufficient' ? '扣减超过用户当前可用积分' : '调整失败' }, { status: 400 });
   return NextResponse.json({ ok: true, amount: amt });
 }

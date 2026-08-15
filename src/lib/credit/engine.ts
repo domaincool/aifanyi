@@ -247,7 +247,7 @@ export async function release(input: ReleaseInput): Promise<{ ok: true; released
           jobId: input.jobId,
           usageId: input.usageId,
           idempotencyKey: input.idempotencyKey,
-          description: `退回未用额度 ${z}`,
+          description: `退回未用积分 ${z}`,
         },
       });
 
@@ -381,7 +381,7 @@ export async function expireCredits(): Promise<{ expired: number; freed: number 
           amount: -g.remainingAmount,
           grantId: g.id,
           idempotencyKey: `expire:${g.id}:${now.getTime()}`,
-          description: `${g.remainingAmount} 个额度已到期`,
+          description: `${g.remainingAmount} 个积分已到期`,
         },
       });
     }).catch((e: any) => {

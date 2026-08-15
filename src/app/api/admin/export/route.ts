@@ -50,7 +50,7 @@ function buildCsv(s: StatsData, operator: string): string {
   row('指标', '数值');
   row('用户总数', s.users.total);
   row('活跃会话', s.users.activeSessions);
-  row('额度账户', s.users.creditAccounts);
+  row('积分账户', s.users.creditAccounts);
   row('翻译任务', s.translation.total);
   row('缓存命中率', (s.translation.cacheHitRate * 100).toFixed(1) + '%');
   row('翻译总成本USD', s.translation.costUsdTotal);

@@ -71,7 +71,7 @@ export default function DashboardClient() {
       </div>
       {/* 指标卡 */}
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: 12 }}>
-        {metric('用户', stats.users.total, `${stats.users.activeSessions} 活跃会话 · ${stats.users.creditAccounts} 额度账户`)}
+        {metric('用户', stats.users.total, `${stats.users.activeSessions} 活跃会话 · ${stats.users.creditAccounts} 积分账户`)}
         {metric('翻译任务', t.total, `${(t.cacheHitRate * 100).toFixed(1)}% 缓存命中`)}
         {metric('总成本', '$' + t.costUsdTotal.toFixed(4), Object.entries(t.byModel).map(([m, v]) => `${modelNames[m] || m} $${v.costUsd.toFixed(4)}`).join(' · '))}
         {metric('梗词条', stats.content.memes, `已发布 ${stats.content.memesByStatus['published'] ?? 0} · 草稿 ${stats.content.memesByStatus['draft'] ?? 0} · 下架 ${stats.content.memesByStatus['archived'] ?? 0}`)}

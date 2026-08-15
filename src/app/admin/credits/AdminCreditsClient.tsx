@@ -35,7 +35,7 @@ export default function AdminCreditsClient() {
 
   const doAdjust = async () => {
     setNotice(''); setError('');
-    if (!adjust.userId || !adjust.amount || !adjust.reason.trim()) { setError('请填写用户、额度与原因'); return; }
+    if (!adjust.userId || !adjust.amount || !adjust.reason.trim()) { setError('请填写用户、积分与原因'); return; }
     const res = await fetch('/api/admin/credits/adjust', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -43,7 +43,7 @@ export default function AdminCreditsClient() {
     });
     const d = await res.json();
     if (!d.ok) { setError(d.error || '调整失败'); return; }
-    setNotice(`已调整 ${d.amount} 额度`);
+    setNotice(`已调整 ${d.amount} 积分`);
     setAdjust({ userId: '', amount: '', reason: '' });
     load();
     if (detail?.user?.id === adjust.userId) loadDetail(adjust.userId);
@@ -93,14 +93,14 @@ export default function AdminCreditsClient() {
 
       {/* 调整表单 */}
       <section style={{ background: 'var(--panel)', border: '1px solid var(--border)', borderRadius: 16, padding: 20 }}>
-        <h2 style={{ fontSize: 16, margin: '0 0 12px' }}>调整额度</h2>
+        <h2 style={{ fontSize: 16, margin: '0 0 12px' }}>调整积分</h2>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 120px 1fr auto', gap: 10, alignItems: 'center' }}>
           <input placeholder="用户 ID" value={adjust.userId} onChange={e => setAdjust({ ...adjust, userId: e.target.value })} style={{ padding: 8, border: '1px solid var(--border)', borderRadius: 8, background: 'var(--bg)' }} />
-          <input placeholder="额度（±）" value={adjust.amount} onChange={e => setAdjust({ ...adjust, amount: e.target.value })} style={{ padding: 8, border: '1px solid var(--border)', borderRadius: 8, background: 'var(--bg)' }} />
+          <input placeholder="积分（±）" value={adjust.amount} onChange={e => setAdjust({ ...adjust, amount: e.target.value })} style={{ padding: 8, border: '1px solid var(--border)', borderRadius: 8, background: 'var(--bg)' }} />
           <input placeholder="调整原因（必填）" value={adjust.reason} onChange={e => setAdjust({ ...adjust, reason: e.target.value })} style={{ padding: 8, border: '1px solid var(--border)', borderRadius: 8, background: 'var(--bg)' }} />
           <button className="btn-primary" style={{ padding: '8px 16px' }} onClick={doAdjust}>调整</button>
         </div>
-        <p style={{ fontSize: 12, color: 'var(--muted)', margin: '8px 0 0' }}>正数=发放额度，负数=扣减（不超过当前可用）。每次调整都会写入流水并记录操作人。</p>
+        <p style={{ fontSize: 12, color: 'var(--muted)', margin: '8px 0 0' }}>正数=发放积分，负数=扣减（不超过当前可用）。每次调整都会写入流水并记录操作人。</p>
       </section>
 
       {/* 用户列表 */}
