@@ -24,18 +24,18 @@ model User {
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
 
-  identities        AuthIdentity[]
-  sessions          Session[]
-  usageLedgers      UsageLedger[]
-  translationJobs   PdfJob[]           @relation("UserPdfJobs")
-  documentProgress  DocumentProgress[]
-  votes             Vote[]
-  corrections       Correction[]
-  glossaries        Glossary[]
-  creditAccount     CreditAccount?
-  creditLedgers     CreditLedger[]
-  creditGrants      CreditGrant[]
-  usageRecords      UsageRecord[]
+  identities                 AuthIdentity[]
+  sessions                   Session[]
+  usageLedgers               UsageLedger[]
+  translationJobs            PdfJob[]                    @relation("UserPdfJobs")
+  documentProgress           DocumentProgress[]
+  votes                      Vote[]
+  corrections                Correction[]
+  glossaries                 Glossary[]
+  creditAccount              CreditAccount?
+  creditLedgers              CreditLedger[]
+  creditGrants               CreditGrant[]
+  usageRecords               UsageRecord[]
   ecommerceProjects          EcommerceProject[]
   ecommerceProducts          EcommerceProduct[]
   ecommerceListings          EcommerceListing[]
@@ -128,26 +128,26 @@ model MemeEntry {
 
 // ═══════════════════ 文本翻译任务 ═══════════════════
 model TranslationJob {
-  id               String   @id @default(cuid())
-  sourceHash       String
-  sourceText       String
-  sourceLang       String
-  targetLang       String
-  scenario         String   @default("general")
-  style            String?
-  model            String
-  resultText       String
-  promptTokens     Int      @default(0)
-  completionTokens Int      @default(0)
-  costUsd          Float    @default(0)
-  latencyMs        Int      @default(0)
-  cached           Boolean  @default(false)
-  qualityScore     Float?
-  creditState      String?
-  reservedCredits  Int      @default(0)
-  consumedCredits  Int      @default(0)
-  pricingRuleVersion Int    @default(1)
-  createdAt        DateTime @default(now())
+  id                 String   @id @default(cuid())
+  sourceHash         String
+  sourceText         String
+  sourceLang         String
+  targetLang         String
+  scenario           String   @default("general")
+  style              String?
+  model              String
+  resultText         String
+  promptTokens       Int      @default(0)
+  completionTokens   Int      @default(0)
+  costUsd            Float    @default(0)
+  latencyMs          Int      @default(0)
+  cached             Boolean  @default(false)
+  qualityScore       Float?
+  creditState        String?
+  reservedCredits    Int      @default(0)
+  consumedCredits    Int      @default(0)
+  pricingRuleVersion Int      @default(1)
+  createdAt          DateTime @default(now())
 
   @@index([sourceHash])
   @@index([model])
@@ -214,40 +214,40 @@ model Glossary {
 
 // ═══════════════════ PDF 翻译任务 ═══════════════════
 model PdfJob {
-  id                String    @id @default(cuid())
-  taskId            String    @unique
-  fileName          String
-  fileSize          Int
-  pageCount         Int
-  sourceLang        String    @default("auto")
-  targetLang        String    @default("zh")
-  status            String    @default("queued")
-  progress          Int       @default(0)
-  currentPage       Int       @default(0)
-  totalBlocks       Int       @default(0)
-  translatedBlocks  Int       @default(0)
-  errorType         String?
-  errorMessage      String?
-  limitations       Json?
-  document          Json?
-  totalInputTokens  Int       @default(0)
-  totalOutputTokens Int       @default(0)
-  totalCostUsd      Float     @default(0)
-  apiErrorCount     Int       @default(0)
-  compareCount      Int       @default(0)
-  durationMs        Int?
-  clientKey         String?
-  userId            String?
-  guestSessionId    String?
-  expiresAt         DateTime?
-  saved             Boolean   @default(false)
-  creditState       String?
-  reservedCredits   Int       @default(0)
-  consumedCredits   Int       @default(0)
-  pricingRuleVersion Int      @default(1)
-  createdAt         DateTime  @default(now())
-  completedAt       DateTime?
-  updatedAt         DateTime  @updatedAt
+  id                 String    @id @default(cuid())
+  taskId             String    @unique
+  fileName           String
+  fileSize           Int
+  pageCount          Int
+  sourceLang         String    @default("auto")
+  targetLang         String    @default("zh")
+  status             String    @default("queued")
+  progress           Int       @default(0)
+  currentPage        Int       @default(0)
+  totalBlocks        Int       @default(0)
+  translatedBlocks   Int       @default(0)
+  errorType          String?
+  errorMessage       String?
+  limitations        Json?
+  document           Json?
+  totalInputTokens   Int       @default(0)
+  totalOutputTokens  Int       @default(0)
+  totalCostUsd       Float     @default(0)
+  apiErrorCount      Int       @default(0)
+  compareCount       Int       @default(0)
+  durationMs         Int?
+  clientKey          String?
+  userId             String?
+  guestSessionId     String?
+  expiresAt          DateTime?
+  saved              Boolean   @default(false)
+  creditState        String?
+  reservedCredits    Int       @default(0)
+  consumedCredits    Int       @default(0)
+  pricingRuleVersion Int       @default(1)
+  createdAt          DateTime  @default(now())
+  completedAt        DateTime?
+  updatedAt          DateTime  @updatedAt
 
   user User? @relation("UserPdfJobs", fields: [userId], references: [id])
 
@@ -259,37 +259,36 @@ model PdfJob {
   @@index([userId, createdAt])
 }
 
-
 // ═══════════════════ 字幕翻译任务 ═══════════════════
 model SubtitleJob {
-  id                String   @id @default(cuid())
-  taskId            String   @unique
-  fileName          String
-  fileSize          Int
-  status            String   @default("queued")
-  progress          Int      @default(0)
-  totalCues         Int      @default(0)
-  translatedCues    Int      @default(0)
-  sourceLang        String   @default("auto")
-  targetLang        String   @default("zh")
-  errorType         String?
-  errorMessage      String?
-  document          Json?    // { cues: [{ index, start, end, text, translation? }] }
-  totalInputTokens  Int      @default(0)
-  totalOutputTokens Int      @default(0)
-  totalCostUsd      Float    @default(0)
-  apiErrorCount     Int      @default(0)
-  durationMs        Int?
-  clientKey         String?
-  userId            String?
-  guestSessionId    String?
-  creditState       String?
-  reservedCredits   Int       @default(0)
-  consumedCredits   Int       @default(0)
-  pricingRuleVersion Int      @default(1)
-  createdAt         DateTime @default(now())
-  completedAt       DateTime?
-  updatedAt         DateTime @updatedAt
+  id                 String    @id @default(cuid())
+  taskId             String    @unique
+  fileName           String
+  fileSize           Int
+  status             String    @default("queued")
+  progress           Int       @default(0)
+  totalCues          Int       @default(0)
+  translatedCues     Int       @default(0)
+  sourceLang         String    @default("auto")
+  targetLang         String    @default("zh")
+  errorType          String?
+  errorMessage       String?
+  document           Json? // { cues: [{ index, start, end, text, translation? }] }
+  totalInputTokens   Int       @default(0)
+  totalOutputTokens  Int       @default(0)
+  totalCostUsd       Float     @default(0)
+  apiErrorCount      Int       @default(0)
+  durationMs         Int?
+  clientKey          String?
+  userId             String?
+  guestSessionId     String?
+  creditState        String?
+  reservedCredits    Int       @default(0)
+  consumedCredits    Int       @default(0)
+  pricingRuleVersion Int       @default(1)
+  createdAt          DateTime  @default(now())
+  completedAt        DateTime?
+  updatedAt          DateTime  @updatedAt
 
   @@index([taskId])
   @@index([userId])
@@ -299,18 +298,18 @@ model SubtitleJob {
 
 // ═══════════════════ PDF 埋点 ═══════════════════
 model PdfEvent {
-  id              String   @id @default(cuid())
-  event           String
-  taskId          String?
-  pageCount       Int?
-  sourceLang      String?
-  targetLang      String?
-  durationMs      Int?
-  costUsd         Float?
-  model           String?
-  userId          String?
-  guestSessionId  String?
-  createdAt       DateTime @default(now())
+  id             String   @id @default(cuid())
+  event          String
+  taskId         String?
+  pageCount      Int?
+  sourceLang     String?
+  targetLang     String?
+  durationMs     Int?
+  costUsd        Float?
+  model          String?
+  userId         String?
+  guestSessionId String?
+  createdAt      DateTime @default(now())
 
   @@index([event])
   @@index([createdAt])
@@ -355,13 +354,13 @@ model DocumentProgress {
 
 // ═══════════════════ 积分账户 ═══════════════════
 model CreditAccount {
-  id               String   @id @default(cuid())
-  userId           String   @unique
-  balance          Int      @default(0) // 可用额度（性能缓存，唯一事实来源 = CreditLedger）
-  reservedBalance  Int      @default(0) // 已预留未结算
-  version          Int      @default(0) // 乐观锁
-  createdAt        DateTime @default(now())
-  updatedAt        DateTime @updatedAt
+  id              String   @id @default(cuid())
+  userId          String   @unique
+  balance         Int      @default(0) // 可用额度（性能缓存，唯一事实来源 = CreditLedger）
+  reservedBalance Int      @default(0) // 已预留未结算
+  version         Int      @default(0) // 乐观锁
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
@@ -369,8 +368,8 @@ model CreditAccount {
 model CreditLedger {
   id             String   @id @default(cuid())
   userId         String
-  type           String   // reserve | consume | release | refund | grant | expire | admin_adjust
-  amount         Int      // 正=增加可用，负=减少可用
+  type           String // reserve | consume | release | refund | grant | expire | admin_adjust
+  amount         Int // 正=增加可用，负=减少可用
   grantId        String?
   usageId        String?
   jobId          String?
@@ -385,13 +384,14 @@ model CreditLedger {
   @@index([userId, createdAt])
   @@index([jobId])
 }
+
 // ═══════════════════ 认证身份（多 Provider） ═══════════════════
 // Phase 1 新增：User 与登录方式解耦；未来 Apple/微信/邮箱 直接加 provider
 model AuthIdentity {
   id                String   @id @default(cuid())
   userId            String
-  provider          String   // google | email | apple | wechat | ...
-  providerAccountId String   // Google sub / 邮箱 / Apple sub
+  provider          String // google | email | apple | wechat | ...
+  providerAccountId String // Google sub / 邮箱 / Apple sub
   providerEmail     String?
   createdAt         DateTime @default(now())
   updatedAt         DateTime @updatedAt
@@ -402,13 +402,12 @@ model AuthIdentity {
   @@index([userId])
 }
 
-
 // ═══════════════════ Credit 额度批次 ═══════════════════
 model CreditGrant {
   id              String    @id @default(cuid())
   userId          String
-  type            String    // FREE_MONTHLY | FREE_GRANT | BONUS | SUBSCRIPTION | PURCHASED | ADMIN_ADJUSTMENT | REFUND
-  source          String    // 注册赠送 | 免费额度 | Pro月度 | 购买 | 活动 | 客服补偿 | 退款
+  type            String // FREE_MONTHLY | FREE_GRANT | BONUS | SUBSCRIPTION | PURCHASED | ADMIN_ADJUSTMENT | REFUND
+  source          String // 注册赠送 | 免费额度 | Pro月度 | 购买 | 活动 | 客服补偿 | 退款
   totalAmount     Int
   remainingAmount Int
   reservedAmount  Int       @default(0)
@@ -427,7 +426,7 @@ model UsageRecord {
   id                 String    @id @default(cuid())
   userId             String?
   guestSessionId     String?
-  feature            String    // text_translation | pdf_translation | image_translation | subtitle_translation | doc_translation | web_translation | polish | blindtest
+  feature            String // text_translation | pdf_translation | image_translation | subtitle_translation | doc_translation | web_translation | polish | blindtest
   jobId              String?
   documentId         String?
   inputCharacters    Int       @default(0)
@@ -462,37 +461,36 @@ model UsageRecord {
 
 // ═══════════════════ Pricing 定价规则 ═══════════════════
 model PricingRule {
-  id          String    @id @default(cuid())
-  feature     String    // text_translation | pdf_translation | ...
-  unit        String    // per_1000_chars | per_page | per_image | per_minute | per_file | per_segment
-  creditRate  Int       // 每 unit 多少 credit
-  minCharge   Int       @default(1)
+  id          String   @id @default(cuid())
+  feature     String // text_translation | pdf_translation | ...
+  unit        String // per_1000_chars | per_page | per_image | per_minute | per_file | per_segment
+  creditRate  Int // 每 unit 多少 credit
+  minCharge   Int      @default(1)
   maxCharge   Int?
-  version     Int       @default(1)
-  active      Boolean   @default(true)
-  effectiveAt DateTime  @default(now())
-  createdAt   DateTime  @default(now())
+  version     Int      @default(1)
+  active      Boolean  @default(true)
+  effectiveAt DateTime @default(now())
+  createdAt   DateTime @default(now())
 
   @@unique([feature, version])
 }
 
 // ═══════════════════ Reconciliation 对账记录 ═══════════════════
 model ReconciliationRecord {
-  id          String    @id @default(cuid())
-  checkType   String    // account_vs_ledger | grants_vs_account | stuck_reserve
-  userId      String?
-  expected    Int?
-  actual      Int?
-  diff        Int?
-  detail      String?
-  status      String    @default("open") // open | resolved
-  createdAt   DateTime  @default(now())
-  resolvedAt  DateTime?
+  id         String    @id @default(cuid())
+  checkType  String // account_vs_ledger | grants_vs_account | stuck_reserve
+  userId     String?
+  expected   Int?
+  actual     Int?
+  diff       Int?
+  detail     String?
+  status     String    @default("open") // open | resolved
+  createdAt  DateTime  @default(now())
+  resolvedAt DateTime?
 
   @@index([status])
   @@index([createdAt])
 }
-
 
 // ═══════════════════ 跨境电商工作台（V1） ═══════════════════
 // Product-first UX：Project 仅作 DB 归属（默认「默认项目」）；Product 是用户操作主体
@@ -507,7 +505,7 @@ model EcommerceProject {
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 
-  user     User               @relation(fields: [userId], references: [id], onDelete: Cascade)
+  user     User                       @relation(fields: [userId], references: [id], onDelete: Cascade)
   products EcommerceProduct[]
   assets   EcommerceAsset[]
   messages EcommerceCustomerMessage[]
@@ -538,8 +536,8 @@ model EcommerceProduct {
   createdAt         DateTime  @default(now())
   updatedAt         DateTime  @updatedAt
 
-  project  EcommerceProject          @relation(fields: [projectId], references: [id], onDelete: Cascade)
-  user     User                      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  project  EcommerceProject           @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  user     User                       @relation(fields: [userId], references: [id], onDelete: Cascade)
   listings EcommerceListing[]
   runs     EcommerceListingRun[]
   assets   EcommerceAsset[]
@@ -556,14 +554,14 @@ model EcommerceListing {
   productId       String
   userId          String
   version         Int      @default(1)
-  draft           Json     // { title, bulletPoints[], description, keywords[], faqHighlights[] }
-  pendingEdit     Json?    // 待应用的 AI 微调结果 { field, instruction, content, changes, warnings, factConflicts, platformIssues, createdAt }
+  draft           Json // { title, bulletPoints[], description, keywords[], faqHighlights[] }
+  pendingEdit     Json? // 待应用的 AI 微调结果 { field, instruction, content, changes, warnings, factConflicts, platformIssues, createdAt }
   status          String   @default("current") // current | history
   charCount       Int      @default(0)
-  warnings        Json?    // Fact Validation 待确认项（string[]）
+  warnings        Json? // Fact Validation 待确认项（string[]）
   creditState     String?
   consumedCredits Int      @default(0)
-  metadata        Json?    // { platform, market, language, model }
+  metadata        Json? // { platform, market, language, model }
   createdAt       DateTime @default(now())
   updatedAt       DateTime @updatedAt
 
@@ -606,7 +604,7 @@ model EcommerceAsset {
   projectId    String
   productId    String?
   userId       String
-  type         String    // image | csv | other
+  type         String // image | csv | other
   mime         String
   size         Int
   storageKey   String
@@ -616,9 +614,9 @@ model EcommerceAsset {
   createdAt    DateTime  @default(now())
   updatedAt    DateTime  @updatedAt
 
-  project      EcommerceProject           @relation(fields: [projectId], references: [id], onDelete: Cascade)
-  product      EcommerceProduct?          @relation(fields: [productId], references: [id], onDelete: SetNull)
-  user         User                       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  project      EcommerceProject            @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  product      EcommerceProduct?           @relation(fields: [productId], references: [id], onDelete: SetNull)
+  user         User                        @relation(fields: [userId], references: [id], onDelete: Cascade)
   translations EcommerceAssetTranslation[]
 
   @@index([userId])
@@ -666,9 +664,9 @@ model EcommerceCustomerMessage {
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 
-  project EcommerceProject       @relation(fields: [projectId], references: [id], onDelete: Cascade)
-  product EcommerceProduct?      @relation(fields: [productId], references: [id], onDelete: SetNull)
-  user    User                   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  project EcommerceProject  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  product EcommerceProduct? @relation(fields: [productId], references: [id], onDelete: SetNull)
+  user    User              @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@index([userId])
   @@index([projectId])
@@ -681,7 +679,7 @@ model EcommerceJob {
   taskId          String    @unique
   userId          String
   projectId       String?
-  kind            String    // asset_translation | ...
+  kind            String // asset_translation | ...
   status          String    @default("pending") // pending | running | completed | failed | cancelled
   progress        Int       @default(0)
   payload         Json?
@@ -707,9 +705,9 @@ model EcommerceJob {
 // 平台规则（长度/字段/格式）
 model EcommercePlatformRule {
   id                String   @id @default(cuid())
-  platform          String   // amazon_us | amazon_uk | ...
-  market            String   // us | uk | ...
-  field             String   // title | bullet_points | description | keywords
+  platform          String // amazon_us | amazon_uk | ...
+  market            String // us | uk | ...
+  field             String // title | bullet_points | description | keywords
   minLength         Int?
   maxLength         Int?
   recommendedLength Int?
@@ -728,15 +726,14 @@ model EcommerceContentCompliance {
   platform  String
   market    String?
   category  String?
-  ruleType  String   // no_fabrication | no_sensitive_claim | no_unverified_efficacy
-  ruleText  Json     // { zh, en? }
+  ruleType  String // no_fabrication | no_sensitive_claim | no_unverified_efficacy
+  ruleText  Json // { zh, en? }
   active    Boolean  @default(true)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
   @@index([platform, market])
 }
-
 
 model AdminLog {
   id        String   @id @default(cuid())
@@ -784,4 +781,43 @@ model ErrorLog {
   createdAt DateTime @default(now())
 
   @@index([createdAt])
+}
+
+model PricePlan {
+  id               String   @id @default(cuid())
+  code             String   @unique
+  name             String
+  priceCents       Int
+  totalCredits     Int
+  purchasedCredits Int
+  bonusCredits     Int
+  bonusTtlDays     Int      @default(30)
+  badge            String?
+  description      String?
+  active           Boolean  @default(true)
+  sortOrder        Int      @default(0)
+  createdAt        DateTime @default(now())
+
+  @@index([active, sortOrder])
+}
+
+model RechargeOrder {
+  id               String    @id @default(cuid())
+  userId           String
+  planCode         String
+  planName         String
+  priceCents       Int
+  purchasedCredits Int
+  bonusCredits     Int
+  status           String    @default("pending")
+  provider         String?
+  providerOrderId  String?   @unique
+  idempotencyKey   String    @unique
+  createdAt        DateTime  @default(now())
+  paidAt           DateTime?
+  grantedAt        DateTime?
+  expiresAt        DateTime?
+
+  @@index([userId, createdAt])
+  @@index([status])
 }
