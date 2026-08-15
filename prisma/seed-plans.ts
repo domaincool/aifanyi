@@ -10,9 +10,9 @@ const PLANS = [
   {
     code: 'starter',
     name: '入门包',
-    priceCents: 590, // ¥5.9
-    totalCredits: 590, // 590 积分
-    purchasedCredits: 590, // 本金（长期有效）
+    priceCents: 990, // ¥9.9
+    totalCredits: 990, // 990 积分
+    purchasedCredits: 990, // 本金（长期有效）
     bonusCredits: 0, // 赠送 0（平价）
     bonusTtlDays: 30,
     badge: null,

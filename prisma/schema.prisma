@@ -817,6 +817,7 @@ model RechargeOrder {
   paidAt           DateTime?
   grantedAt        DateTime?
   expiresAt        DateTime?
+  checkoutUrl      String?
 
   @@index([userId, createdAt])
   @@index([status])
