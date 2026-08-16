@@ -10,6 +10,7 @@
 import { prisma } from '../src/lib/db';
 import { endSyncSuccess, endSyncFail } from '../src/lib/credit/sync-settle';
 import { expireCredits } from '../src/lib/credit/engine';
+import { checkAndAlert } from './alert';
 
 async function settleStuckJobs(): Promise<{ settled: number; released: number; consumed: number }> {
   const cutoff = new Date(Date.now() - 3600_000); // 1h
@@ -116,6 +117,8 @@ async function main() {
     reconcile: rec,
     ms: Date.now() - started,
   }));
+  // V1.2 P0-2：异常告警（对账 mismatch / 积分突发消耗 / 任务失败率）
+  await checkAndAlert({ stuck, expired: exp, reconcile: rec });
 }
 
 main().catch((e) => { console.error('[credit-reconciler]', e); process.exit(1); });
