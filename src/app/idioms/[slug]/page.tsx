@@ -4,10 +4,19 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const dynamic = 'force-dynamic';
+function safeDecode(s: string): string {
+  try {
+    return decodeURIComponent(s);
+  } catch {
+    return s;
+  }
+}
+
 
 /** 成语/谚语词条 SEO 页：/idioms/[slug]，每词一页吃长尾搜索词 */
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const { slug } = await params;
+  const { slug: rawSlug } = await params;
+  const slug = safeDecode(rawSlug);
   const e = await prisma.expressionEntry.findFirst({ where: { slug, type: 'idiom' } }).catch(() => null);
   if (!e || e.status !== 'published') return { title: '成语谚语翻译 | 爱翻译 aifanyi.com' };
   return {

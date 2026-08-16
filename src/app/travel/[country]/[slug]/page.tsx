@@ -5,13 +5,22 @@ import Link from 'next/link';
 import { countryName, langName } from '@/lib/content/locales';
 
 export const dynamic = 'force-dynamic';
+function safeDecode(s: string): string {
+  try {
+    return decodeURIComponent(s);
+  } catch {
+    return s;
+  }
+}
+
 
 interface Phrase { zh: string; native?: string; pronounce?: string; polite?: string; en?: string; usage?: string }
 interface Tip { zh: string; en?: string }
 
 /** 旅行场景 SEO 页：/travel/[country]/[slug] */
 export async function generateMetadata({ params }: { params: Promise<{ country: string; slug: string }> }): Promise<Metadata> {
-  const { country, slug } = await params;
+  const { country, slug: rawSlug } = await params;
+  const slug = safeDecode(rawSlug);
   const s = await prisma.sceneEntry.findFirst({ where: { country, slug } }).catch(() => null);
   if (!s || s.status !== 'published') return { title: '旅行语言 | 爱翻译 aifanyi.com' };
   return {

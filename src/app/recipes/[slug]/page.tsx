@@ -5,6 +5,14 @@ import Link from 'next/link';
 import { countryName } from '@/lib/content/locales';
 
 export const dynamic = 'force-dynamic';
+function safeDecode(s: string): string {
+  try {
+    return decodeURIComponent(s);
+  } catch {
+    return s;
+  }
+}
+
 
 function toIsoDuration(raw: string | null | undefined): string | undefined {
   if (!raw) return undefined;
@@ -25,7 +33,8 @@ interface Vocab { zh: string; en?: string }
 
 /** 菜谱 SEO 页：/recipes/[slug]，JSON-LD Recipe */
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const { slug } = await params;
+  const { slug: rawSlug } = await params;
+  const slug = safeDecode(rawSlug);
   const r = await prisma.recipeEntry.findFirst({ where: { slug } }).catch(() => null);
   if (!r || r.status !== 'published') return { title: '全球美食菜谱 | 爱翻译 aifanyi.com' };
   const en = r.enName ? `（${r.enName}）` : '';

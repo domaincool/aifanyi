@@ -4,10 +4,19 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const dynamic = 'force-dynamic';
+function safeDecode(s: string): string {
+  try {
+    return decodeURIComponent(s);
+  } catch {
+    return s;
+  }
+}
+
 
 /** 难翻译词 SEO 页：/untranslatable/[slug]，词条模板与 /idioms 同构（type 隔离） */
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const { slug } = await params;
+  const { slug: rawSlug } = await params;
+  const slug = safeDecode(rawSlug);
   const e = await prisma.expressionEntry.findFirst({ where: { slug, type: 'untranslatable' } }).catch(() => null);
   if (!e || e.status !== 'published') return { title: '难翻译词 | 爱翻译 aifanyi.com' };
   return {

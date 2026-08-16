@@ -5,10 +5,19 @@ import Link from 'next/link';
 import { countryName, langName } from '@/lib/content/locales';
 
 export const dynamic = 'force-dynamic';
+function safeDecode(s: string): string {
+  try {
+    return decodeURIComponent(s);
+  } catch {
+    return s;
+  }
+}
+
 
 /** 菜单词条 SEO 页：/menu/[country]/[slug] */
 export async function generateMetadata({ params }: { params: Promise<{ country: string; slug: string }> }): Promise<Metadata> {
-  const { country, slug } = await params;
+  const { country, slug: rawSlug } = await params;
+  const slug = safeDecode(rawSlug);
   const m = await prisma.menuEntry.findFirst({ where: { country, slug } }).catch(() => null);
   if (!m || m.status !== 'published') return { title: '菜单词典 | 爱翻译 aifanyi.com' };
   const roman = m.romanized ? `（${m.romanized}）` : '';
