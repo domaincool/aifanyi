@@ -38,8 +38,9 @@ export default function ClientLayout({ children, serverUser }: { children: React
 
         <a href="/" className="logo">爱翻译<span> · aifanyi.com</span></a>
         <nav>
-          <a href="/" className="nav-item">AI 翻译</a>
-          <a href="/tools" className="nav-item">工具</a>
+          <a href="/voice" className="nav-item">语音翻译</a>
+          <a href="/tools" className="nav-item">翻译工具</a>
+          <a href="/blindtest" className="nav-item">AI翻译擂台</a>
           <div className="nav-mega">
             <button type="button" className="nav-mega-trigger" aria-haspopup="true" aria-expanded="false">
               语言与世界 <span className="nav-caret">▾</span>
@@ -121,8 +122,9 @@ export default function ClientLayout({ children, serverUser }: { children: React
               爱翻译
               <button className="mob-close" aria-label="关闭菜单" onClick={() => setMobileOpen(false)}>✕</button>
             </div>
-            <a className="mob-link" href="/" onClick={() => setMobileOpen(false)}>AI 翻译</a>
-            <a className="mob-link" href="/tools" onClick={() => setMobileOpen(false)}>工具</a>
+            <a className="mob-link" href="/voice" onClick={() => setMobileOpen(false)}>语音翻译</a>
+            <a className="mob-link" href="/tools" onClick={() => setMobileOpen(false)}>翻译工具</a>
+            <a className="mob-link" href="/blindtest" onClick={() => setMobileOpen(false)}>AI翻译擂台</a>
             <div className="mob-group">语言与世界</div>
             <a className="mob-link" href="/recipes" onClick={() => setMobileOpen(false)}>🍜 全球美食 <span className="mob-sub">菜谱 · 菜单</span></a>
             <a className="mob-link" href="/travel" onClick={() => setMobileOpen(false)}>✈️ 旅行语言 <span className="mob-sub">机场 · 酒店 · 餐厅</span></a>
@@ -133,7 +135,6 @@ export default function ClientLayout({ children, serverUser }: { children: React
             <a className="mob-link" href="/untranslatable" onClick={() => setMobileOpen(false)}>难翻译词</a>
             <a className="mob-link" href="/life" onClick={() => setMobileOpen(false)}>🏠 海外生活</a>
             <a className="mob-link" href="/culture" onClick={() => setMobileOpen(false)}>🧠 语言与文化</a>
-            <a className="mob-link" href="/blindtest" onClick={() => setMobileOpen(false)}>AI 翻译擂台</a>
             {user ? (
               <div className="mob-user">
                 已登录：{user.nickname || user.email}
