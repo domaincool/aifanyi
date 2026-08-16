@@ -50,10 +50,11 @@ export default async function MenuEntryPage({ params }: { params: Promise<{ coun
           "@type": "Article",
           "headline": `${m.zh}是什么菜？${m.en ? `${m.en} · ` : ''}${countryName(country)}菜单翻译`,
           "description": m.description || `${m.zh}（${countryName(country)}菜单）菜品翻译。`,
+          "image": "https://aifanyi.com/og-image.png",
           "datePublished": m.createdAt,
           "dateModified": m.updatedAt,
           "inLanguage": "zh-CN",
-          "mainEntityOfPage": `https://aifanyi.com/menu/${m.country}/${m.slug}`,
+          "mainEntityOfPage": `${process.env.NEXT_PUBLIC_SITE_URL || 'https://aifanyi.com'}/menu/${m.country}/${m.slug}`,
           "author": { "@type": "Organization", "name": "爱翻译 aifanyi.com", "url": "https://aifanyi.com/" },
           "publisher": {
             "@type": "Organization", "name": "爱翻译", "url": "https://aifanyi.com/",

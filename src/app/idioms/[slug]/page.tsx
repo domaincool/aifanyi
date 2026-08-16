@@ -58,10 +58,11 @@ export default async function IdiomPage({ params }: { params: Promise<{ slug: st
           "@type": "Article",
           "headline": `${e.term} 用英语怎么说？${e.term} → ${e.translation}`,
           "description": `${e.term}（${e.meaning}）的地道英文表达是「${e.translation}」。`,
+          "image": "https://aifanyi.com/og-image.png",
           "datePublished": e.createdAt,
           "dateModified": e.updatedAt,
           "inLanguage": "zh-CN",
-          "mainEntityOfPage": `https://aifanyi.com/idioms/${e.slug}`,
+          "mainEntityOfPage": `${process.env.NEXT_PUBLIC_SITE_URL || 'https://aifanyi.com'}/idioms/${e.slug}`,
           "author": { "@type": "Organization", "name": "爱翻译 aifanyi.com", "url": "https://aifanyi.com/" },
           "publisher": {
             "@type": "Organization", "name": "爱翻译", "url": "https://aifanyi.com/",

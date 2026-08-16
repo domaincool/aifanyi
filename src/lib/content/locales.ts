@@ -30,6 +30,11 @@ export const LANG_NAMES: Record<string, string> = {
   es: 'Español',
   ru: 'Русский',
   hi: 'हिन्दी',
+  vi: 'Tiếng Việt',
+  ar: 'العربية',
+  pt: 'Português',
+  tr: 'Türkçe',
+  id: 'Bahasa Indonesia',
 };
 
 export function countryName(c: string | null | undefined): string {

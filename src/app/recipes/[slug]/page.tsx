@@ -6,6 +6,19 @@ import { countryName } from '@/lib/content/locales';
 
 export const dynamic = 'force-dynamic';
 
+function toIsoDuration(raw: string | null | undefined): string | undefined {
+  if (!raw) return undefined;
+  const m = raw.match(/(\d+)\s*小时/);
+  const mm = raw.match(/(\d+)\s*分钟/);
+  const h = m ? parseInt(m[1], 10) : 0;
+  const min = mm ? parseInt(mm[1], 10) : 0;
+  if (h === 0 && min === 0) return undefined;
+  let out = 'PT';
+  if (h > 0) out += h + 'H';
+  if (min > 0) out += min + 'M';
+  return out;
+}
+
 interface Ingredient { name: string; amount?: string }
 interface Step { text: string }
 interface Vocab { zh: string; en?: string }
@@ -63,14 +76,15 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
           "description": r.intro || `${r.zhName || r.dish}家常做法。`,
           "recipeCategory": r.category || undefined,
           "recipeCuisine": r.country ? countryName(r.country) : undefined,
-          "cookTime": r.cookTime || undefined,
+          "cookTime": toIsoDuration(r.cookTime),
           "recipeYield": r.servings ? `${r.servings}` : undefined,
-          "recipeIngredient": ingredients.map((i) => (i.amount ? `${i.amount} ${i.name}` : i.name)),
-          "recipeInstructions": steps.map((s, i) => ({ "@type": "HowToStep", "position": i + 1, "text": s.text })),
+          "recipeIngredient": ingredients.length > 0 ? ingredients.map((i) => (i.amount ? `${i.amount} ${i.name}` : i.name)) : undefined,
+          "recipeInstructions": steps.length > 0 ? steps.map((s, i) => ({ "@type": "HowToStep", "position": i + 1, "text": s.text })) : undefined,
+          "image": "https://aifanyi.com/og-image.png",
           "datePublished": r.createdAt,
           "dateModified": r.updatedAt,
           "inLanguage": "zh-CN",
-          "mainEntityOfPage": `https://aifanyi.com/recipes/${r.slug}`,
+          "mainEntityOfPage": `${process.env.NEXT_PUBLIC_SITE_URL || 'https://aifanyi.com'}/recipes/${r.slug}`,
           "author": { "@type": "Organization", "name": "爱翻译 aifanyi.com", "url": "https://aifanyi.com/" },
           "publisher": {
             "@type": "Organization", "name": "爱翻译", "url": "https://aifanyi.com/",

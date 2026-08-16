@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 import { prisma } from '@/lib/db';
 
 // 动态生成 sitemap：每次请求从数据库读取词条，加新词条自动出现在地图里
-export const dynamic = 'force-dynamic';
+export const revalidate = 300;
 
 const BASE = process.env.NEXT_PUBLIC_SITE_URL || 'https://aifanyi.com';
 
@@ -84,7 +84,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }
   for (const u of untrans) {
     entries.push({
-      url: `${BASE}/untranslatable/${u.slug}`,
+      url: `${BASE}/untranslatable/${encodeURIComponent(u.slug)}`,
       lastModified: u.updatedAt,
       changeFrequency: 'monthly',
       priority: 0.7,
@@ -100,7 +100,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }
   for (const mn of menus) {
     entries.push({
-      url: `${BASE}/menu/${mn.country}/${mn.slug}`,
+      url: `${BASE}/menu/${encodeURIComponent(mn.country)}/${encodeURIComponent(mn.slug)}`,
       lastModified: mn.updatedAt,
       changeFrequency: 'monthly',
       priority: 0.7,
@@ -116,7 +116,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }
   for (const sc of scenes) {
     entries.push({
-      url: `${BASE}/travel/${sc.country}/${sc.slug}`,
+      url: `${BASE}/travel/${encodeURIComponent(sc.country)}/${encodeURIComponent(sc.slug)}`,
       lastModified: sc.updatedAt,
       changeFrequency: 'monthly',
       priority: 0.7,
@@ -132,7 +132,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }
   for (const rc of recipes) {
     entries.push({
-      url: `${BASE}/recipes/${rc.slug}`,
+      url: `${BASE}/recipes/${encodeURIComponent(rc.slug)}`,
       lastModified: rc.updatedAt,
       changeFrequency: 'monthly',
       priority: 0.7,

@@ -1,7 +1,7 @@
 import { prisma } from '@/lib/db';
 import Link from 'next/link';
 
-export const dynamic = 'force-dynamic';
+export const revalidate = 300;
 
 export const metadata = {
   title: '难翻译词 · 无法直译的外语单词 | 爱翻译',
@@ -15,6 +15,7 @@ export default async function UntranslatableIndexPage() {
     take: 48,
     select: { slug: true, term: true, translation: true, meaning: true },
   }).catch(() => []);
+  const total = await prisma.expressionEntry.count({ where: { status: 'published', type: 'untranslatable' } }).catch(() => items.length);
 
   const cards = [
     { href: '/idioms', title: '成语谚语', desc: '中文成语的地道外文表达' },
@@ -30,7 +31,7 @@ export default async function UntranslatableIndexPage() {
       </section>
       {items.length > 0 && (
         <>
-          <h2 className="section-title">已收录难翻译词（{items.length}）</h2>
+          <h2 className="section-title">已收录难翻译词（{total}）</h2>
           <div className="entry-grid">
             {items.map((e) => (
               <Link key={e.slug} className="entry-card" href={`/untranslatable/${e.slug}`}>

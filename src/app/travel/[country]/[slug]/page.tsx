@@ -6,7 +6,7 @@ import { countryName, langName } from '@/lib/content/locales';
 
 export const dynamic = 'force-dynamic';
 
-interface Phrase { zh: string; en: string; usage?: string }
+interface Phrase { zh: string; native?: string; pronounce?: string; polite?: string; en?: string; usage?: string }
 interface Tip { zh: string; en?: string }
 
 /** 旅行场景 SEO 页：/travel/[country]/[slug] */
@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ country: 
   if (!s || s.status !== 'published') return { title: '旅行语言 | 爱翻译 aifanyi.com' };
   return {
     title: `${s.title} · ${countryName(country)}旅行常用语 | 爱翻译`,
-    description: `${s.intro || `${s.title}——${countryName(country)}旅行场景必备用语。`}含${(s.phrases as unknown[] | null) && Array.isArray(s.phrases) ? (s.phrases as unknown[]).length : 0} 句实用短语中英对照，爱翻译 · AI翻译。`,
+    description: `${s.intro || `${s.title}——${countryName(country)}旅行场景必备用语。`}含${(s.phrases as unknown[] | null) && Array.isArray(s.phrases) ? (s.phrases as unknown[]).length : 0}句实用短语对照，爱翻译 · AI翻译。`,
   };
 }
 
@@ -33,7 +33,7 @@ export default async function TravelScenePage({ params }: { params: Promise<{ co
   let related: { slug: string; title: string }[] = [];
   try {
     const raw = await prisma.sceneEntry.findMany({
-      where: { status: 'published', country },
+      where: { status: 'published', country, kind: s.kind },
       orderBy: { popularity: 'desc' },
       take: 8,
       select: { slug: true, title: true },
@@ -53,10 +53,11 @@ export default async function TravelScenePage({ params }: { params: Promise<{ co
           "@type": "Article",
           "headline": `${s.title} · ${countryName(country)}旅行常用语`,
           "description": s.intro || `${s.title}——${countryName(country)}旅行场景必备用语。`,
+          "image": "https://aifanyi.com/og-image.png",
           "datePublished": s.createdAt,
           "dateModified": s.updatedAt,
           "inLanguage": "zh-CN",
-          "mainEntityOfPage": `https://aifanyi.com/travel/${s.country}/${s.slug}`,
+          "mainEntityOfPage": `${process.env.NEXT_PUBLIC_SITE_URL || 'https://aifanyi.com'}/travel/${s.country}/${s.slug}`,
           "author": { "@type": "Organization", "name": "爱翻译 aifanyi.com", "url": "https://aifanyi.com/" },
           "publisher": {
             "@type": "Organization", "name": "爱翻译", "url": "https://aifanyi.com/",
@@ -76,11 +77,14 @@ export default async function TravelScenePage({ params }: { params: Promise<{ co
 
       {phrases.length > 0 && (
         <div className="result" style={{ margin: '10px 0' }}>
-          <div style={{ fontSize: 12.5, color: 'var(--muted)' }}>实用短语 · 中英对照</div>
+          <div style={{ fontSize: 12.5, color: 'var(--muted)' }}>实用短语 · 对照</div>
           {phrases.map((p, i) => (
             <div key={i} style={{ marginTop: 6, paddingBottom: 6, borderBottom: '1px dashed var(--border, #e5e7eb)' }}>
-              <div>{p.en}</div>
+              {p.native && <div>{p.native}</div>}
+              {!p.native && p.en && <div>{p.en}</div>}
               <div style={{ color: 'var(--muted)' }}>{p.zh}</div>
+              {p.pronounce && <div style={{ fontSize: 12, color: 'var(--muted)', marginTop: 2 }}>{p.pronounce}</div>}
+              {p.polite && <span style={{ display: 'inline-block', background: 'var(--border, #e5e7eb)', borderRadius: 10, padding: '1px 8px', fontSize: 11, color: 'var(--muted)', marginTop: 3 }}>{p.polite === 'polite' ? '礼貌用语' : p.polite === 'casual' ? '口语' : p.polite}</span>}
               {p.usage && <div style={{ fontSize: 12, color: 'var(--muted)', marginTop: 2 }}>用法：{p.usage}</div>}
             </div>
           ))}

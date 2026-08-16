@@ -109,6 +109,7 @@ function modelOf(type: ContentType): 'expressionEntry' | 'sceneEntry' | 'menuEnt
 
 function validateItem(it: ContentImportItem): string | null {
   if (!it || typeof it !== 'object') return 'invalid_row';
+  if (it.slug !== undefined && (typeof it.slug !== 'string' || !/^[a-z0-9\u4e00-\u9fa5-]+$/.test(it.slug))) return 'invalid_slug';
   const t = it.type;
   if (!t) return 'missing_type';
   if (!TYPE_WHITELIST.includes(t)) return 'unknown_type';

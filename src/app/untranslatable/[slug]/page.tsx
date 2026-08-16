@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const e = await prisma.expressionEntry.findFirst({ where: { slug, type: 'untranslatable' } }).catch(() => null);
   if (!e || e.status !== 'published') return { title: '难翻译词 | 爱翻译 aifanyi.com' };
   return {
-    title: `${e.term} 怎么翻译？难以直译的 ${e.term} | 爱翻译`,
+    title: `${e.term} 怎么翻译？${e.term} → ${e.translation} | 爱翻译`,
     description: `${e.term}（${e.meaning}）很难直译成英文——看它最接近的表达「${e.translation}」与用法。爱翻译 · AI翻译。`,
   };
 }
@@ -58,10 +58,11 @@ export default async function UntranslatableEntryPage({ params }: { params: Prom
           "@type": "Article",
           "headline": `${e.term} 怎么翻译？${e.term} → ${e.translation}`,
           "description": `${e.term}（${e.meaning}）很难直译成英文，最接近的表达是「${e.translation}」。`,
+          "image": "https://aifanyi.com/og-image.png",
           "datePublished": e.createdAt,
           "dateModified": e.updatedAt,
           "inLanguage": "zh-CN",
-          "mainEntityOfPage": `https://aifanyi.com/untranslatable/${e.slug}`,
+          "mainEntityOfPage": `${process.env.NEXT_PUBLIC_SITE_URL || 'https://aifanyi.com'}/untranslatable/${e.slug}`,
           "author": { "@type": "Organization", "name": "爱翻译 aifanyi.com", "url": "https://aifanyi.com/" },
           "publisher": {
             "@type": "Organization", "name": "爱翻译", "url": "https://aifanyi.com/",

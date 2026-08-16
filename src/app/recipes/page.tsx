@@ -2,7 +2,7 @@ import { prisma } from '@/lib/db';
 import Link from 'next/link';
 import { countryName } from '@/lib/content/locales';
 
-export const dynamic = 'force-dynamic';
+export const revalidate = 300;
 
 export const metadata = {
   title: '全球美食 · 菜谱翻译 · 菜单词典 | 爱翻译',
@@ -16,6 +16,7 @@ export default async function RecipesIndexPage() {
     take: 48,
     select: { slug: true, zhName: true, dish: true, enName: true, country: true, difficulty: true },
   }).catch(() => []);
+  const total = await prisma.recipeEntry.count({ where: { status: 'published' } }).catch(() => items.length);
 
   const cards = [
     { href: '/menu', title: '菜单词典', desc: '各国菜单菜名翻译' },
@@ -31,7 +32,7 @@ export default async function RecipesIndexPage() {
       </section>
       {items.length > 0 && (
         <>
-          <h2 className="section-title">已收录菜谱（{items.length}）</h2>
+          <h2 className="section-title">已收录菜谱（{total}）</h2>
           <div className="entry-grid">
             {items.map((r) => (
               <Link key={r.slug} className="entry-card" href={`/recipes/${r.slug}`}>

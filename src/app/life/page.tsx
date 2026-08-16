@@ -2,7 +2,7 @@ import { prisma } from '@/lib/db';
 import Link from 'next/link';
 import { countryName, langName } from '@/lib/content/locales';
 
-export const dynamic = 'force-dynamic';
+export const revalidate = 300;
 
 export const metadata = {
   title: '海外生活 · 移居留学常用外语表达 | 爱翻译',
@@ -16,6 +16,7 @@ export default async function LifeIndexPage() {
     take: 48,
     select: { slug: true, country: true, title: true, lang: true },
   }).catch(() => []);
+  const total = await prisma.sceneEntry.count({ where: { status: 'published', kind: 'life' } }).catch(() => items.length);
 
   const cards = [
     { href: '/voice', title: '语音翻译', desc: '不会读？让 AI 帮你翻译并朗读' },
@@ -31,7 +32,7 @@ export default async function LifeIndexPage() {
       </section>
       {items.length > 0 && (
         <>
-          <h2 className="section-title">已收录场景（{items.length}）</h2>
+          <h2 className="section-title">已收录场景（{total}）</h2>
           <div className="entry-grid">
             {items.map((s) => (
               <Link key={s.slug} className="entry-card" href={`/travel/${s.country}/${s.slug}`}>
