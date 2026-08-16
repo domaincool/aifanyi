@@ -34,6 +34,10 @@ export async function POST(req: Request) {
   if (order.status === 'granted') {
     return NextResponse.json({ ok: true, granted: { purchased: order.purchasedCredits, bonus: order.bonusCredits }, already: true });
   }
+  // paid = 到账进行中（grant 事务未完成）：幂等友好返回 processing，客户端可稍后刷新确认
+  if (order.status === 'paid') {
+    return NextResponse.json({ ok: true, processing: true, message: '订单处理中，请稍后刷新确认。' });
+  }
   if (order.status !== 'pending') {
     return NextResponse.json({ ok: false, code: 'invalid_state', error: '订单状态不可确认。' }, { status: 400 });
   }

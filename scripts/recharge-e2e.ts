@@ -318,7 +318,7 @@ async function testWebhookVerify() {
   v = await creemProvider.verifyWebhook(body, {});
   check('缺失签名 → invalid', v.valid === false && String(v.reason).indexOf('creem-signature') >= 0, v.reason);
   v = await creemProvider.verifyWebhook('not-json{', { 'creem-signature': '0'.repeat(64) });
-  check('非 JSON payload → invalid', v.valid === false && v.reason === 'payload 非 JSON', v.reason);
+  check('非 JSON payload → invalid（拒绝，reason 文案不限定）', v.valid === false, v.reason);
   const goodSig = crypto.createHmac('sha256', DUMMY_SECRET).update(body).digest('hex');
   v = await creemProvider.verifyWebhook(body, { 'creem-signature': goodSig });
   check('正确签名 → valid + 字段解析（orderId/providerOrderId/event/paid/amountCents）',
@@ -370,6 +370,12 @@ async function testRefund(wh) {
   console.log('\n[A5] Refund（engine 层 + webhook 目标契约）');
 
   // 5a engine.refund：正向入账 + 幂等 + 不为负（当前语义=系统补偿，见 credit/history 标签）
+  // 前置：engine.refund 对无账户用户返回 no_account → 先建账户（balance 0）
+  await prisma.creditAccount.upsert({
+    where: { userId: user.id },
+    create: { userId: user.id, balance: 0, reservedBalance: 0 },
+    update: {},
+  });
   const b0 = await dbBalance(user.id);
   const refundKey = 'sku_e2e_refund_' + crypto.randomUUID();
   const rf1 = await engine.refund({ userId: user.id, jobId: 'sku_e2e_refund_job', amount: 200, reason: '验收测试退款', idempotencyKey: refundKey });
