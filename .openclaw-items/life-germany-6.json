@@ -1,0 +1,205 @@
+[
+  {
+    "type": "scene",
+    "country": "germany",
+    "language": "de",
+    "scene": "renting",
+    "kind": "life",
+    "title": "在德国租房：找房到签约德语全流程",
+    "intro": "德国租房市场和中国差异极大：多数人终身租房、房源要通过平台抢、租金分「冷租/暖租」。作为新移民，理解 Kaltmiete（冷租）、Warmmiete（暖租）、Kaution（押金）、Anmeldung（市政登记）这些概念比会说德语更重要。租房是德国生活第一关，掌握本页表达即可完成看房、申请、签约。",
+    "phrases": [
+      { "native": "Ich suche eine Wohnung.", "zh": "我在找房子", "pronounce": "Ich zoo-che ai-ne Vo-nung", "polite": "普通" },
+      { "native": "Wie groß ist die Wohnung?", "zh": "房子多大？", "pronounce": "Vee grohs ist dee Vo-nung", "polite": "礼貌" },
+      { "native": "Wie hoch ist die Kaltmiete?", "zh": "冷租多少？", "pronounce": "Vee hohch ist dee Kalt-mee-te", "polite": "礼貌" },
+      { "native": "Was kostet die Warmmiete?", "zh": "暖租（含杂费）多少？", "pronounce": "Vas kos-tet dee Varm-mee-te", "polite": "礼貌" },
+      { "native": "Wie hoch ist die Kaution?", "zh": "押金多少？", "pronounce": "Vee hohch ist dee Kau-tsyon", "polite": "礼貌" },
+      { "native": "Ist die Wohnung möbliert?", "zh": "房子带家具吗？", "pronounce": "Ist dee Vo-nung mu-bleert", "polite": "礼貌" },
+      { "native": "Ich suche ein WG-Zimmer.", "zh": "我在找合租房", "pronounce": "Ich zoo-che ain Vay-Gay-Tsim-mer", "polite": "普通" },
+      { "native": "Kann ich einen Besichtigungstermin bekommen?", "zh": "能约看房吗？", "pronounce": "Kan ich ai-nen Be-zich-ti-gungs-ter-min be-ko-men", "polite": "礼貌" },
+      { "native": "Ich möchte die Wohnung nehmen.", "zh": "我想租这套房", "pronounce": "Ich mu-chte dee Vo-nung ney-men", "polite": "礼貌" },
+      { "native": "Wo kann ich mich anmelden?", "zh": "在哪里做市政登记？", "pronounce": "Vo kan ich mich an-mel-den", "polite": "礼貌" }
+    ],
+    "tips": [
+      { "zh": "冷租 vs 暖租：Kaltmiete（冷租=纯房租）+ Nebenkosten（杂费：水暖垃圾）= Warmmiete（暖租）。广告上写的大多是冷租，实际支出要看暖租" },
+      { "zh": "Kaution（押金）：法定上限 3 个月冷租，德国惯例存到专门押金账户（Mietkautionskonto）" },
+      { "zh": "WG（合租）：学生/年轻人主流，Einzugsermächtigung（自动扣款授权）是常见付款方式" },
+      { "zh": "看房神器：「Besichtigungstermin」（看房预约）——德国看房需预约，直接上门会被拒" }
+    ],
+    "cautions": [
+      "Anmeldung（市政登记）是头等大事：租房后必须 14 天内去 Bürgeramt（市民局）登记，否则可能被罚款；没有 Anmeldung 不能办银行卡、保险、签证延期",
+      "Schufa 信用记录：德国房东普遍要求提供 Schufa-Auskunft（信用报告），类似「信用分」",
+      "房源竞争激烈：大城市好房常需提交 Bewerbungsunterlagen（申请材料：收入证明+Schufa+身份），先到先得",
+      "Nachmieter（续租人）：退租时房东常要求你找 Nachmieter 接手，否则押金可能被扣",
+      "租金涨幅受控：德国法律限制租金涨幅（Mietpreisbremse 租金刹车），乱涨可申诉"
+    ]
+  },
+  {
+    "type": "scene",
+    "country": "germany",
+    "language": "de",
+    "scene": "supermarket",
+    "kind": "life",
+    "title": "德国超市购物：Pfand 押瓶与自助结账德语",
+    "intro": "德国超市是「生存技能」密集区：塑料瓶要退押金（Pfand）、周日不营业、购物袋收费、结账速度飞快。第一次在 Aldi/Lidl 结账的人都会被「极速收银」吓到。掌握 Pfand 和自助结账（Selbstbedienungskasse）两大技能，德国超市轻松搞定。",
+    "phrases": [
+      { "native": "Ich hätte gerne eine Tüte.", "zh": "我想要个袋子", "pronounce": "Ich het-te ger-ne ai-ne Ty-te", "polite": "礼貌" },
+      { "native": "Wo ist der Pfandautomat?", "zh": "押金回收机在哪？", "pronounce": "Vo ist der Pfand-au-to-mat", "polite": "普通" },
+      { "native": "Ich möchte Flaschen zurückgeben.", "zh": "我要退瓶子", "pronounce": "Ich mu-chte Fla-schen tsu-ruk-gey-ben", "polite": "礼貌" },
+      { "native": "Wo ist die Selbstbedienungskasse?", "zh": "自助结账在哪？", "pronounce": "Vo ist dee Zelpst-be-dee-nungs-kas-se", "polite": "普通" },
+      { "native": "Kann ich mit Karte zahlen?", "zh": "可以刷卡吗？", "pronounce": "Kan ich mit Kar-te tsah-len", "polite": "礼貌" },
+      { "native": "Ich zahle bar.", "zh": "我付现金", "pronounce": "Ich tsah-le bar", "polite": "普通" },
+      { "native": "Stimmt so.", "zh": "不用找（零钱留着）", "pronounce": "Shtimt zo", "polite": "口语" },
+      { "native": "Einen Bon, bitte.", "zh": "请给我小票", "pronounce": "Ai-nen Bon, bit-te", "polite": "礼貌" },
+      { "native": "Ich habe keine Kundenkarte.", "zh": "我没有会员卡", "pronounce": "Ich ha-be kai-ne Kun-den-kar-te", "polite": "礼貌" }
+    ],
+    "tips": [
+      { "zh": "Pfand（押金）：德国几乎所有塑料瓶/易拉罐都收押金（0.25€ 常见），瓶身有 Pfand 标志；空瓶投入 Pfandautomat 换押金券（Pfandbon），可在店内抵消费" },
+      { "zh": "注意：带 Pfand 标志的瓶子不要扔进普通垃圾桶，会被视为浪费；可放在瓶箱旁给拾荒者" },
+      { "zh": "自助结账：扫码 → 放袋 → 刷卡，全程无需对话；但生鲜蔬果需先到秤台（Waage）称重贴标签" },
+      { "zh": "周日闭店：德国超市周日几乎全部关门（法定休息日），周六晚和节假日前的囤货是常态" }
+    ],
+    "cautions": [
+      "周日关门是法律规定的 Ruhetag（休息日），只有火车站/加油站超市营业",
+      "收银速度：德国收银员以快闻名，建议提前准备好卡或现金，边装袋边付款",
+      "自带购物袋：塑料袋收费（0.1-1€），很多德国人背帆布袋（Stofftasche）",
+      "积分/优惠：dm、Rossmann 等有 app 优惠券，Aldi/Lidl 有每周特价（Angebote）海报",
+      "Pfandflasche 分两类：一次性瓶（Einweg，0.25€）和可回收瓶（Mehrweg，0.15€ 玻璃瓶常见）"
+    ]
+  },
+  {
+    "type": "scene",
+    "country": "germany",
+    "language": "de",
+    "scene": "transport",
+    "kind": "life",
+    "title": "德国公共交通：地铁公交与 Deutschlandticket",
+    "intro": "德国公交系统（ÖPNV）以准时闻名但线路复杂：S-Bahn（市郊快铁）、U-Bahn（地铁）、Tram（有轨电车）、Bus 各有票价体系。2023 年推出的 Deutschlandticket（德国票，全国通用月票）让通勤简单了很多。坐车不买票（Schwarzfahren 逃票）罚款高达 60€，务必提前购票。",
+    "phrases": [
+      { "native": "Eine Fahrkarte nach Berlin, bitte.", "zh": "一张去柏林的票", "pronounce": "Ai-ne Fahr-kar-te nach Ber-lin, bit-te", "polite": "礼貌" },
+      { "native": "Einfach oder hin und zurück?", "zh": "单程还是往返？（售票员问）", "pronounce": "Ain-fach o-der hin unt tsu-ruk", "polite": "普通" },
+      { "native": "Wann fährt der nächste Zug?", "zh": "下一班车几点？", "pronounce": "Van fehrt der neks-te Tsoog", "polite": "礼貌" },
+      { "native": "Auf welchem Gleis?", "zh": "哪个站台？", "pronounce": "Auf vel-chem Glais", "polite": "礼貌" },
+      { "native": "Was kostet das Deutschlandticket?", "zh": "德国票多少钱？", "pronounce": "Vas kos-tet das Doitsch-land-ti-ket", "polite": "礼貌" },
+      { "native": "Wo muss ich umsteigen?", "zh": "我在哪换乘？", "pronounce": "Vo mus ich um-shtai-gen", "polite": "礼貌" },
+      { "native": "Ist das die Haltestelle?", "zh": "这是这一站吗？", "pronounce": "Ist das dee Hal-te-shte-le", "polite": "普通" },
+      { "native": "Der Zug hat Verspätung.", "zh": "火车晚点了", "pronounce": "Der Tsoog hat Fer-shpe-tung", "polite": "普通" },
+      { "native": "Wo ist die nächste Taxizone?", "zh": "最近的出租车点在哪？", "pronounce": "Vo ist dee neks-te Ta-xi-tso-ne", "polite": "礼貌" },
+      { "native": "Ich habe leider kein Ticket.", "zh": "我（被查票时）没票", "pronounce": "Ich ha-be lai-der kine Ti-ket", "polite": "诚恳" }
+    ],
+    "tips": [
+      { "zh": "Deutschlandticket：全国公交/地铁/区域火车通用月票（约 49-58€/月），但不含 ICE/IC 快车；适合通勤与城际慢车旅行" },
+      { "zh": "购票渠道：DB 的 app（Navigator）、自动售票机（Fahrkartenautomat）、部分城市公交 app；上车前必须买好票" },
+      { "zh": "打票（Entwerten）：纸质票上车前要在打票机（Entwerter）打时间戳，否则视为逃票" },
+      { "zh": "查票：查票员（Kontrolleur）随机上车查票，出示 Deutschlandticket app 或纸质票即可" }
+    ],
+    "cautions": [
+      "逃票（Schwarzfahren）罚款约 60€，且有记录影响信用，千万别侥幸",
+      "ICE/IC 快车需另买票且通常强制订座费（Reservierung 可选），Deutschlandticket 不含",
+      "晚点退款：DB 火车晚点 60 分钟以上可申请部分退款（Fahrgastrechte 乘客权益）",
+      "自行车可带上 S-Bahn/区域火车（需额外票，高峰时段限制）",
+      "周末票（Wochenendticket）已停售，替代是 Länderticket（州票）"
+    ]
+  },
+  {
+    "type": "scene",
+    "country": "germany",
+    "language": "de",
+    "scene": "bank",
+    "kind": "life",
+    "title": "德国银行开户：预约到激活全流程德语",
+    "intro": "在德国生活离不开银行账户：交房租、收工资、办保险都要转账（Überweisung）。德国银行开户需要预约（Termin）、护照和 Anmeldung 证明。近年在德国很流行 N26 等网银（开户快、全线上），但传统银行（Sparkasse 储蓄银行）网点多、适合办实体业务。",
+    "phrases": [
+      { "native": "Ich möchte einen Termin machen.", "zh": "我想预约", "pronounce": "Ich mu-chte ai-nen Ter-min ma-chen", "polite": "礼貌" },
+      { "native": "Ich möchte ein Konto eröffnen.", "zh": "我想开个户", "pronounce": "Ich mu-chte ain Kon-to er-uf-nen", "polite": "礼貌" },
+      { "native": "Was brauche ich für die Kontoeröffnung?", "zh": "开户需要什么材料？", "pronounce": "Vas brau-che ich fyr dee Kon-to-er-uf-nung", "polite": "礼貌" },
+      { "native": "Ich möchte eine Überweisung machen.", "zh": "我要转账", "pronounce": "Ich mu-chte ai-ne Y-ber-vai-zung ma-chen", "polite": "礼貌" },
+      { "native": "Wann bekomme ich meine EC-Karte?", "zh": "我什么时候能收到卡？", "pronounce": "Van be-ko-me ich mai-ne Ey-Tsey-Kar-te", "polite": "礼貌" },
+      { "native": "Wie aktiviere ich das Online-Banking?", "zh": "怎么激活网银？", "pronounce": "Vee ak-ti-vee-re ich das On-lain-Ben-king", "polite": "礼貌" },
+      { "native": "Meine Karte ist gesperrt.", "zh": "我的卡被锁了", "pronounce": "Mai-ne Kar-te ist ge-shpert", "polite": "普通" },
+      { "native": "Was ist mein Tageslimit?", "zh": "我的日限额是多少？", "pronounce": "Vas ist main Ta-ges-li-mit", "polite": "礼貌" },
+      { "native": "Wie ist mein Kontostand?", "zh": "我的余额是多少？", "pronounce": "Vee ist main Kon-to-shtand", "polite": "礼貌" },
+      { "native": "Ich möchte Geld abheben.", "zh": "我要取钱", "pronounce": "Ich mu-chte Gelt ap-hey-ben", "polite": "礼貌" }
+    ],
+    "tips": [
+      { "zh": "Kontoeröffnung（开户）：传统银行需预约+护照+Anmeldung 证明（Meldebescheinigung）；网银（N26/ING）全线上，视频验证即可" },
+      { "zh": "EC-Karte（借记卡）：德国主流支付方式，几乎所有店都收；信用卡（Kreditkarte）覆盖率反而不如国内" },
+      { "zh": "现金文化：德国人爱用现金，小店/摊贩/部分餐厅只收现金，随身带 50-100€ 是常识" },
+      { "zh": "IBAN：欧盟统一账号格式，德国账户以 DE 开头，转账只需 IBAN 和 BIC" }
+    ],
+    "cautions": [
+      "转账是德国生活核心：房租、保险、水电都是自动扣款（Lastschrift 直接借记），签约时给银行授权即可",
+      "Tageslimit（日限额）：默认较低（几百到一千欧），大额转账需提前调高",
+      "开户送钱：不少银行有开户奖金（Prämie），留意比较；N26 等网银免账户管理费",
+      "Kontostand 查询：ATM 查余额可能收费，多用 app",
+      "注销账户：离开德国前记得 Konto schließen（销户），否则月费照扣"
+    ]
+  },
+  {
+    "type": "scene",
+    "country": "germany",
+    "language": "de",
+    "scene": "pharmacy",
+    "kind": "life",
+    "title": "德国药店：Apotheke 与 dm 的区分与买药德语",
+    "intro": "德国药店分两类：Apotheke（正规药店）卖药品、可凭处方（Rezept）取药；Drogerie（日化店，dm/Rossmann）卖保健品、护肤品、日用品。区分两者是德国生活重要技能——感冒药去 Apotheke，面膜去 dm，跑错店浪费时间。药剂师（Apotheker）有咨询义务，可放心用德语描述症状。",
+    "phrases": [
+      { "native": "Wo ist die nächste Apotheke?", "zh": "最近的药店在哪？", "pronounce": "Vo ist dee neks-te A-po-tey-ke", "polite": "礼貌" },
+      { "native": "Ich habe Kopfschmerzen.", "zh": "我头疼", "pronounce": "Ich ha-be Kopf-shmer-tsen", "polite": "普通" },
+      { "native": "Ich habe eine Erkältung.", "zh": "我感冒了", "pronounce": "Ich ha-be ai-ne Er-kel-tung", "polite": "普通" },
+      { "native": "Was können Sie empfehlen?", "zh": "您推荐什么？", "pronounce": "Vas ku-nen Zee em-fey-len", "polite": "礼貌" },
+      { "native": "Ich habe ein Rezept.", "zh": "我有处方", "pronounce": "Ich ha-be ain Re-tsapt", "polite": "礼貌" },
+      { "native": "Ist das rezeptfrei?", "zh": "这是非处方药吗？", "pronounce": "Ist das re-tsapt-frai", "polite": "礼貌" },
+      { "native": "Gibt es Nebenwirkungen?", "zh": "有副作用吗？", "pronounce": "Gipt es Ney-ben-vir-kun-gen", "polite": "礼貌" },
+      { "native": "Wie oft soll ich das nehmen?", "zh": "我应该多久吃一次？", "pronounce": "Vee oft sol ich das ney-men", "polite": "礼貌" },
+      { "native": "Ich bin allergisch gegen Penicillin.", "zh": "我对青霉素过敏", "pronounce": "Ich bin al-ler-gish gey-gen Pe-ni-tsi-lin", "polite": "礼貌" },
+      { "native": "Haben Sie Ibuprofen?", "zh": "有布洛芬吗？", "pronounce": "Ha-ben Zee I-bu-pro-fen", "polite": "礼貌" }
+    ],
+    "tips": [
+      { "zh": "Rezept（处方）：凭医生处方在 Apotheke 取药；处方药（verschreibungspflichtig）必须处方，非处方药（rezeptfrei）可直接买" },
+      { "zh": "常用非处方药：Ibuprofen（布洛芬退烧止痛）、Paracetamol（扑热息痛）、Aspirin（阿司匹林）——德国药店常见三大件" },
+      { "zh": "咨询是义务：药剂师必须提供用药咨询（Beratungspflicht），描述症状时别害羞" },
+      { "zh": "急诊药店：夜间/周日有 Bereitschaftsdienst（值班药店），门上贴有轮值表" }
+    ],
+    "cautions": [
+      "医疗保险覆盖处方药：凭公保处方（Kassenrezept）取药，自付部分仅 5-10€（Zuzahlung 自付额）",
+      "dm/Rossmann ≠ 药店：只卖保健品/日化，不卖药；但 dm 的保健品（维生素等）质量不错且便宜",
+      "Homeopathie（顺势疗法）：德国药店常见，对疗效有争议，可要求「Schulmedizin」（常规医学）药",
+      "咳嗽糖浆/鼻炎喷剂：多为非处方，直接柜台买",
+      "体温计/口罩等在 Drogerie 更便宜"
+    ]
+  },
+  {
+    "type": "scene",
+    "country": "germany",
+    "language": "de",
+    "scene": "work",
+    "kind": "life",
+    "title": "在德国工作：合同保险与工资单德语",
+    "intro": "德国职场以「合同明确、流程规范」著称：劳动合同（Arbeitsvertrag）详细规定工时、假期、解约期，社会保险自动从工资扣除。看懂工资单（Lohnabrechnung）是德国打工人的必备技能——医疗/养老/失业/护理保险一应俱全。",
+    "phrases": [
+      { "native": "Kann ich den Arbeitsvertrag lesen?", "zh": "我能看看合同吗？", "pronounce": "Kan ich deyn Ar-baits-fer-trag ley-zen", "polite": "礼貌" },
+      { "native": "Wie viele Stunden pro Woche?", "zh": "每周多少小时？", "pronounce": "Vee fee-le Shtun-den pro Vo-che", "polite": "礼貌" },
+      { "native": "Wie viel Urlaub habe ich?", "zh": "我有多少天假？", "pronounce": "Vee feel Ur-laup ha-be ich", "polite": "礼貌" },
+      { "native": "Was ist mein Bruttogehalt?", "zh": "我的税前工资是多少？", "pronounce": "Vas ist main Bru-to-ge-halt", "polite": "礼貌" },
+      { "native": "Wie hoch ist mein Nettogehalt?", "zh": "我的税后工资是多少？", "pronounce": "Vee hohch ist main Ne-to-ge-halt", "polite": "礼貌" },
+      { "native": "Wie lange ist die Probezeit?", "zh": "试用期多长？", "pronounce": "Vee lange ist dee Pro-bey-tsait", "polite": "礼貌" },
+      { "native": "Wie lang ist die Kündigungsfrist?", "zh": "解约通知期多久？", "pronounce": "Vee lang ist dee Kyn-di-gungs-frist", "polite": "礼貌" },
+      { "native": "Ich bin krank, ich kann heute nicht kommen.", "zh": "我病了今天来不了", "pronounce": "Ich bin krank, ich kan hoy-te nicht ko-men", "polite": "礼貌" },
+      { "native": "Ich möchte Urlaub beantragen.", "zh": "我想申请年假", "pronounce": "Ich mu-chte Ur-laup be-an-tra-gen", "polite": "礼貌" },
+      { "native": "Bekomme ich Überstunden bezahlt?", "zh": "加班有工资吗？", "pronounce": "Be-ko-me ich Y-ber-shtun-den be-tsahlt", "polite": "礼貌" }
+    ],
+    "tips": [
+      { "zh": "Brutto vs Netto（税前 vs 税后）：德国税后约扣 35-45%（税+社保），Brutto 和 Netto 差距大，谈薪时问清 Brutto" },
+      { "zh": "Sozialversicherung（社保五险）：Krankenversicherung（医保 14-15%）、Rentenversicherung（养老 18.6%）、Arbeitslosenversicherung（失业 2.6%）、Pflegeversicherung（护理 3-4%）——雇主和雇员各付一半" },
+      { "zh": "Probezeit（试用期）：通常 6 个月，期间解约通知期 2 周" },
+      { "zh": "Urlaub（年假）：法定最低 20 天（5 天/周工作制），多数公司给 25-30 天" }
+    ],
+    "cautions": [
+      "Krankmeldung（请病假）：生病当天早上电话/邮件告知，第 4 天起需医生假条（AU-Bescheinigung）；新规 2024 起第 1 天就要假条（视公司规定）",
+      "Lohnabrechnung（工资单）：每月发工资必附，核对 Brutto/Netto/扣款项，看不懂找 HR（Personalabteilung）",
+      "Kündigungsfrist（解约期）：法定按工龄递增（最长 7 个月），跳槽前算好时间",
+      "Arbeitszeugnis（工作证明）：德国离职时雇主必须出具，格式规范、措辞有潜台词，换工作时很重要",
+      "工会/休假：多数公司有 Tarifvertrag（劳资协议）或 Betriebsrat（工会代表），权益有保障"
+    ]
+  }
+]
