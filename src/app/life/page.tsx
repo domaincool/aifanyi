@@ -1,18 +1,48 @@
+import { prisma } from '@/lib/db';
 import Link from 'next/link';
+import { countryName, langName } from '@/lib/content/locales';
+
+export const dynamic = 'force-dynamic';
 
 export const metadata = {
-  title: '海外生活 · 租房 · 工作 · 银行表达 | 爱翻译',
-  description: '海外生活栏目：租房、工作、银行、快递、医疗场景的外语表达，异国生活不慌。',
+  title: '海外生活 · 移居留学常用外语表达 | 爱翻译',
+  description: '海外生活栏目：租房、就医、银行、办证等生活场景的当地语言表达。',
 };
 
-export default function LifeIndexPage() {
-  const cards = [{"href":"/tools/doc-translator","title":"文档翻译","desc":"合同、证件、邮件整篇翻译"},{"href":"/tools/web-translator","title":"网页翻译","desc":"海外网站看不懂？一键整页翻译"},{"href":"/voice","title":"语音翻译","desc":"开口就说，实时翻译"}];
+export default async function LifeIndexPage() {
+  const items = await prisma.sceneEntry.findMany({
+    where: { status: 'published', kind: 'life' },
+    orderBy: { popularity: 'desc' },
+    take: 48,
+    select: { slug: true, country: true, title: true, lang: true },
+  }).catch(() => []);
+
+  const cards = [
+    { href: '/voice', title: '语音翻译', desc: '不会读？让 AI 帮你翻译并朗读' },
+    { href: '/tools/web-translator', title: '网页翻译', desc: '租房办证网站一键整页翻译' },
+    { href: '/tools/pdf-translator', title: 'PDF 翻译', desc: '合同文件 PDF 上传翻译' },
+  ];
+
   return (
     <div>
       <section className="hero">
         <h1>海外生活</h1>
-        <p>异国生活不慌——租房、工作、银行场景表达</p>
+        <p>租房、就医、银行、办证——生活场景表达速查</p>
       </section>
+      {items.length > 0 && (
+        <>
+          <h2 className="section-title">已收录场景（{items.length}）</h2>
+          <div className="entry-grid">
+            {items.map((s) => (
+              <Link key={s.slug} className="entry-card" href={`/travel/${s.country}/${s.slug}`}>
+                <div className="term">{s.title}</div>
+                <div className="tr">{countryName(s.country)} · {langName(s.lang) || ''}</div>
+              </Link>
+            ))}
+          </div>
+        </>
+      )}
+      <h2 className="section-title">翻译工具</h2>
       <div className="entry-grid">
         {cards.map((c) => (
           <Link key={c.href} className="entry-card" href={c.href}>

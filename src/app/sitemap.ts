@@ -75,6 +75,70 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     });
   }
 
+  // 难翻译词词条 SEO 页
+  let untrans: { slug: string; updatedAt: Date }[] = [];
+  try {
+    untrans = await prisma.expressionEntry.findMany({ where: { status: 'published', type: 'untranslatable' }, select: { slug: true, updatedAt: true } });
+  } catch {
+    // 数据库暂不可用时只返回基础页
+  }
+  for (const u of untrans) {
+    entries.push({
+      url: `${BASE}/untranslatable/${u.slug}`,
+      lastModified: u.updatedAt,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    });
+  }
+
+  // 菜单词条 SEO 页（双段路由）
+  let menus: { slug: string; country: string; updatedAt: Date }[] = [];
+  try {
+    menus = await prisma.menuEntry.findMany({ where: { status: 'published' }, select: { slug: true, country: true, updatedAt: true } });
+  } catch {
+    // 忽略
+  }
+  for (const mn of menus) {
+    entries.push({
+      url: `${BASE}/menu/${mn.country}/${mn.slug}`,
+      lastModified: mn.updatedAt,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    });
+  }
+
+  // 旅行/生活场景 SEO 页（双段路由）
+  let scenes: { slug: string; country: string; updatedAt: Date }[] = [];
+  try {
+    scenes = await prisma.sceneEntry.findMany({ where: { status: 'published' }, select: { slug: true, country: true, updatedAt: true } });
+  } catch {
+    // 忽略
+  }
+  for (const sc of scenes) {
+    entries.push({
+      url: `${BASE}/travel/${sc.country}/${sc.slug}`,
+      lastModified: sc.updatedAt,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    });
+  }
+
+  // 菜谱 SEO 页
+  let recipes: { slug: string; updatedAt: Date }[] = [];
+  try {
+    recipes = await prisma.recipeEntry.findMany({ where: { status: 'published' }, select: { slug: true, updatedAt: true } });
+  } catch {
+    // 忽略
+  }
+  for (const rc of recipes) {
+    entries.push({
+      url: `${BASE}/recipes/${rc.slug}`,
+      lastModified: rc.updatedAt,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    });
+  }
+
 
   // /meme/tag/xxx 分类聚合页（V1.2 SEO，?tag= 升级为路由）
   let tagRows: { tag: string }[] = [];
