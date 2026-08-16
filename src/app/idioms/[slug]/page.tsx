@@ -42,7 +42,7 @@ export default async function IdiomPage({ params }: { params: Promise<{ slug: st
   const blocks: { label: string; value: string }[] = [];
   if (e.pinyin) blocks.push({ label: '拼音', value: e.pinyin });
   if (e.literal) blocks.push({ label: '直译', value: e.literal });
-  if (e.example) blocks.push({ label: '例句', value: e.example });
+  const examples = (e.examples as { zh: string; en: string }[] | null) || null;
   if (e.usage) blocks.push({ label: '使用场景', value: e.usage });
   if (e.note) blocks.push({ label: '常见误译', value: e.note });
   if (e.source) blocks.push({ label: '出处', value: e.source });
@@ -77,6 +77,18 @@ export default async function IdiomPage({ params }: { params: Promise<{ slug: st
         <div style={{ fontSize: 26, fontWeight: 700, color: 'var(--accent2)', margin: '6px 0' }}>{e.translation}</div>
         {e.pinyin && <div style={{ fontSize: 13, color: 'var(--muted)' }}>{e.pinyin}</div>}
       </div>
+
+      {examples && examples.length > 0 && (
+        <div className="result" style={{ margin: '10px 0' }}>
+          <div style={{ fontSize: 12.5, color: 'var(--muted)' }}>例句</div>
+          {examples.map((ex, i) => (
+            <div key={i} style={{ marginTop: 4 }}>
+              <div>{ex.en}</div>
+              <div style={{ color: 'var(--muted)' }}>{ex.zh}</div>
+            </div>
+          ))}
+        </div>
+      )}
 
       {blocks.map((b) => (
         <div key={b.label} className="result" style={{ margin: '10px 0' }}>

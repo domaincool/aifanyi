@@ -823,100 +823,113 @@ model RechargeOrder {
   @@index([status])
 }
 
-// ===== 语言与世界 · 词条类（/idioms /untranslatable + 未来 /slang /expressions /food）=====
+// ═══════════════════ 语言与世界 · 词条类（/idioms /untranslatable + 未来 /slang /expressions /food）═══════════════════
+// 一套参数化模板跑多栏目；type 决定路由与页面模板分支；slug 全表唯一（跨 type 天然隔离）
 model ExpressionEntry {
-  id          String   @id @default(cuid())
-  term        String
-  slug        String   @unique
-  type        String   @default("idiom") // idiom|slang|untranslatable|food|expression
-  lang        String   @default("zh-CN")
-  meaning     String
-  translation String
-  pinyin      String?
-  literal     String?
-  example     String?
-  usage       String?
-  note        String?
-  source      String?
-  culture     String?
-  multiLang   Json?
-  tags        String[]
-  popularity  Int      @default(0)
-  status      String   @default("published")
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-
-  @@index([type])
-  @@index([lang])
-  @@index([status])
-}
-
-// ===== 场景类（/travel/{country}/{scene} · /life/{country}/{scene}）=====
-model SceneEntry {
-  id         String   @id @default(cuid())
-  slug       String   @unique
-  country    String
-  language   String
-  scene      String
-  kind       String   @default("travel") // travel|life
-  title      String
-  intro      String
-  phrases    Json // [{native, zh, pronounce, polite}]
-  tips       Json?
-  related    Json?
-  popularity Int      @default(0)
-  status     String   @default("published")
-  createdAt  DateTime @default(now())
-  updatedAt  DateTime @updatedAt
-
-  @@index([country, scene])
-  @@index([kind])
-}
-
-// ===== 菜单词典（/menu/{country}/{dish}）=====
-model MenuEntry {
-  id          String   @id @default(cuid())
-  slug        String   @unique
-  country     String
-  language    String
-  dish        String
-  romaji      String?
-  zh          String
-  en          String?
-  description String?
-  category    String?
-  pairings    Json?
-  tags        String[]
-  popularity  Int      @default(0)
-  status      String   @default("published")
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-
-  @@index([country])
-  @@index([category])
-  @@index([status])
-}
-
-// ===== 菜谱（/recipes/{dish}）=====
-model RecipeEntry {
   id            String   @id @default(cuid())
+  term          String
   slug          String   @unique
-  dish          String
-  originalName  String?
-  zhName        String
-  enName        String?
-  intro         String?
-  ingredients   Json
-  steps         Json
-  cookTime      String?
-  difficulty    String?
-  vocab         Json?
-  misTranslated Json?
-  culture       String?
+  type          String   @default("idiom") // idiom|slang|untranslatable|food|expression（导入层必填白名单校验）
+  lang          String   @default("zh-CN") // 词条源语言
+  meaning       String
+  translation   String
+  pinyin        String? // 原文拼音/罗马音
+  literal       String? // 直译
+  examples      Json? // [{zh, en}] 与 MemeEntry.examples 对齐
+  usage         String? // 使用场景
+  note          String? // 兜底备注（无专属字段时）
+  source        String? // 出处
+  culture       String? // 文化背景
+  misTranslated Json? // [{wrong, right, why?}] 常见误译 + 正解
+  multiLang     Json? // [{lang, text}] 多语言对照
+  tags          String[] @default([])
   popularity    Int      @default(0)
   status        String   @default("published")
   createdAt     DateTime @default(now())
   updatedAt     DateTime @updatedAt
 
-  @@index([status])
+  @@unique([type, term]) // 导入查重维度（type 内 term 唯一；同词跨 type 合法）
+  @@index([type, status]) // 栏目列表
+  @@index([status, popularity]) // 热榜/分页排序
+}
+
+// ═══════════════════ 场景类（/travel/{country}/{scene} · /life/{country}/{scene}）═══════════════════
+// slug = `${country}-${scene}`（导入时自动生成）；country 用 ISO 英文风格（japan/korea/...）
+model SceneEntry {
+  id         String   @id @default(cuid())
+  slug       String   @unique
+  country    String // japan | korea | thailand | france | italy | ...
+  lang       String // ja | ko | th | fr | it | ...
+  scene      String // URL 末段：order-coffee
+  kind       String   @default("travel") // travel|life
+  title      String
+  intro      String
+  phrases    Json // [{native, zh, pronounce, polite}] 表达表数组（必填）
+  tips       Json? // 提示
+  cautions   Json? // 注意事项（模板需求）
+  related    Json? // 运营策展内链（[{slug, title}]，满足 ≥3 出站内链铁律）
+  popularity Int      @default(0)
+  status     String   @default("published")
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@unique([country, kind, scene]) // 导入查重维度（travel/life 同场景合法共存）
+  @@index([country, kind]) // 国家聚合页
+  @@index([status, popularity]) // 热榜
+}
+
+// ═══════════════════ 菜单词典（/menu/{country}/{slug} 双段路由）═══════════════════
+// slug 为菜名罗马化/英文（不含国家前缀）；country+dish 唯一 → 全球同名菜多国合法共存
+model MenuEntry {
+  id          String   @id @default(cuid())
+  slug        String
+  country     String // japan | korea | thailand | france | italy | ...
+  lang        String // ja | ko | th | fr | it | ...
+  dish        String // 原文菜名（native script）
+  romanized   String? // 罗马音/转写（多国通用）
+  zh          String // 中文菜名
+  en          String? // 英文名（可空）
+  description String? // 说明
+  category    String? // 类别（主菜/小吃/甜品/饮品...）
+  pairings    Json? // 搭配 [{name, zh?, note?}]
+  tags        String[] @default([])
+  popularity  Int      @default(0)
+  status      String   @default("published")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@unique([country, slug]) // 双段路由唯一性
+  @@unique([country, dish]) // 导入查重维度（非全局 dish）
+  @@index([country, status]) // 国家聚合
+  @@index([category, status]) // 类型 chips
+  @@index([status, popularity]) // 热榜
+}
+
+// ═══════════════════ 菜谱（/recipes/{slug} 单段路由）═══════════════════
+// category 必加（「/recipes 按类型聚合」需要）；跨国产同名菜 slug 加国家词缀（japanese-curry）
+model RecipeEntry {
+  id            String   @id @default(cuid())
+  slug          String   @unique
+  dish          String // 中文菜名
+  originalName  String? // 原文菜名（native script）
+  enName        String? // 英文菜名
+  country       String? // 菜系来源（japan/korea/...）
+  category      String? // 类型（主食/汤/小吃/甜品...）
+  intro         String?
+  ingredients   Json // [{name, zh?, en?, amount}] 食材（必填）
+  steps         Json // [{text, translation?}] 步骤（必填）
+  cookTime      String? // "30分钟" / "1小时30分"
+  difficulty    String? // 简单|中等|困难（导入层白名单）
+  servings      Int? // 可选：几人份
+  vocab         Json? // 烹饪词汇 [{native, zh, en?, note?}]
+  misTranslated Json? // [{wrong, right, why?}] 易误译
+  culture       String? // 文化背景
+  popularity    Int      @default(0)
+  status        String   @default("published")
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@index([category, status]) // 按类型聚合（必加）
+  @@index([status, popularity]) // 热榜
+  @@index([country]) // 相关菜推荐
 }
