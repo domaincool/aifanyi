@@ -158,31 +158,40 @@ export default function ClientLayout({ children, serverUser }: { children: React
             <div className="footer-col">
               <h4>产品</h4>
               <a href="/">AI翻译</a>
-              <a href="/tools#pdf">PDF翻译</a>
-              <a href="/tools#image">图片翻译</a>
-              <a href="/tools#subtitle">字幕翻译</a>
               <a href="/voice">语音翻译</a>
-              <a href="/tools#web">网页翻译</a>
-              <a href="/">AI润色</a>
+              <a href="/tools">翻译工具</a>
+              <a href="/blindtest">AI翻译擂台</a>
+            </div>
+            <div className="footer-col">
+              <h4>工具</h4>
+              <a href="/tools/pdf-translator">PDF翻译</a>
+              <a href="/tools/image-translator">图片翻译</a>
+              <a href="/tools/subtitle-translator">字幕翻译</a>
+              <a href="/tools/web-translator">网页翻译</a>
+              <a href="/tools/doc-translator">Word/PPT翻译</a>
+              <a href="/tools/ai-polish">AI润色</a>
             </div>
             <div className="footer-col">
               <h4>解决方案</h4>
-              <a href="/#workbench">跨境电商</a>
-              <a href="#">内容创作</a>
-              <a href="#">企业翻译</a>
-              <a href="#">个人用户</a>
+              <a href="/#scenes">个人用户</a>
+              <a href="/#scenes">内容创作者</a>
+              <a href="/ecommerce">跨境电商</a>
+              <a href="/#scenes">企业</a>
+              <a href="/#quick-tools">开发者</a>
             </div>
             <div className="footer-col">
-              <h4>资源</h4>
-              <a href="/meme">翻译术语</a>
-              <a href="#">AI翻译指南</a>
-              <a href="#">帮助中心</a>
-              <a href="#">API</a>
+              <h4>语言与世界</h4>
+              <a href="/travel">旅行语言</a>
+              <a href="/recipes">全球美食</a>
+              <a href="/expressions">词汇与表达</a>
+              <a href="/languages">世界语言</a>
+              <a href="/life">海外生活</a>
+              <a href="/culture">语言与文化</a>
             </div>
             <div className="footer-col">
               <h4>关于</h4>
-              <a href="#">关于我们</a>
-              <a href="#">联系我们</a>
+              <a href="/#quick-tools">关于我们</a>
+              <a href="/#quick-tools">联系我们</a>
               <a href="/privacy">隐私政策</a>
               <a href="/terms">服务条款</a>
               <a href="/updates">上线公告</a>

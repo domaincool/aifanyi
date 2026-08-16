@@ -60,7 +60,168 @@ export default async function HomePage() {
 
       <TranslatorBox />
 
-      <h2 className="section-title">🔥 网络用语翻译</h2>
+      {/* ── 快速选择翻译工具 ── */}
+      <section className="home-block" id="quick-tools">
+        <h2 className="section-title">快速选择翻译工具</h2>
+        <p className="block-lead">常用格式直接开翻，无需登录，新用户注册送 300 积分</p>
+        <div className="tools-grid">
+          <a className="tool-card" href="/tools/pdf-translator">
+            <div className="tool-emoji">📄</div>
+            <h2>PDF 翻译</h2>
+            <p>保持排版的三模型对比翻译，失败自动退回</p>
+          </a>
+          <a className="tool-card" href="/tools/image-translator">
+            <div className="tool-emoji">🖼️</div>
+            <h2>图片翻译</h2>
+            <p>截图 / 海报 / 菜单，OCR 识别后整图翻译</p>
+          </a>
+          <a className="tool-card" href="/tools/subtitle-translator">
+            <div className="tool-emoji">🎬</div>
+            <h2>字幕翻译</h2>
+            <p>SRT / VTT 上传，双语对照导出</p>
+          </a>
+          <a className="tool-card" href="/tools/web-translator">
+            <div className="tool-emoji">🌐</div>
+            <h2>网页翻译</h2>
+            <p>输入网址，整页正文翻译成双语对照</p>
+          </a>
+          <a className="tool-card" href="/tools/doc-translator">
+            <div className="tool-emoji">📝</div>
+            <h2>Word / PPT 翻译</h2>
+            <p>docx / pptx 直接上传，保留标题与段落结构</p>
+          </a>
+          <a className="tool-card" href="/voice">
+            <div className="tool-emoji">🎙️</div>
+            <h2>语音翻译</h2>
+            <p>实时对话翻译，A/B 双模型对比</p>
+          </a>
+        </div>
+      </section>
+
+      {/* ── 热门工具 ── */}
+      <section className="home-block">
+        <h2 className="section-title">热门工具</h2>
+        <div className="tools-grid">
+          <a className="tool-card" href="/tools/ai-polish">
+            <div className="tool-emoji">✨</div>
+            <h2>AI 润色</h2>
+            <p>让文字更自然、更专业、更地道</p>
+          </a>
+          <a className="tool-card" href="/ecommerce">
+            <div className="tool-emoji">📦</div>
+            <h2>跨境电商工作台</h2>
+            <p>Listing 标题 / 五点描述 / 客服回复 AI 本地化</p>
+          </a>
+          <a className="tool-card" href="/meme">
+            <div className="tool-emoji">💬</div>
+            <h2>网络用语翻译</h2>
+            <p>热梗 / 缩写 / 方言地道英文，300+ 词条</p>
+          </a>
+          <a className="tool-card" href="/blindtest">
+            <div className="tool-emoji">⚔️</div>
+            <h2>AI 翻译擂台</h2>
+            <p>同一句话，看哪个 AI 译得最好</p>
+          </a>
+        </div>
+      </section>
+
+      {/* ── 使用场景 ── */}
+      <section className="scenes-section" id="scenes">
+        <h2 className="section-title">为不同场景打造</h2>
+        <div className="scenes-grid">
+          <a className="scene-card" href="/translate/english-to-chinese">
+            <div className="scene-emoji">🎓</div>
+            <h3>学生</h3>
+            <p>留学 / 论文 / 阅读</p>
+          </a>
+          <a className="scene-card" href="/tools/doc-translator">
+            <div className="scene-emoji">💼</div>
+            <h3>职场</h3>
+            <p>邮件 / 文档 / 商务沟通</p>
+          </a>
+          <a className="scene-card" href="/tools/subtitle-translator">
+            <div className="scene-emoji">🎬</div>
+            <h3>创作者</h3>
+            <p>字幕 / 视频 / 社交媒体</p>
+          </a>
+          <a className="scene-card" href="/travel">
+            <div className="scene-emoji">✈️</div>
+            <h3>旅行</h3>
+            <p>出行 / 点餐 / 问路</p>
+          </a>
+          <a className="scene-card" href="/ecommerce">
+            <div className="scene-emoji">📦</div>
+            <h3>跨境电商</h3>
+            <p>Listing / 客服 / 营销</p>
+          </a>
+          <a className="scene-card" href="/tools/web-translator">
+            <div className="scene-emoji">🏢</div>
+            <h3>企业</h3>
+            <p>网页 / 文档 / 团队协作</p>
+          </a>
+        </div>
+      </section>
+
+      {/* ── 语言与世界 ── */}
+      <section className="scenes-section" id="language-world">
+        <h2 className="section-title">语言与世界</h2>
+        <p className="block-lead">不只翻译语言，更翻译文化与表达</p>
+        <div className="scenes-grid">
+          <a className="scene-card" href="/travel">
+            <div className="scene-emoji">✈️</div>
+            <h3>旅行语言</h3>
+            <p>机场 / 酒店 / 餐厅 / 购物</p>
+          </a>
+          <a className="scene-card" href="/recipes">
+            <div className="scene-emoji">🍜</div>
+            <h3>全球美食</h3>
+            <p>菜谱 / 菜单 / 食材</p>
+          </a>
+          <a className="scene-card" href="/expressions">
+            <div className="scene-emoji">💬</div>
+            <h3>词汇与表达</h3>
+            <p>网络用语 / 成语 / 难翻译词</p>
+          </a>
+          <a className="scene-card" href="/languages">
+            <div className="scene-emoji">🌍</div>
+            <h3>世界语言</h3>
+            <p>日语 / 韩语 / 泰语 / 法语 …</p>
+          </a>
+          <a className="scene-card" href="/life">
+            <div className="scene-emoji">🏠</div>
+            <h3>海外生活</h3>
+            <p>租房 / 工作 / 银行 / 快递</p>
+          </a>
+          <a className="scene-card" href="/culture">
+            <div className="scene-emoji">🧠</div>
+            <h3>语言与文化</h3>
+            <p>冷知识 / 文化差异 / 词源</p>
+          </a>
+        </div>
+      </section>
+
+      {/* ── AI 翻译擂台 ── */}
+      <section className="home-block" id="blindtest-home">
+        <h2 className="section-title">⚔️ AI 翻译擂台</h2>
+        <p className="block-lead">
+          同一句话，多款 AI 谁译得最好？<a href="/blindtest" style={{ color: 'var(--accent2)' }}>去投票 →</a>
+        </p>
+        <div className="tools-grid">
+          <a className="tool-card" href="/blindtest">
+            <div className="tool-emoji">🆚</div>
+            <h2>盲测投票</h2>
+            <p>三款 AI 匿名译文，选出最地道的一句</p>
+          </a>
+          <a className="tool-card" href="/blindtest">
+            <div className="tool-emoji">📊</div>
+            <h2>擂台榜单</h2>
+            <p>看 DeepSeek / GLM / Google 的实时得票</p>
+          </a>
+        </div>
+      </section>
+
+      {/* ── 热门内容 ── */}
+      <h2 className="section-title">热门翻译 · 网络用语</h2>
       <div className="entry-grid">
         {hotMemes.length > 0 ? (
           hotMemes.map((m) => (
@@ -75,20 +236,10 @@ export default async function HomePage() {
         )}
       </div>
 
-      <h2 className="section-title">⚔️ AI翻译擂台</h2>
-      <p style={{ color: 'var(--muted)' }}>
-        同一句话，多家 AI 谁译得最好？<a href="/blindtest" style={{ color: 'var(--accent2)' }}>去投票 →</a>
-      </p>
-
-      <h2 className="section-title" id="workbench">💼 跨境电商工作台</h2>
-      <p style={{ color: 'var(--muted)' }}>
-        产品标题 / 五点描述 / 客服回复 AI 本地化，按目标市场风格档输出，多语言一键切换。
-        <a href="/ecommerce" style={{ color: 'var(--accent2)' }}>去使用 →</a>
-      </p>
-
+      {/* ── 品牌优势 ── */}
       <section className="why-section">
         <h2 className="section-title">为什么选择爱翻译</h2>
-        <p className="why-lead">✨ 翻译，不应该只是逐字替换</p>
+        <p className="why-lead">✓ 翻译，不应该是逐字替换</p>
         <div className="why-grid">
           <div className="why-card">
             <div className="why-emoji">🧠</div>
@@ -101,7 +252,7 @@ export default async function HomePage() {
             <p>商务、口语、学术、电商、社交媒体，自动选择合适表达。</p>
           </div>
           <div className="why-card">
-            <div className="why-emoji">🌍</div>
+            <div className="why-emoji">🌏</div>
             <h3>真正的本地化</h3>
             <p>不只是翻译语言，更翻译文化和表达习惯。</p>
           </div>
@@ -113,58 +264,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="scenes-section">
-        <h2 className="section-title">为不同场景打造</h2>
-        <div className="scenes-grid">
-          <div className="scene-card">
-            <div className="scene-emoji">🎓</div>
-            <h3>学生</h3>
-            <p>留学 / 论文 / 阅读</p>
-          </div>
-          <div className="scene-card">
-            <div className="scene-emoji">💼</div>
-            <h3>职场</h3>
-            <p>邮件 / 文档 / 商务沟通</p>
-          </div>
-          <div className="scene-card">
-            <div className="scene-emoji">🎬</div>
-            <h3>创作者</h3>
-            <p>字幕 / 视频 / 社交媒体</p>
-          </div>
-          <div className="scene-card">
-            <div className="scene-emoji">🛒</div>
-            <h3>跨境卖家</h3>
-            <p>Listing / 客服 / 营销</p>
-          </div>
-          <div className="scene-card">
-            <div className="scene-emoji">💻</div>
-            <h3>开发者</h3>
-            <p>API / 文档 / 本地化</p>
-          </div>
-        </div>
-      </section>
 
-      <section className="quick-links-section">
-        <h2 className="section-title">常用 AI 翻译</h2>
-        <h3 className="quick-sub">语言对</h3>
-        <div className="quick-links">
-          <a href="/translate/chinese-to-english">中文 → 英语</a>
-          <a href="/translate/english-to-chinese">英语 → 中文</a>
-          <a href="/translate/chinese-to-japanese">中文 → 日语</a>
-          <a href="/translate/japanese-to-chinese">日语 → 中文</a>
-          <a href="/translate/chinese-to-korean">中文 → 韩语</a>
-          <a href="/translate/korean-to-chinese">韩语 → 中文</a>
-        </div>
-        <h3 className="quick-sub">工具</h3>
-        <div className="quick-links">
-          <a href="/tools/pdf-translator">PDF 翻译 · 三模型对比 · 免费积分</a>
-          <a href="/tools/image-translator">图片翻译</a>
-          <a href="/tools/subtitle-translator">视频字幕翻译</a>
-          <a href="/tools/doc-translator">Word翻译</a>
-          <a href="/tools/doc-translator">PPT翻译</a>
-          <a href="/tools/web-translator">网页翻译</a>
-        </div>
-      </section>
-    </>
+  </>
   );
 }
