@@ -18,6 +18,14 @@ export default async function LifeIndexPage() {
   }).catch(() => []);
   const total = await prisma.sceneEntry.count({ where: { status: 'published', kind: 'life' } }).catch(() => items.length);
 
+  const colCards = [
+    { href: '/travel', title: '旅行语言', desc: '机场、酒店、餐厅、购物场景表达' },
+    { href: '/idioms', title: '成语谚语', desc: '中文成语的地道外文表达' },
+    { href: '/untranslatable', title: '难翻译词', desc: '无法直译却精准表达心情的词' },
+    { href: '/menu', title: '菜单词典', desc: '各国菜单菜名翻译' },
+    { href: '/recipes', title: '全球美食', desc: '跨语言菜谱' },
+  ];
+
   const cards = [
     { href: '/voice', title: '语音翻译', desc: '不会读？让 AI 帮你翻译并朗读' },
     { href: '/tools/web-translator', title: '网页翻译', desc: '租房办证网站一键整页翻译' },
@@ -43,6 +51,15 @@ export default async function LifeIndexPage() {
           </div>
         </>
       )}
+      <h2 className="section-title">相关栏目</h2>
+      <div className="entry-grid">
+        {colCards.map((c2) => (
+          <Link key={c2.href} className="entry-card" href={c2.href}>
+            <div className="term">{c2.title}</div>
+            <div className="mn">{c2.desc}</div>
+          </Link>
+        ))}
+      </div>
       <h2 className="section-title">翻译工具</h2>
       <div className="entry-grid">
         {cards.map((c) => (

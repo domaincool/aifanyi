@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!e || e.status !== 'published') return { title: '难翻译词 | 爱翻译 aifanyi.com' };
   return {
     title: `${e.term} 怎么翻译？${e.term} → ${e.translation} | 爱翻译`,
-    description: `${e.term}（${e.meaning}）很难直译成英文——看它最接近的表达「${e.translation}」与用法。爱翻译 · AI翻译。`,
+    description: `${e.term}（${e.meaning}）很难直译成中文——看它最接近的表达「${e.translation}」与用法。爱翻译 · AI翻译。`,
   };
 }
 

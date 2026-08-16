@@ -133,6 +133,22 @@ export default async function IdiomsIndexPage({
             ))}
         </div>
       )}
+      <h2 className="section-title" style={{ marginTop: 32 }}>相关栏目</h2>
+      <div className="entry-grid">
+        {[
+          { href: '/meme', title: '网络用语', desc: '各国网络热梗翻译' },
+          { href: '/untranslatable', title: '难翻译词', desc: '无法直译却精准表达心情的词' },
+          { href: '/expressions', title: '地道表达', desc: '实用表达合集' },
+          { href: '/menu', title: '菜单词典', desc: '各国菜单菜名翻译' },
+          { href: '/travel', title: '旅行语言', desc: '出国场景表达' },
+          { href: '/life', title: '海外生活', desc: '移居留学场景表达' },
+        ].map((c2) => (
+          <Link key={c2.href} className="entry-card" href={c2.href}>
+            <div className="term">{c2.title}</div>
+            <div className="mn">{c2.desc}</div>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 }
