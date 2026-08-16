@@ -399,8 +399,32 @@ export async function importContent(input: {
   let imported = 0;
   let updated = 0;
 
+  let repeatedResult: ContentImportResult | null = null;
+
   if (!dryRun) {
     await prisma.$transaction(async (tx: any) => {
+      // 占位审计行（幂等锁）：撞 @@unique([action,batchId]) = 并发同批/已完成 → 返回 repeated
+      try {
+        await tx.adminLog.create({
+          data: {
+            operator: identity.operator,
+            action,
+            batchId,
+            params: { detail: 'pending' },
+            result: { status: 'pending' },
+            ip: input.ip || null,
+          },
+        });
+      } catch (e: any) {
+        if (e?.code === 'P2002') {
+          const prevLog = await tx.adminLog.findFirst({ where: { action, batchId }, orderBy: { createdAt: 'desc' } });
+          const r = (prevLog?.result as ContentImportResult | null) ?? null;
+          if (r) { repeatedResult = { ...r, repeated: true }; return; }
+          repeatedResult = { ok: true, batchId, action, imported: 0, updated: 0, skipped: 0, conflicts: [], created: [], repeated: true };
+          return;
+        }
+        throw e;
+      }
       // 更新（P1-2B：menu 定位 country+dish；recipe 定位 slug）
       for (const { item: it } of toUpdate) {
         const m = modelOf(it.type);
@@ -435,6 +459,10 @@ export async function importContent(input: {
         await tx[m].create({ data: buildData(it) });
         imported++;
       }
+      await tx.adminLog.update({
+        where: { action_batchId: { action, batchId } },
+        data: { result: { status: 'done', imported, updated, skipped: skipped.length, conflicts: conflicts.length } },
+      });
     });
   }
 
@@ -450,20 +478,7 @@ export async function importContent(input: {
     created,
   };
 
-  if (!dryRun) {
-    try {
-      await logAdminAction({
-        identity,
-        action,
-        batchId,
-        params: { detail: `imported=${imported} updated=${updated} skipped=${skipped.length} conflicts=${conflicts.length}` },
-        result,
-        ip: input.ip || null,
-      });
-    } catch {
-      // 审计失败不阻断导入（并发同批时 AdminLog 唯一约束兜底）
-    }
-  }
+  if (repeatedResult) return repeatedResult;
 
   return result;
 }
