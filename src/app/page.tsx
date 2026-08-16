@@ -98,33 +98,6 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ── 热门工具 ── */}
-      <section className="home-block">
-        <h2 className="section-title">热门工具</h2>
-        <div className="tools-grid">
-          <a className="tool-card" href="/tools/ai-polish">
-            <div className="tool-emoji">✨</div>
-            <h2>AI 润色</h2>
-            <p>让文字更自然、更专业、更地道</p>
-          </a>
-          <a className="tool-card" href="/ecommerce">
-            <div className="tool-emoji">📦</div>
-            <h2>跨境电商工作台</h2>
-            <p>Listing 标题 / 五点描述 / 客服回复 AI 本地化</p>
-          </a>
-          <a className="tool-card" href="/meme">
-            <div className="tool-emoji">💬</div>
-            <h2>网络用语翻译</h2>
-            <p>热梗 / 缩写 / 方言地道英文，300+ 词条</p>
-          </a>
-          <a className="tool-card" href="/blindtest">
-            <div className="tool-emoji">⚔️</div>
-            <h2>AI 翻译擂台</h2>
-            <p>同一句话，看哪个 AI 译得最好</p>
-          </a>
-        </div>
-      </section>
-
       {/* ── 使用场景 ── */}
       <section className="scenes-section" id="scenes">
         <h2 className="section-title">为不同场景打造</h2>
