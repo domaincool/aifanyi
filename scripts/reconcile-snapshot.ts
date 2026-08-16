@@ -14,7 +14,7 @@
  *   - latest.json                始终指向最近一次快照（便于脚本/看板读取）
  *   - 自动清理 30 天前的 reconcile-*.json
  *
- * 时区：dayStart 用进程本地时间（服务器为 Asia/Shanghai），文件名与 daily.date 均为本地日期。
+ * 时区：dayStart/day 显式按北京时间（+08:00）计算，不依赖服务器本地时区；文件名与 daily.date 均为北京日期。
  * 失败不抛：writeDailySnapshot 内部 catch，返回 { ok:false, error }，不阻塞 reconciler 主流程。
  */
 import fs from 'fs';
@@ -71,11 +71,22 @@ export function snapshotDir(): string {
   return process.env.RECONCILE_SNAPSHOT_DIR || path.join(process.cwd(), 'data', 'reconcile');
 }
 
-function dayKey(d: Date): string {
-  const y = d.getFullYear();
-  const m = String(d.getMonth() + 1).padStart(2, '0');
-  const day = String(d.getDate()).padStart(2, '0');
-  return `${y}-${m}-${day}`;
+/** 北京时间偏移：Asia/Shanghai 无夏令时，epoch 范围内恒 +08:00（IANA tzdata 无 transition） */
+const BEIJING_OFFSET_MS = 8 * 3600_000;
+
+/** 北京日期 key（YYYY-MM-DD）：任何服务器时区下结果一致 */
+function beijingDayKey(now: Date): string {
+  const bj = new Date(now.getTime() + BEIJING_OFFSET_MS);
+  const y = bj.getUTCFullYear();
+  const m = String(bj.getUTCMonth() + 1).padStart(2, '0');
+  const d = String(bj.getUTCDate()).padStart(2, '0');
+  return `${y}-${m}-${d}`;
+}
+
+/** 北京 0 点时间戳：先 +8h 取北京墙钟的 UTC 日期，再 -8h 还原（任何时区下 = 前一日 16:00:00Z） */
+function beijingDayStart(now: Date): Date {
+  const bj = new Date(now.getTime() + BEIJING_OFFSET_MS);
+  return new Date(Date.UTC(bj.getUTCFullYear(), bj.getUTCMonth(), bj.getUTCDate()) - BEIJING_OFFSET_MS);
 }
 
 /** 全量 mismatch（与 reconciler 同一 SQL；行数一般很少，直接取全量后截断 top） */
@@ -96,8 +107,8 @@ async function collectMismatch(): Promise<{ count: number; top: DailySnapshot['m
 
 export async function computeSnapshot(run: ReconcilerRunContext): Promise<DailySnapshot> {
   const now = new Date();
-  const dayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate()); // 本地 0 点
-  const day = dayKey(now);
+  const dayStart = beijingDayStart(now); // 北京 0 点（显式 +08:00，不依赖服务器时区）
+  const day = beijingDayKey(now);        // 与 dayStart 同源（北京日期）
 
   const [
     users, accounts, ledgers, grants, usages, openReconciliations, plans, ordersByStatus,
