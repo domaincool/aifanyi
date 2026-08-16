@@ -259,7 +259,7 @@ export async function importContent(input: {
 
   for (const [m, its] of Object.entries(byModel)) {
     // 全表 slug（P1-1 修复：existingSlugs 与 normMap 同源）
-    const allSlugs = await (prisma as any)[m].findMany({ select: { slug: true, country: true } });
+    const allSlugs = await (prisma as any)[m].findMany({ select: m === 'menuEntry' ? { slug: true, country: true } : { slug: true } });
     const slugSet = new Set<string>(allSlugs.map((e: any) => e.slug));
     existingSlugs.set(m, slugSet);
     const nm = new Map<string, string>();
