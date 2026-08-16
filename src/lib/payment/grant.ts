@@ -26,8 +26,8 @@ export async function grantRechargeOrder(orderId: string, opts?: GrantRechargeOr
   if (order.status === 'granted') {
     return { ok: true, already: true, granted: { purchased: order.purchasedCredits, bonus: order.bonusCredits } };
   }
-  // cancelled 永不到账（已取消/退款）；expired 仅 webhook（钱已收）可到账，confirm 场景保持拒绝
-  if (order.status === 'cancelled') {
+  // cancelled 永不到账（已取消/退款）；refunded 退款后永不到账（防 refund 先于到账投递的极端时序）；expired 仅 webhook（钱已收）可到账，confirm 场景保持拒绝
+  if (order.status === 'cancelled' || order.status === 'refunded') {
     return { ok: false, error: 'invalid_state' };
   }
   if (order.status === 'expired' && !opts?.allowExpired) {

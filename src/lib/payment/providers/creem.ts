@@ -14,7 +14,13 @@
  *   body: { product_id, request_id, customer:{email}, metadata:{orderId,planCode,userId}, success_url }
  *   → { id, checkout_url, status }
  * Webhook 验签：creem-signature = HMAC-SHA256(secret, rawBody) hex
- * 支付成功事件：checkout.completed（object.status=completed / object.order.status=paid）
+ *
+ * 事件（依据 Creem 公开文档 https://docs.creem.io/code/webhooks）：
+ *   支付成功：checkout.completed（object.status=completed / object.order.status=paid）
+ *   退款：refund.created（object=refund 对象；原 checkout 嵌套在 object.checkout：
+ *     id=ch_...、request_id=我方 orderId、metadata.orderId=我方 orderId；
+ *     refund_amount/refund_currency/reason 在 object 顶层；transaction.order 为渠道订单号 ord_...）
+ *   注：文档 Sample Request Body 是订阅场景样本，我方一次性商品场景 object.checkout 结构应一致，待凭据后实测核验
  */
 import { createHmac, timingSafeEqual } from 'crypto';
 import { PaymentProvider, CreateCheckoutInput, CreateCheckoutResult, WebhookVerifyResult } from '../types';
@@ -51,6 +57,18 @@ function getProductId(planCode: string): string {
   throw new Error(`Creem 未配置 planCode=${planCode} 的商品 ID（CREEM_PRODUCT_${planCode.toUpperCase()} 或 CREEM_PRODUCT_MAP）`);
 }
 
+/** Creem 特有 webhook 解析结果：refund.created 事件补充字段（兼容 WebhookVerifyResult，route 侧可强转读取） */
+export interface CreemWebhookVerifyResult extends WebhookVerifyResult {
+  /** 退款单 id（ref_...） */
+  refundId?: string;
+  /** 退款货币（如 EUR/USD，渠道货币最小单位对应 refund_amount） */
+  refundCurrency?: string;
+  /** 退款原因（requested_by_customer / duplicate / fraud 等） */
+  refundReason?: string;
+  /** 原 checkout id（ch_...，用于与 RechargeOrder.providerOrderId 比对，防跨单扣回） */
+  checkoutId?: string;
+}
+
 export const creemProvider: PaymentProvider = {
   code: 'creem',
   displayName: 'Creem',
@@ -78,7 +96,7 @@ export const creemProvider: PaymentProvider = {
     return { checkoutUrl: data.checkout_url, providerOrderId: data.id };
   },
 
-  async verifyWebhook(rawBody: string, headers: Record<string, string | undefined>): Promise<WebhookVerifyResult> {
+  async verifyWebhook(rawBody: string, headers: Record<string, string | undefined>): Promise<CreemWebhookVerifyResult> {
     const secret = requireEnv('CREEM_WEBHOOK_SECRET');
     const sig = headers['creem-signature'];
     if (!sig) {
@@ -98,6 +116,27 @@ export const creemProvider: PaymentProvider = {
     }
     const eventType: string = payload.eventType || payload.type || '';
     const obj = payload.object || payload.data || {};
+
+    // 退款事件：object 为 refund 对象（ref_...），原 checkout 嵌套在 object.checkout（id/request_id/metadata）
+    if (eventType === 'refund.created') {
+      const checkout = obj.checkout || {};
+      const orderId: string = (checkout.metadata && checkout.metadata.orderId) || checkout.request_id || '';
+      const refundAmountCents = typeof obj.refund_amount === 'number' ? obj.refund_amount : undefined;
+      return {
+        valid: true,
+        orderId,
+        providerOrderId: checkout.id || obj.order?.id || '',
+        event: eventType,
+        paid: false, // 退款非支付，route 按 event 分支处理
+        amountCents: refundAmountCents, // refund 事件时 = 退款金额（渠道货币最小单位，可能为部分退款）
+        refundId: obj.id,
+        refundCurrency: obj.refund_currency,
+        refundReason: obj.reason,
+        checkoutId: checkout.id,
+      };
+    }
+
+    // 支付成功事件
     const order = obj.order || {};
     const orderId: string = (obj.metadata && obj.metadata.orderId) || obj.request_id || '';
     const paid = eventType === 'checkout.completed' && (obj.status === 'completed' || order.status === 'paid');
