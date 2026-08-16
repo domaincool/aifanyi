@@ -911,6 +911,7 @@ model RecipeEntry {
   id            String   @id @default(cuid())
   slug          String   @unique
   dish          String // 中文菜名
+  zhName        String? // 中文菜名（导入契约字段，兼容运营投递）
   originalName  String? // 原文菜名（native script）
   enName        String? // 英文菜名
   country       String? // 菜系来源（japan/korea/...）
