@@ -39,12 +39,14 @@ export async function checkAndAlert(ctx: AlertContext): Promise<string[]> {
 
   // 2) 单用户 30 分钟突发消耗（排除测试账号 %@aifanyi.local）
   try {
+    // 窗口在应用层计算传 Date 参数：$queryRaw 会把 JS 整数绑成 int8，make_interval(mins int4) 无 int8 重载 → PG16 报 42883
+    const burstSince = new Date(Date.now() - WINDOW_MIN * 60_000);
     const burstRows: any[] = await prisma.$queryRaw`
       SELECT u."userId", SUM(u."consumedCredits")::int AS total
       FROM "UsageRecord" u
       JOIN "User" usr ON usr.id = u."userId"
       WHERE u.status = 'consumed'
-        AND u."completedAt" > now() - make_interval(mins => ${WINDOW_MIN})
+        AND u."completedAt" > ${burstSince}
         AND usr.email NOT LIKE '%@aifanyi.local'
       GROUP BY u."userId"
       HAVING SUM(u."consumedCredits") >= ${BURST_THRESHOLD}
@@ -53,7 +55,9 @@ export async function checkAndAlert(ctx: AlertContext): Promise<string[]> {
       alerts.push(`用户 ${r.userId} ${WINDOW_MIN} 分钟内消耗 ${r.total} 积分（阈值 ${BURST_THRESHOLD}），疑似异常消耗`);
     }
   } catch (e: any) {
+    // 检测链路故障必须可见（否则告警静默失效无人感知）
     console.error('[alert] burst check failed:', e?.message || e);
+    alerts.push(`[自检] 突发消耗检测执行失败：${e?.message || e}`);
   }
 
   // 3) 任务失败率（近 1h）
