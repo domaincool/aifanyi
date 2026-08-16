@@ -1,0 +1,212 @@
+[
+ {
+  "type": "untranslatable",
+  "term": "Komorebi",
+  "lang": "ja",
+  "slug": "komorebi",
+  "pinyin": "ko-mo-re-bi",
+  "literal": "木漏れ日——从树叶缝隙漏下的阳光",
+  "meaning": "阳光透过树叶间隙洒落在地面的光影——描述「阳光穿过树叶形成斑驳光影」这一瞬间的画面（叶隙间洒下的阳光 / 斑驳光影）",
+  "translation": "The light that filters through the leaves of trees",
+  "culture": "日语「木（树）+漏れ（漏出）+日（阳光）」组合词；日本对自然现象的细腻命名传统（如「小春日和」）；常用作夏日的诗意意象",
+  "note": "类似表达：英语无直接对应，最接近 \"dappled sunlight\"（斑驳阳光）但缺失诗意。为什么难翻译：英语需要整句描述（sunlight filtering through leaves），中文「斑驳光影」丢失了「木」的意象——一个词承载了画面、季节、心境",
+  "examples": [
+   {
+    "zh": "木漏れ日の下で読書するのが好きだ。（我喜欢在叶隙阳光下读书。）",
+    "en": "I love reading in the dappled sunlight beneath the trees."
+   }
+  ],
+  "tags": [
+   "难翻译词"
+  ]
+ },
+ {
+  "type": "untranslatable",
+  "term": "Wabi-sabi",
+  "lang": "ja",
+  "slug": "wabi-sabi",
+  "pinyin": "wah-bi sah-bi",
+  "literal": "侘（简朴）+ 寂（寂寥/古旧）",
+  "meaning": "接受不完美、无常与残缺之美的日本美学观——在质朴、残缺、岁月痕迹中发现美（侘寂美学：不完美之美、无常之美）",
+  "translation": "Finding beauty in imperfection and impermanence",
+  "culture": "源自茶道/禅宗美学；影响日本设计、建筑、器物（如金缮 kintsugi 修补艺术）；近年被西方设计圈广泛引用",
+  "note": "类似表达：无直接对应；英语 \"imperfect beauty\" 只是描述。为什么难翻译：既是美学概念又是生活哲学，一个词涵盖审美+价值观；西方文化中无对应词汇，只能意译",
+  "examples": [
+   {
+    "zh": "侘寂の精神は、完璧を求めないことだ。（侘寂的精神，是不追求完美。）",
+    "en": "The spirit of wabi-sabi is not seeking perfection."
+   }
+  ],
+  "tags": [
+   "难翻译词"
+  ]
+ },
+ {
+  "type": "untranslatable",
+  "term": "Schadenfreude",
+  "lang": "de",
+  "slug": "schadenfreude",
+  "pinyin": "SHAH-den-froy-duh",
+  "literal": "伤害（Schaden）+ 快乐（Freude）",
+  "meaning": "从他人不幸/失败中获得的快乐——幸灾乐祸",
+  "translation": "Pleasure derived from another's misfortune",
+  "culture": "德语复合词的典型代表；德语因擅长「拼装」长词而闻名；英语已直接借用该词（1980s 后流行）",
+  "note": "类似表达：中文「幸灾乐祸」接近；英语直接借用 Schadenfreude 本身。为什么难翻译：中文「幸灾乐祸」是四字成语（贬义+成语感），德语原词更像中性心理学术语——语域不同",
+  "examples": [
+   {
+    "zh": "Sein Schadenfreude war kaum zu verbergen.（他几乎藏不住幸灾乐祸。）",
+    "en": "His schadenfreude was barely concealable."
+   }
+  ],
+  "tags": [
+   "难翻译词"
+  ]
+ },
+ {
+  "type": "untranslatable",
+  "term": "Saudade",
+  "lang": "pt",
+  "slug": "saudade",
+  "pinyin": "saw-DAH-jee",
+  "literal": "思念/怀旧（无精确对应）",
+  "meaning": "对某人/某地/某时光的深切、忧伤而甜蜜的怀念——混合了怀旧、渴望与淡淡的忧伤，且暗含「可能永远不会回来」（深切的怀旧与渴望）",
+  "translation": "A deep emotional state of nostalgic longing for something or someone that may never return",
+  "culture": "葡萄牙/巴西文化的核心情感词；法多音乐（Fado）的灵魂；被形容为「葡萄牙语最著名的不可译词」",
+  "note": "类似表达：英语 homesickness/nostalgia/longing 都只覆盖一部分。为什么难翻译：一个词同时包含「怀念对象+情绪浓度+时间维度（回不去）」；英语要拆成整句",
+  "examples": [
+   {
+    "zh": "Sinto saudade de Portugal.（我深切怀念葡萄牙。）",
+    "en": "I feel a deep, wistful longing for Portugal."
+   }
+  ],
+  "tags": [
+   "难翻译词"
+  ]
+ },
+ {
+  "type": "untranslatable",
+  "term": "Hygge",
+  "lang": "da",
+  "slug": "hygge",
+  "pinyin": "HOO-guh",
+  "literal": "舒适/惬意（动词化名词）",
+  "meaning": "营造温暖、舒适、惬意的氛围并与亲友共享——蜡烛、热饮、毛毯、壁炉、亲密陪伴的「幸福感」（北欧式惬意/温馨舒适的氛围感）",
+  "translation": "A quality of coziness and comfortable conviviality that engenders a feeling of contentment",
+  "culture": "丹麦文化核心词；2016 年后被英语世界广泛借用（《牛津词典》年度词候选）；与瑞典 Lagom、丹麦幸福指数关联",
+  "note": "类似表达：中文「小确幸」部分对应；英语 \"coziness\" 缺失社交维度。为什么难翻译：既是氛围又是行为（hygge 可作动词）；「舒适」太简单，「温馨」丢行为感",
+  "examples": [
+   {
+    "zh": "Lad os hygge os med en kop te.（让我们喝杯茶，好好享受惬意时光。）",
+    "en": "Let's cozy up together with a cup of tea."
+   }
+  ],
+  "tags": [
+   "难翻译词"
+  ]
+ },
+ {
+  "type": "untranslatable",
+  "term": "Fernweh",
+  "lang": "de",
+  "slug": "fernweh",
+  "pinyin": "FAIRN-vay",
+  "literal": "远方（Fern）+ 痛（Weh）",
+  "meaning": "对远方的强烈渴望/思乡的反义词——「想去远方」的渴望像疼痛一样真切（对远方的渴望 / 旅行之痒）",
+  "translation": "An ache for distant places; the opposite of homesickness",
+  "culture": "德语构词法杰作；与 Heimweh（思乡）相对；旅行文学常用词",
+  "note": "类似表达：英语 wanderlust（旅行欲望）接近但缺「痛感」。为什么难翻译：wanderlust 强调「想走」，Fernweh 强调「远方像病痛一样召唤」——多了「渴望到痛」的强度",
+  "examples": [
+   {
+    "zh": "Mein Fernweh wird immer stärker.（我对远方的渴望越来越强烈。）",
+    "en": "My longing for faraway places keeps growing."
+   }
+  ],
+  "tags": [
+   "难翻译词"
+  ]
+ },
+ {
+  "type": "untranslatable",
+  "term": "Nunchi",
+  "lang": "ko",
+  "slug": "nunchi",
+  "pinyin": "noon-chi",
+  "literal": "눈치——眼（눈）+ 尺/量（치）「用眼力衡量」",
+  "meaning": "察言观色、读懂气氛和他人心思的社交直觉——韩国文化中的核心社交能力（眼力见儿 / 察言观色）",
+  "translation": "The ability to read a room and sense others' feelings and intentions",
+  "culture": "韩国社交文化核心；「눈치 없다」（没眼力见儿）是负面评价；近年英语世界开始借用",
+  "note": "类似表达：中文「眼力见儿」「会来事」接近。为什么难翻译：是「能力+文化规范+即时判断」的复合概念，英语需整句解释",
+  "examples": [
+   {
+    "zh": "눈치 없이 말하지 마.（别没眼力见儿乱说话。）",
+    "en": "Don't speak without reading the room."
+   }
+  ],
+  "tags": [
+   "难翻译词"
+  ]
+ },
+ {
+  "type": "untranslatable",
+  "term": "Toska",
+  "lang": "ru",
+  "slug": "toska",
+  "pinyin": "tus-KAH",
+  "literal": "Тоска——忧郁/苦闷/渴望（无精确对应）",
+  "meaning": "一种深沉的灵魂层面的忧郁——混合了精神痛苦、渴望、烦躁与存在性的空虚；弗拉基米尔·纳博科夫称其为「无法翻译的词」（深沉的忧郁与精神渴望）",
+  "translation": "A profound spiritual anguish, often with no clear cause — restless longing mixed with melancholy",
+  "culture": "俄罗斯文学（陀思妥耶夫斯基/契诃夫）的核心情绪词；纳博科夫在《论翻译》中专门讨论",
+  "note": "类似表达：英语 melancholy/anguish/longing 各覆盖一部分。为什么难翻译：混合了「忧郁+渴望+虚无」三层；纳博科夫说英语没有一个词能对应",
+  "examples": [
+   {
+    "zh": "Тоска по родине.（对故乡的深沉思念/乡愁之痛。）",
+    "en": "A deep, aching melancholy for home."
+   }
+  ],
+  "tags": [
+   "难翻译词"
+  ]
+ },
+ {
+  "type": "untranslatable",
+  "term": "Sobremesa",
+  "lang": "es",
+  "slug": "sobremesa",
+  "pinyin": "soh-breh-MEH-sah",
+  "literal": "桌（mesa）上（sobre）——「在桌上」",
+  "meaning": "餐后与亲友留在桌边闲聊的时光——不急着离桌，享受对话与消化的慢时光（餐后闲谈时光）",
+  "translation": "The time spent lingering at the table after a meal, talking with companions",
+  "culture": "西班牙/拉丁美洲用餐文化的灵魂；反映「慢生活」价值观；与意大利餐后 Aperitivo 文化呼应",
+  "note": "类似表达：英语 \"lingering at the table\" 是描述不是词；中文「饭后闲聊」太具体。为什么难翻译：一个名词代表一种文化仪式——英语需要动词短语才能表达",
+  "examples": [
+   {
+    "zh": "La sobremesa es mi parte favorita de la comida.（餐后闲谈是我最爱的用餐环节。）",
+    "en": "Lingering at the table after a meal is my favorite part of dining."
+   }
+  ],
+  "tags": [
+   "难翻译词"
+  ]
+ },
+ {
+  "type": "untranslatable",
+  "term": "加油",
+  "lang": "zh-CN",
+  "slug": "jiayou",
+  "pinyin": "jya-yo",
+  "literal": "加（add）+ 油（oil）——「加油！加燃料！」",
+  "meaning": "鼓励他人努力/坚持的万能加油语——「你可以的！」「继续冲！」（加油！/ 冲！）",
+  "translation": "A universal cheer of encouragement — literally \"add fuel\", used like \"Go!\" or \"You've got this!\"",
+  "culture": "起源说法多样（一说源自赛车加油，一说源自抗战时期「加煤油」）；是中国使用频率最高的鼓励语；2008 奥运「中国加油」响彻世界",
+  "note": "类似表达：英语 \"Go!\" / \"You've got this!\" / \"Cheer up!\" 都只覆盖部分。为什么难翻译：直译 \"add oil\" 让老外困惑（牛津词典 2018 年才收录 \"add oil\" 为正式词条）；「加油」涵盖鼓励/安慰/支持多种语境，英语需按场景换词——这正是爱翻译多模型对比的用武之地",
+  "examples": [
+   {
+    "zh": "加油！你一定可以考上理想的大学！",
+    "en": "Go for it! You'll definitely get into your dream university!"
+   }
+  ],
+  "tags": [
+   "难翻译词"
+  ]
+ }
+]

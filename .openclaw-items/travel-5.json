@@ -1,0 +1,407 @@
+[
+ {
+  "type": "scene",
+  "country": "japan",
+  "language": "ja",
+  "scene": "restaurant",
+  "kind": "travel",
+  "title": "第一次去日本：餐厅点餐日语",
+  "intro": "走进一家日本餐厅，从「欢迎光临」到结账，每一步都有固定的说法。日本餐厅服务讲究礼貌与流程，掌握 10 句核心表达，就能从容完成点餐、加菜、打包、结账全流程。注意：日本餐厅普遍没有「喊服务员」的习惯，用「すみません」举手示意即可。",
+  "phrases": [
+   {
+    "native": "いらっしゃいませ",
+    "zh": "欢迎光临（店员说）",
+    "pronounce": "Irasshaimase",
+    "polite": "敬语"
+   },
+   {
+    "native": "すみません",
+    "zh": "不好意思/打扰一下",
+    "pronounce": "Sumimasen",
+    "polite": "通用礼貌"
+   },
+   {
+    "native": "二人です",
+    "zh": "两个人",
+    "pronounce": "Futari desu",
+    "polite": "普通"
+   },
+   {
+    "native": "メニューをください",
+    "zh": "请给我菜单",
+    "pronounce": "Menyū o kudasai",
+    "polite": "礼貌"
+   },
+   {
+    "native": "これをください",
+    "zh": "我要这个",
+    "pronounce": "Kore o kudasai",
+    "polite": "礼貌"
+   },
+   {
+    "native": "おすすめは何ですか",
+    "zh": "有什么推荐？",
+    "pronounce": "Osusume wa nan desu ka",
+    "polite": "礼貌"
+   },
+   {
+    "native": "辛いのは苦手です",
+    "zh": "我不太能吃辣",
+    "pronounce": "Karai no wa nigate desu",
+    "polite": "委婉礼貌"
+   },
+   {
+    "native": "アレルギーがあります",
+    "zh": "我有过敏",
+    "pronounce": "Arerugī ga arimasu",
+    "polite": "礼貌"
+   },
+   {
+    "native": "持ち帰りでお願いします",
+    "zh": "请打包带走",
+    "pronounce": "Mochikaeri de onegai shimasu",
+    "polite": "礼貌"
+   },
+   {
+    "native": "お会計お願いします",
+    "zh": "请结账",
+    "pronounce": "Okaikei onegai shimasu",
+    "polite": "礼貌"
+   }
+  ],
+  "tips": [
+   {
+    "zh": "「これをください」（我要这个）：指着菜单或展示柜点餐，比念菜名更稳妥——日本居酒屋/定食店常见展示柜，指物点餐零风险"
+   },
+   {
+    "zh": "「おすすめは？」（有推荐吗）：不知道点什么时问推荐，日本店员会真诚推荐当日特色"
+   },
+   {
+    "zh": "替换表达：「いただきます」（开动前说）/「ごちそうさまでした」（吃完说，很重要！）"
+   }
+  ],
+  "cautions": [
+   "日本餐厅不付小费——给反而是失礼",
+   "「いただきます」「ごちそうさまでした」是饭前饭后必说的礼节，一句「ごちそうさま」就能收获店员好感",
+   "过敏一定要说清楚（アレルギー），日本餐饮对过敏非常重视",
+   "结账多数去收银台（レジ），部分店桌边结账，说「お会計」即可",
+   "拉面店/快餐店多自助点餐机（食券），无需对话"
+  ]
+ },
+ {
+  "type": "scene",
+  "country": "korea",
+  "language": "ko",
+  "scene": "restaurant",
+  "kind": "travel",
+  "title": "第一次去韩国：餐厅点餐韩语",
+  "intro": "韩国餐厅节奏快、小菜无限续（반찬），点餐常用「이거 주세요」（请给我这个）。烤肉店/部队锅店是社交场景，学会「炒饭收尾」（볶음밥）的经典操作会让本地人刮目相看。",
+  "phrases": [
+   {
+    "native": "여기요",
+    "zh": "这里（招呼店员）",
+    "pronounce": "Yeogiyo",
+    "polite": "通用"
+   },
+   {
+    "native": "두 명이요",
+    "zh": "两个人",
+    "pronounce": "Du myeong-iyo",
+    "polite": "普通"
+   },
+   {
+    "native": "메뉴판 주세요",
+    "zh": "请给我菜单",
+    "pronounce": "Menyupan juseyo",
+    "polite": "礼貌"
+   },
+   {
+    "native": "이거 주세요",
+    "zh": "请给我这个",
+    "pronounce": "Igeo juseyo",
+    "polite": "礼貌"
+   },
+   {
+    "native": "추천 메뉴 뭐예요?",
+    "zh": "推荐菜是什么？",
+    "pronounce": "Chucheon menyu mwoyeyo",
+    "polite": "礼貌"
+   },
+   {
+    "native": "안 매운 걸로 주세요",
+    "zh": "请给我不辣的",
+    "pronounce": "An maeun geollo juseyo",
+    "polite": "礼貌"
+   },
+   {
+    "native": "포장해 주세요",
+    "zh": "请打包",
+    "pronounce": "Pojanghae juseyo",
+    "polite": "礼貌"
+   },
+   {
+    "native": "계산해 주세요",
+    "zh": "请结账",
+    "pronounce": "Gyesanhae juseyo",
+    "polite": "礼貌"
+   },
+   {
+    "native": "감사합니다",
+    "zh": "谢谢",
+    "pronounce": "Gamsahamnida",
+    "polite": "敬语"
+   }
+  ],
+  "tips": [
+   {
+    "zh": "「이거 주세요」（请给我这个）：指着菜单点餐，万能表达"
+   },
+   {
+    "zh": "烤肉店必备：「삼겹살 2인분 주세요」（两份五花肉）——按「인분」（人份）点肉"
+   },
+   {
+    "zh": "吃完烤肉：「볶음밥 해주세요」（请做炒饭）——用烤肉锅底的油炒饭，韩式收尾仪式"
+   }
+  ],
+  "cautions": [
+   "韩国餐厅小菜（반찬）免费续，吃完了直接说「반찬 더 주세요」（请再加小菜）",
+   "汤类（찌개）很烫，端上后稍等再喝",
+   "部分餐厅按人头强制点主菜，注意菜单标注",
+   "结账可刷卡或 T-money，说「계산」即可"
+  ]
+ },
+ {
+  "type": "scene",
+  "country": "thailand",
+  "language": "th",
+  "scene": "restaurant",
+  "kind": "travel",
+  "title": "第一次去泰国：餐厅点餐泰语",
+  "intro": "泰国菜以酸辣闻名，点餐时「辣度」沟通是关键（ไม่เผ็ด=不辣 / เผ็ดน้อย=微辣 / เผ็ดมาก=超辣）。泰国街头小吃摊与餐厅用语略有差异，掌握礼貌词「ครับ」（男性）/「ค่ะ」（女性）能让沟通顺畅度翻倍。",
+  "phrases": [
+   {
+    "native": "สวัสดีครับ/ค่ะ",
+    "zh": "你好",
+    "pronounce": "Sawasdee khrap/kha",
+    "polite": "礼貌"
+   },
+   {
+    "native": "สองคนครับ/ค่ะ",
+    "zh": "两个人",
+    "pronounce": "Song khon khrap/kha",
+    "polite": "礼貌"
+   },
+   {
+    "native": "ขอเมนูหน่อยครับ/ค่ะ",
+    "zh": "请给我菜单",
+    "pronounce": "Kho menu noi khrap/kha",
+    "polite": "礼貌"
+   },
+   {
+    "native": "ขออันนี้ครับ/ค่ะ",
+    "zh": "我要这个",
+    "pronounce": "Kho an ni khrap/kha",
+    "polite": "礼貌"
+   },
+   {
+    "native": "ไม่เผ็ดครับ/ค่ะ",
+    "zh": "不辣",
+    "pronounce": "Mai phet khrap/kha",
+    "polite": "礼貌"
+   },
+   {
+    "native": "เผ็ดน้อยครับ/ค่ะ",
+    "zh": "微辣",
+    "pronounce": "Phet noi khrap/kha",
+    "polite": "礼貌"
+   },
+   {
+    "native": "ไม่เอาผักชีครับ/ค่ะ",
+    "zh": "不要香菜",
+    "pronounce": "Mai ao phakchi khrap/kha",
+    "polite": "礼貌"
+   },
+   {
+    "native": "ใส่กล่องครับ/ค่ะ",
+    "zh": "打包",
+    "pronounce": "Sai klong khrap/kha",
+    "polite": "礼貌"
+   },
+   {
+    "native": "เก็บเงินครับ/ค่ะ",
+    "zh": "结账",
+    "pronounce": "Kep ngoen khrap/kha",
+    "polite": "礼貌"
+   }
+  ],
+  "tips": [
+   {
+    "zh": "泰语礼貌词很重要：男性句尾加「ครับ」，女性加「ค่ะ」，不用会被觉得没礼貌"
+   },
+   {
+    "zh": "怕辣必学：「ไม่เผ็ด」（不辣）——泰国默认辣度对游客偏辣"
+   },
+   {
+    "zh": "街头小吃：直接指 + 「อันนี้」（这个）即可，无需完整句子"
+   }
+  ],
+  "cautions": [
+   "泰国用叉勺吃饭（叉子推、勺子舀），筷子只用于面类",
+   "冬阴功、绿咖喱默认很辣，先点「ไม่เผ็ด」再逐步加辣",
+   "泰式奶茶（ชาไทย）默认极甜，可以说「หวานน้อย」（少糖）",
+   "部分摊位只收现金，备好泰铢"
+  ]
+ },
+ {
+  "type": "scene",
+  "country": "france",
+  "language": "fr",
+  "scene": "restaurant",
+  "kind": "travel",
+  "title": "第一次去法国：餐厅点餐法语",
+  "intro": "法国餐厅（restaurant）与咖啡馆（café）是两种节奏：餐厅用餐时间长、讲究流程（前菜 entrée → 主菜 plat → 甜点 dessert），咖啡馆可以只点一杯咖啡坐一下午。法语数字和「要」的表达是点餐关键。",
+  "phrases": [
+   {
+    "native": "Bonjour / Bonsoir",
+    "zh": "你好/晚上好",
+    "pronounce": "Bohn-zhoor / Bohn-swahr",
+    "polite": "礼貌"
+   },
+   {
+    "native": "Une personne / Deux personnes",
+    "zh": "一位/两位",
+    "pronounce": "Oon pehr-son / Deu pehr-son",
+    "polite": "礼貌"
+   },
+   {
+    "native": "La carte, s'il vous plaît",
+    "zh": "请给我菜单",
+    "pronounce": "Lah kart seel voo play",
+    "polite": "礼貌"
+   },
+   {
+    "native": "Je vais prendre ça",
+    "zh": "我点这个",
+    "pronounce": "Zhuh vay prahn-druh sah",
+    "polite": "礼貌"
+   },
+   {
+    "native": "Qu'est-ce que vous recommandez ?",
+    "zh": "您推荐什么？",
+    "pronounce": "Kess-kuh voo ruh-koh-mahn-day",
+    "polite": "礼貌"
+   },
+   {
+    "native": "Une carafe d'eau",
+    "zh": "一壶水（免费）",
+    "pronounce": "Oon kah-rahf doh",
+    "polite": "礼貌"
+   },
+   {
+    "native": "L'addition, s'il vous plaît",
+    "zh": "请结账",
+    "pronounce": "Lah-dee-syohn seel voo play",
+    "polite": "礼貌"
+   },
+   {
+    "native": "Merci",
+    "zh": "谢谢",
+    "pronounce": "Mehr-see",
+    "polite": "礼貌"
+   }
+  ],
+  "tips": [
+   {
+    "zh": "「Je vais prendre...」（我点…）：法国点餐标准句式"
+   },
+   {
+    "zh": "水：点「une carafe d'eau」（一壶自来水）免费；瓶装水（eau minérale）收费"
+   },
+   {
+    "zh": "咖啡：café 是浓缩；café au lait 是牛奶咖啡；un crème 是加奶油"
+   }
+  ],
+  "cautions": [
+   "进店先问候（Bonjour），直接坐下会被视为失礼",
+   "法国餐厅小费已含在账单（service compris），无需另付",
+   "午餐套餐（formule / menu du jour）性价比最高",
+   "法棍（baguette）免费配餐，不够可以要「encore du pain」"
+  ]
+ },
+ {
+  "type": "scene",
+  "country": "italy",
+  "language": "it",
+  "scene": "restaurant",
+  "kind": "travel",
+  "title": "第一次去意大利：餐厅点餐意大利语",
+  "intro": "意大利餐厅节奏随性，点餐流程：开胃菜（antipasto）→ 第一道面/饭（primo）→ 第二道主菜（secondo）→ 甜点（dolce）。意大利人点餐分道而行（primo 和 secondo 分开点），游客常犯的错是「点太多」。",
+  "phrases": [
+   {
+    "native": "Buongiorno / Buonasera",
+    "zh": "你好/晚上好",
+    "pronounce": "Bwahn-johr-noh / Bwon-ah-seh-rah",
+    "polite": "礼貌"
+   },
+   {
+    "native": "Uno / Due",
+    "zh": "一位/两位",
+    "pronounce": "Oo-noh / Doo-eh",
+    "polite": "礼貌"
+   },
+   {
+    "native": "Il menù, per favore",
+    "zh": "请给我菜单",
+    "pronounce": "Eel meh-noo pehr fah-voh-reh",
+    "polite": "礼貌"
+   },
+   {
+    "native": "Prendo questo",
+    "zh": "我点这个",
+    "pronounce": "Prehn-doh kweh-stoh",
+    "polite": "礼貌"
+   },
+   {
+    "native": "Cosa mi consiglia?",
+    "zh": "您推荐什么？",
+    "pronounce": "Koh-zah mee kohn-see-lyah",
+    "polite": "礼貌"
+   },
+   {
+    "native": "Acqua naturale / frizzante",
+    "zh": "气泡水/无气泡水",
+    "pronounce": "Ah-kwah nah-too-rah-leh / freet-tsahn-teh",
+    "polite": "礼貌"
+   },
+   {
+    "native": "Il conto, per favore",
+    "zh": "请结账",
+    "pronounce": "Eel kohn-toh pehr fah-voh-reh",
+    "polite": "礼貌"
+   },
+   {
+    "native": "Grazie",
+    "zh": "谢谢",
+    "pronounce": "Grahts-yeh",
+    "polite": "礼貌"
+   }
+  ],
+  "tips": [
+   {
+    "zh": "「Prendo questo」（我点这个）：指着菜单点单"
+   },
+   {
+    "zh": "咖啡规矩：Cappuccino 只在上午喝；饭后喝 espresso（浓缩）——游客下午点卡布奇诺会被意大利人侧目"
+   },
+   {
+    "zh": "披萨个人份（一人一整个），意面也是个人份"
+   }
+  ],
+  "cautions": [
+   "意大利餐厅收「coperto」（座位费/餐位费）是正常收费，非小费",
+   "分道点餐：primo + secondo 对游客通常太多，点一道 primo + 甜点即可",
+   "面食（pasta）是 primi，不是配菜，不要点一份主菜再点意面「配」",
+   "服务员不会催促，慢慢享受（意大利人认为快吃是对食物不敬）"
+  ]
+ }
+]
