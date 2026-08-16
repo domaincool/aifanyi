@@ -162,9 +162,19 @@ export async function consume(input: ConsumeInput): Promise<{ ok: true; consumed
         });
       }
 
-      await tx.usageRecord.updateMany({
+await tx.usageRecord.updateMany({
         where: { id: input.usageId, status: 'reserved' },
-        data: { consumedCredits: y, status: 'consumed', completedAt: new Date() },
+        data: {
+          consumedCredits: y,
+          status: 'consumed',
+          completedAt: new Date(),
+          // V1.2 成本落库（P1-A-1）：实际结算时写入真实成本与用量
+          costUsd: input.costUsd ?? undefined,
+          provider: input.provider ?? undefined,
+          model: input.model ?? undefined,
+          inputTokens: input.inputTokens ?? undefined,
+          outputTokens: input.outputTokens ?? undefined,
+        },
       });
 
       await tx.creditLedger.create({

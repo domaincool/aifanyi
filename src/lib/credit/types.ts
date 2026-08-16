@@ -86,6 +86,12 @@ export interface ConsumeInput {
   actualCredits: number;
   idempotencyKey: string; // `${jobId}:consume`
   metadata?: Record<string, unknown>;
+  // V1.2 成本落库：实际结算时写入 UsageRecord（P1-A-1）
+  costUsd?: number;
+  provider?: string | null;
+  model?: string | null;
+  inputTokens?: number;
+  outputTokens?: number;
 }
 
 export interface ReleaseInput {

@@ -209,7 +209,7 @@ export default function CreditClient() {
                   </div>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                  <span style={{ fontSize: 18, fontWeight: 700 }}>¥{(p.priceCents / 100).toFixed(1)}</span>
+                  <span style={{ fontSize: 18, fontWeight: 700 }}>${(p.priceCents / 100).toFixed(2)}</span>
                   <button
                     onClick={() => buy(p)}
                     disabled={buying !== null}

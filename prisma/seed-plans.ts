@@ -1,8 +1,9 @@
 /**
- * PricePlan seed：3 个首期 SKU（V2.2 面额重标定版）
+ * PricePlan seed：3 个美元 SKU（V1.2 最终版 · Creem 海外卡）
  * 运行：npx tsx prisma/seed-plans.ts（服务器）
  * 幂等：按 code upsert
- * 量加成梯度：0% → +10% → +20%
+ * 量加成梯度：0% → +10% → +20%（以「本金+赠送」拆分承担）
+ * Source of Truth：$1.49→1000、$4.99→3600(3270+330)、$13.99→10000(8330+1670)
  */
 import { prisma } from '../src/lib/db';
 
@@ -10,9 +11,9 @@ const PLANS = [
   {
     code: 'starter',
     name: '入门包',
-    priceCents: 990, // ¥9.9
-    totalCredits: 990, // 990 积分
-    purchasedCredits: 990, // 本金（长期有效）
+    priceCents: 149, // $1.49
+    totalCredits: 1000, // 1000 积分
+    purchasedCredits: 1000, // 本金（长期有效）
     bonusCredits: 0, // 赠送 0（平价）
     bonusTtlDays: 30,
     badge: null,
@@ -22,25 +23,25 @@ const PLANS = [
   {
     code: 'standard',
     name: '主力包',
-    priceCents: 2990, // ¥29.9
-    totalCredits: 3290, // 3290 积分（2990 本金 + 300 赠送）
-    purchasedCredits: 2990, // 本金（长期有效）
-    bonusCredits: 300, // 赠送 +10%（30 天）
+    priceCents: 499, // $4.99
+    totalCredits: 3600, // 3600 积分（3270 本金 + 330 赠送）
+    purchasedCredits: 3270, // 本金（长期有效）
+    bonusCredits: 330, // 赠送 +10%（30 天）
     bonusTtlDays: 30,
     badge: '热销',
-    description: '多送 300 积分 · 轻度付费主力',
+    description: '多送 330 积分 · 轻度付费主力',
     sortOrder: 2,
   },
   {
     code: 'pro',
     name: '重度包',
-    priceCents: 9900, // ¥99
-    totalCredits: 11880, // 11880 积分（9900 本金 + 1980 赠送）
-    purchasedCredits: 9900, // 本金（长期有效）
-    bonusCredits: 1980, // 赠送 +20%（30 天）
+    priceCents: 1399, // $13.99
+    totalCredits: 10000, // 10000 积分（8330 本金 + 1670 赠送）
+    purchasedCredits: 8330, // 本金（长期有效）
+    bonusCredits: 1670, // 赠送 +20%（30 天）
     bonusTtlDays: 30,
     badge: '最划算',
-    description: '多送 1980 积分 · 跨境/重度用户',
+    description: '多送 1670 积分 · 跨境/重度用户',
     sortOrder: 3,
   },
 ];
