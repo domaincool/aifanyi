@@ -63,7 +63,7 @@ export default async function HomePage() {
       {/* ── 快速选择翻译工具 ── */}
       <section className="home-block" id="quick-tools">
         <h2 className="section-title">快速选择翻译工具</h2>
-        <p className="block-lead">常用格式直接开翻，无需登录，新用户注册送 300 积分</p>
+        <p className="block-lead">常用格式直接开翻，新用户注册送 500 免费积分</p>
         <div className="tools-grid">
           <a className="tool-card" href="/tools/pdf-translator">
             <div className="tool-emoji">📄</div>

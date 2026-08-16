@@ -1127,3 +1127,8 @@ a.scene-card:hover { transform: translateY(-3px); border-color: var(--accent2); 
 a.tool-card { text-decoration: none; color: inherit; }
 @media (max-width: 900px) { .footer-cols { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 560px) { .footer-cols { grid-template-columns: repeat(2, 1fr); } }
+
+.sol-links { margin-top: 10px; font-size: 13px; color: var(--muted); }
+.sol-links a { color: var(--accent2); text-decoration: none; }
+.sol-links a:hover { text-decoration: underline; }
+.solutions-page .scenes-grid { max-width: 1000px; margin: 0 auto; }

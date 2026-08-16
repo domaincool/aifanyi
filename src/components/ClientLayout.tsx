@@ -173,11 +173,11 @@ export default function ClientLayout({ children, serverUser }: { children: React
             </div>
             <div className="footer-col">
               <h4>解决方案</h4>
-              <a href="/#scenes">个人用户</a>
-              <a href="/#scenes">内容创作者</a>
-              <a href="/ecommerce">跨境电商</a>
-              <a href="/#scenes">企业</a>
-              <a href="/#quick-tools">开发者</a>
+              <a href="/solutions#personal">个人用户</a>
+              <a href="/solutions#creator">内容创作者</a>
+              <a href="/solutions#crossborder">跨境电商</a>
+              <a href="/solutions#business">企业</a>
+              <a href="/solutions#developer">开发者</a>
             </div>
             <div className="footer-col">
               <h4>语言与世界</h4>
