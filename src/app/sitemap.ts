@@ -32,6 +32,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE}/blindtest`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${BASE}/meme`, lastModified: now, changeFrequency: 'daily', priority: 0.9 },
     { url: `${BASE}/idioms`, lastModified: now, changeFrequency: 'daily', priority: 0.9 },
+    { url: `${BASE}/untranslatable`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${BASE}/menu`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${BASE}/culture`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${BASE}/life`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${BASE}/languages`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${BASE}/travel`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${BASE}/recipes`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${BASE}/expressions`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
   ];
 
   // 200 个梗词条 SEO 页

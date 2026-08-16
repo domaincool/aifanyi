@@ -50,6 +50,9 @@ export default function ClientLayout({ children, serverUser }: { children: React
                   <span className="mega-ico">🍜</span>
                   <span className="mega-body"><b>全球美食</b><small>菜谱 · 菜单 · 食材</small></span>
                 </a>
+                <div className="mega-links">
+                  <a href="/menu">菜单词典</a>·<span className="mega-soon">食材词（即将上线）</span>
+                </div>
                 <a role="menuitem" className="mega-item" href="/travel">
                   <span className="mega-ico">✈️</span>
                   <span className="mega-body"><b>旅行语言</b><small>机场 · 酒店 · 餐厅 · 购物</small></span>
@@ -62,6 +65,9 @@ export default function ClientLayout({ children, serverUser }: { children: React
                   <span className="mega-ico">💬</span>
                   <span className="mega-body"><b>词汇与表达</b><small>Meme · 成语 · 俚语 · 难翻译词</small></span>
                 </a>
+                <div className="mega-links">
+                  <a href="/meme">网络用语</a>·<a href="/idioms">成语谚语</a>·<a href="/untranslatable">难翻译词</a>·<span className="mega-soon">俚语（即将上线）</span>
+                </div>
                 <a role="menuitem" className="mega-item" href="/life">
                   <span className="mega-ico">🏠</span>
                   <span className="mega-body"><b>海外生活</b><small>租房 · 工作 · 银行 · 快递</small></span>
@@ -70,6 +76,9 @@ export default function ClientLayout({ children, serverUser }: { children: React
                   <span className="mega-ico">🧠</span>
                   <span className="mega-body"><b>语言与文化</b><small>语言冷知识 · 文化差异 · 词源</small></span>
                 </a>
+                <div className="mega-links">
+                  <a href="/blindtest">AI 翻译擂台</a>·<span className="mega-soon">冷知识（即将上线）</span>
+                </div>
               </div>
             </div>
           </div>

@@ -1,14 +1,13 @@
 /**
- * 内容批量导入核心（内容矩阵 V1.0 v2，采纳内容模型审查员意见）：
- * 按 type 路由到 ExpressionEntry / SceneEntry / MenuEntry / RecipeEntry
- *
- * 修复项（审查意见）：
- *  - AdminLog action 按类型区分（content.import.{type}），避免跨栏目 batchId 撞唯一约束
- *  - update 一律 findFirst 定位 → update by id（term 非全局唯一 / menu slug 复合唯一）
- *  - nullable Json 置空用 Prisma.JsonNull（undefined 不清空）
- *  - SceneEntry slug 自动生成（country-scene），查重按 (country, kind, scene) 三元组
- *  - 枚举白名单：type/lang/kind/category/difficulty（零新依赖，手写校验）
- *  - status 透传（运营草稿后审再发）
+ * 内容批量导入核心 v3（实现对抗审查员意见落地）
+ * 相对 v2 修复：
+ *  - P1-1 existingSlugs 全表构建（自动 slug 精确碰撞可检出，防 P2002 整批 500）
+ *  - P1-2 MenuEntry slug 查重按 country 分组（跨国家同 slug 合法）；update 定位统一 (country, dish)
+ *  - P1-3 RecipeEntry 专属更新分支（updateExisting 可达）
+ *  - P2-7 dryRun 预览 imported/updated 与 meme-import 对齐
+ *  - P2-8 lang 校验并入 it.language；启用 category 白名单；country 规范化
+ *  - P2-2 Json 显式 null → Prisma.JsonNull（置空语义可用）
+ *  - P3  servings 类型校验；conflict 用原始下标
  */
 import { prisma } from '@/lib/db';
 import { Prisma } from '@prisma/client';
@@ -26,9 +25,9 @@ const DIFFICULTY_WHITELIST = ['简单', '中等', '困难', 'easy', 'medium', 'h
 export interface ContentImportItem {
   type: ContentType;
   slug?: string;
-  // 词条类（idiom/slang/untranslatable/food/expression）
   term?: string;
   lang?: string;
+  language?: string; // scene/menu 兼容字段（与 lang 同义）
   meaning?: string;
   translation?: string;
   pinyin?: string;
@@ -39,11 +38,9 @@ export interface ContentImportItem {
   source?: string;
   culture?: string;
   misTranslated?: unknown[];
-  multiLang?: unknown[];
+  multiLang?: unknown[]; // [{lang, text}]
   tags?: string[];
-  // 场景类（scene）
   country?: string;
-  language?: string;
   scene?: string;
   kind?: string;
   title?: string;
@@ -52,7 +49,6 @@ export interface ContentImportItem {
   tips?: unknown[];
   cautions?: unknown[];
   related?: unknown[];
-  // 菜单类（menu）
   dish?: string;
   romanized?: string;
   zh?: string;
@@ -60,7 +56,6 @@ export interface ContentImportItem {
   description?: string;
   category?: string;
   pairings?: unknown[];
-  // 菜谱类（recipe）
   originalName?: string;
   zhName?: string;
   enName?: string;
@@ -70,7 +65,6 @@ export interface ContentImportItem {
   difficulty?: string;
   servings?: number;
   vocab?: unknown[];
-  // 通用
   popularity?: number;
   status?: string;
 }
@@ -94,7 +88,6 @@ export interface ContentImportResult {
   repeated?: boolean;
 }
 
-/** slug 双风格归一（查重用）：去连字符 + 小写 */
 export function slugNorm(slug: string): string {
   return slug.replace(/-/g, '').toLowerCase();
 }
@@ -107,7 +100,6 @@ function slugify(s: string): string {
     .replace(/^-+|-+$/g, '');
 }
 
-/** 按 type 返回对应 Prisma 模型 key */
 function modelOf(type: ContentType): 'expressionEntry' | 'sceneEntry' | 'menuEntry' | 'recipeEntry' {
   if (type === 'scene') return 'sceneEntry';
   if (type === 'menu') return 'menuEntry';
@@ -115,7 +107,6 @@ function modelOf(type: ContentType): 'expressionEntry' | 'sceneEntry' | 'menuEnt
   return 'expressionEntry';
 }
 
-/** 必填字段校验（按 type）+ 白名单 */
 function validateItem(it: ContentImportItem): string | null {
   if (!it || typeof it !== 'object') return 'invalid_row';
   const t = it.type;
@@ -126,18 +117,29 @@ function validateItem(it: ContentImportItem): string | null {
     if (it.kind && !KIND_WHITELIST.includes(it.kind)) return 'invalid_kind';
   } else if (t === 'menu') {
     if (!it.country || !it.language || !it.dish || !it.zh) return 'missing_fields';
+    if (it.category && !CATEGORY_WHITELIST.includes(it.category)) return 'invalid_category';
   } else if (t === 'recipe') {
     if (!it.dish || !it.zhName || !Array.isArray(it.ingredients) || !Array.isArray(it.steps)) return 'missing_fields';
     if (it.difficulty && !DIFFICULTY_WHITELIST.includes(it.difficulty)) return 'invalid_difficulty';
+    if (it.category && !CATEGORY_WHITELIST.includes(it.category)) return 'invalid_category';
+    if (it.servings !== undefined && typeof it.servings !== 'number') return 'invalid_servings';
   } else {
     if (!it.term || !it.meaning || !it.translation) return 'missing_fields';
   }
-  if (it.lang && !LANG_WHITELIST.includes(it.lang)) return 'invalid_lang';
+  const lang = it.lang || it.language;
+  if (lang && !LANG_WHITELIST.includes(lang)) return 'invalid_lang';
   if (it.status && !['published', 'draft'].includes(it.status)) return 'invalid_status';
+  // multiLang shape 校验：数组且每项 {lang, text}
+  if (it.multiLang !== undefined) {
+    if (!Array.isArray(it.multiLang)) return 'invalid_multilang';
+    for (const m of it.multiLang) {
+      const mm = m as Record<string, unknown>;
+      if (!mm || typeof mm.lang !== 'string' || typeof mm.text !== 'string') return 'invalid_multilang';
+    }
+  }
   return null;
 }
 
-/** 构建插入数据（按 type 映射到表字段） */
 function buildData(it: ContentImportItem): any {
   const t = it.type;
   const base: any = {
@@ -157,7 +159,7 @@ function buildData(it: ContentImportItem): any {
   if (t === 'menu') {
     return {
       ...base,
-      slug: it.slug || slugify(it.zh || "") || slugify(it.dish || ""),
+      slug: it.slug || slugify(it.zh || '') || slugify(it.dish || ''),
       country: it.country, lang: it.language, dish: it.dish,
       romanized: it.romanized || null, zh: it.zh, en: it.en || null,
       description: it.description || null, category: it.category || null,
@@ -167,7 +169,7 @@ function buildData(it: ContentImportItem): any {
   if (t === 'recipe') {
     return {
       ...base,
-      slug: it.slug || slugify(it.zhName || "") || slugify(it.dish || ""),
+      slug: it.slug || slugify(it.zhName || '') || slugify(it.dish || ''),
       dish: it.dish, originalName: it.originalName || null, zhName: it.zhName, enName: it.enName || null,
       country: it.country || null, category: it.category || null,
       intro: it.intro || null, ingredients: it.ingredients as any, steps: it.steps as any,
@@ -175,7 +177,6 @@ function buildData(it: ContentImportItem): any {
       vocab: it.vocab as any, misTranslated: it.misTranslated as any, culture: it.culture || null,
     };
   }
-  // 词条类
   return {
     ...base,
     slug: it.slug || slugify(it.term || ''),
@@ -189,6 +190,23 @@ function buildData(it: ContentImportItem): any {
   };
 }
 
+/** update 的 data：Json 显式 null → Prisma.JsonNull；省略（undefined）保留旧值 */
+function buildUpdateData(it: ContentImportItem): any {
+  const data: any = buildData(it);
+  delete data.slug;
+  const jsonFields = ['tips', 'cautions', 'related', 'pairings', 'multiLang', 'misTranslated', 'vocab', 'examples'];
+  for (const f of jsonFields) {
+    if (data[f] === null) data[f] = Prisma.JsonNull;
+    else if (data[f] === undefined) delete data[f];
+  }
+  // 标量省略（undefined）保留旧值
+  const scalarFields = ['pinyin', 'literal', 'usage', 'note', 'source', 'culture', 'romanized', 'en', 'description', 'category', 'originalName', 'enName', 'country', 'intro', 'cookTime', 'difficulty', 'servings', 'term', 'meaning', 'translation', 'lang', 'zh', 'dish', 'title', 'intro'];
+  for (const f of scalarFields) {
+    if (data[f] === undefined) delete data[f];
+  }
+  return data;
+}
+
 export async function importContent(input: {
   batchId: string;
   items: ContentImportItem[];
@@ -200,11 +218,9 @@ export async function importContent(input: {
   const { batchId, dryRun, updateExisting, identity } = input;
   const items = input.items;
 
-  // 按批首 type 生成幂等 action（跨栏目同 batchId 不撞唯一约束）
   const mainType = items[0]?.type || 'mixed';
   const action = `content.import.${mainType}`;
 
-  // ── 幂等：同 batchId + action 已处理过 → 返回首次结果 ──
   const prev = await prisma.adminLog.findFirst({
     where: { action, batchId },
     orderBy: { createdAt: 'desc' },
@@ -212,49 +228,57 @@ export async function importContent(input: {
   if (prev) {
     const r = (prev.result as ContentImportResult | null) ?? null;
     if (r) return { ...r, repeated: true };
+    return { ok: true, batchId, action, imported: 0, updated: 0, skipped: 0, conflicts: [], created: [], repeated: true };
   }
 
-  // ── 行级校验 ──
+  // ── 行级校验（保留原始下标）──
   const conflicts: ContentConflict[] = [];
-  const valid: ContentImportItem[] = [];
+  const valid: { item: ContentImportItem; origIdx: number }[] = [];
   items.forEach((it, idx) => {
     const err = validateItem(it);
     if (err) {
       conflicts.push({ index: idx, key: it?.slug || it?.term || '', reason: err });
       return;
     }
-    valid.push(it);
+    valid.push({ item: it, origIdx: idx });
   });
 
-  // ── 查重：按表分组 ──
-  const byModel: Record<string, ContentImportItem[]> = {};
-  for (const it of valid) {
-    const m = modelOf(it.type);
-    (byModel[m] = byModel[m] || []).push(it);
+  const byModel: Record<string, { item: ContentImportItem; origIdx: number }[]> = {};
+  for (const v of valid) {
+    const m = modelOf(v.item.type);
+    (byModel[m] = byModel[m] || []).push(v);
   }
 
+  // ── 查重数据构建 ──
   const existingTerms = new Set<string>(); // type:term
-  const existingSlugs = new Map<string, Set<string>>(); // model -> slug set
-  const existingSceneKeys = new Set<string>(); // country:kind:scene
+  const existingSlugs = new Map<string, Set<string>>(); // model -> 全表 slug（menu 按 country 另存）
+  const existingMenuSlugs = new Map<string, Set<string>>(); // country -> slug set
+  const existingSceneKeys = new Set<string>();
   const existingMenuDishes = new Set<string>(); // country:dish
-  const normMap = new Map<string, Map<string, string>>(); // model -> norm -> original slug
+  const normMap = new Map<string, Map<string, string>>();
 
   for (const [m, its] of Object.entries(byModel)) {
-    const slugs = its.map((i) => i.slug || '');
-    const [bySlug, allSlugs] = await Promise.all([
-      (prisma as any)[m].findMany({ where: { slug: { in: slugs } }, select: { slug: true } }),
-      (prisma as any)[m].findMany({ select: { slug: true } }),
-    ]);
-    existingSlugs.set(m, new Set(bySlug.map((e: any) => e.slug)));
+    // 全表 slug（P1-1 修复：existingSlugs 与 normMap 同源）
+    const allSlugs = await (prisma as any)[m].findMany({ select: { slug: true, country: true } });
+    const slugSet = new Set<string>(allSlugs.map((e: any) => e.slug));
+    existingSlugs.set(m, slugSet);
     const nm = new Map<string, string>();
     allSlugs.forEach((e: any) => {
       const n = slugNorm(e.slug);
       if (!nm.has(n)) nm.set(n, e.slug);
     });
     normMap.set(m, nm);
+    // menu 按 country 分组（P1-2 修复：跨国家同 slug 合法）
+    if (m === 'menuEntry') {
+      for (const e of allSlugs) {
+        const c = String(e.country || '');
+        if (!existingMenuSlugs.has(c)) existingMenuSlugs.set(c, new Set());
+        (existingMenuSlugs.get(c) as Set<string>).add(e.slug);
+      }
+    }
 
     if (m === 'expressionEntry') {
-      const typeTerms = its.map((i) => ({ type: i.type, term: i.term || '' }));
+      const typeTerms = its.map((v) => ({ type: v.item.type, term: v.item.term || '' }));
       const exist = await (prisma as any).expressionEntry.findMany({
         where: { OR: typeTerms.map((t) => ({ type: t.type, term: t.term })) },
         select: { type: true, term: true },
@@ -262,7 +286,7 @@ export async function importContent(input: {
       exist.forEach((e: any) => existingTerms.add(e.type + ':' + e.term));
     }
     if (m === 'sceneEntry') {
-      const keys = its.map((i) => `${i.country}:${i.kind || 'travel'}:${i.scene}`);
+      const keys = its.map((v) => `${v.item.country}:${v.item.kind || 'travel'}:${v.item.scene}`);
       const exist = await (prisma as any).sceneEntry.findMany({
         where: { OR: keys.map((k) => { const [country, kind, scene] = k.split(':'); return { country, kind, scene }; }) },
         select: { country: true, kind: true, scene: true },
@@ -270,7 +294,7 @@ export async function importContent(input: {
       exist.forEach((e: any) => existingSceneKeys.add(`${e.country}:${e.kind}:${e.scene}`));
     }
     if (m === 'menuEntry') {
-      const keys = its.map((i) => `${i.country}:${i.dish}`);
+      const keys = its.map((v) => `${v.item.country}:${v.item.dish}`);
       const exist = await (prisma as any).menuEntry.findMany({
         where: { OR: keys.map((k) => { const [country, dish] = k.split(':'); return { country, dish }; }) },
         select: { country: true, dish: true },
@@ -280,8 +304,8 @@ export async function importContent(input: {
   }
 
   // ── 分派 ──
-  const toCreate: ContentImportItem[] = [];
-  const toUpdate: ContentImportItem[] = [];
+  const toCreate: { item: ContentImportItem; origIdx: number }[] = [];
+  const toUpdate: { item: ContentImportItem; origIdx: number }[] = [];
   const skipped: { index: number; key: string; reason: string }[] = [];
   const created: string[] = [];
   const batchSeen = new Set<string>();
@@ -289,62 +313,85 @@ export async function importContent(input: {
   const batchSceneSeen = new Set<string>();
   const batchMenuSeen = new Set<string>();
 
-  valid.forEach((it, idx) => {
+  const finalSlugOf = (it: ContentImportItem, m: string): string => {
+    if (it.slug) return it.slug;
+    if (m === 'expressionEntry') return slugify(it.term || '');
+    if (m === 'sceneEntry') return `${it.country}-${it.scene}`;
+    if (m === 'menuEntry') return slugify(it.zh || '') || slugify(it.dish || '');
+    return slugify(it.zhName || '') || slugify(it.dish || '');
+  };
+
+  valid.forEach(({ item: it, origIdx }) => {
     const m = modelOf(it.type);
-    const finalSlug = it.slug || (m === 'expressionEntry' ? slugify(it.term || '') : m === 'sceneEntry' ? `${it.country}-${it.scene}` : m === 'menuEntry' ? slugify(it.zh || it.dish || '') : slugify(it.zhName || it.dish || ''));
+    const finalSlug = finalSlugOf(it, m);
     const key = m === 'expressionEntry' ? it.type + ':' + it.term : finalSlug;
     const batchKey = m + ':' + key;
     if (batchSeen.has(batchKey)) {
-      conflicts.push({ index: idx, key, reason: 'duplicate_in_batch' });
+      conflicts.push({ index: origIdx, key, reason: 'duplicate_in_batch' });
       return;
     }
     batchSeen.add(batchKey);
 
-    // 场景三元组查重
+    // 场景三元组
     if (m === 'sceneEntry') {
       const sk = `${it.country}:${it.kind || 'travel'}:${it.scene}`;
       if (existingSceneKeys.has(sk) || batchSceneSeen.has(sk)) {
-        if (updateExisting && existingSceneKeys.has(sk)) { toUpdate.push(it); return; }
-        if (existingSceneKeys.has(sk)) { skipped.push({ index: idx, key, reason: 'scene_exists' }); return; }
-        conflicts.push({ index: idx, key, reason: 'duplicate_in_batch' });
+        if (updateExisting && existingSceneKeys.has(sk)) { toUpdate.push({ item: it, origIdx }); return; }
+        if (existingSceneKeys.has(sk)) { skipped.push({ index: origIdx, key, reason: 'scene_exists' }); return; }
+        conflicts.push({ index: origIdx, key, reason: 'duplicate_in_batch' });
         return;
       }
       batchSceneSeen.add(sk);
     }
-    // 菜单 country+dish 查重
+    // 菜单 country+dish
     if (m === 'menuEntry') {
       const dk = `${it.country}:${it.dish}`;
       if (existingMenuDishes.has(dk) || batchMenuSeen.has(dk)) {
-        if (updateExisting && existingMenuDishes.has(dk)) { toUpdate.push(it); return; }
-        if (existingMenuDishes.has(dk)) { skipped.push({ index: idx, key, reason: 'dish_exists' }); return; }
-        conflicts.push({ index: idx, key, reason: 'duplicate_in_batch' });
+        if (updateExisting && existingMenuDishes.has(dk)) { toUpdate.push({ item: it, origIdx }); return; }
+        if (existingMenuDishes.has(dk)) { skipped.push({ index: origIdx, key, reason: 'dish_exists' }); return; }
+        conflicts.push({ index: origIdx, key, reason: 'duplicate_in_batch' });
         return;
       }
       batchMenuSeen.add(dk);
     }
-    // term 查重（词条类）
+    // 词条 term（type 内）
     if (m === 'expressionEntry') {
       const tk = it.type + ':' + it.term;
       if (existingTerms.has(tk)) {
-        if (updateExisting) { toUpdate.push(it); return; }
-        skipped.push({ index: idx, key, reason: 'term_exists' });
+        if (updateExisting) { toUpdate.push({ item: it, origIdx }); return; }
+        skipped.push({ index: origIdx, key, reason: 'term_exists' });
         return;
       }
     }
-    // slug 查重（双风格）
-    if ((existingSlugs.get(m) || new Set()).has(finalSlug)) {
-      conflicts.push({ index: idx, key, reason: 'slug_exists' });
+    // Recipe：slug 命中且 updateExisting → 更新（P1-3 修复）
+    if (m === 'recipeEntry' && (existingSlugs.get(m) || new Set()).has(finalSlug)) {
+      if (updateExisting) { toUpdate.push({ item: it, origIdx }); return; }
+      conflicts.push({ index: origIdx, key, reason: 'slug_exists' });
       return;
     }
+    // slug 精确检查（menu 按 country；P1-1/P1-2 修复）
+    if (m === 'menuEntry') {
+      const cSet = existingMenuSlugs.get(it.country || '') || new Set<string>();
+      if (cSet.has(finalSlug)) {
+        conflicts.push({ index: origIdx, key, reason: 'slug_exists' });
+        return;
+      }
+    } else {
+      if ((existingSlugs.get(m) || new Set()).has(finalSlug)) {
+        conflicts.push({ index: origIdx, key, reason: 'slug_exists' });
+        return;
+      }
+    }
+    // norm 双风格
     const norm = slugNorm(finalSlug);
     const normConflict = (normMap.get(m) || new Map()).get(norm) || (batchNormSeen.get(m) || new Map()).get(norm);
     if (normConflict && normConflict !== finalSlug) {
-      conflicts.push({ index: idx, key, reason: `slug_conflict(${normConflict})` });
+      conflicts.push({ index: origIdx, key, reason: `slug_conflict(${normConflict})` });
       return;
     }
     if (!batchNormSeen.has(m)) batchNormSeen.set(m, new Map());
     (batchNormSeen.get(m) as Map<string, string>).set(norm, finalSlug);
-    toCreate.push(it);
+    toCreate.push({ item: it, origIdx });
     created.push(finalSlug);
   });
 
@@ -353,32 +400,36 @@ export async function importContent(input: {
 
   if (!dryRun) {
     await prisma.$transaction(async (tx: any) => {
-      const JN = Prisma.JsonNull;
-      // 更新：findFirst 定位 → update by id
-      for (const it of toUpdate) {
+      // 更新（P1-2B：menu 定位 country+dish；recipe 定位 slug）
+      for (const { item: it } of toUpdate) {
         const m = modelOf(it.type);
-        const data: any = buildData(it);
-        // nullable Json 置空语义：undefined 不清空
-        for (const f of ['tips', 'cautions', 'related', 'pairings', 'multiLang', 'misTranslated', 'vocab', 'examples']) {
-          if (data[f] === undefined) delete data[f];
-        }
         let found: any = null;
         if (m === 'expressionEntry') {
           found = await tx[m].findFirst({ where: { type: it.type, term: it.term } });
         } else if (m === 'menuEntry') {
-          found = await tx[m].findFirst({ where: { country: it.country, slug: it.slug || slugify(it.zh || it.dish || '') } });
+          found = await tx[m].findFirst({ where: { country: it.country, dish: it.dish } });
         } else if (m === 'sceneEntry') {
           found = await tx[m].findFirst({ where: { country: it.country, kind: it.kind || 'travel', scene: it.scene } });
         } else {
           found = await tx[m].findFirst({ where: { slug: it.slug } });
         }
         if (!found) continue;
-        delete data.slug;
+        // slug 变更冲突检测：显式新 slug 与现有其他行冲突
+        if (it.slug && it.slug !== found.slug) {
+          if (m === 'menuEntry') {
+            const clash = await tx[m].findFirst({ where: { country: it.country, slug: it.slug, id: { not: found.id } } });
+            if (clash) { conflicts.push({ index: -1, key: it.slug, reason: 'slug_exists_on_update' }); continue; }
+          } else {
+            const clash = await tx[m].findFirst({ where: { slug: it.slug, id: { not: found.id } } });
+            if (clash) { conflicts.push({ index: -1, key: it.slug, reason: 'slug_exists_on_update' }); continue; }
+          }
+        }
+        const data = buildUpdateData(it);
+        if (it.slug && it.slug !== found.slug) data.slug = it.slug;
         await tx[m].update({ where: { id: found.id }, data });
         updated++;
       }
-      // 新建
-      for (const it of toCreate) {
+      for (const { item: it } of toCreate) {
         const m = modelOf(it.type);
         await tx[m].create({ data: buildData(it) });
         imported++;
@@ -387,11 +438,11 @@ export async function importContent(input: {
   }
 
   const result: ContentImportResult = {
-    ok: dryRun || conflicts.length === 0,
+    ok: conflicts.length === 0,
     batchId,
     action,
-    imported,
-    updated,
+    imported: dryRun ? toCreate.length : imported,
+    updated: dryRun ? toUpdate.length : updated,
     skipped: skipped.length,
     skippedDetails: skipped,
     conflicts,
@@ -409,7 +460,7 @@ export async function importContent(input: {
         ip: input.ip || null,
       });
     } catch {
-      // 审计失败不阻断导入
+      // 审计失败不阻断导入（并发同批时 AdminLog 唯一约束兜底）
     }
   }
 

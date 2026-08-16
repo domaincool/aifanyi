@@ -8,7 +8,7 @@ export const dynamic = 'force-dynamic';
 /** 成语/谚语词条 SEO 页：/idioms/[slug]，每词一页吃长尾搜索词 */
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const e = await prisma.expressionEntry.findUnique({ where: { slug } }).catch(() => null);
+  const e = await prisma.expressionEntry.findFirst({ where: { slug, type: 'idiom' } }).catch(() => null);
   if (!e || e.status !== 'published') return { title: '成语谚语翻译 | 爱翻译 aifanyi.com' };
   return {
     title: `${e.term} 用英语怎么说？${e.term} → ${e.translation} | 爱翻译`,
@@ -18,10 +18,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function IdiomPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const e = await prisma.expressionEntry.findUnique({ where: { slug } });
+  const e = await prisma.expressionEntry.findFirst({ where: { slug, type: 'idiom' } });
   if (!e || e.status !== 'published') notFound();
 
-  const multiLang = (e.multiLang as Record<string, string> | null) || null;
+  const multiLang = (e.multiLang as { lang: string; text: string }[] | null) || null;
   const tags = (e.tags as string[]) || [];
 
   let related: { slug: string; term: string; translation: string }[] = [];
@@ -44,7 +44,7 @@ export default async function IdiomPage({ params }: { params: Promise<{ slug: st
   if (e.literal) blocks.push({ label: '直译', value: e.literal });
   const examples = (e.examples as { zh: string; en: string }[] | null) || null;
   if (e.usage) blocks.push({ label: '使用场景', value: e.usage });
-  if (e.note) blocks.push({ label: '常见误译', value: e.note });
+  if (e.note) blocks.push({ label: '备注', value: e.note });
   if (e.source) blocks.push({ label: '出处', value: e.source });
   if (e.culture) blocks.push({ label: '文化背景', value: e.culture });
 
@@ -90,6 +90,21 @@ export default async function IdiomPage({ params }: { params: Promise<{ slug: st
         </div>
       )}
 
+      {(() => {
+        const mt = (e.misTranslated as { wrong: string; right: string; why?: string }[] | null) || null;
+        return mt && mt.length > 0 ? (
+          <div className="result" style={{ margin: '10px 0' }}>
+            <div style={{ fontSize: 12.5, color: 'var(--muted)' }}>常见误译</div>
+            {mt.map((x, i) => (
+              <div key={i} style={{ marginTop: 4 }}>
+                <div><s style={{ color: 'var(--muted)' }}>{x.wrong}</s> → <b>{x.right}</b></div>
+                {x.why && <div style={{ color: 'var(--muted)' }}>{x.why}</div>}
+              </div>
+            ))}
+          </div>
+        ) : null;
+      })()}
+
       {blocks.map((b) => (
         <div key={b.label} className="result" style={{ margin: '10px 0' }}>
           <div style={{ fontSize: 12.5, color: 'var(--muted)' }}>{b.label}</div>
@@ -97,14 +112,14 @@ export default async function IdiomPage({ params }: { params: Promise<{ slug: st
         </div>
       ))}
 
-      {multiLang && Object.keys(multiLang).length > 0 && (
+      {multiLang && multiLang.length > 0 && (
         <>
           <h2 className="section-title">多语言版本</h2>
           <div className="entry-grid">
-            {Object.entries(multiLang).map(([lang, val]) => (
-              <div key={lang} className="entry-card">
-                <div className="term">{lang === 'en' ? 'English' : lang === 'ja' ? '日本語' : lang === 'ko' ? '한국어' : lang}</div>
-                <div className="tr">{String(val)}</div>
+            {multiLang.map((m) => (
+              <div key={m.lang} className="entry-card">
+                <div className="term">{m.lang === 'en' ? 'English' : m.lang === 'ja' ? '日本語' : m.lang === 'ko' ? '한국어' : m.lang}</div>
+                <div className="tr">{m.text}</div>
               </div>
             ))}
           </div>

@@ -1051,3 +1051,7 @@ button.primary:disabled { opacity: 0.5; cursor: wait; }
   .nav-mega-panel { position: fixed; left: 12px; right: 12px; top: 60px; transform: none; min-width: 0; }
   .mega-grid { grid-template-columns: 1fr 1fr; }
 }
+.mega-links { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 4px 10px; padding: 8px 12px 2px; font-size: 12.5px; color: var(--muted); border-top: 1px dashed var(--border, #e5e7eb); margin-top: 4px; }
+.mega-links a { color: var(--muted); text-decoration: none; }
+.mega-links a:hover { color: var(--accent2); }
+.mega-soon { opacity: .55; cursor: default; }
