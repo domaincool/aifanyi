@@ -81,6 +81,12 @@ export async function endSyncSuccess(input: {
   usageId: string;
   estimated: number;
   actualCredits: number;
+  // V1.2 P1-A-1：成本落库透传
+  costUsd?: number;
+  provider?: string | null;
+  model?: string | null;
+  inputTokens?: number;
+  outputTokens?: number;
 }): Promise<{ ok: boolean; consumed: number; error?: string }> {
   const est = input.estimated;
   const actual = Math.min(Math.max(0, Math.round(input.actualCredits)), est);
@@ -94,6 +100,11 @@ export async function endSyncSuccess(input: {
     usageId: input.usageId,
     actualCredits: actual,
     idempotencyKey: `${input.jobId}:consume`,
+    costUsd: input.costUsd,
+    provider: input.provider,
+    model: input.model,
+    inputTokens: input.inputTokens,
+    outputTokens: input.outputTokens,
   });
   if (!c.ok) {
     await release({ userId: input.userId, jobId: input.jobId, usageId: input.usageId, amount: est, idempotencyKey: `${input.jobId}:release` });

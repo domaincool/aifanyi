@@ -120,7 +120,18 @@ export async function runSubtitleJob(taskId: string): Promise<void> {
       const usage = await prisma.usageRecord.findFirst({ where: { jobId: taskId }, select: { id: true } });
       if (usage) {
         const actual = cues.length > 0 ? Math.round((translated / cues.length) * estCredits) : 0;
-        await endSyncSuccess({ userId: job.userId, jobId: taskId, usageId: usage.id, estimated: estCredits, actualCredits: actual });
+        await endSyncSuccess({
+          userId: job.userId,
+          jobId: taskId,
+          usageId: usage.id,
+          estimated: estCredits,
+          actualCredits: actual,
+          costUsd: totalCost,
+          provider: 'deepseek|glm',
+          model: 'multi',
+          inputTokens: totalIn,
+          outputTokens: totalOut,
+        });
       }
     }
 

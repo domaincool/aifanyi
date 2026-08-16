@@ -107,7 +107,18 @@ async function processJob(taskId: string): Promise<void> {
       const est = job.reservedCredits || 0;
       if (usage && est > 0) {
         const actual = translatableBlocks > 0 ? Math.round((translatedBlocks / translatableBlocks) * est) : 0;
-        await endSyncSuccess({ userId: job.userId, jobId: taskId, usageId: usage.id, estimated: est, actualCredits: actual });
+        await endSyncSuccess({
+          userId: job.userId,
+          jobId: taskId,
+          usageId: usage.id,
+          estimated: est,
+          actualCredits: actual,
+          costUsd: totalCost,
+          provider: 'deepseek|glm',
+          model: 'multi',
+          inputTokens: totalInput,
+          outputTokens: totalOutput,
+        });
       }
     }
 

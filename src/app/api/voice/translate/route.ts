@@ -42,7 +42,16 @@ async function runPipeline(authUserId: string, file: File, mime: string, duratio
       opened.pop();
       return { status: 502, body: { ok: false, error: stt.error } };
     }
-    await endSyncSuccess({ userId: authUserId, jobId: sttJob, usageId: b1.usageId, estimated: b1.estimated, actualCredits: sttEst });
+    await endSyncSuccess({
+      userId: authUserId,
+      jobId: sttJob,
+      usageId: b1.usageId,
+      estimated: b1.estimated,
+      actualCredits: sttEst,
+      costUsd: (durationSec / 60) * 0.00833, // GLM-ASR 0.06 元/分 ÷ 7.2
+      provider: 'glm-asr',
+      model: 'glm-asr-2512',
+    });
     usedCredits += sttEst;
     opened.pop();
     const text = stt.text;
@@ -65,7 +74,18 @@ async function runPipeline(authUserId: string, file: File, mime: string, duratio
       return { status: 502, body: { ok: false, error: '翻译失败，请重试。' } };
     }
     const trActual = tr.cached ? 0 : trEst;
-    await endSyncSuccess({ userId: authUserId, jobId: trJob, usageId: b2.usageId, estimated: b2.estimated, actualCredits: trActual });
+    await endSyncSuccess({
+      userId: authUserId,
+      jobId: trJob,
+      usageId: b2.usageId,
+      estimated: b2.estimated,
+      actualCredits: trActual,
+      costUsd: (tr.costUsd || 0) + (tr.cached ? 0 : 0),
+      provider: tr.model?.replace(/^cache:/, ''),
+      model: tr.model?.replace(/^cache:/, ''),
+      inputTokens: tr.promptTokens,
+      outputTokens: tr.completionTokens,
+    });
     usedCredits += trActual;
     opened.pop();
     const translation = tr.text;
@@ -85,7 +105,16 @@ async function runPipeline(authUserId: string, file: File, mime: string, duratio
     let audioBase64: string | null = null;
     let ttsFailed = false;
     if (tts.ok) {
-      await endSyncSuccess({ userId: authUserId, jobId: ttsJob, usageId: b3.usageId, estimated: b3.estimated, actualCredits: ttsEst });
+      await endSyncSuccess({
+        userId: authUserId,
+        jobId: ttsJob,
+        usageId: b3.usageId,
+        estimated: b3.estimated,
+        actualCredits: ttsEst,
+        costUsd: (translation.length / 1000) * 0.00556, // GLM-TTS 0.04 元/千字 ÷ 7.2
+        provider: 'glm-tts',
+        model: 'glm-tts',
+      });
       usedCredits += ttsEst;
       audioBase64 = tts.audio.toString('base64');
     } else {

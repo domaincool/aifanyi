@@ -98,7 +98,18 @@ export async function POST(req: NextRequest) {
     let credits: number | undefined;
     if (creditCtx) {
       const actual = result.cached ? 0 : creditCtx.estimated;
-      const settled = await endSyncSuccess({ userId: creditCtx.userId, jobId: creditCtx.jobId, usageId: creditCtx.usageId, estimated: creditCtx.estimated, actualCredits: actual });
+      const settled = await endSyncSuccess({
+        userId: creditCtx.userId,
+        jobId: creditCtx.jobId,
+        usageId: creditCtx.usageId,
+        estimated: creditCtx.estimated,
+        actualCredits: actual,
+        costUsd: result.costUsd || 0,
+        provider: result.model?.replace(/^cache:/, ''),
+        model: result.model?.replace(/^cache:/, ''),
+        inputTokens: result.promptTokens,
+        outputTokens: result.completionTokens,
+      });
       if (!settled.ok) return NextResponse.json({ error: settled.error }, { status: 500 });
       credits = settled.consumed;
     }
