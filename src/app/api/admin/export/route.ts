@@ -5,6 +5,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { requireOpsOrAdmin } from '@/lib/admin/ops-auth';
 import { collectStats, type StatsData } from '@/lib/admin/stats';
+import { beijingDateKey } from '@/lib/time-beijing';
 
 function esc(v: unknown): string {
   const s = String(v ?? '');
@@ -19,7 +20,7 @@ export async function GET(req: NextRequest) {
   try {
     const s = await collectStats();
     const csv = buildCsv(s, identity.operator);
-    const d = new Date(Date.now() + 8 * 3600_000).toISOString().slice(0, 10);
+    const d = beijingDateKey();
     const filename = 'attachment; filename="aifanyi-stats-' + d + '.csv"';
     return new NextResponse('\uFEFF' + csv, {
       headers: {
@@ -76,7 +77,7 @@ function buildCsv(s: StatsData, operator: string): string {
   row('【翻译·近7天调用】');
   row('日期', '调用数');
   for (let i = 6; i >= 0; i--) {
-    const key = new Date(Date.now() - i * 86400000).toISOString().slice(0, 10);
+    const key = beijingDateKey(new Date(Date.now() - i * 86400000));
     const hit = s.translation.last7Days.find((x) => x.date === key);
     row(key, hit ? hit.count : 0);
   }

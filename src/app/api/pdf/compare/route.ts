@@ -7,6 +7,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createHash } from 'crypto';
 import { prisma } from '@/lib/db';
+import { beijingDayStart } from '@/lib/time-beijing';
 import { GlmProvider } from '@/lib/translator/providers/glm';
 import { GoogleTranslateProvider } from '@/lib/translator/providers/google';
 import { PdfDocument } from '@/lib/pdf/types';
@@ -37,8 +38,7 @@ export async function POST(req: NextRequest) {
     }
 
     // 对比积分：今日该 clientKey 对比次数 < 20
-    const todayStart = new Date();
-    todayStart.setHours(0, 0, 0, 0);
+    const todayStart = beijingDayStart();
     const agg = await prisma.pdfJob.aggregate({
       where: { clientKey, createdAt: { gte: todayStart } },
       _sum: { compareCount: true },

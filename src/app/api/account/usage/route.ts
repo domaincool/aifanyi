@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import { requireAuth } from '@/lib/auth/require-auth';
 import { getGuestCookie } from '@/lib/auth/cookie';
 import { prisma } from '@/lib/db';
+import { beijingDayStart, beijingMonthStart } from '@/lib/time-beijing';
 
 export const runtime = 'nodejs';
 
@@ -9,8 +10,8 @@ export async function GET() {
   const auth = await requireAuth();
   if (auth instanceof NextResponse) return auth;
 
-  const todayStart = new Date(); todayStart.setHours(0, 0, 0, 0);
-  const monthStart = new Date(); monthStart.setDate(1); monthStart.setHours(0, 0, 0, 0);
+  const todayStart = beijingDayStart();
+  const monthStart = beijingMonthStart();
 
   const [todayUsage, monthUsage, history] = await Promise.all([
     prisma.usageLedger.aggregate({

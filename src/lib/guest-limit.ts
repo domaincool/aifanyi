@@ -6,6 +6,7 @@
  */
 import { NextRequest } from 'next/server';
 import { prisma } from '@/lib/db';
+import { beijingDateKey } from '@/lib/time-beijing';
 import { rateLimit, getClientIp, hashKey } from '@/lib/rate-limit';
 import { GUEST_LIMITS } from '@/lib/limits-config';
 
@@ -61,5 +62,5 @@ function getGuestIpHash(req: NextRequest): string {
 function todayStr(): string {
   // 用服务器本地日期（Asia/Shanghai）
   const d = new Date(Date.now() + 8 * 3600_000);
-  return d.toISOString().slice(0, 10);
+  return beijingDateKey(d);
 }

@@ -5,6 +5,7 @@
  * 防滥用维度：clientKey（IP+UA 哈希）
  */
 import { prisma } from '../db';
+import { beijingDayStart } from '../time-beijing';
 import { PDF_CONFIG } from './config';
 
 export async function checkPdfQuota(
@@ -13,8 +14,7 @@ export async function checkPdfQuota(
   userId: string | null,
   guestSessionId: string | null
 ): Promise<{ ok: boolean; reason?: string }> {
-  const todayStart = new Date();
-  todayStart.setHours(0, 0, 0, 0);
+  const todayStart = beijingDayStart();
 
   const isGuest = !userId && !!guestSessionId;
   const dailyFiles = isGuest ? (PDF_CONFIG.quota as any).guestDailyFiles || 1 : PDF_CONFIG.quota.dailyFiles;
@@ -44,8 +44,7 @@ export async function checkPdfQuota(
 }
 
 export async function checkGlobalDailyCap(): Promise<boolean> {
-  const todayStart = new Date();
-  todayStart.setHours(0, 0, 0, 0);
+  const todayStart = beijingDayStart();
   const count = await prisma.pdfJob.count({ where: { createdAt: { gte: todayStart } } });
   const cap = Number(process.env.PDF_GLOBAL_DAILY_CAP || 200);
   return count < cap;

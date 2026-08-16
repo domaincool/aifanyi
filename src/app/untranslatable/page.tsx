@@ -2,6 +2,7 @@ import { prisma } from '@/lib/db';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { spStr, spPage } from '@/lib/content/sp-param';
+import { Prisma } from '@prisma/client';
 
 export const dynamic = 'force-dynamic';
 
@@ -27,7 +28,9 @@ export default async function UntranslatableIndexPage({
   const q = spStr(sp.q).slice(0, 64);
   const page = spPage(sp.page);
 
-  const where: any = {
+  let dbFailed = false;
+
+  const where: Prisma.ExpressionEntryWhereInput = {
     status: 'published',
     type: 'untranslatable',
     ...(q
@@ -42,7 +45,7 @@ export default async function UntranslatableIndexPage({
   };
 
   const [total, items, hot] = await Promise.all([
-    prisma.expressionEntry.count({ where }).catch(() => 0),
+    prisma.expressionEntry.count({ where }).catch(() => { dbFailed = true; return 0; }),
     prisma.expressionEntry
       .findMany({
         where,
@@ -51,7 +54,7 @@ export default async function UntranslatableIndexPage({
         take: PAGE_SIZE,
         select: { slug: true, term: true, lang: true, meaning: true, translation: true },
       })
-      .catch(() => []),
+      .catch(() => { dbFailed = true; return []; }),
     !q
       ? prisma.expressionEntry
           .findMany({
@@ -125,7 +128,11 @@ export default async function UntranslatableIndexPage({
         </>
       )}
 
-      {items.length === 0 && (page > totalPages ? (
+      {items.length === 0 && (dbFailed ? (
+        <div style={{ textAlign: 'center', padding: '48px 0', color: 'var(--muted)' }}>
+          内容暂时不可用，请稍后重试
+        </div>
+      ) : page > totalPages ? (
         <div style={{ textAlign: 'center', padding: '48px 0', color: 'var(--muted)' }}>
           当前页超出范围（共 {totalPages} 页），<Link href={href({ page: String(totalPages) })} style={{ color: 'var(--accent2)' }}>查看最后一页</Link>
         </div>

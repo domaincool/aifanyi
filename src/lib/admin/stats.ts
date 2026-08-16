@@ -3,6 +3,7 @@
  * 统计维度：用户 / 内容 / 盲测 / 翻译 / PDF
  */
 import { prisma } from '@/lib/db';
+import { beijingDateKey } from '@/lib/time-beijing';
 
 export interface StatsData {
   users: { total: number; activeSessions: number; creditAccounts: number };
@@ -58,7 +59,7 @@ export async function collectStats(): Promise<StatsData> {
 
   const dailyMap = new Map<string, number>();
   for (const d of recentDaily) {
-    const day = d.createdAt.toISOString().slice(0, 10);
+    const day = beijingDateKey(d.createdAt);
     dailyMap.set(day, (dailyMap.get(day) ?? 0) + d._count._all);
   }
   const daily = [...dailyMap.entries()].map(([date, count]) => ({ date, count })).sort((a, b) => a.date.localeCompare(b.date));

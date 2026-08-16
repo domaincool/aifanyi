@@ -12,6 +12,7 @@ export default function ClientLayout({ children, serverUser }: { children: React
   const isVoiceMinimal = pathname === '/voice'; // 语音翻译页：极简头部（仅品牌+域名+登录注册）
   const [user, setUser] = useState<UserInfo | null>(serverUser);
   const [showLogin, setShowLogin] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
     // 打开登录弹窗时记录当前页面（登录成功后回跳）
@@ -84,6 +85,12 @@ export default function ClientLayout({ children, serverUser }: { children: React
           </div>
         </nav>
         <button
+          className="hamburger"
+          aria-label={mobileOpen ? '关闭菜单' : '打开菜单'}
+          aria-expanded={mobileOpen}
+          onClick={() => setMobileOpen((v) => !v)}
+        >{mobileOpen ? '✕' : '☰'}</button>
+        <button
           className="theme-toggle"
           aria-label="切换深浅色主题"
           title="切换深浅色主题"
@@ -105,6 +112,40 @@ export default function ClientLayout({ children, serverUser }: { children: React
           )}
         </div>
       </header>
+
+      {mobileOpen && (
+        <>
+          <div className="mobile-drawer-backdrop" onClick={() => setMobileOpen(false)} />
+          <div className="mobile-drawer" role="dialog" aria-label="导航菜单">
+            <div className="mob-title">
+              爱翻译
+              <button className="mob-close" aria-label="关闭菜单" onClick={() => setMobileOpen(false)}>✕</button>
+            </div>
+            <a className="mob-link" href="/" onClick={() => setMobileOpen(false)}>AI 翻译</a>
+            <a className="mob-link" href="/tools" onClick={() => setMobileOpen(false)}>工具</a>
+            <div className="mob-group">语言与世界</div>
+            <a className="mob-link" href="/recipes" onClick={() => setMobileOpen(false)}>🍜 全球美食 <span className="mob-sub">菜谱 · 菜单</span></a>
+            <a className="mob-link" href="/travel" onClick={() => setMobileOpen(false)}>✈️ 旅行语言 <span className="mob-sub">机场 · 酒店 · 餐厅</span></a>
+            <a className="mob-link" href="/languages" onClick={() => setMobileOpen(false)}>🌍 世界语言</a>
+            <a className="mob-link" href="/expressions" onClick={() => setMobileOpen(false)}>💬 词汇与表达</a>
+            <a className="mob-link" href="/meme" onClick={() => setMobileOpen(false)}>网络用语</a>
+            <a className="mob-link" href="/idioms" onClick={() => setMobileOpen(false)}>成语谚语</a>
+            <a className="mob-link" href="/untranslatable" onClick={() => setMobileOpen(false)}>难翻译词</a>
+            <a className="mob-link" href="/life" onClick={() => setMobileOpen(false)}>🏠 海外生活</a>
+            <a className="mob-link" href="/culture" onClick={() => setMobileOpen(false)}>🧠 语言与文化</a>
+            <a className="mob-link" href="/blindtest" onClick={() => setMobileOpen(false)}>AI 翻译擂台</a>
+            {user ? (
+              <div className="mob-user">
+                已登录：{user.nickname || user.email}
+                <button className="mob-logout" onClick={handleLogout}>退出登录</button>
+              </div>
+            ) : (
+              <button className="mob-login" onClick={() => { setMobileOpen(false); setShowLogin(true); }}>登录 / 注册</button>
+            )}
+          </div>
+        </>
+      )}
+
       <main>{children}</main>
       <footer className="site-footer">
         <div className="footer-top">

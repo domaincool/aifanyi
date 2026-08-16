@@ -2,6 +2,7 @@ import { prisma } from '@/lib/db';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { spStr, spPage } from '@/lib/content/sp-param';
+import { Prisma } from '@prisma/client';
 
 export const dynamic = 'force-dynamic';
 
@@ -29,7 +30,9 @@ export default async function IdiomsIndexPage({
   const tag = spStr(sp.tag);
   const page = spPage(sp.page);
 
-  const where: any = {
+  let dbFailed = false;
+
+  const where: Prisma.ExpressionEntryWhereInput = {
     status: 'published',
     type: 'idiom',
     ...(q
@@ -45,23 +48,23 @@ export default async function IdiomsIndexPage({
   };
 
   const [total, idioms, hot, tags] = await Promise.all([
-    prisma.expressionEntry.count({ where }),
+    prisma.expressionEntry.count({ where }).catch(() => { dbFailed = true; return 0; }),
     prisma.expressionEntry.findMany({
       where,
       orderBy: [{ popularity: 'desc' }, { term: 'asc' }],
       skip: (page - 1) * PAGE_SIZE,
       take: PAGE_SIZE,
       select: { slug: true, term: true, pinyin: true, meaning: true, translation: true, tags: true },
-    }),
+    }).catch(() => { dbFailed = true; return []; }),
     prisma.expressionEntry.findMany({
       where: { status: 'published', type: 'idiom' },
       orderBy: { popularity: 'desc' },
       take: 10,
       select: { slug: true, term: true, translation: true },
-    }),
+    }).catch(() => []),
     prisma.$queryRaw<{ tag: string; cnt: bigint }[]>`
       SELECT unnest(tags) AS tag, count(*) AS cnt FROM "ExpressionEntry" WHERE status = 'published' AND type = 'idiom' GROUP BY 1 ORDER BY 2 DESC
-    `,
+    `.catch(() => []),
   ]);
 
   const totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE));
@@ -125,7 +128,11 @@ export default async function IdiomsIndexPage({
         ))}
       </div>
 
-      {idioms.length === 0 && (page > totalPages ? (
+      {idioms.length === 0 && (dbFailed ? (
+        <div style={{ textAlign: 'center', padding: '48px 0', color: 'var(--muted)' }}>
+          内容暂时不可用，请稍后重试
+        </div>
+      ) : page > totalPages ? (
         <div style={{ textAlign: 'center', padding: '48px 0', color: 'var(--muted)' }}>
           当前页超出范围（共 {totalPages} 页），<Link href={href({ page: String(totalPages) })} style={{ color: 'var(--accent2)' }}>查看最后一页</Link>
         </div>

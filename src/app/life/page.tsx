@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { countryName } from '@/lib/content/locales';
 import type { Metadata } from 'next';
 import { spStr, spPage } from '@/lib/content/sp-param';
+import { Prisma } from '@prisma/client';
 
 export const dynamic = 'force-dynamic';
 
@@ -29,7 +30,9 @@ export default async function LifeIndexPage({
   const country = spStr(sp.country);
   const page = spPage(sp.page);
 
-  const where: any = {
+  let dbFailed = false;
+
+  const where: Prisma.SceneEntryWhereInput = {
     status: 'published',
     kind: 'life',
     ...(country ? { country } : {}),
@@ -45,7 +48,7 @@ export default async function LifeIndexPage({
   };
 
   const [total, items, hot, countries] = await Promise.all([
-    prisma.sceneEntry.count({ where }).catch(() => 0),
+    prisma.sceneEntry.count({ where }).catch(() => { dbFailed = true; return 0; }),
     prisma.sceneEntry
       .findMany({
         where,
@@ -54,7 +57,7 @@ export default async function LifeIndexPage({
         take: PAGE_SIZE,
         select: { slug: true, country: true, title: true, intro: true, scene: true, kind: true },
       })
-      .catch(() => []),
+      .catch(() => { dbFailed = true; return []; }),
     !q && !country
       ? prisma.sceneEntry
           .findMany({
@@ -142,7 +145,11 @@ export default async function LifeIndexPage({
         </>
       )}
 
-      {items.length === 0 && (page > totalPages ? (
+      {items.length === 0 && (dbFailed ? (
+        <div style={{ textAlign: 'center', padding: '48px 0', color: 'var(--muted)' }}>
+          内容暂时不可用，请稍后重试
+        </div>
+      ) : page > totalPages ? (
         <div style={{ textAlign: 'center', padding: '48px 0', color: 'var(--muted)' }}>
           当前页超出范围（共 {totalPages} 页），<Link href={href({ page: String(totalPages) })} style={{ color: 'var(--accent2)' }}>查看最后一页</Link>
         </div>

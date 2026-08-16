@@ -1,4 +1,5 @@
 'use client';
+import { beijingDateKey } from '@/lib/time-beijing';
 import { useEffect, useState, useCallback } from 'react';
 
 interface Stats {
@@ -41,7 +42,7 @@ export default function DashboardClient() {
   const days: { date: string; count: number }[] = [];
   for (let i = 6; i >= 0; i--) {
     const d = new Date(Date.now() - i * 86400000);
-    const key = d.toISOString().slice(0, 10);
+    const key = beijingDateKey(d);
     const hit = t.last7Days.find((x) => x.date === key);
     days.push({ date: key.slice(5), count: hit ? hit.count : 0 });
   }

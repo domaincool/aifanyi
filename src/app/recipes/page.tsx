@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { countryName } from '@/lib/content/locales';
 import type { Metadata } from 'next';
 import { spStr, spPage } from '@/lib/content/sp-param';
+import { Prisma } from '@prisma/client';
 
 export const dynamic = 'force-dynamic';
 
@@ -29,7 +30,9 @@ export default async function RecipesIndexPage({
   const category = spStr(sp.category);
   const page = spPage(sp.page);
 
-  const where: any = {
+  let dbFailed = false;
+
+  const where: Prisma.RecipeEntryWhereInput = {
     status: 'published',
     ...(category ? { category } : {}),
     ...(q
@@ -44,7 +47,7 @@ export default async function RecipesIndexPage({
   };
 
   const [total, items, hot, categories] = await Promise.all([
-    prisma.recipeEntry.count({ where }).catch(() => 0),
+    prisma.recipeEntry.count({ where }).catch(() => { dbFailed = true; return 0; }),
     prisma.recipeEntry
       .findMany({
         where,
@@ -53,7 +56,7 @@ export default async function RecipesIndexPage({
         take: PAGE_SIZE,
         select: { slug: true, dish: true, zhName: true, enName: true, country: true, category: true },
       })
-      .catch(() => []),
+      .catch(() => { dbFailed = true; return []; }),
     !q && !category
       ? prisma.recipeEntry
           .findMany({
@@ -145,7 +148,11 @@ export default async function RecipesIndexPage({
         </>
       )}
 
-      {items.length === 0 && (page > totalPages ? (
+      {items.length === 0 && (dbFailed ? (
+        <div style={{ textAlign: 'center', padding: '48px 0', color: 'var(--muted)' }}>
+          内容暂时不可用，请稍后重试
+        </div>
+      ) : page > totalPages ? (
         <div style={{ textAlign: 'center', padding: '48px 0', color: 'var(--muted)' }}>
           当前页超出范围（共 {totalPages} 页），<Link href={href({ page: String(totalPages) })} style={{ color: 'var(--accent2)' }}>查看最后一页</Link>
         </div>

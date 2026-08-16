@@ -1055,3 +1055,65 @@ button.primary:disabled { opacity: 0.5; cursor: wait; }
 .mega-links a { color: var(--muted); text-decoration: none; }
 .mega-links a:hover { color: var(--accent2); }
 .mega-soon { opacity: .55; cursor: default; }
+
+
+/* ═══════════════ 移动端汉堡导航（2026-08-17） ═══════════════ */
+.hamburger {
+  display: none;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 17px;
+  line-height: 1;
+  color: var(--text);
+  cursor: pointer;
+  padding: 7px 11px;
+}
+.hamburger:hover { background: var(--hover-bg, rgba(128,128,128,.1)); }
+.mobile-drawer-backdrop { display: none; }
+.mobile-drawer { display: none; }
+@keyframes mob-drawer-in { from { transform: translateX(48px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+@media (max-width: 720px) {
+  .hamburger { display: inline-flex; align-items: center; justify-content: center; }
+  .site-header nav { display: none; }
+  .header-auth { display: none; }
+  .mobile-drawer-backdrop { display: block; position: fixed; inset: 0; background: rgba(0,0,0,.42); z-index: 190; }
+  .mobile-drawer {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0; right: 0; bottom: 0;
+    width: min(300px, 84vw);
+    background: var(--panel);
+    z-index: 195;
+    box-shadow: -8px 0 32px rgba(0,0,0,.18);
+    padding: 18px 16px 28px;
+    overflow-y: auto;
+    animation: mob-drawer-in .18s ease-out;
+  }
+  .mob-title {
+    font-size: 16px; font-weight: 700; color: var(--text);
+    padding: 4px 4px 12px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 8px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .mob-close { background: none; border: none; font-size: 19px; color: var(--muted); cursor: pointer; padding: 2px 8px; }
+  .mob-group { font-size: 12px; font-weight: 600; color: var(--accent2); letter-spacing: .05em; margin: 14px 4px 4px; }
+  .mob-link { display: block; color: var(--text); text-decoration: none; font-size: 14.5px; padding: 10px 4px; border-radius: 8px; }
+  .mob-link:hover { background: var(--hover-bg, rgba(128,128,128,.1)); }
+  .mob-link .mob-sub { color: var(--muted); font-size: 12px; margin-left: 6px; }
+  .mob-user { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--border); font-size: 13px; color: var(--muted); }
+  .mob-login {
+    margin-top: 16px; width: 100%; padding: 12px;
+    border: none; border-radius: 10px;
+    background: var(--accent); color: #fff;
+    font-size: 15px; font-weight: 600; cursor: pointer;
+  }
+  .mob-logout {
+    margin-top: 10px; width: 100%; padding: 10px;
+    border: 1px solid var(--border); border-radius: 10px;
+    background: none; color: var(--muted);
+    font-size: 13px; cursor: pointer;
+  }
+}
