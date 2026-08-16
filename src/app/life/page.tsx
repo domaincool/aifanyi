@@ -1,13 +1,21 @@
 import { prisma } from '@/lib/db';
 import Link from 'next/link';
 import { countryName } from '@/lib/content/locales';
+import type { Metadata } from 'next';
+import { spStr, spPage } from '@/lib/content/sp-param';
 
-export const revalidate = 300;
+export const dynamic = 'force-dynamic';
 
-export const metadata = {
+const metadataBase = {
   title: '海外生活 · 移居留学场景表达 | 爱翻译',
   description: '海外生活栏目：租房、求职、看病、子女上学等移居留学场景常用语对照——日本、韩国、泰国、法国……',
 };
+
+export async function generateMetadata({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }): Promise<Metadata> {
+  const sp = await searchParams;
+  const hasFilter = !!(spStr(sp.q) || spStr(sp.country) || spPage(sp.page) > 1);
+  return { ...metadataBase, robots: hasFilter ? { index: false, follow: true } : undefined };
+}
 
 const PAGE_SIZE = 48;
 
@@ -17,9 +25,9 @@ export default async function LifeIndexPage({
   searchParams: Promise<{ q?: string; country?: string; page?: string }>;
 }) {
   const sp = await searchParams;
-  const q = (sp.q ?? '').trim();
-  const country = (sp.country ?? '').trim();
-  const page = Math.max(1, parseInt(sp.page ?? '1', 10) || 1);
+  const q = spStr(sp.q).slice(0, 64);
+  const country = spStr(sp.country);
+  const page = spPage(sp.page);
 
   const where: any = {
     status: 'published',
@@ -36,7 +44,7 @@ export default async function LifeIndexPage({
       : {}),
   };
 
-  const [total, items, countries] = await Promise.all([
+  const [total, items, hot, countries] = await Promise.all([
     prisma.sceneEntry.count({ where }).catch(() => 0),
     prisma.sceneEntry
       .findMany({
@@ -47,12 +55,23 @@ export default async function LifeIndexPage({
         select: { slug: true, country: true, title: true, intro: true, scene: true, kind: true },
       })
       .catch(() => []),
+    !q && !country
+      ? prisma.sceneEntry
+          .findMany({
+            where: { status: 'published', kind: 'life' },
+            orderBy: { popularity: 'desc' },
+            take: 10,
+            select: { slug: true, country: true, title: true, intro: true },
+          })
+          .catch(() => [])
+      : Promise.resolve([]),
     prisma.$queryRaw<{ country: string; cnt: bigint }[]>`
       SELECT country, count(*) AS cnt FROM "SceneEntry" WHERE status = 'published' AND kind = 'life' GROUP BY country ORDER BY 2 DESC
     `.catch(() => []),
   ]);
 
   const totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE));
+  const safePage = Math.min(page, totalPages);
   const countryList = countries.map((c) => ({ country: c.country, cnt: Number(c.cnt) }));
 
   const href = (extra: { q?: string; country?: string; page?: string }) => {
@@ -87,12 +106,26 @@ export default async function LifeIndexPage({
 
       <div className="chips">
         <Link className={!country ? 'chip chip-active' : 'chip'} href={href({ country: '' })}>全部</Link>
-        {countryList.map((c) => (
+        {countryList.slice(0, 24).map((c) => (
           <Link key={c.country} className={country === c.country ? 'chip chip-active' : 'chip'} href={href({ country: c.country })}>
             {countryName(c.country)} <span className="chip-cnt">{c.cnt}</span>
           </Link>
         ))}
       </div>
+
+      {!q && !country && (
+        <>
+          <h2 className="section-title">热门生活场景 TOP10</h2>
+          <div className="entry-grid">
+            {hot.map((s) => (
+              <Link key={s.slug} className="entry-card" href={`/life/${s.country}/${s.slug}`}>
+                <div className="term">{s.title}</div>
+                <div className="mn">{s.intro}</div>
+              </Link>
+            ))}
+          </div>
+        </>
+      )}
 
       {items.length > 0 && (
         <>
@@ -109,18 +142,22 @@ export default async function LifeIndexPage({
         </>
       )}
 
-      {items.length === 0 && (
+      {items.length === 0 && (page > totalPages ? (
+        <div style={{ textAlign: 'center', padding: '48px 0', color: 'var(--muted)' }}>
+          当前页超出范围（共 {totalPages} 页），<Link href={href({ page: String(totalPages) })} style={{ color: 'var(--accent2)' }}>查看最后一页</Link>
+        </div>
+      ) : (
         <div style={{ textAlign: 'center', padding: '48px 0', color: 'var(--muted)' }}>
           海外生活场景内容按批次建设中，敬请期待——先看看<a href="/travel" style={{ color: 'var(--accent2)' }}>旅行语言</a>？
         </div>
-      )}
+      ))}
 
       {totalPages > 1 && (
         <div className="pagination">
           {Array.from({ length: totalPages }, (_, i) => i + 1)
-            .slice(Math.max(0, page - 3), page + 2)
+            .slice(Math.max(0, safePage - 3), safePage + 2)
             .map((p) => (
-              <Link key={p} className={p === page ? 'page page-active' : 'page'} href={href({ page: String(p) })}>
+              <Link key={p} className={p === safePage ? 'page page-active' : 'page'} href={href({ page: String(p) })}>
                 {p}
               </Link>
             ))}

@@ -1,13 +1,21 @@
 import { prisma } from '@/lib/db';
 import Link from 'next/link';
 import { countryName } from '@/lib/content/locales';
+import type { Metadata } from 'next';
+import { spStr, spPage } from '@/lib/content/sp-param';
 
-export const revalidate = 300;
+export const dynamic = 'force-dynamic';
 
-export const metadata = {
+const metadataBase = {
   title: '菜单词典 · 各国菜单菜名翻译 | 爱翻译',
   description: '菜单词典栏目：日韩泰法意各国菜单菜名翻译——看不懂的菜名，拍下来就能翻。',
 };
+
+export async function generateMetadata({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }): Promise<Metadata> {
+  const sp = await searchParams;
+  const hasFilter = !!(spStr(sp.q) || spStr(sp.country) || spPage(sp.page) > 1);
+  return { ...metadataBase, robots: hasFilter ? { index: false, follow: true } : undefined };
+}
 
 const PAGE_SIZE = 48;
 
@@ -17,9 +25,9 @@ export default async function MenuIndexPage({
   searchParams: Promise<{ q?: string; country?: string; page?: string }>;
 }) {
   const sp = await searchParams;
-  const q = (sp.q ?? '').trim();
-  const country = (sp.country ?? '').trim();
-  const page = Math.max(1, parseInt(sp.page ?? '1', 10) || 1);
+  const q = spStr(sp.q).slice(0, 64);
+  const country = spStr(sp.country);
+  const page = spPage(sp.page);
 
   const where: any = {
     status: 'published',
@@ -28,8 +36,8 @@ export default async function MenuIndexPage({
       ? {
           OR: [
             { zh: { contains: q } },
-            { en: { contains: q } },
-            { dish: { contains: q } },
+            { en: { contains: q, mode: 'insensitive' } },
+            { dish: { contains: q, mode: 'insensitive' } },
           ],
         }
       : {}),
@@ -62,6 +70,7 @@ export default async function MenuIndexPage({
   ]);
 
   const totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE));
+  const safePage = Math.min(page, totalPages);
   const countryList = countries.map((c) => ({ country: c.country, cnt: Number(c.cnt) }));
 
   const href = (extra: { q?: string; country?: string; page?: string }) => {
@@ -96,7 +105,7 @@ export default async function MenuIndexPage({
 
       <div className="chips">
         <Link className={!country ? 'chip chip-active' : 'chip'} href={href({ country: '' })}>全部</Link>
-        {countryList.map((c) => (
+        {countryList.slice(0, 24).map((c) => (
           <Link key={c.country} className={country === c.country ? 'chip chip-active' : 'chip'} href={href({ country: c.country })}>
             {countryName(c.country)} <span className="chip-cnt">{c.cnt}</span>
           </Link>
@@ -131,18 +140,22 @@ export default async function MenuIndexPage({
         </>
       )}
 
-      {items.length === 0 && (
+      {items.length === 0 && (page > totalPages ? (
+        <div style={{ textAlign: 'center', padding: '48px 0', color: 'var(--muted)' }}>
+          当前页超出范围（共 {totalPages} 页），<Link href={href({ page: String(totalPages) })} style={{ color: 'var(--accent2)' }}>查看最后一页</Link>
+        </div>
+      ) : (
         <div style={{ textAlign: 'center', padding: '48px 0', color: 'var(--muted)' }}>
           没有找到匹配的菜单词条，换个关键词或国家试试？
         </div>
-      )}
+      ))}
 
       {totalPages > 1 && (
         <div className="pagination">
           {Array.from({ length: totalPages }, (_, i) => i + 1)
-            .slice(Math.max(0, page - 3), page + 2)
+            .slice(Math.max(0, safePage - 3), safePage + 2)
             .map((p) => (
-              <Link key={p} className={p === page ? 'page page-active' : 'page'} href={href({ page: String(p) })}>
+              <Link key={p} className={p === safePage ? 'page page-active' : 'page'} href={href({ page: String(p) })}>
                 {p}
               </Link>
             ))}

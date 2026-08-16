@@ -1,13 +1,21 @@
 import { prisma } from '@/lib/db';
 import Link from 'next/link';
+import type { Metadata } from 'next';
+import { spStr, spPage } from '@/lib/content/sp-param';
 
 export const dynamic = 'force-dynamic';
 
-export const metadata = {
+const metadataBase = {
   title: '成语谚语翻译大全 · 成语英语怎么说 | 爱翻译',
   description: '中国成语谚语地道英文翻译大全：画蛇添足、亡羊补牢、守株待兔、破釜沉舟……一句成语，一句地道英文。含拼音、直译、例句与出处。',
   keywords: ['成语翻译', '成语英语怎么说', '谚语翻译', '成语英文', '画蛇添足英文'],
 };
+
+export async function generateMetadata({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }): Promise<Metadata> {
+  const sp = await searchParams;
+  const hasFilter = !!(spStr(sp.q) || spStr(sp.tag) || spPage(sp.page) > 1);
+  return { ...metadataBase, robots: hasFilter ? { index: false, follow: true } : undefined };
+}
 
 const PAGE_SIZE = 48;
 
@@ -17,9 +25,9 @@ export default async function IdiomsIndexPage({
   searchParams: Promise<{ q?: string; tag?: string; page?: string }>;
 }) {
   const sp = await searchParams;
-  const q = (sp.q ?? '').trim();
-  const tag = (sp.tag ?? '').trim();
-  const page = Math.max(1, parseInt(sp.page ?? '1', 10) || 1);
+  const q = spStr(sp.q).slice(0, 64);
+  const tag = spStr(sp.tag);
+  const page = spPage(sp.page);
 
   const where: any = {
     status: 'published',
@@ -29,7 +37,7 @@ export default async function IdiomsIndexPage({
           OR: [
             { term: { contains: q } },
             { meaning: { contains: q } },
-            { translation: { contains: q } },
+            { translation: { contains: q, mode: 'insensitive' } },
           ],
         }
       : {}),
@@ -57,6 +65,7 @@ export default async function IdiomsIndexPage({
   ]);
 
   const totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE));
+  const safePage = Math.min(page, totalPages);
   const tagList = tags.map((t) => ({ tag: t.tag, cnt: Number(t.cnt) }));
 
   const href = (extra: { q?: string; tag?: string; page?: string }) => {
@@ -116,18 +125,22 @@ export default async function IdiomsIndexPage({
         ))}
       </div>
 
-      {idioms.length === 0 && (
+      {idioms.length === 0 && (page > totalPages ? (
+        <div style={{ textAlign: 'center', padding: '48px 0', color: 'var(--muted)' }}>
+          当前页超出范围（共 {totalPages} 页），<Link href={href({ page: String(totalPages) })} style={{ color: 'var(--accent2)' }}>查看最后一页</Link>
+        </div>
+      ) : (
         <div style={{ textAlign: 'center', padding: '48px 0', color: 'var(--muted)' }}>
           没有找到匹配的成语谚语，换个关键词试试？
         </div>
-      )}
+      ))}
 
       {totalPages > 1 && (
         <div className="pagination">
           {Array.from({ length: totalPages }, (_, i) => i + 1)
-            .slice(Math.max(0, page - 3), page + 2)
+            .slice(Math.max(0, safePage - 3), safePage + 2)
             .map((p) => (
-              <Link key={p} className={p === page ? 'page page-active' : 'page'} href={href({ page: String(p) })}>
+              <Link key={p} className={p === safePage ? 'page page-active' : 'page'} href={href({ page: String(p) })}>
                 {p}
               </Link>
             ))}

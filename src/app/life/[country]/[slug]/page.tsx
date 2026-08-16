@@ -17,22 +17,22 @@ function safeDecode(s: string): string {
 interface Phrase { zh: string; native?: string; pronounce?: string; polite?: string; en?: string; usage?: string }
 interface Tip { zh: string; en?: string }
 
-/** 旅行场景 SEO 页：/travel/[country]/[slug] */
+/** 海外生活场景 SEO 页：/life/[country]/[slug]（与 /travel/[country]/[slug] 同构，kind 隔离） */
 export async function generateMetadata({ params }: { params: Promise<{ country: string; slug: string }> }): Promise<Metadata> {
   const { country, slug: rawSlug } = await params;
   const slug = safeDecode(rawSlug);
-  const s = await prisma.sceneEntry.findFirst({ where: { country, slug, kind: 'travel' } }).catch(() => null);
-  if (!s || s.status !== 'published') return { title: '旅行语言 | 爱翻译 aifanyi.com' };
+  const s = await prisma.sceneEntry.findFirst({ where: { country, slug, kind: 'life' } }).catch(() => null);
+  if (!s || s.status !== 'published') return { title: '海外生活 | 爱翻译 aifanyi.com' };
   return {
-    title: `${s.title} · ${countryName(country)}旅行常用语 | 爱翻译`,
-    description: `${s.intro || `${s.title}——${countryName(country)}旅行场景必备用语。`}含${(s.phrases as unknown[] | null) && Array.isArray(s.phrases) ? (s.phrases as unknown[]).length : 0}句实用短语对照，爱翻译 · AI翻译。`,
+    title: `${s.title} · ${countryName(country)}海外生活 | 爱翻译`,
+    description: `${s.intro || `${s.title}——${countryName(country)}移居留学场景必备用语。`}含${(s.phrases as unknown[] | null) && Array.isArray(s.phrases) ? (s.phrases as unknown[]).length : 0}句实用短语对照，爱翻译 · AI翻译。`,
   };
 }
 
-export default async function TravelScenePage({ params }: { params: Promise<{ country: string; slug: string }> }) {
+export default async function LifeScenePage({ params }: { params: Promise<{ country: string; slug: string }> }) {
   const { country, slug: rawSlug } = await params;
   const slug = safeDecode(rawSlug);
-  const s = await prisma.sceneEntry.findFirst({ where: { country, slug, kind: 'travel' } });
+  const s = await prisma.sceneEntry.findFirst({ where: { country, slug, kind: 'life' } });
   if (!s || s.status !== 'published') notFound();
 
   const phrases = (s.phrases as unknown as Phrase[]) || [];
@@ -43,7 +43,7 @@ export default async function TravelScenePage({ params }: { params: Promise<{ co
   let related: { slug: string; title: string }[] = [];
   try {
     const raw = await prisma.sceneEntry.findMany({
-      where: { status: 'published', country, kind: s.kind },
+      where: { status: 'published', country, kind: 'life' },
       orderBy: { popularity: 'desc' },
       take: 8,
       select: { slug: true, title: true },
@@ -61,13 +61,13 @@ export default async function TravelScenePage({ params }: { params: Promise<{ co
         dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",
-          "headline": `${s.title} · ${countryName(country)}旅行常用语`,
-          "description": s.intro || `${s.title}——${countryName(country)}旅行场景必备用语。`,
+          "headline": `${s.title} · ${countryName(country)}海外生活`,
+          "description": s.intro || `${s.title}——${countryName(country)}移居留学场景必备用语。`,
           "image": "https://aifanyi.com/og-image.png",
           "datePublished": s.createdAt,
           "dateModified": s.updatedAt,
           "inLanguage": "zh-CN",
-          "mainEntityOfPage": `${process.env.NEXT_PUBLIC_SITE_URL || 'https://aifanyi.com'}/travel/${s.country}/${s.slug}`,
+          "mainEntityOfPage": `${process.env.NEXT_PUBLIC_SITE_URL || 'https://aifanyi.com'}/life/${s.country}/${s.slug}`,
           "author": { "@type": "Organization", "name": "爱翻译 aifanyi.com", "url": "https://aifanyi.com/" },
           "publisher": {
             "@type": "Organization", "name": "爱翻译", "url": "https://aifanyi.com/",
@@ -76,7 +76,7 @@ export default async function TravelScenePage({ params }: { params: Promise<{ co
         }) }}
       />
 
-      <p style={{ color: 'var(--muted)' }}>{countryName(country)}旅行 · {langName(s.lang) || '当地语言'} · {s.kind === 'life' ? '生活场景' : '旅行场景'}</p>
+      <p style={{ color: 'var(--muted)' }}>{countryName(country)}海外生活 · {langName(s.lang) || '当地语言'}</p>
 
       {s.intro && (
         <div className="result" style={{ margin: '10px 0' }}>
@@ -123,10 +123,10 @@ export default async function TravelScenePage({ params }: { params: Promise<{ co
 
       {related.length > 0 && (
         <>
-          <h2 className="section-title">更多{countryName(country)}旅行场景</h2>
+          <h2 className="section-title">更多{countryName(country)}生活场景</h2>
           <div className="entry-grid">
             {related.map((r) => (
-              <Link key={r.slug} className="entry-card" href={`/travel/${s.country}/${r.slug}`}>
+              <Link key={r.slug} className="entry-card" href={`/life/${s.country}/${r.slug}`}>
                 <div className="term">{r.title}</div>
               </Link>
             ))}

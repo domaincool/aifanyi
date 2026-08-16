@@ -52,7 +52,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   for (const m of memes) {
     entries.push({
-      url: `${BASE}/meme/${m.slug}`,
+      url: `${BASE}/meme/${encodeURIComponent(m.slug)}`,
       lastModified: m.updatedAt,
       changeFrequency: 'monthly',
       priority: 0.7,
@@ -68,7 +68,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }
   for (const i of idioms) {
     entries.push({
-      url: `${BASE}/idioms/${i.slug}`,
+      url: `${BASE}/idioms/${encodeURIComponent(i.slug)}`,
       lastModified: i.updatedAt,
       changeFrequency: 'monthly',
       priority: 0.7,
@@ -107,16 +107,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     });
   }
 
-  // 旅行/生活场景 SEO 页（双段路由）
-  let scenes: { slug: string; country: string; updatedAt: Date }[] = [];
+  // 旅行/生活场景 SEO 页（双段路由，按 kind 分流：travel → /travel/、life → /life/）
+  let scenes: { slug: string; country: string; kind: string; updatedAt: Date }[] = [];
   try {
-    scenes = await prisma.sceneEntry.findMany({ where: { status: 'published' }, select: { slug: true, country: true, updatedAt: true } });
+    scenes = await prisma.sceneEntry.findMany({ where: { status: 'published' }, select: { slug: true, country: true, kind: true, updatedAt: true } });
   } catch {
     // 忽略
   }
   for (const sc of scenes) {
+    const prefix = sc.kind === 'life' ? '/life' : '/travel';
     entries.push({
-      url: `${BASE}/travel/${encodeURIComponent(sc.country)}/${encodeURIComponent(sc.slug)}`,
+      url: `${BASE}${prefix}/${encodeURIComponent(sc.country)}/${encodeURIComponent(sc.slug)}`,
       lastModified: sc.updatedAt,
       changeFrequency: 'monthly',
       priority: 0.7,

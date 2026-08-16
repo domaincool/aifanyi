@@ -1,12 +1,20 @@
 import { prisma } from '@/lib/db';
 import Link from 'next/link';
+import type { Metadata } from 'next';
+import { spStr, spPage } from '@/lib/content/sp-param';
 
-export const revalidate = 300;
+export const dynamic = 'force-dynamic';
 
-export const metadata = {
+const metadataBase = {
   title: '难翻译词 · 无法直译的外语词 | 爱翻译',
   description: '难翻译词栏目：各国无法直译却精准表达心情的外语词——日语、韩语、德语、法语……一个词，一段故事。',
 };
+
+export async function generateMetadata({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }): Promise<Metadata> {
+  const sp = await searchParams;
+  const hasFilter = !!(spStr(sp.q) || spPage(sp.page) > 1);
+  return { ...metadataBase, robots: hasFilter ? { index: false, follow: true } : undefined };
+}
 
 const PAGE_SIZE = 48;
 
@@ -16,8 +24,8 @@ export default async function UntranslatableIndexPage({
   searchParams: Promise<{ q?: string; page?: string }>;
 }) {
   const sp = await searchParams;
-  const q = (sp.q ?? '').trim();
-  const page = Math.max(1, parseInt(sp.page ?? '1', 10) || 1);
+  const q = spStr(sp.q).slice(0, 64);
+  const page = spPage(sp.page);
 
   const where: any = {
     status: 'published',
@@ -27,7 +35,7 @@ export default async function UntranslatableIndexPage({
           OR: [
             { term: { contains: q } },
             { meaning: { contains: q } },
-            { translation: { contains: q } },
+            { translation: { contains: q, mode: 'insensitive' } },
           ],
         }
       : {}),
@@ -57,6 +65,7 @@ export default async function UntranslatableIndexPage({
   ]);
 
   const totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE));
+  const safePage = Math.min(page, totalPages);
 
   const href = (extra: { q?: string; page?: string }) => {
     const usp = new URLSearchParams();
@@ -116,18 +125,22 @@ export default async function UntranslatableIndexPage({
         </>
       )}
 
-      {items.length === 0 && (
+      {items.length === 0 && (page > totalPages ? (
+        <div style={{ textAlign: 'center', padding: '48px 0', color: 'var(--muted)' }}>
+          当前页超出范围（共 {totalPages} 页），<Link href={href({ page: String(totalPages) })} style={{ color: 'var(--accent2)' }}>查看最后一页</Link>
+        </div>
+      ) : (
         <div style={{ textAlign: 'center', padding: '48px 0', color: 'var(--muted)' }}>
           没有找到匹配的难翻译词，换个关键词试试？
         </div>
-      )}
+      ))}
 
       {totalPages > 1 && (
         <div className="pagination">
           {Array.from({ length: totalPages }, (_, i) => i + 1)
-            .slice(Math.max(0, page - 3), page + 2)
+            .slice(Math.max(0, safePage - 3), safePage + 2)
             .map((p) => (
-              <Link key={p} className={p === page ? 'page page-active' : 'page'} href={href({ page: String(p) })}>
+              <Link key={p} className={p === safePage ? 'page page-active' : 'page'} href={href({ page: String(p) })}>
                 {p}
               </Link>
             ))}

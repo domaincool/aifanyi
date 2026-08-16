@@ -1,13 +1,21 @@
 import { prisma } from '@/lib/db';
 import Link from 'next/link';
 import { countryName } from '@/lib/content/locales';
+import type { Metadata } from 'next';
+import { spStr, spPage } from '@/lib/content/sp-param';
 
-export const revalidate = 300;
+export const dynamic = 'force-dynamic';
 
-export const metadata = {
+const metadataBase = {
   title: '全球美食菜谱 · 跨语言家常菜怎么做 | 爱翻译',
   description: '全球美食菜谱栏目：各国经典家常菜做法与翻译，食材、步骤、词汇一应俱全——宫保鸡丁、寿喜烧、越南河粉……',
 };
+
+export async function generateMetadata({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }): Promise<Metadata> {
+  const sp = await searchParams;
+  const hasFilter = !!(spStr(sp.q) || spStr(sp.category) || spPage(sp.page) > 1);
+  return { ...metadataBase, robots: hasFilter ? { index: false, follow: true } : undefined };
+}
 
 const PAGE_SIZE = 48;
 
@@ -17,9 +25,9 @@ export default async function RecipesIndexPage({
   searchParams: Promise<{ q?: string; category?: string; page?: string }>;
 }) {
   const sp = await searchParams;
-  const q = (sp.q ?? '').trim();
-  const category = (sp.category ?? '').trim();
-  const page = Math.max(1, parseInt(sp.page ?? '1', 10) || 1);
+  const q = spStr(sp.q).slice(0, 64);
+  const category = spStr(sp.category);
+  const page = spPage(sp.page);
 
   const where: any = {
     status: 'published',
@@ -28,8 +36,8 @@ export default async function RecipesIndexPage({
       ? {
           OR: [
             { zhName: { contains: q } },
-            { dish: { contains: q } },
-            { enName: { contains: q } },
+            { dish: { contains: q, mode: 'insensitive' } },
+            { enName: { contains: q, mode: 'insensitive' } },
           ],
         }
       : {}),
@@ -62,6 +70,7 @@ export default async function RecipesIndexPage({
   ]);
 
   const totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE));
+  const safePage = Math.min(page, totalPages);
   const categoryList = categories.map((c) => ({ category: c.category, cnt: Number(c.cnt) }));
   const catLabel: Record<string, string> = {
     main: '主菜', soup: '汤羹', snack: '小吃', dessert: '甜品', drink: '饮品', noodle: '面食', rice: '米饭', other: '其他',
@@ -99,7 +108,7 @@ export default async function RecipesIndexPage({
 
       <div className="chips">
         <Link className={!category ? 'chip chip-active' : 'chip'} href={href({ category: '' })}>全部</Link>
-        {categoryList.map((c) => (
+        {categoryList.slice(0, 24).map((c) => (
           <Link key={c.category} className={category === c.category ? 'chip chip-active' : 'chip'} href={href({ category: c.category })}>
             {catLabel[c.category] || c.category} <span className="chip-cnt">{c.cnt}</span>
           </Link>
@@ -136,18 +145,22 @@ export default async function RecipesIndexPage({
         </>
       )}
 
-      {items.length === 0 && (
+      {items.length === 0 && (page > totalPages ? (
+        <div style={{ textAlign: 'center', padding: '48px 0', color: 'var(--muted)' }}>
+          当前页超出范围（共 {totalPages} 页），<Link href={href({ page: String(totalPages) })} style={{ color: 'var(--accent2)' }}>查看最后一页</Link>
+        </div>
+      ) : (
         <div style={{ textAlign: 'center', padding: '48px 0', color: 'var(--muted)' }}>
           没有找到匹配的菜谱，换个关键词或分类试试？
         </div>
-      )}
+      ))}
 
       {totalPages > 1 && (
         <div className="pagination">
           {Array.from({ length: totalPages }, (_, i) => i + 1)
-            .slice(Math.max(0, page - 3), page + 2)
+            .slice(Math.max(0, safePage - 3), safePage + 2)
             .map((p) => (
-              <Link key={p} className={p === page ? 'page page-active' : 'page'} href={href({ page: String(p) })}>
+              <Link key={p} className={p === safePage ? 'page page-active' : 'page'} href={href({ page: String(p) })}>
                 {p}
               </Link>
             ))}
