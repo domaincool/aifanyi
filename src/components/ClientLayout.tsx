@@ -37,11 +37,42 @@ export default function ClientLayout({ children, serverUser }: { children: React
 
         <a href="/" className="logo">爱翻译<span> · aifanyi.com</span></a>
         <nav>
-          <a href="/voice">语音翻译</a>
-          <a href="/tools">翻译工具</a>
-          <a href="/blindtest">AI翻译擂台</a>
-          <a href="/meme">网络用语翻译</a>
-          <a href="/ecommerce">跨境电商工作台</a>
+          <a href="/" className="nav-item">AI 翻译</a>
+          <a href="/tools" className="nav-item">工具</a>
+          <div className="nav-mega">
+            <button type="button" className="nav-mega-trigger" aria-haspopup="true" aria-expanded="false">
+              语言与世界 <span className="nav-caret">▾</span>
+            </button>
+            <div className="nav-mega-panel" role="menu">
+              <div className="mega-title">探索世界</div>
+              <div className="mega-grid">
+                <a role="menuitem" className="mega-item" href="/recipes">
+                  <span className="mega-ico">🍜</span>
+                  <span className="mega-body"><b>全球美食</b><small>菜谱 · 菜单 · 食材</small></span>
+                </a>
+                <a role="menuitem" className="mega-item" href="/travel">
+                  <span className="mega-ico">✈️</span>
+                  <span className="mega-body"><b>旅行语言</b><small>机场 · 酒店 · 餐厅 · 购物</small></span>
+                </a>
+                <a role="menuitem" className="mega-item" href="/languages">
+                  <span className="mega-ico">🌍</span>
+                  <span className="mega-body"><b>世界语言</b><small>日语 · 韩语 · 泰语 · 法语 …</small></span>
+                </a>
+                <a role="menuitem" className="mega-item" href="/expressions">
+                  <span className="mega-ico">💬</span>
+                  <span className="mega-body"><b>词汇与表达</b><small>Meme · 成语 · 俚语 · 难翻译词</small></span>
+                </a>
+                <a role="menuitem" className="mega-item" href="/life">
+                  <span className="mega-ico">🏠</span>
+                  <span className="mega-body"><b>海外生活</b><small>租房 · 工作 · 银行 · 快递</small></span>
+                </a>
+                <a role="menuitem" className="mega-item" href="/culture">
+                  <span className="mega-ico">🧠</span>
+                  <span className="mega-body"><b>语言与文化</b><small>语言冷知识 · 文化差异 · 词源</small></span>
+                </a>
+              </div>
+            </div>
+          </div>
         </nav>
         <button
           className="theme-toggle"

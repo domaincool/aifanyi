@@ -31,6 +31,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE}/updates`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${BASE}/blindtest`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${BASE}/meme`, lastModified: now, changeFrequency: 'daily', priority: 0.9 },
+    { url: `${BASE}/idioms`, lastModified: now, changeFrequency: 'daily', priority: 0.9 },
   ];
 
   // 200 个梗词条 SEO 页
@@ -49,6 +50,23 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.7,
     });
   }
+
+  // 成语谚语词条 SEO 页
+  let idioms: { slug: string; updatedAt: Date }[] = [];
+  try {
+    idioms = await prisma.expressionEntry.findMany({ where: { status: 'published', type: 'idiom' }, select: { slug: true, updatedAt: true } });
+  } catch {
+    // 数据库暂不可用时只返回基础页
+  }
+  for (const i of idioms) {
+    entries.push({
+      url: `${BASE}/idioms/${i.slug}`,
+      lastModified: i.updatedAt,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    });
+  }
+
 
   // /meme/tag/xxx 分类聚合页（V1.2 SEO，?tag= 升级为路由）
   let tagRows: { tag: string }[] = [];

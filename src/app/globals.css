@@ -1030,3 +1030,24 @@ button.primary:disabled { opacity: 0.5; cursor: wait; }
   .read-btn { min-height: 44px; font-size: 14px; padding: 10px 16px; }
   .read-btn-stop { min-width: 44px; padding: 10px 12px; }
 }
+
+/* ===== 语言与世界 Mega Menu ===== */
+.nav-mega { position: relative; display: inline-block; }
+.nav-mega-trigger { background: none; border: none; color: inherit; font: inherit; cursor: pointer; padding: 8px 10px; border-radius: 8px; }
+.nav-mega-trigger:hover { background: var(--hover-bg, rgba(128,128,128,.1)); }
+.nav-caret { font-size: 10px; opacity: .7; margin-left: 2px; }
+.nav-mega-panel { display: none; position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); min-width: 560px; background: var(--card-bg, #fff); border: 1px solid var(--border-color, #e5e7eb); border-radius: 14px; box-shadow: 0 12px 40px rgba(0,0,0,.14); padding: 16px 18px 18px; z-index: 100; }
+.nav-mega:hover .nav-mega-panel, .nav-mega:focus-within .nav-mega-panel { display: block; }
+.nav-mega-panel::before { content: ""; position: absolute; top: -12px; left: 0; right: 0; height: 12px; }
+.mega-title { font-size: 12px; font-weight: 700; color: var(--muted, #6b7280); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 10px; }
+.mega-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.mega-item { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: 10px; text-decoration: none; color: inherit; }
+.mega-item:hover { background: var(--hover-bg, rgba(37,99,235,.08)); }
+.mega-ico { font-size: 20px; line-height: 1; }
+.mega-body { display: flex; flex-direction: column; }
+.mega-body b { font-size: 14px; }
+.mega-body small { font-size: 11.5px; color: var(--muted, #6b7280); margin-top: 1px; }
+@media (max-width: 768px) {
+  .nav-mega-panel { position: fixed; left: 12px; right: 12px; top: 60px; transform: none; min-width: 0; }
+  .mega-grid { grid-template-columns: 1fr 1fr; }
+}
