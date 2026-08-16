@@ -57,7 +57,11 @@ export async function POST(req: Request, { params }: Ctx) {
       select: { id: true, targetLang: true, ocrText: true, translated: true, status: true, consumedCredits: true, createdAt: true },
     });
 
-    const settle = await endSyncSuccess({ userId, jobId, usageId: begin.usageId, estimated: begin.estimated, actualCredits: begin.estimated });
+    const settle = await endSyncSuccess({
+      userId, jobId, usageId: begin.usageId, estimated: begin.estimated, actualCredits: begin.estimated,
+      costUsd: 0.001, // 图片 OCR+翻译：按单张估算成本
+      provider: 'deepseek|glm', model: 'multi', inputTokens: 0, outputTokens: 0,
+    });
     if (!settle.ok) {
       return NextResponse.json({ ok: false, error: settle.error || '积分结算异常' }, { status: 500 });
     }

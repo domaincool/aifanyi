@@ -53,7 +53,11 @@ export async function POST(_req: Request, { params }: Ctx) {
     }
 
     // 结算：成功按实际 consume（enrich 固定单价，实际 = 预估）
-    const settle = await endSyncSuccess({ userId, jobId, usageId: begin.usageId, estimated: begin.estimated, actualCredits: begin.estimated });
+    const settle = await endSyncSuccess({
+      userId, jobId, usageId: begin.usageId, estimated: begin.estimated, actualCredits: begin.estimated,
+      costUsd: ((product.sourceDescription?.length ?? 0) + (product.productName?.length ?? 0)) / 1000 * 0.0014,
+      provider: 'deepseek|glm', model: 'multi', inputTokens: 0, outputTokens: 0,
+    });
     if (!settle.ok) {
       return NextResponse.json({ ok: false, error: settle.error || '积分结算异常' }, { status: 500 });
     }

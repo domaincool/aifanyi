@@ -99,7 +99,11 @@ export async function POST(req: Request, { params }: Ctx) {
       select: { id: true, version: true, status: true, draft: true, warnings: true, charCount: true, metadata: true, createdAt: true },
     });
 
-    const settle = await endSyncSuccess({ userId, jobId, usageId: begin.usageId, estimated: begin.estimated, actualCredits: begin.estimated });
+    const settle = await endSyncSuccess({
+      userId, jobId, usageId: begin.usageId, estimated: begin.estimated, actualCredits: begin.estimated,
+      costUsd: (result.value ? JSON.stringify(result.value).length : 0) / 1000 * 0.0014,
+      provider: 'deepseek|glm', model: 'multi', inputTokens: 0, outputTokens: 0,
+    });
     if (!settle.ok) {
       return NextResponse.json({ ok: false, error: settle.error || '积分结算异常' }, { status: 500 });
     }

@@ -40,7 +40,11 @@ export async function POST(_req: Request, { params }: Ctx) {
       select: { id: true, sourceText: true, translation: true, intent: true, updatedAt: true },
     });
 
-    const settle = await endSyncSuccess({ userId, jobId, usageId: begin.usageId, estimated: begin.estimated, actualCredits: begin.estimated });
+    const settle = await endSyncSuccess({
+      userId, jobId, usageId: begin.usageId, estimated: begin.estimated, actualCredits: begin.estimated,
+      costUsd: 0.001, // 客户消息翻译：按次估算
+      provider: 'deepseek|glm', model: 'multi', inputTokens: 0, outputTokens: 0,
+    });
     return NextResponse.json({ ok: true, message: updated, consumedCredits: settle.consumed });
   } catch (e: any) {
     await endSyncFail({ userId, jobId, usageId: begin.usageId, estimated: begin.estimated });
