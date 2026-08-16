@@ -14,6 +14,45 @@ export default async function HomePage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebSite",
+              "@id": "https://aifanyi.com/#website",
+              "url": "https://aifanyi.com/",
+              "name": "爱翻译 aifanyi.com - 在线翻译,英文翻译成中文,智能翻译,实时翻译",
+              "alternateName": "爱翻译",
+              "description": "爱翻译提供免费在线翻译服务：英文翻译成中文、中文翻译成英文，支持实时智能翻译，翻译准确自然。跨境电商文案、外文文档、网络用语都能翻，多模型对比选更佳译文。",
+              "inLanguage": "zh-CN",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://aifanyi.com/meme?q={search_term_string}"
+                },
+                "query-input": "required name=search_term_string"
+              }
+            },
+            {
+              "@type": "SoftwareApplication",
+              "name": "爱翻译 aifanyi.com",
+              "url": "https://aifanyi.com/",
+              "applicationCategory": "UtilitiesApplication",
+              "operatingSystem": "Web",
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "CNY"
+              },
+              "description": "AI 在线翻译：文本、PDF、图片、字幕、Word/PPT、网页翻译，多模型对比选更佳译文。",
+              "image": "https://aifanyi.com/og-image.png"
+            }
+          ]
+        }) }}
+      />
       <section className="hero">
         <h1>爱翻译 · AI翻译</h1>
         <p>让 AI 帮你把话说得像当地人。Let AI help you speak like a local.</p>

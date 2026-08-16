@@ -22,7 +22,7 @@ export async function POST(req: NextRequest) {
     if (!url || typeof url !== 'string') {
       return NextResponse.json({ ok: false, error: '请输入网页地址。' }, { status: 400 });
     }
-    const v = validateUrl(url);
+    const v = await validateUrl(url);
     if (v.error || !v.url) {
       return NextResponse.json({ ok: false, error: v.error }, { status: 400 });
     }

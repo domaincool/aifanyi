@@ -50,5 +50,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     });
   }
 
+  // /meme/tag/xxx 分类聚合页（V1.2 SEO，?tag= 升级为路由）
+  let tagRows: { tag: string }[] = [];
+  try {
+    tagRows = await prisma.$queryRaw<{ tag: string }[]>`SELECT DISTINCT unnest(tags) AS tag FROM "MemeEntry" WHERE status = 'published'`;
+  } catch {
+    // 忽略
+  }
+  for (const tr of tagRows) {
+    entries.push({
+      url: `${BASE}/meme/tag/${encodeURIComponent(tr.tag)}`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    });
+  }
   return entries;
 }

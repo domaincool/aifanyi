@@ -6,22 +6,65 @@
 const MAX_RESPONSE = 4 * 1024 * 1024;
 const MAX_PARAGRAPHS = 50;
 
-function isBlockedHost(hostname: string): boolean {
-  const h = hostname.toLowerCase();
-  if (h === 'localhost' || h.endsWith('.localhost')) return true;
-  if (/^127\./.test(h) || /^0\.0\.0\.0$/.test(h)) return true;
-  if (/^10\./.test(h) || /^192\.168\./.test(h)) return true;
-  if (/^172\.(1[6-9]|2\d|3[01])\./.test(h)) return true;
-  if (/^169\.254\./.test(h)) return true;
-  if (/^\[::1\]$/.test(h) || h === '::1') return true;
+/** 私网/保留 IP 判定（含阿里云元数据 100.100.100.200、CGNAT、IPv6 私有段） */
+function isPrivateIp(ip: string): boolean {
+  const i = ip.toLowerCase().replace(/^\[|\]$/g, '');
+  if (i === '::1' || i === '::' || i === '0.0.0.0') return true;
+  // IPv4-mapped IPv6：[::ffff:127.0.0.1] → 剥前缀后按 IPv4 规则
+  const m = i.match(/^::ffff:(.+)$/);
+  const v4 = m ? m[1] : i;
+  if (v4.includes('.')) {
+    if (/^127\./.test(v4) || /^0\.0\.0\.0$/.test(v4)) return true;
+    if (/^10\./.test(v4) || /^192\.168\./.test(v4)) return true;
+    if (/^172\.(1[6-9]|2\d|3[01])\./.test(v4)) return true;
+    if (/^169\.254\./.test(v4)) return true;
+    // 阿里云元数据端点 + CGNAT 100.64/10
+    if (/^100\.100\./.test(v4)) return true;
+    if (/^100\.(6[4-9]|[7-9]\d|1[01]\d|12[0-7])\./.test(v4)) return true;
+  }
+  // IPv6 私有段
+  if (/^fe80:/i.test(i) || /^fc00:/i.test(i) || /^fd/i.test(i)) return true;
+  if (/^f[cd][0-9a-f]{2}:/i.test(i)) return true;
   return false;
 }
 
-export function validateUrl(raw: string): { url?: string; error?: string } {
+function isBlockedHost(hostname: string): boolean {
+  let h = hostname.toLowerCase().trim();
+  // 去尾点（localhost. / 域名.）
+  h = h.replace(/\.$/, '');
+  if (h === 'localhost' || h.endsWith('.localhost')) return true;
+  // 非常规 IP 字面量：全数字但非标准点分（十进制 2130706433 / 十六进制 0x7f000001 / 八进制 0177.0.0.1）
+  if (/^[\d.]+$/.test(h) && !/^(\d{1,3}\.){3}\d{1,3}$/.test(h)) return true;
+  if (/0x/i.test(h)) return true;
+  if (/^[\d.]+$/.test(h)) {
+    if (isPrivateIp(h)) return true;
+  }
+  // 域名形式：解析后核验（在 validateUrl 中做，这里仅兜底 IPv6 字面量）
+  if (/^\[?[0-9a-f:]+\]?$/.test(h)) {
+    if (isPrivateIp(h)) return true;
+  }
+  return false;
+}
+
+export async function validateUrl(raw: string): Promise<{ url?: string; error?: string }> {
   let u: URL;
   try { u = new URL(raw); } catch { return { error: 'URL 格式不正确，请检查后重试。' }; }
   if (u.protocol !== 'http:' && u.protocol !== 'https:') return { error: '仅支持 http / https 网页。' };
   if (isBlockedHost(u.hostname)) return { error: '该地址不允许访问。' };
+  // DNS 解析核验：任一解析结果命中私网即拒（防域名解析到内网/元数据）
+  try {
+    const { lookup } = await import('dns/promises');
+    const addrs = await lookup(u.hostname, { all: true });
+    for (const a of addrs) {
+      if (isPrivateIp(a.address)) return { error: '该地址不允许访问。' };
+    }
+  } catch (e: any) {
+    if (e?.code === 'ENOTFOUND' || e?.code === 'EAI_AGAIN') {
+      return { error: '域名无法解析，请确认网址正确。' };
+    }
+    // DNS 服务异常：保守拒绝（无法核验 = 不放行）
+    return { error: '该地址暂时无法核验，请稍后再试。' };
+  }
   return { url: u.toString() };
 }
 
@@ -29,15 +72,30 @@ function cleanText(s: string): string {
   return s.replace(/\s+/g, ' ').trim();
 }
 
+async function fetchOnce(url: string, controller: AbortController): Promise<Response> {
+  return fetch(url, {
+    signal: controller.signal,
+    headers: { 'User-Agent': 'Mozilla/5.0 (compatible; AifanyiBot/1.0; +https://aifanyi.com)' },
+    redirect: 'manual',
+  });
+}
+
 export async function fetchWebPage(url: string): Promise<{ title: string; paragraphs: string[]; error?: string }> {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), 15000);
   try {
-    const res = await fetch(url, {
-      signal: controller.signal,
-      headers: { 'User-Agent': 'Mozilla/5.0 (compatible; AifanyiBot/1.0; +https://aifanyi.com)' },
-      redirect: 'follow',
-    });
+    let current = url;
+    let res = await fetchOnce(current, controller);
+    // 手动逐跳（≤5 跳）：每跳对新 Location 重新执行私网核验
+    for (let hop = 0; hop < 5 && res.status >= 300 && res.status < 400; hop++) {
+      const loc = res.headers.get('location');
+      if (!loc) break;
+      const next = new URL(loc, current).toString();
+      const v = await validateUrl(next);
+      if (v.error) return { title: '', paragraphs: [], error: v.error };
+      current = next;
+      res = await fetchOnce(current, controller);
+    }
     if (!res.ok) return { title: '', paragraphs: [], error: `网页返回 ${res.status}，可能无法访问。` };
     const ct = res.headers.get('content-type') || '';
     if (!ct.includes('text/html') && !ct.includes('application/xhtml')) {

@@ -21,10 +21,56 @@ export default async function MemePage({ params }: { params: Promise<{ slug: str
   if (!m || m.status !== 'published') notFound();
 
   const examples = (m.examples as { zh: string; en: string }[]) || [];
+  const tags = (m.tags as string[]) || [];
+  // 相关梗：同 tag 的其他词条，站内互链吃长尾流量
+  let related: { slug: string; term: string; translation: string }[] = [];
+  try {
+    if (tags.length > 0) {
+      const raw = await prisma.memeEntry.findMany({
+        where: { status: "published", tags: { hasSome: tags } },
+        orderBy: { popularity: "desc" },
+        take: 8,
+        select: { slug: true, term: true, translation: true },
+      });
+      related = raw.filter((r) => r.slug !== m.slug).slice(0, 6);
+    }
+  } catch {
+    // 相关梗查询失败不影响主内容
+  }
 
   return (
     <>
       <h1>{m.term} 用英语怎么说？</h1>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": m.term + " 用英语怎么说？" + m.term + " → " + m.translation,
+          "description": m.term + "（" + m.meaning + "）的地道英文表达是「" + m.translation + "」。含例句与使用场景，爱翻译 · AI翻译。",
+          "datePublished": m.createdAt,
+          "dateModified": m.updatedAt,
+          "inLanguage": "zh-CN",
+          "mainEntityOfPage": "https://aifanyi.com/meme/" + m.slug,
+          "author": {
+            "@type": "Organization",
+            "name": "爱翻译 aifanyi.com",
+            "url": "https://aifanyi.com/"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "爱翻译",
+            "url": "https://aifanyi.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://aifanyi.com/og-image.png",
+              "width": 1200,
+              "height": 630
+            }
+          }
+        }) }}
+      />
+
       <p style={{ color: 'var(--muted)' }}>{m.meaning}</p>
 
       <div className="translator-box" style={{ maxWidth: 'none' }}>
@@ -44,6 +90,29 @@ export default async function MemePage({ params }: { params: Promise<{ slug: str
         </>
       )}
 
+      {related.length > 0 && (
+        <>
+          <h2 className="section-title">相关梗 · 同类网络用语</h2>
+          <div className="entry-grid">
+            {related.map((r) => (
+              <a key={r.slug} className="entry-card" href={"/meme/" + r.slug}>
+                <div className="term">{r.term}</div>
+                <div className="tr">{r.translation}</div>
+              </a>
+            ))}
+          </div>
+        </>
+      )}
+
+      {tags.length > 0 && (
+        <p style={{ marginTop: 16 }}>
+          {tags.map((t) => (
+            <a key={t} className="chip" href={"/meme/tag/" + encodeURIComponent(t)} style={{ marginRight: 8 }}>
+              {"#" + t}
+            </a>
+          ))}
+        </p>
+      )}
       <p style={{ marginTop: 24, color: 'var(--muted)' }}>
         还想翻别的梗？试试首页的<a href="/" style={{ color: 'var(--accent2)' }}>翻译框</a>，或去<a href="/blindtest" style={{ color: 'var(--accent2)' }}>盲测擂台</a>看看哪家 AI 最强。
       </p>

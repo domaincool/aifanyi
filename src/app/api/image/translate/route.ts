@@ -10,6 +10,15 @@ export const maxDuration = 90;
 const MAX_SIZE = 5 * 1024 * 1024;
 const ALLOWED = new Set(['image/png', 'image/jpeg', 'image/webp', 'image/gif']);
 
+/** 魔数核验：不信任客户端 MIME（文件头 8 字节） */
+function sniffImageMagic(buf: Buffer): string | null {
+  if (buf.length >= 8 && buf[0] === 0x89 && buf[1] === 0x50 && buf[2] === 0x4e && buf[3] === 0x47) return 'image/png';
+  if (buf.length >= 3 && buf[0] === 0xff && buf[1] === 0xd8 && buf[2] === 0xff) return 'image/jpeg';
+  if (buf.length >= 4 && buf[0] === 0x47 && buf[1] === 0x49 && buf[2] === 0x46 && buf[3] === 0x38) return 'image/gif';
+  if (buf.length >= 12 && buf.toString('ascii', 0, 4) === 'RIFF' && buf.toString('ascii', 8, 12) === 'WEBP') return 'image/webp';
+  return null;
+}
+
 const deepseek = new DeepSeekProvider();
 const glm = new GlmProvider();
 
@@ -25,8 +34,8 @@ export async function POST(req: NextRequest) {
     if (!file || !file.name) {
       return NextResponse.json({ ok: false, error: '请选择图片文件。' }, { status: 400 });
     }
-    const mime = file.type || 'image/png';
-    if (!ALLOWED.has(mime)) {
+    const claimedMime = file.type || '';
+    if (!ALLOWED.has(claimedMime)) {
       return NextResponse.json({ ok: false, error: '仅支持 PNG / JPG / WebP / GIF 图片。' }, { status: 400 });
     }
     if (file.size > MAX_SIZE) {
@@ -35,6 +44,12 @@ export async function POST(req: NextRequest) {
 
     // OCR（GLM-4V-Flash）
     const buf = Buffer.from(await file.arrayBuffer());
+    // 魔数核验：拒绝伪装 MIME（如 HTML/脚本改后缀上传）
+    const sniffed = sniffImageMagic(buf);
+    if (!sniffed) {
+      return NextResponse.json({ ok: false, error: '文件内容不是有效图片，请确认后重试。' }, { status: 400 });
+    }
+    const mime = sniffed;
     const base64 = buf.toString('base64');
     const { text, error } = await ocrImage(base64, mime);
     if (error || !text) {

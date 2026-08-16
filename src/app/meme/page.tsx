@@ -81,7 +81,7 @@ export default async function MemeIndexPage({
       <div className="chips">
         <Link className={!tag ? 'chip chip-active' : 'chip'} href={href({ tag: '' })}>全部</Link>
         {tagList.slice(0, 24).map((t) => (
-          <Link key={t.tag} className={tag === t.tag ? 'chip chip-active' : 'chip'} href={href({ tag: t.tag, page: '' })}>
+          <Link key={t.tag} className={tag === t.tag ? 'chip chip-active' : 'chip'} href={'/meme/tag/' + encodeURIComponent(t.tag)}>
             {t.tag} <span className="chip-cnt">{t.cnt}</span>
           </Link>
         ))}
