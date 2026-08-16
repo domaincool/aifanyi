@@ -399,11 +399,12 @@ export async function importContent(input: {
   let imported = 0;
   let updated = 0;
 
-  let repeatedResult: ContentImportResult | null = null;
+  let repeatedResult = false;
 
   if (!dryRun) {
     await prisma.$transaction(async (tx: any) => {
-      // 占位审计行（幂等锁）：撞 @@unique([action,batchId]) = 并发同批/已完成 → 返回 repeated
+      // 占位审计行（幂等锁）：撞 @@unique([action,batchId]) = 并发同批/已完成 → repeated
+      // 注意：P2002 后事务处于 aborted，不能在同一事务内再查询（会 25P02）——只置标记，查询在事务外
       try {
         await tx.adminLog.create({
           data: {
@@ -416,13 +417,7 @@ export async function importContent(input: {
           },
         });
       } catch (e: any) {
-        if (e?.code === 'P2002') {
-          const prevLog = await tx.adminLog.findFirst({ where: { action, batchId }, orderBy: { createdAt: 'desc' } });
-          const r = (prevLog?.result as ContentImportResult | null) ?? null;
-          if (r) { repeatedResult = { ...r, repeated: true }; return; }
-          repeatedResult = { ok: true, batchId, action, imported: 0, updated: 0, skipped: 0, conflicts: [], created: [], repeated: true };
-          return;
-        }
+        if (e?.code === 'P2002') { repeatedResult = true; return; }
         throw e;
       }
       // 更新（P1-2B：menu 定位 country+dish；recipe 定位 slug）
@@ -464,6 +459,13 @@ export async function importContent(input: {
         data: { result: { status: 'done', imported, updated, skipped: skipped.length, conflicts: conflicts.length } },
       });
     });
+    if (repeatedResult) {
+      // 事务外查旧结果（事务内查询会触发 25P02）
+      const prevLog = await prisma.adminLog.findFirst({ where: { action, batchId }, orderBy: { createdAt: 'desc' } });
+      const r = (prevLog?.result as ContentImportResult | null) ?? null;
+      if (r) return { ...r, repeated: true };
+      return { ok: true, batchId, action, imported: 0, updated: 0, skipped: 0, conflicts: [], created: [], repeated: true };
+    }
   }
 
   const result: ContentImportResult = {
@@ -477,8 +479,6 @@ export async function importContent(input: {
     conflicts,
     created,
   };
-
-  if (repeatedResult) return repeatedResult;
 
   return result;
 }
