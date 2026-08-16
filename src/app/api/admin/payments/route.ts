@@ -112,6 +112,9 @@ async function handleRefund(req: NextRequest, identity: OpsIdentity, body: any):
   const orderId = typeof body.orderId === 'string' && body.orderId.trim() ? body.orderId.trim() : '';
 
   if (!userId && !email) return NextResponse.json({ ok: false, error: '缺少 userId 或 email' }, { status: 400 });
+  if (userId.length > 64 || email.length > 254 || reason.length > 200 || jobId.length > 64 || orderId.length > 64) {
+    return NextResponse.json({ ok: false, error: '参数长度超限（userId≤64 / email≤254 / reason≤200 / jobId≤64 / orderId≤64）' }, { status: 400 });
+  }
   if (!Number.isFinite(amount) || amount < 1 || amount > MAX_REFUND) {
     return NextResponse.json({ ok: false, error: `退款积分必须是 1~${MAX_REFUND} 的整数` }, { status: 400 });
   }
@@ -150,15 +153,20 @@ async function handleRefund(req: NextRequest, identity: OpsIdentity, body: any):
   });
   if (!r.ok) return NextResponse.json({ ok: false, error: '退款失败：' + r.error }, { status: 400 });
 
-  await logAdminAction({
-    identity,
-    action: 'credit_refund',
-    targetId: user.id,
-    batchId: null, // 同一用户可多次退款；AdminLog [action,batchId] 唯一，batchId 置 null 避免冲突
-    params: { amount, reason, jobId: jobId || null, orderId: orderId || null },
-    result: { refunded: r.refunded },
-    ip: clientIp(req),
-  });
+  // 审计失败不阻断退款（否则 500 → 重试 → 新幂等键 → 重复退款）；失败仅记录日志，退款本身已幂等完成
+  try {
+    await logAdminAction({
+      identity,
+      action: 'credit_refund',
+      targetId: user.id,
+      batchId: null, // 同一用户可多次退款；AdminLog [action,batchId] 唯一，batchId 置 null 避免冲突
+      params: { amount, reason, jobId: jobId || null, orderId: orderId || null },
+      result: { refunded: r.refunded },
+      ip: clientIp(req),
+    });
+  } catch (e: any) {
+    console.error('[payments] refund audit log failed:', e?.message || e);
+  }
 
   const after = await getBalance(user.id);
   return NextResponse.json({ ok: true, refunded: r.refunded, balance: after });
@@ -181,6 +189,9 @@ async function handleCompleteOrder(req: NextRequest, identity: OpsIdentity, body
   const note = typeof body.note === 'string' ? body.note.trim() : '';
 
   if (!orderId && !providerOrderId) return NextResponse.json({ ok: false, error: '缺少订单号或渠道订单号' }, { status: 400 });
+  if (orderId.length > 64 || providerOrderId.length > 128 || note.length > 200) {
+    return NextResponse.json({ ok: false, error: '参数长度超限（orderId≤64 / providerOrderId≤128 / note≤200）' }, { status: 400 });
+  }
   if (!providerOrderId) return NextResponse.json({ ok: false, error: '必须填写渠道订单号（用于核实已收款）' }, { status: 400 });
   if (note.length < 2) return NextResponse.json({ ok: false, error: '必须填写补单说明（至少 2 字）' }, { status: 400 });
   if (body.confirmed !== true) return NextResponse.json({ ok: false, error: '请先勾选「已核实渠道收款」' }, { status: 400 });
