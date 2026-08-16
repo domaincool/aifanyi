@@ -45,7 +45,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 }
 
 export default async function RecipePage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
+  const { slug: rawSlug } = await params;
+  const slug = safeDecode(rawSlug);
   const r = await prisma.recipeEntry.findFirst({ where: { slug } });
   if (!r || r.status !== 'published') notFound();
 

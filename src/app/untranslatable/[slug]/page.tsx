@@ -26,7 +26,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 }
 
 export default async function UntranslatableEntryPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
+  const { slug: rawSlug } = await params;
+  const slug = safeDecode(rawSlug);
   const e = await prisma.expressionEntry.findFirst({ where: { slug, type: 'untranslatable' } });
   if (!e || e.status !== 'published') notFound();
 

@@ -29,7 +29,8 @@ export async function generateMetadata({ params }: { params: Promise<{ country: 
 }
 
 export default async function MenuEntryPage({ params }: { params: Promise<{ country: string; slug: string }> }) {
-  const { country, slug } = await params;
+  const { country, slug: rawSlug } = await params;
+  const slug = safeDecode(rawSlug);
   const m = await prisma.menuEntry.findFirst({ where: { country, slug } });
   if (!m || m.status !== 'published') notFound();
 

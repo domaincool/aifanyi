@@ -30,7 +30,8 @@ export async function generateMetadata({ params }: { params: Promise<{ country: 
 }
 
 export default async function TravelScenePage({ params }: { params: Promise<{ country: string; slug: string }> }) {
-  const { country, slug } = await params;
+  const { country, slug: rawSlug } = await params;
+  const slug = safeDecode(rawSlug);
   const s = await prisma.sceneEntry.findFirst({ where: { country, slug } });
   if (!s || s.status !== 'published') notFound();
 
