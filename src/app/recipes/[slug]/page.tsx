@@ -52,6 +52,7 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
 
   const ingredients = (r.ingredients as unknown as Ingredient[]) || [];
   const steps = (r.steps as unknown as Step[]) || [];
+  const stepText = (s: unknown): string => (typeof s === 'string' ? s : (s as { text?: string } | null)?.text ?? '');
   const vocab = (r.vocab as unknown as Vocab[] | null) || null;
   const misTranslated = (r.misTranslated as unknown as { wrong: string; right: string; why?: string }[] | null) || null;
 
@@ -89,7 +90,7 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
           "cookTime": toIsoDuration(r.cookTime),
           "recipeYield": r.servings ? `${r.servings}` : undefined,
           "recipeIngredient": ingredients.length > 0 ? ingredients.map((i) => (i.amount ? `${i.amount} ${i.name}` : i.name)) : undefined,
-          "recipeInstructions": steps.length > 0 ? steps.map((s, i) => ({ "@type": "HowToStep", "position": i + 1, "text": s.text })) : undefined,
+          "recipeInstructions": steps.length > 0 ? steps.map((s, i) => ({ "@type": "HowToStep", "position": i + 1, "text": stepText(s) })) : undefined,
           "image": "https://aifanyi.com/og-image.png",
           "datePublished": r.createdAt,
           "dateModified": r.updatedAt,
@@ -144,7 +145,7 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
           {steps.map((s, idx) => (
             <div key={idx} style={{ marginTop: 5, display: 'flex', gap: 8 }}>
               <span style={{ fontWeight: 700, color: 'var(--accent2)' }}>{idx + 1}.</span>
-              <span>{s.text}</span>
+              <span>{stepText(s)}</span>
             </div>
           ))}
         </div>
