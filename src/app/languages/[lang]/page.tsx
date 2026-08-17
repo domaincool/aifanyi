@@ -16,6 +16,14 @@ const LANG_SLUGS: Record<
     intro: '越南语（Tiếng Việt）是越南的官方语言，使用以拉丁字母为基础的国语字书写系统，声调丰富。',
     section: '越南',
   },
+  spanish: {
+    country: 'spain',
+    lang: 'es',
+    name: '西班牙语',
+    native: 'Español',
+    intro: '西班牙语（Español）是全球第二大母语，西班牙及拉丁美洲 20 余国官方语言，使用拉丁字母书写。',
+    section: '西班牙',
+  },
   turkish: {
     country: 'turkey',
     lang: 'tr',
