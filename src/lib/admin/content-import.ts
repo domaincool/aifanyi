@@ -48,6 +48,7 @@ export interface ContentImportItem {
   phrases?: unknown[];
   tips?: unknown[];
   cautions?: unknown[];
+  dialogue?: unknown[]; // [{text, zh}] 实用对话
   related?: unknown[];
   dish?: string;
   romanized?: string;
@@ -154,7 +155,7 @@ function buildData(it: ContentImportItem): any {
       country: it.country, lang: it.language, scene: it.scene,
       kind: it.kind || 'travel', title: it.title, intro: it.intro,
       phrases: (it.phrases as any) || [],
-      tips: it.tips as any, cautions: it.cautions as any, related: it.related as any,
+      tips: it.tips as any, cautions: it.cautions as any, dialogue: it.dialogue as any, related: it.related as any,
     };
   }
   if (t === 'menu') {
@@ -195,7 +196,7 @@ function buildData(it: ContentImportItem): any {
 function buildUpdateData(it: ContentImportItem): any {
   const data: any = buildData(it);
   delete data.slug;
-  const jsonFields = ['tips', 'cautions', 'related', 'pairings', 'multiLang', 'misTranslated', 'vocab', 'examples'];
+  const jsonFields = ['tips', 'cautions', 'dialogue', 'related', 'pairings', 'multiLang', 'misTranslated', 'vocab', 'examples'];
   for (const f of jsonFields) {
     if (data[f] === null) data[f] = Prisma.JsonNull;
     else if (data[f] === undefined) delete data[f];

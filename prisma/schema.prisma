@@ -867,6 +867,7 @@ model SceneEntry {
   phrases    Json // [{native, zh, pronounce, polite}] 表达表数组（必填）
   tips       Json? // 提示
   cautions   Json? // 注意事项（模板需求）
+  dialogue   Json? // 实用对话（[{text, zh}]）
   related    Json? // 运营策展内链（[{slug, title}]，满足 ≥3 出站内链铁律）
   popularity Int      @default(0)
   status     String   @default("published")

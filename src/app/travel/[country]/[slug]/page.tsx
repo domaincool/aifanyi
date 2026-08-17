@@ -38,6 +38,7 @@ export default async function TravelScenePage({ params }: { params: Promise<{ co
   const phrases = (s.phrases as unknown as Phrase[]) || [];
   const tips = (s.tips as unknown as Tip[] | null) || null;
   const cautions = (s.cautions as unknown as string[] | null) || null;
+  const dialogue = (s.dialogue as unknown as { text: string; zh: string }[] | null) || null;
   const relatedSlugs = (s.related as unknown as string[] | null) || null;
 
   let related: { slug: string; title: string }[] = [];
@@ -101,14 +102,30 @@ export default async function TravelScenePage({ params }: { params: Promise<{ co
         </div>
       )}
 
+      {dialogue && dialogue.length > 0 && (
+        <div className="result" style={{ margin: '10px 0' }}>
+          <div style={{ fontSize: 12.5, color: 'var(--muted)' }}>实用对话</div>
+          {dialogue.map((d, i) => (
+            <div key={i} style={{ marginTop: 6 }}>
+              <div>{d.text}</div>
+              <div style={{ color: 'var(--muted)', fontSize: 13 }}>{d.zh}</div>
+            </div>
+          ))}
+        </div>
+      )}
+
       {tips && tips.length > 0 && (
         <div className="result" style={{ margin: '10px 0' }}>
           <div style={{ fontSize: 12.5, color: 'var(--muted)' }}>小贴士</div>
-          {tips.map((t, i) => (
-            <div key={i} style={{ marginTop: 4 }}>
-              <div>{t.zh}{t.en ? `（${t.en}）` : ''}</div>
-            </div>
-          ))}
+          {tips.map((t: any, i: number) => {
+            const tipText = typeof t === 'string' ? t : (t?.zh ?? '');
+            const tipEn = typeof t === 'string' ? '' : (t?.en ?? '');
+            return (
+              <div key={i} style={{ marginTop: 4 }}>
+                <div>{tipText}{tipEn ? `（${tipEn}）` : ''}</div>
+              </div>
+            );
+          })}
         </div>
       )}
 
