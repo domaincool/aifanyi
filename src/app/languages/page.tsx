@@ -6,7 +6,7 @@ export const metadata = {
 };
 
 export default function LanguagesIndexPage() {
-  const cards = [{"href":"/idioms","title":"成语谚语","desc":"中文成语的地道外文表达"},{"href":"/meme","title":"网络用语","desc":"各国网络热梗翻译"},{"href":"/tools","title":"全部工具","desc":"文本 · 语音 · 图片 · 文档翻译"}];
+  const cards = [{"href":"/languages/vietnamese","title":"越南语","desc":"Tiếng Việt · 越南旅行常用语与菜单词汇"},{"href":"/languages/turkish","title":"土耳其语","desc":"Türkçe · 土耳其旅行常用语与菜单词汇"},{"href":"/idioms","title":"成语谚语","desc":"中文成语的地道外文表达"},{"href":"/meme","title":"网络用语","desc":"各国网络热梗翻译"},{"href":"/tools","title":"全部工具","desc":"文本 · 语音 · 图片 · 文档翻译"}];
   return (
     <div>
       <section className="hero">
