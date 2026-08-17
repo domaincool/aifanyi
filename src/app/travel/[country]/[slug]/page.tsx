@@ -38,7 +38,7 @@ export default async function TravelScenePage({ params }: { params: Promise<{ co
   const phrases = (s.phrases as unknown as Phrase[]) || [];
   const tips = (s.tips as unknown as Tip[] | null) || null;
   const cautions = (s.cautions as unknown as string[] | null) || null;
-  const dialogue = (s.dialogue as unknown as { text: string; zh: string }[] | null) || null;
+  const dialogue = (s.dialogue as unknown as { speaker?: string; text: string; zh: string }[] | null) || null;
   const relatedSlugs = (s.related as unknown as string[] | null) || null;
 
   let related: { slug: string; title: string }[] = [];
@@ -105,10 +105,10 @@ export default async function TravelScenePage({ params }: { params: Promise<{ co
       {dialogue && dialogue.length > 0 && (
         <div className="result" style={{ margin: '10px 0' }}>
           <div style={{ fontSize: 12.5, color: 'var(--muted)' }}>实用对话</div>
-          {dialogue.map((d, i) => (
+          {dialogue.map((d: any, i: number) => (
             <div key={i} style={{ marginTop: 6 }}>
-              <div>{d.text}</div>
-              <div style={{ color: 'var(--muted)', fontSize: 13 }}>{d.zh}</div>
+              <div>{d.speaker ? d.speaker + '：' : ''}{d.text}</div>
+              <div style={{ color: 'var(--muted)', fontSize: 13 }}>{d.speaker ? d.speaker + '：' : ''}{d.zh}</div>
             </div>
           ))}
         </div>
