@@ -52,9 +52,10 @@ export default function ClientLayout({ children, serverUser }: { children: React
                   <span className="mega-ico">🍜</span>
                   <span className="mega-body"><b>全球美食</b><small>菜谱 · 菜单 · 食材</small></span>
                 </a>
-                <div className="mega-links">
-                  <a href="/menu">菜单词典</a>·<span className="mega-soon">食材词（即将上线）</span>
-                </div>
+                <a role="menuitem" className="mega-item" href="/menu">
+                  <span className="mega-ico">📖</span>
+                  <span className="mega-body"><b>菜单词典</b><small>各国菜单菜名翻译</small></span>
+                </a>
                 <a role="menuitem" className="mega-item" href="/travel">
                   <span className="mega-ico">✈️</span>
                   <span className="mega-body"><b>旅行语言</b><small>机场 · 酒店 · 餐厅 · 购物</small></span>
@@ -68,7 +69,7 @@ export default function ClientLayout({ children, serverUser }: { children: React
                   <span className="mega-body"><b>词汇与表达</b><small>Meme · 成语 · 俚语 · 难翻译词</small></span>
                 </a>
                 <div className="mega-links">
-                  <a href="/meme">网络用语</a>·<a href="/idioms">成语谚语</a>·<a href="/untranslatable">难翻译词</a>·<span className="mega-soon">俚语（即将上线）</span>
+                  <a href="/meme">网络用语</a>·<a href="/idioms">成语谚语</a>·<a href="/untranslatable">难翻译词</a>
                 </div>
                 <a role="menuitem" className="mega-item" href="/life">
                   <span className="mega-ico">🏠</span>
@@ -79,7 +80,7 @@ export default function ClientLayout({ children, serverUser }: { children: React
                   <span className="mega-body"><b>语言与文化</b><small>语言冷知识 · 文化差异 · 词源</small></span>
                 </a>
                 <div className="mega-links">
-                  <a href="/blindtest">AI 翻译擂台</a>·<span className="mega-soon">冷知识（即将上线）</span>
+                  <a href="/blindtest">AI 翻译擂台</a>
                 </div>
               </div>
             </div>
@@ -127,6 +128,7 @@ export default function ClientLayout({ children, serverUser }: { children: React
             <a className="mob-link" href="/blindtest" onClick={() => setMobileOpen(false)}>AI翻译擂台</a>
             <div className="mob-group">语言与世界</div>
             <a className="mob-link" href="/recipes" onClick={() => setMobileOpen(false)}>🍜 全球美食 <span className="mob-sub">菜谱 · 菜单</span></a>
+            <a className="mob-link" href="/menu" onClick={() => setMobileOpen(false)}>📖 菜单词典 <span className="mob-sub">各国菜单菜名翻译</span></a>
             <a className="mob-link" href="/travel" onClick={() => setMobileOpen(false)}>✈️ 旅行语言 <span className="mob-sub">机场 · 酒店 · 餐厅</span></a>
             <a className="mob-link" href="/languages" onClick={() => setMobileOpen(false)}>🌍 世界语言</a>
             <a className="mob-link" href="/expressions" onClick={() => setMobileOpen(false)}>💬 词汇与表达</a>

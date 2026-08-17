@@ -21,7 +21,7 @@ interface Tip { zh: string; en?: string }
 export async function generateMetadata({ params }: { params: Promise<{ country: string; slug: string }> }): Promise<Metadata> {
   const { country, slug: rawSlug } = await params;
   const slug = safeDecode(rawSlug);
-  const s = await prisma.sceneEntry.findFirst({ where: { country, slug, kind: 'travel' } }).catch(() => null);
+  const s = await prisma.sceneEntry.findFirst({ where: { country, slug: { in: [slug, country + '-' + slug] }, kind: 'travel' } }).catch(() => null);
   if (!s || s.status !== 'published') return { title: '旅行语言 | 爱翻译 aifanyi.com' };
   return {
     title: `${s.title} · ${countryName(country)}旅行常用语 | 爱翻译`,
@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: { params: Promise<{ country: 
 export default async function TravelScenePage({ params }: { params: Promise<{ country: string; slug: string }> }) {
   const { country, slug: rawSlug } = await params;
   const slug = safeDecode(rawSlug);
-  const s = await prisma.sceneEntry.findFirst({ where: { country, slug, kind: 'travel' } });
+  const s = await prisma.sceneEntry.findFirst({ where: { country, slug: { in: [slug, country + '-' + slug] }, kind: 'travel' } });
   if (!s || s.status !== 'published') notFound();
 
   const phrases = (s.phrases as unknown as Phrase[]) || [];
