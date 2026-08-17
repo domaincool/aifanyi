@@ -38,6 +38,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE}/culture`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${BASE}/life`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${BASE}/languages`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${BASE}/languages/vietnamese`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${BASE}/languages/turkish`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${BASE}/travel`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${BASE}/recipes`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${BASE}/expressions`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
