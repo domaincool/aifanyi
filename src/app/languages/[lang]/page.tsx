@@ -55,10 +55,18 @@ export default async function LanguageDetailPage({ params }: { params: Promise<{
     );
   }
 
-  const [travel, menus, exprs] = await Promise.all([
+  const [travel, life, menus, exprs] = await Promise.all([
     prisma.sceneEntry
       .findMany({
         where: { status: 'published', kind: 'travel', country: cfg.country },
+        orderBy: [{ popularity: 'desc' }, { title: 'asc' }],
+        take: 12,
+        select: { slug: true, title: true, intro: true },
+      })
+      .catch(() => []),
+    prisma.sceneEntry
+      .findMany({
+        where: { status: 'published', kind: 'life', country: cfg.country },
         orderBy: [{ popularity: 'desc' }, { title: 'asc' }],
         take: 12,
         select: { slug: true, title: true, intro: true },
@@ -82,7 +90,7 @@ export default async function LanguageDetailPage({ params }: { params: Promise<{
       .catch(() => []),
   ]);
 
-  const empty = travel.length + menus.length + exprs.length === 0;
+  const empty = travel.length + life.length + menus.length + exprs.length === 0;
 
   return (
     <div>
@@ -106,6 +114,20 @@ export default async function LanguageDetailPage({ params }: { params: Promise<{
               <div className="entry-grid">
                 {travel.map((s) => (
                   <Link key={s.slug} className="entry-card" href={`/travel/${cfg.country}/${s.slug}`}>
+                    <div className="term">{s.title}</div>
+                    <div className="mn">{s.intro}</div>
+                  </Link>
+                ))}
+              </div>
+            </>
+          )}
+
+          {life.length > 0 && (
+            <>
+              <h2 className="section-title">海外生活（{life.length}）</h2>
+              <div className="entry-grid">
+                {life.map((s) => (
+                  <Link key={s.slug} className="entry-card" href={`/life/${cfg.country}/${s.slug}`}>
                     <div className="term">{s.title}</div>
                     <div className="mn">{s.intro}</div>
                   </Link>
