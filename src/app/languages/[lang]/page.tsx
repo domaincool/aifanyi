@@ -83,8 +83,8 @@ export default async function LanguageDetailPage({ params }: { params: Promise<{
     prisma.expressionEntry
       .findMany({
         where: { status: 'published', lang: cfg.lang },
-        orderBy: { popularity: 'desc' },
-        take: 12,
+        orderBy: [{ popularity: 'desc' }, { term: 'asc' }],
+        take: 30,
         select: { slug: true, term: true, translation: true, type: true },
       })
       .catch(() => []),
