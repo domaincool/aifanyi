@@ -135,7 +135,7 @@ export default async function LifeIndexPage({
           <h2 className="section-title">已收录生活场景（{total}）</h2>
           <div className="entry-grid">
             {items.map((s) => (
-              <Link key={s.slug} className="entry-card" href={`/travel/${s.country}/${s.slug}`}>
+              <Link key={s.slug} className="entry-card" href={`/life/${s.country}/${s.slug}`}>
                 <div className="term">{s.title}</div>
                 <div className="tr">{countryName(s.country)}</div>
                 <div className="mn">{s.intro}</div>
