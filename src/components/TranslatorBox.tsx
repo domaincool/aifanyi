@@ -14,6 +14,13 @@ const LANG_LABEL: Record<string, string> = {
   ar: 'العربية',
   pt: 'Português',
   ko: '한국어',
+  th: 'ไทย',
+  it: 'Italiano',
+  vi: 'Tiếng Việt',
+  tr: 'Türkçe',
+  id: 'Bahasa Indonesia',
+  el: 'Ελληνικά',
+  nl: 'Nederlands',
 };
 /** 轻量语言检测（启发式字符集判定，零依赖零成本）
  * 返回 'zh'|'en'|'ja'|'ko'|'ru'|'ar' 或 null（无法识别/文本过短）
@@ -53,7 +60,29 @@ const TTS_LANG: Record<string, string> = {
   ar: 'ar-SA',
   pt: 'pt-PT',
   ko: 'ko-KR',
+  th: 'th-TH',
+  it: 'it-IT',
+  vi: 'vi-VN',
+  tr: 'tr-TR',
+  id: 'id-ID',
+  el: 'el-GR',
+  nl: 'nl-NL',
 };
+
+const LANG_GROUPS: { label: string; items: { code: string; name: string }[] }[] = [
+  { label: '常用', items: [
+    { code: 'zh', name: '中文' }, { code: 'en', name: '英语' }, { code: 'ja', name: '日语' },
+    { code: 'ko', name: '韩语' }, { code: 'fr', name: '法语' }, { code: 'de', name: '德语' },
+  ]},
+  { label: '欧洲', items: [
+    { code: 'es', name: '西班牙语' }, { code: 'it', name: '意大利语' }, { code: 'pt', name: '葡萄牙语' },
+    { code: 'ru', name: '俄语' }, { code: 'nl', name: '荷兰语' }, { code: 'el', name: '希腊语' },
+  ]},
+  { label: '亚洲', items: [
+    { code: 'th', name: '泰语' }, { code: 'vi', name: '越南语' }, { code: 'tr', name: '土耳其语' },
+    { code: 'ar', name: '阿拉伯语' }, { code: 'id', name: '印尼语' },
+  ]},
+];
 
 export default function TranslatorBox({
   defaultSourceLang = 'auto',
@@ -345,16 +374,13 @@ export default function TranslatorBox({
       <div className="row">
         <select value={sourceLang} onChange={(e) => setSourceLang(e.target.value)}>
           <option value="auto">自动检测</option>
-          <option value="zh">中文</option>
-          <option value="en">英语</option>
-          <option value="ja">日语</option>
-          <option value="de">德语</option>
-          <option value="es">西班牙语</option>
-          <option value="fr">法语</option>
-          <option value="ru">俄语</option>
-          <option value="ar">阿拉伯语</option>
-          <option value="pt">葡萄牙语</option>
-          <option value="ko">韩语</option>
+          {LANG_GROUPS.map((g) => (
+            <optgroup key={g.label} label={g.label}>
+              {g.items.map((it) => (
+                <option key={it.code} value={it.code}>{it.name}</option>
+              ))}
+            </optgroup>
+          ))}
         </select>
         <button
           type="button"
@@ -381,16 +407,13 @@ export default function TranslatorBox({
           ⇄
         </button>
         <select value={targetLang} onChange={(e) => setTargetLang(e.target.value)}>
-          <option value="en">英语</option>
-          <option value="zh">中文</option>
-          <option value="ja">日语</option>
-          <option value="de">德语</option>
-          <option value="es">西班牙语</option>
-          <option value="fr">法语</option>
-          <option value="ru">俄语</option>
-          <option value="ar">阿拉伯语</option>
-          <option value="pt">葡萄牙语</option>
-          <option value="ko">韩语</option>
+          {LANG_GROUPS.map((g) => (
+            <optgroup key={g.label} label={g.label}>
+              {g.items.map((it) => (
+                <option key={it.code} value={it.code}>{it.name}</option>
+              ))}
+            </optgroup>
+          ))}
         </select>
         <select value={scenario} onChange={(e) => setScenario(e.target.value)}>
           <option value="auto">AI 自动判断</option>

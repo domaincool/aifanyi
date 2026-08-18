@@ -14,6 +14,9 @@ import { hashText, getCache, setCache } from './cache';
  * - 预算超限 → 自动降级 GLM 免费档
  * - 缓存命中 → 零成本直接返回
  */
+const SMALL_LANGS = new Set(['th', 'it', 'vi', 'tr', 'id', 'el', 'nl']);
+const isSmallLang = (code: string) => SMALL_LANGS.has(code);
+
 export class TranslatorRouter {
   private providers: Map<string, TranslateProvider> = new Map();
   private monthCostUsd = 0;
@@ -57,6 +60,9 @@ export class TranslatorRouter {
       candidates = ['glm']; // 预算超限，强制免费档
     } else if (req.scenario === 'ecommerce') {
       candidates = ['deepseek', 'google'];
+    } else if (isSmallLang(req.sourceLang) || isSmallLang(req.targetLang)) {
+      // 小语种：GLM 质量不可靠（实测 th/tr/el 跑偏/夹中文/输出英文），Google 兜底优先于 GLM
+      candidates = ['deepseek', 'google', 'glm'];
     } else {
       candidates = ['deepseek', 'glm'];
     }

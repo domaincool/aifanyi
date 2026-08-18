@@ -17,6 +17,13 @@ const LANG_MAP: Record<string, string> = {
   de: 'de',
   es: 'es',
   fr: 'fr',
+  th: 'th',
+  it: 'it',
+  vi: 'vi',
+  tr: 'tr',
+  id: 'id',
+  el: 'el',
+  nl: 'nl',
 };
 
 export class GoogleTranslateProvider implements TranslateProvider {
