@@ -23,12 +23,12 @@ const LANG_LABEL: Record<string, string> = {
   nl: 'Nederlands',
 };
 /** 轻量语言检测（启发式字符集判定，零依赖零成本）
- * 返回 'zh'|'en'|'ja'|'ko'|'ru'|'ar' 或 null（无法识别/文本过短）
+ * 返回 'zh'|'en'|'ja'|'ko'|'ru'|'ar'|'th'|'el'|'vi' 或 null（无法识别/文本过短）
  */
 function detectLang(s: string): string | null {
   const t = s.trim();
   if (t.length < 2) return null; // 过短无法可靠判定
-  let han = 0, kana = 0, hangul = 0, cyrillic = 0, arabic = 0, latin = 0;
+  let han = 0, kana = 0, hangul = 0, cyrillic = 0, arabic = 0, latin = 0, thai = 0, greek = 0, viet = 0;
   for (const ch of t) {
     const c = ch.codePointAt(0)!;
     if (c >= 0x4e00 && c <= 0x9fff) han++;
@@ -36,15 +36,21 @@ function detectLang(s: string): string | null {
     else if (c >= 0xac00 && c <= 0xd7af) hangul++;
     else if (c >= 0x0400 && c <= 0x04ff) cyrillic++;
     else if (c >= 0x0600 && c <= 0x06ff) arabic++;
+    else if (c >= 0x0e00 && c <= 0x0e7f) thai++; // 泰文
+    else if (c >= 0x0370 && c <= 0x03ff) greek++; // 希腊文
+    else if (c >= 0x1e00 && c <= 0x1eff) viet++; // 拉丁扩展附加（越南语 ế/ồ/ạ 等）
     else if (/[a-zA-Z]/.test(ch)) latin++;
   }
-  const total = han + kana + hangul + cyrillic + arabic + latin;
+  const total = han + kana + hangul + cyrillic + arabic + thai + greek + viet + latin;
   if (total === 0) return null; // 纯符号/数字
   if (kana > 0) return 'ja'; // 含假名 → 日语（日语文本常含汉字+假名，优先判）
   if (han > 0 && hangul === 0) return 'zh';
   if (hangul > 0) return 'ko';
   if (cyrillic > 0) return 'ru';
   if (arabic > 0) return 'ar';
+  if (thai > 0) return 'th'; // 泰文独特字符集，优先度高
+  if (greek > 0) return 'el'; // 希腊文独特字符集，优先度高
+  if (viet > 0) return 'vi'; // 拉丁扩展附加字符 → 越南语
   if (latin > 0) return 'en'; // 拉丁字母 → 英语（德法西葡等归英，可手动覆盖）
   return null;
 }

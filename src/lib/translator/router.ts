@@ -58,11 +58,11 @@ export class TranslatorRouter {
     let candidates: string[];
     if (this.overBudget()) {
       candidates = ['glm']; // 预算超限，强制免费档
-    } else if (req.scenario === 'ecommerce') {
-      candidates = ['deepseek', 'google'];
     } else if (isSmallLang(req.sourceLang) || isSmallLang(req.targetLang)) {
       // 小语种：GLM 质量不可靠（实测 th/tr/el 跑偏/夹中文/输出英文），Google 兜底优先于 GLM
       candidates = ['deepseek', 'google', 'glm'];
+    } else if (req.scenario === 'ecommerce') {
+      candidates = ['deepseek', 'google'];
     } else {
       candidates = ['deepseek', 'glm'];
     }
