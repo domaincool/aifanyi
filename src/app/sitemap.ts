@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { prisma } from '@/lib/db';
+import { TRANSLATE_PAIRS } from '@/lib/translate-pairs';
 
 // 动态生成 sitemap：每次请求从数据库读取词条，加新词条自动出现在地图里
 export const revalidate = 300;
@@ -12,15 +13,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: BASE, lastModified: now, changeFrequency: 'daily', priority: 1 },
     { url: `${BASE}/tools`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
   { url: `${BASE}/solutions`, lastModified: now, changeFrequency: 'weekly', priority: 0.7 },
-    { url: `${BASE}/translate/english-to-chinese`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${BASE}/translate/chinese-to-english`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${BASE}/translate/japanese-to-chinese`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${BASE}/translate/korean-to-chinese`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${BASE}/translate/chinese-to-japanese`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${BASE}/translate/chinese-to-korean`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${BASE}/translate/french-to-chinese`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${BASE}/translate/german-to-chinese`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${BASE}/translate/russian-to-chinese`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
+    ...TRANSLATE_PAIRS.map((p) => ({ url: `${BASE}/translate/${p.slug}`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.8 })),
     { url: `${BASE}/tools/pdf-translator`, lastModified: now, changeFrequency: 'weekly', priority: 0.7 },
     { url: `${BASE}/tools/subtitle-translator`, lastModified: now, changeFrequency: 'weekly', priority: 0.7 },
     { url: `${BASE}/tools/ai-polish`, lastModified: now, changeFrequency: 'weekly', priority: 0.7 },
