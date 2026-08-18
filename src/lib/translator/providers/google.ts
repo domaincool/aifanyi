@@ -24,6 +24,8 @@ const LANG_MAP: Record<string, string> = {
   id: 'id',
   el: 'el',
   nl: 'nl',
+  hi: 'hi',
+  pl: 'pl',
 };
 
 export class GoogleTranslateProvider implements TranslateProvider {

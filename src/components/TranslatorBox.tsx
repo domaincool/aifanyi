@@ -21,6 +21,8 @@ const LANG_LABEL: Record<string, string> = {
   id: 'Bahasa Indonesia',
   el: 'Ελληνικά',
   nl: 'Nederlands',
+  hi: 'हिन्दी',
+  pl: 'Polski',
 };
 /** 轻量语言检测（启发式字符集判定，零依赖零成本）
  * 返回 'zh'|'en'|'ja'|'ko'|'ru'|'ar'|'th'|'el'|'vi' 或 null（无法识别/文本过短）
@@ -28,7 +30,7 @@ const LANG_LABEL: Record<string, string> = {
 function detectLang(s: string): string | null {
   const t = s.trim();
   if (t.length < 2) return null; // 过短无法可靠判定
-  let han = 0, kana = 0, hangul = 0, cyrillic = 0, arabic = 0, latin = 0, thai = 0, greek = 0, viet = 0;
+  let han = 0, kana = 0, hangul = 0, cyrillic = 0, arabic = 0, latin = 0, thai = 0, greek = 0, viet = 0, devanagari = 0;
   for (const ch of t) {
     const c = ch.codePointAt(0)!;
     if (c >= 0x4e00 && c <= 0x9fff) han++;
@@ -39,9 +41,10 @@ function detectLang(s: string): string | null {
     else if (c >= 0x0e00 && c <= 0x0e7f) thai++; // 泰文
     else if (c >= 0x0370 && c <= 0x03ff) greek++; // 希腊文
     else if (c >= 0x1e00 && c <= 0x1eff) viet++; // 拉丁扩展附加（越南语 ế/ồ/ạ 等）
+    else if (c >= 0x0900 && c <= 0x097f) devanagari++; // 天城文（印地语）
     else if (/[a-zA-Z]/.test(ch)) latin++;
   }
-  const total = han + kana + hangul + cyrillic + arabic + thai + greek + viet + latin;
+  const total = han + kana + hangul + cyrillic + arabic + thai + greek + viet + devanagari + latin;
   if (total === 0) return null; // 纯符号/数字
   if (kana > 0) return 'ja'; // 含假名 → 日语（日语文本常含汉字+假名，优先判）
   if (han > 0 && hangul === 0) return 'zh';
@@ -50,8 +53,9 @@ function detectLang(s: string): string | null {
   if (arabic > 0) return 'ar';
   if (thai > 0) return 'th'; // 泰文独特字符集，优先度高
   if (greek > 0) return 'el'; // 希腊文独特字符集，优先度高
+  if (devanagari > 0) return 'hi'; // 天城文 → 印地语
   if (viet > 0) return 'vi'; // 拉丁扩展附加字符 → 越南语
-  if (latin > 0) return 'en'; // 拉丁字母 → 英语（德法西葡等归英，可手动覆盖）
+  if (latin > 0) return 'en'; // 拉丁字母 → 英语（德法西葡波等归英，可手动覆盖）
   return null;
 }
 
@@ -73,6 +77,8 @@ const TTS_LANG: Record<string, string> = {
   id: 'id-ID',
   el: 'el-GR',
   nl: 'nl-NL',
+  hi: 'hi-IN',
+  pl: 'pl-PL',
 };
 
 const LANG_GROUPS: { label: string; items: { code: string; name: string }[] }[] = [
@@ -82,11 +88,11 @@ const LANG_GROUPS: { label: string; items: { code: string; name: string }[] }[] 
   ]},
   { label: '欧洲', items: [
     { code: 'es', name: '西班牙语' }, { code: 'it', name: '意大利语' }, { code: 'pt', name: '葡萄牙语' },
-    { code: 'ru', name: '俄语' }, { code: 'nl', name: '荷兰语' }, { code: 'el', name: '希腊语' },
+    { code: 'ru', name: '俄语' }, { code: 'nl', name: '荷兰语' }, { code: 'el', name: '希腊语' }, { code: 'pl', name: '波兰语' },
   ]},
   { label: '亚洲', items: [
     { code: 'th', name: '泰语' }, { code: 'vi', name: '越南语' }, { code: 'tr', name: '土耳其语' },
-    { code: 'ar', name: '阿拉伯语' }, { code: 'id', name: '印尼语' },
+    { code: 'ar', name: '阿拉伯语' }, { code: 'id', name: '印尼语' }, { code: 'hi', name: '印地语' },
   ]},
 ];
 

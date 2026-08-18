@@ -14,7 +14,7 @@ import { hashText, getCache, setCache } from './cache';
  * - 预算超限 → 自动降级 GLM 免费档
  * - 缓存命中 → 零成本直接返回
  */
-const SMALL_LANGS = new Set(['th', 'it', 'vi', 'tr', 'id', 'el', 'nl']);
+const SMALL_LANGS = new Set(['th', 'it', 'vi', 'tr', 'id', 'el', 'nl', 'hi', 'pl']);
 const isSmallLang = (code: string) => SMALL_LANGS.has(code);
 
 export class TranslatorRouter {

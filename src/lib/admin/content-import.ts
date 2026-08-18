@@ -18,7 +18,7 @@ export type ContentType = 'idiom' | 'slang' | 'untranslatable' | 'food' | 'expre
 
 const TYPE_WHITELIST: ContentType[] = ['idiom', 'slang', 'untranslatable', 'food', 'expression', 'scene', 'menu', 'recipe'];
 const KIND_WHITELIST = ['travel', 'life'];
-const LANG_WHITELIST = ['zh-CN', 'zh', 'en', 'ja', 'ko', 'th', 'fr', 'it', 'de', 'es', 'ru', 'pt', 'da', 'sv', 'fil', 'tr', 'id', 'vi', 'iu', 'cs', 'gd', 'el', 'nl', 'rap', 'yag', 'fi', 'zu', 'ar', 'nv', 'sw', 'hr', 'ur', 'lub', 'hi'];
+const LANG_WHITELIST = ['zh-CN', 'zh', 'en', 'ja', 'ko', 'th', 'fr', 'it', 'de', 'es', 'ru', 'pt', 'da', 'sv', 'fil', 'tr', 'id', 'vi', 'iu', 'cs', 'gd', 'el', 'nl', 'rap', 'yag', 'fi', 'zu', 'ar', 'nv', 'sw', 'hr', 'ur', 'lub', 'hi', 'pl'];
 const CATEGORY_WHITELIST = ['main', 'soup', 'snack', 'dessert', 'drink', 'noodle', 'rice', 'other'];
 const DIFFICULTY_WHITELIST = ['简单', '中等', '困难', 'easy', 'medium', 'hard'];
 
