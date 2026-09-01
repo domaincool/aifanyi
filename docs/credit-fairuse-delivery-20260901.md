@@ -73,3 +73,20 @@
 1. **用户确认后部署**（MEMORY.md 红线：生产部署先验收确认，等用户点头）
 2. 游客文件工具开放（拍板 A/B）：若 A，需放开 PDF/字幕 401 + guestSessionId 逻辑，fairuse 游客线即生效（代码已就绪）
 3. 部署后运营验收清单（handoff 内）：grep 无积分外露 / 触线文案模拟 / flag off 零扣费流水 / D1/D2 数据可见 / 预发回退演练
+
+## 方案 A 补充（2026-09-01 运营拍板，a63e946）
+
+**游客文件工具放开**：
+- PDF/字幕 route 撤 401 登录墙：flag off 游客放行（fairuse 游客线 5 文件/50 页兜底）；flag on 回退旧行为（强制登录）
+- image/doc/web 保持登录墙（运营口径：只撤 PDF/字幕）
+- clientKey 统一为 sha256(ip|ua)（fairuse-quota.clientKeyOf）——PDF/字幕/统计共用，防止同一游客跨工具各 5 个绕过合计额度
+- 字幕旧 per-clientKey 5 文件/日（checkSubtitleQuota）无引用死代码，并入 fairuse 统一口径（dailyUsage 已含 SubtitleJob）
+- sync-settle 三函数 userId 放宽 string|null；flag on 分支防御性收窄（游客被 route 401 拦截，双保险）
+
+**游客合计口径**：游客 = PdfJob + SubtitleJob（clientKey 维度，PDF 页数计入 50 页上限）；登录 = PDF + 字幕 + image/doc/web（UsageLedger）合计 10 文件/100 页
+
+**回退演练（本地实测通过）**：
+- flag off（默认）：PDF/字幕未登录 POST → 400（进入业务校验，游客线通）✅
+- flag on：PDF/字幕未登录 POST → 401「请先登录后再使用该功能。」✅，首页 200 不受影响 ✅
+
+**部署时注意**：服务器 .env 无需改动（flag 默认 off）；部署后核验服务器 HEAD = a63e946（含 b59e8e3 用户预算修改）
