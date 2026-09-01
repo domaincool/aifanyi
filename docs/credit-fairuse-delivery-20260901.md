@@ -103,3 +103,17 @@
 3. MemeEntry 347→378
 
 **遗留（待拍板）**：content-import 未支持 slang→MemeEntry 映射，下次投递仍会进错表。待运营确认 slang 统一走 /meme 体系后，改 content-import 加分支。
+
+## P2 架构修复（2026-09-01 23:1x，f461e44 + 8155b64，已部署）
+
+**运营拍板**：slang 统一走 /meme 体系（与「网络用语翻译」定位一致 + SEO 聚拢）。
+
+**改动**：content-import 加 slang→MemeEntry 分支
+- modelOf：slang → memeEntry 表（原回 expressionEntry 进错表）
+- buildData：slang 分支映射 MemeEntry 字段；examples 空数组兜底（可选）
+- 查重：memeEntry 纯 term 唯一；update 按 term 定位；updateExisting 支持例句更新
+
+**生产实测**：投递 slang → MemeEntry ✅ / ExpressionEntry 无残留 ✅ / updateExisting 更新例句 ✅ / 幂等 repeated ✅
+
+**examples 格式**：对象数组 { zh, en }[]（中文例句 + 英文译文）
+**空占比**：378 条中 56 空（14.8%），其中 31 条为本次迁移 slang（特例）；历史遗留 25 条（published 21 占 5.6%）
