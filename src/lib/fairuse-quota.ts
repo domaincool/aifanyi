@@ -26,6 +26,15 @@ export const FAIR_USE = {
 };
 
 export const FAIR_USE_CODE = 'fair_use_limit_reached';
+/**
+ * 统一 clientKey 生成（跨文件工具一致，防绕过合计额度）
+ * 输入 IP + UA → sha256 前缀 32 位
+ */
+export function clientKeyOf(ip: string, ua: string): string {
+  const crypto = require('crypto') as typeof import('crypto');
+  return crypto.createHash('sha256').update(`${ip}|${ua}`).digest('hex').slice(0, 32);
+}
+
 
 /** 触线文案（前端渲染用；登录/游客分版） */
 export const FAIR_USE_MESSAGES = {

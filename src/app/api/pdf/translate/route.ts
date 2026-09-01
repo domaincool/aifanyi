@@ -9,14 +9,15 @@ import { parsePdf } from '@/lib/pdf/parser';
 import { createPdfJob, cleanupExpiredPdfJobs } from '@/lib/pdf/job';
 import { startPdfJob } from '@/lib/pdf/translate';
 import { checkGlobalDailyCap } from '@/lib/pdf/quota';
-import { checkFairUse } from '@/lib/fairuse-quota';
+import { checkFairUse, clientKeyOf } from '@/lib/fairuse-quota';
 import { PdfError } from '@/lib/pdf/types';
 import { PDF_CONFIG } from '@/lib/pdf/config';
 import { getSessionCookie } from '@/lib/auth/cookie';
 import { validateSession } from '@/lib/auth/session';
 import { getOrCreateGuestCookie } from '@/lib/auth/cookie';
 import { prisma } from '@/lib/db';
-import { getAuthUserId, authErrorBody, beginSync, endSyncSuccess, endSyncFail, FEATURES } from '@/lib/credit/sync-settle';
+import { getAuthUserId, beginSync, endSyncSuccess, endSyncFail, FEATURES } from '@/lib/credit/sync-settle';
+import { isCreditDeductionEnabled } from '@/lib/credit/feature-flags';
 
 export const runtime = 'nodejs';
 export const maxDuration = 120;
@@ -25,8 +26,12 @@ export async function POST(req: NextRequest) {
   let creditCtx: { jobId: string; usageId: string; estimated: number; userId: string } | null = null;
   try {
     const auth = await getAuthUserId();
-    if (!auth) return NextResponse.json({ errorType: 'auth_required', message: '请先登录后再使用该功能。免费注册解锁双倍每日额度。' }, { status: 401 });
-    const userId = auth.userId;
+    // 方案 A（2026-09-01 拍板）：flag off 放开游客文件工具（fairuse 游客线兜底）；
+    // flag on 回退旧行为（强制登录）
+    if (!auth && isCreditDeductionEnabled()) {
+      return NextResponse.json({ errorType: 'auth_required', message: '请先登录后再使用该功能。免费注册解锁双倍每日额度。' }, { status: 401 });
+    }
+    const userId = auth?.userId ?? null;
     const form = await req.formData();
     const file = form.get('file');
     if (!file || typeof file === 'string') {
@@ -45,13 +50,11 @@ export async function POST(req: NextRequest) {
     const buffer = await pdfFile.arrayBuffer();
     const doc = await parsePdf(buffer, fileName);
 
-    // 认证注入
-    const guestSessionId: string | null = null;
-
-    // 积分校验
+    // 身份：登录用 userId；游客用统一 clientKey（fairuse 游客线）
     const ip = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || req.headers.get('x-real-ip') || 'unknown';
     const ua = req.headers.get('user-agent') || '';
-    const clientKey = require('crypto').createHash('sha256').update(`${ip}|${ua}`).digest('hex').slice(0, 32);
+    const clientKey = clientKeyOf(ip, ua);
+    const guestSessionId: string | null = userId ? null : clientKey;
 
     if (!(await checkGlobalDailyCap())) {
       return NextResponse.json({ errorType: 'quota_exceeded', message: '今日服务繁忙，请明天再试。' }, { status: 429 });
@@ -71,7 +74,7 @@ export async function POST(req: NextRequest) {
     if (!begin.ok) {
       // 余额不足：保存为 paused 任务，充值后从 taskId 续做（不要求重新上传）
       await createPdfJob({ taskId, fileName, fileSize: pdfFile.size, doc, clientKey, userId, guestSessionId, creditState: 'paused', reservedCredits: estCredits, status: 'paused' });
-      const acc = await prisma.creditAccount.findUnique({ where: { userId } });
+      const acc = await prisma.creditAccount.findUnique({ where: { userId: userId! } });
       return NextResponse.json({
         taskId,
         status: 'paused',
@@ -86,7 +89,7 @@ export async function POST(req: NextRequest) {
         message: '本次翻译预计消耗约 ' + estCredits + ' 积分，当前剩余 ' + (acc?.balance ?? 0) + ' 积分。任务已保存，充值后可直接续做，无需重新上传。',
       });
     }
-    creditCtx = { jobId: taskId, usageId: begin.usageId, estimated: begin.estimated, userId };
+    creditCtx = { jobId: taskId, usageId: begin.usageId, estimated: begin.estimated, userId: userId! };
 
     await createPdfJob({ taskId, fileName, fileSize: pdfFile.size, doc, clientKey, userId, guestSessionId, creditState: 'reserved', reservedCredits: estCredits });
 

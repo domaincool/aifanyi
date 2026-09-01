@@ -47,7 +47,7 @@ export type BeginResult =
 
 /** 阶段 1：reserve（原子检查余额），返回 usageId */
 export async function beginSync(input: {
-  userId: string;
+  userId: string | null;
   jobId: string;
   feature: Feature;
   estimatedCredits: number;
@@ -57,6 +57,10 @@ export async function beginSync(input: {
   // B1: 积分扣费暂停（flag off）→ 直接放行，不 reserve、不检查余额
   if (!isCreditDeductionEnabled()) {
     return { ok: true, usageId: 'free:' + input.jobId, estimated: est };
+  }
+  // flag on：仅登录用户（游客已在 route 层 401 拦截；此处双保险）
+  if (!input.userId) {
+    return { ok: false, code: 'auth_required', error: '请先登录后再使用该功能。' };
   }
   const r = await reserve({
     userId: input.userId,
@@ -82,7 +86,7 @@ export async function beginSync(input: {
 
 /** 阶段 2（成功）：按实际消耗结算，差额自动退回 */
 export async function endSyncSuccess(input: {
-  userId: string;
+  userId: string | null;
   jobId: string;
   usageId: string;
   estimated: number;
@@ -97,6 +101,9 @@ export async function endSyncSuccess(input: {
   // B1: 积分扣费暂停 → 结算空转（不 consume / release）
   if (!isCreditDeductionEnabled()) {
     return { ok: true, consumed: 0 };
+  }
+  if (!input.userId) {
+    return { ok: false, consumed: 0, error: '请先登录后再使用该功能。' };
   }
   const est = input.estimated;
   const actual = Math.min(Math.max(0, Math.round(input.actualCredits)), est);
@@ -128,7 +135,7 @@ export async function endSyncSuccess(input: {
 
 /** 阶段 2（失败）：退回全部预留（幂等，安全可重复调用） */
 export async function endSyncFail(input: {
-  userId: string;
+  userId: string | null;
   jobId: string;
   usageId: string;
   estimated: number;
@@ -136,7 +143,7 @@ export async function endSyncFail(input: {
   // B1: 积分扣费暂停 → 无预留，退款空转
   if (!isCreditDeductionEnabled()) return;
   try {
-    await release({ userId: input.userId, jobId: input.jobId, usageId: input.usageId, amount: input.estimated, idempotencyKey: `${input.jobId}:release` });
+    await release({ userId: input.userId!, jobId: input.jobId, usageId: input.usageId, amount: input.estimated, idempotencyKey: `${input.jobId}:release` });
   } catch (e: any) {
     console.error('[credit/endSyncFail]', e?.message || e);
   }

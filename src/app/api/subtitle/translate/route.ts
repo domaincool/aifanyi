@@ -3,8 +3,9 @@ import { prisma } from '@/lib/db';
 import { getOrCreateGuestCookie } from '@/lib/auth/cookie';
 import { parseSubtitle } from '@/lib/subtitle-lib';
 import { runSubtitleJob } from '@/lib/subtitle-job';
-import { getAuthUserId, authErrorBody, beginSync, endSyncSuccess, endSyncFail, FEATURES } from '@/lib/credit/sync-settle';
-import { checkFairUse } from '@/lib/fairuse-quota';
+import { getAuthUserId, beginSync, endSyncSuccess, endSyncFail, FEATURES } from '@/lib/credit/sync-settle';
+import { isCreditDeductionEnabled } from '@/lib/credit/feature-flags';
+import { checkFairUse, clientKeyOf } from '@/lib/fairuse-quota';
 
 export const runtime = 'nodejs';
 export const maxDuration = 60;
@@ -16,12 +17,17 @@ export async function POST(req: NextRequest) {
   let creditCtx: { jobId: string; usageId: string; estimated: number; userId: string } | null = null;
   try {
     const auth = await getAuthUserId();
-    if (!auth) return NextResponse.json({ ok: false, code: 'auth_required', error: '请先登录后再使用该功能。免费注册解锁双倍每日额度。' }, { status: 401 });
-    const userId = auth.userId;
-    // 身份：优先登录态（cookie session），否则 guest cookie
-    const guestSessionId: string | null = null;
-
-    const clientKey = (req.headers.get('x-forwarded-for') || 'local') + '|' + (req.headers.get('user-agent') || '').slice(0, 80);
+    // 方案 A（2026-09-01 拍板）：flag off 放开游客文件工具（fairuse 游客线兜底）；
+    // flag on 回退旧行为（强制登录）
+    if (!auth && isCreditDeductionEnabled()) {
+      return NextResponse.json({ ok: false, code: 'auth_required', error: '请先登录后再使用该功能。免费注册解锁双倍每日额度。' }, { status: 401 });
+    }
+    const userId = auth?.userId ?? null;
+    // 身份：登录用 userId；游客用统一 clientKey（fairuse 游客线）
+    const ip = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || req.headers.get('x-real-ip') || 'local';
+    const ua = req.headers.get('user-agent') || '';
+    const clientKey = clientKeyOf(ip, ua);
+    const guestSessionId: string | null = userId ? null : clientKey;
     const form = await req.formData();
     const file = form.get('file') as File | null;
     const targetLang = String(form.get('targetLang') || 'zh');
@@ -76,10 +82,10 @@ export async function POST(req: NextRequest) {
           creditState: 'paused', reservedCredits: estCredits,
         },
       });
-      const acc = await prisma.creditAccount.findUnique({ where: { userId } });
+      const acc = await prisma.creditAccount.findUnique({ where: { userId: userId! } });
       return NextResponse.json({ ok: true, taskId, status: 'paused', totalCues: cues.length, requiredCredits: estCredits, available: acc?.balance ?? 0, message: '本次翻译预计消耗约 ' + estCredits + ' 积分，当前剩余 ' + (acc?.balance ?? 0) + ' 积分。任务已保存，充值后可直接续做。' });
     }
-    creditCtx = { jobId: taskId, usageId: begin.usageId, estimated: begin.estimated, userId };
+    creditCtx = { jobId: taskId, usageId: begin.usageId, estimated: begin.estimated, userId: userId! };
 
     await prisma.subtitleJob.create({
       data: {
