@@ -90,3 +90,16 @@
 - flag on：PDF/字幕未登录 POST → 401「请先登录后再使用该功能。」✅，首页 200 不受影响 ✅
 
 **部署时注意**：服务器 .env 无需改动（flag 默认 off）；部署后核验服务器 HEAD = a63e946（含 b59e8e3 用户预算修改）
+
+## P2 词条投递修复（2026-09-01 22:5x，meme-weakcat-20260901）
+
+**现象**：运营经 /api/admin/content/import 投递 31 条 slang 词条（imported 31），但 /meme/{slug} 404、sitemap meme 仍 393。
+
+**根因（架构断裂）**：content-import 的 expression 分支写 **ExpressionEntry** 表（运营 Phase B 直录通道），但 /meme 页面 + sitemap meme 段读 **MemeEntry** 表。两条通道两张表，slang 词条进错表。
+
+**修复**：
+1. 数据迁移：31 条 slang ExpressionEntry → MemeEntry（term/slug 双查重 0 冲突），examples 空数组兜底（原 payload 无 examples）
+2. 验证：31 详情页全 200；sitemap meme 393→424（ISR 需触发两次访问：第一次重建第二次出数据）；分类计数 八卦 16/方言 16/影视 16
+3. MemeEntry 347→378
+
+**遗留（待拍板）**：content-import 未支持 slang→MemeEntry 映射，下次投递仍会进错表。待运营确认 slang 统一走 /meme 体系后，改 content-import 加分支。
