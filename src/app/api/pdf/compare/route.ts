@@ -45,7 +45,7 @@ export async function POST(req: NextRequest) {
     });
     const usedToday = agg._sum.compareCount || 0;
     if (usedToday >= PDF_CONFIG.quota.dailyCompareSegments) {
-      return NextResponse.json({ errorType: 'quota_exceeded', message: `今日多模型对比积分已用完（${PDF_CONFIG.quota.dailyCompareSegments} 段/日）。明天再来吧！` }, { status: 429 });
+      return NextResponse.json({ errorType: 'quota_exceeded', message: `今日多模型对比次数已用完（${PDF_CONFIG.quota.dailyCompareSegments} 段/日）。明天再来吧！` }, { status: 429 });
     }
 
     const doc = job.document as unknown as PdfDocument;

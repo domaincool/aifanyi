@@ -56,7 +56,7 @@ export async function DELETE(req: NextRequest) {
           type: 'admin_adjust',
           amount: -(acc.balance + acc.reservedBalance),
           idempotencyKey: `account_close:${userId}:${Date.now()}`,
-          description: '账户注销，剩余积分清零',
+          description: '账户注销，账户数据清除',
           metadata: { reason: 'account_deleted' },
         },
       });

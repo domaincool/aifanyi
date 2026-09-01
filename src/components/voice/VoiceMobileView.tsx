@@ -115,15 +115,12 @@ export default function VoiceMobileView() {
         {s.msgs.map((m) => (
           <MsgBubble key={m.id} msg={m} playing={s.playingId === m.id} onPlay={s.playMsg} onStop={s.stopPlay} />
         ))}
-        {s.lastUsed !== null && s.msgs.length > 0 && (
-          <div style={{ textAlign: 'center', fontSize: 11, color: 'var(--muted)', padding: '2px 0 6px' }}>本次使用 {s.lastUsed} 个积分</div>
-        )}
       </div>
 
       {/* ③ 底部操作区 */}
       <div style={{ flexShrink: 0, padding: '8px 0 calc(14px + env(safe-area-inset-bottom))', textAlign: 'center' }}>
         <div style={{ fontSize: 12, color: 'var(--muted)', marginBottom: 6 }}>
-          {s.estCredits !== null ? '预计使用约 ' + s.estCredits + ' 个积分 / 次' : '积分透明 · 登录即享'}
+          免费使用 · 无需付费
         </div>
         <canvas ref={waveRef} width={200} height={34} style={{ width: '70%', height: 34, display: 'block', margin: '0 auto 6px' }} />
         <button

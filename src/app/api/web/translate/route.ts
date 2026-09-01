@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { DeepSeekProvider } from '@/lib/translator/providers/deepseek';
 import { GlmProvider } from '@/lib/translator/providers/glm';
 import { fetchWebPage, validateUrl } from '@/lib/web-fetch';
+import { checkFairUse } from '@/lib/fairuse-quota';
 import { getAuthUserId, authErrorBody, beginSync, endSyncSuccess, endSyncFail, estimateByChars, FEATURES } from '@/lib/credit/sync-settle';
 
 export const runtime = 'nodejs';
@@ -49,6 +50,12 @@ export async function POST(req: NextRequest) {
       len += add.length;
     }
     if (lines.length) batches.push({ start: startIdx, end: paragraphs.length - 1, content: lines.join('\n') });
+
+    // B2 公平使用双阈值（登录：10 文件/日硬阈值，软阈值打点）
+    const fu = await checkFairUse({ userId: auth.userId });
+    if (!fu.ok) {
+      return NextResponse.json({ ok: false, code: 'fair_use_limit_reached', error: fu.message }, { status: 429 });
+    }
 
     // 积分：按总字符估算 → reserve（原子检查余额）
     const totalChars = paragraphs.reduce((s: number, p: string) => s + p.length, 0);

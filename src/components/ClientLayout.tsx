@@ -110,7 +110,7 @@ export default function ClientLayout({ children, serverUser }: { children: React
             <button className="btn-login-header" onClick={() => {
             try { document.cookie = `aifanyi_next=${encodeURIComponent(window.location.pathname + window.location.search)}; path=/; max-age=1800; samesite=lax`; } catch {}
             setShowLogin(true);
-          }}>登录 / 注册</button>
+          }}>免费注册</button>
           )}
         </div>
       </header>
@@ -143,7 +143,7 @@ export default function ClientLayout({ children, serverUser }: { children: React
                 <button className="mob-logout" onClick={handleLogout}>退出登录</button>
               </div>
             ) : (
-              <button className="mob-login" onClick={() => { setMobileOpen(false); setShowLogin(true); }}>登录 / 注册</button>
+              <button className="mob-login" onClick={() => { setMobileOpen(false); setShowLogin(true); }}>免费注册</button>
             )}
           </div>
         </>

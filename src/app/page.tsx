@@ -54,8 +54,9 @@ export default async function HomePage() {
         }) }}
       />
       <section className="hero">
+        <span className="hero-free-badge">🎁 免费使用</span>
         <h1>爱翻译 · AI翻译</h1>
-        <p>让 AI 帮你把话说得像当地人。Let AI help you speak like a local.</p>
+        <p>无需付费，上传即译。让 AI 帮你把话说得像当地人。Let AI help you speak like a local.</p>
       </section>
 
       <TranslatorBox />
@@ -63,12 +64,12 @@ export default async function HomePage() {
       {/* ── 快速选择翻译工具 ── */}
       <section className="home-block" id="quick-tools">
         <h2 className="section-title">快速选择翻译工具</h2>
-        <p className="block-lead">常用格式直接开翻，新用户注册送 500 免费积分</p>
+        <p className="block-lead">常用格式直接开翻，全部免费使用</p>
         <div className="tools-grid">
           <a className="tool-card" href="/tools/pdf-translator">
             <div className="tool-emoji">📄</div>
             <h2>PDF 翻译</h2>
-            <p>保持排版的三模型对比翻译，失败自动退回</p>
+            <p>保持排版的三模型对比翻译，免费使用</p>
           </a>
           <a className="tool-card" href="/tools/image-translator">
             <div className="tool-emoji">🖼️</div>

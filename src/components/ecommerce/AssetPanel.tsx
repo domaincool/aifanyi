@@ -103,7 +103,7 @@ export default function AssetPanel({ productId }: { productId: string }) {
       const data = await res.json();
       if (data.ok) {
         setTranslation(data.translation);
-        showToast(`翻译完成，本次使用 ${data.consumedCredits} 积分`);
+        showToast('翻译完成');
       } else if (data.code === 'insufficient') {
         setCreditModal({ estimated: data.estimated ?? 0, available: data.available ?? 0 });
       } else {

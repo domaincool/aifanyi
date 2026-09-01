@@ -117,8 +117,8 @@ export default function TranslatorBox({
   const [explainLoading, setExplainLoading] = useState(false);
   const [explain, setExplain] = useState<{ tone: string; scene: string; localization: string; why: string } | null>(null);
   const [promptLogin, setPromptLogin] = useState(false); // 翻译完成挽留条（未登录时）
-  const [loggedIn, setLoggedIn] = useState(false); // 登录态（决定是否显示预计积分）
-  const [est, setEst] = useState<number | null>(null); // 预计消耗积分
+  const [loggedIn, setLoggedIn] = useState(false); // 登录态
+  const [est, setEst] = useState<number | null>(null);
   const estTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [readState, setReadState] = useState<'idle' | 'playing' | 'paused'>('idle'); // 输入朗读状态
 
@@ -439,11 +439,6 @@ export default function TranslatorBox({
           {loading ? '处理中…' : scenario === 'polish' ? '润色' : '翻译'}
         </button>
       </div>
-      {loggedIn && est !== null && (
-        <div style={{ fontSize: 12, color: 'var(--muted)', marginTop: 6 }}>
-          预计消耗约 {est} 积分（登录用户按次计费，翻译完成结算）
-        </div>
-      )}
       <FileTranslator targetLang={targetLang} />
       {result && (
         <div className="result-card">

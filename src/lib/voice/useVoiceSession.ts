@@ -198,7 +198,7 @@ export function useVoiceSession(initialSource = 'zh', initialTarget = 'en') {
       }
       if (res.status === 402) {
         const d = await res.json().catch(() => ({}));
-        setPhaseSafe('ERROR'); setError((d && d.error) || '积分不足，请先补充积分。');
+        setPhaseSafe('ERROR'); setError((d && d.error) || '服务繁忙，请稍后重试。');
         return;
       }
       if (res.status === 429) {
@@ -238,7 +238,7 @@ export function useVoiceSession(initialSource = 'zh', initialTarget = 'en') {
       if (!result) { setPhaseSafe('ERROR'); setError('语音翻译失败，请重试。'); return; }
       if (!result.ok) {
         setPhaseSafe('ERROR');
-        if (result.status === 402) setError('积分不足，请先补充积分。');
+        if (result.status === 402) setError('今日免费额度已用完，明日自动恢复。');
         else if (result.status === 429) setError('操作太频繁，请稍等片刻再试。');
         else setError(result.error || '语音翻译失败，请重试。');
         return;

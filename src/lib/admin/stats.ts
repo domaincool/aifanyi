@@ -4,6 +4,7 @@
  */
 import { prisma } from '@/lib/db';
 import { beijingDateKey } from '@/lib/time-beijing';
+import { fairUseWatchlist, FAIR_USE } from '@/lib/fairuse-quota';
 
 export interface StatsData {
   users: { total: number; activeSessions: number; creditAccounts: number };
@@ -24,6 +25,14 @@ export interface StatsData {
     p50DurationMs: number;
     p95DurationMs: number;
     events: Record<string, number>;
+  };
+  /** D1+D2 公平使用（2026-09-01） */
+  fairUse: {
+    distribution: {
+      login: { files: { p50: number; p95: number; p99: number }; pages: { p50: number; p95: number; p99: number }; users: number };
+      guest: { files: { p50: number; p95: number; p99: number }; pages: { p50: number; p95: number; p99: number }; keys: number };
+    };
+    watchlist: { userId: string; email?: string | null; files: number; pages: number; softFiles: number; softPages: number }[];
   };
 }
 
@@ -57,6 +66,51 @@ export async function collectStats(): Promise<StatsData> {
     prisma.creditAccount.count(),
   ]);
 
+  // ── D1 用户日用量分布（今日，游客/登录分开）──
+  const todayStart = new Date();
+  todayStart.setHours(0, 0, 0, 0);
+  const [pdfToday, subToday, ledgerToday] = await Promise.all([
+    prisma.pdfJob.findMany({ where: { createdAt: { gte: todayStart } }, select: { userId: true, clientKey: true, pageCount: true } }),
+    prisma.subtitleJob.findMany({ where: { createdAt: { gte: todayStart } }, select: { userId: true, clientKey: true } }),
+    prisma.usageLedger.findMany({ where: { createdAt: { gte: todayStart }, type: { in: ['image_translation', 'doc_translation', 'web_translation'] } }, select: { userId: true, guestSessionId: true } }),
+  ]);
+  const loginAgg = new Map<string, { files: number; pages: number }>();
+  const guestAgg = new Map<string, { files: number; pages: number }>();
+  const addUsage = (map: Map<string, { files: number; pages: number }>, key: string, files: number, pages: number) => {
+    const cur = map.get(key) || { files: 0, pages: 0 };
+    cur.files += files; cur.pages += pages;
+    map.set(key, cur);
+  };
+  for (const r of pdfToday) {
+    if (r.userId) addUsage(loginAgg, r.userId, 1, r.pageCount || 0);
+    else if (r.clientKey) addUsage(guestAgg, 'ck:' + r.clientKey, 1, r.pageCount || 0);
+  }
+  for (const r of subToday) {
+    if (r.userId) addUsage(loginAgg, r.userId, 1, 0);
+    else if (r.clientKey) addUsage(guestAgg, 'ck:' + r.clientKey, 1, 0);
+  }
+  for (const r of ledgerToday) {
+    if (r.userId) addUsage(loginAgg, r.userId, 1, 0);
+    else if (r.guestSessionId) addUsage(guestAgg, 'gs:' + r.guestSessionId, 1, 0);
+  }
+  const pct = (arr: number[], p: number) => {
+    if (!arr.length) return 0;
+    const s = [...arr].sort((a, b) => a - b);
+    const idx = Math.min(s.length - 1, Math.floor((p / 100) * s.length));
+    return s[idx];
+  };
+  const dist = (map: Map<string, { files: number; pages: number }>) => {
+    const files = [...map.values()].map((v) => v.files);
+    const pages = [...map.values()].map((v) => v.pages);
+    return { files: { p50: pct(files, 50), p95: pct(files, 95), p99: pct(files, 99) }, pages: { p50: pct(pages, 50), p95: pct(pages, 95), p99: pct(pages, 99) } };
+  };
+  const fairUseDist = {
+    login: { ...dist(loginAgg), users: loginAgg.size },
+    guest: { ...dist(guestAgg), keys: guestAgg.size },
+  };
+  // ── D2 观察名单（软阈值以上）──
+  const watchlist = await fairUseWatchlist();
+
   const dailyMap = new Map<string, number>();
   for (const d of recentDaily) {
     const day = beijingDateKey(d.createdAt);
@@ -87,6 +141,10 @@ export async function collectStats(): Promise<StatsData> {
       p50DurationMs: percentile(pdfDurations.map((d) => d.durationMs as number), 50),
       p95DurationMs: percentile(pdfDurations.map((d) => d.durationMs as number), 95),
       events: Object.fromEntries(pdfEvents.map((e) => [e.event, e._count._all])),
+    },
+    fairUse: {
+      distribution: fairUseDist,
+      watchlist: watchlist.users,
     },
   };
 }

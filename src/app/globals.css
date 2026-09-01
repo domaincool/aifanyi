@@ -715,6 +715,19 @@ button.primary:disabled { opacity: 0.5; cursor: wait; }
 
 /* 首页 hero 增强 */
 .hero { text-align: center; padding: 56px 20px 28px; }
+.hero-free-badge {
+  display: inline-block;
+  background: linear-gradient(120deg, #10b981, #059669);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 5px 14px;
+  margin-bottom: 14px;
+  letter-spacing: .3px;
+  box-shadow: 0 2px 8px rgba(16,185,129,.25);
+}
+
 .hero h1 {
   font-size: 40px; line-height: 1.2; margin-bottom: 12px;
   background: linear-gradient(120deg, #f8fafc 20%, #93c5fd 60%, #38bdf8);

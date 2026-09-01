@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { DeepSeekProvider } from '@/lib/translator/providers/deepseek';
 import { GlmProvider } from '@/lib/translator/providers/glm';
 import { ocrImage } from '@/lib/image-ocr';
+import { checkFairUse } from '@/lib/fairuse-quota';
 import { getAuthUserId, authErrorBody, beginSync, endSyncSuccess, endSyncFail, estimateByChars, FEATURES } from '@/lib/credit/sync-settle';
 
 export const runtime = 'nodejs';
@@ -57,6 +58,12 @@ export async function POST(req: NextRequest) {
     }
     if (text.includes('（图片中没有文字）')) {
       return NextResponse.json({ ok: false, error: '这张图片里没有识别到文字。' }, { status: 422 });
+    }
+
+    // B2 公平使用双阈值（登录：10 文件/日硬阈值，软阈值打点）
+    const fu = await checkFairUse({ userId: auth.userId });
+    if (!fu.ok) {
+      return NextResponse.json({ ok: false, code: 'fair_use_limit_reached', error: fu.message }, { status: 429 });
     }
 
     // 积分：图片固定 3 积分/张 → reserve（原子检查余额）

@@ -91,7 +91,7 @@ export default function CustomerAssistant({ productId }: { productId: string }) 
     setBusy('translate');
     const r = await call(`/api/ecommerce/messages/${selected.id}/translate`, 'POST');
     if (r.json.ok) {
-      showToast(`已翻译，本次使用 ${r.json.consumedCredits} 积分`);
+      showToast('已翻译');
       await loadMessages();
     } else if (r.json.code === 'insufficient') {
       setCreditModal({ estimated: r.json.estimated ?? 0, available: r.json.available ?? 0 });
@@ -106,7 +106,7 @@ export default function CustomerAssistant({ productId }: { productId: string }) 
     setBusy('reply');
     const r = await call(`/api/ecommerce/messages/${selected.id}/reply`, 'POST');
     if (r.json.ok) {
-      showToast(`回复已生成，本次使用 ${r.json.consumedCredits} 积分`);
+      showToast('回复已生成');
       await loadMessages();
     } else if (r.json.code === 'insufficient') {
       setCreditModal({ estimated: r.json.estimated ?? 0, available: r.json.available ?? 0 });
@@ -121,7 +121,7 @@ export default function CustomerAssistant({ productId }: { productId: string }) 
     setBusy('retone');
     const r = await call(`/api/ecommerce/messages/${selected.id}/retone`, 'POST', { tone });
     if (r.json.ok) {
-      showToast(`语气已调整为「${toneLabel(tone)}」，本次使用 ${r.json.consumedCredits} 积分`);
+      showToast(`语气已调整为「${toneLabel(tone)}」`);
       await loadMessages();
     } else if (r.json.code === 'insufficient') {
       setCreditModal({ estimated: r.json.estimated ?? 0, available: r.json.available ?? 0 });

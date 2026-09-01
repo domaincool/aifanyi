@@ -36,7 +36,7 @@ export async function checkGuestLimit(req: NextRequest): Promise<GuestLimitResul
     return {
       ok: false,
       retryAfterMs: 0,
-      error: '今日游客免费翻译积分已用完（每天 ' + GUEST_LIMITS.dailyMax + ' 次 / ' + GUEST_LIMITS.dailyChars + ' 字符），登录后解锁更多积分',
+      error: '今日免费翻译额度已用完（每天 ' + GUEST_LIMITS.dailyMax + ' 次 / ' + GUEST_LIMITS.dailyChars + ' 字符），免费注册解锁双倍每日额度',
       code: 'DAILY_LIMIT',
     };
   }

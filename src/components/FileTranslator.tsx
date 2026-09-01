@@ -199,7 +199,7 @@ export default function FileTranslator({ targetLang }: { targetLang: string }) {
             <input ref={inputRef} type="file" hidden accept={Object.values(ACCEPT).join(',')} onChange={e => { const f = e.target.files?.[0]; if (f) upload(f); e.target.value = ''; }} />
           </div>
           <div className="file-billing" style={{ fontSize: 12, color: 'var(--muted)', marginTop: 8 }}>
-            计费参考：PDF 约 2 积分/页 · 图片 3 积分/张 · 字幕约 1 积分/分钟 · Word/PPT 约 2 积分/千字 · 网页约 2 积分/千字（登录用户）
+            免费 · 无需注册即可开始
           </div>
           <div
             className={`file-dropzone${dragOver ? ' drag' : ''}`}

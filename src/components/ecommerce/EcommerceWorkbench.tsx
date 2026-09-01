@@ -129,7 +129,7 @@ export default function EcommerceWorkbench({ serverUser }: { serverUser: UserInf
       const data = await res.json();
       if (data.ok) {
         setEnriched(data.enriched);
-        showToast(`AI 提取完成，本次使用 ${data.consumedCredits} 积分`);
+        showToast('AI 提取完成');
         await openDetail(selected.id);
       } else if (data.code === 'insufficient') {
         setCreditModal({ estimated: data.estimated ?? 0, available: data.available ?? 0 });
@@ -154,7 +154,7 @@ export default function EcommerceWorkbench({ serverUser }: { serverUser: UserInf
         <div className="ecom-login-gate">
           <div className="ecom-login-icon">🧳</div>
           <h2>登录后开始使用</h2>
-          <p>工作台数据仅你可见。新用户注册即送 500 免费积分，翻译成功才扣费，失败自动退回。</p>
+          <p>工作台数据仅你可见。免费使用，翻译成功即得结果。</p>
           <button className="primary" onClick={openLogin}>登录 / 注册</button>
         </div>
       </div>

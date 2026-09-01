@@ -58,7 +58,7 @@ export default function SubtitleTranslatorClient() {
       setTotal(data.totalCues);
       setTaskId(data.taskId);
       if (data.status === 'paused') {
-        setPausedMsg(data.message || '积分不足，任务已暂停。');
+        setPausedMsg(data.message || '任务已暂停，请稍后重试。');
         setPhase('paused');
         return;
       }
@@ -86,7 +86,7 @@ export default function SubtitleTranslatorClient() {
           setError(data.task.errorMessage || '翻译失败'); setPhase('error');
         } else if (data.task.status === 'cancelled') {
           if (timerRef.current) clearInterval(timerRef.current);
-          setError('任务已取消，积分已退回。'); setPhase('error');
+          setError('任务已取消。'); setPhase('error');
         }
       } catch { /* 网络抖动，下轮重试 */ }
     }, 1500);
@@ -99,7 +99,7 @@ export default function SubtitleTranslatorClient() {
       const data = await res.json();
       if (data.ok) {
         if (timerRef.current) clearInterval(timerRef.current);
-        setPhase('error'); setError('任务已取消，积分已退回。');
+        setPhase('error'); setError('任务已取消。');
       } else {
         setError(data.error || '取消失败，请稍后再试。');
       }
@@ -114,7 +114,7 @@ export default function SubtitleTranslatorClient() {
       const res = await fetch(`/api/subtitle/tasks/${taskId}/resume`, { method: 'POST' });
       const data = await res.json();
       if (data.ok) { setPhase('working'); poll(taskId); }
-      else { setError(data.error || '积分不足，请先充值。'); setPhase('error'); }
+      else { setError(data.error || '任务未能恢复，请稍后重试。'); setPhase('error'); }
     } catch {
       setError('网络错误，续做失败。'); setPhase('error');
     }
@@ -187,14 +187,14 @@ export default function SubtitleTranslatorClient() {
         >
           <div style={{ fontSize: 40, marginBottom: 12 }}>🎬</div>
           <p style={{ fontSize: 16, margin: '0 0 6px' }}>点击或拖拽字幕文件到这里</p>
-          <p style={{ fontSize: 13, color: 'var(--muted)', margin: 0 }}>支持 SRT / VTT · 最大 5MB · 单文件最多 2000 条 · 积分制：仅翻译成功才扣费，失败自动退回</p>
+          <p style={{ fontSize: 13, color: 'var(--muted)', margin: 0 }}>支持 SRT / VTT · 最大 5MB · 单文件最多 2000 条 · 免费使用</p>
           <input ref={inputRef} type="file" accept=".srt,.vtt" hidden onChange={e => { const f = e.target.files?.[0]; if (f) upload(f); }} />
         </div>
       )}
 
       {phase === 'working' && (
         <div style={{ background: 'var(--panel)', border: '1px solid var(--border)', borderRadius: 16, padding: 28 }}>
-          <button style={{ marginBottom: 12, background: 'none', border: '1px solid var(--border)', borderRadius: 8, padding: '6px 14px', color: 'var(--muted)', cursor: 'pointer', fontSize: 13 }} onClick={cancelTask}>✕ 取消任务（退回积分）</button>
+          <button style={{ marginBottom: 12, background: 'none', border: '1px solid var(--border)', borderRadius: 8, padding: '6px 14px', color: 'var(--muted)', cursor: 'pointer', fontSize: 13 }} onClick={cancelTask}>✕ 取消任务</button>
           <p style={{ margin: '0 0 12px', fontSize: 14, color: 'var(--muted)' }}>正在翻译《{fileName}》…（{translated}/{total} 条）</p>
           <div style={{ height: 8, background: 'var(--border)', borderRadius: 4, overflow: 'hidden' }}>
             <div style={{ height: '100%', width: `${progress}%`, background: 'var(--accent)', borderRadius: 4, transition: 'width .5s' }} />
@@ -214,11 +214,11 @@ export default function SubtitleTranslatorClient() {
 
       {phase === 'paused' && (
         <div style={{ background: 'var(--panel)', border: '1px solid #f0a020', borderRadius: 16, padding: 24 }}>
-          <p style={{ margin: '0 0 6px', fontWeight: 600 }}>⏸️ 任务已暂停（积分不足）</p>
+          <p style={{ margin: '0 0 6px', fontWeight: 600 }}>⏸️ 任务已暂停</p>
           <p style={{ margin: '0 0 12px', fontSize: 14, color: 'var(--muted)' }}>{pausedMsg}</p>
           <p style={{ margin: '0 0 12px', fontSize: 13, color: 'var(--muted)' }}>充值后点击下方按钮继续翻译，无需重新上传。</p>
           <div style={{ display: 'flex', gap: 10 }}>
-            <a className="btn-primary" href="/credit" style={{ padding: '8px 18px', textDecoration: 'none' }}>去充值积分</a>
+            <a className="btn-primary" href="/account" style={{ padding: '8px 18px', textDecoration: 'none' }}>查看用量</a>
             <button className="btn-primary" style={{ padding: '8px 18px' }} onClick={resumeTask}>▶ 续做翻译</button>
           </div>
         </div>

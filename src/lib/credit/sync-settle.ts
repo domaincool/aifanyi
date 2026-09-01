@@ -10,6 +10,7 @@ import { prisma } from '@/lib/db';
 import { reserve, consume, release } from './engine';
 import { FEATURES, type Feature } from './types';
 import { estimateCredits } from './pricing';
+import { isCreditDeductionEnabled } from './feature-flags';
 
 export type SyncAuth = { userId: string } | null;
 
@@ -26,7 +27,7 @@ export function authErrorBody() {
   return {
     ok: false as const,
     code: 'auth_required',
-    error: '请先登录后再使用该功能。登录后新用户可获赠 500 免费积分，用完再按用量计费。',
+    error: '请先登录后再使用该功能。免费注册解锁双倍每日额度。',
   };
 }
 
@@ -34,7 +35,7 @@ export function insufficientBody(estimated: number, available: number) {
   return {
     ok: false as const,
     code: 'insufficient',
-    error: `本次预计消耗约 ${estimated} 积分，当前剩余 ${available} 积分，请先补充积分后再试。`,
+    error: `当前免费使用中，若提示额度不足请明日再试（预计 ${estimated}，剩余 ${available}）。`,
     estimated,
     available,
   };
@@ -52,6 +53,11 @@ export async function beginSync(input: {
   estimatedCredits: number;
 }): Promise<BeginResult> {
   const est = Math.max(1, Math.round(input.estimatedCredits));
+
+  // B1: 积分扣费暂停（flag off）→ 直接放行，不 reserve、不检查余额
+  if (!isCreditDeductionEnabled()) {
+    return { ok: true, usageId: 'free:' + input.jobId, estimated: est };
+  }
   const r = await reserve({
     userId: input.userId,
     jobId: input.jobId,
@@ -88,6 +94,10 @@ export async function endSyncSuccess(input: {
   inputTokens?: number;
   outputTokens?: number;
 }): Promise<{ ok: boolean; consumed: number; error?: string }> {
+  // B1: 积分扣费暂停 → 结算空转（不 consume / release）
+  if (!isCreditDeductionEnabled()) {
+    return { ok: true, consumed: 0 };
+  }
   const est = input.estimated;
   const actual = Math.min(Math.max(0, Math.round(input.actualCredits)), est);
   if (actual === 0) {
@@ -123,6 +133,8 @@ export async function endSyncFail(input: {
   usageId: string;
   estimated: number;
 }): Promise<void> {
+  // B1: 积分扣费暂停 → 无预留，退款空转
+  if (!isCreditDeductionEnabled()) return;
   try {
     await release({ userId: input.userId, jobId: input.jobId, usageId: input.usageId, amount: input.estimated, idempotencyKey: `${input.jobId}:release` });
   } catch (e: any) {

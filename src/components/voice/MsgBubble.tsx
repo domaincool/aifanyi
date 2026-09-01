@@ -63,9 +63,6 @@ export default function MsgBubble(props: {
           >
             {copied ? '✓ 已复制' : '⧉ 复制'}
           </button>
-          {msg.usedCredits > 0 && (
-            <span style={{ fontSize: 11, color: dark ? 'rgba(255,255,255,.5)' : 'var(--muted)' }}>本次使用 {msg.usedCredits} 个积分</span>
-          )}
         </div>
         {msg.autoplayBlocked && (
           <div style={{ marginTop: 6, fontSize: 12, color: '#d97706', background: 'rgba(217,119,6,.1)', borderRadius: 8, padding: '6px 10px' }}>

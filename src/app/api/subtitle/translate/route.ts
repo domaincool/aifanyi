@@ -4,6 +4,7 @@ import { getOrCreateGuestCookie } from '@/lib/auth/cookie';
 import { parseSubtitle } from '@/lib/subtitle-lib';
 import { runSubtitleJob } from '@/lib/subtitle-job';
 import { getAuthUserId, authErrorBody, beginSync, endSyncSuccess, endSyncFail, FEATURES } from '@/lib/credit/sync-settle';
+import { checkFairUse } from '@/lib/fairuse-quota';
 
 export const runtime = 'nodejs';
 export const maxDuration = 60;
@@ -15,7 +16,7 @@ export async function POST(req: NextRequest) {
   let creditCtx: { jobId: string; usageId: string; estimated: number; userId: string } | null = null;
   try {
     const auth = await getAuthUserId();
-    if (!auth) return NextResponse.json({ ok: false, code: 'auth_required', error: '请先登录后再使用该功能。登录后新用户可获赠 500 免费积分。' }, { status: 401 });
+    if (!auth) return NextResponse.json({ ok: false, code: 'auth_required', error: '请先登录后再使用该功能。免费注册解锁双倍每日额度。' }, { status: 401 });
     const userId = auth.userId;
     // 身份：优先登录态（cookie session），否则 guest cookie
     const guestSessionId: string | null = null;
@@ -43,6 +44,12 @@ export async function POST(req: NextRequest) {
     }
     if (cues.length > MAX_CUES) {
       return NextResponse.json({ ok: false, error: `字幕条目过多（${cues.length} 条，上限 ${MAX_CUES} 条）。` }, { status: 400 });
+    }
+
+    // B2 公平使用双阈值（登录：10 文件/日硬阈值，软阈值打点）
+    const fu = await checkFairUse({ userId, clientKey });
+    if (!fu.ok) {
+      return NextResponse.json({ ok: false, code: 'fair_use_limit_reached', error: fu.message }, { status: 429 });
     }
 
     const taskId = 'sub_' + Date.now().toString(36) + Math.random().toString(36).slice(2, 8);

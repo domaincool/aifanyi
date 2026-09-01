@@ -9,6 +9,7 @@ import { parsePdf } from '@/lib/pdf/parser';
 import { createPdfJob, cleanupExpiredPdfJobs } from '@/lib/pdf/job';
 import { startPdfJob } from '@/lib/pdf/translate';
 import { checkGlobalDailyCap } from '@/lib/pdf/quota';
+import { checkFairUse } from '@/lib/fairuse-quota';
 import { PdfError } from '@/lib/pdf/types';
 import { PDF_CONFIG } from '@/lib/pdf/config';
 import { getSessionCookie } from '@/lib/auth/cookie';
@@ -24,7 +25,7 @@ export async function POST(req: NextRequest) {
   let creditCtx: { jobId: string; usageId: string; estimated: number; userId: string } | null = null;
   try {
     const auth = await getAuthUserId();
-    if (!auth) return NextResponse.json({ errorType: 'auth_required', message: '请先登录后再使用该功能。登录后新用户可获赠 500 免费积分。' }, { status: 401 });
+    if (!auth) return NextResponse.json({ errorType: 'auth_required', message: '请先登录后再使用该功能。免费注册解锁双倍每日额度。' }, { status: 401 });
     const userId = auth.userId;
     const form = await req.formData();
     const file = form.get('file');
@@ -54,6 +55,12 @@ export async function POST(req: NextRequest) {
 
     if (!(await checkGlobalDailyCap())) {
       return NextResponse.json({ errorType: 'quota_exceeded', message: '今日服务繁忙，请明天再试。' }, { status: 429 });
+    }
+
+    // B2 公平使用双阈值（登录：10 文件/100 页硬阈值，软阈值打点）
+    const fu = await checkFairUse({ userId, clientKey, pages: doc.pageCount });
+    if (!fu.ok) {
+      return NextResponse.json({ errorType: 'fair_use_limit_reached', message: fu.message }, { status: 429 });
     }
 
     const taskId = `pdf_${Date.now().toString(36)}_${randomUUID().slice(0, 8)}`;

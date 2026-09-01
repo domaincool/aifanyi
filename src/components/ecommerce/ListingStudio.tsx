@@ -102,7 +102,7 @@ export default function ListingStudio({ productId }: { productId: string }) {
       if (data.ok) {
         setGenOpen(false);
         setViewVersion(data.listing.version);
-        showToast(`Listing 已生成（v${data.listing.version}），本次使用 ${data.consumedCredits} 积分`);
+        showToast(`Listing 已生成（v${data.listing.version}）`);
         await loadListings();
       } else if (data.code === 'insufficient') {
         setCreditModal({ estimated: data.estimated ?? 0, available: data.available ?? 0 });
@@ -124,7 +124,7 @@ export default function ListingStudio({ productId }: { productId: string }) {
       });
       const data = await res.json();
       if (data.ok) {
-        showToast(`「${FIELDS.find((f) => f.key === field)?.label}」已重写，本次使用 ${data.consumedCredits} 积分`);
+        showToast(`「${FIELDS.find((f) => f.key === field)?.label}」已重写`);
         await loadListings();
       } else if (data.code === 'insufficient') {
         setCreditModal({ estimated: data.estimated ?? 0, available: data.available ?? 0 });
