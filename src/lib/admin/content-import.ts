@@ -101,10 +101,12 @@ function slugify(s: string): string {
     .replace(/^-+|-+$/g, '');
 }
 
-function modelOf(type: ContentType): 'expressionEntry' | 'sceneEntry' | 'menuEntry' | 'recipeEntry' {
+function modelOf(type: ContentType): 'expressionEntry' | 'sceneEntry' | 'menuEntry' | 'recipeEntry' | 'memeEntry' {
   if (type === 'scene') return 'sceneEntry';
   if (type === 'menu') return 'menuEntry';
   if (type === 'recipe') return 'recipeEntry';
+  // 2026-09-01 运营拍板：slang（俚语/网络梗）统一走 /meme 体系（MemeEntry 表）
+  if (type === 'slang') return 'memeEntry';
   return 'expressionEntry';
 }
 
@@ -177,6 +179,17 @@ function buildData(it: ContentImportItem): any {
       intro: it.intro || null, ingredients: it.ingredients as any, steps: it.steps as any,
       cookTime: it.cookTime || null, difficulty: it.difficulty || null, servings: it.servings ?? null,
       vocab: it.vocab as any, misTranslated: it.misTranslated as any, culture: it.culture || null,
+    };
+  }
+  if (t === 'slang') {
+    // 2026-09-01 运营拍板：slang 统一走 /meme 体系（MemeEntry 表）
+    return {
+      ...base,
+      slug: it.slug || slugify(it.term || ''),
+      term: it.term, lang: it.lang || 'zh-CN',
+      meaning: it.meaning, translation: it.translation,
+      examples: Array.isArray(it.examples) ? it.examples : [],
+      tags: it.tags || [],
     };
   }
   return {
@@ -287,6 +300,14 @@ export async function importContent(input: {
       });
       exist.forEach((e: any) => existingTerms.add(e.type + ':' + e.term));
     }
+    if (m === 'memeEntry') {
+      const terms = its.map((v) => v.item.term || '').filter(Boolean);
+      const exist = await (prisma as any).memeEntry.findMany({
+        where: { term: { in: terms } },
+        select: { term: true },
+      });
+      exist.forEach((e: any) => existingTerms.add('meme:' + e.term));
+    }
     if (m === 'sceneEntry') {
       const keys = its.map((v) => `${v.item.country}:${v.item.kind || 'travel'}:${v.item.scene}`);
       const exist = await (prisma as any).sceneEntry.findMany({
@@ -318,6 +339,7 @@ export async function importContent(input: {
   const finalSlugOf = (it: ContentImportItem, m: string): string => {
     if (it.slug) return it.slug;
     if (m === 'expressionEntry') return slugify(it.term || '');
+    if (m === 'memeEntry') return slugify(it.term || '');
     if (m === 'sceneEntry') return `${it.country}-${it.scene}`;
     if (m === 'menuEntry') return slugify(it.zh || '') || slugify(it.dish || '');
     return slugify(it.zhName || '') || slugify(it.dish || '');
@@ -356,9 +378,17 @@ export async function importContent(input: {
       }
       batchMenuSeen.add(dk);
     }
-    // 词条 term（type 内）
+    // 词条 term（type 内；memeEntry 纯 term 唯一）
     if (m === 'expressionEntry') {
       const tk = it.type + ':' + it.term;
+      if (existingTerms.has(tk)) {
+        if (updateExisting) { toUpdate.push({ item: it, origIdx }); return; }
+        skipped.push({ index: origIdx, key, reason: 'term_exists' });
+        return;
+      }
+    }
+    if (m === 'memeEntry') {
+      const tk = 'meme:' + it.term;
       if (existingTerms.has(tk)) {
         if (updateExisting) { toUpdate.push({ item: it, origIdx }); return; }
         skipped.push({ index: origIdx, key, reason: 'term_exists' });
@@ -427,6 +457,8 @@ export async function importContent(input: {
         let found: any = null;
         if (m === 'expressionEntry') {
           found = await tx[m].findFirst({ where: { type: it.type, term: it.term } });
+        } else if (m === 'memeEntry') {
+          found = await tx[m].findFirst({ where: { term: it.term } });
         } else if (m === 'menuEntry') {
           found = await tx[m].findFirst({ where: { country: it.country, dish: it.dish } });
         } else if (m === 'sceneEntry') {
@@ -439,6 +471,9 @@ export async function importContent(input: {
         if (it.slug && it.slug !== found.slug) {
           if (m === 'menuEntry') {
             const clash = await tx[m].findFirst({ where: { country: it.country, slug: it.slug, id: { not: found.id } } });
+            if (clash) { conflicts.push({ index: -1, key: it.slug, reason: 'slug_exists_on_update' }); continue; }
+          } else if (m === 'memeEntry') {
+            const clash = await tx[m].findFirst({ where: { slug: it.slug, id: { not: found.id } } });
             if (clash) { conflicts.push({ index: -1, key: it.slug, reason: 'slug_exists_on_update' }); continue; }
           } else {
             const clash = await tx[m].findFirst({ where: { slug: it.slug, id: { not: found.id } } });
