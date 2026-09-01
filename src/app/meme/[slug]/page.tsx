@@ -71,6 +71,27 @@ export default async function MemePage({ params }: { params: Promise<{ slug: str
         }) }}
       />
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "QAPage",
+          "mainEntity": {
+            "@type": "Question",
+            "name": m.term + " 用英语怎么说？",
+            "text": m.term + "（" + m.meaning + "）怎么翻译成英语？",
+            "answerCount": 1,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": m.term + "（" + m.meaning + "）的地道英文表达是「" + m.translation + "」。"
+                + (examples.length > 0 ? " 例句：" + examples[0].en + "（" + examples[0].zh + "）。" : "")
+                + " 更多网络用语翻译见爱翻译 aifanyi.com。",
+              "url": "https://aifanyi.com/meme/" + m.slug
+            }
+          }
+        }) }}
+      />
+
       <p style={{ color: 'var(--muted)' }}>{m.meaning}</p>
 
       <div className="translator-box" style={{ maxWidth: 'none' }}>

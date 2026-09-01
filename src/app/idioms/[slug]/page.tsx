@@ -81,7 +81,28 @@ export default async function IdiomPage({ params }: { params: Promise<{ slug: st
         }) }}
       />
 
-      <p style={{ color: 'var(--muted)' }}>{e.meaning}</p>
+            <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "QAPage",
+          "mainEntity": {
+            "@type": "Question",
+            "name": e.term + " 用英语怎么说？",
+            "text": e.term + "（" + e.meaning + "）怎么翻译成英语？",
+            "answerCount": 1,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": e.term + "（" + e.meaning + "）的地道英文表达是「" + e.translation + "」。"
+                + (examples && examples.length > 0 ? " 例句：" + examples[0].en + "（" + examples[0].zh + "）。" : "")
+                + " 更多成语谚语翻译见爱翻译 aifanyi.com。",
+              "url": "https://aifanyi.com/idioms/" + e.slug
+            }
+          }
+        }) }}
+      />
+
+<p style={{ color: 'var(--muted)' }}>{e.meaning}</p>
 
       <div className="translator-box" style={{ maxWidth: 'none' }}>
         <div style={{ fontSize: 13, color: 'var(--muted)' }}>地道表达</div>

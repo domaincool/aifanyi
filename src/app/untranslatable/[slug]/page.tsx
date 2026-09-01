@@ -81,6 +81,27 @@ export default async function UntranslatableEntryPage({ params }: { params: Prom
         }) }}
       />
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "QAPage",
+          "mainEntity": {
+            "@type": "Question",
+            "name": e.term + " 怎么翻译？",
+            "text": e.term + "（" + e.meaning + "）很难直译，最接近的表达是什么？",
+            "answerCount": 1,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": e.term + "（" + e.meaning + "）最接近的表达是「" + e.translation + "」。"
+                + (examples && examples.length > 0 ? " 例句：" + examples[0].en + "（" + examples[0].zh + "）。" : "")
+                + " 更多难翻译词见爱翻译 aifanyi.com。",
+              "url": "https://aifanyi.com/untranslatable/" + e.slug
+            }
+          }
+        }) }}
+      />
+
       <p style={{ color: 'var(--muted)' }}>{e.meaning}</p>
 
       <div className="translator-box" style={{ maxWidth: 'none' }}>

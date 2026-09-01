@@ -185,6 +185,39 @@ export default function PdfTranslatorPage() {
           <div className="pdf-seo-scenario"><h3>{String.fromCodePoint(0x1F4BC)} 跨境电商 Listing / 产品资料</h3><p>竞品详情页翻译、平台政策文档理解。</p></div>
         </div>
 
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "PDF 翻译免费吗？有次数限制吗？",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "当前为免费使用阶段，翻译不收费。为保障所有用户稳定使用，每日有公平使用上限：游客 5 个文件 / 50 页，注册后升至 10 个文件 / 100 页，每日自动重置。合理用量内无需担心限制。"
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "PDF 翻译质量怎么样？",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "默认使用 DeepSeek 主模型翻译（50 段盲测 A 级 98%）。对任意段落不满意，可切换到 GLM / Google 的译文对比，选择最满意的一版。"
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "PDF 文件安全吗？会保存我的 PDF 吗？",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "原始 PDF 翻译完成后即删除，翻译结果 24 小时后自动清理。翻译过程会调用第三方 AI 模型 API（DeepSeek / GLM / Google），上传前页面已明示。"
+                }
+              }
+            ]
+          }) }}
+        />
         <h2>常见问题</h2>
         <div className="pdf-seo-faq">
           <div className="pdf-seo-faq-item"><h3>免费吗？有次数限制吗？</h3><p>当前为免费使用阶段，翻译不收费。为保障所有用户稳定使用，每日有公平使用上限：游客 5 个文件 / 50 页，注册后升至 10 个文件 / 100 页，每日自动重置。合理用量内无需担心限制。</p></div>
