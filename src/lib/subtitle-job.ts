@@ -160,10 +160,4 @@ export async function runSubtitleJob(taskId: string): Promise<void> {
   }
 }
 
-/** 每日积分校验（同 PDF：5 文件/日/IP+UA） */
-export async function checkSubtitleQuota(clientKey: string): Promise<{ ok: boolean; used: number; limit: number }> {
-  const start = new Date();
-  start.setHours(0, 0, 0, 0);
-  const count = await prisma.subtitleJob.count({ where: { clientKey, createdAt: { gte: start } } });
-  return { ok: count < 5, used: count, limit: 5 };
-}
+
