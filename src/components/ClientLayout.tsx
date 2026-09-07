@@ -38,12 +38,42 @@ export default function ClientLayout({ children, serverUser }: { children: React
 
         <a href="/" className="logo">爱翻译<span> · aifanyi.com</span></a>
         <nav>
-          <a href="/voice" className="nav-item">语音翻译</a>
-          <a href="/tools" className="nav-item">翻译工具</a>
-          <a href="/blindtest" className="nav-item">AI翻译擂台</a>
           <div className="nav-mega">
             <button type="button" className="nav-mega-trigger" aria-haspopup="true" aria-expanded="false">
-              语言与世界 <span className="nav-caret">▾</span>
+              翻译 <span className="nav-caret">▾</span>
+            </button>
+            <div className="nav-mega-panel" role="menu">
+              <div className="mega-title">翻译工具</div>
+              <div className="mega-grid">
+                <a role="menuitem" className="mega-item" href="/"><span className="mega-ico">📝</span><span className="mega-body"><b>文本翻译</b><small>多模型对比 · 场景翻译</small></span></a>
+                <a role="menuitem" className="mega-item" href="/voice"><span className="mega-ico">🎙️</span><span className="mega-body"><b>语音翻译</b><small>面对面实时对话</small></span></a>
+                <a role="menuitem" className="mega-item" href="/tools/pdf-translator"><span className="mega-ico">📄</span><span className="mega-body"><b>PDF 翻译</b><small>双语对照阅读</small></span></a>
+                <a role="menuitem" className="mega-item" href="/tools/image-translator"><span className="mega-ico">🖼️</span><span className="mega-body"><b>图片翻译</b><small>截图 · 菜单 · 路牌</small></span></a>
+                <a role="menuitem" className="mega-item" href="/tools/subtitle-translator"><span className="mega-ico">🎬</span><span className="mega-body"><b>字幕翻译</b><small>SRT / VTT</small></span></a>
+                <a role="menuitem" className="mega-item" href="/tools/web-translator"><span className="mega-ico">🌐</span><span className="mega-body"><b>网页翻译</b><small>URL 直译整页</small></span></a>
+                <a role="menuitem" className="mega-item" href="/tools/doc-translator"><span className="mega-ico">📘</span><span className="mega-body"><b>Word/PPT</b><small>文档整译</small></span></a>
+                <a role="menuitem" className="mega-item" href="/tools/ai-polish"><span className="mega-ico">✨</span><span className="mega-body"><b>AI 润色</b><small>让表达更自然</small></span></a>
+              </div>
+            </div>
+          </div>
+          <div className="nav-mega">
+            <button type="button" className="nav-mega-trigger" aria-haspopup="true" aria-expanded="false">
+              看懂 <span className="nav-caret">▾</span>
+            </button>
+            <div className="nav-mega-panel" role="menu">
+              <div className="mega-title">理解语言</div>
+              <div className="mega-grid">
+                <a role="menuitem" className="mega-item" href="/meme"><span className="mega-ico">🔥</span><span className="mega-body"><b>网络用语</b><small>热梗 · 缩写 · 黑话</small></span></a>
+                <a role="menuitem" className="mega-item" href="/idioms"><span className="mega-ico">📜</span><span className="mega-body"><b>成语谚语</b><small>画蛇添足 · 亡羊补牢</small></span></a>
+                <a role="menuitem" className="mega-item" href="/untranslatable"><span className="mega-ico">🧩</span><span className="mega-body"><b>难翻译词</b><small>komorebi · wabi-sabi</small></span></a>
+                <a role="menuitem" className="mega-item" href="/expressions"><span className="mega-ico">💬</span><span className="mega-body"><b>词汇与表达</b><small>俚语 · 口语 · 场景表达</small></span></a>
+              </div>
+            </div>
+          </div>
+          <a href="/travel" className="nav-item">表达</a>
+          <div className="nav-mega">
+            <button type="button" className="nav-mega-trigger" aria-haspopup="true" aria-expanded="false">
+              探索世界 <span className="nav-caret">▾</span>
             </button>
             <div className="nav-mega-panel" role="menu">
               <div className="mega-title">探索世界</div>
@@ -85,6 +115,7 @@ export default function ClientLayout({ children, serverUser }: { children: React
               </div>
             </div>
           </div>
+          <a href="/blindtest" className="nav-item">擂台</a>
         </nav>
         <button
           className="hamburger"
@@ -123,10 +154,16 @@ export default function ClientLayout({ children, serverUser }: { children: React
               爱翻译
               <button className="mob-close" aria-label="关闭菜单" onClick={() => setMobileOpen(false)}>✕</button>
             </div>
-            <a className="mob-link" href="/voice" onClick={() => setMobileOpen(false)}>语音翻译</a>
-            <a className="mob-link" href="/tools" onClick={() => setMobileOpen(false)}>翻译工具</a>
-            <a className="mob-link" href="/blindtest" onClick={() => setMobileOpen(false)}>AI翻译擂台</a>
-            <div className="mob-group">语言与世界</div>
+            <div className="mob-group">翻译</div>
+            <a className="mob-link" href="/" onClick={() => setMobileOpen(false)}>📝 文本翻译</a>
+            <a className="mob-link" href="/voice" onClick={() => setMobileOpen(false)}>🎙️ 语音翻译</a>
+            <a className="mob-link" href="/tools" onClick={() => setMobileOpen(false)}>🧰 全部工具</a>
+            <div className="mob-group">看懂</div>
+            <a className="mob-link" href="/meme" onClick={() => setMobileOpen(false)}>🔥 网络用语</a>
+            <a className="mob-link" href="/idioms" onClick={() => setMobileOpen(false)}>📜 成语谚语</a>
+            <a className="mob-link" href="/untranslatable" onClick={() => setMobileOpen(false)}>🧩 难翻译词</a>
+            <a className="mob-link" href="/expressions" onClick={() => setMobileOpen(false)}>💬 词汇与表达</a>
+            <div className="mob-group">探索世界</div>
             <a className="mob-link" href="/recipes" onClick={() => setMobileOpen(false)}>🍜 全球美食 <span className="mob-sub">菜谱 · 菜单</span></a>
             <a className="mob-link" href="/menu" onClick={() => setMobileOpen(false)}>📖 菜单词典 <span className="mob-sub">各国菜单菜名翻译</span></a>
             <a className="mob-link" href="/travel" onClick={() => setMobileOpen(false)}>✈️ 旅行语言 <span className="mob-sub">机场 · 酒店 · 餐厅</span></a>
@@ -159,7 +196,7 @@ export default function ClientLayout({ children, serverUser }: { children: React
           <nav className="footer-cols">
             <div className="footer-col">
               <h4>产品</h4>
-              <a href="/">AI翻译</a>
+              <a href="/">在线翻译</a>
               <a href="/voice">语音翻译</a>
               <a href="/tools">翻译工具</a>
               <a href="/blindtest">AI翻译擂台</a>
