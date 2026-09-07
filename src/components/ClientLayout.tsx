@@ -63,10 +63,10 @@ export default function ClientLayout({ children, serverUser }: { children: React
             <div className="nav-mega-panel" role="menu">
               <div className="mega-title">理解语言</div>
               <div className="mega-grid">
-                <a role="menuitem" className="mega-item" href="/meme"><span className="mega-ico">🔥</span><span className="mega-body"><b>网络用语</b><small>热梗 · 缩写 · 黑话</small></span></a>
-                <a role="menuitem" className="mega-item" href="/idioms"><span className="mega-ico">📜</span><span className="mega-body"><b>成语谚语</b><small>画蛇添足 · 亡羊补牢</small></span></a>
-                <a role="menuitem" className="mega-item" href="/untranslatable"><span className="mega-ico">🧩</span><span className="mega-body"><b>难翻译词</b><small>komorebi · wabi-sabi</small></span></a>
-                <a role="menuitem" className="mega-item" href="/expressions"><span className="mega-ico">💬</span><span className="mega-body"><b>词汇与表达</b><small>俚语 · 口语 · 场景表达</small></span></a>
+                <a role="menuitem" className="mega-item" href="/understand/slang"><span className="mega-ico">🔥</span><span className="mega-body"><b>网络用语与俚语</b><small>热梗 · 缩写 · 黑话</small></span></a>
+                <a role="menuitem" className="mega-item" href="/understand/idioms"><span className="mega-ico">📜</span><span className="mega-body"><b>成语谚语</b><small>画蛇添足 · 亡羊补牢</small></span></a>
+                <a role="menuitem" className="mega-item" href="/understand/dictionary"><span className="mega-ico">🧩</span><span className="mega-body"><b>难翻译词词典</b><small>komorebi · wabi-sabi</small></span></a>
+                <a role="menuitem" className="mega-item" href="/understand/meaning"><span className="mega-ico">💬</span><span className="mega-body"><b>XX 是什么意思</b><small>俚语 · 口语 · 场景表达</small></span></a>
               </div>
             </div>
           </div>

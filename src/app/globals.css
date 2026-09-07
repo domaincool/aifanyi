@@ -1160,3 +1160,10 @@ a.tool-card { text-decoration: none; color: inherit; }
 .nf-btn.primary:hover{filter:brightness(1.1)}
 .nf-hint{color:var(--muted);font-size:12.5px;margin:0}
 .nf-hint a{color:var(--accent2);text-decoration:none}
+
+/* ===== /understand 栏目（V1.0 D9）===== */
+.filter-bar{display:flex;gap:10px;margin:16px 0;max-width:560px}
+.filter-bar input[type=search]{flex:1;padding:11px 14px;border-radius:10px;border:1px solid var(--input-border,var(--border));background:var(--input-bg,var(--panel));color:var(--text);font-size:14.5px}
+.filter-bar input[type=search]:focus{outline:none;border-color:var(--accent)}
+.chip-on{background:var(--accent);border-color:var(--accent);color:#fff}
+.ud-count{font-size:11px;color:var(--muted);margin-left:6px;font-weight:400}
