@@ -2,6 +2,8 @@ import { prisma } from '@/lib/db';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { buildMetadata } from '@/lib/seo';
+import { recordContentView } from '@/lib/metrics/server';
+import { cookies } from 'next/headers';
 
 export const dynamic = 'force-dynamic';
 
@@ -23,6 +25,8 @@ export default async function MemePage({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const m = await prisma.memeEntry.findUnique({ where: { slug } });
   if (!m || m.status !== 'published') notFound();
+  // 埋点（V1.0 D5）：词条页浏览计数 + 触点日志（P5 归因）
+  recordContentView('meme', m.slug, (await cookies()).get('aifanyi_cs')?.value ?? null).catch(() => {});
 
   const examples = (m.examples as { zh: string; en: string }[]) || [];
   const tags = (m.tags as string[]) || [];

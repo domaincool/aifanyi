@@ -3,6 +3,8 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { buildMetadata } from '@/lib/seo';
+import { recordContentView } from '@/lib/metrics/server';
+import { cookies } from 'next/headers';
 
 export const dynamic = 'force-dynamic';
 function safeDecode(s: string): string {
@@ -34,6 +36,8 @@ export default async function IdiomPage({ params }: { params: Promise<{ slug: st
   const slug = safeDecode(rawSlug);
   const e = await prisma.expressionEntry.findFirst({ where: { slug, type: 'idiom' } });
   if (!e || e.status !== 'published') notFound();
+  // 埋点（V1.0 D5）：词条页浏览计数 + 触点日志（P5 归因）
+  recordContentView('idiom', e.slug, (await cookies()).get('aifanyi_cs')?.value ?? null).catch(() => {});
 
   const multiLang = (e.multiLang as { lang: string; text: string }[] | null) || null;
   const tags = (e.tags as string[]) || [];

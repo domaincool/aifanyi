@@ -935,3 +935,47 @@ model RecipeEntry {
   @@index([status, popularity]) // 热榜
   @@index([country]) // 相关菜推荐
 }
+
+// ═══════════════════ 内容埋点（流量增长 V1.0 Week1 D5：九事件 + P5 归因）═══════════════════
+// 日聚合指标：每 (contentType, contentId, 日) 一行，upsert 计数
+model ContentMetrics {
+  id               String   @id @default(cuid())
+  contentType      String   // meme | untranslatable | idiom | scene | menu | recipe | translate | tool | ...
+  contentId        String   // slug 或路由标识
+  date             DateTime @db.Date
+  pageviews        Int      @default(0)
+  toolClicks       Int      @default(0)
+  signups          Int      @default(0)
+  firstTranslations Int     @default(0)
+  creditConsumed   Int      @default(0)
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  @@unique([contentType, contentId, date])
+  @@index([contentType, date])
+}
+
+// 内容触点日志（P5 First/Last Touch 归因：content_session_id 首末触点回填）
+model ContentTouch {
+  id                String   @id @default(cuid())
+  contentSessionId  String   // 匿名会话 cookie（aifanyi_cs）
+  contentType       String
+  contentId         String
+  touchedAt         DateTime @default(now())
+
+  @@index([contentSessionId, touchedAt])
+  @@index([contentType, contentId])
+}
+
+// 站内搜索/AI 问答日志（P2：search_query / search_count / zero_result_query / ai_answer_used）
+model SearchQueryLog {
+  id            String   @id @default(cuid())
+  query         String
+  resultCount   Int      @default(0)
+  zeroResult    Boolean  @default(false)
+  aiAnswerUsed  Boolean  @default(false)
+  searchedAt    DateTime @default(now())
+
+  @@index([query])
+  @@index([searchedAt])
+}
