@@ -178,15 +178,15 @@ export default async function HomePage() {
       <section className="home-block" id="blindtest-home">
         <h2 className="section-title">⚔️ AI 翻译擂台</h2>
         <p className="block-lead">
-          同一句话，多款 AI 谁译得最好？<a href="/blindtest" style={{ color: 'var(--accent2)' }}>去投票 →</a>
+          同一句话，多款 AI 谁译得最好？<a href="/arena" style={{ color: 'var(--accent2)' }}>去投票 →</a>
         </p>
         <div className="tools-grid">
-          <a className="tool-card" href="/blindtest">
+          <a className="tool-card" href="/arena">
             <div className="tool-emoji">🆚</div>
             <h2>盲测投票</h2>
             <p>三款 AI 匿名译文，选出最地道的一句</p>
           </a>
-          <a className="tool-card" href="/blindtest">
+          <a className="tool-card" href="/arena">
             <div className="tool-emoji">📊</div>
             <h2>擂台榜单</h2>
             <p>看 DeepSeek / GLM / Google 的实时得票</p>

@@ -10,7 +10,7 @@ export const metadata: Metadata = buildMetadata({
 });
 
 export default function CultureIndexPage() {
-  const cards = [{"href":"/blindtest","title":"AI 翻译擂台","desc":"多模型匿名译文对比，玩着学翻译"},{"href":"/meme","title":"网络用语","desc":"了解一国文化，从热梗开始"},{"href":"/updates","title":"上线公告","desc":"爱翻译的新功能与内容更新"}];
+  const cards = [{"href":"/arena","title":"AI 翻译擂台","desc":"多模型匿名译文对比，玩着学翻译"},{"href":"/meme","title":"网络用语","desc":"了解一国文化，从热梗开始"},{"href":"/updates","title":"上线公告","desc":"爱翻译的新功能与内容更新"}];
   return (
     <div>
       <section className="hero">

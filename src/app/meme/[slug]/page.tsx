@@ -143,7 +143,7 @@ export default async function MemePage({ params }: { params: Promise<{ slug: str
         </p>
       )}
       <p style={{ marginTop: 24, color: 'var(--muted)' }}>
-        还想翻别的梗？试试首页的<a href="/" style={{ color: 'var(--accent2)' }}>翻译框</a>，或去<a href="/blindtest" style={{ color: 'var(--accent2)' }}>盲测擂台</a>看看哪家 AI 最强。
+        还想翻别的梗？试试首页的<a href="/" style={{ color: 'var(--accent2)' }}>翻译框</a>，或去<a href="/arena" style={{ color: 'var(--accent2)' }}>盲测擂台</a>看看哪家 AI 最强。
       </p>
     </>
   );

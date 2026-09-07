@@ -110,12 +110,12 @@ export default function ClientLayout({ children, serverUser }: { children: React
                   <span className="mega-body"><b>语言与文化</b><small>语言冷知识 · 文化差异 · 词源</small></span>
                 </a>
                 <div className="mega-links">
-                  <a href="/blindtest">AI 翻译擂台</a>
+                  <a href="/arena">AI 翻译擂台</a>
                 </div>
               </div>
             </div>
           </div>
-          <a href="/blindtest" className="nav-item">擂台</a>
+          <a href="/arena" className="nav-item">擂台</a>
         </nav>
         <button
           className="hamburger"
@@ -199,7 +199,7 @@ export default function ClientLayout({ children, serverUser }: { children: React
               <a href="/">在线翻译</a>
               <a href="/voice">语音翻译</a>
               <a href="/tools">翻译工具</a>
-              <a href="/blindtest">AI翻译擂台</a>
+              <a href="/arena">AI翻译擂台</a>
             </div>
             <div className="footer-col">
               <h4>工具</h4>

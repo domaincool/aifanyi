@@ -13,7 +13,7 @@ export default function NotFound() {
           <Link href="/meme" className="nf-btn">逛网络用语库</Link>
           <Link href="/tools" className="nf-btn">用翻译工具</Link>
         </div>
-        <p className="nf-hint">热门：PDF 翻译 · 字幕翻译 · 英语翻译成中文 · <Link href="/blindtest">盲测擂台</Link></p>
+        <p className="nf-hint">热门：PDF 翻译 · 字幕翻译 · 英语翻译成中文 · <Link href="/arena">盲测擂台</Link></p>
       </div>
     </div>
   );
