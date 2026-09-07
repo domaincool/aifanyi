@@ -112,18 +112,28 @@ model Vote {
 
 // ═══════════════════ 梗翻译 ═══════════════════
 model MemeEntry {
-  id          String   @id @default(cuid())
-  term        String   @unique
-  slug        String   @unique
-  lang        String   @default("zh-CN")
-  meaning     String
-  translation String
-  examples    Json
-  tags        String[]
-  popularity  Int      @default(0)
-  status      String   @default("published")
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  id               String    @id @default(cuid())
+  term             String    @unique
+  slug             String    @unique
+  lang             String    @default("zh-CN")
+  meaning          String
+  translation      String
+  examples         Json
+  tags             String[]
+  popularity       Int       @default(0)
+  status           String    @default("published")
+  // ── 流量增长 V1.0 D8：内容系统增量字段（蓝图 4.1）──
+  shortAnswer      String? // 一句话快答（P4：推荐 40-100 字符，质量优先）——GEO 首屏快答位
+  definition       String? // 详解定义（区别于 meaning 的语境分层）
+  qualityScore     Int? // §51 六维加权（≥80 进发布队列，P6 三分法：<70 不发 / 70-79 人审）
+  seoScore         Int? // SEO 技术分（可后置计算）
+  publishedAt      DateTime? // 发布时间戳（回填 = updatedAt 初始值）
+  searchIntentType String? // P6：definition|meaning|translation|how_to_say|hidden_meaning|comparison|cultural_context
+  usage            String? // 使用场景（对齐 ExpressionEntry）
+  // status 七态（V1.0 4.4）：draft | ai_generated | human_review | approved | published | needs_update | archived
+  // 现网数据 99% published；导入默认 published 保持不变（4.4.1：默认态切换属运营通告后的独立变更）
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
 }
 
 // ═══════════════════ 文本翻译任务 ═══════════════════
@@ -826,27 +836,37 @@ model RechargeOrder {
 // ═══════════════════ 语言与世界 · 词条类（/idioms /untranslatable + 未来 /slang /expressions /food）═══════════════════
 // 一套参数化模板跑多栏目；type 决定路由与页面模板分支；slug 全表唯一（跨 type 天然隔离）
 model ExpressionEntry {
-  id            String   @id @default(cuid())
-  term          String
-  slug          String   @unique
-  type          String   @default("idiom") // idiom|slang|untranslatable|food|expression（导入层必填白名单校验）
-  lang          String   @default("zh-CN") // 词条源语言
-  meaning       String
-  translation   String
-  pinyin        String? // 原文拼音/罗马音
-  literal       String? // 直译
-  examples      Json? // [{zh, en}] 与 MemeEntry.examples 对齐
-  usage         String? // 使用场景
-  note          String? // 兜底备注（无专属字段时）
-  source        String? // 出处
-  culture       String? // 文化背景
-  misTranslated Json? // [{wrong, right, why?}] 常见误译 + 正解
-  multiLang     Json? // [{lang, text}] 多语言对照
-  tags          String[] @default([])
-  popularity    Int      @default(0)
-  status        String   @default("published")
-  createdAt     DateTime @default(now())
-  updatedAt     DateTime @updatedAt
+  id               String    @id @default(cuid())
+  term             String
+  slug             String    @unique
+  type             String    @default("idiom") // idiom|slang|untranslatable|food|expression（导入层必填白名单校验）
+  lang             String    @default("zh-CN") // 词条源语言
+  meaning          String
+  translation      String
+  pinyin           String? // 原文拼音/罗马音
+  literal          String? // 直译
+  examples         Json? // [{zh, en}] 与 MemeEntry.examples 对齐
+  usage            String? // 使用场景
+  note             String? // 兜底备注（无专属字段时）
+  source           String? // 出处
+  culture          String? // 文化背景
+  misTranslated    Json? // [{wrong, right, why?}] 常见误译 + 正解
+  multiLang        Json? // [{lang, text}] 多语言对照
+  tags             String[]  @default([])
+  popularity       Int       @default(0)
+  status           String    @default("published")
+  // ── 流量增长 V1.0 D8：内容系统增量字段（蓝图 4.1）──
+  shortAnswer      String? // 一句话快答（P4：推荐 40-100 字符，质量优先）——GEO 首屏快答位
+  definition       String? // 详解定义（区别于 meaning 的语境分层）
+  qualityScore     Int? // §51 六维加权（≥80 进发布队列，P6 三分法：<70 不发 / 70-79 人审）
+  seoScore         Int? // SEO 技术分（可后置计算）
+  publishedAt      DateTime? // 发布时间戳（回填 = updatedAt 初始值）
+  searchIntentType String? // P6：definition|meaning|translation|how_to_say|hidden_meaning|comparison|cultural_context
+
+  // status 七态（V1.0 4.4）：draft | ai_generated | human_review | approved | published | needs_update | archived
+  // 现网数据 99% published；导入默认 published 保持不变（4.4.1：默认态切换属运营通告后的独立变更）
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   @@unique([type, term]) // 导入查重维度（type 内 term 唯一；同词跨 type 合法）
   @@index([type, status]) // 栏目列表
@@ -856,23 +876,33 @@ model ExpressionEntry {
 // ═══════════════════ 场景类（/travel/{country}/{scene} · /life/{country}/{scene}）═══════════════════
 // slug = `${country}-${scene}`（导入时自动生成）；country 用 ISO 英文风格（japan/korea/...）
 model SceneEntry {
-  id         String   @id @default(cuid())
-  slug       String   @unique
-  country    String // japan | korea | thailand | france | italy | ...
-  lang       String // ja | ko | th | fr | it | ...
-  scene      String // URL 末段：order-coffee
-  kind       String   @default("travel") // travel|life
-  title      String
-  intro      String
-  phrases    Json // [{native, zh, pronounce, polite}] 表达表数组（必填）
-  tips       Json? // 提示
-  cautions   Json? // 注意事项（模板需求）
-  dialogue   Json? // 实用对话（[{text, zh}]）
-  related    Json? // 运营策展内链（[{slug, title}]，满足 ≥3 出站内链铁律）
-  popularity Int      @default(0)
-  status     String   @default("published")
-  createdAt  DateTime @default(now())
-  updatedAt  DateTime @updatedAt
+  id               String    @id @default(cuid())
+  slug             String    @unique
+  country          String // japan | korea | thailand | france | italy | ...
+  lang             String // ja | ko | th | fr | it | ...
+  scene            String // URL 末段：order-coffee
+  kind             String    @default("travel") // travel|life
+  title            String
+  intro            String
+  phrases          Json // [{native, zh, pronounce, polite}] 表达表数组（必填）
+  tips             Json? // 提示
+  cautions         Json? // 注意事项（模板需求）
+  dialogue         Json? // 实用对话（[{text, zh}]）
+  related          Json? // 运营策展内链（[{slug, title}]，满足 ≥3 出站内链铁律）
+  popularity       Int       @default(0)
+  status           String    @default("published")
+  // ── 流量增长 V1.0 D8：内容系统增量字段（蓝图 4.1）──
+  shortAnswer      String? // 一句话快答（P4：推荐 40-100 字符，质量优先）——GEO 首屏快答位
+  definition       String? // 详解定义（区别于 meaning 的语境分层）
+  qualityScore     Int? // §51 六维加权（≥80 进发布队列，P6 三分法：<70 不发 / 70-79 人审）
+  seoScore         Int? // SEO 技术分（可后置计算）
+  publishedAt      DateTime? // 发布时间戳（回填 = updatedAt 初始值）
+  searchIntentType String? // P6：definition|meaning|translation|how_to_say|hidden_meaning|comparison|cultural_context
+
+  // status 七态（V1.0 4.4）：draft | ai_generated | human_review | approved | published | needs_update | archived
+  // 现网数据 99% published；导入默认 published 保持不变（4.4.1：默认态切换属运营通告后的独立变更）
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   @@unique([country, kind, scene]) // 导入查重维度（travel/life 同场景合法共存）
   @@index([country, kind]) // 国家聚合页
@@ -882,22 +912,32 @@ model SceneEntry {
 // ═══════════════════ 菜单词典（/menu/{country}/{slug} 双段路由）═══════════════════
 // slug 为菜名罗马化/英文（不含国家前缀）；country+dish 唯一 → 全球同名菜多国合法共存
 model MenuEntry {
-  id          String   @id @default(cuid())
-  slug        String
-  country     String // japan | korea | thailand | france | italy | ...
-  lang        String // ja | ko | th | fr | it | ...
-  dish        String // 原文菜名（native script）
-  romanized   String? // 罗马音/转写（多国通用）
-  zh          String // 中文菜名
-  en          String? // 英文名（可空）
-  description String? // 说明
-  category    String? // 类别（主菜/小吃/甜品/饮品...）
-  pairings    Json? // 搭配 [{name, zh?, note?}]
-  tags        String[] @default([])
-  popularity  Int      @default(0)
-  status      String   @default("published")
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  id               String    @id @default(cuid())
+  slug             String
+  country          String // japan | korea | thailand | france | italy | ...
+  lang             String // ja | ko | th | fr | it | ...
+  dish             String // 原文菜名（native script）
+  romanized        String? // 罗马音/转写（多国通用）
+  zh               String // 中文菜名
+  en               String? // 英文名（可空）
+  description      String? // 说明
+  category         String? // 类别（主菜/小吃/甜品/饮品...）
+  pairings         Json? // 搭配 [{name, zh?, note?}]
+  tags             String[]  @default([])
+  popularity       Int       @default(0)
+  status           String    @default("published")
+  // ── 流量增长 V1.0 D8：内容系统增量字段（蓝图 4.1）──
+  shortAnswer      String? // 一句话快答（P4：推荐 40-100 字符，质量优先）——GEO 首屏快答位
+  definition       String? // 详解定义（区别于 meaning 的语境分层）
+  qualityScore     Int? // §51 六维加权（≥80 进发布队列，P6 三分法：<70 不发 / 70-79 人审）
+  seoScore         Int? // SEO 技术分（可后置计算）
+  publishedAt      DateTime? // 发布时间戳（回填 = updatedAt 初始值）
+  searchIntentType String? // P6：definition|meaning|translation|how_to_say|hidden_meaning|comparison|cultural_context
+
+  // status 七态（V1.0 4.4）：draft | ai_generated | human_review | approved | published | needs_update | archived
+  // 现网数据 99% published；导入默认 published 保持不变（4.4.1：默认态切换属运营通告后的独立变更）
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   @@unique([country, slug]) // 双段路由唯一性
   @@unique([country, dish]) // 导入查重维度（非全局 dish）
@@ -909,27 +949,37 @@ model MenuEntry {
 // ═══════════════════ 菜谱（/recipes/{slug} 单段路由）═══════════════════
 // category 必加（「/recipes 按类型聚合」需要）；跨国产同名菜 slug 加国家词缀（japanese-curry）
 model RecipeEntry {
-  id            String   @id @default(cuid())
-  slug          String   @unique
-  dish          String // 中文菜名
-  zhName        String? // 中文菜名（导入契约字段，兼容运营投递）
-  originalName  String? // 原文菜名（native script）
-  enName        String? // 英文菜名
-  country       String? // 菜系来源（japan/korea/...）
-  category      String? // 类型（主食/汤/小吃/甜品...）
-  intro         String?
-  ingredients   Json // [{name, zh?, en?, amount}] 食材（必填）
-  steps         Json // [{text, translation?}] 步骤（必填）
-  cookTime      String? // "30分钟" / "1小时30分"
-  difficulty    String? // 简单|中等|困难（导入层白名单）
-  servings      Int? // 可选：几人份
-  vocab         Json? // 烹饪词汇 [{native, zh, en?, note?}]
-  misTranslated Json? // [{wrong, right, why?}] 易误译
-  culture       String? // 文化背景
-  popularity    Int      @default(0)
-  status        String   @default("published")
-  createdAt     DateTime @default(now())
-  updatedAt     DateTime @updatedAt
+  id               String    @id @default(cuid())
+  slug             String    @unique
+  dish             String // 中文菜名
+  zhName           String? // 中文菜名（导入契约字段，兼容运营投递）
+  originalName     String? // 原文菜名（native script）
+  enName           String? // 英文菜名
+  country          String? // 菜系来源（japan/korea/...）
+  category         String? // 类型（主食/汤/小吃/甜品...）
+  intro            String?
+  ingredients      Json // [{name, zh?, en?, amount}] 食材（必填）
+  steps            Json // [{text, translation?}] 步骤（必填）
+  cookTime         String? // "30分钟" / "1小时30分"
+  difficulty       String? // 简单|中等|困难（导入层白名单）
+  servings         Int? // 可选：几人份
+  vocab            Json? // 烹饪词汇 [{native, zh, en?, note?}]
+  misTranslated    Json? // [{wrong, right, why?}] 易误译
+  culture          String? // 文化背景
+  popularity       Int       @default(0)
+  status           String    @default("published")
+  // ── 流量增长 V1.0 D8：内容系统增量字段（蓝图 4.1）──
+  shortAnswer      String? // 一句话快答（P4：推荐 40-100 字符，质量优先）——GEO 首屏快答位
+  definition       String? // 详解定义（区别于 meaning 的语境分层）
+  qualityScore     Int? // §51 六维加权（≥80 进发布队列，P6 三分法：<70 不发 / 70-79 人审）
+  seoScore         Int? // SEO 技术分（可后置计算）
+  publishedAt      DateTime? // 发布时间戳（回填 = updatedAt 初始值）
+  searchIntentType String? // P6：definition|meaning|translation|how_to_say|hidden_meaning|comparison|cultural_context
+
+  // status 七态（V1.0 4.4）：draft | ai_generated | human_review | approved | published | needs_update | archived
+  // 现网数据 99% published；导入默认 published 保持不变（4.4.1：默认态切换属运营通告后的独立变更）
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   @@index([category, status]) // 按类型聚合（必加）
   @@index([status, popularity]) // 热榜
@@ -939,17 +989,17 @@ model RecipeEntry {
 // ═══════════════════ 内容埋点（流量增长 V1.0 Week1 D5：九事件 + P5 归因）═══════════════════
 // 日聚合指标：每 (contentType, contentId, 日) 一行，upsert 计数
 model ContentMetrics {
-  id               String   @id @default(cuid())
-  contentType      String   // meme | untranslatable | idiom | scene | menu | recipe | translate | tool | ...
-  contentId        String   // slug 或路由标识
-  date             DateTime @db.Date
-  pageviews        Int      @default(0)
-  toolClicks       Int      @default(0)
-  signups          Int      @default(0)
-  firstTranslations Int     @default(0)
-  creditConsumed   Int      @default(0)
-  createdAt        DateTime @default(now())
-  updatedAt        DateTime @updatedAt
+  id                String   @id @default(cuid())
+  contentType       String // meme | untranslatable | idiom | scene | menu | recipe | translate | tool | ...
+  contentId         String // slug 或路由标识
+  date              DateTime @db.Date
+  pageviews         Int      @default(0)
+  toolClicks        Int      @default(0)
+  signups           Int      @default(0)
+  firstTranslations Int      @default(0)
+  creditConsumed    Int      @default(0)
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
 
   @@unique([contentType, contentId, date])
   @@index([contentType, date])
@@ -957,11 +1007,11 @@ model ContentMetrics {
 
 // 内容触点日志（P5 First/Last Touch 归因：content_session_id 首末触点回填）
 model ContentTouch {
-  id                String   @id @default(cuid())
-  contentSessionId  String   // 匿名会话 cookie（aifanyi_cs）
-  contentType       String
-  contentId         String
-  touchedAt         DateTime @default(now())
+  id               String   @id @default(cuid())
+  contentSessionId String // 匿名会话 cookie（aifanyi_cs）
+  contentType      String
+  contentId        String
+  touchedAt        DateTime @default(now())
 
   @@index([contentSessionId, touchedAt])
   @@index([contentType, contentId])
@@ -969,13 +1019,49 @@ model ContentTouch {
 
 // 站内搜索/AI 问答日志（P2：search_query / search_count / zero_result_query / ai_answer_used）
 model SearchQueryLog {
-  id            String   @id @default(cuid())
-  query         String
-  resultCount   Int      @default(0)
-  zeroResult    Boolean  @default(false)
-  aiAnswerUsed  Boolean  @default(false)
-  searchedAt    DateTime @default(now())
+  id           String   @id @default(cuid())
+  query        String
+  resultCount  Int      @default(0)
+  zeroResult   Boolean  @default(false)
+  aiAnswerUsed Boolean  @default(false)
+  searchedAt   DateTime @default(now())
 
   @@index([query])
   @@index([searchedAt])
+}
+
+// ═══════════════════ 知识图谱（流量增长 V1.0 D8：蓝图 4.2）═══════════════════
+// 三元组：fromTerm → relation → toTerm；跨表词条用 refType:refId 引用（不建 FK，跨 5 表松耦合）
+model ContentRelation {
+  id        String   @id @default(cuid())
+  fromType  String // meme | expression | scene | menu | recipe
+  fromId    String // 词条 id（或 slug 稳定标识）
+  fromTerm  String // 冗余 term（查询展示用）
+  relation  String // synonym|antonym|similar|derived_from|used_with|related_meme|related_scene|translation|cultural_equivalent
+  toType    String
+  toId      String
+  toTerm    String
+  weight    Int      @default(1) // 共现/人审加权
+  source    String   @default("tags") // tags|manual|import|graph
+  createdAt DateTime @default(now())
+
+  @@unique([fromType, fromId, relation, toType, toId])
+  @@index([fromType, fromId])
+  @@index([toType, toId])
+  @@index([relation])
+}
+
+// 来源记录（spec §48：meme/流行语/文化内容尽量记录来源）
+model ContentSource {
+  id         String   @id @default(cuid())
+  refType    String // meme | expression | scene | menu | recipe | relation
+  refId      String
+  sourceUrl  String?
+  sourceName String? // 站点名/词典名/社区
+  sourceDate String? // 原始出现时间（字符串：2023-10 / 2024 春）
+  sourceType String // dictionary | forum | social | news | academic | official | user
+  note       String?
+  createdAt  DateTime @default(now())
+
+  @@index([refType, refId])
 }
