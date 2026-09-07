@@ -1,8 +1,18 @@
 import { prisma } from '@/lib/db';
+import { buildMetadata } from '@/lib/seo';
+import type { Metadata } from 'next';
 
 export const dynamic = 'force-dynamic';
 
 /** 盲测擂台：最近盲测题列表 */
+export const metadata: Metadata = buildMetadata({
+  path: '/blindtest',
+  title: 'AI翻译盲测擂台 · 哪家AI翻译更准? | 爱翻译',
+  description: '同一句话交给三个AI翻译，匿名投票选出最自然译文。真实盲测数据：150次评级总A级81.3%，DeepSeek A级98%。爱翻译盲测擂台。',
+  keywords: ['AI翻译对比', '翻译盲测', '哪家AI翻译好', 'DeepSeek翻译', 'AI翻译评测'],
+  ogType: 'list',
+});
+
 export default async function BlindtestListPage() {
   const list = await prisma.blindtest.findMany({
       where: { status: 'published' },

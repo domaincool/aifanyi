@@ -2,6 +2,7 @@ import { prisma } from '@/lib/db';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { buildMetadata } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
 function safeDecode(s: string): string {
@@ -19,10 +20,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const slug = safeDecode(rawSlug);
   const e = await prisma.expressionEntry.findFirst({ where: { slug, type: 'untranslatable' } }).catch(() => null);
   if (!e || e.status !== 'published') return { title: '难翻译词 | 爱翻译 aifanyi.com' };
-  return {
+  return buildMetadata({
+    path: `/untranslatable/${e.slug}`,
     title: `${e.term} 怎么翻译？${e.term} → ${e.translation} | 爱翻译`,
     description: `${e.term}（${e.meaning}）很难直译成中文——看它最接近的表达「${e.translation}」与用法。爱翻译 · AI翻译。`,
-  };
+    ogType: 'content',
+    ogTitle: `${e.term} 怎么翻译？→ ${e.translation}`,
+  });
 }
 
 export default async function UntranslatableEntryPage({ params }: { params: Promise<{ slug: string }> }) {

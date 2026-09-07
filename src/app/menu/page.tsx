@@ -4,18 +4,35 @@ import { countryName } from '@/lib/content/locales';
 import type { Metadata } from 'next';
 import { spStr, spPage } from '@/lib/content/sp-param';
 import { Prisma } from '@prisma/client';
+import { canonicalUrl, SITE_URL } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
 
-const metadataBase = {
+const metadataBase = (canonical: string) => ({
   title: '菜单词典 · 各国菜单菜名翻译 | 爱翻译',
   description: '菜单词典栏目：日韩泰法意各国菜单菜名翻译——看不懂的菜名，拍下来就能翻。',
-};
+  alternates: { canonical },
+  openGraph: {
+    title: '菜单词典 · 各国菜单菜名翻译 | 爱翻译',
+    description: '菜单词典栏目：日韩泰法意各国菜单菜名翻译——看不懂的菜名，拍下来就能翻。',
+    url: canonical,
+    siteName: '爱翻译 aifanyi.com',
+    locale: 'zh_CN',
+    type: 'website',
+    images: [{ url: SITE_URL + '/og-image.png', width: 1200, height: 630, alt: '爱翻译 aifanyi.com' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '菜单词典 · 各国菜单菜名翻译 | 爱翻译',
+    description: '菜单词典栏目：日韩泰法意各国菜单菜名翻译——看不懂的菜名，拍下来就能翻。',
+    images: [SITE_URL + '/og-image.png'],
+  },
+});
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }): Promise<Metadata> {
   const sp = await searchParams;
   const hasFilter = !!(spStr(sp.q) || spStr(sp.country) || spPage(sp.page) > 1);
-  return { ...metadataBase, robots: hasFilter ? { index: false, follow: true } : undefined };
+  return { ...metadataBase(canonicalUrl('/menu')), robots: hasFilter ? { index: false, follow: true } : undefined };
 }
 
 const PAGE_SIZE = 48;

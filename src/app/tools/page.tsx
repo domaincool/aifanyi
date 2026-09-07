@@ -1,10 +1,13 @@
 import type { Metadata } from 'next';
+import { buildMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: '翻译工具 — 一站式 AI 翻译工具 | 爱翻译',
-  description: '爱翻译翻译工具：PDF 翻译、图片翻译、字幕翻译、网页翻译、Word/PPT 翻译、AI 润色。不管是一句话、一份 PDF，还是一整段视频字幕，都能交给 AI。',
-  keywords: ['PDF翻译', '图片翻译', '字幕翻译', '网页翻译', 'Word翻译', 'PPT翻译', 'AI润色', 'AI翻译工具'],
-};
+export const metadata: Metadata = buildMetadata({
+  path: '/tools',
+  title: "翻译工具 — 一站式 AI 翻译工具 | 爱翻译",
+  description: "爱翻译翻译工具：PDF 翻译、图片翻译、字幕翻译、网页翻译、Word/PPT 翻译、AI 润色。不管是一句话、一份 PDF，还是一整段视频字幕，都能交给 AI。",
+  keywords: ["PDF翻译","图片翻译","字幕翻译","网页翻译","Word翻译","PPT翻译","AI润色","AI翻译工具"],
+  ogType: 'list',
+});
 
 const tools = [
   {

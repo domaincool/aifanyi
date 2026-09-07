@@ -1,13 +1,21 @@
+import type { Metadata } from 'next';
 import { prisma } from '@/lib/db';
+import { buildListMetadata } from '@/lib/seo';
 import Link from 'next/link';
 
 export const dynamic = 'force-dynamic';
 
-export const metadata = {
-  title: '网络用语翻译大全 · 网络用语英文怎么说 | 爱翻译',
-  description: '网络热梗地道英文翻译大全：职场、恋爱、游戏、影视、网络用语全覆盖。YYDS、破防、班味、情绪价值……一句中文梗，一句地道英文。',
-  keywords: ['网络用语英文', '网络流行语翻译', '网络热梗翻译'],
-};
+export async function generateMetadata({ searchParams }: { searchParams: Promise<{ q?: string; tag?: string; page?: string }> }): Promise<Metadata> {
+  const sp = await searchParams;
+  // P0 修复：参数化列表页（搜索/筛选/翻页）noindex,follow + canonical 收权到 /meme
+  return buildListMetadata({
+    basePath: '/meme',
+    params: sp,
+    title: '网络用语翻译大全 · 网络用语英文怎么说 | 爱翻译',
+    description: '网络热梗地道英文翻译大全：职场、恋爱、游戏、影视、网络用语全覆盖。YYDS、破防、班味、情绪价值……一句中文梗，一句地道英文。',
+    keywords: ['网络用语英文', '网络流行语翻译', '网络热梗翻译'],
+  });
+}
 
 const PAGE_SIZE = 48;
 

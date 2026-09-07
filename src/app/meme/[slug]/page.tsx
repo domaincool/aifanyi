@@ -1,6 +1,7 @@
 import { prisma } from '@/lib/db';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
+import { buildMetadata } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
 
@@ -9,10 +10,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const m = await prisma.memeEntry.findUnique({ where: { slug } }).catch(() => null);
   if (!m || m.status !== 'published') return { title: '网络用语翻译 | 爱翻译 aifanyi.com' };
-  return {
+  return buildMetadata({
+    path: `/meme/${m.slug}`,
     title: `${m.term} 英文怎么说？${m.term} → ${m.translation} | 爱翻译`,
     description: `${m.term}（${m.meaning}）的地道英文表达是「${m.translation}」。含例句与使用场景，爱翻译 · AI翻译。`,
-  };
+    ogType: 'content',
+    ogTitle: `${m.term} 用英语怎么说？→ ${m.translation}`,
+  });
 }
 
 export default async function MemePage({ params }: { params: Promise<{ slug: string }> }) {

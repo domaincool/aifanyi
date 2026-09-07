@@ -4,18 +4,35 @@ import { countryName } from '@/lib/content/locales';
 import type { Metadata } from 'next';
 import { spStr, spPage } from '@/lib/content/sp-param';
 import { Prisma } from '@prisma/client';
+import { canonicalUrl, SITE_URL } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
 
-const metadataBase = {
+const metadataBase = (canonical: string) => ({
   title: '旅行语言 · 出国场景常用语翻译 | 爱翻译',
   description: '旅行语言栏目：点餐、问路、住宿、购物等出国场景常用语对照——日本、韩国、泰国、法国、意大利……',
-};
+  alternates: { canonical },
+  openGraph: {
+    title: '旅行语言 · 出国场景常用语翻译 | 爱翻译',
+    description: '旅行语言栏目：点餐、问路、住宿、购物等出国场景常用语对照——日本、韩国、泰国、法国、意大利……',
+    url: canonical,
+    siteName: '爱翻译 aifanyi.com',
+    locale: 'zh_CN',
+    type: 'website',
+    images: [{ url: SITE_URL + '/og-image.png', width: 1200, height: 630, alt: '爱翻译 aifanyi.com' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '旅行语言 · 出国场景常用语翻译 | 爱翻译',
+    description: '旅行语言栏目：点餐、问路、住宿、购物等出国场景常用语对照——日本、韩国、泰国、法国、意大利……',
+    images: [SITE_URL + '/og-image.png'],
+  },
+});
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }): Promise<Metadata> {
   const sp = await searchParams;
   const hasFilter = !!(spStr(sp.q) || spStr(sp.country) || spPage(sp.page) > 1);
-  return { ...metadataBase, robots: hasFilter ? { index: false, follow: true } : undefined };
+  return { ...metadataBase(canonicalUrl('/travel')), robots: hasFilter ? { index: false, follow: true } : undefined };
 }
 
 const PAGE_SIZE = 48;

@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
+import { buildMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: '隐私政策 - 爱翻译 aifanyi.com',
-  description: '爱翻译 aifanyi.com 的隐私政策：我们如何收集、使用和保护您的信息。',
-  robots: { index: false, follow: false },
-};
+export const metadata: Metadata = buildMetadata({
+  path: '/privacy',
+  title: "隐私政策 - 爱翻译 aifanyi.com",
+  description: "爱翻译 aifanyi.com 的隐私政策：我们如何收集、使用和保护您的信息。",
+  ogType: 'list',
+});
 
 export default function PrivacyPage() {
   return (

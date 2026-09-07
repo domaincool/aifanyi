@@ -4,18 +4,35 @@ import { countryName } from '@/lib/content/locales';
 import type { Metadata } from 'next';
 import { spStr, spPage } from '@/lib/content/sp-param';
 import { Prisma } from '@prisma/client';
+import { canonicalUrl, SITE_URL } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
 
-const metadataBase = {
+const metadataBase = (canonical: string) => ({
   title: '全球美食菜谱 · 跨语言家常菜怎么做 | 爱翻译',
   description: '全球美食菜谱栏目：各国经典家常菜做法与翻译，食材、步骤、词汇一应俱全——宫保鸡丁、寿喜烧、越南河粉……',
-};
+  alternates: { canonical },
+  openGraph: {
+    title: '全球美食菜谱 · 跨语言家常菜怎么做 | 爱翻译',
+    description: '全球美食菜谱栏目：各国经典家常菜做法与翻译，食材、步骤、词汇一应俱全——宫保鸡丁、寿喜烧、越南河粉……',
+    url: canonical,
+    siteName: '爱翻译 aifanyi.com',
+    locale: 'zh_CN',
+    type: 'website',
+    images: [{ url: SITE_URL + '/og-image.png', width: 1200, height: 630, alt: '爱翻译 aifanyi.com' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '全球美食菜谱 · 跨语言家常菜怎么做 | 爱翻译',
+    description: '全球美食菜谱栏目：各国经典家常菜做法与翻译，食材、步骤、词汇一应俱全——宫保鸡丁、寿喜烧、越南河粉……',
+    images: [SITE_URL + '/og-image.png'],
+  },
+});
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }): Promise<Metadata> {
   const sp = await searchParams;
   const hasFilter = !!(spStr(sp.q) || spStr(sp.category) || spPage(sp.page) > 1);
-  return { ...metadataBase, robots: hasFilter ? { index: false, follow: true } : undefined };
+  return { ...metadataBase(canonicalUrl('/recipes')), robots: hasFilter ? { index: false, follow: true } : undefined };
 }
 
 const PAGE_SIZE = 48;

@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { countryName, langName } from '@/lib/content/locales';
+import { buildMetadata } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
 function safeDecode(s: string): string {
@@ -23,10 +24,13 @@ export async function generateMetadata({ params }: { params: Promise<{ country: 
   const slug = safeDecode(rawSlug);
   const s = await prisma.sceneEntry.findFirst({ where: { country, slug: { in: [slug, country + '-' + slug] }, kind: 'life' } }).catch(() => null);
   if (!s || s.status !== 'published') return { title: '海外生活 | 爱翻译 aifanyi.com' };
-  return {
+  return buildMetadata({
+    path: `/life/${country}/${slug}`,
     title: `${s.title} · ${countryName(country)}海外生活 | 爱翻译`,
     description: `${s.intro || `${s.title}——${countryName(country)}移居留学场景必备用语。`}含${(s.phrases as unknown[] | null) && Array.isArray(s.phrases) ? (s.phrases as unknown[]).length : 0}句实用短语对照，爱翻译 · AI翻译。`,
-  };
+    ogType: 'content',
+    ogTitle: `${s.title} · ${countryName(country)}海外生活`,
+  });
 }
 
 export default async function LifeScenePage({ params }: { params: Promise<{ country: string; slug: string }> }) {

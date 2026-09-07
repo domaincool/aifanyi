@@ -1,9 +1,13 @@
 import Link from 'next/link';
+import { buildMetadata } from '@/lib/seo';
+import type { Metadata } from 'next';
 
-export const metadata = {
-  title: '世界语言 · 日语 · 韩语 · 法语 | 爱翻译',
-  description: '世界语言栏目：日语、韩语、泰语、法语等语言入口聚合，语言冷知识与文化差异。',
-};
+export const metadata: Metadata = buildMetadata({
+  path: '/languages',
+  title: "世界语言 · 日语 · 韩语 · 法语 | 爱翻译",
+  description: "世界语言栏目：日语、韩语、泰语、法语等语言入口聚合，语言冷知识与文化差异。",
+  ogType: 'list',
+});
 
 export default function LanguagesIndexPage() {
   const cards = [{"href":"/languages/vietnamese","title":"越南语","desc":"Tiếng Việt · 越南旅行常用语与菜单词汇"},

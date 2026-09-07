@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { buildMetadata } from '@/lib/seo';
 
 /**
  * 服务条款页（V2.1 · Creem 支付接入就绪版）
@@ -10,11 +11,12 @@ import type { Metadata } from 'next';
  *       该口径为默认值，如运营后续拍板调整公式，仅需改第五节文字，不影响代码。
  */
 
-export const metadata: Metadata = {
-  title: '服务条款 - 爱翻译 aifanyi.com',
-  description: '爱翻译 aifanyi.com 的服务条款与退款政策：使用本服务前请阅读。',
-  robots: { index: false, follow: false },
-};
+export const metadata: Metadata = buildMetadata({
+  path: '/terms',
+  title: "服务条款 - 爱翻译 aifanyi.com",
+  description: "爱翻译 aifanyi.com 的服务条款与退款政策：使用本服务前请阅读。",
+  ogType: 'list',
+});
 
 export default function TermsPage() {
   return (

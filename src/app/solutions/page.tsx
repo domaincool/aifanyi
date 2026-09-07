@@ -1,9 +1,12 @@
 import type { Metadata } from 'next';
+import { buildMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: '解决方案 · 爱翻译 | 按角色选择 AI 翻译与本地化方案',
-  description: '爱翻译解决方案：个人用户、内容创作者、跨境电商、企业、开发者的 AI 翻译与本地化方案。按你的角色找到最适合的翻译工具组合。',
-};
+export const metadata: Metadata = buildMetadata({
+  path: '/solutions',
+  title: "解决方案 · 爱翻译 | 按角色选择 AI 翻译与本地化方案",
+  description: "爱翻译解决方案：个人用户、内容创作者、跨境电商、企业、开发者的 AI 翻译与本地化方案。按你的角色找到最适合的翻译工具组合。",
+  ogType: 'list',
+});
 
 export default function SolutionsPage() {
   return (

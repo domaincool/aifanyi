@@ -4,18 +4,35 @@ import { countryName } from '@/lib/content/locales';
 import type { Metadata } from 'next';
 import { spStr, spPage } from '@/lib/content/sp-param';
 import { Prisma } from '@prisma/client';
+import { canonicalUrl, SITE_URL } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
 
-const metadataBase = {
+const metadataBase = (canonical: string) => ({
   title: '海外生活 · 移居留学场景表达 | 爱翻译',
   description: '海外生活栏目：租房、求职、看病、子女上学等移居留学场景常用语对照——日本、韩国、泰国、法国……',
-};
+  alternates: { canonical },
+  openGraph: {
+    title: '海外生活 · 移居留学场景表达 | 爱翻译',
+    description: '海外生活栏目：租房、求职、看病、子女上学等移居留学场景常用语对照——日本、韩国、泰国、法国……',
+    url: canonical,
+    siteName: '爱翻译 aifanyi.com',
+    locale: 'zh_CN',
+    type: 'website',
+    images: [{ url: SITE_URL + '/og-image.png', width: 1200, height: 630, alt: '爱翻译 aifanyi.com' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '海外生活 · 移居留学场景表达 | 爱翻译',
+    description: '海外生活栏目：租房、求职、看病、子女上学等移居留学场景常用语对照——日本、韩国、泰国、法国……',
+    images: [SITE_URL + '/og-image.png'],
+  },
+});
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }): Promise<Metadata> {
   const sp = await searchParams;
   const hasFilter = !!(spStr(sp.q) || spStr(sp.country) || spPage(sp.page) > 1);
-  return { ...metadataBase, robots: hasFilter ? { index: false, follow: true } : undefined };
+  return { ...metadataBase(canonicalUrl('/life')), robots: hasFilter ? { index: false, follow: true } : undefined };
 }
 
 const PAGE_SIZE = 48;

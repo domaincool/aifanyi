@@ -1,11 +1,14 @@
 import type { Metadata } from 'next';
 import { headers } from 'next/headers';
 import VoiceRouter from '@/components/voice/VoiceRouter';
+import { buildMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: '面对面语音翻译 — 爱翻译 · AI翻译',
-  description: '面对面语音翻译：一方说中文、一方说英文，自动识别并翻译，说一句译一句，适合跨语言交流场景。',
-};
+export const metadata: Metadata = buildMetadata({
+  path: '/voice',
+  title: "面对面语音翻译 — 爱翻译 · AI翻译",
+  description: "面对面语音翻译：一方说中文、一方说英文，自动识别并翻译，说一句译一句，适合跨语言交流场景。",
+  ogType: 'tool',
+});
 
 // 强制按请求动态渲染：极简头部 CSS 保底依赖 SSR
 export const dynamic = 'force-dynamic';

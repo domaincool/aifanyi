@@ -1,9 +1,12 @@
 import type { Metadata } from 'next';
+import { buildMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: '上线公告 — 爱翻译 · AI翻译',
-  description: '爱翻译上线「使用积分」体系：登录即送 500 免费积分，翻译成功才计费，失败自动退回，用量透明可查。',
-};
+export const metadata: Metadata = buildMetadata({
+  path: '/updates',
+  title: "上线公告 — 爱翻译 · AI翻译",
+  description: "爱翻译上线「使用积分」体系：登录即送 500 免费积分，翻译成功才计费，失败自动退回，用量透明可查。",
+  ogType: 'list',
+});
 
 const faqs = [
   {

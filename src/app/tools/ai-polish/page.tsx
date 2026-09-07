@@ -1,11 +1,14 @@
 import type { Metadata } from 'next';
 import PolishClient from './PolishClient';
+import { buildMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: '免费 AI 润色 — 让文字更自然地道 | 爱翻译',
-  description: '爱翻译免费 AI 润色：粘贴译文或草稿，AI 保持原意优化表达，让文字更自然、更地道。支持中英文等 10 种语言，免费使用。',
-  keywords: ['AI润色', '文字润色', '译文优化', '改写', '爱翻译'],
-};
+export const metadata: Metadata = buildMetadata({
+  path: '/tools/ai-polish',
+  title: "免费 AI 润色 — 让文字更自然地道 | 爱翻译",
+  description: "爱翻译免费 AI 润色：粘贴译文或草稿，AI 保持原意优化表达，让文字更自然、更地道。支持中英文等 10 种语言，免费使用。",
+  keywords: ["AI润色","文字润色","译文优化","改写","爱翻译"],
+  ogType: 'tool',
+});
 
 export default function AiPolishPage() {
   return (

@@ -1,13 +1,17 @@
+import { buildMetadata } from '@/lib/seo';
+import type { Metadata } from 'next';
 // 6 个栏目聚合页生成（Mega Menu 落地页，消除 404 死链）
 import { prisma } from '@/lib/db';
 import Link from 'next/link';
 
 export const dynamic = 'force-dynamic';
 
-export const metadata = {
-  title: '词汇与表达 · 成语 · 俚语 · 难翻译词 | 爱翻译',
-  description: '词汇与表达栏目：网络用语翻译（Meme）、成语谚语翻译、俚语、难翻译词（Untranslatable）。一句中文，一句地道外语。',
-};
+export const metadata: Metadata = buildMetadata({
+  path: '/expressions',
+  title: "词汇与表达 · 成语 · 俚语 · 难翻译词 | 爱翻译",
+  description: "词汇与表达栏目：网络用语翻译（Meme）、成语谚语翻译、俚语、难翻译词（Untranslatable）。一句中文，一句地道外语。",
+  ogType: 'list',
+});
 
 export default async function ExpressionsIndexPage() {
   const [memeCount, idiomCount] = await Promise.all([

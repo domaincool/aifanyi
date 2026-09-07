@@ -1,10 +1,13 @@
 import type { Metadata } from 'next';
 import CreditClient from './CreditClient';
+import { buildMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: '我的使用积分 | 爱翻译',
-  description: '爱翻译使用积分：查看剩余积分、本月使用情况与免费积分来源，翻译用量透明可查。',
-};
+export const metadata: Metadata = buildMetadata({
+  path: '/credit',
+  title: "我的使用积分 | 爱翻译",
+  description: "爱翻译使用积分：查看剩余积分、本月使用情况与免费积分来源，翻译用量透明可查。",
+  ogType: 'list',
+});
 
 export default function CreditPage() {
   return (

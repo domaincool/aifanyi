@@ -2,6 +2,7 @@ import { prisma } from '@/lib/db';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import { buildMetadata } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
 
@@ -19,10 +20,14 @@ function safeDecode(s: string): string {
 export async function generateMetadata({ params }: { params: Promise<{ tag: string }> }): Promise<Metadata> {
   const { tag } = await params;
   const t = safeDecode(tag);
-  return {
+  // tag 页 canonical 收权到 /meme（tag 内容随词条库变化且分页多，蓝图 P0：避免 tag 分页裸奔）
+  // 无参数基础 tag 页保留索引价值：canonical 指 /meme/tag/[t] 自身 + follow
+  return buildMetadata({
+    path: '/meme/tag/' + encodeURIComponent(t),
     title: t + "网络用语翻译大全 · " + t + "英文怎么说 | 爱翻译",
     description: t + "类网络热梗地道英文翻译合集：" + t + "相关网络用语，一句中文梗一句地道英文。爱翻译 · AI翻译。",
-  };
+    ogType: 'list',
+  });
 }
 
 export default async function MemeTagPage({

@@ -1,9 +1,13 @@
 import Link from 'next/link';
+import { buildMetadata } from '@/lib/seo';
+import type { Metadata } from 'next';
 
-export const metadata = {
-  title: '语言与文化 · 语言冷知识 · 文化差异 | 爱翻译',
-  description: '语言与文化栏目：语言冷知识、文化差异、词源趣闻，理解语言背后的世界。',
-};
+export const metadata: Metadata = buildMetadata({
+  path: '/culture',
+  title: "语言与文化 · 语言冷知识 · 文化差异 | 爱翻译",
+  description: "语言与文化栏目：语言冷知识、文化差异、词源趣闻，理解语言背后的世界。",
+  ogType: 'list',
+});
 
 export default function CultureIndexPage() {
   const cards = [{"href":"/blindtest","title":"AI 翻译擂台","desc":"多模型匿名译文对比，玩着学翻译"},{"href":"/meme","title":"网络用语","desc":"了解一国文化，从热梗开始"},{"href":"/updates","title":"上线公告","desc":"爱翻译的新功能与内容更新"}];

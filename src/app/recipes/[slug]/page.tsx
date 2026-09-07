@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { countryName } from '@/lib/content/locales';
+import { buildMetadata } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
 function safeDecode(s: string): string {
@@ -38,10 +39,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const r = await prisma.recipeEntry.findFirst({ where: { slug } }).catch(() => null);
   if (!r || r.status !== 'published') return { title: '全球美食菜谱 | 爱翻译 aifanyi.com' };
   const en = r.enName ? `（${r.enName}）` : '';
-  return {
+  return buildMetadata({
+    path: `/recipes/${slug}`,
     title: `${r.zhName || r.dish}怎么做？${r.zhName || r.dish}${en}家常菜谱 | 爱翻译`,
     description: `${r.zhName || r.dish}${en}的做法：${((r.ingredients as unknown as Ingredient[]) || []).length} 种食材，${((r.steps as unknown as Step[]) || []).length} 步完成${r.difficulty ? `，难度${r.difficulty}` : ''}。${r.intro || ''}爱翻译 · AI翻译。`,
-  };
+    ogType: 'content',
+    ogTitle: `${r.zhName || r.dish}怎么做？家常菜谱`,
+  });
 }
 
 export default async function RecipePage({ params }: { params: Promise<{ slug: string }> }) {

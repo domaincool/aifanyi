@@ -1,10 +1,13 @@
 import type { Metadata } from 'next';
+import { buildMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
+  path: '/tools/pdf-translator',
   title: 'PDF翻译 - 免费在线PDF翻译成中文 | 三模型对比 | 爱翻译AI翻译',
   description: '免费PDF在线翻译工具：上传PDF翻译成中文/英文，DeepSeek/GLM/Google三模型对比，双语对照阅读，保留标题列表结构，可下载DOCX/TXT。当前免费使用，每日公平使用上限：游客5文件/50页，注册10文件/100页。',
-  keywords: 'PDF翻译,PDF在线翻译,PDF翻译成中文,英文PDF翻译成中文,免费PDF翻译,PDF翻译工具,AI翻译PDF,在线PDF翻译器',
-};
+  keywords: ['PDF翻译', 'PDF在线翻译', 'PDF翻译成中文', '英文PDF翻译成中文', '免费PDF翻译', 'PDF翻译工具', 'AI翻译PDF', '在线PDF翻译器'],
+  ogType: 'tool',
+});
 
 export default function PdfTranslatorLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;

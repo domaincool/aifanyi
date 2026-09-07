@@ -1145,3 +1145,18 @@ a.tool-card { text-decoration: none; color: inherit; }
 .sol-links a { color: var(--accent2); text-decoration: none; }
 .sol-links a:hover { text-decoration: underline; }
 .solutions-page .scenes-grid { max-width: 1000px; margin: 0 auto; }
+
+
+/* ===== 404 品牌页（流量增长 V1.0 Week1）===== */
+.nf-page{min-height:70vh;display:flex;align-items:center;justify-content:center;padding:48px 16px}
+.nf-card{max-width:520px;text-align:center;background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:44px 32px}
+.nf-code{font-size:72px;font-weight:800;line-height:1;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:2px}
+.nf-card h1{font-size:22px;margin:18px 0 8px;color:var(--text)}
+.nf-sub{color:var(--muted);font-size:14.5px;margin:0 0 24px}
+.nf-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:22px}
+.nf-btn{display:inline-block;padding:10px 22px;border-radius:10px;font-size:14.5px;border:1px solid var(--border);color:var(--text);text-decoration:none;transition:all .18s}
+.nf-btn:hover{border-color:var(--accent);transform:translateY(-1px)}
+.nf-btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.nf-btn.primary:hover{filter:brightness(1.1)}
+.nf-hint{color:var(--muted);font-size:12.5px;margin:0}
+.nf-hint a{color:var(--accent2);text-decoration:none}

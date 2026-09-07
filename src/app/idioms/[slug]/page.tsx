@@ -2,6 +2,7 @@ import { prisma } from '@/lib/db';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { buildMetadata } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
 function safeDecode(s: string): string {
@@ -19,10 +20,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const slug = safeDecode(rawSlug);
   const e = await prisma.expressionEntry.findFirst({ where: { slug, type: 'idiom' } }).catch(() => null);
   if (!e || e.status !== 'published') return { title: '成语谚语翻译 | 爱翻译 aifanyi.com' };
-  return {
+  return buildMetadata({
+    path: `/idioms/${e.slug}`,
     title: `${e.term} 用英语怎么说？${e.term} → ${e.translation} | 爱翻译`,
     description: `${e.term}（${e.meaning}）的地道英文表达是「${e.translation}」。含拼音、直译、例句与使用场景，爱翻译 · AI翻译。`,
-  };
+    ogType: 'content',
+    ogTitle: `${e.term} 用英语怎么说？→ ${e.translation}`,
+  });
 }
 
 export default async function IdiomPage({ params }: { params: Promise<{ slug: string }> }) {

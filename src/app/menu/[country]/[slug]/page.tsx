@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { countryName, langName } from '@/lib/content/locales';
+import { buildMetadata } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
 function safeDecode(s: string): string {
@@ -22,10 +23,13 @@ export async function generateMetadata({ params }: { params: Promise<{ country: 
   if (!m || m.status !== 'published') return { title: '菜单词典 | 爱翻译 aifanyi.com' };
   const roman = m.romanized ? `（${m.romanized}）` : '';
   const en = m.en ? ` / ${m.en}` : '';
-  return {
+  return buildMetadata({
+    path: `/menu/${country}/${slug}`,
     title: `${m.zh}${roman}是什么菜？${m.zh}${en} · ${countryName(country)}菜单翻译 | 爱翻译`,
     description: `${m.zh}${roman}（${countryName(country)}菜单）是${m.description || m.dish || '一道当地菜'}。${m.en ? `英文名 ${m.en}。` : ''}爱翻译 · AI翻译。`,
-  };
+    ogType: 'content',
+    ogTitle: `${m.zh} 是什么菜？${m.en ? ' ' + m.en : ''}`,
+  });
 }
 
 export default async function MenuEntryPage({ params }: { params: Promise<{ country: string; slug: string }> }) {

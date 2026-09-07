@@ -3,18 +3,35 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { spStr, spPage } from '@/lib/content/sp-param';
 import { Prisma } from '@prisma/client';
+import { canonicalUrl, SITE_URL } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
 
-const metadataBase = {
+const metadataBase = (canonical: string) => ({
   title: '难翻译词 · 无法直译的外语词 | 爱翻译',
   description: '难翻译词栏目：各国无法直译却精准表达心情的外语词——日语、韩语、德语、法语……一个词，一段故事。',
-};
+  alternates: { canonical },
+  openGraph: {
+    title: '难翻译词 · 无法直译的外语词 | 爱翻译',
+    description: '难翻译词栏目：各国无法直译却精准表达心情的外语词——日语、韩语、德语、法语……一个词，一段故事。',
+    url: canonical,
+    siteName: '爱翻译 aifanyi.com',
+    locale: 'zh_CN',
+    type: 'website',
+    images: [{ url: SITE_URL + '/og-image.png', width: 1200, height: 630, alt: '爱翻译 aifanyi.com' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '难翻译词 · 无法直译的外语词 | 爱翻译',
+    description: '难翻译词栏目：各国无法直译却精准表达心情的外语词——日语、韩语、德语、法语……一个词，一段故事。',
+    images: [SITE_URL + '/og-image.png'],
+  },
+});
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }): Promise<Metadata> {
   const sp = await searchParams;
   const hasFilter = !!(spStr(sp.q) || spPage(sp.page) > 1);
-  return { ...metadataBase, robots: hasFilter ? { index: false, follow: true } : undefined };
+  return { ...metadataBase(canonicalUrl('/untranslatable')), robots: hasFilter ? { index: false, follow: true } : undefined };
 }
 
 const PAGE_SIZE = 48;

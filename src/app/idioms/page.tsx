@@ -3,19 +3,36 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { spStr, spPage } from '@/lib/content/sp-param';
 import { Prisma } from '@prisma/client';
+import { canonicalUrl, SITE_URL } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
 
-const metadataBase = {
+const metadataBase = (canonical: string) => ({
   title: '成语谚语翻译大全 · 成语英语怎么说 | 爱翻译',
   description: '中国成语谚语地道英文翻译大全：画蛇添足、亡羊补牢、守株待兔、破釜沉舟……一句成语，一句地道英文。含拼音、直译、例句与出处。',
   keywords: ['成语翻译', '成语英语怎么说', '谚语翻译', '成语英文', '画蛇添足英文'],
-};
+  alternates: { canonical },
+  openGraph: {
+    title: '成语谚语翻译大全 · 成语英语怎么说 | 爱翻译',
+    description: '中国成语谚语地道英文翻译大全：画蛇添足、亡羊补牢、守株待兔、破釜沉舟……一句成语，一句地道英文。含拼音、直译、例句与出处。',
+    url: canonical,
+    siteName: '爱翻译 aifanyi.com',
+    locale: 'zh_CN',
+    type: 'website',
+    images: [{ url: SITE_URL + '/og-image.png', width: 1200, height: 630, alt: '爱翻译 aifanyi.com' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '成语谚语翻译大全 · 成语英语怎么说 | 爱翻译',
+    description: '中国成语谚语地道英文翻译大全：画蛇添足、亡羊补牢、守株待兔、破釜沉舟……一句成语，一句地道英文。含拼音、直译、例句与出处。',
+    images: [SITE_URL + '/og-image.png'],
+  },
+});
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }): Promise<Metadata> {
   const sp = await searchParams;
   const hasFilter = !!(spStr(sp.q) || spStr(sp.tag) || spPage(sp.page) > 1);
-  return { ...metadataBase, robots: hasFilter ? { index: false, follow: true } : undefined };
+  return { ...metadataBase(canonicalUrl('/idioms')), robots: hasFilter ? { index: false, follow: true } : undefined };
 }
 
 const PAGE_SIZE = 48;

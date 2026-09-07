@@ -5,7 +5,11 @@ import { validateSession } from '@/lib/auth/session';
 import ClientLayout from '@/components/ClientLayout';
 import './globals.css';
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://aifanyi.com';
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+  alternates: { canonical: '/' },
   title: '爱翻译 - 免费在线翻译,英文翻译成中文,智能翻译,实时翻译',
   description: '爱翻译提供免费在线翻译服务：英文翻译成中文、中文翻译成英文，支持实时智能翻译，翻译准确自然。跨境电商文案、外文文档、网络用语都能翻，多模型对比选更佳译文。免费使用，无需付费。',
   keywords: ['在线翻译', '英文翻译成中文', '中文翻译成英文', '智能翻译', '实时翻译', '免费翻译', '爱翻译'],
