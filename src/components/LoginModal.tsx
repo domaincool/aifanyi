@@ -110,6 +110,13 @@ export default function LoginModal({ onClose }: { onClose: () => void }) {
       const data = await res.json();
       if (data.ok) {
         setStatus('success');
+        // signup 埋点（V1.0 D6：注册成功 + P5 触点归因 session）
+        try {
+          const cs = document.cookie.match(/(?:^|;\s*)aifanyi_cs=([^;]*)/);
+          if (cs && cs[1]) {
+            navigator.sendBeacon('/api/metrics/content', new Blob([JSON.stringify({ event: 'signup', contentType: 'auth', contentId: 'email', contentSessionId: cs[1] })], { type: 'application/json' }));
+          }
+        } catch {}
         let dest = '/account?login=success';
         try {
           const m = document.cookie.match(/(?:^|;\\s*)aifanyi_next=([^;]*)/);

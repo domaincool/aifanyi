@@ -1,4 +1,5 @@
 import TranslatorBox from '@/components/TranslatorBox';
+import AskAifanyi from '@/components/AskAifanyi';
 import { prisma } from '@/lib/db';
 
 export const dynamic = 'force-dynamic';
@@ -58,6 +59,8 @@ export default async function HomePage() {
         <h1>爱翻译 · AI翻译</h1>
         <p>无需付费，上传即译。让 AI 帮你把话说得像当地人。Let AI help you speak like a local.</p>
       </section>
+
+      <AskAifanyi />
 
       <TranslatorBox />
 

@@ -17,6 +17,18 @@ export default function AccountClient({ user }: { user: UserInfo }) {
   const [actionMsg, setActionMsg] = useState('');
 
   useEffect(() => {
+    // Google 登录回跳后的 signup 埋点（V1.0 D6；幂等：ContentMetrics 日聚合 upsert）
+    if (typeof window !== 'undefined' && window.location.search.includes('login=success')) {
+      try {
+        const cs = document.cookie.match(/(?:^|;\s*)aifanyi_cs=([^;]*)/);
+        if (cs && cs[1]) {
+          navigator.sendBeacon('/api/metrics/content', new Blob([JSON.stringify({ event: 'signup', contentType: 'auth', contentId: 'google', contentSessionId: cs[1] })], { type: 'application/json' }));
+        }
+      } catch {}
+    }
+  }, []);
+
+  useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const t = params.get('tab');
     if (t) setTab(t);
