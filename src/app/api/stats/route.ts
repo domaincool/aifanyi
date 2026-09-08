@@ -29,12 +29,14 @@ export async function GET(req: NextRequest) {
         prisma.memeEntry.count({ where: { definition: { not: null } } }),
       ]);
       const totalMeme = await prisma.memeEntry.count();
+      const pvTotal = pv._sum.pageviews || 0;
+      const tcTotal = toolClicks._sum.toolClicks || 0;
       contentStats = {
         last7d: {
-          pageviews: pv._sum.pageviews || 0,
-          toolClicks: toolClicks._sum.toolClicks || 0,
+          pageviews: pvTotal,
+          toolClicks: tcTotal,
           signups: signups._sum.signups || 0,
-          contentToolCtr: (pv._sum.pageviews || 0) > 0 ? ((toolClicks._sum.toolClicks || 0) / pv._sum.pageviews * 100).toFixed(1) + '%' : '0%',
+          contentToolCtr: pvTotal > 0 ? (tcTotal / pvTotal * 100).toFixed(1) + '%' : '0%',
           daily: daily.map((d: { date: Date; _sum: { pageviews: number | null; toolClicks: number | null } }) => ({ date: d.date, pageviews: d._sum.pageviews || 0, toolClicks: d._sum.toolClicks || 0 })),
         },
         knowledgeGraph: { relations, source: 'tags-coldstart' },
