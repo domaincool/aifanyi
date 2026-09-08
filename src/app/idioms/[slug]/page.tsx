@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { buildMetadata } from '@/lib/seo';
 import { recordContentView } from '@/lib/metrics/server';
 import { cookies } from 'next/headers';
+import ToolCtaButton from '@/components/ToolCtaButton';
 
 export const dynamic = 'force-dynamic';
 function safeDecode(s: string): string {
@@ -101,7 +102,7 @@ export default async function IdiomPage({ params }: { params: Promise<{ slug: st
             "answerCount": 1,
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": e.term + "（" + e.meaning + "）的地道英文表达是「" + e.translation + "」。"
+              "text": ((e.shortAnswer as string) || (e.term + "（" + e.meaning + "）的地道英文表达是「" + e.translation + "」。"))
                 + (examples && examples.length > 0 ? " 例句：" + examples[0].en + "（" + examples[0].zh + "）。" : "")
                 + " 更多成语谚语翻译见爱翻译 aifanyi.com。",
               "url": "https://aifanyi.com/idioms/" + e.slug
@@ -109,6 +110,13 @@ export default async function IdiomPage({ params }: { params: Promise<{ slug: st
           }
         }) }}
       />
+
+      {(e.shortAnswer as string) && (
+        <div className="short-answer">
+          <div className="sa-label">一句话答案</div>
+          <div className="sa-text">{e.shortAnswer as string}</div>
+        </div>
+      )}
 
 <p style={{ color: 'var(--muted)' }}>{e.meaning}</p>
 

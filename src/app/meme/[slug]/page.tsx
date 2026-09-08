@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import { buildMetadata } from '@/lib/seo';
 import { recordContentView } from '@/lib/metrics/server';
 import { cookies } from 'next/headers';
+import ToolCtaButton from '@/components/ToolCtaButton';
 
 export const dynamic = 'force-dynamic';
 
@@ -33,7 +34,23 @@ export default async function MemePage({ params }: { params: Promise<{ slug: str
   // 相关梗：同 tag 的其他词条，站内互链吃长尾流量
   let related: { slug: string; term: string; translation: string }[] = [];
   try {
-    if (tags.length > 0) {
+    // 内链引擎（V1.0 D15）：content_relation 语义关系优先，tags 共现兜底
+    const rels = await prisma.contentRelation.findMany({
+      where: { fromType: 'meme', fromId: m.id, relation: { in: ['similar', 'synonym', 'used_with', 'related_meme', 'derived_from'] } },
+      orderBy: { weight: 'desc' },
+      take: 8,
+    });
+    if (rels.length > 0) {
+      const toIds = rels.map((r) => r.toId);
+      const raw = await prisma.memeEntry.findMany({
+        where: { id: { in: toIds }, status: 'published' },
+        select: { id: true, slug: true, term: true, translation: true },
+      });
+      // 按 relation weight 排序（rels 顺序）
+      const byId = new Map(raw.map((r: any) => [r.id ?? r.slug, r]));
+      related = rels.map((r) => byId.get(r.toId)).filter(Boolean).slice(0, 6);
+    }
+    if (related.length === 0 && tags.length > 0) {
       const raw = await prisma.memeEntry.findMany({
         where: { status: "published", tags: { hasSome: tags } },
         orderBy: { popularity: "desc" },
@@ -91,7 +108,7 @@ export default async function MemePage({ params }: { params: Promise<{ slug: str
             "answerCount": 1,
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": m.term + "（" + m.meaning + "）的地道英文表达是「" + m.translation + "」。"
+              "text": ((m.shortAnswer as string) || (m.term + "（" + m.meaning + "）的地道英文表达是「" + m.translation + "」。"))
                 + (examples.length > 0 ? " 例句：" + examples[0].en + "（" + examples[0].zh + "）。" : "")
                 + " 更多网络用语翻译见爱翻译 aifanyi.com。",
               "url": "https://aifanyi.com/meme/" + m.slug
@@ -99,6 +116,13 @@ export default async function MemePage({ params }: { params: Promise<{ slug: str
           }
         }) }}
       />
+
+      {(m.shortAnswer as string) && (
+        <div className="short-answer">
+          <div className="sa-label">一句话答案</div>
+          <div className="sa-text">{m.shortAnswer as string}</div>
+        </div>
+      )}
 
       <p style={{ color: 'var(--muted)' }}>{m.meaning}</p>
 
@@ -142,9 +166,10 @@ export default async function MemePage({ params }: { params: Promise<{ slug: str
           ))}
         </p>
       )}
-      <p style={{ marginTop: 24, color: 'var(--muted)' }}>
-        还想翻别的梗？试试首页的<a href="/" style={{ color: 'var(--accent2)' }}>翻译框</a>，或去<a href="/arena" style={{ color: 'var(--accent2)' }}>盲测擂台</a>看看哪家 AI 最强。
-      </p>
+      <div style={{ marginTop: 24, display: 'flex', gap: 12, flexWrap: 'wrap', alignItems: 'center' }}>
+        <ToolCtaButton contentType="meme" contentId={m.slug} />
+        <span style={{ color: 'var(--muted)', fontSize: 13 }}>还想翻别的梗？去<a href="/arena" style={{ color: 'var(--accent2)' }}>擂台</a>看哪家 AI 最强。</span>
+      </div>
     </>
   );
 }

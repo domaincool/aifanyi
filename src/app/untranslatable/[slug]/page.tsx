@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { buildMetadata } from '@/lib/seo';
 import { recordContentView } from '@/lib/metrics/server';
 import { cookies } from 'next/headers';
+import ToolCtaButton from '@/components/ToolCtaButton';
 
 export const dynamic = 'force-dynamic';
 function safeDecode(s: string): string {
@@ -101,7 +102,7 @@ export default async function UntranslatableEntryPage({ params }: { params: Prom
             "answerCount": 1,
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": e.term + "（" + e.meaning + "）最接近的表达是「" + e.translation + "」。"
+              "text": ((e.shortAnswer as string) || (e.term + "（" + e.meaning + "）最接近的表达是「" + e.translation + "」。"))
                 + (examples && examples.length > 0 ? " 例句：" + examples[0].en + "（" + examples[0].zh + "）。" : "")
                 + " 更多难翻译词见爱翻译 aifanyi.com。",
               "url": "https://aifanyi.com/untranslatable/" + e.slug
@@ -109,6 +110,13 @@ export default async function UntranslatableEntryPage({ params }: { params: Prom
           }
         }) }}
       />
+
+      {(e.shortAnswer as string) && (
+        <div className="short-answer">
+          <div className="sa-label">一句话答案</div>
+          <div className="sa-text">{e.shortAnswer as string}</div>
+        </div>
+      )}
 
       <p style={{ color: 'var(--muted)' }}>{e.meaning}</p>
 
@@ -167,7 +175,7 @@ export default async function UntranslatableEntryPage({ params }: { params: Prom
 
       <div className="cta-box" style={{ marginTop: 24 }}>
         <p>这个词用法不确定？直接把它放进 AI 翻译工作台，看三种模型怎么翻。</p>
-        <a href="/" className="btn primary">去翻译</a>
+        <ToolCtaButton contentType="untranslatable" contentId={e.slug} label="去翻译" />
       </div>
     </>
   );
