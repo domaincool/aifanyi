@@ -39,6 +39,9 @@ export interface ContentImportItem {
   culture?: string;
   misTranslated?: unknown[];
   multiLang?: unknown[]; // [{lang, text}]
+  shortAnswer?: string; // V1.0 P6：一句话快答（推荐 40-100 字符，质量优先）
+  definition?: string; // 详解定义（语境分层）
+  searchIntentType?: string; // 七枚举：definition|meaning|translation|how_to_say|hidden_meaning|comparison|cultural_context
   tags?: string[];
   country?: string;
   scene?: string;
@@ -188,6 +191,9 @@ function buildData(it: ContentImportItem): any {
       slug: it.slug || slugify(it.term || ''),
       term: it.term, lang: it.lang || 'zh-CN',
       meaning: it.meaning, translation: it.translation,
+      shortAnswer: it.shortAnswer || null,
+      definition: it.definition || null,
+      searchIntentType: it.searchIntentType || null,
       examples: Array.isArray(it.examples) ? it.examples : [],
       tags: it.tags || [],
     };
@@ -200,6 +206,7 @@ function buildData(it: ContentImportItem): any {
     pinyin: it.pinyin || null, literal: it.literal || null,
     examples: it.examples as any,
     usage: it.usage || null, note: it.note || null, source: it.source || null, culture: it.culture || null,
+    shortAnswer: it.shortAnswer || null, definition: it.definition || null, searchIntentType: it.searchIntentType || null,
     misTranslated: it.misTranslated as any, multiLang: it.multiLang as any,
     tags: it.tags || [],
   };
@@ -215,7 +222,7 @@ function buildUpdateData(it: ContentImportItem): any {
     else if (data[f] === undefined) delete data[f];
   }
   // 标量省略（undefined）保留旧值
-  const scalarFields = ['pinyin', 'literal', 'usage', 'note', 'source', 'culture', 'romanized', 'en', 'description', 'category', 'originalName', 'enName', 'country', 'intro', 'cookTime', 'difficulty', 'servings', 'term', 'meaning', 'translation', 'lang', 'zh', 'dish', 'title', 'intro'];
+  const scalarFields = ['pinyin', 'literal', 'usage', 'note', 'source', 'culture', 'romanized', 'en', 'description', 'category', 'originalName', 'enName', 'country', 'intro', 'cookTime', 'difficulty', 'servings', 'term', 'meaning', 'translation', 'lang', 'zh', 'dish', 'title', 'shortAnswer', 'definition', 'searchIntentType'];
   for (const f of scalarFields) {
     if (data[f] === undefined) delete data[f];
   }
