@@ -28,7 +28,8 @@ export async function GET(req: NextRequest) {
         prisma.memeEntry.count({ where: { shortAnswer: { not: null } } }),
         prisma.memeEntry.count({ where: { definition: { not: null } } }),
       ]);
-      const totalMeme = await prisma.memeEntry.count();
+      // 分母排除 archived（测试占位等非内容词条不计入补字段 KPI）；archived 词条字段为 null，分子天然不受影响
+      const totalMeme = await prisma.memeEntry.count({ where: { status: { not: 'archived' } } });
       const pvTotal = pv._sum.pageviews || 0;
       const tcTotal = toolClicks._sum.toolClicks || 0;
       contentStats = {
