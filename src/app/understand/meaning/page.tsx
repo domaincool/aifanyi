@@ -72,7 +72,7 @@ export default async function MeaningSearchPage({ searchParams }: { searchParams
   }
 
   // 有查询：五表搜索（term/meaning/translation LIKE，限量）
-  const like = { contains: q };
+  const like = { contains: q, mode: 'insensitive' as const };
   const [memes, exprs, scenes, menus, recipes] = await Promise.all([
     prisma.memeEntry.findMany({
       where: { status: 'published', OR: [{ term: like }, { meaning: like }, { translation: like }] },

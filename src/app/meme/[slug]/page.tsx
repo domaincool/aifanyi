@@ -13,12 +13,17 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const m = await prisma.memeEntry.findUnique({ where: { slug } }).catch(() => null);
   if (!m || m.status !== 'published') return { title: '网络用语翻译 | 爱翻译 aifanyi.com' };
+  const isEn = m.lang === 'en';
   return buildMetadata({
     path: `/meme/${m.slug}`,
-    title: `${m.term} 英文怎么说？${m.term} → ${m.translation} | 爱翻译`,
-    description: `${m.term}（${m.meaning}）的地道英文表达是「${m.translation}」。含例句与使用场景，爱翻译 · AI翻译。`,
+    title: isEn
+      ? `${m.term} 中文什么意思？${m.term} → ${m.translation} | 爱翻译`
+      : `${m.term} 英文怎么说？${m.term} → ${m.translation} | 爱翻译`,
+    description: isEn
+      ? `${m.term}（${m.meaning}）的中文意思是「${m.translation}」。含例句与使用场景，爱翻译 · AI翻译。`
+      : `${m.term}（${m.meaning}）的地道英文表达是「${m.translation}」。含例句与使用场景，爱翻译 · AI翻译。`,
     ogType: 'content',
-    ogTitle: `${m.term} 用英语怎么说？→ ${m.translation}`,
+    ogTitle: isEn ? `${m.term} 是什么意思？→ ${m.translation}` : `${m.term} 用英语怎么说？→ ${m.translation}`,
   });
 }
 
@@ -30,6 +35,7 @@ export default async function MemePage({ params }: { params: Promise<{ slug: str
   recordContentView('meme', m.slug, (await cookies()).get('aifanyi_cs')?.value ?? null).catch(() => {});
 
   const examples = (m.examples as { zh: string; en: string }[]) || [];
+  const isEn = m.lang === 'en';
   const tags = (m.tags as string[]) || [];
   // 相关梗：同 tag 的其他词条，站内互链吃长尾流量
   let related: { slug: string; term: string; translation: string }[] = [];
@@ -65,14 +71,14 @@ export default async function MemePage({ params }: { params: Promise<{ slug: str
 
   return (
     <>
-      <h1>{m.term} 用英语怎么说？</h1>
+      <h1>{m.term}{isEn ? ' 中文什么意思？' : ' 用英语怎么说？'}</h1>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",
-          "headline": m.term + " 用英语怎么说？" + m.term + " → " + m.translation,
-          "description": m.term + "（" + m.meaning + "）的地道英文表达是「" + m.translation + "」。含例句与使用场景，爱翻译 · AI翻译。",
+          "headline": m.term + (isEn ? " 中文什么意思？" : " 用英语怎么说？") + m.term + " → " + m.translation,
+          "description": m.term + "（" + m.meaning + "）" + (isEn ? "的中文意思是「" + m.translation + "」" : "的地道英文表达是「" + m.translation + "」") + "。含例句与使用场景，爱翻译 · AI翻译。",
           "datePublished": m.createdAt,
           "dateModified": m.updatedAt,
           "inLanguage": "zh-CN",
@@ -103,12 +109,12 @@ export default async function MemePage({ params }: { params: Promise<{ slug: str
           "@type": "QAPage",
           "mainEntity": {
             "@type": "Question",
-            "name": m.term + " 用英语怎么说？",
-            "text": m.term + "（" + m.meaning + "）怎么翻译成英语？",
+            "name": m.term + (isEn ? " 中文什么意思？" : " 用英语怎么说？"),
+            "text": m.term + "（" + m.meaning + "）" + (isEn ? "是什么意思？怎么翻译成中文？" : "怎么翻译成英语？"),
             "answerCount": 1,
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": ((m.shortAnswer as string) || (m.term + "（" + m.meaning + "）的地道英文表达是「" + m.translation + "」。"))
+              "text": ((m.shortAnswer as string) || (m.term + "（" + m.meaning + "）" + (isEn ? "的中文意思是「" + m.translation + "」。" : "的地道英文表达是「" + m.translation + "」。")))
                 + (examples.length > 0 ? " 例句：" + examples[0].en + "（" + examples[0].zh + "）。" : "")
                 + " 更多网络用语翻译见爱翻译 aifanyi.com。",
               "url": "https://aifanyi.com/meme/" + m.slug

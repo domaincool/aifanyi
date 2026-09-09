@@ -35,9 +35,9 @@ export default async function MemeIndexPage({
     ...(q
       ? {
           OR: [
-            { term: { contains: q } },
-            { meaning: { contains: q } },
-            { translation: { contains: q } },
+            { term: { contains: q, mode: 'insensitive' as const } },
+            { meaning: { contains: q, mode: 'insensitive' as const } },
+            { translation: { contains: q, mode: 'insensitive' as const } },
           ],
         }
       : {}),
