@@ -33,7 +33,16 @@ export default async function BlindtestDetailPage({ params }: { params: Promise<
   const b = await prisma.blindtest.findUnique({ where: { id } });
   if (!b || b.status !== 'published') notFound();
 
-  const translations = (b.translations as { anonymousId: string; text: string }[]) || [];
+  const translations = (b.translations as { anonymousId: string; text: string; model?: string }[]) || [];
+
+  // F10 V1：按真实模型聚合票数 → 映射回匿名 ID 传给前端（分布投票后揭示，防从众引导）
+  const voteGroups = await prisma.vote.groupBy({ by: ['model'], _count: { _all: true }, where: { blindtestId: b.id } });
+  const totalVotes = voteGroups.reduce((acc, g) => acc + g._count._all, 0);
+  const votesByAnon: Record<string, number> = {};
+  for (const t of translations) {
+    const g = voteGroups.find((v) => v.model === t.model);
+    if (g) votesByAnon[t.anonymousId] = g._count._all;
+  }
 
   // 内容埋点（V1.0 Week4：arena 详情页 pageview）
   recordContentView('arena', b.id, (await cookies()).get('aifanyi_cs')?.value ?? null).catch(() => {});
@@ -61,7 +70,7 @@ export default async function BlindtestDetailPage({ params }: { params: Promise<
         }) }}
       />
       <div className="result" style={{ marginTop: 16 }}>{b.sourceText}</div>
-      <VotePanel blindtestId={b.id} translations={translations} />
+      <VotePanel blindtestId={b.id} translations={translations} votesByAnon={votesByAnon} totalVotes={totalVotes} />
     </>
   );
 }
