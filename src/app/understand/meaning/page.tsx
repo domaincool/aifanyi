@@ -73,7 +73,7 @@ export default async function MeaningSearchPage({ searchParams }: { searchParams
 
   // 有查询：五表搜索（term/meaning/translation LIKE，限量）
   const like = { contains: q };
-  const [memes, exprs] = await Promise.all([
+  const [memes, exprs, scenes, menus, recipes] = await Promise.all([
     prisma.memeEntry.findMany({
       where: { status: 'published', OR: [{ term: like }, { meaning: like }, { translation: like }] },
       orderBy: { popularity: 'desc' },
@@ -86,9 +86,28 @@ export default async function MeaningSearchPage({ searchParams }: { searchParams
       take: 10,
       select: { slug: true, type: true, term: true, meaning: true, translation: true, shortAnswer: true },
     }).catch(() => []),
+    // 蓝图 5.6：五表全覆盖（场景/菜单/食谱，IA-10 P1 收尾）
+    prisma.sceneEntry.findMany({
+      where: { status: 'published', OR: [{ title: like }, { intro: like }, { scene: like }] },
+      orderBy: { popularity: 'desc' },
+      take: 6,
+      select: { slug: true, country: true, kind: true, title: true, intro: true },
+    }).catch(() => []),
+    prisma.menuEntry.findMany({
+      where: { status: 'published', OR: [{ dish: like }, { zh: like }, { en: like }, { description: like }] },
+      orderBy: { popularity: 'desc' },
+      take: 6,
+      select: { slug: true, country: true, dish: true, zh: true, en: true, shortAnswer: true },
+    }).catch(() => []),
+    prisma.recipeEntry.findMany({
+      where: { status: 'published', OR: [{ dish: like }, { zhName: like }, { enName: like }, { intro: like }] },
+      orderBy: { popularity: 'desc' },
+      take: 6,
+      select: { slug: true, dish: true, zhName: true, enName: true, shortAnswer: true, intro: true },
+    }).catch(() => []),
   ] as const);
 
-  const resultCount = memes.length + exprs.length;
+  const resultCount = memes.length + exprs.length + scenes.length + menus.length + recipes.length;
   // P2 四字段日志（search_query / search_count / zero_result / ai_answer_used 占位 false）
   recordSearchQuery(q, resultCount, false).catch(() => {});
 
@@ -137,6 +156,32 @@ export default async function MeaningSearchPage({ searchParams }: { searchParams
               </Link>
             ))}
           </div>
+          {(scenes.length > 0 || menus.length > 0 || recipes.length > 0) && (
+            <div className="entry-grid" style={{ marginTop: 12 }}>
+              {scenes.map((sc) => (
+                <Link
+                  key={sc.slug}
+                  className="entry-card"
+                  href={sc.kind === 'life' ? `/life/${sc.country}/${sc.slug}` : `/travel/${sc.country}/${sc.slug}`}
+                >
+                  <div className="term">{sc.title}</div>
+                  <div className="tr">{sc.intro.slice(0, 50)}</div>
+                </Link>
+              ))}
+              {menus.map((m) => (
+                <Link key={m.slug} className="entry-card" href={`/menu/${m.country}/${m.slug}`}>
+                  <div className="term">{m.zh} · {m.dish}</div>
+                  <div className="tr">{(m.shortAnswer as string) || m.en || ''}</div>
+                </Link>
+              ))}
+              {recipes.map((r) => (
+                <Link key={r.slug} className="entry-card" href={`/recipes/${r.slug}`}>
+                  <div className="term">{r.zhName || r.dish}</div>
+                  <div className="tr">{(r.shortAnswer as string) || (r.intro ?? '').slice(0, 50)}</div>
+                </Link>
+              ))}
+            </div>
+          )}
         </>
       ) : (
         <div className="cta-box">
