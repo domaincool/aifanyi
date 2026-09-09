@@ -25,14 +25,32 @@ export default function AskAifanyi() {
   const [q, setQ] = useState('');
   const [busy, setBusy] = useState(false);
 
-  const go = (e?: React.FormEvent) => {
+  const go = async (e?: React.FormEvent) => {
     e?.preventDefault();
     const query = q.trim();
     if (!query || busy) return;
     setBusy(true);
-    const intent = classify(query);
-    // 埋点：intent 路由（contentType=ask_aifanyi，contentId 带 intent 便于日聚合区分）
-    try { sendContentEvent('tool_click', 'ask_aifanyi', intent); } catch {}
+    let intent: Intent = classify(query);
+    let via = 'l1';
+    if (intent === 'translate') {
+      // L1 未命中 → L3 AI 意图分类（服务端缓存 + 8s 超时降级 translate）
+      try {
+        const r = await fetch('/api/ask/classify', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ q: query }),
+        });
+        if (r.ok) {
+          const d = await r.json();
+          if (d?.ok && (d.intent === 'meaning' || d.intent === 'speak' || d.intent === 'translate')) {
+            intent = d.intent;
+            via = d.raw === 'l1' ? 'l1' : 'l3';
+          }
+        }
+      } catch {}
+    }
+    // 埋点：intent 路由（contentId 带 intent 与来源便于日聚合区分）
+    try { sendContentEvent('tool_click', 'ask_aifanyi', via === 'l3' ? intent + '_ai' : intent); } catch {}
     if (intent === 'meaning') {
       // L2：内容库匹配（服务端五表查询 + 精确命中快答）
       window.location.href = '/understand/meaning?q=' + encodeURIComponent(query);
