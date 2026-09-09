@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { prisma } from '@/lib/db';
+import { getTrendingMemes } from '@/lib/metrics/trending';
 import { buildListMetadata } from '@/lib/seo';
 import Link from 'next/link';
 
@@ -51,7 +52,7 @@ export default async function MemeIndexPage({
       skip: (page - 1) * PAGE_SIZE,
       take: PAGE_SIZE,
     }),
-    prisma.memeEntry.findMany({ where: { status: 'published' }, orderBy: { popularity: 'desc' }, take: 10 }),
+    getTrendingMemes(10),
     prisma.$queryRaw<{ tag: string; cnt: bigint }[]>`
       SELECT unnest(tags) AS tag, count(*) AS cnt FROM "MemeEntry" WHERE status = 'published' GROUP BY 1 ORDER BY 2 DESC
     `,

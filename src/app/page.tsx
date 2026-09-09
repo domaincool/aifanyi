@@ -1,6 +1,7 @@
 import TranslatorBox from '@/components/TranslatorBox';
 import AskAifanyi from '@/components/AskAifanyi';
 import { prisma } from '@/lib/db';
+import { getTrendingMemes } from '@/lib/metrics/trending';
 
 export const dynamic = 'force-dynamic';
 
@@ -8,7 +9,7 @@ export const dynamic = 'force-dynamic';
 export default async function HomePage() {
   let hotMemes: { term: string; slug: string; translation: string; meaning: string }[] = [];
   try {
-    hotMemes = await prisma.memeEntry.findMany({ where: { status: 'published' }, orderBy: { popularity: 'desc' }, take: 6 });
+    hotMemes = (await getTrendingMemes(6)).map(({ slug, term, translation, meaning }) => ({ slug, term, translation, meaning }));
   } catch {
     // 数据库未初始化时首页仍可用
   }
