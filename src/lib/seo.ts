@@ -49,6 +49,7 @@ export function buildMetadata(opts: {
   const ogTitle = opts.ogTitle || opts.title;
   const og = ogImageFor(opts.ogType || 'list');
   return {
+    title: opts.title,
     ...(opts.noindex ? { robots: { index: false, follow: true } } : {}),
     alternates: { canonical: url },
     openGraph: {
