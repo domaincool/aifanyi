@@ -3,6 +3,8 @@ import type { Metadata } from 'next';
 ﻿import { prisma } from '@/lib/db';
 import { notFound } from 'next/navigation';
 import VotePanel from '@/components/VotePanel';
+import { recordContentView } from '@/lib/metrics/server';
+import { cookies } from 'next/headers';
 
 export const dynamic = 'force-dynamic';
 
@@ -33,10 +35,31 @@ export default async function BlindtestDetailPage({ params }: { params: Promise<
 
   const translations = (b.translations as { anonymousId: string; text: string }[]) || [];
 
+  // 内容埋点（V1.0 Week4：arena 详情页 pageview）
+  recordContentView('arena', b.id, (await cookies()).get('aifanyi_cs')?.value ?? null).catch(() => {});
+
   return (
     <>
       <a href="/arena" style={{ color: 'var(--muted)', fontSize: 14 }}>← 返回擂台</a>
       <h1 style={{ marginTop: 12 }}>盲测：谁译得最好？</h1>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "QAPage",
+          "mainEntity": {
+            "@type": "Question",
+            "name": "「" + (b.sourceText || "").slice(0, 40) + "」哪个 AI 译文最自然？",
+            "text": b.sourceText,
+            "answerCount": Math.max(translations.length, 1),
+            "acceptedAnswer": translations.length > 0 ? {
+              "@type": "Answer",
+              "text": "匿名译文 " + translations[0].anonymousId + "：" + (translations[0].text || "").slice(0, 80) + "…（投票选出最自然的一版）",
+              "url": "https://aifanyi.com/arena/" + b.id
+            } : undefined
+          }
+        }) }}
+      />
       <div className="result" style={{ marginTop: 16 }}>{b.sourceText}</div>
       <VotePanel blindtestId={b.id} translations={translations} />
     </>
