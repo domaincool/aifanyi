@@ -59,7 +59,7 @@ export default async function SlangPage({ searchParams }: { searchParams: Promis
             itemListElement: memes.map((m, i) => ({
               '@type': 'ListItem',
               position: i + 1,
-              url: `${SITE_URL}/${m.slug}`,
+              url: `${SITE_URL}/meme/${m.slug}`, // __b4_slang_url__
               name: m.term,
             })),
           }),
