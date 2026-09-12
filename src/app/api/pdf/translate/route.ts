@@ -16,7 +16,7 @@ import { getSessionCookie } from '@/lib/auth/cookie';
 import { validateSession } from '@/lib/auth/session';
 import { getOrCreateGuestCookie } from '@/lib/auth/cookie';
 import { prisma } from '@/lib/db';
-import { getAuthUserId, beginSync, endSyncSuccess, endSyncFail, FEATURES } from '@/lib/credit/sync-settle';
+import { getAuthUserId, beginSync, endSyncSuccess, endSyncFail, FEATURES, MSG_AUTH } from '@/lib/credit/sync-settle';
 import { isCreditDeductionEnabled } from '@/lib/credit/feature-flags';
 import { estimateCredits } from '@/lib/credit/pricing';
 
@@ -30,7 +30,7 @@ export async function POST(req: NextRequest) {
     // 方案 A（2026-09-01 拍板）：flag off 放开游客文件工具（fairuse 游客线兜底）；
     // flag on 回退旧行为（强制登录）
     if (!auth && isCreditDeductionEnabled()) {
-      return NextResponse.json({ errorType: 'auth_required', message: '请先登录后再使用该功能。免费注册解锁双倍每日额度。' }, { status: 401 });
+      return NextResponse.json({ errorType: 'auth_required', message: MSG_AUTH }, { status: 401 });
     }
     const userId = auth?.userId ?? null;
     const form = await req.formData();
@@ -88,7 +88,7 @@ export async function POST(req: NextRequest) {
         limitations: doc.limitations,
         requiredCredits: estCredits,
         available: acc?.balance ?? 0,
-        message: '本次翻译预计消耗约 ' + estCredits + ' 积分，当前剩余 ' + (acc?.balance ?? 0) + ' 积分。任务已保存，充值后可直接续做，无需重新上传。',
+        message: '预计使用 ' + estCredits + ' 积分，当前剩余 ' + (acc?.balance ?? 0) + ' 积分。任务已保存，积分补充后可直接续做，无需重新上传。',
       });
     }
     creditCtx = { jobId: taskId, usageId: begin.usageId, estimated: begin.estimated, userId: userId! };

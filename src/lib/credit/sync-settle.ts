@@ -23,11 +23,14 @@ export async function getAuthUserId(): Promise<SyncAuth> {
   return { userId: user.userId };
 }
 
+/** 全站统一登录引导（401）：登录引导唯一标准句，各处共用 */
+export const MSG_AUTH = '请先登录后使用。登录免费，每天可翻译的文件更多。';
+
 export function authErrorBody() {
   return {
     ok: false as const,
     code: 'auth_required',
-    error: '请先登录后再使用该功能。免费注册解锁双倍每日额度。',
+    error: MSG_AUTH,
   };
 }
 
@@ -35,7 +38,7 @@ export function insufficientBody(estimated: number, available: number) {
   return {
     ok: false as const,
     code: 'insufficient',
-    error: `当前免费使用中，若提示额度不足请明日再试（预计 ${estimated}，剩余 ${available}）。`,
+    error: `今日免费翻译次数已用完（本次预计 ${estimated}，剩余 ${available} 积分），明天自动恢复。`,
     estimated,
     available,
   };
@@ -60,7 +63,7 @@ export async function beginSync(input: {
   }
   // flag on：仅登录用户（游客已在 route 层 401 拦截；此处双保险）
   if (!input.userId) {
-    return { ok: false, code: 'auth_required', error: '请先登录后再使用该功能。' };
+    return { ok: false, code: 'auth_required', error: MSG_AUTH };
   }
   const r = await reserve({
     userId: input.userId,
@@ -103,7 +106,7 @@ export async function endSyncSuccess(input: {
     return { ok: true, consumed: 0 };
   }
   if (!input.userId) {
-    return { ok: false, consumed: 0, error: '请先登录后再使用该功能。' };
+    return { ok: false, consumed: 0, error: MSG_AUTH };
   }
   const est = input.estimated;
   const actual = Math.min(Math.max(0, Math.round(input.actualCredits)), est);

@@ -5,7 +5,7 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata: Metadata = buildMetadata({
   path: '/tools/web-translator',
   title: "免费网页翻译 — 整页正文一键翻译 | 爱翻译",
-  description: "爱翻译免费网页翻译：输入网址，AI 自动提取网页正文并翻译，段落级双语对照，保留原意与语气。中英日韩等 10 种语言，注册送积分。",
+  description: "爱翻译免费网页翻译：输入网址，AI 自动提取网页正文并翻译，段落级双语对照，保留原意与语气。中英日韩等 10 种语言。",
   keywords: ["网页翻译","整页翻译","网站翻译","文章翻译","爱翻译"],
   ogType: 'tool',
 });
@@ -29,7 +29,7 @@ export default function WebTranslatorPage() {
               "name": "网页翻译免费吗？",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "当前为免费体验阶段（需登录使用）。新用户注册送 500 积分，按正文长度计积分（约每千字 20 积分）；每日另有公平使用额度，自动重置。"
+                "text": "免费在线使用，需登录。按正文长度计积分，约每千字 20 积分，注册即送 500 积分。"
               }
             },
             {
@@ -70,7 +70,7 @@ export default function WebTranslatorPage() {
         <h2>常见问题</h2>
         <div className="pdf-seo-faq-item">
           <h3>网页翻译免费吗？</h3>
-          <p>当前为免费体验阶段（需登录使用）。新用户注册送 500 积分，按正文长度计积分（约每千字 20 积分）；每日另有公平使用额度，自动重置。</p>
+          <p>免费在线使用，需登录。按正文长度计积分，约每千字 20 积分，注册即送 500 积分。</p>
         </div>
         <div className="pdf-seo-faq-item">
           <h3>怎么翻译一个网页？</h3>

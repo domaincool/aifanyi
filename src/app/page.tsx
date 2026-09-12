@@ -33,7 +33,7 @@ export default async function HomePage({ searchParams }: { searchParams?: Promis
               "url": "https://aifanyi.com/",
               "name": "爱翻译 aifanyi.com - 在线翻译,英文翻译成中文,智能翻译,实时翻译",
               "alternateName": "爱翻译",
-              "description": "爱翻译在线翻译：新用户赠送免费积分，先免费体验。英文翻译成中文、中文翻译成英文，支持实时智能翻译，翻译准确自然。跨境电商文案、外文文档、网络用语都能翻，多模型对比选更佳译文。",
+              "description": "爱翻译在线翻译：免费在线使用，支持文本、PDF、Word/PPT、字幕与网页翻译；多模型对比选更佳译文，翻译准确自然。",
               "inLanguage": "zh-CN",
               "potentialAction": {
                 "@type": "SearchAction",
@@ -57,9 +57,9 @@ export default async function HomePage({ searchParams }: { searchParams?: Promis
         }) }}
       />
       <section className="hero">
-        <span className="hero-free-badge">🎁 新用户送免费积分</span>
+        <span className="hero-free-badge">新用户送 500 积分</span>
         <h1>爱翻译 · AI翻译</h1>
-        <p>新用户赠送免费积分，先免费体验。让 AI 帮你把话说得像当地人。Let AI help you speak like a local.</p>
+        <p>上传即译，多模型对比，选更地道的一版。让 AI 帮你把话说得像当地人。Let AI help you speak like a local.</p>
       </section>
 
       <AskAifanyi />
@@ -69,12 +69,12 @@ export default async function HomePage({ searchParams }: { searchParams?: Promis
       {/* ── 快速选择翻译工具 ── */}
       <section className="home-block" id="quick-tools">
         <h2 className="section-title">快速选择翻译工具</h2>
-        <p className="block-lead">当前免费体验阶段：文本翻译免费使用；文件翻译免费额度，登录后额度更高</p>
+        <p className="block-lead">从一句话到一整份 PDF，都能直接翻译。</p>
         <div className="tools-grid">
           <a className="tool-card" href="/tools/pdf-translator">
             <div className="tool-emoji">📄</div>
             <h2>PDF 翻译</h2>
-            <p>双语对照的三模型对比翻译，游客每日 5 个文件</p>
+            <p>双语对照的三模型对比翻译，无需登录即可使用</p>
           </a>
           <a className="tool-card" href="/tools/image-translator">
             <div className="tool-emoji">🖼️</div>
@@ -99,7 +99,7 @@ export default async function HomePage({ searchParams }: { searchParams?: Promis
           <a className="tool-card" href="/voice">
             <div className="tool-emoji">🎙️</div>
             <h2>语音翻译</h2>
-            <p>实时对话翻译，A/B 双模型对比 · 当前免费体验阶段，登录后可用</p>
+            <p>实时对话翻译，A/B 双模型对比 · 登录后可用</p>
           </a>
         </div>
       </section>

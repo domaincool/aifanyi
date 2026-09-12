@@ -24,7 +24,7 @@ export async function checkGuestLimit(req: NextRequest): Promise<GuestLimitResul
     return {
       ok: false,
       retryAfterMs: freq.retryAfterMs,
-      error: '翻译太频繁了，请稍后再试（游客每分钟限 ' + GUEST_LIMITS.freqMax + ' 次，登录后不限速）',
+      error: '请求太频繁，请稍后再试（未登录每分钟 ' + GUEST_LIMITS.freqMax + ' 次）。',
       code: 'RATE_LIMITED',
     };
   }
@@ -36,7 +36,7 @@ export async function checkGuestLimit(req: NextRequest): Promise<GuestLimitResul
     return {
       ok: false,
       retryAfterMs: 0,
-      error: '今日免费翻译额度已用完（每天 ' + GUEST_LIMITS.dailyMax + ' 次 / ' + GUEST_LIMITS.dailyChars + ' 字符），免费注册解锁双倍每日额度',
+      error: '今天的免费翻译次数已用完（每天 ' + GUEST_LIMITS.dailyMax + ' 次 / ' + GUEST_LIMITS.dailyChars + ' 字符）。登录后不受此限制，明天自动恢复。',
       code: 'DAILY_LIMIT',
     };
   }

@@ -8,7 +8,7 @@ import { LANG_LABEL, LANGS, useVoiceSession } from '@/lib/voice/useVoiceSession'
 import MsgBubble from './MsgBubble';
 import { FAIR_USE_PAUSED_MSG, isCreditDeductionEnabled } from '@/lib/credit/feature-flags';
 
-// D：扣费总开关（关时统一显示免费体验阶段）
+// D：扣费总开关（关闭时不显示积分提示）
 const FREE_STAGE = (() => { try { return !isCreditDeductionEnabled(); } catch { return true; } })();
 
 function WaveCanvas({ rms, active }: { rms: number; active: boolean }) {
@@ -39,8 +39,8 @@ function WaveCanvas({ rms, active }: { rms: number; active: boolean }) {
 
 function Panel({ session, side, accent, label }: { session: ReturnType<typeof useVoiceSession>; side: 'a' | 'b'; accent: string; label: string }) {
   const s = session;
-  // D：额度口径（数值来自服务端 session；扣费总开关关闭时显示免费阶段）
-  const quotaNote = FREE_STAGE ? FAIR_USE_PAUSED_MSG : ((s.estCredits ?? 0) > 0 ? `预计使用 ${s.estCredits} 额度` : ((s.lastUsed ?? 0) > 0 ? `本次使用 ${s.lastUsed} 额度` : ''));
+  // D：积分口径（数值来自服务端 session；扣费总开关关闭时不渲染）
+  const quotaNote = FREE_STAGE ? FAIR_USE_PAUSED_MSG : ((s.estCredits ?? 0) > 0 ? `预计使用 ${s.estCredits} 积分` : ((s.lastUsed ?? 0) > 0 ? `本次使用 ${s.lastUsed} 积分` : ''));
   const busy = s.phase === 'TRANSCRIBING' || s.phase === 'TRANSLATING' || s.phase === 'SYNTHESIZING';
   const statusText =
     s.phase === 'RECORDING' ? '聆听中 ' + s.sec + 's' :
@@ -66,7 +66,7 @@ function Panel({ session, side, accent, label }: { session: ReturnType<typeof us
       </div>
       <WaveCanvas rms={s.rms} active={s.phase === 'RECORDING'} />
       {/* A9：录音按钮上方前置提示 */}
-      <div style={{ fontSize: 12, color: 'var(--muted)', marginBottom: 6, textAlign: 'center' }}>登录后使用 · 免费额度</div>
+      <div style={{ fontSize: 12, color: 'var(--muted)', marginBottom: 6, textAlign: 'center' }}>登录后使用</div>
       <button
         type="button"
         className="voice-record-btn"
@@ -93,8 +93,8 @@ function Panel({ session, side, accent, label }: { session: ReturnType<typeof us
         <input type="checkbox" checked={s.holdMode} onChange={(e) => { s.setHoldMode(e.target.checked); if (e.target.checked) s.cancelListen(); }} style={{ accentColor: 'var(--accent)' }} />
         按住说话（备用）
       </label>
-      {/* D：额度提示（仅「预计使用 X 额度」/「本次使用 X 额度」两种写法；扣费关闭时为免费阶段） */}
-      <div style={{ fontSize: 12, color: 'var(--muted)', marginTop: 4 }}>{quotaNote}</div>
+      {/* D：积分提示（仅「预计使用 X 积分」/「本次使用 X 积分」两种写法；扣费关闭时不渲染） */}
+      {quotaNote ? <div style={{ fontSize: 12, color: 'var(--muted)', marginTop: 4 }}>{quotaNote}</div> : null}
     </div>
   );
 }

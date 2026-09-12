@@ -111,7 +111,7 @@ export default function CreditClient() {
       <div style={{ maxWidth: 640, margin: '0 auto' }}>
         <div style={{ background: 'var(--panel)', border: '1px solid var(--border)', borderRadius: 20, padding: '40px 32px', textAlign: 'center' }}>
           <div style={{ fontSize: 52, marginBottom: 12 }}>🎁</div>
-          <h2 style={{ margin: '0 0 8px', fontSize: 22 }}>登录即送 {data.signupBonus ?? 500} 免费积分</h2>
+          <h2 style={{ margin: '0 0 8px', fontSize: 22 }}>登录即送 {data.signupBonus ?? 500} 积分</h2>
           <p style={{ color: 'var(--muted)', margin: '0 0 24px', lineHeight: 1.7 }}>
             新老用户登录后自动到账，30 天内有效。<br />
             翻译成功才扣积分，失败自动退回，用量透明可查。
@@ -153,7 +153,7 @@ export default function CreditClient() {
         // 真实支付渠道：跳转支付页
         window.location.href = j.checkoutUrl;
       } else {
-        setErr('支付渠道暂未开通，暂不支持充值。');
+        setErr('支付渠道暂未开通，暂不支持在线充值。');
       }
     } catch (e) {
       setErr('网络异常，请稍后重试。');
@@ -178,12 +178,12 @@ export default function CreditClient() {
           </div>
           <div style={{ textAlign: 'right', color: 'var(--muted)', fontSize: 13, lineHeight: 1.8 }}>
             <div>本月已用：{monthUsed}</div>
-            {data?.expiringAt && <div>免费积分到期：{fmtDate(data.expiringAt)}</div>}
+            {data?.expiringAt && <div>赠送积分有效期至：{fmtDate(data.expiringAt)}</div>}
           </div>
         </div>
         {low && (
           <p style={{ margin: '16px 0 0', padding: '10px 14px', background: 'rgba(255,193,7,.12)', border: '1px solid rgba(255,193,7,.4)', borderRadius: 10, color: 'var(--text)', fontSize: 14 }}>
-            ⚡ 剩余积分不多了（{available}/{data?.signupBonus ?? 500}）。积分不足时可以充值补充。
+            ⚡ 剩余积分不多了（{available}/{data?.signupBonus ?? 500}）。积分不足时可在渠道开通后充值补充。
           </p>
         )}
       </div>
@@ -193,7 +193,7 @@ export default function CreditClient() {
         <div style={{ background: 'var(--panel)', border: '1px solid var(--border)', borderRadius: 20, padding: 24 }}>
           <h3 style={{ margin: '0 0 4px', fontSize: 16 }}>积分充值</h3>
           <p style={{ margin: '0 0 14px', color: 'var(--muted)', fontSize: 13 }}>
-            充值越多越划算：充得越多，赠送越多。购买的积分长期有效，赠送积分 30 天有效。
+            一次购买多次使用。购买的积分长期有效，赠送积分 30 天有效。
           </p>
           <div style={{ display: 'grid', gap: 12 }}>
             {plans.map(p => (
@@ -225,7 +225,7 @@ export default function CreditClient() {
           {err && <p style={{ margin: '12px 0 0', color: 'var(--red, #dc2626)', fontSize: 13 }}>{err}</p>}
           {msg && <p style={{ margin: '12px 0 0', color: 'var(--green, #16a34a)', fontSize: 13 }}>{msg}</p>}
           <p style={{ margin: '12px 0 0', color: 'var(--muted)', fontSize: 12 }}>
-            * 支付渠道接入中，暂不支持在线充值。
+            * 支付渠道暂未开通，暂不支持在线充值。
           </p>
         </div>
       )}
@@ -244,7 +244,7 @@ export default function CreditClient() {
             </div>
           ))}
           <p style={{ margin: '14px 0 0', color: 'var(--muted)', fontSize: 13 }}>
-            积分不足时可在上方充值；翻译成功才扣积分，失败自动退回。
+            积分不足时可在渠道开通后充值；翻译成功才扣积分，失败自动退回。
           </p>
         </div>
       )}

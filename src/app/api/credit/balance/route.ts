@@ -18,7 +18,7 @@ export async function GET() {
     return NextResponse.json({
       loggedIn: false,
       signupBonus: SIGNUP_BONUS,
-      message: '登录后即可获得免费积分',
+      message: '登录后即可获得注册积分',
     });
   }
   const userId = auth.userId;

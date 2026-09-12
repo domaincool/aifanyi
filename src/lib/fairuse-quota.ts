@@ -38,8 +38,8 @@ export function clientKeyOf(ip: string, ua: string): string {
 
 /** 触线文案（前端渲染用；登录/游客分版） */
 export const FAIR_USE_MESSAGES = {
-  login: '为保障所有人稳定使用，今日已达公平使用上限，明日自动恢复。',
-  guest: '今日免费额度已用完，免费注册即可解锁双倍每日额度。',
+  login: '今天的免费翻译次数已用完，明天自动恢复。',
+  guest: '今天的免费翻译次数用完了。登录后每天可翻译更多，明天自动恢复。',
 };
 
 export type FairUseResult =

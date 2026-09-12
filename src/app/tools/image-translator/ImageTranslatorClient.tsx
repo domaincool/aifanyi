@@ -15,9 +15,9 @@ const LANGS = [
 
 type Phase = 'upload' | 'working' | 'done' | 'error';
 
-// D：面向用户的额度提示只允许两种写法——「预计使用 X 额度」/「本次使用 X 额度」；扣费总开关关闭时显示免费阶段
+// D：面向用户的积分提示只允许两种写法——「预计使用 X 积分」/「本次使用 X 积分」；扣费总开关关闭时不渲染
 const FREE_STAGE = (() => { try { return !isCreditDeductionEnabled(); } catch { return true; } })();
-const creditNote = (credits?: number) => (FREE_STAGE ? FAIR_USE_PAUSED_MSG : (typeof credits === 'number' && credits > 0 ? `本次使用 ${credits} 额度` : ''));
+const creditNote = (credits?: number) => (FREE_STAGE ? FAIR_USE_PAUSED_MSG : (typeof credits === 'number' && credits > 0 ? `本次使用 ${credits} 积分` : ''));
 
 export default function ImageTranslatorClient() {
   const [phase, setPhase] = useState<Phase>('upload');
@@ -57,7 +57,7 @@ export default function ImageTranslatorClient() {
       setOcrText(data.text);
       setTranslation(data.translation);
       setModel(data.model);
-      // D：额度数值一律来自服务端返回，前端不自行计算
+      // D：积分数值一律来自服务端返回，前端不自行计算
       setCredits(typeof data.credits === 'number' ? data.credits : undefined);
       setPhase('done');
     } catch (e: any) {
@@ -142,7 +142,7 @@ export default function ImageTranslatorClient() {
           </div>
           {/* 右：识别 + 译文 */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-            {/* D：结果区额度口径（数值来自服务端；扣费关闭时显示免费阶段） */}
+            {/* D：结果区积分口径（数值来自服务端；扣费关闭时不渲染） */}
             {creditNote(credits) && <div style={{ fontSize: 12, color: 'var(--muted)' }}>{creditNote(credits)}</div>}
             <div style={{ background: 'var(--panel)', border: '1px solid var(--border)', borderRadius: 12, overflow: 'hidden' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px 14px', borderBottom: '1px solid var(--border)', fontSize: 13, color: 'var(--muted)' }}>

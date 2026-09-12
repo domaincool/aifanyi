@@ -35,10 +35,10 @@ export async function checkPdfQuota(
   const pagesToday = pagesAgg._sum.pageCount || 0;
 
   if (filesToday >= dailyFiles) {
-    return { ok: false, reason: `今日免费额度已用完（${filesToday}/${dailyFiles} 个文件）。${isGuest ? '免费注册解锁双倍每日额度。' : '明天自动恢复。'}` };
+    return { ok: false, reason: `今天的免费翻译次数已用完（${filesToday}/${dailyFiles} 个文件）。${isGuest ? '登录后每天可翻译更多，明天自动恢复。' : '明天自动恢复。'}` };
   }
   if (pagesToday + pageCount > dailyPages) {
-    return { ok: false, reason: `今日剩余页数不足（已用 ${pagesToday}/${dailyPages} 页，本次需 ${pageCount} 页）。` };
+    return { ok: false, reason: `今日剩余页数不足（已用 ${pagesToday}/${dailyPages} 页，本次需 ${pageCount} 页），明天自动恢复。` };
   }
   return { ok: true };
 }

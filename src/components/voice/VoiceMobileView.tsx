@@ -8,15 +8,15 @@ import { LANGS, LANG_LABEL, useVoiceSession } from '@/lib/voice/useVoiceSession'
 import MsgBubble from './MsgBubble';
 import { FAIR_USE_PAUSED_MSG, isCreditDeductionEnabled } from '@/lib/credit/feature-flags';
 
-// D：扣费总开关（关时统一显示免费体验阶段）
+// D：扣费总开关（关闭时不显示积分提示）
 const FREE_STAGE = (() => { try { return !isCreditDeductionEnabled(); } catch { return true; } })();
 
 export default function VoiceMobileView() {
   const s = useVoiceSession('zh', 'en');
   const listRef = useRef<HTMLDivElement>(null);
   const waveRef = useRef<HTMLCanvasElement>(null);
-  // D：额度口径（数值来自服务端 session；扣费总开关关闭时显示免费阶段）
-  const quotaNote = FREE_STAGE ? FAIR_USE_PAUSED_MSG : ((s.estCredits ?? 0) > 0 ? `预计使用 ${s.estCredits} 额度` : ((s.lastUsed ?? 0) > 0 ? `本次使用 ${s.lastUsed} 额度` : ''));
+  // D：积分口径（数值来自服务端 session；扣费总开关关闭时不渲染）
+  const quotaNote = FREE_STAGE ? FAIR_USE_PAUSED_MSG : ((s.estCredits ?? 0) > 0 ? `预计使用 ${s.estCredits} 积分` : ((s.lastUsed ?? 0) > 0 ? `本次使用 ${s.lastUsed} 积分` : ''));
 
   useEffect(() => {
     if (listRef.current) listRef.current.scrollTop = listRef.current.scrollHeight;
@@ -127,10 +127,10 @@ export default function VoiceMobileView() {
       <div style={{ flexShrink: 0, padding: '8px 0 calc(14px + env(safe-area-inset-bottom))', textAlign: 'center' }}>
         {/* A5/A9：录音按钮上方前置提示 */}
         <div style={{ fontSize: 12, color: 'var(--muted)', marginBottom: 6 }}>
-          登录后使用 · 免费额度
+          登录后使用
         </div>
-        {/* D：额度提示（仅「预计使用 X 额度」/「本次使用 X 额度」两种写法；扣费关闭时为免费阶段） */}
-        <div style={{ fontSize: 12, color: 'var(--muted)', marginBottom: 6 }}>{quotaNote}</div>
+        {/* D：积分提示（仅「预计使用 X 积分」/「本次使用 X 积分」两种写法；扣费关闭时不渲染） */}
+        {quotaNote ? <div style={{ fontSize: 12, color: 'var(--muted)', marginBottom: 6 }}>{quotaNote}</div> : null}
         <canvas ref={waveRef} width={200} height={34} style={{ width: '70%', height: 34, display: 'block', margin: '0 auto 6px' }} />
         <button
           type="button"

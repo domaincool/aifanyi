@@ -3,7 +3,7 @@ import { prisma } from '@/lib/db';
 import { getOrCreateGuestCookie } from '@/lib/auth/cookie';
 import { parseSubtitle } from '@/lib/subtitle-lib';
 import { runSubtitleJob } from '@/lib/subtitle-job';
-import { getAuthUserId, beginSync, endSyncSuccess, endSyncFail, FEATURES } from '@/lib/credit/sync-settle';
+import { getAuthUserId, beginSync, endSyncSuccess, endSyncFail, FEATURES, MSG_AUTH } from '@/lib/credit/sync-settle';
 import { isCreditDeductionEnabled } from '@/lib/credit/feature-flags';
 import { checkFairUse, clientKeyOf } from '@/lib/fairuse-quota';
 import { estimateCredits, secondsToUnits } from '@/lib/credit/pricing';
@@ -21,7 +21,7 @@ export async function POST(req: NextRequest) {
     // 方案 A（2026-09-01 拍板）：flag off 放开游客文件工具（fairuse 游客线兜底）；
     // flag on 回退旧行为（强制登录）
     if (!auth && isCreditDeductionEnabled()) {
-      return NextResponse.json({ ok: false, code: 'auth_required', error: '请先登录后再使用该功能。免费注册解锁双倍每日额度。' }, { status: 401 });
+      return NextResponse.json({ ok: false, code: 'auth_required', error: MSG_AUTH }, { status: 401 });
     }
     const userId = auth?.userId ?? null;
     // 身份：登录用 userId；游客用统一 clientKey（fairuse 游客线）
@@ -85,7 +85,7 @@ export async function POST(req: NextRequest) {
         },
       });
       const acc = await prisma.creditAccount.findUnique({ where: { userId: userId! } });
-      return NextResponse.json({ ok: true, taskId, status: 'paused', totalCues: cues.length, requiredCredits: estCredits, available: acc?.balance ?? 0, message: '本次翻译预计消耗约 ' + estCredits + ' 积分，当前剩余 ' + (acc?.balance ?? 0) + ' 积分。任务已保存，充值后可直接续做。' });
+      return NextResponse.json({ ok: true, taskId, status: 'paused', totalCues: cues.length, requiredCredits: estCredits, available: acc?.balance ?? 0, message: '预计使用 ' + estCredits + ' 积分，当前剩余 ' + (acc?.balance ?? 0) + ' 积分。任务已保存，积分补充后可直接续做。' });
     }
     creditCtx = { jobId: taskId, usageId: begin.usageId, estimated: begin.estimated, userId: userId! };
 

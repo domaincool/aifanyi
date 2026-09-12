@@ -71,7 +71,7 @@ export default async function TranslatePairPage({ params }: Props) {
               "name": pair.sourceName + "翻译成" + pair.targetName + "免费吗？",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "当前为免费体验阶段。为保障所有用户稳定使用，每日有公平使用上限：文本翻译游客每日 30 次 / 5000 字符，登录后不再受游客限流，每日自动重置，合理用量内无需担心。"
+                "text": "免费在线翻译。未登录每天可翻译 30 次、5000 字符以内；登录后不再受此限制，次日自动恢复。"
               }
             },
             {

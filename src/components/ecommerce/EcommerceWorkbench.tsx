@@ -154,7 +154,7 @@ export default function EcommerceWorkbench({ serverUser }: { serverUser: UserInf
         <div className="ecom-login-gate">
           <div className="ecom-login-icon">🧳</div>
           <h2>登录后开始使用</h2>
-          <p>工作台数据仅你可见。免费额度，超出后按积分使用。</p>
+          <p>工作台数据仅你可见。每日免费次数用完后，可按积分继续使用。</p>
           <button className="primary" onClick={openLogin}>登录 / 注册</button>
         </div>
       </div>

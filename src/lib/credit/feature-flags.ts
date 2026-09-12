@@ -10,5 +10,5 @@ export function isCreditDeductionEnabled(): boolean {
   return process.env.CREDIT_DEDUCTION === 'on';
 }
 
-/** 免费区（flag off）时后端余额不足拦截文案（不应出现「积分不足」） */
-export const FAIR_USE_PAUSED_MSG = '当前为免费使用阶段，无需积分。';
+/** 免费区（flag off）时后端余额不足拦截文案；扣费关闭时不渲染任何提示（保持空串，仅保留导出名与类型） */
+export const FAIR_USE_PAUSED_MSG = '';

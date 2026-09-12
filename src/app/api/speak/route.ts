@@ -122,12 +122,12 @@ function withTimeout(p: Promise<TranslateResult>, ms: number): Promise<Translate
 }
 
 const INVALID_INPUT_MSG = '请用一句话描述你想表达的意思（200 字以内）。';
-const MODEL_FAILED_MSG = '没能生成地道说法，请换个说法再试（本次不消耗额度）。';
+const MODEL_FAILED_MSG = '没能生成地道说法，请换个说法再试（本次不消耗积分）。';
 const SERVER_ERROR_MSG = '服务器错误，请稍后再试。';
 
 /**
  * GET /api/speak?text=...&targetLang=...
- * 提交前的「预计使用 X 额度」估值（服务端按 PricingRule 算价，前端永不算价）。
+ * 提交前的「预计使用 X 积分」估值（服务端按 PricingRule 算价，前端永不算价）。
  * 说明：/api/credit/estimate 无 speak 分支且不属于本任务可改文件，故估值入口放在本路由。
  */
 export async function GET(req: NextRequest) {

@@ -5,7 +5,7 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata: Metadata = buildMetadata({
   path: '/tools/image-translator',
   title: "免费图片翻译 — 截图/海报/菜单一键识别翻译 | 爱翻译",
-  description: "爱翻译免费图片翻译：上传截图、海报、菜单、聊天记录等图片，AI 自动识别图中文字并翻译，中英日韩等 10 种语言，注册送积分。",
+  description: "爱翻译免费图片翻译：上传截图、海报、菜单、聊天记录等图片，AI 自动识别图中文字并翻译，中英日韩等 10 种语言。",
   keywords: ["图片翻译","截图翻译","OCR翻译","图片识别","爱翻译"],
   ogType: 'tool',
 });
@@ -29,7 +29,7 @@ export default function ImageTranslatorPage() {
               "name": "图片翻译免费吗？",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "当前为免费体验阶段（需登录使用）。新用户注册送 500 积分，每张图片消耗 30 积分；每日另有公平使用额度，自动重置。"
+                "text": "免费在线使用，需登录。每张图片使用 30 积分，注册即送 500 积分。"
               }
             },
             {
@@ -70,7 +70,7 @@ export default function ImageTranslatorPage() {
         <h2>常见问题</h2>
         <div className="pdf-seo-faq-item">
           <h3>图片翻译免费吗？</h3>
-          <p>当前为免费体验阶段（需登录使用）。新用户注册送 500 积分，每张图片消耗 30 积分；每日另有公平使用额度，自动重置。</p>
+          <p>免费在线使用，需登录。每张图片使用 30 积分，注册即送 500 积分。</p>
         </div>
         <div className="pdf-seo-faq-item">
           <h3>支持哪些图片格式？</h3>

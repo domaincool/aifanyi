@@ -95,7 +95,7 @@ export default function SpeakTool({ initialQuery = '' }: { initialQuery?: string
           (res.status === 401 ? 'auth_required' : res.status === 402 ? 'insufficient' : res.status === 429 ? 'rate_limited' : res.status === 502 ? 'model_failed' : 'server_error');
         const msg =
           (d && d.error) ||
-          (res.status === 502 ? '没能生成地道说法，请换个说法再试（本次不消耗额度）。' : '服务器错误，请稍后再试。');
+          (res.status === 502 ? '没能生成地道说法，请换个说法再试（本次不消耗积分）。' : '服务器错误，请稍后再试。');
         setErr({ code, msg });
         return;
       }
@@ -129,7 +129,8 @@ export default function SpeakTool({ initialQuery = '' }: { initialQuery?: string
     setTimeout(() => setCopied(''), 1500);
   }
 
-  const creditLine = paused ? FAIR_USE_PAUSED_MSG : estCredits !== null ? `预计使用 ${estCredits} 额度` : '';
+  const creditLine = paused ? FAIR_USE_PAUSED_MSG : estCredits !== null ? `预计使用 ${estCredits} 积分` : '';
+  const usedLine = cached ? '本次使用 0 积分（缓存命中）' : paused ? FAIR_USE_PAUSED_MSG : `本次使用 ${usedCredits ?? 0} 积分`;
 
   return (
     <section className="speak-tool">
@@ -219,7 +220,7 @@ export default function SpeakTool({ initialQuery = '' }: { initialQuery?: string
           ) : null}
           {err.code === 'insufficient' ? (
             <a className="btn" href="/credit">
-              查看额度
+              查看积分
             </a>
           ) : null}
           {err.code === 'model_failed' ? (
@@ -227,7 +228,7 @@ export default function SpeakTool({ initialQuery = '' }: { initialQuery?: string
               重试
             </button>
           ) : null}
-          {err.code === 'model_failed' ? <span className="speak-note">本次不消耗额度</span> : null}
+          {err.code === 'model_failed' ? <span className="speak-note">本次不消耗积分</span> : null}
         </div>
       ) : null}
 
@@ -254,13 +255,7 @@ export default function SpeakTool({ initialQuery = '' }: { initialQuery?: string
               );
             })}
           </div>
-          <div className="speak-used">
-            {cached
-              ? '本次使用 0 额度（缓存命中）'
-              : paused
-                ? FAIR_USE_PAUSED_MSG
-                : `本次使用 ${usedCredits ?? 0} 额度`}
-          </div>
+          {usedLine ? <div className="speak-used">{usedLine}</div> : null}
         </div>
       ) : null}
     </section>

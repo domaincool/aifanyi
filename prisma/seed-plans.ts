@@ -29,7 +29,7 @@ const PLANS = [
     bonusCredits: 330, // 赠送 +10%（30 天）
     bonusTtlDays: 30,
     badge: '热销',
-    description: '多送 330 积分 · 轻度付费主力',
+    description: '含 330 赠送积分 · 轻度使用',
     sortOrder: 2,
   },
   {
@@ -41,7 +41,7 @@ const PLANS = [
     bonusCredits: 1670, // 赠送 +20%（30 天）
     bonusTtlDays: 30,
     badge: '最划算',
-    description: '多送 1670 积分 · 跨境/重度用户',
+    description: '含 1670 赠送积分 · 跨境与重度使用',
     sortOrder: 3,
   },
 ];

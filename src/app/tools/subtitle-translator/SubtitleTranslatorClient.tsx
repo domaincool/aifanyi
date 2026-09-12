@@ -14,8 +14,8 @@ interface Cue {
 type Phase = 'upload' | 'working' | 'done' | 'error' | 'paused';
 
 const FREE_STAGE = (() => { try { return !isCreditDeductionEnabled(); } catch { return true; } })();
-// D：面向用户的额度提示只允许两种写法——「预计使用 X 额度」/「本次使用 X 额度」；扣费关闭时显示免费阶段
-const creditNote = (credits?: number) => (FREE_STAGE ? FAIR_USE_PAUSED_MSG : (typeof credits === 'number' && credits > 0 ? `本次使用 ${credits} 额度` : ''));
+// D：面向用户的积分提示只允许两种写法——「预计使用 X 积分」/「本次使用 X 积分」；扣费关闭时不渲染
+const creditNote = (credits?: number) => (FREE_STAGE ? FAIR_USE_PAUSED_MSG : (typeof credits === 'number' && credits > 0 ? `本次使用 ${credits} 积分` : ''));
 
 const LANG_OPTIONS = [
   { v: 'zh', label: '简体中文' },
@@ -192,7 +192,7 @@ export default function SubtitleTranslatorClient() {
         >
           <div style={{ fontSize: 40, marginBottom: 12 }}>🎬</div>
           <p style={{ fontSize: 16, margin: '0 0 6px' }}>点击或拖拽字幕文件到这里</p>
-          <p style={{ fontSize: 13, color: 'var(--muted)', margin: 0 }}>支持 SRT / VTT · 最大 5MB · 单文件最多 2000 条 · 免费额度 · 登录后按积分使用</p>
+          <p style={{ fontSize: 13, color: 'var(--muted)', margin: 0 }}>支持 SRT / VTT · 最大 5MB · 单文件最多 2000 条 · 免登录可用</p>
           <input ref={inputRef} type="file" accept=".srt,.vtt" hidden onChange={e => { const f = e.target.files?.[0]; if (f) upload(f); }} />
         </div>
       )}
@@ -236,7 +236,7 @@ export default function SubtitleTranslatorClient() {
             <button className="btn-primary" style={{ background: 'var(--panel)', color: 'var(--text)' }} onClick={() => exportSrt(false)} disabled={exporting}>⬇ 纯译文 SRT</button>
             <button className="btn-primary" style={{ background: 'var(--panel)', color: 'var(--text)' }} onClick={exportTxt} disabled={exporting}>⬇ TXT</button>
             <span style={{ fontSize: 13, color: 'var(--muted)' }}>已翻译 {cues.length} 条 · 译文在服务端保留 24 小时</span>
-            {/* D：结果区额度口径（服务端未返回数值时按免费阶段显示） */}
+            {/* D：结果区积分口径（服务端未返回数值时不渲染） */}
             {creditNote() && <span style={{ fontSize: 13, color: 'var(--muted)' }}>{creditNote()}</span>}
             <button style={{ marginLeft: 'auto', background: 'none', border: 'none', color: 'var(--accent)', cursor: 'pointer', fontSize: 14 }} onClick={() => { setPhase('upload'); setCues([]); setFileName(''); }}>
               翻译下一个 →

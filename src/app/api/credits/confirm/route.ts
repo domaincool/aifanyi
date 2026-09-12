@@ -48,7 +48,7 @@ export async function POST(req: Request) {
 
   const result = await grantRechargeOrder(order.id);
   if (!result.ok) {
-    return NextResponse.json({ ok: false, code: 'grant_error', error: '积分到账异常，请稍后重试（不会重复扣款）。' }, { status: 500 });
+    return NextResponse.json({ ok: false, code: 'grant_error', error: '积分到账异常，请稍后重试（本次不消耗积分，不会重复扣款）。' }, { status: 500 });
   }
   return NextResponse.json({ ok: true, granted: result.granted });
 }

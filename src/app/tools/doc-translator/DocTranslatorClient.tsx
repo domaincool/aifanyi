@@ -17,8 +17,8 @@ interface Para { kind: string; source: string; text: string; }
 type Phase = 'upload' | 'working' | 'done' | 'error';
 
 const FREE_STAGE = (() => { try { return !isCreditDeductionEnabled(); } catch { return true; } })();
-// D：面向用户的额度提示只允许两种写法——「预计使用 X 额度」/「本次使用 X 额度」；扣费关闭时显示免费阶段
-const creditNote = (credits?: number) => (FREE_STAGE ? FAIR_USE_PAUSED_MSG : (typeof credits === 'number' && credits > 0 ? `本次使用 ${credits} 额度` : ''));
+// D：面向用户的积分提示只允许两种写法——「预计使用 X 积分」/「本次使用 X 积分」；扣费关闭时不渲染
+const creditNote = (credits?: number) => (FREE_STAGE ? FAIR_USE_PAUSED_MSG : (typeof credits === 'number' && credits > 0 ? `本次使用 ${credits} 积分` : ''));
 
 export default function DocTranslatorClient() {
   const [phase, setPhase] = useState<Phase>('upload');
@@ -103,7 +103,7 @@ export default function DocTranslatorClient() {
           <p style={{ fontSize: 16, margin: '0 0 6px' }}>点击或拖拽 Word / PPT 文件到这里</p>
           {/* A8：Word/PPT 翻译需登录 */}
           <p style={{ fontSize: 13, color: 'var(--accent)', margin: '0 0 6px' }}>需登录使用</p>
-          <p style={{ fontSize: 13, color: 'var(--muted)', margin: 0 }}>支持 .docx / .pptx · 最大 10MB · 单文件最多 300 段 · 免费额度 · 登录后按积分使用</p>
+          <p style={{ fontSize: 13, color: 'var(--muted)', margin: 0 }}>支持 .docx / .pptx · 最大 10MB · 单文件最多 300 段 · 需登录</p>
           <input ref={inputRef} type="file" accept=".docx,.pptx,.doc,.ppt" hidden onChange={e => { const f = e.target.files?.[0]; if (f) upload(f); }} />
         </div>
       )}
@@ -126,7 +126,7 @@ export default function DocTranslatorClient() {
 
       {phase === 'done' && (
         <div>
-          {/* D：结果区额度口径（服务端未返回数值时按免费阶段显示） */}
+          {/* D：结果区积分口径（服务端未返回数值时不渲染） */}
           {creditNote() && <p style={{ fontSize: 12, color: 'var(--muted)', margin: '0 0 10px' }}>{creditNote()}</p>}
           <div style={{ display: 'flex', gap: 10, alignItems: 'center', marginBottom: 14, flexWrap: 'wrap' }}>
             <span style={{ fontSize: 14, color: 'var(--text)', fontWeight: 600 }}>{fileName}</span>

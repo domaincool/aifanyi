@@ -1,6 +1,6 @@
 /**
  * Email OTP 验证码
- * 生成 6 位数字 → SHA-256 哈希存 DB → nodemailer 发送 → 5 分钟有效 / 一次性 / 最多验证 5 次
+ * 生成 6 位数字 → SHA-256 哈希存 DB → nodemailer 发送 → 10 分钟有效 / 一次性 / 最多验证 5 次
  * Phase 1：attempts 计数（≤5 次验证）、发送限流（email 维度 60s + IP 维度由 route 层处理）
  */
 import { prisma } from '../db';
