@@ -51,6 +51,19 @@ export default function AiPolishPage() {
           ]
         }) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'SoftwareApplication',
+          name: "爱翻译 AI 润色",
+          applicationCategory: 'UtilitiesApplication',
+          operatingSystem: 'Web',
+          description: "免费 AI 润色工具：保持原意优化表达，支持中英文等 10 种语言。",
+          url: 'https://aifanyi.com/tools/ai-polish',
+          offers: { '@type': 'Offer', price: '0', priceCurrency: 'CNY' },
+        }) }}
+      />
 </div>
   );
 }

@@ -1,0 +1,1 @@
+﻿const fs=require('fs');const path=require('path');const dir='.next/static/css';if(fs.existsSync(dir)){for(const f of fs.readdirSync(dir)){const css=fs.readFileSync(path.join(dir,f),'utf8');const i=css.indexOf('.btn{');const j=css.search(/\.btn[\s{,]/);console.log(f,'raw .btn{ at',i,'any .btn at',j);if(j>=0)console.log(JSON.stringify(css.slice(j,j+220)));}}

@@ -1,5 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { TRANSLATE_PAIRS } from '@/lib/translate-pairs';
+import { SPEAK_SCENARIOS } from '@/lib/content/speak-scenarios';
+import { CULTURE_ARTICLES } from '@/lib/content/culture-articles';
 
 /**
  * /sitemap.xml —— 静态页 + 语言对（分组方案 A：主图瘦身为小文件）
@@ -25,6 +27,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/untranslatable`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${BASE}/menu`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${BASE}/culture`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${BASE}/speak`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
+    ...SPEAK_SCENARIOS.map((s) => ({ url: `${BASE}/speak/${s.slug}`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.8 })),
+    ...CULTURE_ARTICLES.map((a) => ({ url: `${BASE}/culture/${a.slug}`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.7 })),
     { url: `${BASE}/life`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${BASE}/languages`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${BASE}/travel`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },

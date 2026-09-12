@@ -998,6 +998,11 @@ model ContentMetrics {
   signups           Int      @default(0)
   firstTranslations Int      @default(0)
   creditConsumed    Int      @default(0)
+  scrolls           Int      @default(0)
+  copies            Int      @default(0)
+  shares            Int      @default(0)
+  translationStarts Int      @default(0)
+  translationCompletions Int @default(0)
   createdAt         DateTime @default(now())
   updatedAt         DateTime @updatedAt
 

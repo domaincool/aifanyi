@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import FileTranslator from './FileTranslator';
+import { sendContentEvent } from '@/lib/metrics/client';
 
 const LANG_LABEL: Record<string, string> = {
   zh: '中文',
@@ -210,6 +211,7 @@ export default function TranslatorBox({
     setResult('');
     setMeta('');
     setStatus('');
+    sendContentEvent('translation_start', 'translate', scenario);
     try {
       const res = await fetch('/api/translate', {
         method: 'POST',
@@ -230,6 +232,7 @@ export default function TranslatorBox({
         setResult(data.text);
         setMeta(`模型：${data.model}${data.cached ? '（缓存命中）' : ''} · 耗时 ${data.latencyMs}ms`);
         setStatus(scenario === 'polish' ? '已润色 ✨' : '已完成');
+        sendContentEvent('translation_complete', 'translate', scenario);
         setExplain(null);
         setExplainOpen(false);
         // 未登录时显示保存挽留条（每会话一次，可关闭）
@@ -293,6 +296,7 @@ export default function TranslatorBox({
     if (!result) return;
     try {
       await navigator.clipboard.writeText(result);
+      sendContentEvent('content_copy', 'translate', scenario);
       setStatus('已复制 ✓');
       showToast('已复制到剪贴板');
     } catch {
@@ -325,6 +329,7 @@ export default function TranslatorBox({
   async function doShare() {
     if (!result) return;
     const shareText = `我在爱翻译把「${text.slice(0, 40)}${text.length > 40 ? '…' : ''}」翻译成：${result} —— 试试 AI 翻译擂台 → https://aifanyi.com`;
+    sendContentEvent('content_share', 'translate', scenario);
     if (navigator.share) {
       try {
         await navigator.share({ title: '爱翻译 · AI翻译', text: shareText });

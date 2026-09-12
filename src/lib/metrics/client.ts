@@ -17,7 +17,16 @@ export function getContentSessionId(): string {
 }
 
 export function sendContentEvent(
-  event: 'tool_click' | 'signup' | 'first_translation' | 'credit_consume',
+  event:
+    | 'tool_click'
+    | 'signup'
+    | 'first_translation'
+    | 'credit_consume'
+    | 'content_scroll'
+    | 'content_copy'
+    | 'content_share'
+    | 'translation_start'
+    | 'translation_complete',
   contentType: string,
   contentId: string
 ) {

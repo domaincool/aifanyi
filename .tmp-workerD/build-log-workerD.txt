@@ -1,0 +1,217 @@
+﻿npm : npm warn cli npm v12.0.2 does not support Node.js v22.22.0. This version of npm supports the following node versi
+ons: `^22.22.2 || ^24.15.0 || >=26.0.0`. You can find the latest version at https://nodejs.org/.
+所在位置 行:1 字符: 37
++ Set-Location 'G:\autoclaw\aifanyi'; npm run build 2>&1 | Out-File '.t ...
++                                     ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (npm warn cli np...://nodejs.org/.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+npm notice run aifanyi@0.1.0 build
+npm notice run next build
+   鈻?Next.js 15.5.23
+   - Environments: .env
+
+   Creating an optimized production build ...
+ 鉁?Compiled successfully in 4.6s
+   Linting and checking validity of types ...
+   Collecting page data ...
+Warning: Cannot polyfill `DOMMatrix`, rendering may be broken: "Error: Cannot find module 'canvas'
+Require stack:
+- G:\autoclaw\aifanyi\node_modules\pdfjs-dist\legacy\build\pdf.js
+- G:\autoclaw\aifanyi\.next\server\app\api\pdf\translate\route.js
+- G:\autoclaw\aifanyi\node_modules\next\dist\server\require.js
+- G:\autoclaw\aifanyi\node_modules\next\dist\server\load-components.js
+- G:\autoclaw\aifanyi\node_modules\next\dist\build\utils.js
+- G:\autoclaw\aifanyi\node_modules\next\dist\build\worker.js
+- G:\autoclaw\aifanyi\node_modules\next\dist\compiled\jest-worker\processChild.js".
+Warning: Cannot polyfill `Path2D`, rendering may be broken: "Error: Cannot find module 'canvas'
+Require stack:
+- G:\autoclaw\aifanyi\node_modules\pdfjs-dist\legacy\build\pdf.js
+- G:\autoclaw\aifanyi\.next\server\app\api\pdf\translate\route.js
+- G:\autoclaw\aifanyi\node_modules\next\dist\server\require.js
+- G:\autoclaw\aifanyi\node_modules\next\dist\server\load-components.js
+- G:\autoclaw\aifanyi\node_modules\next\dist\build\utils.js
+- G:\autoclaw\aifanyi\node_modules\next\dist\build\worker.js
+- G:\autoclaw\aifanyi\node_modules\next\dist\compiled\jest-worker\processChild.js".
+   Generating static pages (0/105) ...
+   Generating static pages (26/105) 
+Warning: Cannot polyfill `DOMMatrix`, rendering may be broken: "Error: Cannot find module 'canvas'
+Require stack:
+- G:\autoclaw\aifanyi\node_modules\pdfjs-dist\legacy\build\pdf.js
+- G:\autoclaw\aifanyi\.next\server\app\api\pdf\translate\route.js
+- G:\autoclaw\aifanyi\node_modules\next\dist\server\require.js
+- G:\autoclaw\aifanyi\node_modules\next\dist\server\load-components.js
+- G:\autoclaw\aifanyi\node_modules\next\dist\build\utils.js
+- G:\autoclaw\aifanyi\node_modules\next\dist\build\worker.js
+- G:\autoclaw\aifanyi\node_modules\next\dist\compiled\jest-worker\processChild.js".
+Warning: Cannot polyfill `Path2D`, rendering may be broken: "Error: Cannot find module 'canvas'
+Require stack:
+- G:\autoclaw\aifanyi\node_modules\pdfjs-dist\legacy\build\pdf.js
+- G:\autoclaw\aifanyi\.next\server\app\api\pdf\translate\route.js
+- G:\autoclaw\aifanyi\node_modules\next\dist\server\require.js
+- G:\autoclaw\aifanyi\node_modules\next\dist\server\load-components.js
+- G:\autoclaw\aifanyi\node_modules\next\dist\build\utils.js
+- G:\autoclaw\aifanyi\node_modules\next\dist\build\worker.js
+- G:\autoclaw\aifanyi\node_modules\next\dist\compiled\jest-worker\processChild.js".
+   Generating static pages (52/105) 
+   Generating static pages (78/105) 
+ 鉁?Generating static pages (105/105)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                                   Size  First Load JS  Revalidate  Expire
+鈹?茠 /                                                      1.52 kB         111 kB
+鈹?茠 /_not-found                                              343 B         103 kB
+鈹?茠 /account                                               2.89 kB         105 kB
+鈹?茠 /admin                                                  2.3 kB         105 kB
+鈹?茠 /admin/audit                                           1.68 kB         104 kB
+鈹?茠 /admin/blindtests                                      2.59 kB         105 kB
+鈹?茠 /admin/credits                                         2.43 kB         105 kB
+鈹?茠 /admin/memes                                           4.04 kB         107 kB
+鈹?茠 /admin/payments                                        3.95 kB         107 kB
+鈹?茠 /api/account                                             343 B         103 kB
+鈹?茠 /api/account/history                                     343 B         103 kB
+鈹?茠 /api/account/history/[id]                                343 B         103 kB
+鈹?茠 /api/account/migrate                                     343 B         103 kB
+鈹?茠 /api/account/progress                                    343 B         103 kB
+鈹?茠 /api/account/usage                                       343 B         103 kB
+鈹?茠 /api/admin/audit                                         343 B         103 kB
+鈹?茠 /api/admin/blindtests                                    343 B         103 kB
+鈹?茠 /api/admin/blindtests/[id]                               343 B         103 kB
+鈹?茠 /api/admin/content/import                                343 B         103 kB
+鈹?茠 /api/admin/credits/adjust                                343 B         103 kB
+鈹?茠 /api/admin/credits/reconcile                             343 B         103 kB
+鈹?茠 /api/admin/credits/users                                 343 B         103 kB
+鈹?茠 /api/admin/credits/users/[id]                            343 B         103 kB
+鈹?茠 /api/admin/export                                        343 B         103 kB
+鈹?茠 /api/admin/memes                                         343 B         103 kB
+鈹?茠 /api/admin/memes/[id]                                    343 B         103 kB
+鈹?茠 /api/admin/memes/import                                  343 B         103 kB
+鈹?茠 /api/admin/payments                                      343 B         103 kB
+鈹?茠 /api/ask/classify                                        343 B         103 kB
+鈹?茠 /api/auth/devices                                        343 B         103 kB
+鈹?茠 /api/auth/email/send                                     343 B         103 kB
+鈹?茠 /api/auth/email/verify                                   343 B         103 kB
+鈹?茠 /api/auth/google                                         343 B         103 kB
+鈹?茠 /api/auth/google/callback                                343 B         103 kB
+鈹?茠 /api/auth/logout                                         343 B         103 kB
+鈹?茠 /api/auth/logout-all                                     343 B         103 kB
+鈹?茠 /api/auth/me                                             343 B         103 kB
+鈹?茠 /api/blindtest                                           343 B         103 kB
+鈹?茠 /api/credit/balance                                      343 B         103 kB
+鈹?茠 /api/credit/estimate                                     343 B         103 kB
+鈹?茠 /api/credit/history                                      343 B         103 kB
+鈹?茠 /api/credits/confirm                                     343 B         103 kB
+鈹?茠 /api/credits/order                                       343 B         103 kB
+鈹?茠 /api/credits/plans                                       343 B         103 kB
+鈹?茠 /api/credits/purchase                                    343 B         103 kB
+鈹?茠 /api/credits/webhook/[provider]                          343 B         103 kB
+鈹?茠 /api/doc/translate                                       343 B         103 kB
+鈹?茠 /api/ecommerce/assets/[id]                               343 B         103 kB
+鈹?茠 /api/ecommerce/assets/[id]/translate                     343 B         103 kB
+鈹?茠 /api/ecommerce/compliance-rules                          343 B         103 kB
+鈹?茠 /api/ecommerce/listings/[id]/ai-edit                     343 B         103 kB
+鈹?茠 /api/ecommerce/listings/[id]/apply-edit                  343 B         103 kB
+鈹?茠 /api/ecommerce/listings/[id]/regenerate                  343 B         103 kB
+鈹?茠 /api/ecommerce/listings/[id]/restore                     343 B         103 kB
+鈹?茠 /api/ecommerce/messages/[id]/reply                       343 B         103 kB
+鈹?茠 /api/ecommerce/messages/[id]/retone                      343 B         103 kB
+鈹?茠 /api/ecommerce/messages/[id]/translate                   343 B         103 kB
+鈹?茠 /api/ecommerce/platform-rules                            343 B         103 kB
+鈹?茠 /api/ecommerce/products                                  343 B         103 kB
+鈹?茠 /api/ecommerce/products/[id]                             343 B         103 kB
+鈹?茠 /api/ecommerce/products/[id]/assets                      343 B         103 kB
+鈹?茠 /api/ecommerce/products/[id]/enrich                      343 B         103 kB
+鈹?茠 /api/ecommerce/products/[id]/listings                    343 B         103 kB
+鈹?茠 /api/ecommerce/products/[id]/messages                    343 B         103 kB
+鈹?茠 /api/ecommerce/projects                                  343 B         103 kB
+鈹?茠 /api/ecommerce/storage/[key]                             343 B         103 kB
+鈹?茠 /api/explain                                             343 B         103 kB
+鈹?茠 /api/health                                              343 B         103 kB
+鈹?茠 /api/image/translate                                     343 B         103 kB
+鈹?茠 /api/metrics/content                                     343 B         103 kB
+鈹?茠 /api/pdf/compare                                         343 B         103 kB
+鈹?茠 /api/pdf/tasks/[taskId]                                  343 B         103 kB
+鈹?茠 /api/pdf/tasks/[taskId]/resume                           343 B         103 kB
+鈹?茠 /api/pdf/track                                           343 B         103 kB
+鈹?茠 /api/pdf/translate                                       343 B         103 kB
+鈹?茠 /api/stats                                               343 B         103 kB
+鈹?茠 /api/subtitle/tasks/[taskId]                             343 B         103 kB
+鈹?茠 /api/subtitle/tasks/[taskId]/resume                      343 B         103 kB
+鈹?茠 /api/subtitle/translate                                  343 B         103 kB
+鈹?茠 /api/translate                                           343 B         103 kB
+鈹?茠 /api/voice/transcribe                                    343 B         103 kB
+鈹?茠 /api/voice/translate                                     343 B         103 kB
+鈹?茠 /api/voice/tts                                           343 B         103 kB
+鈹?茠 /api/votes                                               343 B         103 kB
+鈹?茠 /api/web/translate                                       343 B         103 kB
+鈹?茠 /arena                                                   343 B         103 kB
+鈹?茠 /arena/[id]                                             1.3 kB         104 kB
+鈹?茠 /blindtest                                               343 B         103 kB
+鈹?茠 /blindtest/[id]                                         1.3 kB         104 kB
+鈹?茠 /credit                                                3.28 kB         106 kB
+鈹?茠 /culture                                                 241 B         106 kB
+鈹?鈼?/culture/[slug]                                          241 B         106 kB
+鈹?  鈹?/culture/why-so-many-chinese-internet-abbreviations
+鈹?  鈹?/culture/chinese-vs-western-terms-of-address
+鈹?  鈹?/culture/chinese-euphemism-guide
+鈹?茠 /ecommerce                                             7.89 kB         110 kB
+鈹?茠 /expressions                                             241 B         106 kB
+鈹?茠 /idioms                                                  241 B         106 kB
+鈹?茠 /idioms/[slug]                                           241 B         106 kB
+鈹?茠 /languages                                               241 B         106 kB
+鈹?茠 /languages/[lang]                                        241 B         106 kB
+鈹?茠 /life                                                    241 B         106 kB
+鈹?茠 /life/[country]/[slug]                                   241 B         106 kB
+鈹?茠 /meme                                                    241 B         106 kB
+鈹?茠 /meme/[slug]                                             811 B         103 kB
+鈹?茠 /meme/tag/[tag]                                          241 B         106 kB
+鈹?茠 /menu                                                    241 B         106 kB
+鈹?茠 /menu/[country]/[slug]                                   241 B         106 kB
+鈹?茠 /privacy                                                 343 B         103 kB
+鈹?茠 /recipes                                                 241 B         106 kB
+鈹?茠 /recipes/[slug]                                          241 B         106 kB
+鈹?鈼?/robots.txt                                              343 B         103 kB
+鈹?鈼?/sitemap.xml                                             343 B         103 kB          1h      1y
+鈹?茠 /sitemaps/[group]                                        343 B         103 kB
+鈹?茠 /solutions                                               343 B         103 kB
+鈹?茠 /speak                                                   241 B         106 kB
+鈹?鈼?/speak/[scenario]                                        241 B         106 kB
+鈹?  鈹?/speak/travel
+鈹?  鈹?/speak/business
+鈹?  鈹?/speak/ecommerce
+鈹?  鈹?[+4 more paths]
+鈹?茠 /terms                                                   343 B         103 kB
+鈹?茠 /tools                                                   343 B         103 kB
+鈹?茠 /tools/ai-polish                                       2.34 kB         105 kB
+鈹?茠 /tools/doc-translator                                  2.36 kB         105 kB
+鈹?茠 /tools/image-translator                                2.43 kB         105 kB
+鈹?茠 /tools/pdf-translator                                   112 kB         214 kB
+鈹?茠 /tools/subtitle-translator                             3.19 kB         106 kB
+鈹?茠 /tools/web-translator                                  2.14 kB         105 kB
+鈹?鈼?/translate/[pair]                                        162 B         110 kB
+鈹?  鈹?/translate/english-to-chinese
+鈹?  鈹?/translate/chinese-to-english
+鈹?  鈹?/translate/japanese-to-chinese
+鈹?  鈹?[+18 more paths]
+鈹?茠 /travel                                                  241 B         106 kB
+鈹?茠 /travel/[country]/[slug]                                 241 B         106 kB
+鈹?茠 /understand                                              241 B         106 kB
+鈹?茠 /understand/dictionary                                   241 B         106 kB
+鈹?茠 /understand/idioms                                       241 B         106 kB
+鈹?茠 /understand/meaning                                      241 B         106 kB
+鈹?茠 /understand/slang                                        241 B         106 kB
+鈹?茠 /untranslatable                                          241 B         106 kB
+鈹?茠 /untranslatable/[slug]                                   828 B         107 kB
+鈹?茠 /updates                                                 343 B         103 kB
+鈹?茠 /voice                                                  8.7 kB         111 kB
++ First Load JS shared by all                               103 kB
+  鈹?chunks/1255-a20f6c5e797a687b.js                        46.4 kB
+  鈹?chunks/4bd1b696-f785427dddbba9fb.js                    54.2 kB
+  鈹?other shared chunks (total)                            1.98 kB
+
+
+鈼? (Static)   prerendered as static content
+鈼? (SSG)      prerendered as static HTML (uses generateStaticParams)
+茠  (Dynamic)  server-rendered on demand
+

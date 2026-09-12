@@ -51,6 +51,19 @@ export default function ImageTranslatorPage() {
           ]
         }) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'SoftwareApplication',
+          name: "爱翻译 图片翻译",
+          applicationCategory: 'UtilitiesApplication',
+          operatingSystem: 'Web',
+          description: "免费图片翻译工具：上传图片自动识别图中文字并翻译成目标语言。",
+          url: 'https://aifanyi.com/tools/image-translator',
+          offers: { '@type': 'Offer', price: '0', priceCurrency: 'CNY' },
+        }) }}
+      />
 </div>
   );
 }

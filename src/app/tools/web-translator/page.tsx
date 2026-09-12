@@ -51,6 +51,19 @@ export default function WebTranslatorPage() {
           ]
         }) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'SoftwareApplication',
+          name: "爱翻译 网页翻译",
+          applicationCategory: 'UtilitiesApplication',
+          operatingSystem: 'Web',
+          description: "免费网页翻译工具：输入网址即可翻译整页内容，段落级双语对照阅读。",
+          url: 'https://aifanyi.com/tools/web-translator',
+          offers: { '@type': 'Offer', price: '0', priceCurrency: 'CNY' },
+        }) }}
+      />
 </div>
   );
 }

@@ -1,10 +1,23 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { buildMetadata } from '@/lib/seo';
+import { buildMetadata, SITE_URL } from '@/lib/seo';
 import { prisma } from '@/lib/db';
 import { recordSearchQuery } from '@/lib/metrics/server';
 
 export const dynamic = 'force-dynamic';
+
+/** 搜索问句归一化：剥疑问后缀与尾标点，避免整句 LIKE 零结果（零结果词复盘 2026-09-11） */
+function normalizeQuery(raw: string): string {
+  const base = raw.trim();
+  if (!base) return base;
+  const stripped = base
+    .replace(/[?？!！。，,.]+$/g, '')
+    .replace(/(是什么意思|啥意思|什么意思|什么梗|啥梗|怎么说|怎么讲|怎么表达|如何表达|用英语怎么说|用英文怎么说|英语怎么说|英文怎么说)$/g, '')
+    .replace(/[?？!！。，,.]+$/g, '')
+    .trim();
+  const picked = stripped.length >= 2 ? stripped : base;
+  return picked.slice(0, 64);
+}
 
 /**
  * XX 是什么意思 · 搜索快答入口（蓝图 5.6 + P2 裁决）
@@ -38,7 +51,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
 
 export default async function MeaningSearchPage({ searchParams }: { searchParams: Promise<{ q?: string }> }) {
   const sp = await searchParams;
-  const q = (sp.q ?? '').trim().slice(0, 64);
+  const q = normalizeQuery((sp.q ?? '').slice(0, 128));
 
   // 无查询：渲染热门词条榜（可索引入口）
   if (!q) {
@@ -58,6 +71,21 @@ export default async function MeaningSearchPage({ searchParams }: { searchParams
           <input type="search" name="q" placeholder="如：cringe / yyds / I need some space" autoFocus />
           <button type="submit" className="btn primary">快答</button>
         </form>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'ItemList',
+              itemListElement: hot.map((m, i) => ({
+                '@type': 'ListItem',
+                position: i + 1,
+                url: `${SITE_URL}/meme/${m.slug}`,
+                name: m.term,
+              })),
+            }),
+          }}
+        />
         <h2 className="section-title">大家都在查</h2>
         <div className="entry-grid">
           {hot.map((m) => (

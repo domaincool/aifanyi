@@ -5,6 +5,7 @@ import { buildMetadata } from '@/lib/seo';
 import { recordContentView } from '@/lib/metrics/server';
 import { cookies } from 'next/headers';
 import ToolCtaButton from '@/components/ToolCtaButton';
+import ContentScrollTracker from '@/components/ContentScrollTracker';
 
 export const dynamic = 'force-dynamic';
 
@@ -174,6 +175,7 @@ export default async function MemePage({ params }: { params: Promise<{ slug: str
       )}
       <div style={{ marginTop: 24, display: 'flex', gap: 12, flexWrap: 'wrap', alignItems: 'center' }}>
         <ToolCtaButton contentType="meme" contentId={m.slug} />
+        <ContentScrollTracker contentType="meme" contentId={m.slug} />
         <span style={{ color: 'var(--muted)', fontSize: 13 }}>还想翻别的梗？去<a href="/arena" style={{ color: 'var(--accent2)' }}>擂台</a>看哪家 AI 最强。</span>
       </div>
     </>

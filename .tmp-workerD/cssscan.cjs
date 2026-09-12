@@ -1,0 +1,1 @@
+﻿const fs=require('fs');const css=fs.readFileSync('src/app/globals.css','utf8');const re=/[^\n]*\.btn[^\n]*/g;let m;const seen=[];while((m=re.exec(css))){if(!seen.includes(m[0])&&m[0].length<200)seen.push(m[0]);}console.log(seen.slice(0,40).join('\n'));

@@ -1,5 +1,5 @@
 import { prisma } from '@/lib/db';
-import { buildMetadata } from '@/lib/seo';
+import { buildMetadata, SITE_URL } from '@/lib/seo';
 import type { Metadata } from 'next';
 
 export const dynamic = 'force-dynamic';
@@ -28,6 +28,21 @@ export default async function BlindtestListPage() {
         同一段原文，多家 AI 匿名翻译。你觉得谁译得最好，就投谁。投票数据会用来改进翻译路由。
       </p>
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'ItemList',
+            itemListElement: list.map((b, i) => ({
+              '@type': 'ListItem',
+              position: i + 1,
+              url: `${SITE_URL}/arena/${b.id}`,
+              name: b.sourceText.slice(0, 60),
+            })),
+          }),
+        }}
+      />
       {list.length === 0 && <p style={{ color: 'var(--muted)' }}>还没有盲测题，去首页发起第一个吧（创建功能开发中）。</p>}
 
       <div className="entry-grid">

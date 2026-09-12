@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { buildListMetadata } from '@/lib/seo';
+import { buildListMetadata, SITE_URL } from '@/lib/seo';
 import { prisma } from '@/lib/db';
 
 export const dynamic = 'force-dynamic';
@@ -48,6 +48,21 @@ export default async function DictionaryPage({ searchParams }: { searchParams: P
         <h1>难翻译词词典</h1>
         <p>{total} 个无法直译的词——理解它们，就理解了一种文化。</p>
       </section>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'ItemList',
+            itemListElement: entries.map((m, i) => ({
+              '@type': 'ListItem',
+              position: i + 1,
+              url: `${SITE_URL}/untranslatable/${m.slug}`,
+              name: m.term,
+            })),
+          }),
+        }}
+      />
 
       <form className="filter-bar" action="/understand/dictionary" method="get">
         <input type="search" name="q" defaultValue={q} placeholder="搜词，如 komorebi" />

@@ -1,0 +1,1 @@
+﻿const fs=require('fs');const css=fs.readFileSync('src/app/globals.css','utf8');const re=/[^\r\n]*\.btn(?![a-zA-Z-])[^{\r\n]*\{[^}]*\}/g;let m;while((m=re.exec(css)))console.log(JSON.stringify(m[0].slice(0,240)));

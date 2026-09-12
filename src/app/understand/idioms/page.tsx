@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { buildListMetadata } from '@/lib/seo';
+import { buildListMetadata, SITE_URL } from '@/lib/seo';
 import { prisma } from '@/lib/db';
 
 export const dynamic = 'force-dynamic';
@@ -48,6 +48,21 @@ export default async function IdiomsPage({ searchParams }: { searchParams: Promi
         <h1>成语谚语翻译</h1>
         <p>{total} 条成语谚语——四字千年智慧的地道英文表达。</p>
       </section>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'ItemList',
+            itemListElement: entries.map((m, i) => ({
+              '@type': 'ListItem',
+              position: i + 1,
+              url: `${SITE_URL}/idioms/${m.slug}`,
+              name: m.term,
+            })),
+          }),
+        }}
+      />
 
       <form className="filter-bar" action="/understand/idioms" method="get">
         <input type="search" name="q" defaultValue={q} placeholder="搜成语，如 画蛇添足" />

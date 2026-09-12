@@ -313,6 +313,19 @@ export default function PdfTranslatorPage() {
           )}
         </div>
       )}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'SoftwareApplication',
+          name: "爱翻译 PDF 翻译",
+          applicationCategory: 'UtilitiesApplication',
+          operatingSystem: 'Web',
+          description: "免费在线 PDF 翻译工具：上传 PDF 翻译成中文或英文，三模型对比，双语对照阅读，支持导出 DOCX/TXT。",
+          url: 'https://aifanyi.com/tools/pdf-translator',
+          offers: { '@type': 'Offer', price: '0', priceCurrency: 'CNY' },
+        }) }}
+      />
     </div>
   );
 }

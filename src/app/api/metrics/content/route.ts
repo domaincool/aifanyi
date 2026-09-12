@@ -24,7 +24,17 @@ export async function POST(req: Request) {
 
     if (event === 'pageview') {
       await recordContentView(contentType, contentId, typeof contentSessionId === 'string' ? contentSessionId : null);
-    } else if (event === 'tool_click' || event === 'signup' || event === 'first_translation' || event === 'credit_consume') {
+    } else if (
+      event === 'tool_click' ||
+      event === 'signup' ||
+      event === 'first_translation' ||
+      event === 'credit_consume' ||
+      event === 'content_scroll' ||
+      event === 'content_copy' ||
+      event === 'content_share' ||
+      event === 'translation_start' ||
+      event === 'translation_complete'
+    ) {
       await recordContentEvent(event, contentType, contentId);
       // signup/首翻时附带回传触点归因（供日志侧使用，P5）
       if ((event === 'signup' || event === 'first_translation') && typeof contentSessionId === 'string') {

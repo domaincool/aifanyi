@@ -1,0 +1,1 @@
+﻿const fs=require('fs');const css=fs.readFileSync('.next/static/css/16a59226b01723ee.css','utf8');for(const sel of ['.primary','.tool-cta','.cta-box','.nf-btn']){const i=css.indexOf(sel);console.log(sel,'at',i);if(i>=0)console.log(JSON.stringify(css.slice(i,i+200)));}

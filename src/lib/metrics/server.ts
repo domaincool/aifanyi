@@ -29,11 +29,21 @@ export async function recordContentView(contentType: string, contentId: string, 
 
 /** 客户端事件计数（tool_click / signup / first_translation / credit_consume） */
 export async function recordContentEvent(
-  event: 'tool_click' | 'signup' | 'first_translation' | 'credit_consume',
+  event: 'tool_click' | 'signup' | 'first_translation' | 'credit_consume' | 'content_scroll' | 'content_copy' | 'content_share' | 'translation_start' | 'translation_complete',
   contentType: string,
   contentId: string
 ) {
-  const field = { tool_click: 'toolClicks', signup: 'signups', first_translation: 'firstTranslations', credit_consume: 'creditConsumed' }[event];
+  const field = {
+    tool_click: 'toolClicks',
+    signup: 'signups',
+    first_translation: 'firstTranslations',
+    credit_consume: 'creditConsumed',
+    content_scroll: 'scrolls',
+    content_copy: 'copies',
+    content_share: 'shares',
+    translation_start: 'translationStarts',
+    translation_complete: 'translationCompletions',
+  }[event];
   if (!field) return;
   try {
     await prisma.contentMetrics.upsert({

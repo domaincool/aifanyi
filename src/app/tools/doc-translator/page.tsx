@@ -51,6 +51,19 @@ export default function DocTranslatorPage() {
           ]
         }) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'SoftwareApplication',
+          name: "爱翻译 Word/PPT 翻译",
+          applicationCategory: 'UtilitiesApplication',
+          operatingSystem: 'Web',
+          description: "免费 Word/PPT 文档翻译工具：上传 docx/pptx 保留结构翻译，段落级双语对照。",
+          url: 'https://aifanyi.com/tools/doc-translator',
+          offers: { '@type': 'Offer', price: '0', priceCurrency: 'CNY' },
+        }) }}
+      />
 </div>
   );
 }

@@ -1,6 +1,7 @@
 'use client';
 
 import { useCallback, useRef, useState } from 'react';
+import { sendContentEvent } from '@/lib/metrics/client';
 
 type FileType = 'pdf' | 'image' | 'subtitle' | 'doc';
 type Phase = 'idle' | 'working' | 'done' | 'error';
@@ -83,6 +84,7 @@ export default function FileTranslator({ targetLang }: { targetLang: string }) {
   );
 
   async function copyPairs(items: DocPair[]) {
+    sendContentEvent('content_copy', 'tool', 'file');
     const text = items.map(p => `${p.text}\n${p.translation}`).join('\n\n');
     try { await navigator.clipboard.writeText(text); showToast('已复制'); }
     catch { showToast('复制失败'); }
@@ -93,6 +95,7 @@ export default function FileTranslator({ targetLang }: { targetLang: string }) {
     if (!type) { setError('暂不支持该文件类型，支持：PDF / 图片 / SRT·VTT 字幕 / Word·PPT'); setPhase('error'); return; }
     if (file.size > SIZE_LIMIT[type]) { setError(`文件过大（${TYPE_LABEL[type]} 上限 ${Math.round(SIZE_LIMIT[type] / 1024 / 1024)}MB）。`); setPhase('error'); return; }
     setFileType(type); setFileName(file.name); setPhase('working'); setError(''); setProgress(0);
+    sendContentEvent('translation_start', 'tool', type);
     const fd = new FormData();
     fd.append('file', file);
     fd.append('targetLang', targetLang);
@@ -104,6 +107,7 @@ export default function FileTranslator({ targetLang }: { targetLang: string }) {
         if (!d.ok) { setError(d.error || '识别失败'); setPhase('error'); return; }
         setImageResult({ text: d.text, translation: d.translation, preview: URL.createObjectURL(file) });
         setPhase('done');
+        sendContentEvent('translation_complete', 'tool', type);
         return;
       }
       if (type === 'doc') {
@@ -112,6 +116,7 @@ export default function FileTranslator({ targetLang }: { targetLang: string }) {
         if (!d.ok) { setError(d.error || '翻译失败'); setPhase('error'); return; }
         setPairs((d.paragraphs || []).map((p: any, i: number) => ({ source: p.source, text: p.text, translation: d.translations[i] || p.text })));
         setPhase('done');
+        sendContentEvent('translation_complete', 'tool', type);
         return;
       }
       // PDF / 字幕：异步任务轮询
@@ -144,6 +149,7 @@ export default function FileTranslator({ targetLang }: { targetLang: string }) {
             }
             setProgress(100);
             setPhase('done');
+            sendContentEvent('translation_complete', 'tool', type);
           } else if (status === 'failed' || status === 'error') {
             setError((td.errorMessage || td.message) || '翻译失败，请重试'); setPhase('error');
           } else {
@@ -163,6 +169,7 @@ export default function FileTranslator({ targetLang }: { targetLang: string }) {
     const u = webUrl.trim();
     if (!u) { setError('请输入网页地址'); setPhase('error'); return; }
     setFileType('doc'); setPhase('working'); setError(''); setProgress(0); setWebWorking(true);
+    sendContentEvent('translation_start', 'tool', 'web');
     try {
       const res = await fetch('/api/web/translate', {
         method: 'POST',
@@ -175,6 +182,7 @@ export default function FileTranslator({ targetLang }: { targetLang: string }) {
       setPairs((d.paragraphs || []).map((tp: string, i: number) => ({ source: '', text: tp, translation: d.translations[i] || tp })));
       setProgress(100);
       setPhase('done');
+      sendContentEvent('translation_complete', 'tool', 'web');
     } catch (e: any) {
       setError(e?.message || '网络错误，请重试'); setPhase('error');
     } finally {

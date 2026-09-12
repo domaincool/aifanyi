@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { buildListMetadata } from '@/lib/seo';
+import { buildListMetadata, SITE_URL } from '@/lib/seo';
 import { prisma } from '@/lib/db';
 
 export const dynamic = 'force-dynamic';
@@ -50,6 +50,21 @@ export default async function SlangPage({ searchParams }: { searchParams: Promis
         <h1>网络用语与俚语</h1>
         <p>{total} 条热梗与俚语——含义、语境、地道英文翻译。</p>
       </section>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'ItemList',
+            itemListElement: memes.map((m, i) => ({
+              '@type': 'ListItem',
+              position: i + 1,
+              url: `${SITE_URL}/${m.slug}`,
+              name: m.term,
+            })),
+          }),
+        }}
+      />
 
       <form className="filter-bar" action="/understand/slang" method="get">
         <input type="search" name="q" defaultValue={q} placeholder="搜梗 / 俚语 / 缩写，如 yyds" />

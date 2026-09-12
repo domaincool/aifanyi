@@ -1,0 +1,1 @@
+﻿const fs=require('fs');const css=fs.readFileSync('.next/static/css/16a59226b01723ee.css','utf8');console.log('len',css.length);const idx=[];let i=css.indexOf('.btn');while(i>=0){idx.push(i);i=css.indexOf('.btn',i+1);}console.log('count',idx.length);idx.slice(0,5).forEach(k=>console.log(JSON.stringify(css.slice(k,k+200))));

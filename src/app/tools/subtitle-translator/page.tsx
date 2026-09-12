@@ -51,6 +51,19 @@ export default function SubtitleTranslatorPage() {
           ]
         }) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'SoftwareApplication',
+          name: "爱翻译 字幕翻译",
+          applicationCategory: 'UtilitiesApplication',
+          operatingSystem: 'Web',
+          description: "免费 SRT/VTT 字幕翻译工具：上传字幕文件 AI 自动翻译，双语对照预览，支持导出双语 SRT 与 TXT。",
+          url: 'https://aifanyi.com/tools/subtitle-translator',
+          offers: { '@type': 'Offer', price: '0', priceCurrency: 'CNY' },
+        }) }}
+      />
 </div>
   );
 }

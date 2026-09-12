@@ -37,7 +37,7 @@ export async function GET(_req: Request, { params }: { params: Promise<{ group: 
     const memes = await prisma.memeEntry.findMany({ where: { status: 'published' }, select: { slug: true, updatedAt: true } });
     for (const m of memes) entries.push({ loc: `${SITE_URL}/meme/${m.slug}`, lastmod: m.updatedAt });
 
-    const exprs = await prisma.expressionEntry.findMany({ where: { status: 'published' }, select: { slug: true, type: true, updatedAt: true } });
+    const exprs = await prisma.expressionEntry.findMany({ where: { status: 'published', type: { not: 'slang' } }, select: { slug: true, type: true, updatedAt: true } });
     for (const e of exprs) {
       const prefix = e.type === 'idiom' ? '/idioms' : '/untranslatable';
       entries.push({ loc: `${SITE_URL}${prefix}/${e.slug}`, lastmod: e.updatedAt });
@@ -54,6 +54,10 @@ export async function GET(_req: Request, { params }: { params: Promise<{ group: 
 
     const recipes = await prisma.recipeEntry.findMany({ where: { status: 'published' }, select: { slug: true, updatedAt: true } });
     for (const r of recipes) entries.push({ loc: `${SITE_URL}/recipes/${r.slug}`, lastmod: r.updatedAt });
+
+    // 盲测擂台详情页（Arena，蓝图补缺项 ④）
+    const blindtests = await prisma.blindtest.findMany({ where: { status: 'published' }, select: { id: true, createdAt: true }, orderBy: { createdAt: 'desc' } });
+    for (const b of blindtests) entries.push({ loc: `${SITE_URL}/arena/${b.id}`, lastmod: b.createdAt });
 
     // meme tag 聚合页（52 个）
     const tagRows = await prisma.$queryRaw`SELECT DISTINCT unnest(tags) AS tag FROM "MemeEntry" WHERE status = 'published'`;
