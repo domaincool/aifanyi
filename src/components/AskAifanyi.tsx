@@ -50,6 +50,11 @@ export default function AskAifanyi() {
       } catch {}
     }
     // 埋点：intent 路由（contentId 带 intent 与来源便于日聚合区分）
+    // __p0ask__ query 级埋点：query 前 160 字符 + intent + 命中来源（L1/L3），支撑「用户到底在问什么」分析
+    try {
+      const qp = query.slice(0, 140);
+      sendContentEvent('tool_click', 'ask_query', qp + '|' + intent + '|' + via);
+    } catch {}
     try { sendContentEvent('tool_click', 'ask_aifanyi', via === 'l3' ? intent + '_ai' : intent); } catch {}
     if (intent === 'meaning') {
       // L2：内容库匹配（服务端五表查询 + 精确命中快答）
@@ -70,8 +75,8 @@ export default function AskAifanyi() {
           type="search"
           value={q}
           onChange={(e) => setQ(e.target.value)}
-          placeholder="问一个语言问题：cringe 是什么意思？/ 帮我把这句话翻得像美国人"
-          aria-label="问 AI 一个语言问题"
+          placeholder="Ask AIFANYI：cringe 是什么意思？/ 帮我把这句话翻得像美国人" // __p0ask-brand__
+          aria-label="Ask AIFANYI：问一个语言问题"
         />
         <button type="submit" className="btn primary" disabled={busy}>立即解决</button>
       </form>

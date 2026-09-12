@@ -34,8 +34,12 @@ export async function GET(_req: Request, { params }: { params: Promise<{ group: 
 
   const entries: { loc: string; lastmod?: Date }[] = [];
   try {
-    const memes = await prisma.memeEntry.findMany({ where: { status: 'published' }, select: { slug: true, updatedAt: true } });
-    for (const m of memes) entries.push({ loc: `${SITE_URL}/meme/${m.slug}`, lastmod: m.updatedAt });
+    const memes = await prisma.memeEntry.findMany({ where: { status: 'published' }, select: { slug: true, lang: true, updatedAt: true } });
+    for (const m of memes) {
+      // __p0meaning__ en 词条走 /understand/meaning/[slug] 稳定 URL
+      const prefix = m.lang === 'en' ? '/understand/meaning/' : '/meme/';
+      entries.push({ loc: `${SITE_URL}${prefix}${m.slug}`, lastmod: m.updatedAt });
+    }
 
     const exprs = await prisma.expressionEntry.findMany({ where: { status: 'published', type: { not: 'slang' } }, select: { slug: true, type: true, updatedAt: true } });
     for (const e of exprs) {

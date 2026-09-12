@@ -31,7 +31,7 @@ export default function LanguagesIndexPage() {
         ))}
       </div>
       <div className="cta-box" style={{ marginTop: 24 }}>
-        <p>栏目内容持续建设中——先试试 AI 翻译工具。</p>
+        <p>没找到想查的语言？直接问 AI 翻译工具。</p>
         <a href="/" className="btn primary">去翻译</a>
       </div>
     </div>

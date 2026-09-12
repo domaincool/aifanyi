@@ -120,7 +120,7 @@ export default function VoiceMobileView() {
       {/* ③ 底部操作区 */}
       <div style={{ flexShrink: 0, padding: '8px 0 calc(14px + env(safe-area-inset-bottom))', textAlign: 'center' }}>
         <div style={{ fontSize: 12, color: 'var(--muted)', marginBottom: 6 }}>
-          免费使用 · 无需付费
+          免费使用
         </div>
         <canvas ref={waveRef} width={200} height={34} style={{ width: '70%', height: 34, display: 'block', margin: '0 auto 6px' }} />
         <button

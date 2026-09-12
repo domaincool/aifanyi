@@ -7,7 +7,7 @@ export const dynamic = 'force-dynamic';
 
 /** 首页：翻译框（角1/角2 共用内核的入口）+ 双入口导流 */
 export default async function HomePage() {
-  let hotMemes: { term: string; slug: string; translation: string; meaning: string }[] = [];
+  let hotMemes: { term: string; slug: string; translation: string; meaning: string; lang?: string }[] = []; // __p0mlink__
   try {
     hotMemes = (await getTrendingMemes(6)).map(({ slug, term, translation, meaning }) => ({ slug, term, translation, meaning }));
   } catch {
@@ -27,7 +27,7 @@ export default async function HomePage() {
               "url": "https://aifanyi.com/",
               "name": "爱翻译 aifanyi.com - 在线翻译,英文翻译成中文,智能翻译,实时翻译",
               "alternateName": "爱翻译",
-              "description": "爱翻译提供免费在线翻译服务：英文翻译成中文、中文翻译成英文，支持实时智能翻译，翻译准确自然。跨境电商文案、外文文档、网络用语都能翻，多模型对比选更佳译文。",
+              "description": "爱翻译在线翻译：新用户赠送免费积分，免费额度上传即译。英文翻译成中文、中文翻译成英文，支持实时智能翻译，翻译准确自然。跨境电商文案、外文文档、网络用语都能翻，多模型对比选更佳译文。",
               "inLanguage": "zh-CN",
               "potentialAction": {
                 "@type": "SearchAction",
@@ -56,9 +56,9 @@ export default async function HomePage() {
         }) }}
       />
       <section className="hero">
-        <span className="hero-free-badge">🎁 免费使用</span>
+        <span className="hero-free-badge">🎁 新用户送免费积分</span>
         <h1>爱翻译 · AI翻译</h1>
-        <p>无需付费，上传即译。让 AI 帮你把话说得像当地人。Let AI help you speak like a local.</p>
+        <p>免费额度，上传即译。让 AI 帮你把话说得像当地人。Let AI help you speak like a local.</p>
       </section>
 
       <AskAifanyi />
@@ -68,12 +68,12 @@ export default async function HomePage() {
       {/* ── 快速选择翻译工具 ── */}
       <section className="home-block" id="quick-tools">
         <h2 className="section-title">快速选择翻译工具</h2>
-        <p className="block-lead">常用格式直接开翻，全部免费使用</p>
+        <p className="block-lead">文本翻译免费用，文件翻译注册即送积分额度</p>
         <div className="tools-grid">
           <a className="tool-card" href="/tools/pdf-translator">
             <div className="tool-emoji">📄</div>
             <h2>PDF 翻译</h2>
-            <p>保持排版的三模型对比翻译，免费使用</p>
+            <p>保持排版的三模型对比翻译，游客每日 5 个文件</p>
           </a>
           <a className="tool-card" href="/tools/image-translator">
             <div className="tool-emoji">🖼️</div>
@@ -187,8 +187,8 @@ export default async function HomePage() {
         <div className="tools-grid">
           <a className="tool-card" href="/arena">
             <div className="tool-emoji">🆚</div>
-            <h2>盲测投票</h2>
-            <p>三款 AI 匿名译文，选出最地道的一句</p>
+            <h2>今日擂台</h2>
+            <p>每天精选 5 道，三款 AI 匿名对比，选出最地道的</p>
           </a>
           <a className="tool-card" href="/arena">
             <div className="tool-emoji">📊</div>
@@ -203,7 +203,7 @@ export default async function HomePage() {
       <div className="entry-grid">
         {hotMemes.length > 0 ? (
           hotMemes.map((m) => (
-            <a key={m.slug} className="entry-card" href={`/meme/${m.slug}`}>
+            <a key={m.slug} className="entry-card" href={m.lang === 'en' ? `/understand/meaning/${m.slug}` : `/meme/${m.slug}`}>
               <div className="term">{m.term}</div>
               <div className="tr">{m.translation}</div>
               <div className="mn">{m.meaning}</div>

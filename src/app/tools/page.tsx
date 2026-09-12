@@ -14,7 +14,7 @@ const tools = [
     id: 'pdf',
     emoji: '📄',
     name: 'PDF 翻译 · 三模型对比',
-    desc: 'DeepSeek/GLM/Google 三模型对比，双语对照阅读，支持 DOCX/TXT 下载 · 免费使用',
+    desc: 'DeepSeek/GLM/Google 三模型对比，双语对照阅读，支持 DOCX/TXT 下载 · 注册送积分',
     action: '开始翻译 →',
   },
   {
@@ -28,7 +28,7 @@ const tools = [
     id: 'subtitle',
     emoji: '🎬',
     name: '字幕翻译',
-    desc: 'SRT / VTT 字幕一键翻译，双语对照，保留时间轴，免费使用',
+    desc: 'SRT / VTT 字幕一键翻译，双语对照，保留时间轴 · 游客先试 5 个文件',
     action: '翻译字幕 →',
   },
   {

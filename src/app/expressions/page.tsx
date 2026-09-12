@@ -22,7 +22,7 @@ export default async function ExpressionsIndexPage() {
   const sections = [
     { href: '/meme', title: '网络用语翻译', desc: `${memeCount} 个网络热梗地道翻译`, icon: 'Meme' },
     { href: '/idioms', title: '成语谚语翻译', desc: `${idiomCount} 个成语谚语地道英文`, icon: '成语' },
-    { href: '/untranslatable', title: '难翻译词', desc: '无法直译的外语单词（建设中）', icon: '词汇' },
+    { href: '/untranslatable', title: '难翻译词', desc: '无法直译的外语单词', icon: '词汇' },
   ];
 
   return (

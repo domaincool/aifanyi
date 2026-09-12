@@ -56,7 +56,7 @@ export default async function LanguageDetailPage({ params }: { params: Promise<{
           <p>用语言探索世界——各国语言入口与语言文化</p>
         </section>
         <div className="cta-box">
-          <p>该语言页面建设中，先试试 AI 翻译工具。</p>
+          <p>该语言内容整理中，先试试 AI 翻译工具。</p>
           <a href="/" className="btn primary">去翻译</a>
         </div>
       </div>
@@ -111,7 +111,7 @@ export default async function LanguageDetailPage({ params }: { params: Promise<{
 
       {empty ? (
         <div className="cta-box">
-          <p>{cfg.section}内容按批次建设中，先试试 AI 翻译工具。</p>
+          <p>{cfg.section}内容持续补充中，先试试 AI 翻译工具。</p>
           <a href="/" className="btn primary">去翻译</a>
         </div>
       ) : (

@@ -17,3 +17,6 @@ tsconfig.tsbuildinfo
 .openclaw-*.txt
 .tmp-workerD/
 .build-verify.log
+
+# 本地补丁/诊断脚本目录
+.openclaw/

@@ -196,7 +196,7 @@ export default async function MenuIndexPage({
         ))}
       </div>
       <div className="cta-box" style={{ marginTop: 24 }}>
-        <p>菜单词条内容按批次建设中——先试试 AI 翻译工具。</p>
+        <p>菜单词条持续补充中——先试试 AI 翻译工具。</p>
         <a href="/" className="btn primary">去翻译</a>
       </div>
     </div>

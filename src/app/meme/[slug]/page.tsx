@@ -1,5 +1,5 @@
 import { prisma } from '@/lib/db';
-import { notFound } from 'next/navigation';
+import { notFound, permanentRedirect } from 'next/navigation';
 import type { Metadata } from 'next';
 import { buildMetadata } from '@/lib/seo';
 import { recordContentView } from '@/lib/metrics/server';
@@ -16,7 +16,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!m || m.status !== 'published') return { title: '网络用语翻译 | 爱翻译 aifanyi.com' };
   const isEn = m.lang === 'en';
   return buildMetadata({
-    path: `/meme/${m.slug}`,
+    // __p0mb__ en 词条 canonical 指稳定 Meaning URL
+    path: isEn ? `/understand/meaning/${m.slug}` : `/meme/${m.slug}`,
     title: isEn
       ? `${m.term} 中文什么意思？${m.term} → ${m.translation} | 爱翻译`
       : `${m.term} 英文怎么说？${m.term} → ${m.translation} | 爱翻译`,
@@ -32,6 +33,8 @@ export default async function MemePage({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const m = await prisma.memeEntry.findUnique({ where: { slug } });
   if (!m || m.status !== 'published') notFound();
+  // __p0meaning__ en 词条的稳定 URL 是 /understand/meaning/[slug]（Meaning SEO 层），meme URL 301 过去
+  if (m.lang === 'en') permanentRedirect('/understand/meaning/' + m.slug);
   // 埋点（V1.0 D5）：词条页浏览计数 + 触点日志（P5 归因）
   recordContentView('meme', m.slug, (await cookies()).get('aifanyi_cs')?.value ?? null).catch(() => {});
 
@@ -83,7 +86,7 @@ export default async function MemePage({ params }: { params: Promise<{ slug: str
           "datePublished": m.createdAt,
           "dateModified": m.updatedAt,
           "inLanguage": "zh-CN",
-          "mainEntityOfPage": "https://aifanyi.com/meme/" + m.slug,
+          "mainEntityOfPage": "https://aifanyi.com" + (isEn ? "/understand/meaning/" : "/meme/") + m.slug, // __p0mb__
           "author": {
             "@type": "Organization",
             "name": "爱翻译 aifanyi.com",

@@ -172,7 +172,7 @@ export default async function LifeIndexPage({
         </div>
       ) : (
         <div style={{ textAlign: 'center', padding: '48px 0', color: 'var(--muted)' }}>
-          海外生活场景内容按批次建设中，敬请期待——先看看<a href="/travel" style={{ color: 'var(--accent2)' }}>旅行语言</a>？
+          更多海外生活场景整理中——先看看<a href="/travel" style={{ color: 'var(--accent2)' }}>旅行语言</a>？
         </div>
       ))}
 
@@ -198,7 +198,7 @@ export default async function LifeIndexPage({
         ))}
       </div>
       <div className="cta-box" style={{ marginTop: 24 }}>
-        <p>海外生活内容按批次建设中——先试试 AI 翻译工具。</p>
+        <p>更多生活场景持续补充——先试试 AI 翻译工具。</p>
         <a href="/" className="btn primary">去翻译</a>
       </div>
     </div>

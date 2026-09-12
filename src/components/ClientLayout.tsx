@@ -70,7 +70,32 @@ export default function ClientLayout({ children, serverUser }: { children: React
               </div>
             </div>
           </div>
-          <a href="/travel" className="nav-item">表达</a>
+          <div className="nav-mega">
+            <button type="button" className="nav-mega-trigger" aria-haspopup="true" aria-expanded="false">
+              表达 <span className="nav-caret">▾</span>
+            </button>
+            <div className="nav-mega-panel" role="menu">
+              <div className="mega-title">说得像当地人</div>
+              <div className="mega-grid">
+                <a role="menuitem" className="mega-item" href="/speak">
+                  <span className="mega-ico">🗣️</span>
+                  <span className="mega-body"><b>场景表达指南</b><small>旅行 · 商务 · 职场 · 恋爱 · 学习</small></span>
+                </a>
+                <a role="menuitem" className="mega-item" href="/speak/travel">
+                  <span className="mega-ico">✈️</span>
+                  <span className="mega-body"><b>旅行怎么说</b><small>点餐 · 问路 · 酒店 · 购物</small></span>
+                </a>
+                <a role="menuitem" className="mega-item" href="/tools/ai-polish">
+                  <span className="mega-ico">✨</span>
+                  <span className="mega-body"><b>语气调整 · AI 润色</b><small>把生硬译文改得更地道</small></span>
+                </a>
+                <a role="menuitem" className="mega-item" href="/life">
+                  <span className="mega-ico">🏠</span>
+                  <span className="mega-body"><b>海外生活口语</b><small>租房 · 工作 · 银行 · 快递</small></span>
+                </a>
+              </div>
+            </div>
+          </div>
           <div className="nav-mega">
             <button type="button" className="nav-mega-trigger" aria-haspopup="true" aria-expanded="false">
               探索世界 <span className="nav-caret">▾</span>
@@ -110,7 +135,6 @@ export default function ClientLayout({ children, serverUser }: { children: React
                   <span className="mega-body"><b>语言与文化</b><small>语言冷知识 · 文化差异 · 词源</small></span>
                 </a>
                 <div className="mega-links">
-                  <a href="/arena">AI 翻译擂台</a>
                 </div>
               </div>
             </div>
@@ -159,6 +183,9 @@ export default function ClientLayout({ children, serverUser }: { children: React
             <a className="mob-link" href="/voice" onClick={() => setMobileOpen(false)}>🎙️ 语音翻译</a>
             <a className="mob-link" href="/tools" onClick={() => setMobileOpen(false)}>🧰 全部工具</a>
             <div className="mob-group">看懂</div>
+            <div className="mob-group">表达</div>
+            <a className="mob-link" href="/speak" onClick={() => setMobileOpen(false)}>🗣️ 场景表达 <span className="mob-sub">旅行 · 商务 · 职场 · 恋爱</span></a>
+            <a className="mob-link" href="/tools/ai-polish" onClick={() => setMobileOpen(false)}>✨ AI 润色 <span className="mob-sub">语气调整 · 更地道</span></a>
             <a className="mob-link" href="/meme" onClick={() => setMobileOpen(false)}>🔥 网络用语</a>
             <a className="mob-link" href="/idioms" onClick={() => setMobileOpen(false)}>📜 成语谚语</a>
             <a className="mob-link" href="/untranslatable" onClick={() => setMobileOpen(false)}>🧩 难翻译词</a>

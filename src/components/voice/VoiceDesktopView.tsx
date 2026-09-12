@@ -85,7 +85,7 @@ function Panel({ session, side, accent, label }: { session: ReturnType<typeof us
         <input type="checkbox" checked={s.holdMode} onChange={(e) => { s.setHoldMode(e.target.checked); if (e.target.checked) s.cancelListen(); }} style={{ accentColor: 'var(--accent)' }} />
         按住说话（备用）
       </label>
-      <div style={{ fontSize: 12, color: 'var(--muted)', marginTop: 4 }}>免费使用 · 无需付费</div>
+      <div style={{ fontSize: 12, color: 'var(--muted)', marginTop: 4 }}>免费使用</div>
     </div>
   );
 }

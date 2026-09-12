@@ -14,7 +14,7 @@ async function computeTrending(limit: number) {
   const [entries, pvRows] = await Promise.all([
     prisma.memeEntry.findMany({
       where: { status: 'published' },
-      select: { id: true, slug: true, term: true, meaning: true, translation: true, popularity: true },
+      select: { id: true, slug: true, term: true, meaning: true, translation: true, popularity: true, lang: true }, // __p0mlink__
     }),
     prisma.contentMetrics.groupBy({
       by: ['contentId'],
@@ -52,6 +52,6 @@ export async function getTrendingMemes(limit = 10) {
       orderBy: { popularity: 'desc' },
       take: limit,
       select: { id: true, slug: true, term: true, meaning: true, translation: true, popularity: true },
-    }).then((rows) => rows.map((e) => ({ ...e, pv: 0, score: 0 })));
+    }).then((rows) => rows.map((e) => ({ ...e, pv: 0, score: 0 }))); // __p0mlink-trending2__
   }
 }

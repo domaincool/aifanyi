@@ -59,7 +59,7 @@ export default async function MeaningSearchPage({ searchParams }: { searchParams
       where: { status: 'published' },
       orderBy: { popularity: 'desc' },
       take: 12,
-      select: { slug: true, term: true, meaning: true, translation: true },
+      select: { slug: true, term: true, meaning: true, translation: true, lang: true }, // __p0mlink-meaning2__
     }).catch(() => []);
     return (
       <div className="container">
@@ -89,7 +89,7 @@ export default async function MeaningSearchPage({ searchParams }: { searchParams
         <h2 className="section-title">大家都在查</h2>
         <div className="entry-grid">
           {hot.map((m) => (
-            <Link key={m.slug} className="entry-card" href={`/meme/${m.slug}`}>
+            <Link key={m.slug} className="entry-card" href={m.lang === 'en' ? `/understand/meaning/${m.slug}` : `/meme/${m.slug}`}> // __p0mlink__
               <div className="term">{m.term}</div>
               <div className="tr">{m.translation}</div>
             </Link>
@@ -106,7 +106,7 @@ export default async function MeaningSearchPage({ searchParams }: { searchParams
       where: { status: 'published', OR: [{ term: like }, { meaning: like }, { translation: like }] },
       orderBy: { popularity: 'desc' },
       take: 10,
-      select: { slug: true, term: true, meaning: true, translation: true, shortAnswer: true },
+      select: { slug: true, term: true, meaning: true, translation: true, shortAnswer: true, lang: true }, // __p0mlink-meaning3__
     }).catch(() => []),
     prisma.expressionEntry.findMany({
       where: { status: 'published', OR: [{ term: like }, { meaning: like }, { translation: like }] },

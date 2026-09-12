@@ -5,7 +5,7 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata: Metadata = buildMetadata({
   path: '/tools/ai-polish',
   title: "免费 AI 润色 — 让文字更自然地道 | 爱翻译",
-  description: "爱翻译免费 AI 润色：粘贴译文或草稿，AI 保持原意优化表达，让文字更自然、更地道。支持中英文等 10 种语言，免费使用。",
+  description: "爱翻译免费 AI 润色：粘贴译文或草稿，AI 保持原意优化表达，让文字更自然、更地道。支持中英文等 10 种语言。",
   keywords: ["AI润色","文字润色","译文优化","改写","爱翻译"],
   ogType: 'tool',
 });
@@ -29,7 +29,7 @@ export default function AiPolishPage() {
               "name": "AI 润色免费吗？",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "免费使用。为保障所有用户稳定使用，每日有公平使用上限，注册后额度更高，每日自动重置，合理用量内无需担心。"
+                "text": "文本润色免费用；每日有公平使用上限，注册送 500 积分后可在翻译、润色、文件翻译间通用。"
               }
             },
             {
@@ -60,10 +60,27 @@ export default function AiPolishPage() {
           applicationCategory: 'UtilitiesApplication',
           operatingSystem: 'Web',
           description: "免费 AI 润色工具：保持原意优化表达，支持中英文等 10 种语言。",
-          url: 'https://aifanyi.com/tools/ai-polish',
-          offers: { '@type': 'Offer', price: '0', priceCurrency: 'CNY' },
+          url: 'https://aifanyi.com/tools/ai-polish', /* __p0offer__ 积分制下不宣称 price:0 */
         }) }}
       />
+
+
+      {/* 可见 FAQ（与 FAQPage JSON-LD 一致；Google 要求问答内容页面可见）__p0faq-ai-polish__ */}
+      <section className="pdf-seo-faq" id="faq" style={{ marginTop: 32 }}>
+        <h2>常见问题</h2>
+        <div className="pdf-seo-faq-item">
+          <h3>AI 润色免费吗？</h3>
+          <p>文本润色免费用；每日有公平使用上限，注册送 500 积分后可在翻译、润色、文件翻译间通用。</p>
+        </div>
+        <div className="pdf-seo-faq-item">
+          <h3>润色和翻译有什么区别？</h3>
+          <p>润色不改变语言，只优化表达：修正语病、提升用词与流畅度，适合邮件、文案、论文等场景。</p>
+        </div>
+        <div className="pdf-seo-faq-item">
+          <h3>支持哪些语言润色？</h3>
+          <p>支持中英文互译场景的同语言润色（中文润色中文、英文润色英文），保留原文意思的同时让表达更自然。</p>
+        </div>
+      </section>
 </div>
   );
 }

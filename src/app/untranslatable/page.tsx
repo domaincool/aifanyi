@@ -181,7 +181,7 @@ export default async function UntranslatableIndexPage({
         ))}
       </div>
       <div className="cta-box" style={{ marginTop: 24 }}>
-        <p>难翻译词内容按批次建设中——先试试 AI 翻译工具。</p>
+        <p>难翻译词持续补充中——先试试 AI 翻译工具。</p>
         <a href="/" className="btn primary">去翻译</a>
       </div>
     </div>
