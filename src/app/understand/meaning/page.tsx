@@ -33,7 +33,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   if (!q) {
     return buildMetadata({
       path: '/understand/meaning',
-      title: 'XX 是什么意思 · 一句话快答 | 爱翻译',
+      title: '词义快答 · 输入任意词，一句话说清是什么意思 | 爱翻译',
       description: '输入任何词或短语，AI 告诉你它是什么意思、怎么用、怎么翻。网络用语、俚语、成语、难翻译词一站快答。',
       keywords: ['什么意思', '词义查询', '快答'],
       ogType: 'list',
@@ -64,7 +64,7 @@ export default async function MeaningSearchPage({ searchParams }: { searchParams
     return (
       <div className="container">
         <section className="hero">
-          <h1>XX 是什么意思？</h1>
+          <h1>想知道一个词是什么意思？</h1>
           <p>输入一个词、一句梗、一条缩写——马上得到一句话答案。</p>
         </section>
         <form className="filter-bar" action="/understand/meaning" method="get">
