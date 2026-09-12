@@ -100,11 +100,13 @@ const LANG_GROUPS: { label: string; items: { code: string; name: string }[] }[] 
 export default function TranslatorBox({
   defaultSourceLang = 'auto',
   defaultTargetLang = 'en',
+  initialText = '',
 }: {
   defaultSourceLang?: string;
   defaultTargetLang?: string;
+  initialText?: string;
 }) {
-  const [text, setText] = useState('');
+  const [text, setText] = useState(initialText); // __p0fix-q__ 支持 /?q= 预填
   const [sourceLang, setSourceLang] = useState(defaultSourceLang);
   const [targetLang, setTargetLang] = useState(defaultTargetLang);
   const [scenario, setScenario] = useState('auto');

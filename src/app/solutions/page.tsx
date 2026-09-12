@@ -52,7 +52,7 @@ export default function SolutionsPage() {
         <a className="scene-card" id="developer" href="/tools">
           <div className="scene-emoji">🧑‍💻</div>
           <h3>开发者</h3>
-          <p>翻译 API / 集成方案（即将开放）</p>
+          <p>翻译工具 · 擂台实测数据</p>
           <div className="sol-links">
             <a href="/tools">翻译工具</a> · <a href="/arena">AI翻译擂台</a>
           </div>

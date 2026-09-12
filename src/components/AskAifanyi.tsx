@@ -52,8 +52,8 @@ export default function AskAifanyi() {
     // 埋点：intent 路由（contentId 带 intent 与来源便于日聚合区分）
     // __p0ask__ query 级埋点：query 前 160 字符 + intent + 命中来源（L1/L3），支撑「用户到底在问什么」分析
     try {
-      const qp = query.slice(0, 140);
-      sendContentEvent('tool_click', 'ask_query', qp + '|' + intent + '|' + via);
+      // __p0fix-kpi__ contentId 必须有界：只记 intent|via，避免用户原文写入 ContentMetrics 主键污染聚合
+      sendContentEvent('tool_click', 'ask_query', intent + '|' + via);
     } catch {}
     try { sendContentEvent('tool_click', 'ask_aifanyi', via === 'l3' ? intent + '_ai' : intent); } catch {}
     if (intent === 'meaning') {

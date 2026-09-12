@@ -20,6 +20,18 @@ function daySeed(dateKey: string): number {
   return h;
 }
 
+/** 日期种子确定性洗牌（Fisher-Yates）：每天整体轮换，而非只换 1 题 __p0fix-arena__ */
+function seededShuffle<T>(arr: T[], seed: number): T[] {
+  const a = [...arr];
+  let s = (seed || 1) >>> 0;
+  for (let i = a.length - 1; i > 0; i--) {
+    s = (s * 1664525 + 1013904223) >>> 0;
+    const j = s % (i + 1);
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
 export default async function BlindtestListPage() {
   const all = await prisma.blindtest.findMany({
     where: { status: 'published' },
@@ -31,11 +43,7 @@ export default async function BlindtestListPage() {
   // ── 今日擂台：日期种子从题库稳定轮换 5 题（冷启动期不按票数排名，避免 0 票死区）──
   const dateKey = new Date().toISOString().slice(0, 10);
   const seed = daySeed(dateKey);
-  const pool = [...all];
-  const todays: typeof all = [];
-  while (pool.length > 0 && todays.length < 5) {
-    todays.push(pool.splice(seed % pool.length, 1)[0]);
-  }
+  const todays = seededShuffle(all, seed).slice(0, 5); // __p0fix-arena__
 
   // ── 全部题目：有票在前（票数降序），0 票排后但不再显示「0 票」──
   const rest = [...all].sort((a, b) => b.voteCount - a.voteCount);

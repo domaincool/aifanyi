@@ -6,7 +6,13 @@ import { getTrendingMemes } from '@/lib/metrics/trending';
 export const dynamic = 'force-dynamic';
 
 /** 首页：翻译框（角1/角2 共用内核的入口）+ 双入口导流 */
-export default async function HomePage() {
+export default async function HomePage({ searchParams }: { searchParams?: Promise<{ q?: string }> }) {
+  let initialText = ''; // __p0fix-q__ Ask AIFANYI / 外部链接经 /?q= 预填翻译框
+  try {
+    const sp = searchParams ? await searchParams : {};
+    if (typeof sp?.q === 'string') initialText = sp.q.slice(0, 1000);
+  } catch {}
+
   let hotMemes: { term: string; slug: string; translation: string; meaning: string; lang?: string }[] = []; // __p0mlink__
   try {
     hotMemes = (await getTrendingMemes(6)).map(({ slug, term, translation, meaning }) => ({ slug, term, translation, meaning }));
@@ -44,11 +50,6 @@ export default async function HomePage() {
               "url": "https://aifanyi.com/",
               "applicationCategory": "UtilitiesApplication",
               "operatingSystem": "Web",
-              "offers": {
-                "@type": "Offer",
-                "price": "0",
-                "priceCurrency": "CNY"
-              },
               "description": "AI 在线翻译：文本、PDF、图片、字幕、Word/PPT、网页翻译，多模型对比选更佳译文。",
               "image": "https://aifanyi.com/og-image.png"
             }
@@ -63,7 +64,7 @@ export default async function HomePage() {
 
       <AskAifanyi />
 
-      <TranslatorBox />
+      <TranslatorBox initialText={initialText} />
 
       {/* ── 快速选择翻译工具 ── */}
       <section className="home-block" id="quick-tools">

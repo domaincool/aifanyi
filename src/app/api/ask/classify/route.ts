@@ -55,6 +55,16 @@ const PROMPT = (q: string) =>
   '- how_to_say：问某个意思/场景该怎么说、怎么表达（要表达方式）\n' +
   '用户问题：' + q;
 
+// __p0fix-rl__ IP 内存限流：公开 LLM 端点防滥用（单机内存计数，网关后可换 Redis）
+const RL = new Map<string, { n: number; reset: number }>();
+function rateLimited(ip: string, limit = 20, windowMs = 60_000): boolean {
+  const now = Date.now();
+  const r = RL.get(ip);
+  if (!r || now > r.reset) { RL.set(ip, { n: 1, reset: now + windowMs }); return false; }
+  r.n++;
+  return r.n > limit;
+}
+
 export async function POST(req: Request) {
   let q = '';
   try {
@@ -62,6 +72,8 @@ export async function POST(req: Request) {
     q = String(body?.q || '').trim().slice(0, 300);
   } catch {}
   if (!q) return NextResponse.json({ ok: false, error: 'missing q' }, { status: 400 });
+  const ip = (req.headers.get('x-forwarded-for') || '').split(',')[0].trim() || 'unknown';
+  if (rateLimited(ip)) return NextResponse.json({ ok: false, error: 'rate_limited' }, { status: 429 }); // __p0fix-rl__
 
   const key = q.toLowerCase();
   const hit = cache.get(key);

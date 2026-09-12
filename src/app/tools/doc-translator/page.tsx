@@ -5,7 +5,7 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata: Metadata = buildMetadata({
   path: '/tools/doc-translator',
   title: "免费 Word/PPT 翻译 — 文档一键翻译 | 爱翻译",
-  description: "爱翻译免费 Word/PPT 翻译：上传 .docx / .pptx 文档，AI 自动提取文字并翻译，段落级双语对照，保留文档结构，注册送积分。中英日韩等 10 种语言，注册送积分。 /* __p0b-doc__ */",
+  description: "爱翻译免费 Word/PPT 翻译：上传 .docx / .pptx 文档，AI 自动提取文字并翻译，段落级双语对照，保留文档结构。中英日韩等 10 种语言，注册送积分。",
   keywords: ["Word翻译","PPT翻译","文档翻译","docx翻译","pptx翻译","爱翻译"],
   ogType: 'tool',
 });
@@ -29,7 +29,7 @@ export default function DocTranslatorPage() {
               "name": "Word/PPT 翻译免费吗？",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "需登录使用。新用户注册送 500 积分，按正文长度计积分（约每千字 2 积分）；每日另有公平使用额度，自动重置。"
+                "text": "需登录使用。新用户注册送 500 积分，按正文长度计积分（约每千字 20 积分）；每日另有公平使用额度，自动重置。"
               }
             },
             {
@@ -70,7 +70,7 @@ export default function DocTranslatorPage() {
         <h2>常见问题</h2>
         <div className="pdf-seo-faq-item">
           <h3>Word/PPT 翻译免费吗？</h3>
-          <p>需登录使用。新用户注册送 500 积分，按正文长度计积分（约每千字 2 积分）；每日另有公平使用额度，自动重置。</p>
+          <p>需登录使用。新用户注册送 500 积分，按正文长度计积分（约每千字 20 积分）；每日另有公平使用额度，自动重置。</p>
         </div>
         <div className="pdf-seo-faq-item">
           <h3>支持哪些格式？</h3>

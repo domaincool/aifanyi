@@ -183,24 +183,22 @@ export default function ClientLayout({ children, serverUser }: { children: React
             <a className="mob-link" href="/voice" onClick={() => setMobileOpen(false)}>🎙️ 语音翻译</a>
             <a className="mob-link" href="/tools" onClick={() => setMobileOpen(false)}>🧰 全部工具</a>
             <div className="mob-group">看懂</div>
-            <div className="mob-group">表达</div>
-            <a className="mob-link" href="/speak" onClick={() => setMobileOpen(false)}>🗣️ 场景表达 <span className="mob-sub">旅行 · 商务 · 职场 · 恋爱</span></a>
-            <a className="mob-link" href="/tools/ai-polish" onClick={() => setMobileOpen(false)}>✨ AI 润色 <span className="mob-sub">语气调整 · 更地道</span></a>
             <a className="mob-link" href="/meme" onClick={() => setMobileOpen(false)}>🔥 网络用语</a>
             <a className="mob-link" href="/idioms" onClick={() => setMobileOpen(false)}>📜 成语谚语</a>
             <a className="mob-link" href="/untranslatable" onClick={() => setMobileOpen(false)}>🧩 难翻译词</a>
             <a className="mob-link" href="/expressions" onClick={() => setMobileOpen(false)}>💬 词汇与表达</a>
+            <div className="mob-group">表达</div>
+            <a className="mob-link" href="/speak" onClick={() => setMobileOpen(false)}>🗣️ 场景表达 <span className="mob-sub">旅行 · 商务 · 职场 · 恋爱</span></a>
+            <a className="mob-link" href="/tools/ai-polish" onClick={() => setMobileOpen(false)}>✨ AI 润色 <span className="mob-sub">语气调整 · 更地道</span></a>
             <div className="mob-group">探索世界</div>
             <a className="mob-link" href="/recipes" onClick={() => setMobileOpen(false)}>🍜 全球美食 <span className="mob-sub">菜谱 · 菜单</span></a>
             <a className="mob-link" href="/menu" onClick={() => setMobileOpen(false)}>📖 菜单词典 <span className="mob-sub">各国菜单菜名翻译</span></a>
             <a className="mob-link" href="/travel" onClick={() => setMobileOpen(false)}>✈️ 旅行语言 <span className="mob-sub">机场 · 酒店 · 餐厅</span></a>
             <a className="mob-link" href="/languages" onClick={() => setMobileOpen(false)}>🌍 世界语言</a>
-            <a className="mob-link" href="/expressions" onClick={() => setMobileOpen(false)}>💬 词汇与表达</a>
-            <a className="mob-link" href="/meme" onClick={() => setMobileOpen(false)}>网络用语</a>
-            <a className="mob-link" href="/idioms" onClick={() => setMobileOpen(false)}>成语谚语</a>
-            <a className="mob-link" href="/untranslatable" onClick={() => setMobileOpen(false)}>难翻译词</a>
             <a className="mob-link" href="/life" onClick={() => setMobileOpen(false)}>🏠 海外生活</a>
             <a className="mob-link" href="/culture" onClick={() => setMobileOpen(false)}>🧠 语言与文化</a>
+            <div className="mob-group">AI 擂台</div>
+            <a className="mob-link" href="/arena" onClick={() => setMobileOpen(false)}>⚔️ AI 翻译擂台 <span className="mob-sub">盲测投票 · 选更佳译文</span></a>
             {user ? (
               <div className="mob-user">
                 已登录：{user.nickname || user.email}

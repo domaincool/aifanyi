@@ -29,7 +29,7 @@ export default function WebTranslatorPage() {
               "name": "网页翻译免费吗？",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "需登录使用。新用户注册送 500 积分，按正文长度计积分（约每千字 2 积分）；每日另有公平使用额度，自动重置。"
+                "text": "需登录使用。新用户注册送 500 积分，按正文长度计积分（约每千字 20 积分）；每日另有公平使用额度，自动重置。"
               }
             },
             {
@@ -70,7 +70,7 @@ export default function WebTranslatorPage() {
         <h2>常见问题</h2>
         <div className="pdf-seo-faq-item">
           <h3>网页翻译免费吗？</h3>
-          <p>需登录使用。新用户注册送 500 积分，按正文长度计积分（约每千字 2 积分）；每日另有公平使用额度，自动重置。</p>
+          <p>需登录使用。新用户注册送 500 积分，按正文长度计积分（约每千字 20 积分）；每日另有公平使用额度，自动重置。</p>
         </div>
         <div className="pdf-seo-faq-item">
           <h3>怎么翻译一个网页？</h3>

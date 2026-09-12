@@ -5,7 +5,7 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata: Metadata = buildMetadata({
   path: '/tools/subtitle-translator',
   title: "免费字幕翻译 — SRT/VTT 一键翻译 | 爱翻译",
-  description: "爱翻译免费字幕翻译：上传 SRT / VTT 字幕文件，AI 自动翻译成中文或英文，双语对照预览，支持双语 SRT / 纯译文 SRT / TXT 导出。视频字幕本地化利器，注册送积分，游客可先试。 /* __p0s3-m4__ */",
+  description: "爱翻译免费字幕翻译：上传 SRT / VTT 字幕文件，AI 自动翻译成中文或英文，双语对照预览，支持双语 SRT / 纯译文 SRT / TXT 导出。视频字幕本地化利器，注册送积分，游客可先试。",
   keywords: ["字幕翻译","SRT翻译","VTT翻译","视频字幕","字幕本地化","爱翻译"],
   ogType: 'tool',
 });
@@ -29,7 +29,7 @@ export default function SubtitleTranslatorPage() {
               "name": "字幕翻译免费吗？",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "新用户注册送 500 积分，按字幕时长计积分（约每分钟 1 积分）；游客每日可先试 5 个文件，注册后额度更高，每日自动重置。"
+                "text": "新用户注册送 500 积分，按字幕时长计积分（约每分钟 10 积分）；游客每日可先试 5 个文件，注册后额度更高，每日自动重置。"
               }
             },
             {
@@ -70,7 +70,7 @@ export default function SubtitleTranslatorPage() {
         <h2>常见问题</h2>
         <div className="pdf-seo-faq-item">
           <h3>字幕翻译免费吗？</h3>
-          <p>新用户注册送 500 积分，按字幕时长计积分（约每分钟 1 积分）；游客每日可先试 5 个文件，注册后额度更高，每日自动重置。</p>
+          <p>新用户注册送 500 积分，按字幕时长计积分（约每分钟 10 积分）；游客每日可先试 5 个文件，注册后额度更高，每日自动重置。</p>
         </div>
         <div className="pdf-seo-faq-item">
           <h3>支持哪些字幕格式？</h3>
