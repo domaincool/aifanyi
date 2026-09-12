@@ -1,3 +1,4 @@
+/* __p0polish-precise__ */
 import type { Metadata } from 'next';
 import PolishClient from './PolishClient';
 import { buildMetadata } from '@/lib/seo';
@@ -29,7 +30,7 @@ export default function AiPolishPage() {
               "name": "AI 润色免费吗？",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "文本润色免费用；每日有公平使用上限，注册送 500 积分后可在翻译、润色、文件翻译间通用。"
+                "text": "游客可免费使用文本润色；登录后按积分计费（每千字 2 积分），新用户注册送 500 积分，可在翻译、润色、文件翻译间通用。"
               }
             },
             {
@@ -70,7 +71,7 @@ export default function AiPolishPage() {
         <h2>常见问题</h2>
         <div className="pdf-seo-faq-item">
           <h3>AI 润色免费吗？</h3>
-          <p>文本润色免费用；每日有公平使用上限，注册送 500 积分后可在翻译、润色、文件翻译间通用。</p>
+          <p>游客可免费使用文本润色；登录后按积分计费（每千字 2 积分），新用户注册送 500 积分，可在翻译、润色、文件翻译间通用。</p>
         </div>
         <div className="pdf-seo-faq-item">
           <h3>润色和翻译有什么区别？</h3>
