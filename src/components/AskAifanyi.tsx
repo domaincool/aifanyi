@@ -75,7 +75,8 @@ export default function AskAifanyi() {
           type="search"
           value={q}
           onChange={(e) => setQ(e.target.value)}
-          placeholder="Ask AIFANYI：cringe 是什么意思？/ 帮我把这句话翻得像美国人" // __p0ask-brand__
+          // __p0ask-brand__
+          placeholder="Ask AIFANYI：cringe 是什么意思？/ 帮我把这句话翻得像美国人"
           aria-label="Ask AIFANYI：问一个语言问题"
         />
         <button type="submit" className="btn primary" disabled={busy}>立即解决</button>
