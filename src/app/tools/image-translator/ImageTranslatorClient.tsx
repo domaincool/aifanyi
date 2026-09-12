@@ -1,6 +1,7 @@
 'use client';
 
 import { useRef, useState } from 'react';
+import { FAIR_USE_PAUSED_MSG, isCreditDeductionEnabled } from '@/lib/credit/feature-flags';
 
 const LANGS = [
   { v: 'zh', label: '简体中文' },
@@ -14,6 +15,10 @@ const LANGS = [
 
 type Phase = 'upload' | 'working' | 'done' | 'error';
 
+// D：面向用户的额度提示只允许两种写法——「预计使用 X 额度」/「本次使用 X 额度」；扣费总开关关闭时显示免费阶段
+const FREE_STAGE = (() => { try { return !isCreditDeductionEnabled(); } catch { return true; } })();
+const creditNote = (credits?: number) => (FREE_STAGE ? FAIR_USE_PAUSED_MSG : (typeof credits === 'number' && credits > 0 ? `本次使用 ${credits} 额度` : ''));
+
 export default function ImageTranslatorClient() {
   const [phase, setPhase] = useState<Phase>('upload');
   const [preview, setPreview] = useState('');
@@ -21,6 +26,7 @@ export default function ImageTranslatorClient() {
   const [targetLang, setTargetLang] = useState('zh');
   const [ocrText, setOcrText] = useState('');
   const [translation, setTranslation] = useState('');
+  const [credits, setCredits] = useState<number | undefined>(undefined);
   const [model, setModel] = useState('');
   const [error, setError] = useState('');
   const [dragOver, setDragOver] = useState(false);
@@ -39,7 +45,7 @@ export default function ImageTranslatorClient() {
     if (file.size > 5 * 1024 * 1024) {
       setError('图片过大（限 5MB）。'); setPhase('error'); return;
     }
-    setError(''); setFileName(file.name); setPhase('working'); setOcrText(''); setTranslation(''); setModel('');
+    setError(''); setFileName(file.name); setPhase('working'); setOcrText(''); setTranslation(''); setModel(''); setCredits(undefined);
     setPreview(URL.createObjectURL(file));
     const fd = new FormData();
     fd.append('file', file);
@@ -51,6 +57,8 @@ export default function ImageTranslatorClient() {
       setOcrText(data.text);
       setTranslation(data.translation);
       setModel(data.model);
+      // D：额度数值一律来自服务端返回，前端不自行计算
+      setCredits(typeof data.credits === 'number' ? data.credits : undefined);
       setPhase('done');
     } catch (e: any) {
       setError(e?.message || '网络错误，请重试'); setPhase('error');
@@ -97,6 +105,8 @@ export default function ImageTranslatorClient() {
         >
           <div style={{ fontSize: 40, marginBottom: 12 }}>🖼</div>
           <p style={{ fontSize: 16, margin: '0 0 6px' }}>点击或拖拽图片到这里</p>
+          {/* A8：图片翻译需登录 */}
+          <p style={{ fontSize: 13, color: 'var(--accent)', margin: '0 0 6px' }}>需登录使用</p>
           <p style={{ fontSize: 13, color: 'var(--muted)', margin: 0 }}>支持 PNG / JPG / WebP / GIF · 最大 5MB · 截图、海报、菜单、聊天记录均可</p>
           <input ref={inputRef} type="file" accept=".png,.jpg,.jpeg,.webp,.gif" hidden onChange={e => { const f = e.target.files?.[0]; if (f) upload(f); }} />
         </div>
@@ -132,6 +142,8 @@ export default function ImageTranslatorClient() {
           </div>
           {/* 右：识别 + 译文 */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+            {/* D：结果区额度口径（数值来自服务端；扣费关闭时显示免费阶段） */}
+            {creditNote(credits) && <div style={{ fontSize: 12, color: 'var(--muted)' }}>{creditNote(credits)}</div>}
             <div style={{ background: 'var(--panel)', border: '1px solid var(--border)', borderRadius: 12, overflow: 'hidden' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px 14px', borderBottom: '1px solid var(--border)', fontSize: 13, color: 'var(--muted)' }}>
                 <span>识别文字</span>

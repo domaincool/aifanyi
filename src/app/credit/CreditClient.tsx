@@ -183,7 +183,7 @@ export default function CreditClient() {
         </div>
         {low && (
           <p style={{ margin: '16px 0 0', padding: '10px 14px', background: 'rgba(255,193,7,.12)', border: '1px solid rgba(255,193,7,.4)', borderRadius: 10, color: 'var(--text)', fontSize: 14 }}>
-            ⚡ 剩余积分不多了（{available}/500）。积分不足时可以充值补充。
+            ⚡ 剩余积分不多了（{available}/{data?.signupBonus ?? 500}）。积分不足时可以充值补充。
           </p>
         )}
       </div>

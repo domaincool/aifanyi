@@ -4,6 +4,7 @@ import { GlmProvider } from '@/lib/translator/providers/glm';
 import { ocrImage } from '@/lib/image-ocr';
 import { checkFairUse } from '@/lib/fairuse-quota';
 import { getAuthUserId, authErrorBody, beginSync, endSyncSuccess, endSyncFail, estimateByChars, FEATURES } from '@/lib/credit/sync-settle';
+import { estimateCredits } from '@/lib/credit/pricing';
 
 export const runtime = 'nodejs';
 export const maxDuration = 90;
@@ -66,9 +67,11 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ ok: false, code: 'fair_use_limit_reached', error: fu.message }, { status: 429 });
     }
 
-    // 积分：图片固定 3 积分/张 → reserve（原子检查余额）
+    // C：积分按 PricingRule 配置化计价（image_translation，单位=张），不硬编码单价
+    // 无定价规则时回落原硬编码值（3 积分/张），避免停机
+    const imgCredits = (await estimateCredits(FEATURES.IMAGE, 1))?.credits ?? 3;
     const jobId = `img_${crypto.randomUUID()}`;
-    const begin = await beginSync({ userId: auth.userId, jobId, feature: FEATURES.IMAGE, estimatedCredits: 3 });
+    const begin = await beginSync({ userId: auth.userId, jobId, feature: FEATURES.IMAGE, estimatedCredits: imgCredits });
     if (!begin.ok) return NextResponse.json({ ok: false, error: begin.error }, { status: 402 });
     creditCtx = { jobId, usageId: begin.usageId, estimated: begin.estimated, userId: auth.userId };
 
@@ -95,8 +98,8 @@ export async function POST(req: NextRequest) {
       translation = r.text;
     }
 
-    await endSyncSuccess({ userId: auth.userId, jobId, usageId: begin.usageId, estimated: begin.estimated, actualCredits: 3 });
-    return NextResponse.json({ ok: true, text, translation, model, credits: 3 });
+    await endSyncSuccess({ userId: auth.userId, jobId, usageId: begin.usageId, estimated: begin.estimated, actualCredits: imgCredits });
+    return NextResponse.json({ ok: true, text, translation, model, credits: imgCredits });
   } catch (e: any) {
     if (creditCtx) await endSyncFail({ userId: creditCtx.userId, jobId: creditCtx.jobId, usageId: creditCtx.usageId, estimated: creditCtx.estimated });
     console.error('[image/translate]', e?.message || e);

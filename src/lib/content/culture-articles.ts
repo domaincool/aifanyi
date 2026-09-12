@@ -128,7 +128,7 @@ const wenzhang1: CultureArticle = {
   ],
   relatedLinks: [
     { label: '网络用语翻译库（500+ 词条）', href: '/meme', desc: '按标签浏览全部网络用语' },
-    { label: '看懂·缩写专区', href: '/understand/slang' },
+    { label: '看懂·缩写专区', href: '/meme' },
     { label: 'AI 翻译擂台：缩写谁翻得最地道', href: '/arena' },
   ],
 };

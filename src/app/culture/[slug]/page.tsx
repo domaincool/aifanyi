@@ -119,7 +119,7 @@ export default async function CultureArticlePage({ params }: Props) {
         <p style={{ color: 'var(--muted)', fontSize: 14 }}>遇到看不懂的外文菜单、路牌、网页？</p>
         <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap', marginTop: 10 }}>
           <a className="tool-cta" href="/tools/image-translator" style={{ background: 'var(--accent)', color: '#fff', fontWeight: 600 }}>
-            📷 图片翻译
+            📷 拍下看不懂的外文 →
           </a>
           <a className="tool-cta" href="/tools/web-translator" style={{ background: 'var(--accent)', color: '#fff', fontWeight: 600 }}>
             🌐 网页翻译

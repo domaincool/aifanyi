@@ -90,24 +90,18 @@ export default async function UntranslatableEntryPage({ params }: { params: Prom
         }) }}
       />
 
+
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "QAPage",
-          "mainEntity": {
-            "@type": "Question",
-            "name": e.term + " 怎么翻译？",
-            "text": e.term + "（" + e.meaning + "）很难直译，最接近的表达是什么？",
-            "answerCount": 1,
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": ((e.shortAnswer as string) || (e.term + "（" + e.meaning + "）最接近的表达是「" + e.translation + "」。"))
-                + (examples && examples.length > 0 ? " 例句：" + examples[0].en + "（" + examples[0].zh + "）。" : "")
-                + " 更多难翻译词见爱翻译 aifanyi.com。",
-              "url": "https://aifanyi.com/untranslatable/" + e.slug
-            }
-          }
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "看懂语言", "item": "https://aifanyi.com/understand" },
+            { "@type": "ListItem", "position": 2, "name": "难翻译词词典", "item": "https://aifanyi.com/untranslatable" },
+            { "@type": "ListItem", "position": 3, "name": e.term, "item": "https://aifanyi.com/untranslatable/" + e.slug }
+          ]
         }) }}
       />
 
@@ -175,7 +169,7 @@ export default async function UntranslatableEntryPage({ params }: { params: Prom
 
       <div className="cta-box" style={{ marginTop: 24 }}>
         <p>这个词用法不确定？直接把它放进 AI 翻译工作台，看三种模型怎么翻。</p>
-        <ToolCtaButton contentType="untranslatable" contentId={e.slug} label="去翻译" />
+        <a href={`/?q=${encodeURIComponent(e.term)}#translator`} className="btn primary tool-cta">这句话用「{e.term}」怎么说？翻译器见 →</a>
       </div>
     </>
   );

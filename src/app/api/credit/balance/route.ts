@@ -58,8 +58,10 @@ export async function GET() {
   // 最近到期日
   const expiring = grants.filter(g => g.expiresAt && g.remainingAmount > 0).sort((a, b) => (a.expiresAt!.getTime() - b.expiresAt!.getTime()))[0];
 
+  // __p1bonus__ 登录态同样回传注册赠送数值，避免前端回落到字面量 500
   return NextResponse.json({
     loggedIn: true,
+    signupBonus: SIGNUP_BONUS,
     available: acc?.balance ?? 0,
     reserved: acc?.reservedBalance ?? 0,
     monthUsed,

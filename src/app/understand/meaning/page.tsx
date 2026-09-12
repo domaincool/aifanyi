@@ -2,22 +2,10 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { buildMetadata, SITE_URL } from '@/lib/seo';
 import { prisma } from '@/lib/db';
-import { recordSearchQuery } from '@/lib/metrics/server';
+import { recordSearchQuery, recordLanguageIntent } from '@/lib/metrics/server';
+import { normalizeQuery } from '@/lib/text/normalize-query';
 
 export const dynamic = 'force-dynamic';
-
-/** 搜索问句归一化：剥疑问后缀与尾标点，避免整句 LIKE 零结果（零结果词复盘 2026-09-11） */
-function normalizeQuery(raw: string): string {
-  const base = raw.trim();
-  if (!base) return base;
-  const stripped = base
-    .replace(/[?？!！。，,.]+$/g, '')
-    .replace(/(是什么意思|啥意思|什么意思|什么梗|啥梗|怎么说|怎么讲|怎么表达|如何表达|用英语怎么说|用英文怎么说|英语怎么说|英文怎么说)$/g, '')
-    .replace(/[?？!！。，,.]+$/g, '')
-    .trim();
-  const picked = stripped.length >= 2 ? stripped : base;
-  return picked.slice(0, 64);
-}
 
 /**
  * XX 是什么意思 · 搜索快答入口（蓝图 5.6 + P2 裁决）
@@ -80,7 +68,8 @@ export default async function MeaningSearchPage({ searchParams }: { searchParams
               itemListElement: hot.map((m, i) => ({
                 '@type': 'ListItem',
                 position: i + 1,
-                url: `${SITE_URL}/meme/${m.slug}`,
+                // __p0langurl__ en 词条走稳定 Meaning URL，zh 走 /meme（避免 JSON-LD 指向 308 中转地址）
+                url: m.lang === 'en' ? `${SITE_URL}/understand/meaning/${m.slug}` : `${SITE_URL}/meme/${m.slug}`,
                 name: m.term,
               })),
             }),
@@ -137,18 +126,33 @@ export default async function MeaningSearchPage({ searchParams }: { searchParams
   ] as const);
 
   const resultCount = memes.length + exprs.length + scenes.length + menus.length + recipes.length;
-  // P2 四字段日志（search_query / search_count / zero_result / ai_answer_used 占位 false）
-  recordSearchQuery(q, resultCount, false).catch(() => {});
 
   // 精确命中单条：term === q 优先展示快答卡
   const memeExact = memes.find((m) => m.term.toLowerCase() === q.toLowerCase());
   const exprExact = exprs.find((e) => e.term.toLowerCase() === q.toLowerCase());
   const exact = memeExact ?? exprExact;
+  // __p0langurl__ en 词条指向 Meaning URL（/meme 对 en 会 308）
   const exactHref = memeExact
-    ? `/meme/${memeExact.slug}`
+    ? (memeExact.lang === 'en' ? `/understand/meaning/${memeExact.slug}` : `/meme/${memeExact.slug}`)
     : exprExact
       ? (exprExact.type === 'idiom' ? `/idioms/${exprExact.slug}` : `/untranslatable/${exprExact.slug}`)
       : null;
+
+  // P2 四字段日志（search_query / search_count / zero_result / ai_answer_used 占位 false）
+  recordSearchQuery(q, resultCount, false).catch(() => {});
+  // V1.1 P1：语言意图埋点（与 recordSearchQuery 并列；埋点失败不影响渲染）
+  const contentMatch: 'exact' | 'partial' | 'zero' = exact ? 'exact' : resultCount > 0 ? 'partial' : 'zero';
+  try {
+    void recordLanguageIntent({
+      query: q,
+      intent: 'meaning',
+      source: 'site_search',
+      contentMatch,
+      contentId: exact ? exact.slug : null,
+      entity: memeExact ? memeExact.term : null,
+      contentType: exact ? (memeExact ? 'meme' : 'expression') : null,
+    }).catch(() => {});
+  } catch {}
 
   return (
     <div className="container">
@@ -173,7 +177,7 @@ export default async function MeaningSearchPage({ searchParams }: { searchParams
           <p style={{ color: 'var(--muted)' }}>找到 {resultCount} 条相关内容：</p>
           <div className="entry-grid">
             {memes.map((m) => (
-              <Link key={m.slug} className="entry-card" href={`/meme/${m.slug}`}>
+              <Link key={m.slug} className="entry-card" href={m.lang === 'en' ? `/understand/meaning/${m.slug}` : `/meme/${m.slug}`}>
                 <div className="term">{m.term}</div>
                 <div className="tr">{(m.shortAnswer as string) || m.translation}</div>
               </Link>

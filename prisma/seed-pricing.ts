@@ -21,6 +21,8 @@ const RULES = [
   { feature: 'web_translation', unit: 'per_1000_chars', creditRate: 20, minCharge: 10, maxCharge: null },
   // 润色：20 积分 / 千字符
   { feature: 'polish', unit: 'per_1000_chars', creditRate: 20, minCharge: 10, maxCharge: null },
+  // 怎么说（Speak）：10 积分 / 次（结构化六块生成，输出长度与输入长度无关，故按次计费）
+  { feature: 'speak_expression', unit: 'per_request', creditRate: 10, minCharge: 10, maxCharge: null },
   // 盲测：0（获客功能，无定价规则 = 免费）
   // 语音识别：20 积分 / 分钟（GLM-ASR 0.06 元/分，毛利 ≈70%）
   { feature: 'speech_to_text', unit: 'per_minute', creditRate: 20, minCharge: 10, maxCharge: null },

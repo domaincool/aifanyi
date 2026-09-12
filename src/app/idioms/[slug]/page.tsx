@@ -90,24 +90,18 @@ export default async function IdiomPage({ params }: { params: Promise<{ slug: st
         }) }}
       />
 
-            <script
+      
+
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "QAPage",
-          "mainEntity": {
-            "@type": "Question",
-            "name": e.term + " 用英语怎么说？",
-            "text": e.term + "（" + e.meaning + "）怎么翻译成英语？",
-            "answerCount": 1,
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": ((e.shortAnswer as string) || (e.term + "（" + e.meaning + "）的地道英文表达是「" + e.translation + "」。"))
-                + (examples && examples.length > 0 ? " 例句：" + examples[0].en + "（" + examples[0].zh + "）。" : "")
-                + " 更多成语谚语翻译见爱翻译 aifanyi.com。",
-              "url": "https://aifanyi.com/idioms/" + e.slug
-            }
-          }
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "看懂语言", "item": "https://aifanyi.com/understand" },
+            { "@type": "ListItem", "position": 2, "name": "成语谚语翻译", "item": "https://aifanyi.com/idioms" },
+            { "@type": "ListItem", "position": 3, "name": e.term, "item": "https://aifanyi.com/idioms/" + e.slug }
+          ]
         }) }}
       />
 
@@ -190,7 +184,7 @@ export default async function IdiomPage({ params }: { params: Promise<{ slug: st
 
       <div className="cta-box" style={{ marginTop: 24 }}>
         <p>还有一句想翻？试试把这句成语翻成别的语言，或直接使用 AI 翻译工作台。</p>
-        <a href="/" className="btn primary">去翻译</a>
+        <a href={`/?q=${encodeURIComponent(e.term)}#translator`} className="btn primary">把「{e.term}」放入翻译器，看三模型译法 →</a>
       </div>
     </>
   );

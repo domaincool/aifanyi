@@ -6,6 +6,7 @@ import { runSubtitleJob } from '@/lib/subtitle-job';
 import { getAuthUserId, beginSync, endSyncSuccess, endSyncFail, FEATURES } from '@/lib/credit/sync-settle';
 import { isCreditDeductionEnabled } from '@/lib/credit/feature-flags';
 import { checkFairUse, clientKeyOf } from '@/lib/fairuse-quota';
+import { estimateCredits, secondsToUnits } from '@/lib/credit/pricing';
 
 export const runtime = 'nodejs';
 export const maxDuration = 60;
@@ -60,7 +61,7 @@ export async function POST(req: NextRequest) {
 
     const taskId = 'sub_' + Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
 
-    // 积分：按字幕时长 1/分钟 → reserve（原子检查余额）
+    // C：积分按 PricingRule 配置化计价（subtitle_translation，单位=分钟，向上取整），不硬编码单价
     const first = cues[0], last = cues[cues.length - 1];
     const parseTime = (t: string): number => {
       const mm = t.match(/(\d+):(\d{2}):(\d{2})[,.]?(\d{0,3})/);
@@ -68,8 +69,9 @@ export async function POST(req: NextRequest) {
       return (+mm[1]) * 3600 + (+mm[2]) * 60 + (+mm[3]) + (+(mm[4] || '0')) / 1000;
     };
     const durationSec = Math.max(0, parseTime(last.end) - parseTime(first.start));
-    const durationMin = Math.max(1, Math.round(durationSec / 60) || 1);
-    const estCredits = Math.min(durationMin, 300);
+    const durationMin = secondsToUnits(durationSec);
+    // 无定价规则时回落原硬编码值（1/分钟，封顶 300），避免停机
+    const estCredits = (await estimateCredits(FEATURES.SUBTITLE, durationMin))?.credits ?? Math.min(durationMin, 300);
     const begin = await beginSync({ userId, jobId: taskId, feature: FEATURES.SUBTITLE, estimatedCredits: estCredits });
     if (!begin.ok) {
       // 余额不足：保存为 paused 任务，充值后从 taskId 续做

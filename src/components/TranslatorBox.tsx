@@ -348,7 +348,8 @@ export default function TranslatorBox({
   }
 
   return (
-    <div className="translator-box">
+    <div className="translator-box" id="translator">
+      {/* __anchor-translator__ P1-2：内容页 CTA 经 /#translator 定位到翻译框 */}
       <div style={{ position: 'relative' }}>
         <textarea
           placeholder="输入要翻译的内容…（示例：这款无线耳机降噪效果一流，续航 30 小时）"

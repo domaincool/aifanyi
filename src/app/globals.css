@@ -1182,3 +1182,35 @@ a.tool-card { text-decoration: none; color: inherit; }
 .sa-text{font-size:16.5px;line-height:1.65;font-weight:500}
 :root[data-theme='light'] .short-answer{background:linear-gradient(135deg,rgba(37,99,235,.07),rgba(13,148,136,.06))}
 .tool-cta{display:inline-block;text-decoration:none;padding:10px 20px;border-radius:10px;font-size:14px}
+
+/* ===== 怎么说？（Speak 工具，V1.1 P1-1）===== */
+.speak-tool{margin:18px 0 10px;padding:16px 18px;border:1px solid var(--border);border-radius:12px;background:var(--panel)}
+.speak-intro{font-size:13.5px;color:var(--muted);margin-bottom:12px;line-height:1.8}
+.speak-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.speak-select{background:var(--input-bg);color:var(--text);border:1px solid var(--input-border);border-radius:10px;padding:10px 12px;font-size:14px}
+.speak-input{flex:1;min-width:220px;background:var(--input-bg);color:var(--text);border:1px solid var(--input-border);border-radius:10px;padding:12px 14px;font-size:15px}
+.speak-input:focus{outline:none;border-color:var(--accent)}
+.speak-submit{white-space:nowrap}
+.speak-credit{font-size:12.5px;color:var(--muted);margin-top:8px}
+.speak-examples{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:12px;font-size:12.5px;color:var(--muted)}
+.speak-examples button{background:none;border:1px dashed var(--border);border-radius:999px;padding:4px 12px;color:var(--muted);cursor:pointer;font-size:12.5px;transition:all .15s}
+.speak-examples button:hover{color:var(--accent);border-color:var(--accent)}
+.speak-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.speak-wide{grid-column:1 / -1}
+@media (max-width:640px){.speak-grid{grid-template-columns:1fr}}
+.speak-card{border:1px solid var(--border);border-radius:10px;padding:12px 14px;background:var(--input-bg)}
+.speak-card-head{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:6px}
+.speak-card-title{font-size:12.5px;color:var(--accent2);letter-spacing:.5px}
+.speak-copy{background:none;border:1px solid var(--border);border-radius:8px;color:var(--muted);font-size:12px;padding:2px 10px;cursor:pointer}
+.speak-copy:hover{color:var(--accent);border-color:var(--accent)}
+.speak-card-body{font-size:15px;line-height:1.75;word-break:break-word}
+.speak-pre{white-space:pre-line}
+.speak-skeleton-wrap{margin-top:12px}
+.speak-skeleton-tip{font-size:13px;color:var(--muted);margin-bottom:10px}
+.speak-skeleton{height:76px;border-radius:10px;border:1px solid var(--border);background:linear-gradient(90deg,var(--input-bg),var(--panel),var(--input-bg));background-size:200% 100%;animation:speak-pulse 1.4s ease-in-out infinite}
+@keyframes speak-pulse{0%{background-position:0 0}100%{background-position:-200% 0}}
+.speak-error{margin-top:12px;border:1px solid var(--border);border-left:4px solid #ef4444;border-radius:10px;padding:12px 14px;background:var(--input-bg);display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.speak-error p{font-size:14px;margin:0}
+.speak-note{font-size:12.5px;color:var(--muted)}
+.speak-degraded{margin-top:12px;border:1px solid var(--border);border-left:4px solid #f59e0b;border-radius:10px;padding:10px 14px;font-size:13px;color:var(--muted)}
+.speak-used{margin-top:12px;font-size:12.5px;color:var(--muted);text-align:right}

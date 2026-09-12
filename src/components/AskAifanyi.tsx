@@ -3,21 +3,22 @@
 /**
  * Ask AIFANYI —— 统一语言问题入口（V1.0 D12 + P7 裁决：L1 规则路由 + L2 内容库匹配）
  * 用户输入任何语言问题：
- *  L1 规则：「什么意思/啥意思/mean」→ Meaning；「怎么说/怎么讲/how to say」→ Speak(travel)；
- *          「潜台词/言外之意/是不是在」→ Hidden Meaning（暂 Meaning）；其他 → 翻译框
+ *  L1 规则：「潜台词/言外之意/是不是在」→ Hidden Meaning（独立分支）；
+ *          「什么意思/啥意思/mean」→ Meaning；「怎么说/怎么讲/how to say」→ Speak（/speak?q=）；
+ *          其他 → 翻译框
  *  L2 匹配：跳转 /understand/meaning?q= 服务端五表查询（精确命中渲染快答）
  * V1 从首页 hero 进入；L3 AI 分类在 Week 4 接入（本组件的 action 结构已预留）
  */
 import { useState } from 'react';
 import { sendContentEvent, getContentSessionId } from '@/lib/metrics/client';
 
-type Intent = 'translate' | 'meaning' | 'speak';
+type Intent = 'translate' | 'meaning' | 'speak' | 'hidden_meaning';
 
 function classify(q: string): Intent {
   const s = q.toLowerCase();
-  if (/什么意思|啥意思|是什么|什麼意思|mean|meaning/.test(s)) return 'meaning';
+  if (/潜台词|言外之意|是不是在|暗示/.test(s)) return 'hidden_meaning';
+  if (/什么意思|啥意思|是什么|什麼意思|mean|meaning/.test(s)) return 'meaning';
   if (/怎么说|怎么讲|怎么表达|how to say|how do i say/.test(s)) return 'speak';
-  if (/潜台词|言外之意|是不是在|暗示/.test(s)) return 'meaning';
   return 'translate';
 }
 
@@ -56,12 +57,15 @@ export default function AskAifanyi() {
       sendContentEvent('tool_click', 'ask_query', intent + '|' + via);
     } catch {}
     try { sendContentEvent('tool_click', 'ask_aifanyi', via === 'l3' ? intent + '_ai' : intent); } catch {}
-    if (intent === 'meaning') {
+    if (intent === 'hidden_meaning') {
+      // 潜台词/言外之意：首阶段仍复用词义快答检索，独立分支便于后续专属化
+      window.location.href = '/understand/meaning?q=' + encodeURIComponent(query);
+    } else if (intent === 'meaning') {
       // L2：内容库匹配（服务端五表查询 + 精确命中快答）
       window.location.href = '/understand/meaning?q=' + encodeURIComponent(query);
     } else if (intent === 'speak') {
-      // V1：Speak 场景页检索（/travel 场景库 90 条）
-      window.location.href = '/understand/meaning?q=' + encodeURIComponent(query);
+      // 「怎么说？」工具（P1-1）：/speak?q= 预填
+      window.location.href = '/speak?q=' + encodeURIComponent(query);
     } else {
       // translate：进翻译框（保留 query 预填体验）
       window.location.href = '/?q=' + encodeURIComponent(query);

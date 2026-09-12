@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { FAIR_USE_PAUSED_MSG, isCreditDeductionEnabled } from '@/lib/credit/feature-flags';
 
 const LANGS = [
   { v: 'zh', label: '简体中文' },
@@ -13,6 +14,10 @@ const LANGS = [
 ];
 
 type Phase = 'input' | 'working' | 'done' | 'error';
+
+const FREE_STAGE = (() => { try { return !isCreditDeductionEnabled(); } catch { return true; } })();
+// D：面向用户的额度提示只允许两种写法——「预计使用 X 额度」/「本次使用 X 额度」；扣费关闭时显示免费阶段
+const creditNote = (credits?: number) => (FREE_STAGE ? FAIR_USE_PAUSED_MSG : (typeof credits === 'number' && credits > 0 ? `本次使用 ${credits} 额度` : ''));
 
 export default function WebTranslatorClient() {
   const [url, setUrl] = useState('');
@@ -88,7 +93,8 @@ export default function WebTranslatorClient() {
             </select>
           </div>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-            <span style={{ fontSize: 12, color: 'var(--muted)' }}>支持大部分静态网页（新闻/博客/文档）；JS 渲染页面可能提取不到正文</span>
+            {/* A8：网页翻译需登录 */}
+            <span style={{ fontSize: 12, color: 'var(--muted)' }}>需登录使用 · 支持大部分静态网页（新闻/博客/文档）；JS 渲染页面可能提取不到正文</span>
             <button className="btn-primary" onClick={translate} disabled={phase === 'working'}
               style={{ padding: '10px 28px', fontSize: 15, opacity: phase === 'working' ? .6 : 1 }}>
               {phase === 'working' ? '翻译中…' : '🌐 翻译网页'}
@@ -107,6 +113,8 @@ export default function WebTranslatorClient() {
       {/* 结果 */}
       {phase === 'done' && (
         <div>
+          {/* D：结果区额度口径（服务端未返回数值时按免费阶段显示） */}
+          {creditNote() && <p style={{ fontSize: 12, color: 'var(--muted)', margin: '0 0 10px' }}>{creditNote()}</p>}
           <div style={{ display: 'flex', gap: 10, alignItems: 'center', marginBottom: 14, flexWrap: 'wrap' }}>
             <div style={{ flex: 1, minWidth: 200 }}>
               <div style={{ fontSize: 17, fontWeight: 600, color: 'var(--text)' }}>{title || '网页内容'}</div>

@@ -2,6 +2,7 @@
 
 import { useCallback, useRef, useState } from 'react';
 import { sendContentEvent } from '@/lib/metrics/client';
+import { FAIR_USE_PAUSED_MSG, isCreditDeductionEnabled } from '@/lib/credit/feature-flags';
 
 type FileType = 'pdf' | 'image' | 'subtitle' | 'doc';
 type Phase = 'idle' | 'working' | 'done' | 'error';
@@ -30,6 +31,10 @@ const TOOL_URL: Record<FileType, string> = {
 };
 const TYPE_LABEL: Record<FileType, string> = { pdf: 'PDF', image: '图片', subtitle: '字幕', doc: '文档' };
 
+// D：面向用户的额度提示只允许两种写法——「预计使用 X 额度」/「本次使用 X 额度」；扣费总开关关闭时显示免费阶段
+const FREE_STAGE = (() => { try { return !isCreditDeductionEnabled(); } catch { return true; } })();
+const creditNote = (credits?: number) => (FREE_STAGE ? FAIR_USE_PAUSED_MSG : (typeof credits === 'number' && credits > 0 ? `本次使用 ${credits} 额度` : ''));
+
 function detectType(name: string): FileType | null {
   const n = name.toLowerCase();
   if (/\.pdf$/.test(n)) return 'pdf';
@@ -46,6 +51,7 @@ export default function FileTranslator({ targetLang }: { targetLang: string }) {
   const [progress, setProgress] = useState(0);
   const [pairs, setPairs] = useState<DocPair[]>([]);
   const [imageResult, setImageResult] = useState<ImageResult | null>(null);
+  const [imageCredits, setImageCredits] = useState<number | undefined>(undefined);
   const [subtitleCues, setSubtitleCues] = useState<SubtitleCue[]>([]);
   const [error, setError] = useState('');
   const [dragOver, setDragOver] = useState(false);
@@ -59,7 +65,7 @@ export default function FileTranslator({ targetLang }: { targetLang: string }) {
   const pollTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const showToast = (msg: string) => { setToast(msg); setTimeout(() => setToast(''), 2000); };
-  const reset = () => { if (pollTimer.current) clearTimeout(pollTimer.current); setPhase('idle'); setError(''); setPairs([]); setImageResult(null); setSubtitleCues([]); setProgress(0); setWebOpen(false); setWebTitle(''); };
+  const reset = () => { if (pollTimer.current) clearTimeout(pollTimer.current); setPhase('idle'); setError(''); setPairs([]); setImageResult(null); setImageCredits(undefined); setSubtitleCues([]); setProgress(0); setWebOpen(false); setWebTitle(''); };
 
   // 统一结果卡片：段落对照
   const renderPairs = (items: DocPair[], limit: number, toolBtn: boolean, headTitle?: string) => (
@@ -105,6 +111,8 @@ export default function FileTranslator({ targetLang }: { targetLang: string }) {
         const res = await fetch('/api/image/translate', { method: 'POST', body: fd });
         const d = await res.json();
         if (!d.ok) { setError(d.error || '识别失败'); setPhase('error'); return; }
+        // D：额度数值一律来自服务端返回，前端不自行计算
+        setImageCredits(typeof d.credits === 'number' ? d.credits : undefined);
         setImageResult({ text: d.text, translation: d.translation, preview: URL.createObjectURL(file) });
         setPhase('done');
         sendContentEvent('translation_complete', 'tool', type);
@@ -206,8 +214,9 @@ export default function FileTranslator({ targetLang }: { targetLang: string }) {
             ))}
             <input ref={inputRef} type="file" hidden accept={Object.values(ACCEPT).join(',')} onChange={e => { const f = e.target.files?.[0]; if (f) upload(f); e.target.value = ''; }} />
           </div>
+          {/* A3 + D：按类型区分登录/游客可用性，并标注当前计费阶段 */}
           <div className="file-billing" style={{ fontSize: 12, color: 'var(--muted)', marginTop: 8 }}>
-            新用户送积分 · 游客可先试
+            {FREE_STAGE ? FAIR_USE_PAUSED_MSG : '新用户送积分，按实际用量结算。'}游客可先试：PDF / 字幕；需登录：图片 / Word·PPT / 网页
           </div>
           <div
             className={`file-dropzone${dragOver ? ' drag' : ''}`}
@@ -258,6 +267,12 @@ export default function FileTranslator({ targetLang }: { targetLang: string }) {
             <span className="file-done-name">📄 {fileName} · 翻译完成</span>
             <button type="button" className="file-done-close" onClick={reset} title="关闭">×</button>
           </div>
+          {/* D：结果卡额度口径（数值来自服务端；扣费关闭时显示免费阶段） */}
+          {creditNote(imageCredits) && (
+            <div className="file-credit-note" style={{ fontSize: 12, color: 'var(--muted)', margin: '8px 0 4px' }}>
+              {creditNote(imageCredits)}
+            </div>
+          )}
           {fileType === 'image' && imageResult && (
             <div className="file-image-result">
               <div className="file-image-preview"><img src={imageResult.preview} alt="上传的图片" /></div>

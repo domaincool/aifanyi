@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getAuthUserId, authErrorBody, beginSync, endSyncSuccess, endSyncFail, FEATURES } from '@/lib/credit/sync-settle';
 import { transcribeAudio } from '@/lib/voice/asr';
 import { checkRateLimit, VOICE_LIMITS } from '@/lib/voice/limits';
-import { secondsToUnits } from '@/lib/credit/pricing';
+import { secondsToUnits, estimateCredits } from '@/lib/credit/pricing';
 
 export const runtime = 'nodejs';
 export const maxDuration = 60;
@@ -33,7 +33,9 @@ export async function POST(req: NextRequest) {
     }
 
     const jobId = 'stt_' + crypto.randomUUID();
-    const est = secondsToUnits(durationSec);
+    // __p1cfg__ STT 定价改为 PricingRule 驱动（原 1/分钟硬编码，与表内 20/分钟 差 20 倍）
+    const sttUnits = secondsToUnits(durationSec);
+    const est = (await estimateCredits(FEATURES.STT, sttUnits))?.credits ?? sttUnits;
     const begin = await beginSync({ userId: auth.userId, jobId, feature: FEATURES.STT, estimatedCredits: est });
     if (!begin.ok) {
       const status = begin.code === 'insufficient' ? 402 : 400;

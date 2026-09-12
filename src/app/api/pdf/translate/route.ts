@@ -18,6 +18,7 @@ import { getOrCreateGuestCookie } from '@/lib/auth/cookie';
 import { prisma } from '@/lib/db';
 import { getAuthUserId, beginSync, endSyncSuccess, endSyncFail, FEATURES } from '@/lib/credit/sync-settle';
 import { isCreditDeductionEnabled } from '@/lib/credit/feature-flags';
+import { estimateCredits } from '@/lib/credit/pricing';
 
 export const runtime = 'nodejs';
 export const maxDuration = 120;
@@ -68,8 +69,9 @@ export async function POST(req: NextRequest) {
 
     const taskId = `pdf_${Date.now().toString(36)}_${randomUUID().slice(0, 8)}`;
 
-    // 积分：2/页（封顶 200）→ reserve（原子检查余额）
-    const estCredits = Math.min(doc.pageCount * 2, 200);
+    // C：积分按 PricingRule 配置化计价（pdf_translation，单位=页），不硬编码单价
+    // 无定价规则时回落原硬编码值（2/页，封顶 200），避免停机
+    const estCredits = (await estimateCredits(FEATURES.PDF, doc.pageCount))?.credits ?? Math.min(doc.pageCount * 2, 200);
     const begin = await beginSync({ userId, jobId: taskId, feature: FEATURES.PDF, estimatedCredits: estCredits });
     if (!begin.ok) {
       // 余额不足：保存为 paused 任务，充值后从 taskId 续做（不要求重新上传）

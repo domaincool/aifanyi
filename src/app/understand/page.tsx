@@ -27,9 +27,9 @@ export default async function UnderstandHub() {
   } catch {}
 
   const lines = [
-    { href: '/understand/slang', ico: '🔥', name: '网络用语与俚语', desc: '热梗 · 缩写 · 黑话——中文互联网的每一句潜台词', count: counts.meme },
-    { href: '/understand/dictionary', ico: '🧩', name: '难翻译词词典', desc: 'komorebi · wabi-sabi——那些英语里找不到对应词的世界', count: counts.untranslatable },
-    { href: '/understand/idioms', ico: '📜', name: '成语谚语翻译', desc: '画蛇添足 · 亡羊补牢——四字里的千年智慧怎么翻', count: counts.idiom },
+    { href: '/meme', ico: '🔥', name: '网络用语与俚语', desc: '热梗 · 缩写 · 黑话——中文互联网的每一句潜台词', count: counts.meme },
+    { href: '/untranslatable', ico: '🧩', name: '难翻译词词典', desc: 'komorebi · wabi-sabi——那些英语里找不到对应词的世界', count: counts.untranslatable },
+    { href: '/idioms', ico: '📜', name: '成语谚语翻译', desc: '画蛇添足 · 亡羊补牢——四字里的千年智慧怎么翻', count: counts.idiom },
     { href: '/understand/meaning', ico: '💬', name: '词义快答', desc: '一句话快答：这个词到底什么意思、怎么用', count: 0 },
   ];
 

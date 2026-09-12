@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getAuthUserId, authErrorBody, beginSync, endSyncSuccess, endSyncFail, FEATURES } from '@/lib/credit/sync-settle';
 import { synthesizeSpeech } from '@/lib/voice/tts';
 import { checkRateLimit, VOICE_LIMITS } from '@/lib/voice/limits';
-import { charsToUnits } from '@/lib/credit/pricing';
+import { charsToUnits, estimateCredits } from '@/lib/credit/pricing';
 
 export const runtime = 'nodejs';
 export const maxDuration = 60;
@@ -25,7 +25,9 @@ export async function POST(req: NextRequest) {
     }
 
     const jobId = 'tts_' + crypto.randomUUID();
-    const est = charsToUnits(text.length);
+    // __p1cfg__ TTS 定价改为 PricingRule 驱动（原 1/千字硬编码，与表内 20/千字 差 20 倍）
+    const ttsUnits = charsToUnits(text.length);
+    const est = (await estimateCredits(FEATURES.TTS, ttsUnits))?.credits ?? ttsUnits;
     const begin = await beginSync({ userId: auth.userId, jobId, feature: FEATURES.TTS, estimatedCredits: est });
     if (!begin.ok) {
       const status = begin.code === 'insufficient' ? 402 : 400;

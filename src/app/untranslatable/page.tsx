@@ -182,7 +182,7 @@ export default async function UntranslatableIndexPage({
       </div>
       <div className="cta-box" style={{ marginTop: 24 }}>
         <p>难翻译词持续补充中——先试试 AI 翻译工具。</p>
-        <a href="/" className="btn primary">去翻译</a>
+        <a href="/understand/meaning?q=" className="btn primary">查任意外语词含义 →</a>
       </div>
     </div>
   );

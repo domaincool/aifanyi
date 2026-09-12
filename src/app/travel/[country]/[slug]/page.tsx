@@ -181,7 +181,7 @@ export default async function TravelScenePage({ params }: { params: Promise<{ co
 
       <div className="cta-box" style={{ marginTop: 24 }}>
         <p>到了当地还有不会说的？打开 AI 翻译工作台，实时语音互译。</p>
-        <a href="/voice" className="btn primary">语音翻译</a>
+        <a href="/voice" className="btn primary">旅行中语言不通？开语音互译 →</a>
       </div>
     </>
   );

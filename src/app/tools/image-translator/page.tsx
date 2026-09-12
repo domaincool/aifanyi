@@ -29,7 +29,7 @@ export default function ImageTranslatorPage() {
               "name": "图片翻译免费吗？",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "需登录使用。新用户注册送 500 积分，每张图片消耗 30 积分；每日另有公平使用额度，自动重置。"
+                "text": "当前为免费体验阶段（需登录使用）。新用户注册送 500 积分，每张图片消耗 30 积分；每日另有公平使用额度，自动重置。"
               }
             },
             {
@@ -70,7 +70,7 @@ export default function ImageTranslatorPage() {
         <h2>常见问题</h2>
         <div className="pdf-seo-faq-item">
           <h3>图片翻译免费吗？</h3>
-          <p>需登录使用。新用户注册送 500 积分，每张图片消耗 30 积分；每日另有公平使用额度，自动重置。</p>
+          <p>当前为免费体验阶段（需登录使用）。新用户注册送 500 积分，每张图片消耗 30 积分；每日另有公平使用额度，自动重置。</p>
         </div>
         <div className="pdf-seo-faq-item">
           <h3>支持哪些图片格式？</h3>

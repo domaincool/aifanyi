@@ -12,6 +12,7 @@ export const metadata: Metadata = buildMetadata({
 const tools = [
   {
     id: 'pdf',
+    needsLogin: false,
     emoji: '📄',
     name: 'PDF 翻译 · 三模型对比',
     desc: 'DeepSeek/GLM/Google 三模型对比，双语对照阅读，支持 DOCX/TXT 下载 · 注册送积分',
@@ -19,6 +20,7 @@ const tools = [
   },
   {
     id: 'image',
+    needsLogin: true,
     emoji: '🖼',
     name: '图片翻译',
     desc: '截图/海报/菜单 AI 识别翻译，逐行对照',
@@ -26,6 +28,7 @@ const tools = [
   },
   {
     id: 'subtitle',
+    needsLogin: false,
     emoji: '🎬',
     name: '字幕翻译',
     desc: 'SRT / VTT 字幕一键翻译，双语对照，保留时间轴 · 游客先试 5 个文件',
@@ -33,6 +36,7 @@ const tools = [
   },
   {
     id: 'web',
+    needsLogin: true,
     emoji: '🌐',
     name: '网页翻译',
     desc: '输入网址，正文一键翻译，双语对照',
@@ -40,6 +44,7 @@ const tools = [
   },
   {
     id: 'doc',
+    needsLogin: true,
     emoji: '📝',
     name: 'Word / PPT',
     desc: 'Word/PPT 文档一键翻译，双语对照',
@@ -47,6 +52,7 @@ const tools = [
   },
   {
     id: 'polish',
+    needsLogin: false,
     emoji: '✨',
     name: 'AI润色',
     desc: '译文/草稿 AI 润色，保持原意、表达更地道',
@@ -67,11 +73,11 @@ export default function ToolsPage() {
           return (
             <div className="tool-card" key={t.id} id={t.id}>
               <div className="tool-emoji">{t.emoji}</div>
-              <h2>{t.name}</h2>
+              <h2>{t.name}{t.needsLogin && <span className="tool-soon" style={{ marginLeft: 8 }}>需登录</span>}</h2>
               <p>{t.desc}</p>
               <a className="tool-btn" href={live ? (t.id === 'subtitle' ? '/tools/subtitle-translator' : t.id === 'polish' ? '/tools/ai-polish' : t.id === 'image' ? '/tools/image-translator' : t.id === 'web' ? '/tools/web-translator' : t.id === 'doc' ? '/tools/doc-translator' : '/tools/pdf-translator') : '#'}>
                 {t.action}
-                {live ? <span className="tool-soon tool-live">可用</span> : <span className="tool-soon">即将上线</span>}
+                <span className="tool-soon tool-live">可用</span>
               </a>
             </div>
           );

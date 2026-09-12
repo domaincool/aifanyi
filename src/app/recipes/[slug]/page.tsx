@@ -224,7 +224,7 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
 
       <div className="cta-box" style={{ marginTop: 24 }}>
         <p>这道菜做法看不懂？把外文菜谱上传 PDF 翻译，或使用 AI 翻译工作台。</p>
-        <a href="/tools/pdf-translator" className="btn primary">翻译菜谱</a>
+        <a href="/tools/pdf-translator" className="btn primary">上传外文菜谱，整页翻成中文 →</a>
       </div>
     </>
   );

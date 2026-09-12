@@ -130,6 +130,9 @@ model MemeEntry {
   publishedAt      DateTime? // 发布时间戳（回填 = updatedAt 初始值）
   searchIntentType String? // P6：definition|meaning|translation|how_to_say|hidden_meaning|comparison|cultural_context
   usage            String? // 使用场景（对齐 ExpressionEntry）
+  tone             String? // V1.1 P0-2：语气/情绪（formal|casual|playful|sarcastic|positive|negative|neutral，多值逗号分隔；按实际语义判断，不机械生成）
+  collocations     Json? // V1.1 P0-2：常见搭配 [{phrase, zh?, note?}]
+  misTranslated    Json? // V1.1 P0-2：容易误解的地方 [{wrong, right, why?}]（对齐 ExpressionEntry.misTranslated）
   // status 七态（V1.0 4.4）：draft | ai_generated | human_review | approved | published | needs_update | archived
   // 现网数据 99% published；导入默认 published 保持不变（4.4.1：默认态切换属运营通告后的独立变更）
   createdAt        DateTime  @default(now())
@@ -1069,4 +1072,68 @@ model ContentSource {
   createdAt  DateTime @default(now())
 
   @@index([refType, refId])
+}
+
+// ═══════════════════ 语言意图事件（V1.1 P1-7：用户到底想解决什么语言问题）═══════════════════
+// 设计原则：
+// 1) 一次提问 = 一行，幂等键 eventId（客户端 uuid / 服务端合成）——重复上报不产生重复行
+// 2) 不存 IP、不存 userId（隐私红线）；会话维度用匿名 aifanyi_cs cookie（sessionKey）
+// 3) intent 五枚举：translate | meaning | hidden_meaning | speak | other；后续可加值不破坏历史
+model LanguageIntent {
+  id              String   @id @default(cuid())
+  eventId         String   @unique
+  query           String
+  queryHash       String
+  normalizedQuery String
+  intent          String
+  confidence      Float    @default(0)
+  source          String   @default("unknown")
+  channel         String?
+  language        String?
+  targetLang      String?
+  entity          String?
+  scenario        String?
+  contentMatch    String   @default("none")
+  contentId       String?
+  contentType     String?
+  toolUsed        String?
+  toolType        String?
+  signup          Boolean  @default(false)
+  creditConsumed  Int      @default(0)
+  sessionKey      String?
+  enteredAt       DateTime @default(now())
+  createdAt       DateTime @default(now())
+
+  @@index([intent, enteredAt])
+  @@index([source, enteredAt])
+  @@index([channel, enteredAt])
+  @@index([toolUsed, enteredAt])
+  @@index([normalizedQuery])
+  @@index([sessionKey])
+  @@index([enteredAt])
+}
+
+// ═══════════════════ 内容机会候选（V1.1 P1-7：自动发现 + 人工审核，绝不自动发布）═══════════════════
+model ContentOpportunity {
+  id            String   @id @default(cuid())
+  candidateTerm String
+  variants      String[]
+  intent        String
+  targetLang    String?
+  hits          Int      @default(0)
+  covered       Boolean  @default(false)
+  coveredBy     String?
+  coverageKind  String   @default("none")
+  score         Int      @default(0)
+  status        String   @default("candidate")
+  batchId       String?
+  reviewedBy    String?
+  reviewedAt    DateTime?
+  firstSeenAt   DateTime
+  lastSeenAt    DateTime
+  createdAt     DateTime @default(now())
+
+  @@unique([candidateTerm, intent])
+  @@index([status, score])
+  @@index([covered, hits])
 }

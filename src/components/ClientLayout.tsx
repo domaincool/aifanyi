@@ -63,9 +63,9 @@ export default function ClientLayout({ children, serverUser }: { children: React
             <div className="nav-mega-panel" role="menu">
               <div className="mega-title">理解语言</div>
               <div className="mega-grid">
-                <a role="menuitem" className="mega-item" href="/understand/slang"><span className="mega-ico">🔥</span><span className="mega-body"><b>网络用语与俚语</b><small>热梗 · 缩写 · 黑话</small></span></a>
-                <a role="menuitem" className="mega-item" href="/understand/idioms"><span className="mega-ico">📜</span><span className="mega-body"><b>成语谚语</b><small>画蛇添足 · 亡羊补牢</small></span></a>
-                <a role="menuitem" className="mega-item" href="/understand/dictionary"><span className="mega-ico">🧩</span><span className="mega-body"><b>难翻译词词典</b><small>komorebi · wabi-sabi</small></span></a>
+                <a role="menuitem" className="mega-item" href="/meme"><span className="mega-ico">🔥</span><span className="mega-body"><b>网络用语与俚语</b><small>热梗 · 缩写 · 黑话</small></span></a>
+                <a role="menuitem" className="mega-item" href="/idioms"><span className="mega-ico">📜</span><span className="mega-body"><b>成语谚语</b><small>画蛇添足 · 亡羊补牢</small></span></a>
+                <a role="menuitem" className="mega-item" href="/untranslatable"><span className="mega-ico">🧩</span><span className="mega-body"><b>难翻译词词典</b><small>komorebi · wabi-sabi</small></span></a>
                 <a role="menuitem" className="mega-item" href="/understand/meaning"><span className="mega-ico">💬</span><span className="mega-body"><b>词义快答</b><small>俚语 · 口语 · 场景表达</small></span></a>
               </div>
             </div>
@@ -79,7 +79,7 @@ export default function ClientLayout({ children, serverUser }: { children: React
               <div className="mega-grid">
                 <a role="menuitem" className="mega-item" href="/speak">
                   <span className="mega-ico">🗣️</span>
-                  <span className="mega-body"><b>场景表达指南</b><small>旅行 · 商务 · 职场 · 恋爱 · 学习</small></span>
+                  <span className="mega-body"><b>怎么说？</b><small>场景表达指南 · 旅行 · 商务 · 职场 · 恋爱 · 学习</small></span>
                 </a>
                 <a role="menuitem" className="mega-item" href="/speak/travel">
                   <span className="mega-ico">✈️</span>
@@ -188,7 +188,7 @@ export default function ClientLayout({ children, serverUser }: { children: React
             <a className="mob-link" href="/untranslatable" onClick={() => setMobileOpen(false)}>🧩 难翻译词</a>
             <a className="mob-link" href="/expressions" onClick={() => setMobileOpen(false)}>💬 词汇与表达</a>
             <div className="mob-group">表达</div>
-            <a className="mob-link" href="/speak" onClick={() => setMobileOpen(false)}>🗣️ 场景表达 <span className="mob-sub">旅行 · 商务 · 职场 · 恋爱</span></a>
+            <a className="mob-link" href="/speak" onClick={() => setMobileOpen(false)}>🗣️ 怎么说？ <span className="mob-sub">场景表达指南 · 旅行 · 商务 · 职场</span></a>
             <a className="mob-link" href="/tools/ai-polish" onClick={() => setMobileOpen(false)}>✨ AI 润色 <span className="mob-sub">语气调整 · 更地道</span></a>
             <div className="mob-group">探索世界</div>
             <a className="mob-link" href="/recipes" onClick={() => setMobileOpen(false)}>🍜 全球美食 <span className="mob-sub">菜谱 · 菜单</span></a>

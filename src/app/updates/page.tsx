@@ -11,11 +11,11 @@ export const metadata: Metadata = buildMetadata({
 const faqs = [
   {
     q: '我之前没登录也能用 PDF 翻译，现在必须登录吗？',
-    a: '是的。登录即可获得 500 免费积分，比之前的每日文件数限制更宽松、更透明。',
+    a: '当前为免费体验阶段，游客仍可直接使用；开启积分制后需登录并按积分使用。',
   },
   {
     q: '积分用完了怎么办？',
-    a: '积分用完后仍可继续使用，按实际用量计费。每次翻译前都会提示预计消耗，不会突然扣费。',
+    a: '积分用完后需要补充：可充值，或等待次日免费额度重置。全程按实际用量计费，每次翻译前都会提示预计消耗，不会突然扣费。',
   },
   {
     q: '翻译失败了会扣积分吗？',
@@ -41,20 +41,20 @@ export default function UpdatesPage() {
 
         <div style={{ border: '1px solid var(--border)', borderRadius: 12, padding: '16px 20px', marginBottom: 12, background: 'var(--panel)' }}>
           <div style={{ fontWeight: 600, marginBottom: 4 }}>1. 登录即送 500 免费积分</div>
-          <div style={{ fontSize: 14, color: 'var(--muted)' }}>新老用户登录后自动到账 500 使用积分（30 天内有效）。积分用完后仍可继续使用，按实际用量计费，用量透明可查。</div>
+          <div style={{ fontSize: 14, color: 'var(--muted)' }}>新老用户登录后自动到账 500 使用积分（30 天内有效）。按实际用量计费，用量透明可查；积分用完后可充值或等待次日免费额度重置。</div>
         </div>
 
         <div style={{ border: '1px solid var(--border)', borderRadius: 12, padding: '16px 20px', marginBottom: 12, background: 'var(--panel)' }}>
           <div style={{ fontWeight: 600, marginBottom: 4 }}>2. 用量透明，绝不乱扣</div>
           <div style={{ fontSize: 14, color: 'var(--muted)' }}>
-            每次翻译前都知道大概消耗多少；<strong style={{ color: 'var(--text)' }}>只有翻译成功才扣积分</strong>，失败、取消、任务中断都会自动退回；缓存命中的重复翻译不扣积分。
+            每次翻译前都知道大概消耗多少；<strong style={{ color: 'var(--text)' }}>只有翻译成功才扣积分</strong>，失败、取消、任务中断都会自动退回；文本翻译、AI 润色、怎么说等带缓存的场景，命中缓存不扣积分。
           </div>
         </div>
 
         <div style={{ border: '1px solid var(--border)', borderRadius: 12, padding: '16px 20px', marginBottom: 12, background: 'var(--panel)' }}>
-          <div style={{ fontWeight: 600, marginBottom: 4 }}>3. 文件翻译需登录使用</div>
+          <div style={{ fontWeight: 600, marginBottom: 4 }}>3. 文件翻译的登录要求</div>
           <div style={{ fontSize: 14, color: 'var(--muted)' }}>
-            PDF / 字幕 / 图片 / 网页 / Word·PPT 翻译现在需要登录后使用（登录即送 500 积分，足够日常使用）。这是为了防止服务被滥用、保证翻译质量与速度。
+            当前为免费体验阶段：PDF / 字幕翻译游客可先试；图片 / 网页 / Word·PPT 翻译需登录后使用（登录即送 500 积分）。开启积分制后需登录并按积分使用，这是为了防止服务被滥用、保证翻译质量与速度。
           </div>
         </div>
 

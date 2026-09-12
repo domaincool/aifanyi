@@ -2,24 +2,60 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { buildMetadata } from '@/lib/seo';
 import { SPEAK_SCENARIOS } from '@/lib/content/speak-scenarios';
+import SpeakTool from '@/components/SpeakTool';
 
-/** /speak 场景列表页（可索引）：7 张场景卡 + 使用说明 */
-export const metadata: Metadata = buildMetadata({
-  path: '/speak',
-  title: '场景英语怎么说：7 大场景表达指南 | 爱翻译',
-  description:
-    '旅行、商务、电商、职场、社交、恋爱、学习 7 大场景的「英语怎么说」表达指南：高频表达卡、场景对话、真实词条内链，配合爱翻译 AI 翻译随查随用。',
-  keywords: ['场景英语', '英语怎么说', '地道表达', '口语指南', '爱翻译'],
-  ogType: 'list',
-});
+/**
+ * /speak：7 张场景卡（人工核准内容）+「怎么说？」工具。
+ * 无 q：可索引栏目页；带 ?q=：搜索结果态 → noindex（对齐 P2 硬规则）。
+ */
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams?: Promise<{ q?: string }>;
+}): Promise<Metadata> {
+  let q = "";
+  try {
+    const sp = searchParams ? await searchParams : {};
+    if (typeof sp?.q === 'string') q = sp.q.trim();
+  } catch {}
+  if (!q) {
+    return buildMetadata({
+      path: '/speak',
+      title: '怎么说？场景英语怎么说：7 大场景表达指南 | 爱翻译',
+      description:
+        '旅行、商务、电商、职场、社交、恋爱、学习 7 大场景的「英语怎么说」表达指南：高频表达卡、场景对话、真实词条内链，配合爱翻译 AI 翻译随查随用。',
+      keywords: ['场景英语', '英语怎么说', '怎么说', '地道表达', '口语指南', '爱翻译'],
+      ogType: 'list',
+    });
+  }
+  return buildMetadata({
+    path: '/speak',
+    title: `${q.slice(0, 30)} 怎么说？| 爱翻译`,
+    description: '用中文说出你想表达的意思，看这句话在英语 / 日语 / 韩语 / 西班牙语里当地人怎么说。',
+    ogType: 'list',
+    noindex: true,
+  });
+}
 
-export default function SpeakIndexPage() {
+export default async function SpeakIndexPage({
+  searchParams,
+}: {
+  searchParams?: Promise<{ q?: string }>;
+}) {
+  let initialQuery = '';
+  try {
+    const sp = searchParams ? await searchParams : {};
+    if (typeof sp?.q === 'string') initialQuery = sp.q.slice(0, 200);
+  } catch {}
+
   return (
     <div>
       <section className="hero">
         <h1>场景表达指南</h1>
         <p>同一个意思，换个场景就该换个说法。7 大场景，高频表达 + 场景对话 + 真实词条内链。</p>
       </section>
+
+      <SpeakTool initialQuery={initialQuery} />
 
       <div className="entry-grid">
         {SPEAK_SCENARIOS.map((s) => (

@@ -36,6 +36,7 @@ export const FEATURES = {
   DOC: 'doc_translation',
   WEB: 'web_translation',
   POLISH: 'polish',
+  SPEAK: 'speak_expression',
   BLINDTEST: 'blindtest',
   STT: 'speech_to_text',
   TTS: 'text_to_speech',

@@ -42,7 +42,7 @@ export default async function ExpressionsIndexPage() {
       </div>
       <div className="cta-box" style={{ marginTop: 24 }}>
         <p>有词不会翻？用 AI 翻译工作台试试。</p>
-        <a href="/" className="btn primary">去翻译</a>
+        <a href="/#translator" className="btn primary">有词不会翻？丢进翻译器 →</a>
       </div>
     </div>
   );

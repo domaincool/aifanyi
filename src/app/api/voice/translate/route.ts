@@ -4,7 +4,7 @@ import { getAuthUserId, authErrorBody, beginSync, endSyncSuccess, endSyncFail, e
 import { transcribeAudio } from '@/lib/voice/asr';
 import { synthesizeSpeech } from '@/lib/voice/tts';
 import { checkRateLimit, VOICE_LIMITS } from '@/lib/voice/limits';
-import { secondsToUnits, charsToUnits } from '@/lib/credit/pricing';
+import { estimateCredits, secondsToUnits, charsToUnits } from '@/lib/credit/pricing';
 
 export const runtime = 'nodejs';
 export const maxDuration = 120;
@@ -28,7 +28,8 @@ async function runPipeline(authUserId: string, file: File, mime: string, duratio
     /* --- 1) STT --- */
     if (onStage) onStage('TRANSCRIBING');
     const sttJob = 'vstt_' + crypto.randomUUID();
-    const sttEst = secondsToUnits(durationSec);
+    // C：STT 按 PricingRule 配置化计价（speech_to_text，单位=分钟），无规则回落原值（1/分钟）
+    const sttEst = (await estimateCredits(FEATURES.STT, secondsToUnits(durationSec)))?.credits ?? secondsToUnits(durationSec);
     const b1 = await beginSync({ userId: authUserId, jobId: sttJob, feature: FEATURES.STT, estimatedCredits: sttEst });
     if (!b1.ok) {
       const status = b1.code === 'insufficient' ? 402 : 400;
@@ -93,7 +94,8 @@ async function runPipeline(authUserId: string, file: File, mime: string, duratio
     /* --- 3) TTS（失败不致命：仍返回文字结果）--- */
     if (onStage) onStage('SYNTHESIZING');
     const ttsJob = 'vtts_' + crypto.randomUUID();
-    const ttsEst = charsToUnits(translation.length);
+    // C：TTS 按 PricingRule 配置化计价（text_to_speech，单位=千字），无规则回落原值（1/千字）
+    const ttsEst = (await estimateCredits(FEATURES.TTS, charsToUnits(translation.length)))?.credits ?? charsToUnits(translation.length);
     const b3 = await beginSync({ userId: authUserId, jobId: ttsJob, feature: FEATURES.TTS, estimatedCredits: ttsEst });
     if (!b3.ok) {
       const status = b3.code === 'insufficient' ? 402 : 400;

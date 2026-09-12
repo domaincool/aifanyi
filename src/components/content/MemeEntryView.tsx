@@ -41,6 +41,30 @@ export default async function MemeEntryView({ slug, isMeaningRoute = false }: { 
   const examples = (m.examples as { zh: string; en: string }[]) || [];
   const isEn = m.lang === 'en';
   const tags = (m.tags as string[]) || [];
+  // V1.1 P0-2 产品化：以下字段全部条件渲染，无数据不出现空壳区块
+  const usage = m.usage || '';
+  const TONE_CN: Record<string, string> = { formal: '正式', casual: '口语', playful: '调侃', sarcastic: '讽刺', positive: '褒义', negative: '贬义', neutral: '中性' };
+  const TONE_HINT: Record<string, string> = { formal: '适合正式场合', casual: '适合日常口语', playful: '适合玩梗调侃', sarcastic: '带讽刺意味，慎用', positive: '偏褒义', negative: '偏贬义', neutral: '语气中性' };
+  const tones = (m.tone || '').split(',').map((t) => t.trim()).filter((t) => !!TONE_CN[t]);
+  const collocations = ((m.collocations as { phrase: string; zh?: string; note?: string }[] | null) || []).filter((c) => !!(c && c.phrase));
+  const misTranslated = ((m.misTranslated as { wrong: string; right: string; why?: string }[] | null) || []).filter((x) => !!(x && x.wrong && x.right));
+  let sources: { sourceName: string | null; sourceUrl: string | null; sourceDate: string | null; sourceType: string; note: string | null }[] = [];
+  try {
+    sources = await prisma.contentSource.findMany({
+      where: { refType: 'meme', refId: m.id },
+      orderBy: { createdAt: 'desc' },
+      take: 6,
+      select: { sourceName: true, sourceUrl: true, sourceDate: true, sourceType: true, note: true },
+    });
+  } catch {
+    // 来源表可空：读不到则整块不渲染
+  }
+  // V1.1 P1-2 任务型 CTA
+  const ctaHref = isMeaningRoute
+    ? '/?q=' + encodeURIComponent(m.term) + '#translator'
+    : '/?q=' + encodeURIComponent((examples[0] && examples[0].zh) || m.term) + '#translator';
+  const ctaLabel = isMeaningRoute ? '把含有 ' + m.term + ' 的句子翻成中文 →' : '把这句话翻成地道英文 →';
+
   // 相关梗：同 tag 的其他词条，站内互链吃长尾流量
   let related: { slug: string; term: string; translation: string; lang?: string }[] = [];
   try {
@@ -110,20 +134,26 @@ export default async function MemeEntryView({ slug, isMeaningRoute = false }: { 
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "QAPage",
-          "mainEntity": {
-            "@type": "Question",
-            "name": m.term + (isEn ? " 中文什么意思？" : " 用英语怎么说？"),
-            "text": m.term + "（" + m.meaning + "）" + (isEn ? "是什么意思？怎么翻译成中文？" : "怎么翻译成英语？"),
-            "answerCount": 1,
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": ((m.shortAnswer as string) || (m.term + "（" + m.meaning + "）" + (isEn ? "的中文意思是「" + m.translation + "」。" : "的地道英文表达是「" + m.translation + "」。")))
-                + (examples.length > 0 ? " 例句：" + examples[0].en + "（" + examples[0].zh + "）。" : "")
-                + " 更多网络用语翻译见爱翻译 aifanyi.com。",
-              "url": "https://aifanyi.com" + (isEn ? "/understand/meaning/" : "/meme/") + m.slug // __p0fix-link__
-            }
-          }
+          "@type": "DefinedTerm",
+          "name": m.term,
+          "description": (m.shortAnswer as string) || m.meaning,
+          "inDefinedTermSet": "https://aifanyi.com" + (isEn ? "/understand/meaning" : "/meme"),
+          "inLanguage": isEn ? "en" : "zh-CN"
+        }) }}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "看懂语言", "item": "https://aifanyi.com/understand" },
+            isEn
+              ? { "@type": "ListItem", "position": 2, "name": "词义快答", "item": "https://aifanyi.com/understand/meaning" }
+              : { "@type": "ListItem", "position": 2, "name": "网络用语与俚语", "item": "https://aifanyi.com/meme" },
+            { "@type": "ListItem", "position": 3, "name": m.term, "item": "https://aifanyi.com" + (isEn ? "/understand/meaning/" : "/meme/") + m.slug }
+          ]
         }) }}
       />
 
@@ -153,6 +183,75 @@ export default async function MemeEntryView({ slug, isMeaningRoute = false }: { 
         </>
       )}
 
+      {usage && (
+        <>
+          <h2 className="section-title">怎么使用</h2>
+          <p>{usage}</p>
+        </>
+      )}
+
+      {tones.length > 0 && (
+        <>
+          <h2 className="section-title">语气 · 情绪</h2>
+          <p>
+            {tones.map((t) => (
+              <span key={t} className="chip" style={{ marginRight: 8 }}>{TONE_CN[t]}</span>
+            ))}
+          </p>
+          <p style={{ color: 'var(--muted)', fontSize: 13 }}>
+            {tones.map((t) => TONE_HINT[t]).join(' · ')}
+          </p>
+        </>
+      )}
+
+      {collocations.length > 0 && (
+        <>
+          <h2 className="section-title">常见搭配</h2>
+          <ul style={{ margin: '8px 0 0', paddingLeft: 18 }}>
+            {collocations.map((c, i) => (
+              <li key={i} style={{ marginBottom: 6 }}>
+                <b>{c.phrase}</b>
+                {c.zh && <span style={{ color: 'var(--muted)' }}> —— {c.zh}</span>}
+                {c.note && <div style={{ color: 'var(--muted)', fontSize: 13 }}>{c.note}</div>}
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
+
+      {misTranslated.length > 0 && (
+        <>
+          <h2 className="section-title">容易误解的地方</h2>
+          <div style={{ margin: '8px 0 0' }}>
+            {misTranslated.map((x, i) => (
+              <div key={i} style={{ marginBottom: 8 }}>
+                <div><span style={{ color: 'var(--muted)' }}>❌ {x.wrong}</span> → <b style={{ color: 'var(--accent2)' }}>✅ {x.right}</b></div>
+                {x.why && <div style={{ color: 'var(--muted)', fontSize: 13 }}>{x.why}</div>}
+              </div>
+            ))}
+          </div>
+        </>
+      )}
+
+      {sources.length > 0 && (
+        <>
+          <h2 className="section-title">来源 · 文化背景</h2>
+          <ul style={{ margin: '8px 0 0', paddingLeft: 18 }}>
+            {sources.map((s, i) => (
+              <li key={i} style={{ marginBottom: 6 }}>
+                {s.sourceUrl ? (
+                  <a href={s.sourceUrl} rel="nofollow noopener" target="_blank" style={{ color: 'var(--accent2)' }}>{s.sourceName || s.sourceUrl}</a>
+                ) : (
+                  <span>{s.sourceName || '来源'}</span>
+                )}
+                {s.sourceDate && <span style={{ color: 'var(--muted)' }}> · {s.sourceDate}</span>}
+                {s.note && <div style={{ color: 'var(--muted)', fontSize: 13 }}>{s.note}</div>}
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
+
       {related.length > 0 && (
         <>
           <h2 className="section-title">相关梗 · 同类网络用语</h2>
@@ -177,8 +276,16 @@ export default async function MemeEntryView({ slug, isMeaningRoute = false }: { 
           ))}
         </p>
       )}
+      <h2 className="section-title">还有疑问？问 Ask AIFANYI</h2>
+      <p style={{ color: 'var(--muted)', fontSize: 14 }}>
+        不确定「{m.term}」能不能用在正式场合、有没有别的说法？直接问 AI。
+      </p>
+      <p style={{ marginTop: 8 }}>
+        <a className="btn" href={'/understand/meaning?q=' + encodeURIComponent(m.term)}>问 AIFANYI：{m.term} 怎么用？ →</a>
+      </p>
+
       <div style={{ marginTop: 24, display: 'flex', gap: 12, flexWrap: 'wrap', alignItems: 'center' }}>
-        <ToolCtaButton contentType="meme" contentId={m.slug} />
+        <ToolCtaButton contentType="meme" contentId={m.slug} href={ctaHref} label={ctaLabel} />
         <ContentScrollTracker contentType="meme" contentId={m.slug} />
         <span style={{ color: 'var(--muted)', fontSize: 13 }}>还想翻别的梗？去<a href="/arena" style={{ color: 'var(--accent2)' }}>擂台</a>看哪家 AI 最强。</span>
       </div>

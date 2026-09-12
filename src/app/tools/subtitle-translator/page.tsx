@@ -29,7 +29,7 @@ export default function SubtitleTranslatorPage() {
               "name": "字幕翻译免费吗？",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "新用户注册送 500 积分，按字幕时长计积分（约每分钟 10 积分）；游客每日可先试 5 个文件，注册后额度更高，每日自动重置。"
+                "text": "当前为免费体验阶段。新用户注册送 500 积分，按字幕时长计积分（约每分钟 10 积分）；游客每日可先试 5 个文件，注册后额度更高，每日自动重置。"
               }
             },
             {
@@ -70,7 +70,7 @@ export default function SubtitleTranslatorPage() {
         <h2>常见问题</h2>
         <div className="pdf-seo-faq-item">
           <h3>字幕翻译免费吗？</h3>
-          <p>新用户注册送 500 积分，按字幕时长计积分（约每分钟 10 积分）；游客每日可先试 5 个文件，注册后额度更高，每日自动重置。</p>
+          <p>当前为免费体验阶段。新用户注册送 500 积分，按字幕时长计积分（约每分钟 10 积分）；游客每日可先试 5 个文件，注册后额度更高，每日自动重置。</p>
         </div>
         <div className="pdf-seo-faq-item">
           <h3>支持哪些字幕格式？</h3>

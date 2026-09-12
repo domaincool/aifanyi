@@ -153,7 +153,7 @@ export default async function MenuEntryPage({ params }: { params: Promise<{ coun
 
       <div className="cta-box" style={{ marginTop: 24 }}>
         <p>看到陌生菜名？拍照上传图片翻译，或直接使用 AI 翻译工作台。</p>
-        <a href="/tools/image-translator" className="btn primary">拍菜单翻译</a>
+        <a href="/tools/image-translator" className="btn primary">拍下整张菜单，秒懂菜名 →</a>
       </div>
     </>
   );
