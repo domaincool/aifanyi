@@ -139,7 +139,7 @@ export default function ClientLayout({ children, serverUser }: { children: React
               </div>
             </div>
           </div>
-          <a href="/arena" className="nav-item">擂台</a>
+          <a href="/arena" className="nav-item">AI 擂台</a>
         </nav>
         <button
           className="hamburger"
