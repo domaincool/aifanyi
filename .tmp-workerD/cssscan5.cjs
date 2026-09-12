@@ -1,1 +1,0 @@
-﻿const fs=require('fs');const css=fs.readFileSync('src/app/globals.css','utf8');const lines=css.split(/\r?\n/);lines.forEach((l,i)=>{if(l.match(/\.btn(?![a-zA-Z-])/))console.log((i+1)+': '+l.trim().slice(0,170));});

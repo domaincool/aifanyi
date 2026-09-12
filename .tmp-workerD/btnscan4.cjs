@@ -1,1 +1,0 @@
-﻿const fs=require('fs');const css=fs.readFileSync('.next/static/css/16a59226b01723ee.css','utf8');let i=css.indexOf('.btn');while(i>=0){const seg=css.slice(i,i+26);if(!seg.startsWith('.btn-')){console.log('AT',i,JSON.stringify(css.slice(i,i+240)));}i=css.indexOf('.btn',i+1);}

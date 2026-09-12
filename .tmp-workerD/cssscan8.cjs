@@ -1,1 +1,0 @@
-﻿const fs=require('fs');const css=fs.readFileSync('src/app/globals.css','utf8');const i=css.search(/\.btn[\s{,]/);console.log('first .btn+space at',i);if(i>=0)console.log(css.slice(i,i+400));

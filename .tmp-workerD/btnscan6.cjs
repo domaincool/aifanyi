@@ -1,1 +1,0 @@
-﻿const fs=require('fs');const css=fs.readFileSync('.next/static/css/16a59226b01723ee.css','utf8');let i=0;while(true){i=css.indexOf('.btn',i);if(i<0)break;const c=css.substr(i+4,1);console.log(i, JSON.stringify(c), JSON.stringify(css.slice(i,i+40)));i+=4;}

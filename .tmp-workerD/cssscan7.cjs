@@ -1,1 +1,0 @@
-﻿const fs=require('fs');const css=fs.readFileSync('src/app/globals.css','utf8');const lines=css.split(/\r?\n/);for(let i=0;i<lines.length;i++){const l=lines[i];const idx=l.indexOf('.btn ');if(idx>=0){console.log((i+1)+': '+l.trim().slice(0,200));for(let j=i+1;j<Math.min(i+6,lines.length);j++)console.log('   +'+(j-i)+': '+lines[j].trim().slice(0,160));}}
