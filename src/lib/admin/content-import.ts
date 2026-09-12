@@ -161,7 +161,7 @@ function buildData(it: ContentImportItem): any {
       kind: it.kind || 'travel', title: it.title, intro: it.intro,
       phrases: (it.phrases as any) || [],
       tips: it.tips as any, cautions: it.cautions as any, dialogue: it.dialogue as any, related: it.related as any,
-      // __b4_scene__ shortAnswer: it.shortAnswer || null, definition: it.definition || null, searchIntentType: it.searchIntentType || null,
+      shortAnswer: it.shortAnswer || null, definition: it.definition || null, searchIntentType: it.searchIntentType || null, // __b4_scene__
     };
   }
   if (t === 'menu') {
@@ -172,7 +172,7 @@ function buildData(it: ContentImportItem): any {
       romanized: it.romanized || null, zh: it.zh, en: it.en || null,
       description: it.description || null, category: it.category || null,
       pairings: it.pairings as any, tags: it.tags || [],
-      // __b4_menu__ shortAnswer: it.shortAnswer || null, definition: it.definition || null, searchIntentType: it.searchIntentType || null,
+      shortAnswer: it.shortAnswer || null, definition: it.definition || null, searchIntentType: it.searchIntentType || null, // __b4_menu__
     };
   }
   if (t === 'recipe') {
@@ -184,7 +184,7 @@ function buildData(it: ContentImportItem): any {
       intro: it.intro || null, ingredients: it.ingredients as any, steps: it.steps as any,
       cookTime: it.cookTime || null, difficulty: it.difficulty || null, servings: it.servings ?? null,
       vocab: it.vocab as any, misTranslated: it.misTranslated as any, culture: it.culture || null,
-      // __b4_recipe__ shortAnswer: it.shortAnswer || null, definition: it.definition || null, searchIntentType: it.searchIntentType || null,
+      shortAnswer: it.shortAnswer || null, definition: it.definition || null, searchIntentType: it.searchIntentType || null, // __b4_recipe__
     };
   }
   if (t === 'slang') {
