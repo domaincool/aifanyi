@@ -89,7 +89,8 @@ export default async function MeaningSearchPage({ searchParams }: { searchParams
         <h2 className="section-title">大家都在查</h2>
         <div className="entry-grid">
           {hot.map((m) => (
-            <Link key={m.slug} className="entry-card" href={m.lang === 'en' ? `/understand/meaning/${m.slug}` : `/meme/${m.slug}`}> // __p0mlink__
+            // __p0mlink__ 卡片列表：en 词条指向 Meaning URL，zh 词条指向 meme URL
+            <Link key={m.slug} className="entry-card" href={m.lang === 'en' ? `/understand/meaning/${m.slug}` : `/meme/${m.slug}`}>
               <div className="term">{m.term}</div>
               <div className="tr">{m.translation}</div>
             </Link>

@@ -158,7 +158,8 @@ export default async function MemeEntryView({ slug, isMeaningRoute = false }: { 
           <h2 className="section-title">相关梗 · 同类网络用语</h2>
           <div className="entry-grid">
             {related.map((r) => (
-              <a key={r.slug} className="entry-card" href={(r.lang === 'en' ? "/understand/meaning/" : "/meme/") + r.slug}> // __p0fix-link__
+              // __p0fix-link__ 相关梗卡片：按语言分流到对应 URL
+              <a key={r.slug} className="entry-card" href={(r.lang === 'en' ? "/understand/meaning/" : "/meme/") + r.slug}>
                 <div className="term">{r.term}</div>
                 <div className="tr">{r.translation}</div>
               </a>
