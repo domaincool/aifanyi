@@ -77,6 +77,30 @@ export default async function MenuEntryPage({ params }: { params: Promise<{ coun
         }) }}
       />
 
+      {(m.shortAnswer as string) && (
+        <div className="short-answer">
+          <div className="sa-label">一句话答案</div>
+          <div className="sa-text">{m.shortAnswer as string}</div>
+        </div>
+      )}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "QAPage",
+          "mainEntity": {
+            "@type": "Question",
+            "name": m.zh + '是什么菜？',
+            "text": m.zh + '（' + countryName(country) + '菜单）是什么菜？什么口味？',
+            "answerCount": 1,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": ((m.shortAnswer as string) || m.description || m.zh + '是' + countryName(country) + '的一道菜。'),
+              "url": `${process.env.NEXT_PUBLIC_SITE_URL || 'https://aifanyi.com'}/${m.country}/${m.slug}`,
+            },
+          },
+        }) }}
+      />
       <p style={{ color: 'var(--muted)' }}>{countryName(country)}菜单 · 看懂菜名，点对菜</p>
 
       <div className="translator-box" style={{ maxWidth: 'none' }}>

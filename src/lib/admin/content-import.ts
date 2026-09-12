@@ -161,6 +161,7 @@ function buildData(it: ContentImportItem): any {
       kind: it.kind || 'travel', title: it.title, intro: it.intro,
       phrases: (it.phrases as any) || [],
       tips: it.tips as any, cautions: it.cautions as any, dialogue: it.dialogue as any, related: it.related as any,
+      // __b4_scene__ shortAnswer: it.shortAnswer || null, definition: it.definition || null, searchIntentType: it.searchIntentType || null,
     };
   }
   if (t === 'menu') {
@@ -171,6 +172,7 @@ function buildData(it: ContentImportItem): any {
       romanized: it.romanized || null, zh: it.zh, en: it.en || null,
       description: it.description || null, category: it.category || null,
       pairings: it.pairings as any, tags: it.tags || [],
+      // __b4_menu__ shortAnswer: it.shortAnswer || null, definition: it.definition || null, searchIntentType: it.searchIntentType || null,
     };
   }
   if (t === 'recipe') {
@@ -182,6 +184,7 @@ function buildData(it: ContentImportItem): any {
       intro: it.intro || null, ingredients: it.ingredients as any, steps: it.steps as any,
       cookTime: it.cookTime || null, difficulty: it.difficulty || null, servings: it.servings ?? null,
       vocab: it.vocab as any, misTranslated: it.misTranslated as any, culture: it.culture || null,
+      // __b4_recipe__ shortAnswer: it.shortAnswer || null, definition: it.definition || null, searchIntentType: it.searchIntentType || null,
     };
   }
   if (t === 'slang') {
@@ -226,6 +229,10 @@ function buildUpdateData(it: ContentImportItem): any {
   for (const f of scalarFields) {
     if (data[f] === undefined) delete data[f];
   }
+  // __b4_upd__ 三字段缺省（|| null 产生）≠ 运营显式清空：未传入时保留旧值
+  if (it.shortAnswer === undefined) delete data.shortAnswer;
+  if (it.definition === undefined) delete data.definition;
+  if (it.searchIntentType === undefined) delete data.searchIntentType;
   return data;
 }
 

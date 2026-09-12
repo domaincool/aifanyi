@@ -81,6 +81,30 @@ export default async function LifeScenePage({ params }: { params: Promise<{ coun
         }) }}
       />
 
+      {(s.shortAnswer as string) && (
+        <div className="short-answer">
+          <div className="sa-label">一句话答案</div>
+          <div className="sa-text">{s.shortAnswer as string}</div>
+        </div>
+      )}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "QAPage",
+          "mainEntity": {
+            "@type": "Question",
+            "name": s.title + '怎么说？',
+            "text": s.title + '（' + countryName(country) + '海外生活场景）在当地语言里怎么说？有哪些实用表达？',
+            "answerCount": 1,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": ((s.shortAnswer as string) || s.intro || s.title + '——' + countryName(country) + '海外生活场景必备用语。'),
+              "url": `${process.env.NEXT_PUBLIC_SITE_URL || 'https://aifanyi.com'}/${s.country}/${s.slug}`,
+            },
+          },
+        }) }}
+      />
       <p style={{ color: 'var(--muted)' }}>{countryName(country)}海外生活 · {langName(s.lang) || '当地语言'}</p>
 
       {s.intro && (

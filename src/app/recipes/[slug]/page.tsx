@@ -108,6 +108,30 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
         }) }}
       />
 
+      {(r.shortAnswer as string) && (
+        <div className="short-answer">
+          <div className="sa-label">一句话答案</div>
+          <div className="sa-text">{r.shortAnswer as string}</div>
+        </div>
+      )}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "QAPage",
+          "mainEntity": {
+            "@type": "Question",
+            "name": (r.zhName || r.dish) + '怎么做？',
+            "text": (r.zhName || r.dish) + '的家常做法是什么？需要哪些食材？',
+            "answerCount": 1,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": ((r.shortAnswer as string) || r.intro || (r.zhName || r.dish) + '的家常做法。'),
+              "url": `${process.env.NEXT_PUBLIC_SITE_URL || 'https://aifanyi.com'}/${r.slug}`,
+            },
+          },
+        }) }}
+      />
       <p style={{ color: 'var(--muted)' }}>
         {r.country ? `${countryName(r.country)}风味` : '家常菜'} · {r.zhName && r.dish && r.zhName !== r.dish ? `${r.dish} / ` : ''}{r.enName ? `${r.enName}` : ''}
       </p>
