@@ -15,3 +15,5 @@ tsconfig.tsbuildinfo
 /data
 
 .openclaw-*.txt
+.tmp-workerD/
+.build-verify.log
