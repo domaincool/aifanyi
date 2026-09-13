@@ -29,7 +29,7 @@ export default function ImageTranslatorPage() {
               "name": "图片翻译免费吗？",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "免费在线使用，需登录。"
+                "text": "免费在线使用，需登录。上传截图、海报或菜单图片，AI 自动识别图中文字并翻译成目标语言。"
               }
             },
             {
@@ -70,7 +70,7 @@ export default function ImageTranslatorPage() {
         <h2>常见问题</h2>
         <div className="pdf-seo-faq-item">
           <h3>图片翻译免费吗？</h3>
-          <p>免费在线使用，需登录。</p>
+          <p>免费在线使用，需登录。上传截图、海报或菜单图片，AI 自动识别图中文字并翻译成目标语言。</p>
         </div>
         <div className="pdf-seo-faq-item">
           <h3>支持哪些图片格式？</h3>

@@ -13,6 +13,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
     { href: '/admin', label: '数据看板' },
     { href: '/admin/memes', label: '词条管理' },
     { href: '/admin/blindtests', label: '盲测管理' },
+    { href: '/admin/opportunities', label: '内容机会' },
     { href: '/admin/audit', label: '审计日志' },
     { href: '/admin/credits', label: '积分管理' },
     { href: '/admin/payments', label: '退款补单' },

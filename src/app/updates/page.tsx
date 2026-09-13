@@ -32,6 +32,7 @@ export default function UpdatesPage() {
     <main className="updates-page" style={{ maxWidth: 720, margin: '0 auto', padding: '48px 20px 64px' }}>
       <p style={{ color: 'var(--muted)', fontSize: 14, marginBottom: 8 }}>产品公告 · 2026-08-12</p>
       <h1 style={{ fontSize: 28, margin: '0 0 8px' }}>爱翻译上线「使用积分」体系 🎉</h1>
+      <p style={{ fontSize: 13, color: 'var(--muted)', margin: '0 0 20px' }}>历史公告（发布于 2026-08-12，具体以当前产品为准）。</p>
       <p style={{ color: 'var(--muted)', fontSize: 15, margin: '0 0 24px' }}>
         为了让翻译服务更稳定、更透明地持续运行，爱翻译已上线全新的「使用积分」体系。简单说：放心用，翻译成功才计费，失败自动退回。
       </p>

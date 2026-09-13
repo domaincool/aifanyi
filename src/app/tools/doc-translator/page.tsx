@@ -29,7 +29,7 @@ export default function DocTranslatorPage() {
               "name": "Word/PPT 翻译免费吗？",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "免费在线使用，需登录。"
+                "text": "免费在线使用，需登录。上传 .docx / .pptx 后自动识别标题、段落与表格结构，整篇翻译为中文，段落级双语对照。"
               }
             },
             {
@@ -70,7 +70,7 @@ export default function DocTranslatorPage() {
         <h2>常见问题</h2>
         <div className="pdf-seo-faq-item">
           <h3>Word/PPT 翻译免费吗？</h3>
-          <p>免费在线使用，需登录。</p>
+          <p>免费在线使用，需登录。上传 .docx / .pptx 后自动识别标题、段落与表格结构，整篇翻译为中文，段落级双语对照。</p>
         </div>
         <div className="pdf-seo-faq-item">
           <h3>支持哪些格式？</h3>

@@ -29,7 +29,7 @@ export default function WebTranslatorPage() {
               "name": "网页翻译免费吗？",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "免费在线使用，需登录。"
+                "text": "免费在线使用，需登录。粘贴网页地址，整页正文自动翻译为中文，段落级双语对照阅读。"
               }
             },
             {
@@ -70,7 +70,7 @@ export default function WebTranslatorPage() {
         <h2>常见问题</h2>
         <div className="pdf-seo-faq-item">
           <h3>网页翻译免费吗？</h3>
-          <p>免费在线使用，需登录。</p>
+          <p>免费在线使用，需登录。粘贴网页地址，整页正文自动翻译为中文，段落级双语对照阅读。</p>
         </div>
         <div className="pdf-seo-faq-item">
           <h3>怎么翻译一个网页？</h3>

@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { buildMetadata } from '@/lib/seo';
 import { recordContentView } from '@/lib/metrics/server';
 import { cookies } from 'next/headers';
-import ToolCtaButton from '@/components/ToolCtaButton';
 
 export const dynamic = 'force-dynamic';
 function safeDecode(s: string): string {

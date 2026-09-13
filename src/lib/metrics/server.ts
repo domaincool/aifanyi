@@ -176,10 +176,69 @@ export async function recordLanguageIntent(input: LanguageIntentInput): Promise<
         enteredAt: input.enteredAt ?? new Date(),
       },
     });
+
+    // V1.1 修订版：聚合为内容机会候选（status 恒 candidate，失败静默，不影响主链路）
+    await upsertContentOpportunity({ query: raw, normalizedQuery, intent, redacted, targetLang: input.targetLang ?? null });
   } catch (e) {
     // P2002：eventId 冲突（同一事件重复上报）→ 幂等跳过；其余错误一律静默，埋点绝不抛出
     const code = (e as { code?: string } | null)?.code;
     if (code === 'P2002') return;
     return;
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// V1.1 修订版：内容机会聚合（ContentOpportunity 接线）
+// - 只有 meaning / hidden_meaning / speak 三类意图聚合成候选（translate 为自由句子，会产生噪声，不聚合）
+// - candidateTerm = normalizedQuery（已剥「是什么意思 / 怎么说」等问句外壳）
+// - status 恒为 candidate（schema 默认），绝不自动发布；是否建页由人工判断
+// ─────────────────────────────────────────────────────────────────────────────
+
+/** 单个机会的 variants 封顶（防止异常流量撑爆字段） */
+const OPPORTUNITY_VARIANT_CAP = 20;
+
+export async function upsertContentOpportunity(input: {
+  query: string;
+  normalizedQuery: string;
+  intent: string;
+  redacted: boolean;
+  targetLang?: string | null;
+}): Promise<void> {
+  try {
+    if (input.redacted) return;
+    if (!['meaning', 'hidden_meaning', 'speak'].includes(input.intent)) return;
+    const term = String(input.normalizedQuery ?? '').trim();
+    const raw = String(input.query ?? '').trim();
+    if (!term || term === '[redacted]' || term.length < 2 || !raw) return;
+
+    const now = new Date();
+    const existing = await prisma.contentOpportunity.findUnique({
+      where: { candidateTerm_intent: { candidateTerm: term, intent: input.intent } },
+    });
+    if (existing) {
+      const variants = existing.variants.includes(raw)
+        ? existing.variants
+        : [...existing.variants, raw].slice(-OPPORTUNITY_VARIANT_CAP);
+      await prisma.contentOpportunity.update({
+        where: { id: existing.id },
+        data: { hits: { increment: 1 }, score: { increment: 1 }, variants, lastSeenAt: now },
+      });
+    } else {
+      await prisma.contentOpportunity.create({
+        data: {
+          candidateTerm: term,
+          intent: input.intent,
+          variants: [raw],
+          hits: 1,
+          score: 1,
+          status: 'candidate',
+          firstSeenAt: now,
+          lastSeenAt: now,
+          ...(input.targetLang ? { targetLang: input.targetLang.slice(0, 16) } : {}),
+        },
+      });
+    }
+  } catch {
+    // 聚合失败不影响意图主链路
   }
 }
