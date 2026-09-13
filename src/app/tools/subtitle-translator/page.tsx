@@ -29,7 +29,7 @@ export default function SubtitleTranslatorPage() {
               "name": "字幕翻译免费吗？",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "免费在线使用。无需登录每天可翻译 5 个字幕文件，登录后每天 10 个；按字幕时长计积分，约每分钟 10 积分。"
+                "text": "免费在线使用。无需登录每天可翻译 5 个字幕文件，登录后每天 10 个。"
               }
             },
             {
@@ -70,7 +70,7 @@ export default function SubtitleTranslatorPage() {
         <h2>常见问题</h2>
         <div className="pdf-seo-faq-item">
           <h3>字幕翻译免费吗？</h3>
-          <p>免费在线使用。无需登录每天可翻译 5 个字幕文件，登录后每天 10 个；按字幕时长计积分，约每分钟 10 积分。</p>
+          <p>免费在线使用。无需登录每天可翻译 5 个字幕文件，登录后每天 10 个。</p>
         </div>
         <div className="pdf-seo-faq-item">
           <h3>支持哪些字幕格式？</h3>

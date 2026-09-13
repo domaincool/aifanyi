@@ -29,7 +29,7 @@ export default function DocTranslatorPage() {
               "name": "Word/PPT 翻译免费吗？",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "免费在线使用，需登录。按正文长度计积分，约每千字 20 积分，注册即送 500 积分。"
+                "text": "免费在线使用，需登录。"
               }
             },
             {
@@ -70,7 +70,7 @@ export default function DocTranslatorPage() {
         <h2>常见问题</h2>
         <div className="pdf-seo-faq-item">
           <h3>Word/PPT 翻译免费吗？</h3>
-          <p>免费在线使用，需登录。按正文长度计积分，约每千字 20 积分，注册即送 500 积分。</p>
+          <p>免费在线使用，需登录。</p>
         </div>
         <div className="pdf-seo-faq-item">
           <h3>支持哪些格式？</h3>

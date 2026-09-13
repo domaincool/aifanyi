@@ -57,7 +57,6 @@ export default async function HomePage({ searchParams }: { searchParams?: Promis
         }) }}
       />
       <section className="hero">
-        <span className="hero-free-badge">新用户送 500 积分</span>
         <h1>爱翻译 · AI翻译</h1>
         <p>上传即译，多模型对比，选更地道的一版。让 AI 帮你把话说得像当地人。Let AI help you speak like a local.</p>
       </section>

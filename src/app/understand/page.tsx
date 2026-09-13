@@ -49,7 +49,7 @@ export default async function UnderstandHub() {
       </div>
       <div className="cta-box" style={{ marginTop: 24 }}>
         <p>想查的词这里没有？直接问 AI——把整句话丢进翻译框，看三种模型怎么理解。</p>
-        <a href="/" className="btn primary">去翻译</a>
+        <a href="/" className="btn primary">去问 AI →</a>
       </div>
     </div>
   );

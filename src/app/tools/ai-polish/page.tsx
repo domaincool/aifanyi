@@ -30,7 +30,7 @@ export default function AiPolishPage() {
               "name": "AI 润色免费吗？",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "免费使用。未登录每天 30 次、单次 5000 字符以内；登录后按积分计费，约每千字 20 积分，注册即送 500 积分。"
+                "text": "免费使用。未登录每天 30 次、单次 5000 字符以内。"
               }
             },
             {
@@ -71,7 +71,7 @@ export default function AiPolishPage() {
         <h2>常见问题</h2>
         <div className="pdf-seo-faq-item">
           <h3>AI 润色免费吗？</h3>
-          <p>免费使用。未登录每天 30 次、单次 5000 字符以内；登录后按积分计费，约每千字 20 积分，注册即送 500 积分。</p>
+          <p>免费使用。未登录每天 30 次、单次 5000 字符以内。</p>
         </div>
         <div className="pdf-seo-faq-item">
           <h3>润色和翻译有什么区别？</h3>

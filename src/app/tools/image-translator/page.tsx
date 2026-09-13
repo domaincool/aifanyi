@@ -29,7 +29,7 @@ export default function ImageTranslatorPage() {
               "name": "图片翻译免费吗？",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "免费在线使用，需登录。每张图片使用 30 积分，注册即送 500 积分。"
+                "text": "免费在线使用，需登录。"
               }
             },
             {
@@ -70,7 +70,7 @@ export default function ImageTranslatorPage() {
         <h2>常见问题</h2>
         <div className="pdf-seo-faq-item">
           <h3>图片翻译免费吗？</h3>
-          <p>免费在线使用，需登录。每张图片使用 30 积分，注册即送 500 积分。</p>
+          <p>免费在线使用，需登录。</p>
         </div>
         <div className="pdf-seo-faq-item">
           <h3>支持哪些图片格式？</h3>
