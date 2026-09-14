@@ -197,6 +197,42 @@ export async function recordLanguageIntent(input: LanguageIntentInput): Promise<
 /** 单个机会的 variants 封顶（防止异常流量撑爆字段） */
 const OPPORTUNITY_VARIANT_CAP = 20;
 
+// ── covered 自动回写（Growth Validation 排期 B）─────────────────────────────
+// 候选词若已有 published 词条（MemeEntry / ExpressionEntry term 大小写不敏感精确匹配），
+// 落库时回写 covered / coverageKind / coveredBy，让机会池能区分「真缺口」与「已覆盖验证」。
+// zh 词条与 en 词条都算覆盖（route 不同但内容已存在，不做 lang 过滤）。
+// 优先级：meme > expression；ExpressionEntry 同词多 type 时按 popularity 降序取首个，
+// type 映射：idiom→idiom、untranslatable→untranslatable、slang/food/expression→expression。
+// 查询失败一律静默返回 null（covered 保持 false，不影响聚合主链路）。
+
+type CoverageHit = { kind: 'meme' | 'expression' | 'idiom' | 'untranslatable'; slug: string };
+
+async function findExistingCoverage(term: string): Promise<CoverageHit | null> {
+  try {
+    const normalized = term.trim().toLowerCase();
+    if (!normalized) return null;
+    const meme = await prisma.memeEntry.findFirst({
+      where: { term: { equals: normalized, mode: 'insensitive' }, status: 'published' },
+      select: { slug: true },
+      orderBy: [{ popularity: 'desc' }, { id: 'asc' }],
+    });
+    if (meme) return { kind: 'meme', slug: meme.slug };
+    const expr = await prisma.expressionEntry.findFirst({
+      where: { term: { equals: normalized, mode: 'insensitive' }, status: 'published' },
+      select: { slug: true, type: true },
+      orderBy: [{ popularity: 'desc' }, { id: 'asc' }],
+    });
+    if (expr) {
+      const kind: CoverageHit['kind'] =
+        expr.type === 'idiom' ? 'idiom' : expr.type === 'untranslatable' ? 'untranslatable' : 'expression';
+      return { kind, slug: expr.slug };
+    }
+    return null;
+  } catch {
+    return null;
+  }
+}
+
 export async function upsertContentOpportunity(input: {
   query: string;
   normalizedQuery: string;
@@ -219,11 +255,26 @@ export async function upsertContentOpportunity(input: {
       const variants = existing.variants.includes(raw)
         ? existing.variants
         : [...existing.variants, raw].slice(-OPPORTUNITY_VARIANT_CAP);
+      // covered 回写：存量候选未覆盖时按事件补查（已覆盖则短路，省一次查询）
+      let coverageData: { covered: boolean; coverageKind: string; coveredBy: string } | null = null;
+      if (!existing.covered) {
+        const coverage = await findExistingCoverage(term);
+        if (coverage) coverageData = { covered: true, coverageKind: coverage.kind, coveredBy: coverage.slug };
+      }
       await prisma.contentOpportunity.update({
         where: { id: existing.id },
-        data: { hits: { increment: 1 }, score: { increment: 1 }, variants, lastSeenAt: now },
+        data: {
+          hits: { increment: 1 },
+          score: { increment: 1 },
+          variants,
+          lastSeenAt: now,
+          ...(coverageData
+            ? { covered: coverageData.covered, coverageKind: coverageData.coverageKind, coveredBy: coverageData.coveredBy }
+            : {}),
+        },
       });
     } else {
+      const coverage = await findExistingCoverage(term);
       await prisma.contentOpportunity.create({
         data: {
           candidateTerm: term,
@@ -235,6 +286,7 @@ export async function upsertContentOpportunity(input: {
           firstSeenAt: now,
           lastSeenAt: now,
           ...(input.targetLang ? { targetLang: input.targetLang.slice(0, 16) } : {}),
+          ...(coverage ? { covered: true, coverageKind: coverage.kind, coveredBy: coverage.slug } : {}),
         },
       });
     }

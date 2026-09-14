@@ -13,6 +13,7 @@ import {
   FEATURES,
 } from '@/lib/credit/sync-settle';
 import { estimateCredits } from '@/lib/credit/pricing';
+import { recordLanguageIntent } from '@/lib/metrics/server';
 import { isCreditDeductionEnabled } from '@/lib/credit/feature-flags';
 import { checkGuestLimit } from '@/lib/guest-limit';
 
@@ -172,6 +173,17 @@ export async function POST(req: NextRequest) {
       if (!gl.ok) return NextResponse.json({ ok: false, code: gl.code, error: gl.error }, { status: 429 });
       return NextResponse.json(authErrorBody(), { status: 401 });
     }
+
+    // P1 speak 页埋点：意图落库（speak 类真实用户 query 此前零落库入口；失败静默不阻塞生成）
+    void recordLanguageIntent({
+      query: text,
+      intent: 'speak',
+      confidence: 0.9,
+      source: 'speak_page',
+      targetLang,
+      toolUsed: 'speak_tool',
+      sessionKey: auth.userId,
+    });
 
     const est = (await estimateCredits(FEATURES.SPEAK, 1))?.credits ?? 10;
     const hash = hashText(text, 'zh', targetLang, 'speak', '', PROMPT_VERSION);
