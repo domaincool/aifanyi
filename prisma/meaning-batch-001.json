@@ -1,0 +1,371 @@
+{
+  "generatedAt": "2026-09-14T04:50:44.650Z",
+  "model": "deepseek-chat",
+  "entries": [
+    {
+      "term": "rizz",
+      "slug": "rizz",
+      "isNew": false,
+      "tone": "褒义为主，偶尔带调侃。多数时候是真心夸人，比如在 TikTok 评论区刷「bro got that rizz」是真觉得对方会撩；但朋友之间也常拿来互相打趣，说「you got zero rizz」就是损你毫无魅力。使用者基本是 Z 世代和年轻网友，主要出现在朋友聊天、TikTok/X 评论区、约会软件个人简介里。正式场合、工作邮件、跟长辈说话都别用，会显得很跳脱。",
+      "collocations": [
+        "got rizz（有撩人本事）",
+        "unspoken rizz（不动声色的撩人魅力）",
+        "W rizz（高情商撩人，夸）",
+        "L rizz（撩人失败，损）",
+        "zero rizz（毫无魅力）",
+        "rizz up（把某人撩到手）"
+      ],
+      "misTranslated": "直译成「魅力」会丢掉它自带的网络梗味和调侃色彩，听起来像正经词典词。更糟的是把 rizz 当成动词硬翻成「散发魅力」，完全跑偏。在 TikTok 评论、朋友互损、约会软件简介里，直译会让人摸不着头脑，也接不住「W rizz」「L rizz」这种梗。它只适合口语和网络语境，写进正式文书就是灾难。"
+    },
+    {
+      "term": "delulu",
+      "slug": "delulu",
+      "isNew": false,
+      "tone": "贬义打底但常被拿来玩梗自嘲，所以实际语气看语境：说别人 delulu 多半是调侃甚至嘲讽，说自己 delulu 则是半认真的自黑，承认「我知道我在脑补」。主要是朋友之间、粉丝圈内部、TikTok 和 X 评论区互怼用，也见于约会软件上吐槽对方「想太多」。恋人之间说可能带撒娇或翻旧账的意味。正式场合、职场、对不熟的人基本不能用，会显得轻浮且冒犯。",
+      "collocations": [
+        "delulu is the solulu（妄想就是解药，粉丝圈自嘲金句）",
+        "delulu era（妄想期，形容自己最近疯狂脑补的阶段）",
+        "stay delulu（继续妄想吧，鼓励式调侃）",
+        "delulu fan（脑补型粉丝，指对偶像抱有幻想的粉）",
+        "a bit delulu（有点想太多，弱化版说法）",
+        "delulu land（妄想国，形容脱离现实的状态）"
+      ],
+      "misTranslated": "直译成「妄想症」「精神错乱」会把玩笑感彻底抹掉，变成医学诊断或人身攻击。它其实是 delusional 的卖萌缩写，重点在「脑补过头、自作多情」，不是病理意义。若在朋友自嘲或粉丝玩梗时译成「妄想症」，语气立刻从打趣变冒犯；反过来对真正有心理困扰的人用这个词，也会显得轻佻。约会软件上对方说「you're delulu」，直译成「你有妄想症」会直接吵起来，实际意思更接近「你想太多了吧」。"
+    },
+    {
+      "term": "cringe",
+      "slug": "cringe",
+      "isNew": false,
+      "tone": "贬义为主，但常带调侃和玩梗的松弛感。多数时候是认真的负面评价，指某人行为、穿搭、发言让人替 TA 尴尬；但在朋友之间、TikTok 评论区也常当玩笑用，比如自嘲「我发的这条太 cringe 了」。典型场景是网友对网友、朋友对朋友，语气轻蔑或起哄，很少用于正式职场沟通。对恋人、长辈或同事当面说 cringe 容易得罪人。正式场合基本不用，属于口语和社媒语域。",
+      "collocations": [
+        "cringe content（令人尴尬的内容）",
+        "cringe compilation（尴尬名场面合集）",
+        "so cringe（太尬了）",
+        "cringe at something（对某事感到尴尬）",
+        "cringe-worthy（尴尬到不忍直视的）",
+        "secondhand cringe（替别人尴尬的二手尴尬）"
+      ],
+      "misTranslated": "直译成「畏缩」「退缩」是最大陷阱，因为 cringe 的原义是身体缩起来躲，但网络用法核心是「替人尴尬到脚趾抠地」，跟害怕、退缩无关。另一个坑是译成「恶心」，那对应的是 gross 或 disgusting，语气和指向都不同。在 TikTok 评论区看到「this is so cringe」时若翻成「这太畏缩了」完全不通，应译成「这也太尬了」；而「cringe at」也不能直译成「对……畏缩」，要译成「看……看得尴尬」。"
+    },
+    {
+      "term": "ghosting",
+      "slug": "ghosting",
+      "isNew": false,
+      "tone": "整体偏贬义，带明显指责和受伤感，但在 TikTok、X 上常被拿来半调侃地自嘲或吐槽。认真程度看语境：朋友聊天、约会软件吐槽里多是认真抱怨，评论区玩梗时则偏调侃。典型是恋人、暧昧对象、约会软件匹配对象之间，也可能发生在网友、求职者与 HR、同事之间。正式场合基本不用，商务邮件或职场沟通里说某人 ghosted 会显得情绪化、不专业，更适合口语和社交媒体。",
+      "collocations": [
+        "ghost someone（突然对某人断联、玩消失）",
+        "get ghosted（被对方不告而别地断联）",
+        "ghosting someone after a date（约会后就玩消失）",
+        "serial ghoster（惯犯式玩消失的人）",
+        "ghosted by a recruiter（被招聘方已读不回、突然没下文）",
+        "soft ghosting（软消失：不彻底拉黑，但慢慢不回消息）"
+      ],
+      "misTranslated": "直译成「鬼魂化」「闹鬼」完全跑偏，会让人以为跟灵异、恐怖有关，丢掉「不告而别式断联」这个核心。也不能简单译成「拉黑」——ghosting 的关键是没解释、没告别，可能连拉黑都没有，只是已读不回、电话不接。在约会、交友、招聘场景里用「闹鬼」直译，会让人完全误解成超自然话题，不能用。"
+    },
+    {
+      "term": "no cap",
+      "slug": "no-cap",
+      "isNew": false,
+      "tone": "偏中性、强调真实性，认真多于调侃，但常带点“我跟你说实话”的亲密感。它本身不褒不贬，重点在“我没骗你”。主要用在朋友、同龄网友、TikTok/推特评论区，也常见于说唱歌词和约会软件聊天里，用来给对方吃颗定心丸。同事之间偶尔也能用，但更适合关系近的。正式场合、面试、商务邮件里基本不用，会显得太随意、太街头。",
+      "collocations": [
+        "no cap（不骗你，说真的）",
+        "straight no cap（直说吧，真没骗你）",
+        "no cap fr（真的，不骗你，fr=for real）",
+        "on god no cap（我对天发誓，没骗你）",
+        "cap（撒谎、吹牛）",
+        "that's cap（那是瞎扯）"
+      ],
+      "misTranslated": "直译成“没有帽子”完全跑偏，cap 在俚语里是“撒谎、吹牛”，no cap 是“没骗你、说真的”。机翻常把“no cap”译成“没有上限”或“无帽”，把“that's cap”译成“那是帽子”，语义全丢。在 TikTok 评论、说唱歌词、朋友聊天里看到它，别按字面理解；正式文件里若出现，多半也不是这个俚语义。"
+    },
+    {
+      "term": "slay",
+      "slug": "slay",
+      "isNew": false,
+      "tone": "褒义为主，语气热烈、带夸张的赞叹，认真夸人时用，不是阴阳怪气。通常是朋友、网友、粉丝对欣赏的人说，TikTok 评论区、X 转发、群聊里刷得最多，也常见于粉丝夸爱豆、闺蜜互夸，约会软件上偶尔用来撩人。正式场合基本不能用，工作邮件、学术写作、面试里出现会显得轻浮、不合时宜，同事之间私下聊天倒是可以。",
+      "collocations": [
+        "you slayed that（你那波太炸了）",
+        "slay the runway（在T台上杀疯了）",
+        "slay all day（一整天都在绝杀）",
+        "she slayed（她绝了）",
+        "slay queen（女王杀疯了，夸赞式称呼）",
+        "go off and slay（放开了炸场）"
+      ],
+      "misTranslated": "直译成「杀戮」「杀死」会完全跑偏，把夸赞变成暴力或威胁，语气全毁。它跟字面「杀」无关，是「表现炸裂、太绝了」的意思，所以「You slayed」不能译成「你杀了人」。在夸穿搭、舞台、发言时尤其容易误译，机器若按动词杀处理会闹笑话。注意它也不是「slay」在奇幻语境里的「斩杀怪物」，那才是字面义，别混用。"
+    },
+    {
+      "term": "mid",
+      "slug": "mid",
+      "isNew": false,
+      "tone": "贬义为主，但强度很轻，属于「不怎么样、就那样」的评价，不是骂人。绝大多数时候是随口调侃或轻蔑，不是认真开骂；朋友之间吐槽作品、网友在TikTok评论区点评音乐或电影时最常见，也常用于约会软件上评价对方长相或聊天水平。正式场合基本不能用，写邮件、做汇报时用mid会显得轻浮、不专业。",
+      "collocations": [
+        "mid at best（往好里说也就一般）",
+        "kinda mid（有点拉胯/一般般）",
+        "so mid（太一般了）",
+        "mid tier（中游水平、二流）",
+        "mid take（很平庸的观点）",
+        "call it mid（直接说它不行）"
+      ],
+      "misTranslated": "直译成「中间」「中等」会丢掉那股轻蔑和失望的语气——mid不是中性描述，而是「期待落空后的嫌弃」。机器常译成「中等水平」，听起来像客观评级，但原话往往是朋友间的一句吐槽。另外别把它和「middle」混用，说某首歌mid是贬，说它是middle of the playlist只是位置，场景完全不同。"
+    },
+    {
+      "term": "brain rot",
+      "slug": "brain-rot",
+      "isNew": false,
+      "tone": "brain rot 是贬义词，但日常使用中常带调侃、自嘲意味，语气轻松。朋友、网友之间互相开玩笑最常用，比如 TikTok 评论区有人发“看完这个视频我 brain rot 了”，或者朋友吐槽“你天天刷那些烂梗，brain rot 晚期”。在约会软件上也能见到，用来自嘲自己沉迷网络。正式场合基本不用，除非是媒体讨论网络文化现象，那时会带批判性。",
+      "collocations": [
+        "TikTok brain rot（刷 TikTok 刷到脑子坏掉）",
+        "brain rot content（低质、无脑的烂梗内容）",
+        "brain rot humor（烂梗式幽默）",
+        "get brain rot（变得脑子坏掉）",
+        "brain rot from scrolling（刷手机刷出脑腐）",
+        "terminal brain rot（晚期脑腐，夸张说法）"
+      ],
+      "misTranslated": "直译成“脑腐”或“大脑腐烂”会让人以为是医学病症，完全丢失网络调侃义。实际指因过度消费低质内容而思维退化，或指烂梗本身。在“I have brain rot from watching this”里，若译成“我脑子腐烂了”会吓到人，正确是“我看这个看到脑子坏掉了”。不能用于正式医疗语境。"
+    },
+    {
+      "term": "it's giving",
+      "slug": "its-giving",
+      "isNew": false,
+      "tone": "「it's giving」语气高度依赖语境，褒贬皆可：说「it's giving luxury」是夸，说「it's giving desperate」是损。它自带调侃、戏谑的基因，很少用于严肃陈述，但可以表达真心赞美（如「it's giving main character energy」）。主要用在朋友、网友、恋人之间的非正式对话，TikTok 评论区、X/Twitter、约会软件上极常见。正式场合（如工作邮件、学术写作）绝对不能用，会显得轻浮、不专业。",
+      "collocations": [
+        "it's giving main character energy（主角光环/气场）",
+        "it's giving [aesthetic] vibes（某种美学氛围，如 it's giving cottagecore vibes）",
+        "it's giving [emotion]（某种情绪，如 it's giving anxiety）",
+        "it's giving [celebrity/person]（像某个名人，如 it's giving Beyoncé）",
+        "it's giving [era]（某个时代风格，如 it's giving 2000s）",
+        "it's giving what it's supposed to give（该给的感觉都给了，表示满意）"
+      ],
+      "misTranslated": "直译成「它正在给予」完全丢失了俚语含义，听起来像动作描述而非评价。机器翻译常错译为「它给出了」或「它给的是」，但原意是「它散发出……的感觉/气质」，重点在主观感受而非实际给予。在评价穿搭、氛围、表情时，直译会让人摸不着头脑。例如「It's giving trash」直译「它正在给垃圾」毫无意义，实际是「这很垃圾/掉价」。切忌在正式翻译中使用直译。"
+    },
+    {
+      "term": "lowkey",
+      "slug": "lowkey",
+      "isNew": false,
+      "tone": "语气偏软、偏私密，褒贬看语境：说「lowkey 喜欢」多是半承认半害羞，说「lowkey 烦了」则是压着火的吐槽，不算强攻击。整体是调侃和认真之间——朋友间用来放软话、留台阶，恋人/暧昧对象用来试探心意，TikTok、X 评论区里网友也爱用它自嘲。正式场合基本不用，写邮件、开会、跟不熟的同事讲话都显得太随意，容易让人觉得你在装嫩或不够专业。",
+      "collocations": [
+        "lowkey obsessed（有点上头、偷偷迷上了）",
+        "lowkey wanna（有点想……）",
+        "lowkey kinda（多少有点）",
+        "lowkey the best（其实挺棒的）",
+        "keep it lowkey（保持低调、别声张）",
+        "lowkey mad（暗戳戳地不爽）"
+      ],
+      "misTranslated": "直译成「低键地」「低调地」会丢掉它最核心的「半遮半掩地承认」这层语气，比如 I lowkey like him 不是「我低调地喜欢他」，而是「我有点喜欢他，但不太想明说」。另一个坑是把它当纯副词修饰动作，像 lowkey the best 里它其实接近「其实、说实话」，直译成「低调地最好」完全不通。正式文书、商务邮件里千万别用直译版，会显得莫名其妙。"
+    },
+    {
+      "term": "highkey",
+      "slug": "highkey",
+      "isNew": false,
+      "tone": "highkey 是个程度副词，功能上跟 really、very 类似，但自带「我不装了，摊牌了」的劲儿。褒贬完全看语境：夸人时是真心实意地吹（highkey obsessed with this song），吐槽时是毫不掩饰地嫌弃。语气偏调侃、松弛，但表达的内容往往是认真的——它就是在说「这是我的真实想法，不藏着」。使用者以 Z 世代和年轻网友为主，TikTok 评论区、X 发帖、朋友私聊、约会软件自我介绍里到处都是。正式场合（论文、邮件、职场汇报）基本不用，会显得太随意。",
+      "collocations": [
+        "highkey obsessed（真的很上头/超迷）",
+        "highkey want to（真的很想）",
+        "highkey the best（明摆着是最好的）",
+        "highkey jealous（实打实地羡慕/酸了）",
+        "highkey need this（真的超需要这个）",
+        "highkey my favorite（妥妥是我的最爱）"
+      ],
+      "misTranslated": "直译成「高调地」是最大的坑。highkey 修饰的是说话人自己的态度强度，不是「做事张扬、引人注目」——「他高调地宣布」该用 publicly、loudly，不能用 highkey。另一个坑是把它当成 lowkey 的反义词来机械对译成「高调」，但实际语感更接近「不掩饰地说实话」，翻成「高调地喜欢这首歌」会很怪，自然说法是「真的超喜欢这首歌」。"
+    },
+    {
+      "term": "situationship",
+      "slug": "situationship",
+      "isNew": false,
+      "tone": "偏中性、看语境，多数时候带点自嘲或调侃，不是骂人词。认真讨论感情状态时也能用，但更多出现在朋友闲聊、TikTok 评论区、约会软件吐槽里，比如「we're not together, it's a situationship」。通常是当事人自述或朋友之间互相打趣，也可能被网友拿来点评别人的暧昧。正式场合（职场、书面报告）基本不用，会显得太随意。",
+      "collocations": [
+        "stuck in a situationship（困在一段暧昧关系里）",
+        "define the situationship（给这段暧昧关系定性）",
+        "a classic situationship（典型的暧昧关系）",
+        "end the situationship（结束这段暧昧）",
+        "situationship era（暧昧期/暧昧阶段）",
+        "caught in a situationship（陷在一段说不清的关系里）"
+      ],
+      "misTranslated": "直译成「情境关系」「情况关系」完全不通，中文读者根本 get 不到「比朋友多、比恋人少」这层意思。机器翻译常错译成「恋爱关系」或「处境」，把模糊性抹掉，反而误导。它不能用于正式恋爱或已婚关系，也不能当「异地恋」「网恋」用——那些是有明确承诺的，而 situationship 恰恰强调没名分、没承诺。"
+    },
+    {
+      "term": "ick",
+      "slug": "ick",
+      "isNew": true,
+      "meaning": "「ick」在约会/恋爱语境里，指对方某个瞬间的小动作、小习惯或一句话，让你毫无预兆地突然生理性反感、瞬间「下头」，之前的好感说没就没。它最早在 TikTok 和 X 上被女生们大量使用，比如「he gave me the ick」就是「他让我瞬间下头了」。中文用户理解成「突然被恶心到、好感清零」最贴切，重点不是对方真的做了什么大错事，而是那种说不清、甚至有点不讲理的瞬间反感。",
+      "hiddenMeaning": "说「ick」的人其实是在表达一种失控的、非理性的嫌弃：不是对方犯了错，而是「我就是突然受不了了」。它带着一点自嘲和理直气壮——承认这感觉没道理，但依然成立。潜台词常是「本来还挺喜欢，现在完了」，也可能是在姐妹群里吐槽、寻求认同，甚至把对方某个小细节当成分手的正当理由。",
+      "tone": "贬义，但偏轻松调侃，不是严肃指责。多数情况是女生对闺蜜、或在网上对陌生人说，用来吐槽约会对象；也有男生开始用。语气介于认真和玩笑之间——可以真下头，也可以是夸张玩梗。正式场合基本不能用，写进工作邮件或正式文章会显得很怪，属于纯口语、社交媒体语境。",
+      "collocations": [
+        "give someone the ick（让某人瞬间下头）",
+        "get the ick（突然下头）",
+        "the ick factor（下头感/倒胃口程度）",
+        "instant ick（瞬间下头）",
+        "that's such an ick（这也太下头了）",
+        "catch the ick（开始对某人下头）"
+      ],
+      "misTranslated": "直译成「恶心」或「疾病」是最大陷阱——「ick」本义确实指「恶心感」，但在约会语境里它不是骂对方脏或坏，而是那种没来由的瞬间反感，翻成「恶心」太重、太脏。也不能译成「讨厌」，因为它是突发的、点状的，不是长期厌恶。译成「下头」最准，但要注意它强调「瞬间」和「非理性」，不是理性判断后的失望。",
+      "examples": [
+        "He chewed with his mouth open and I instantly got the ick.（他张着嘴嚼东西，我瞬间就下头了。）",
+        "She said the way he ran gave her the ick and she couldn't unsee it.（她说他跑步的样子让她下头，而且再也无法直视了。）",
+        "I was into him until he called his mom 'mommy' — total ick.（我本来挺喜欢他，直到他管他妈叫「妈咪」——彻底下头。）"
+      ],
+      "tags": [
+        "恋爱",
+        "网络俚语",
+        "贬义"
+      ],
+      "popularity": 85
+    },
+    {
+      "term": "red flag",
+      "slug": "red-flag",
+      "isNew": true,
+      "meaning": "「red flag」在恋爱和人际语境里指一个让人警觉的信号——对方的某个行为、说法或习惯，暗示他/她可能有严重问题（控制欲、撒谎、情绪不稳定、不尊重人）。它不一定是已经发生的坏事，而是「苗头」。TikTok 和 X 上大量「🚩 red flags I ignored」类视频就是复盘自己当初该警惕的地方。中文用户理解成「危险信号」「雷点」「预警」最贴切，但注意它比「缺点」重得多，是「该考虑跑路」级别的信号。",
+      "hiddenMeaning": "说「that's a red flag」的人，往往不是在客观描述，而是在表达不安、失望甚至劝退。潜台词常是：「这事不对劲，你要小心」或「我早该看出来」。它自带一种事后清醒或旁观者清的姿态，有时也用来半开玩笑地给对方判死刑。",
+      "tone": "整体偏贬义，但看语境：认真讨论时是严肃警告，朋友间也常带调侃、夸张的娱乐色彩。多数是朋友对朋友说，或在网上对陌生人分享经验。正式场合（职场公文、学术）基本不用；职场里偶尔借用，但会显得口语化、带情绪。",
+      "collocations": [
+        "a huge red flag（超大的危险信号）",
+        "a major red flag（重大警示信号）",
+        "ignore the red flags（无视那些危险信号）",
+        "a walking red flag（浑身都是雷点的人）",
+        "spot the red flags（看出危险信号）",
+        "red flag behavior（危险信号式的行为）"
+      ],
+      "misTranslated": "直译成「红旗」是最大陷阱——中文「红旗」是正面、荣誉的象征，跟英文里「警告、危险」的意思正好相反，容易让中文读者完全误解。另一个坑是把它当成普通「缺点」或「红旗标志」，其实它强调「预示未来有麻烦的警示」，语气比「缺点」重得多。",
+      "examples": [
+        "He still texts his ex every day — that's a huge red flag.（他每天还跟前任发消息——这可是个大大的危险信号。）",
+        "She said he was a walking red flag, but she dated him anyway.（她说他浑身都是雷点，但还是跟他在一起了。）",
+        "If someone love-bombs you in the first week, consider it a red flag.（如果有人第一周就疯狂示爱轰炸你，把它当成一个警示信号。）"
+      ],
+      "tags": [
+        "恋爱",
+        "网络俚语",
+        "贬义"
+      ],
+      "popularity": 88
+    },
+    {
+      "term": "green flag",
+      "slug": "green-flag",
+      "isNew": true,
+      "meaning": "「green flag」是 red flag（危险信号）的反义词，指在恋爱或人际交往中出现的积极信号，说明对方靠谱、三观正、关系健康。它大量出现在 TikTok、X 和 Reddit 的情感讨论区，常见于「green flags in a relationship」「he's such a green flag」这类说法。中文用户理解时，可以把它当成「加分项」「靠谱的表现」——不是夸对方完美，而是说某个具体行为让人安心，比如尊重边界、情绪稳定、主动沟通。",
+      "hiddenMeaning": "说某人或某行为是 green flag，潜台词往往是「这个点让我放心了」或「跟那些 red flag 一比，这个太加分」。它带着一种筛选和比较的意味——说话人通常已经在用恋爱市场的眼光评估对方，语气是认可、欣赏，偶尔也带点炫耀「我遇到对的人了」的甜味。",
+      "tone": "褒义为主，偶尔可带调侃。多数时候是认真的，尤其在情感建议类内容里；但朋友间也会半开玩笑地说「会主动洗碗，green flag」。通常谁对谁说都行：女生评价男友、网友给陌生人分析聊天记录、博主总结恋爱经验。正式场合基本不用，属于口语和社交媒体语域，写进商务邮件或学术论文会显得很跳。",
+      "collocations": [
+        "a green flag in a relationship（恋爱中的积极信号）",
+        "such a green flag（太靠谱了/太加分了）",
+        "green flag behavior（加分的行为）",
+        "green flags to look for（值得留意的积极信号）",
+        "walking green flag（行走的加分项，形容人）",
+        "green flag energy（让人安心的气场）"
+      ],
+      "misTranslated": "直译成「绿旗」是最大陷阱，中文读者会一头雾水，甚至联想到交通或环保。它跟「绿灯」（放行）也不是一回事，不能互换。另外别把它理解成「绿色=安全」的通用符号——在恋爱语境里它专指对伴侣或潜在对象的正面评价，脱离语境单说 green flag 容易被误当成某种旗帜或标识。",
+      "examples": [
+        "He remembered my coffee order and asked about my day—total green flag.（他记得我点的咖啡，还问我今天过得怎样——太加分了。）",
+        "Someone who communicates instead of ghosting? That's a walking green flag.（会好好沟通而不是玩消失的人？那简直是行走的加分项。）",
+        "We made a list of green flags we want in a partner, and honesty was number one.（我们列了想要伴侣具备的加分项，诚实排第一。）"
+      ],
+      "tags": [
+        "恋爱",
+        "网络俚语",
+        "褒义"
+      ],
+      "popularity": 80
+    },
+    {
+      "term": "gaslighting",
+      "slug": "gaslighting",
+      "isNew": false,
+      "tone": "贬义为主，偶尔被调侃式反用。认真程度看语境：在亲密关系、职场PUA、饭圈控评里是严肃指控，在TikTok评论区也常被玩成梗（“你这是在gaslight我”配夸张表情）。典型是受害者对施害者说，或朋友替被操纵的人出头；网友互撕时也互相甩这个词。正式场合（心理科普、法律、HR培训）可以用，但日常口语里滥用严重，谁都可以拿来当“你让我怀疑自己”的万能挡箭牌。",
+      "collocations": [
+        "gaslight someone into believing（把某人操纵到相信某事）",
+        "emotional gaslighting（情感煤气灯操纵）",
+        "stop gaslighting me（别PUA我了/别让我怀疑自己）",
+        "gaslighting tactics（煤气灯式话术/操纵手段）",
+        "accused of gaslighting（被指煤气灯操纵）",
+        "classic gaslighting（典型的煤气灯操作）"
+      ],
+      "misTranslated": "直译成“煤气灯”会让人一头雾水，中文读者会以为是照明或能源话题。它来自1944年电影《煤气灯下》，指系统性让受害者怀疑自己的记忆与理智，不是“点灯”也不是“照亮”。机器翻译常错成“煤气照明”“点煤气灯”，在情感操控、职场PUA、心理虐待语境里完全不能用直译，必须译成“煤气灯式操纵”或意译“PUA/精神操控”。"
+    },
+    {
+      "term": "NPC",
+      "slug": "npc",
+      "isNew": false,
+      "tone": "贬义为主，但常带调侃、玩梗的松弛感，不是那种咬牙切齿的骂。多数时候是半开玩笑地挤兑，认真起来也能很扎心。常见于网友之间互相阴阳、TikTok 评论区刷屏、朋友聊天互损；约会软件上偶尔用来吐槽对方没主见、只会附和。正式场合基本别用，写论文、工作邮件、跟长辈说话都不合适，容易显得刻薄又中二。",
+      "collocations": [
+        "NPC behavior（像NPC一样随大流的行为）",
+        "act like an NPC（表现得像个NPC，没主见）",
+        "NPC dialogue（NPC式台词，指复读、套话）",
+        "total NPC（纯纯一个NPC，形容人毫无独立思考）",
+        "NPC energy（NPC气质，形容随波逐流的气场）",
+        "stop being an NPC（别当NPC了，劝人有点主见）"
+      ],
+      "misTranslated": "直译成「非玩家角色」会完全丢掉网络语境里的贬义和玩梗味——它骂的是人像游戏里被设定好的路人，只会复读、没主见。机器翻译常把它当成纯游戏术语，结果在吐槽别人随大流时译出来毫无攻击性和调侃感。反过来，在真正聊游戏、讲开发时，也别硬套「随大流」这层意思，否则就跑偏了。"
+    },
+    {
+      "term": "aura",
+      "slug": "aura",
+      "isNew": true,
+      "meaning": "这是 Gen-Z 在 TikTok、X 和群聊里玩出来的一套「魅力计分」梗：把一个人的气场、风度、临场表现当成一个可以随时加减的数字，比如「+100 aura」表示这波操作帅到加分，「-1000 aura」表示社死到分数清零。它不指真实的「气场」本身，而是把气场游戏化、量化，用来给别人的行为打分或自嘲。中文用户理解成「魅力值/逼格分」最贴近，重点在那个数字，而不是 aura 的传统含义。",
+      "hiddenMeaning": "说这话的人其实是在做社交评判：要么夸你刚才那一下太帅、太有排面，要么笑你丢人丢到分数暴跌。核心情绪是围观式的起哄和玩梗，带点戏谑的裁判口吻，认真程度介于真夸和纯搞笑之间，多数时候是图一乐。",
+      "tone": "①看语境，可褒可贬，加分是夸、减分是嘲；②以调侃为主，很少一本正经；③通常是同龄网友、朋友之间互评，或博主对视频里的人和事打分；④正式场合基本不能用，写进论文或商务邮件会显得莫名其妙。",
+      "collocations": [
+        "-1000 aura（魅力值暴跌一千，社死级操作）",
+        "+100 aura（加一百魅力值，帅气加分）",
+        "aura points（魅力分，这套玩法的核心单位）",
+        "lose aura（掉魅力值，做丢脸的事）",
+        "gain aura（涨魅力值，做了很帅的事）",
+        "aura farming（刻意刷魅力值，为加分而装帅）"
+      ],
+      "misTranslated": "机器翻译常把它直译成「光环」「气场」或「灵气」，完全丢掉「可加减的分数」这层玩法，导致「-1000 aura」被译成「负一千光环」这种没人看得懂的话。还有译成「氛围」的，更是跑偏——这里的重点不是氛围，而是给个人魅力打分的网络梗。",
+      "examples": [
+        "Bro really fell in front of the whole class, that's -1000 aura.（哥们儿在全班面前摔了一跤，魅力值直接暴跌一千。）",
+        "He gave up his seat to an old lady on the bus, easy +100 aura.（他在公交上给老太太让座，轻松加一百魅力值。）",
+        "Posting this just to farm aura, and honestly it's working.（发这条纯粹是为了刷魅力值，说实话还真刷到了。）"
+      ],
+      "tags": [
+        "网络俚语",
+        "Gen-Z",
+        "调侃"
+      ],
+      "popularity": 86
+    },
+    {
+      "term": "based",
+      "slug": "based",
+      "isNew": false,
+      "tone": "褒义为主，偶尔带点调侃，但基本是认真夸人。最早从 4chan 政治板块和 rapper Lil B 的 \"based\" 梗流出，后来被 TikTok、X 上的年轻网友（尤其 Z 世代）用来夸别人「敢说真话、不随大流」。朋友之间、网友评论区、Reddit 跟帖里最常见，比如「based take」「you're so based」。约会软件里也偶尔用来形容对方三观正、不装。正式场合基本不能用，写论文、发工作邮件、跟老板汇报时用会显得很网感、不严肃。",
+      "collocations": [
+        "based take（说得好、有见地的观点）",
+        "so based（太有主见了、太敢说了）",
+        "based and redpilled（敢说真话且看透真相，偏右翼网络梗）",
+        "based opinion（不迎合主流、有骨气的看法）",
+        "you're based（你真敢说、真不装）",
+        "based comment（评论区里一针见血、不跟风的留言）"
+      ],
+      "misTranslated": "直译成「基于的」「基础的」完全错位——based 在网络语境里跟 base（基础）已经脱钩，指的是「不迎合、有主见」。机器翻译常把它译成「有根据的」，结果把「敢说真话」的褒义夸赞变成干巴巴的「有依据」，语气全丢。更糟的是在政治帖里直译成「基础派」，让人误以为是某个政治派别。评论区夸人时千万别用直译，否则对方会一脸问号。"
+    },
+    {
+      "term": "cooked",
+      "slug": "cooked",
+      "isNew": true,
+      "meaning": "「cooked」在 TikTok、X 和游戏语音里几乎成了「完蛋」的万能词，但它比中文的「完了」更带一种「已经来不及了」的宿命感。它形容人或局面已经进入无法挽回的状态：考试考砸、账号被封、被老板抓到摸鱼、恋爱彻底没戏，都可以说 I'm cooked。中文用户理解时，最好把它想成「凉了、寄了、没救了」，重点不是正在失败，而是败局已定、只能等结果。",
+      "hiddenMeaning": "说 cooked 的人往往是在自嘲或半开玩笑地认输，潜台词是「我知道我完蛋了，但我不想正经哭诉，所以用个梗」。它带着一种躺平式的幽默：不求助、不辩解，只是宣告结局。有时也用来幸灾乐祸地评价别人，比如 he's cooked，意思是对方已经没戏了，语气偏看戏。",
+      "tone": "贬义为主，但常被当成玩笑用，所以语气看语境：自嘲时是轻松、摆烂的调侃；说别人时可能带嘲讽或同情。通常同龄人、网友、游戏队友之间互说，很少对长辈或上级说。正式场合基本不能用，写邮件、做汇报时说 I'm cooked 会显得不专业，除非你想刻意玩梗。",
+      "collocations": [
+        "I'm cooked（我完蛋了）",
+        "we're cooked（我们没救了）",
+        "he's/she's cooked（他/她凉了）",
+        "completely cooked（彻底完蛋）",
+        "cooked for good（永远没救了）",
+        "get cooked（被干掉/被打爆）"
+      ],
+      "misTranslated": "机器翻译最容易把 you're cooked 直译成「你被煮了」或「你熟了」，完全丢掉「完蛋」的意思。另一个陷阱是把 cooked 当形容词译成「煮熟的」，比如把 this exam cooked me 翻成「这场考试把我煮了」。正确理解要结合主语：说人 cooked 是「没救了」，说 get cooked 在游戏里常是「被打爆」。",
+      "examples": [
+        "I didn't study at all and the final is tomorrow. I'm cooked.（我一点没复习，明天就期末考。我完蛋了。）",
+        "He posted that at 3 a.m. and his boss liked it. He's cooked.（他凌晨三点发的，老板还点赞了。他凉了。）",
+        "We're down 20 points with two minutes left. We're cooked.（还剩两分钟落后二十分。我们没救了。）"
+      ],
+      "tags": [
+        "网络俚语",
+        "游戏用语",
+        "贬义"
+      ],
+      "popularity": 84
+    }
+  ]
+}
