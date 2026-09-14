@@ -1,0 +1,89 @@
+{
+ "generatedAt": "2026-09-14T06:10:33.614Z",
+ "model": "deepseek-chat",
+ "entries": [
+  {
+   "meaning": "「I need you」字面是“我需要你”，但在真实语境里远不止表达需求。它常出现在感情濒临破裂、一方崩溃或极度脆弱的时刻，带着挽留、示弱、依赖甚至恳求的分量。说出这句话的人往往已经放下骄傲，把对方视为精神支柱。听到它，你要意识到对方可能正处于情绪低谷，在索要陪伴而非单纯陈述事实。它可以是深情的告白，也可以是绝望的呼救，全看场景和语气。",
+   "hiddenMeaning": "潜台词常是：“我撑不住了，别离开我”或“你对我很重要，请别丢下我”。有时是挽留，有时是情感绑架，有时只是当下情绪上头。它未必代表长久依赖，可能只是一刻的软弱，但确实暴露了对方此刻的孤独与需要。",
+   "translation": "我需要你。",
+   "tone": "语气强烈、私人，带依赖与脆弱感，常用于亲密关系或情绪崩溃时刻。对恋人、家人、挚友说都常见，但若对普通朋友或同事说，会显得越界或尴尬。正式场合别用，它自带情感重量，随意说出口容易让人误会或压力山大。",
+   "collocations": [
+    "I need you right now（我现在就需要你，强调此刻的迫切）",
+    "I need you in my life（我生命里不能没有你，更长期深情）",
+    "I need some space（我需要一点空间，和I need you相反的疏离表达）",
+    "Do you really need me?（你真的需要我吗？回应时的反问）",
+    "You don't need me（你并不需要我，婉拒或自贬式回应）",
+    "你别太自恋：Don't flatter yourself / Get over yourself / You wish（别自作多情）"
+   ],
+   "misTranslated": "直译成“我需要你”虽不算错，但容易误解为日常事务性需求，比如“我需要你帮我搬东西”，从而丢失情感分量。翻成「我离不开你」或「我需要你陪着我」最准，前者强调依赖，后者点明渴求陪伴。单独一句时，最好结合上下文判断是挽留还是告白。",
+   "examples": [
+    "I need you here with me tonight.（今晚我需要你陪在我身边。）",
+    "When she said 'I need you,' he realized she was begging him not to leave.（当她说“我需要你”时，他意识到她是在求他别走。）",
+    "I need you, but I also need to learn to stand on my own.（我需要你，但我也得学会自己站稳。）"
+   ],
+   "tags": [
+    "情感表达",
+    "亲密关系",
+    "挽留"
+   ],
+   "popularity": 88,
+   "term": "i need you",
+   "slug": "i-need-you"
+  },
+  {
+   "meaning": "「i need some space」直译为「我需要一些空间」，但在恋爱或亲密关系中，它通常不是指物理距离，而是宣告情感上的撤退：需要独处、冷静，暂时减少联系与亲密互动。这句话分量很重，常被视作关系降温甚至委婉分手的信号。听到时不应死缠烂打，而应尊重对方需求，同时明确边界与期限，避免自己陷入无期限的等待。",
+   "hiddenMeaning": "潜台词往往是：「我对这段关系感到压力或厌倦，想拉开距离重新考虑，甚至为分手做铺垫。」它可能是委婉退出的前奏，而非单纯想要个人时间。",
+   "translation": "我需要一些空间。",
+   "tone": "语气偏严肃、克制，带有拒绝与疏离感，贬义色彩明显，多用于恋人、伴侣之间。在普通朋友或同事间说则较中性，仅表示需要独处。正式场合别用，否则容易引起误会。",
+   "collocations": [
+    "I need some space.（我需要一些空间。）",
+    "I need a break.（我需要冷静一下/暂时分开。）",
+    "I need time to myself.（我需要独处的时间。）",
+    "Can we slow down?（我们能慢一点吗？）",
+    "Don't be so full of yourself.（你别太自恋。）",
+    "Get over yourself.（别太自以为是。）"
+   ],
+   "misTranslated": "直译成「我需要一些空间」容易让人以为只是要物理距离，比如想单独待一会儿，从而低估了它在恋爱语境中的杀伤力。翻成「我需要一些空间（想冷静/保持距离）」最准，应补出情感疏远的弦外之音。",
+   "examples": [
+    "He said he needed some space, so I stopped texting him every day.（他说需要一些空间，所以我不再每天给他发消息。）",
+    "I need some space to figure out what I really want.（我需要一些空间来想清楚自己到底想要什么。）",
+    "When she asked for space, I respected it but also set a limit.（当她要求空间时，我尊重了，但也设了期限。）"
+   ],
+   "tags": [
+    "恋爱",
+    "潜台词",
+    "关系"
+   ],
+   "popularity": 85,
+   "term": "i need some space",
+   "slug": "i-need-some-space"
+  },
+  {
+   "meaning": "「你别太自恋」是一句中文口语里常用的半开玩笑、半怼人的提醒，意思是让对方别把自己看得太重、别以为别人都围着TA转。语境分量中等偏轻：在朋友、熟人之间可以直接说，带调侃或轻微嘲讽；如果语气放冷、加重，则接近警告对方「收敛点」。正式场合或对上级、长辈说会显得冒犯，因此要避免。它针对的是自我评价过高、过度解读别人好感的行为。",
+   "hiddenMeaning": "潜台词往往是：你并没有你想的那么有魅力，别把别人的礼貌或客套当成喜欢；同时提醒对方停止继续自我吹嘘或自作多情。有时说这句话的人其实在表达厌烦，或想划清界限。",
+   "translation": "Don't flatter yourself.",
+   "tone": "整体偏贬义、带调侃或讽刺，但攻击性可强可弱。对熟人、朋友说，多半是玩笑式拆台；对半熟的人或情场对象说，则可能真心怼人、让对方下头。正式场合、职场对上级、对长辈千万别用。英文里 Don't flatter yourself 偏冷讽，You're so full of yourself 更直接嫌对方自大，get over yourself 则更重、更冲。",
+   "collocations": [
+    "Don't flatter yourself（别往自己脸上贴金；最贴近的英文说法）",
+    "You're so full of yourself（你也太自恋了吧；直接怼人）",
+    "Get over yourself（别太把自己当回事；语气更重）",
+    "Don't kid yourself（别自欺欺人了；否定对方判断）",
+    "You wish!（你想得美；回应自作多情时的轻蔑说法）"
+   ],
+   "misTranslated": "直译成 Don't be too narcissistic 不算地道：narcissistic 偏心理学、书面，日常口语很少拿来怼人。也别翻成 Don't love yourself too much，那会变成劝人别自爱，意思跑偏。翻成「Don't flatter yourself」最准，想更冲可用 You're so full of yourself 或 Get over yourself。",
+   "examples": [
+    "Don't flatter yourself—I wasn't even looking at you.（你别太自恋了，我根本没在看你。）",
+    "You're so full of yourself. Not everyone is into you.（你也太自恋了，不是每个人都喜欢你。）",
+    "Get over yourself. She was just being polite.（别太把自己当回事，她只是客气一下。）"
+   ],
+   "tags": [
+    "口语",
+    "怼人",
+    "情感"
+   ],
+   "popularity": 86,
+   "term": "你别太自恋",
+   "slug": "ni-bie-tai-zi-lian"
+  }
+ ]
+}
