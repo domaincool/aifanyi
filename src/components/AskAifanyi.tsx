@@ -10,7 +10,7 @@
  * V1 从首页 hero 进入；L3 AI 分类在 Week 4 接入（本组件的 action 结构已预留）
  */
 import { useState } from 'react';
-import { sendContentEvent, getContentSessionId } from '@/lib/metrics/client';
+import { sendContentEvent, sendIntentEvent, getContentSessionId } from '@/lib/metrics/client';
 
 type Intent = 'translate' | 'meaning' | 'speak' | 'hidden_meaning';
 
@@ -55,6 +55,16 @@ export default function AskAifanyi() {
     try {
       // __p0fix-kpi__ contentId 必须有界：只记 intent|via，避免用户原文写入 ContentMetrics 主键污染聚合
       sendContentEvent('tool_click', 'ask_query', intent + '|' + via);
+    } catch {}
+    // __p0ask-intent__ V1.1 P1-1 收尾：Ask 提交即落 LanguageIntent（query/intent/confidence；
+    // contentMatch 留空 → 服务端默认 none；L2 快答页命中词条时会再落 exact + contentId=slug 的一条）
+    try {
+      sendIntentEvent({
+        query,
+        intent,
+        confidence: via === 'l1' ? 0.9 : 0.6,
+        sessionKey: getContentSessionId(),
+      });
     } catch {}
     try { sendContentEvent('tool_click', 'ask_aifanyi', via === 'l3' ? intent + '_ai' : intent); } catch {}
     if (intent === 'hidden_meaning') {
