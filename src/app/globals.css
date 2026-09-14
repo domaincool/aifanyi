@@ -752,6 +752,41 @@ button.primary:disabled { opacity: 0.5; cursor: wait; }
 .entry-card { transition: transform .15s, box-shadow .15s, border-color .15s; }
 .entry-card:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,.2); border-color: rgba(59,130,246,.4); }
 
+
+/* ═══════ 通用按钮与 CTA 容器（a.btn 此前无样式，深色主题下渲染为默认蓝链接）═══════ */
+.btn {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 10px;
+  font-size: 14.5px;
+  font-weight: 600;
+  text-decoration: none;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  cursor: pointer;
+  transition: background .15s, border-color .15s, transform .1s, filter .15s;
+}
+.btn:hover { border-color: var(--muted); }
+.btn:active { transform: scale(.98); }
+a.btn,
+a.btn.primary,
+a.primary,
+button.primary,
+.btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+a.btn:hover,
+a.btn.primary:hover,
+a.primary:hover,
+.btn.primary:hover { filter: brightness(1.1); border-color: var(--accent); }
+.cta-box {
+  text-align: center;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 22px 20px;
+}
+.cta-box p { color: var(--muted); margin: 0 0 14px; }
+
 /* 主按钮统一 hover 态 */
 .primary { transition: background .15s, transform .1s; }
 .primary:hover { filter: brightness(1.1); }
