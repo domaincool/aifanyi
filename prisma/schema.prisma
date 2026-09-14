@@ -140,6 +140,30 @@ model MemeEntry {
 }
 
 // ═══════════════════ 文本翻译任务 ═══════════════════
+// ═══════════ 语言对页（阶段 2：/understand/say）═══════════
+// 高频词 × 语言对：每词条生成 zh-en「X 用英语怎么说」+ en-zh「X 中文什么意思」两页
+// 与 MemeEntry 分表：「怎么说」与「什么意思」query 语义不同，快答命中与 sitemap 分流互不干扰
+model PhraseEntry {
+  id               String   @id @default(cuid())
+  term             String   // 词条原文（zh 词或 en 词）
+  pair             String   // 语言方向：zh-en | en-zh
+  slug             String   @unique // 全局唯一（含 -lp 避让后缀）
+  lang             String   // 词条语言：zh | en
+  translation      String   // 核心译文（含多场景分流时用 / 分隔）
+  shortAnswer      String   // 快答（40-100 字；多义词人工 Exceptions）
+  definition       String?  // 详解
+  examples         Json     // [{en, zh}] 双语例句 ≥1
+  tags             String[] // 分类标签（内链交叉用）
+  register         String?  // 语域：formal | informal（v2 俚语类）
+  searchIntentType String   // how_to_say | meaning
+  status           String   @default("published")
+  popularity       Int      @default(0)
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  @@index([pair, status])
+  @@index([status, popularity])
+}
 model TranslationJob {
   id                 String   @id @default(cuid())
   sourceHash         String

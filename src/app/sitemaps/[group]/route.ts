@@ -41,6 +41,12 @@ export async function GET(_req: Request, { params }: { params: Promise<{ group: 
       entries.push({ loc: `${SITE_URL}${prefix}${m.slug}`, lastmod: m.updatedAt });
     }
 
+    // 语言对页（阶段 2：/understand/say）
+    const phrases = await prisma.phraseEntry.findMany({ where: { status: 'published' }, select: { slug: true, pair: true, updatedAt: true } });
+    for (const ph of phrases) {
+      entries.push({ loc: `${SITE_URL}/understand/say/${ph.pair}/${ph.slug}`, lastmod: ph.updatedAt });
+    }
+
     const exprs = await prisma.expressionEntry.findMany({ where: { status: 'published', type: { not: 'slang' } }, select: { slug: true, type: true, updatedAt: true } });
     for (const e of exprs) {
       const prefix = e.type === 'idiom' ? '/idioms' : '/untranslatable';
