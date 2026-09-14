@@ -6,6 +6,7 @@
   --muted: #9aa3c7;
   --accent: #2563eb;
   --accent2: #22d3a4;
+  --link: #6ea8ff;
   --header-bg: rgba(13, 17, 30, .82);
   --card-hover: rgba(0,0,0,.2);
   --input-bg: #0c0f1d;
@@ -22,6 +23,7 @@
   --muted: #64748b;
   --accent: #2563eb;
   --accent2: #0d9488;
+  --link: #1d4ed8;
   --header-bg: rgba(255,255,255,.85);
   --card-hover: rgba(15,23,42,.08);
   --input-bg: #ffffff;
@@ -167,13 +169,13 @@ button.primary:disabled { opacity: 0.5; cursor: wait; }
 .chip-cnt { opacity: .7; font-size: 11px; }
 
 .pagination { display: flex; justify-content: center; align-items: center; gap: 16px; margin: 28px 0; }
-.page-btn { color: var(--accent); text-decoration: none; font-size: 14px; }
+.page-btn { color: var(--link, var(--accent)); text-decoration: none; font-size: 14px; }
 .page-btn:hover { color: var(--accent2); }
 .page-info { color: var(--muted); font-size: 13px; }
 
 .empty-state { text-align: center; padding: 48px 0; color: var(--muted); }
 .empty-state .empty-sub { font-size: 13px; margin-top: 8px; }
-.empty-state a { color: var(--accent); }
+.empty-state a { color: var(--link, var(--accent)); }
 .swap-btn { cursor: pointer; font-size: 16px; padding: 8px 12px; line-height: 1; }
 .swap-btn:hover { border-color: var(--accent2); color: var(--accent2); }
 
@@ -437,7 +439,7 @@ button.primary:disabled { opacity: 0.5; cursor: wait; }
 .login-btn { padding: 10px 0; background: var(--accent); color: #fff; border: none; border-radius: 8px; font-size: 15px; cursor: pointer; font-weight: 600; }
 .login-btn:disabled { opacity: .6; cursor: not-allowed; }
 .login-code-sent { font-size: 13px; color: var(--muted); }
-.login-link-btn { background: none; border: none; color: var(--accent); cursor: pointer; font-size: 13px; padding: 0; text-align: left; }
+.login-link-btn { background: none; border: none; color: var(--link, var(--accent)); cursor: pointer; font-size: 13px; padding: 0; text-align: left; }
 .login-error { color: var(--danger); font-size: 13px; margin: 0; }
 .login-footer-text { font-size: 12px; color: var(--muted); margin: 16px 0 0; text-align: center; }
 
@@ -448,7 +450,7 @@ button.primary:disabled { opacity: 0.5; cursor: wait; }
 .btn-google-sm, .btn-email-sm { padding: 8px 16px; border-radius: 8px; cursor: pointer; font-size: 13px; border: 1px solid var(--border); background: var(--input-bg); color: var(--text); }
 .btn-google-sm:hover, .btn-email-sm:hover { background: var(--card-hover); }
 .guest-prompt-muted { font-size: 12px; color: var(--muted); }
-.link-btn { background: none; border: none; color: var(--accent); cursor: pointer; font-size: inherit; padding: 0; }
+.link-btn { background: none; border: none; color: var(--link, var(--accent)); cursor: pointer; font-size: inherit; padding: 0; }
 
 /* Account Page */
 .account-page { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
