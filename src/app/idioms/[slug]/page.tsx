@@ -182,7 +182,7 @@ export default async function IdiomPage({ params }: { params: Promise<{ slug: st
       )}
 
       <div className="cta-box" style={{ marginTop: 24 }}>
-        <p>还有一句想翻？试试把这句成语翻成别的语言，或直接使用 AI 翻译工作台。</p>
+        <p>不确定这句成语在对话里怎么用才地道？问问 AIFANYI。</p>
         <a href={`/?q=${encodeURIComponent(e.term)}#translator`} className="btn primary">把「{e.term}」放入翻译器，看三模型译法 →</a>
       </div>
     </>

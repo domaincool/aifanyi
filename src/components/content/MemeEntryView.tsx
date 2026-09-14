@@ -281,7 +281,7 @@ export default async function MemeEntryView({ slug, isMeaningRoute = false }: { 
         不确定「{m.term}」能不能用在正式场合、有没有别的说法？直接问 AI。
       </p>
       <p style={{ marginTop: 8 }}>
-        <a className="btn" href={'/understand/meaning?q=' + encodeURIComponent(m.term)}>问 AIFANYI：{m.term} 怎么用？ →</a>
+        <a className="btn" href={'/understand/meaning?q=' + encodeURIComponent(m.term)}>不确定 {m.term} 怎么用？问问 AIFANYI →</a>
       </p>
 
       <div style={{ marginTop: 24, display: 'flex', gap: 12, flexWrap: 'wrap', alignItems: 'center' }}>

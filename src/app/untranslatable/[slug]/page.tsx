@@ -168,7 +168,7 @@ export default async function UntranslatableEntryPage({ params }: { params: Prom
 
       <div className="cta-box" style={{ marginTop: 24 }}>
         <p>这个词用法不确定？直接把它放进 AI 翻译工作台，看三种模型怎么翻。</p>
-        <a href={`/?q=${encodeURIComponent(e.term)}#translator`} className="btn primary tool-cta">这句话用「{e.term}」怎么说？翻译器见 →</a>
+        <a href={`/?q=${encodeURIComponent(e.term)}#translator`} className="btn primary tool-cta">想把「{e.term}」自然地说出口？试试怎么说 →</a>
       </div>
     </>
   );
