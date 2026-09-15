@@ -1,0 +1,184 @@
+{
+  "meta": {
+    "version": "en-zh-fixes-r1",
+    "date": "2026-09-15",
+    "purpose": "en-zh 反向页多义词修正清单 + check-in 缺口补词条",
+    "note": "13 条 update（slug 与现有 en-zh 页一致，精准替换 shortAnswer/definition，examples/tags 保留）+ 1 条新增（check-in，slug=check-in-meaning 避开值机正向页）。全部按 PhraseEntry 字段格式，pair=en-zh。",
+    "counts": {
+      "update": 13,
+      "create": 1,
+      "total": 14
+    }
+  },
+  "entries": [
+    {
+      "pair": "en-zh",
+      "term": "excuse me",
+      "slug": "excuse-me",
+      "translation": "不好意思",
+      "shortAnswer": "excuse me 有两个常用义：① 引起注意或请人让路（相当于「不好意思，借过一下」）；② 轻微致歉（不如 I'm sorry 正式）。中文的「不好意思」两义兼可，英文按场景选词。",
+      "definition": "excuse me 用于开始说话、借过、打断对话；轻微道歉也可用，但真诚道歉要用 I'm sorry。中文「不好意思」一词两用的典型差异点。",
+      "tags": [
+        "日常问候"
+      ],
+      "searchIntentType": "meaning"
+    },
+    {
+      "pair": "en-zh",
+      "term": "proud",
+      "slug": "proud",
+      "translation": "骄傲",
+      "shortAnswer": "proud 表示「自豪的」（褒义，be proud of someone）。贬义的「骄傲自大」要用 arrogant / cocky——中文「骄傲」一词两义，英文必须分词。",
+      "definition": "proud 是自豪（为成就/他人感到骄傲），贬义的骄傲自大用 arrogant / cocky / conceited。中文「骄傲」的褒贬两义在英文里是两个不同的词。",
+      "tags": [
+        "情绪"
+      ],
+      "searchIntentType": "meaning"
+    },
+    {
+      "pair": "en-zh",
+      "term": "bored",
+      "slug": "bored",
+      "translation": "无聊",
+      "shortAnswer": "bored 表示「感到无聊的」（人的感受）；形容事物无聊要用 boring。I'm bored（我好无聊）≠ This is boring（这很无聊），主语是人用 -ed、是事用 -ing。",
+      "definition": "bored 描述人的无聊感受，boring 描述事物令人无聊。-ed/-ing 分词形容词的典型区分对，同类还有 interested/interesting、excited/exciting。",
+      "tags": [
+        "情绪"
+      ],
+      "searchIntentType": "meaning"
+    },
+    {
+      "pair": "en-zh",
+      "term": "embarrassed",
+      "slug": "embarrassed",
+      "translation": "尴尬",
+      "shortAnswer": "embarrassed 表示「感到尴尬的」（人的感受）；事情令人尴尬用 embarrassing。口语里 awkward 也形容尴尬（偏气氛别扭）。",
+      "definition": "embarrassed 描述人的尴尬感受，embarrassing 描述事物令人尴尬。口语里 awkward 也形容尴尬（偏气氛别扭），cringe 是网络吐槽版。",
+      "tags": [
+        "情绪"
+      ],
+      "searchIntentType": "meaning"
+    },
+    {
+      "pair": "en-zh",
+      "term": "worried",
+      "slug": "worried",
+      "translation": "着急",
+      "shortAnswer": "worried 表示「担心的、发愁的」（be worried about）。中文「着急」的另一义「赶时间」要用 in a hurry，不能用 worried。",
+      "definition": "worried 表达担忧（为某人某事发愁）；「着急赶时间」的着急对应 in a hurry / rushed。中文「着急」一词两义，英文分属两个词。",
+      "tags": [
+        "情绪"
+      ],
+      "searchIntentType": "meaning"
+    },
+    {
+      "pair": "en-zh",
+      "term": "breakdown",
+      "slug": "breakdown",
+      "translation": "崩溃",
+      "shortAnswer": "breakdown 常见三义：① 精神崩溃（nervous breakdown）；② 机械故障（car breakdown）；③ 分类明细（a cost breakdown）。按语境判断。",
+      "definition": "break down 动词短语的名词化。三义：精神/情绪崩溃、机械故障（车/设备抛锚）、数据的分类明细。商务邮件里的 breakdown 多指明细表。",
+      "tags": [
+        "情绪"
+      ],
+      "searchIntentType": "meaning"
+    },
+    {
+      "pair": "en-zh",
+      "term": "check in",
+      "slug": "check-in-meaning",
+      "translation": "入住 / 值机 / 报到",
+      "shortAnswer": "check in 有三个常用义：① 酒店办理入住；② 机场值机（领登机牌托运行李）；③ 社交语境「报到、打个招呼」（Let's check in weekly 每周碰一下）。",
+      "definition": "check in 动词短语，名词形式 check-in。覆盖酒店入住、航班值机、活动签到、定期问候（check in on someone 关心某人）多个场景。",
+      "tags": [
+        "旅行",
+        "日常问候"
+      ],
+      "searchIntentType": "meaning"
+    },
+    {
+      "pair": "en-zh",
+      "term": "jealous",
+      "slug": "jealous",
+      "translation": "嫉妒",
+      "shortAnswer": "jealous 主要表示「嫉妒的」（be jealous of someone）。旧用法「珍惜护卫的」现代少见，日常以嫉妒义为主，口语 I'm jealous 也表玩笑式羡慕。",
+      "definition": "jealous 形容嫉妒心理（be jealous of），口语里 I'm jealous 常用于朋友间玩笑式羡慕。网络对应词有 hater（嫉妒乱喷的人）、salty（酸）。",
+      "tags": [
+        "情绪"
+      ],
+      "searchIntentType": "meaning"
+    },
+    {
+      "pair": "en-zh",
+      "term": "lonely",
+      "slug": "lonely",
+      "translation": "孤独",
+      "shortAnswer": "lonely 表示「孤独的、寂寞的」（内心感受），也可形容地方「偏僻荒凉的」（a lonely road）。注意与 alone（独自一人的客观状态）区分：独处 ≠ 孤独。",
+      "definition": "lonely 强调内心的孤独感（主观），alone 是客观的独自状态（无情绪）。I live alone but I don't feel lonely（我独居但不孤独）是经典区分例句。",
+      "tags": [
+        "情绪"
+      ],
+      "searchIntentType": "meaning"
+    },
+    {
+      "pair": "en-zh",
+      "term": "regret",
+      "slug": "regret",
+      "translation": "后悔",
+      "shortAnswer": "regret 表示「后悔、懊悔」（动词/名词同形，I regret it）。正式语境还有「遗憾地通知」义——I regret to inform you 是委婉传达坏消息的固定开场。",
+      "definition": "regret 动词名词同形。日常「后悔做了/没做某事」regret doing / regret not doing；商务信函 I regret to inform you 是委婉坏消息句式。",
+      "tags": [
+        "情绪"
+      ],
+      "searchIntentType": "meaning"
+    },
+    {
+      "pair": "en-zh",
+      "term": "interview",
+      "slug": "interview",
+      "translation": "面试 / 采访",
+      "shortAnswer": "interview 有两义：① 求职「面试」（job interview）；② 媒体「采访」（interview a celebrity）。动词名词同形，按语境区分。",
+      "definition": "interview 动词名词同形：求职面试（job interview）、媒体采访（media interview）、问答节目（interview show）。求职语境 candidate 是被面试者。",
+      "tags": [
+        "职场"
+      ],
+      "searchIntentType": "meaning"
+    },
+    {
+      "pair": "en-zh",
+      "term": "please",
+      "slug": "please",
+      "translation": "请",
+      "shortAnswer": "please 最常用是礼貌的「请」（Please sit），也可作动词「取悦」（It pleases me），pleased 形容词 = 满意的。",
+      "definition": "please 三用：礼貌请求语（Please…）、动词「取悦使高兴」（It pleases me to…）、pleased 形容词「满意的」。与 happy 的区别：pleased 偏「因某事满意」。",
+      "tags": [
+        "日常问候"
+      ],
+      "searchIntentType": "meaning"
+    },
+    {
+      "pair": "en-zh",
+      "term": "attraction",
+      "slug": "attraction",
+      "translation": "景点 / 吸引力",
+      "shortAnswer": "attraction 在旅行语境是「景点」（tourist attraction），本义「吸引力」（gravitational attraction），也可指吸引人的人或事物。",
+      "definition": "attract 的名词形式。旅游语境 tourist attraction = 景点；物理语境引力；人际语境 mutual attraction 相互吸引。main attraction = 主打看点。",
+      "tags": [
+        "旅行"
+      ],
+      "searchIntentType": "meaning"
+    },
+    {
+      "pair": "en-zh",
+      "term": "surprised",
+      "slug": "surprised",
+      "translation": "惊讶",
+      "shortAnswer": "surprised 表示「感到惊讶的」（人的感受）；形容事物令人惊讶用 surprising。I'm surprised（我很惊讶）≠ That's surprising（那很令人惊讶）。",
+      "definition": "surprised 描述人的惊讶感受，surprising 描述事物令人惊讶——-ed/-ing 主语区分规则与 bored/boring、embarrassed/embarrassing 相同。",
+      "tags": [
+        "情绪"
+      ],
+      "searchIntentType": "meaning"
+    }
+  ]
+}

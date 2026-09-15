@@ -1,0 +1,15 @@
+{
+  "meta": {
+    "version": "check-in-fix",
+    "date": "2026-09-15",
+    "purpose": "check-in 词条补齐 examples/tags 重发（R1 唯一被护栏拦截条）",
+    "note": "补 examples（双语）+ tags。slug=check-in-meaning 维持 R1 方案（避开值机 zh-en 正向页）。"
+  },
+  "entries": [
+    { "pair": "en-zh", "term": "check in", "slug": "check-in-meaning", "translation": "入住 / 值机 / 报到",
+      "shortAnswer": "check in 有三个常用义：① 酒店办理入住；② 机场值机（领登机牌托运行李）；③ 社交语境「报到、打个招呼」（Let's check in weekly 每周碰一下）。",
+      "definition": "check in 动词短语，名词形式 check-in。覆盖酒店入住、航班值机、活动签到、定期问候（check in on someone 关心某人）多个场景。",
+      "examples": [{ "en": "Check in at the hotel first, then we'll grab dinner.", "zh": "先办理酒店入住，然后我们去吃晚饭。" }],
+      "tags": ["旅行", "日常问候"], "searchIntentType": "meaning" }
+  ]
+}
