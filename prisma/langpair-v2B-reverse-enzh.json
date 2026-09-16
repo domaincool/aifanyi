@@ -1,0 +1,2679 @@
+{
+ "meta": {
+  "version": "v2-B-reverse-enzh",
+  "date": "2026-09-17",
+  "model": "deepseek-chat",
+  "sourceCommit": "37f846c",
+  "groundedOn": "langpair-v2B-full.json"
+ },
+ "entries": [
+  {
+   "term": "behind",
+   "pair": "en-zh",
+   "slug": "behind",
+   "lang": "en",
+   "translation": "在……后面、在背后、落后",
+   "shortAnswer": "behind 对应的中文是「后面」，作介词或副词，表示在某人或某物的背后，指空间位置在后方。它和 after 不同，after 多指时间或顺序上的「之后」，不用于具体位置。",
+   "definition": "behind 的核心义是空间位置在后方，作介词或副词，如 behind the door（门后）、stand behind me（站在我后面）。它还可引申表示落后，如 fall behind（落后）、behind the other runners（落在其他赛跑者后面）。日常口语和书面语都常用，搭配灵活。易错点是把它与 after 混用：after 用于时间或顺序，如 after lunch（午饭后），不表示具体位置。反义或对应词是 in front of（在……前面）。",
+   "examples": [
+    {
+     "en": "The bicycle is parked behind the house.",
+     "zh": "自行车停放在房子后面。"
+    },
+    {
+     "en": "He fell behind the other runners in the last lap.",
+     "zh": "他在最后一圈落在了其他赛跑者后面。"
+    }
+   ],
+   "tags": [
+    "方位"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "in front of",
+   "pair": "en-zh",
+   "slug": "in-front-of",
+   "lang": "en",
+   "translation": "在……前面、前面",
+   "shortAnswer": "in front of 的中文意思是“在……前面”，强调空间位置，指在某人或某物的前方。它与 before 不同，before 多指时间或顺序上的“在……之前”，不要混淆。",
+   "definition": "in front of 是表示方位的介词短语，核心意思是“在……前面”，强调空间位置，指某人或某物处于另一人或另一物的前方。常见搭配有 in front of the house（在房子前面）、in front of the car（在汽车前面）、in front of the class（在全班面前）。它适用于正式和口语场合。易错点是与 before 混淆：before 多指时间或顺序上的“在……之前”，如 before lunch，而 in front of 只指空间位置。反义表达可用 behind（在……后面）。",
+   "examples": [
+    {
+     "en": "She parked her car in front of the supermarket.",
+     "zh": "她把车停在超市前面。"
+    },
+    {
+     "en": "A tall tree stands in front of our house.",
+     "zh": "一棵高树矗立在我们房子前面。"
+    }
+   ],
+   "tags": [
+    "方位"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "above",
+   "pair": "en-zh",
+   "slug": "above",
+   "lang": "en",
+   "translation": "在……上方、高于、上面",
+   "shortAnswer": "above 对应的中文是「上面、在……上方」，核心含义是位置高于某物且不接触；若两者表面接触则用 on，强调正上方覆盖或跨越则用 over。",
+   "definition": "above 表示位置高于某物，且两者不接触，反义词是 below。它常与数字、水平、高度等搭配，如 above sea level（高于海平面）、above average（高于平均水平）。在正式和口语场合都常用。易错点在于与 on、over 混淆：on 强调接触表面，over 强调垂直正上方或覆盖、跨越，而 above 只表示位置更高，不强调正上方。此外，above 也可引申表示数量、程度、等级上「超过、高于」。",
+   "examples": [
+    {
+     "en": "The plane is flying above the clouds.",
+     "zh": "飞机在云层上方飞行。"
+    },
+    {
+     "en": "Her score is well above the class average.",
+     "zh": "她的分数远高于班级平均分。"
+    }
+   ],
+   "tags": [
+    "方位"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "inside",
+   "pair": "en-zh",
+   "slug": "inside",
+   "lang": "en",
+   "translation": "里面、内部",
+   "shortAnswer": "inside 中文是“里面、内部”，指在某个空间或物体的内部，强调被包围。与 in 不同，inside 不能像 in 那样表示时间或抽象范围，它更具体地指封闭空间的内部。",
+   "definition": "inside 作介词或副词，强调在封闭空间的内部，常与 the house、the box 等搭配，如 inside the house（在房子里面）。它也可作名词和形容词，如 the inside（内部）。正式和口语场合均可用。易错点：inside 不能像 in 那样表示时间或抽象范围，例如不说 inside the morning，也不说 inside the field of art。反义词是 outside（外面）。",
+   "examples": [
+    {
+     "en": "She put the keys inside her bag.",
+     "zh": "她把钥匙放进了包里。"
+    },
+    {
+     "en": "Let's stay inside because it's raining.",
+     "zh": "因为在下雨，我们待在里面吧。"
+    }
+   ],
+   "tags": [
+    "方位"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "next to",
+   "pair": "en-zh",
+   "slug": "next-to",
+   "lang": "en",
+   "translation": "旁边、紧挨着、在……边上",
+   "shortAnswer": "next to 的中文是“旁边、紧挨着”，指空间上紧挨着某人或某物，距离比 near（附近）更近，常可与 beside 互换。",
+   "definition": "next to 是介词短语，后接名词或代词作宾语，表示“紧挨着、在……边上”，强调空间上距离很近，比 near（附近）更近，常与 beside 互换使用。它也可引申表示“几乎”，如 next to impossible（几乎不可能）。口语和书面语都常用，日常描述位置时尤为常见。易错点：不要把它理解成“下一个”，那是 next 单独作形容词时的意思；也不要与 near 混用，near 只表示“在附近”，不强调紧挨。对应词为 beside，反义表达可理解为 far from（远离）。",
+   "examples": [
+    {
+     "en": "She sat next to me on the bus and we talked the whole way.",
+     "zh": "她在公交车上坐在我旁边，我们一路都在聊天。"
+    },
+    {
+     "en": "The bakery is next to the bank, so you can't miss it.",
+     "zh": "那家面包店就在银行旁边，你不会找不到的。"
+    }
+   ],
+   "tags": [
+    "方位"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "in the middle",
+   "pair": "en-zh",
+   "slug": "in-the-middle",
+   "lang": "en",
+   "translation": "在中间、在中央、在中途",
+   "shortAnswer": "in the middle 中文意思是“在中间”，指空间或过程的正中间、中途，常与 of 连用，如 in the middle of the room。它与 among（在多者之间）、between（在两者之间）不同，强调居中位置或过程的中段。",
+   "definition": "in the middle 表示空间或过程的正中间、中途，常与 of 连用，构成 in the middle of + 名词，如 in the middle of the room（在房间中间）、in the middle of the night（在半夜）。它可用于正式或口语场合，描述位置居中或事件进行到一半。易错点：不要与 among（在多者之间）、between（在两者之间）混淆，前者强调在多者包围中，后者强调两者之间，而 in the middle 侧重居中或中途。反义表达可用 at the edge（在边缘）或 at the beginning/end（在开头/结尾）。",
+   "examples": [
+    {
+     "en": "There is a small table in the middle of the living room.",
+     "zh": "客厅中间有一张小桌子。"
+    },
+    {
+     "en": "She woke up in the middle of the night and could not fall asleep again.",
+     "zh": "她半夜醒来，再也睡不着了。"
+    }
+   ],
+   "tags": [
+    "方位"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "outside",
+   "pair": "en-zh",
+   "slug": "outside",
+   "lang": "en",
+   "translation": "外面、外部、在户外",
+   "shortAnswer": "outside 对应的中文是“外面”，指在建筑物、房间或容器之外，也可作介词直接加宾语，如 outside the door 就是“在门外”。它强调超出某个封闭空间或范围，与 inside 相对。",
+   "definition": "outside 的核心意思是“在……之外”，可作副词、介词或名词。作副词时表示在户外，如 play outside（在外面玩）；作介词时直接跟宾语，如 outside the house（在房子外面）、outside the office（在办公室外面）；作名词时指外部或外面，如 from the outside（从外面）。它常用于日常口语和书面语，正式场合也常见。易错点：中文“外面”有时可指表面，但 outside 侧重空间范围之外，不要与 surface（表面）混淆。反义词是 inside（里面）。",
+   "examples": [
+    {
+     "en": "The children are playing outside in the yard.",
+     "zh": "孩子们正在外面的院子里玩。"
+    },
+    {
+     "en": "Please wait outside the office; someone will call you soon.",
+     "zh": "请在办公室外面等候，很快会有人叫你。"
+    }
+   ],
+   "tags": [
+    "方位"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "below",
+   "pair": "en-zh",
+   "slug": "below",
+   "lang": "en",
+   "translation": "在……下面、低于、以下",
+   "shortAnswer": "below 对应的中文是「在……下面、低于、以下」，指位置低于某物但不一定正对、也不接触。它和 under 的关键区别在于：under 常指正下方且可以接触，而 below 只强调位置更低。",
+   "definition": "below 表示「在……下方、低于」，强调位置低于某物，不一定正对，也不接触。常见搭配如 below zero（零度以下）、below the surface（表面之下）、as shown below（如下所示）、the space below（下面的空白处）。它既可用于正式书面语，也常见于日常表达，如温度、水平、标准、页面位置等。易错点是把 below 与 under 混用：under 常指正下方且可接触，如 under the table；below 只表示位置更低，如 below the window。反义对应词是 above（在……上方）。",
+   "examples": [
+    {
+     "en": "The temperature dropped below zero last night.",
+     "zh": "昨晚气温降到了零度以下。"
+    },
+    {
+     "en": "Please write your name in the space below.",
+     "zh": "请在下面的空白处写上你的名字。"
+    }
+   ],
+   "tags": [
+    "方位"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "across from",
+   "pair": "en-zh",
+   "slug": "across-from",
+   "lang": "en",
+   "translation": "在…对面",
+   "shortAnswer": "across from 的中文意思是“在…对面”，通常指在街道、桌子等另一侧的正对面，后接具体地点名词，不接人。",
+   "definition": "across from 表示在马路、房间、桌子等另一侧的正对面，强调位置相对。常见搭配如 across from the bank（在银行对面）、across from the park（在公园对面），后接地点名词。多用于日常口语和书面描述，正式场合也可用。易错点：不能说 across from me 表示“在我对面”，应说 opposite me 或 facing me。反义词或对应词：next to（在旁边）、behind（在后面）。",
+   "examples": [
+    {
+     "en": "The library is across from the park.",
+     "zh": "图书馆在公园对面。"
+    },
+    {
+     "en": "She sat across from the teacher during the meeting.",
+     "zh": "开会时她坐在老师对面。"
+    }
+   ],
+   "tags": [
+    "方位"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "on the right",
+   "pair": "en-zh",
+   "slug": "on-the-right",
+   "lang": "en",
+   "translation": "在右边、在右侧",
+   "shortAnswer": "on the right 中文意思是“在右边、在右侧”，指位置处于右侧；它与 to the right 不同，后者强调朝右的方向，而 on the right 强调所在的位置。",
+   "definition": "on the right 表示“在右边、在右侧”，用于说明某人或某物所处的位置。常见搭配有 on the right of，表示“在……的右边”，如 on the right of the building；指路时也常说 keep to the right，意为靠右走。它多用于日常口语和书面说明，正式与非正式场合都常见。易错点是把 on the right 与 to the right 混用：前者强调静态位置，后者强调朝右的方向。反义表达是 on the left，即“在左边”。",
+   "examples": [
+    {
+     "en": "The library is on the right side of the street.",
+     "zh": "图书馆在街道的右侧。"
+    },
+    {
+     "en": "Please write your name on the right of the page.",
+     "zh": "请把你的名字写在页面的右边。"
+    }
+   ],
+   "tags": [
+    "方位"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "on the left",
+   "pair": "en-zh",
+   "slug": "on-the-left",
+   "lang": "en",
+   "translation": "在左边、在左侧",
+   "shortAnswer": "on the left 中文意思是“在左边”或“在左侧”，指位置处于某物或某人的左方。它常与 of 连用表示“在……的左边”，如 on the left of the desk；注意表示位置用 on，不能说 in the left。",
+   "definition": "on the left 表示在某物或某人的左侧，是描述方位的常用短语。常见搭配有 on the left of + 名词，如 on the left of the desk（在书桌的左边）；问路时也常说 on the left，如 The bank is on the left（银行在左边）。正式和口语场合均可使用。易错点：表示位置时应用 on the left，不能用 in the left；此外，on the left 强调在左侧表面或沿线，而 to the left 强调朝左方向，两者需区分。对应词有 on the right（在右边），反义表达为 on the right。",
+   "examples": [
+    {
+     "en": "The bank is on the left, next to the post office.",
+     "zh": "银行在左边，紧挨着邮局。"
+    },
+    {
+     "en": "Write your name on the left side of the page.",
+     "zh": "把你的名字写在页面的左侧。"
+    }
+   ],
+   "tags": [
+    "方位"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "nearby",
+   "pair": "en-zh",
+   "slug": "nearby",
+   "lang": "en",
+   "translation": "附近的、在附近",
+   "shortAnswer": "附近、在附近。nearby 表示离说话处不远，可作形容词（常后置，如 the park nearby）或副词（如 She lives nearby）；关键区别是它不能直接接宾语，不能说 nearby the park。",
+   "definition": "nearby 的核心意思是“附近的、在附近”，指距离说话处或某参照点不远。作形容词时通常后置：a nearby hotel 也可说，但更常见 the hotel nearby；作副词时直接修饰动词：She lives nearby。它常用于口语和书面语，语气中性。易错点在于中式直译：不能说 nearby the park，应说 the park nearby 或 near the park。与 near 的区别是 near 可作介词接宾语（near the park），而 nearby 不能。反义或对应表达可用 far away、distant。",
+   "examples": [
+    {
+     "en": "Is there a supermarket nearby?",
+     "zh": "附近有超市吗？"
+    },
+    {
+     "en": "We stayed at a nearby hotel.",
+     "zh": "我们住在一家附近的酒店。"
+    }
+   ],
+   "tags": [
+    "方位"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "everywhere",
+   "pair": "en-zh",
+   "slug": "everywhere",
+   "lang": "en",
+   "translation": "到处、处处、各个地方",
+   "shortAnswer": "everywhere 中文意思是「到处、处处」，作副词表示在所有地方、各个角落。它不能像介词那样直接带宾语，说「在中国到处」要用 everywhere in China，不能说 everywhere China。",
+   "definition": "everywhere 是副词，核心含义为「在每个地方、到处」，强调范围覆盖所有地点。常见搭配有 everywhere in + 地点（在某地到处）、everywhere else（其他所有地方）、look everywhere（到处找）。它多用于口语和一般书面语，语气自然。易错点是中式表达：因为它不是介词，不能直接加宾语，所以「在中国到处」应说 everywhere in China，而非 everywhere China；也不要与 everywhere 的介词性用法混淆。反义或对应词可参考 nowhere（无处）、somewhere（某处）、anywhere（任何地方）。",
+   "examples": [
+    {
+     "en": "I've looked everywhere for my keys, but I still can't find them.",
+     "zh": "我到处找我的钥匙，但还是找不到。"
+    },
+    {
+     "en": "There were colorful flowers everywhere in the garden.",
+     "zh": "花园里到处都是五颜六色的花。"
+    }
+   ],
+   "tags": [
+    "方位"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "around",
+   "pair": "en-zh",
+   "slug": "around",
+   "lang": "en",
+   "translation": "周围、在附近、围绕",
+   "shortAnswer": "around 的中文意思是周围、在附近或围绕。它表示围绕某物或在某处附近，且后面可以直接接宾语，如 around the house；而 nearby 不能直接接宾语，这是两者最关键的用法区别。",
+   "definition": "around 的核心含义是围绕某物或在附近，既可指环绕的方位，也可指不精确的附近范围。常见搭配有 around the house（房子周围）、look around（环顾四周）、around the corner（在拐角处）。它适用于正式和口语场合。易错点在于与 nearby 混淆：nearby 不能直接接宾语，如说 the park nearby，不能说 nearby the park；而 around 后可直接接宾语，如 around the park。反义或对应词可考虑 in the middle of（在中间）或 far from（远离），但需注意语境差异。",
+   "examples": [
+    {
+     "en": "The children are playing around the tree.",
+     "zh": "孩子们正在树周围玩耍。"
+    },
+    {
+     "en": "Look around you and see the beautiful view.",
+     "zh": "看看你的周围，欣赏这美丽的景色。"
+    }
+   ],
+   "tags": [
+    "方位"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "south",
+   "pair": "en-zh",
+   "slug": "south",
+   "lang": "en",
+   "translation": "南方、南部",
+   "shortAnswer": "南方、南部。south 指方向或方位，作名词时前面常加 the，如 in the south；作形容词时直接修饰名词，如 South China。与 southern 的分工是：south 多指方位本身，southern 多作定语表南方的。",
+   "definition": "south 的核心义是南方、南部，指方向或方位。作名词时前面常加 the，并搭配介词 in、to、on：in the south 表在南部之内，to the south of 表在……以南，on the south 表接壤的南侧。作形容词时直接修饰名词，且首字母常大写构成专有名称，如 South China、South Korea。它多用于正式或中性场合，口语中也常见。易错点是把它与 southern 混用：south 侧重方位，southern 侧重属性，如 southern accent 指南方的口音。反义对应词是 north。",
+   "examples": [
+    {
+     "en": "The factory is located to the south of the river, while our school lies in the south of the city.",
+     "zh": "那家工厂位于河的南边，而我们学校坐落在城市的南部。"
+    },
+    {
+     "en": "She grew up in the south and speaks with a soft southern accent.",
+     "zh": "她在南方长大，说话带着柔和的南方口音。"
+    }
+   ],
+   "tags": [
+    "方位"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "east",
+   "pair": "en-zh",
+   "slug": "east",
+   "lang": "en",
+   "translation": "东方、东、东部",
+   "shortAnswer": "east 对应的中文是东方、东、东部，指正东方向，与 west 相对。作名词时前面常加 the，如 in the east；作形容词或副词时则不加，如 east gate、go east。",
+   "definition": "east 的核心含义是正东方向，与 west（西）相对，中文可译为东方、东、东部。作名词时前面常加 the，如 in the east（在东方）；作形容词直接修饰名词，如 east gate（东门）；作副词表示朝东去，如 go east（向东走），不加 to。常见搭配还有 to the east of（在……以东）、the East（东方、东部地区）。正式与口语场合均可使用。易错点是中式表达容易漏掉或误加冠词与介词，例如把 go east 说成 go to east。反义词是 west。",
+   "examples": [
+    {
+     "en": "The sun rises in the east every morning.",
+     "zh": "太阳每天早晨从东方升起。"
+    },
+    {
+     "en": "Japan lies to the east of China.",
+     "zh": "日本位于中国的东面。"
+    }
+   ],
+   "tags": [
+    "方位"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "north",
+   "pair": "en-zh",
+   "slug": "north",
+   "lang": "en",
+   "translation": "北方、北、北部",
+   "shortAnswer": "north 中文意思是北方、北或北部，指方向或地区偏北的位置。它作名词时常用 in the north of 表示在某地区内部偏北，用 to the north of 表示在境外以北，注意与形容词 northern 区分。",
+   "definition": "north 的核心含义是北方、北或北部，可指方向，也可指地区偏北的部分。常见搭配有 in the north（在北方）、to the north（在北面）、from the north（从北方来）、in the north of（在……内部偏北）、to the north of（在……境外以北）。正式和口语场合都常用。易错点：表示方位时，in 强调在某地区内部偏北，to 强调在境外以北；north 多作名词或副词，而 northern 是形容词，如 northern China（中国北方）。反义对应词是 south（南方）。",
+   "examples": [
+    {
+     "en": "The wind is blowing from the north.",
+     "zh": "风从北方吹来。"
+    },
+    {
+     "en": "Their farm is to the north of the river.",
+     "zh": "他们的农场在河以北。"
+    }
+   ],
+   "tags": [
+    "方位"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "corner",
+   "pair": "en-zh",
+   "slug": "corner",
+   "lang": "en",
+   "translation": "角落、拐角",
+   "shortAnswer": "corner 中文意思是角落、拐角，指室内墙角或街道拐角。核心区别在于搭配介词：at the corner 指在街道拐角处（从外面看），in the corner 指在房间内部的角落。",
+   "definition": "corner 指两线相交形成的角或隐蔽的角落，常见搭配有 in the corner（在房间内部的角落）、at the corner（在街道拐角处，从外面看）、on the corner（在物体的角上或街角处）。正式和口语场合均常用。易错点：in the corner 与 at the corner 常被混淆，前者强调内部角落，后者强调外部拐角处；on the corner 则多指物体角上或街角。对应词有角落、拐角，反义可理解为中心、中央。",
+   "examples": [
+    {
+     "en": "She sat quietly in the corner of the room, reading a book.",
+     "zh": "她安静地坐在房间的角落里看书。"
+    },
+    {
+     "en": "There is a coffee shop at the corner of Main Street and First Avenue.",
+     "zh": "在主街和第一大道交汇的拐角处有一家咖啡店。"
+    }
+   ],
+   "tags": [
+    "方位"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "west",
+   "pair": "en-zh",
+   "slug": "west",
+   "lang": "en",
+   "translation": "西方、西边、西部",
+   "shortAnswer": "west 的中文意思是西方、西边或西部，指方向或地区。作方位名词时前面通常加定冠词，如 in the west；它也可指西方国家，与表示东方的 east 相对。",
+   "definition": "west 的核心含义是西方、西边或西部，可指方向、地区，也可指西方国家。作方位名词时前面通常加定冠词，如 in the west（在西方）、to the west of（在……以西）；作形容词用 west side（西侧）、West Africa（西非）；作副词直接说 go west（向西走），不加介词。它适用于正式和口语场合。易错点是中式表达容易漏掉定冠词，或把 to the west of 与 in the west of 混淆。反义词或对应词是 east（东方）。",
+   "examples": [
+    {
+     "en": "The sun sets in the west.",
+     "zh": "太阳从西方落下。"
+    },
+    {
+     "en": "The city lies to the west of the river.",
+     "zh": "这座城市位于河的西面。"
+    }
+   ],
+   "tags": [
+    "方位"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "next door",
+   "pair": "en-zh",
+   "slug": "next-door",
+   "lang": "en",
+   "translation": "隔壁、在隔壁、隔壁的",
+   "shortAnswer": "next door 中文是“隔壁”，指紧邻的房屋或房间，表示“在隔壁”或“隔壁的”。它常与 to 连用表示“在……隔壁”，如 next door to us；作形容词时置于名词前，如 the next-door neighbors。",
+   "definition": "next door 的核心含义是“隔壁”，指紧邻的房屋或房间，可作副词表示“在隔壁”，也可作形容词表示“隔壁的”。常见搭配有 next door to（在……隔壁）、live next door（住在隔壁）、the next-door apartment（隔壁的公寓）。口语和书面语都常用，正式场合也可出现。易错点：next door to 后接地点或人，表示“在……隔壁”，不能直接说 next door us；作形容词时通常写作 next-door，置于名词前。对应词有 neighboring、adjacent，但 next door 更强调紧邻的房屋或房间。",
+   "examples": [
+    {
+     "en": "She lives next door to us, so we often meet in the hallway.",
+     "zh": "她住在我们隔壁，所以我们经常在走廊里遇见。"
+    },
+    {
+     "en": "The next-door apartment has been empty for months.",
+     "zh": "隔壁的公寓已经空了好几个月了。"
+    }
+   ],
+   "tags": [
+    "方位"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "orange",
+   "pair": "en-zh",
+   "slug": "orange",
+   "lang": "en",
+   "translation": "橙色、橙子、橙色的",
+   "shortAnswer": "orange 对应的中文是橙色，也可指橙子。它既可作形容词表示橙色的，也可作名词指橙色或橙子这种水果，因此说颜色时要根据语境判断，别和水果混淆。",
+   "definition": "orange 的核心含义是橙色，作形容词时表示橙色的，作名词时既可指橙色这一颜色，也可指橙子这种水果。常见搭配有 bright orange（亮橙色）、dark orange（深橙色）、orange juice（橙汁）。它适用于正式和口语场合，日常使用频率很高。易错点在于它与水果同形，中文里说颜色时容易误当成水果，需根据语境理解；此外要注意与 tangerine（橘色）区分，二者色调不同。对应词可理解为橙色、橙子。",
+   "examples": [
+    {
+     "en": "She wore a bright orange dress to the party.",
+     "zh": "她穿了一条亮橙色的连衣裙去参加聚会。"
+    },
+    {
+     "en": "The leaves turn orange and red in autumn.",
+     "zh": "秋天树叶变成橙色和红色。"
+    }
+   ],
+   "tags": [
+    "颜色"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "red",
+   "pair": "en-zh",
+   "slug": "red",
+   "lang": "en",
+   "translation": "红色",
+   "shortAnswer": "red 对应的中文是红色，指像鲜血或火焰那样的基本颜色。它是最基础的颜色词，纯红就是 red；浅红说 light red，深红说 dark red，不要和 pink（粉红）混为一谈。",
+   "definition": "red 是英语中最基本的颜色词之一，作名词指红色，作形容词指红色的。常见搭配有 a red car（一辆红色的车）、bright red（亮红）、dark red（深红）、light red（浅红）、turn red（变红）。它适用于正式和口语各种场合。易错点在于把浅红、深红误说成 pink，其实 pink 是粉红，与浅红并不等同；另外 red 本身不作动词，表示“使变红、变红”要用 redden。对应词方面，中文的“红色”与 red 基本对等，反义可参照与红相对的冷色词如 blue。",
+   "examples": [
+    {
+     "en": "She wore a bright red dress to the party.",
+     "zh": "她穿了一条亮红色的连衣裙去参加聚会。"
+    },
+    {
+     "en": "The leaves turn dark red in late autumn.",
+     "zh": "深秋时树叶会变成深红色。"
+    }
+   ],
+   "tags": [
+    "颜色"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "yellow",
+   "pair": "en-zh",
+   "slug": "yellow",
+   "lang": "en",
+   "translation": "黄色",
+   "shortAnswer": "yellow 对应的中文是黄色，指三原色之一的基础颜色，可作名词、形容词和动词使用；它侧重颜色本身，不要与表示“金色的”golden 混淆。",
+   "definition": "yellow 是英语中最基本的颜色词，作名词指黄色，作形容词表示黄色的，作动词可表示使变黄或发黄。日常描述深浅常用 light yellow、dark yellow、bright yellow、pale yellow 等搭配，如 bright yellow 明亮的黄色、pale yellow 浅黄色。它适用于正式和口语场合，用法中性。易错点是把它与 golden 混用：golden 强调金色、金黄色的光泽感，而 yellow 只指颜色本身。其形容词通常也不用于“胆怯的”以外的抽象转义。反义或对应词可参考与其它颜色词并列使用。",
+   "examples": [
+    {
+     "en": "The leaves turn bright yellow in autumn.",
+     "zh": "秋天树叶变成明亮的黄色。"
+    },
+    {
+     "en": "She bought a pale yellow dress for the party.",
+     "zh": "她为聚会买了一条浅黄色的连衣裙。"
+    }
+   ],
+   "tags": [
+    "颜色"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "green",
+   "pair": "en-zh",
+   "slug": "green",
+   "lang": "en",
+   "translation": "绿色",
+   "shortAnswer": "green 中文是绿色，泛指颜色时通常不加冠词。它还可指交通灯的绿灯、无经验的新手或环保的，与单纯的颜色义不同。",
+   "definition": "green 的核心含义是绿色，作颜色泛指时通常不加冠词，如 light green（浅绿）、dark green（深绿）。常见搭配有 green light（绿灯，引申为许可）、a green hand（新手、无经验的人）、green energy（绿色能源、环保能源）。正式与口语场合均常用。易错点：不要把 green 一律只理解为颜色，它还可指“无经验的”或“环保的”，需根据上下文判断；作颜色时一般不说 a green，除非指某种具体的绿色。对应词为“绿色”，反义可联想到与“成熟、有经验”相对的用法。",
+   "examples": [
+    {
+     "en": "She painted the walls a soft green.",
+     "zh": "她把墙壁刷成了柔和的绿色。"
+    },
+    {
+     "en": "Wait for the green light before you cross.",
+     "zh": "过马路前要等绿灯亮。"
+    }
+   ],
+   "tags": [
+    "颜色"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "purple",
+   "pair": "en-zh",
+   "slug": "purple",
+   "lang": "en",
+   "translation": "紫色",
+   "shortAnswer": "purple 中文意思是紫色，是紫色总称，涵盖从浅紫到深紫；注意 violet 是紫罗兰色、偏蓝紫，而 purple 更宽泛。",
+   "definition": "purple 是英语中表示紫色的总称，涵盖从浅紫到深紫的各种色调。常见搭配有 light purple（浅紫色）、dark purple（深紫色）、purple hair（紫发）。正式与口语场合均适用，美式拼写为 purple，英式相同。易错点：中式误译可能把 purple 与 violet 混为一谈，violet 特指紫罗兰色、偏蓝紫，而 purple 更宽泛；反义词或对应词可参考 red、blue 等基本颜色词。",
+   "examples": [
+    {
+     "en": "She wore a light purple dress to the party.",
+     "zh": "她穿了一条浅紫色的裙子去参加聚会。"
+    },
+    {
+     "en": "The sky turned dark purple before the storm.",
+     "zh": "暴风雨前天空变成了深紫色。"
+    }
+   ],
+   "tags": [
+    "颜色"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "blue",
+   "pair": "en-zh",
+   "slug": "blue",
+   "lang": "en",
+   "translation": "蓝色、蓝色的、忧郁的",
+   "shortAnswer": "blue 对应的中文是蓝色，指天空或海水那种颜色，也可作形容词表示蓝色的。它还能表示忧郁、情绪低落，如 feel blue，这是与单纯颜色义最容易混淆的一处。",
+   "definition": "blue 的核心含义是蓝色，既可作名词指这种颜色，也可作形容词表示蓝色的。常见搭配有 sky blue（天蓝）、navy blue（藏青）、light blue（浅蓝）、dark blue（深蓝），用于区分深浅。日常口语和书面语都常用，描述衣物、天空、海水等。易错点是 blue 还可表示忧郁、沮丧，如 feel blue 指心情低落，不能只按颜色理解；中文里一般不会用蓝色形容心情，所以容易误译。反义或对应词可参考与颜色相对的暖色调词，以及表示开心的 happy。",
+   "examples": [
+    {
+     "en": "The sky is a beautiful shade of blue today.",
+     "zh": "今天的天空是美丽的蓝色。"
+    },
+    {
+     "en": "She wore a light blue dress to the party.",
+     "zh": "她穿了一条浅蓝色的裙子去参加聚会。"
+    }
+   ],
+   "tags": [
+    "颜色"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "pink",
+   "pair": "en-zh",
+   "slug": "pink",
+   "lang": "en",
+   "translation": "粉色、粉红色",
+   "shortAnswer": "pink 对应的中文是粉色、粉红色，指淡红或桃红一类的颜色，是粉色系的总称。它通常不指玫红或品红，浅粉叫 light pink，亮粉叫 hot pink，玫粉叫 rose pink，也可形容脸色红润。",
+   "definition": "pink 的核心含义是粉色、粉红色，泛指淡红、桃红到艳粉这一颜色范围，是粉色系的总称。常见搭配有 light pink（浅粉色）、hot pink（亮粉色）、rose pink（玫粉色）、pink dress（粉色连衣裙）、turn pink（变成粉色）。它既用于日常口语，也用于书面描写，还可形容脸色红润，如 cheeks turned pink（脸颊泛红）。易错点在于把 pink 与玫红 rose、品红 magenta 混为一谈，实际上 pink 通常不指这两种颜色；也不宜一律译成“粉红”而忽略语境中的深浅差异。对应词是粉色、粉红色，反义可理解为与粉色相对的深色系，如深红、暗红。",
+   "examples": [
+    {
+     "en": "She wore a light pink dress to the party.",
+     "zh": "她穿了一条浅粉色的连衣裙去参加聚会。"
+    },
+    {
+     "en": "The cherry blossoms turned the whole street pink.",
+     "zh": "樱花把整条街都染成了粉色。"
+    }
+   ],
+   "tags": [
+    "颜色"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "black",
+   "pair": "en-zh",
+   "slug": "black",
+   "lang": "en",
+   "translation": "黑色",
+   "shortAnswer": "black 对应的中文是黑色。它既可作形容词表示“黑色的”，也可作名词表示“黑色”，泛指黑色这一具体颜色，而深黑常用 jet black。",
+   "definition": "black 的核心意思是“黑色”，可作形容词，如 a black dress（一条黑色连衣裙），也可作名词，如 black is her favorite color（黑色是她最喜欢的颜色）。常见搭配有 black coffee（不加奶的咖啡）、black and white（黑白/非黑即白）。它属于具体颜色词，与 dark 不同，dark 侧重“暗的、深色的”，不一定指黑色。口语和书面语都常用，正式场合也可用。易错点是中式表达容易把“黑咖啡”直译为 black coffee 之外的说法，其实 black coffee 就是不加奶的咖啡。反义对应词是 white（白色）。",
+   "examples": [
+    {
+     "en": "She wore a black dress to the party.",
+     "zh": "她穿了一条黑色连衣裙去参加聚会。"
+    },
+    {
+     "en": "He likes his coffee black, with no sugar.",
+     "zh": "他喜欢喝不加奶、不加糖的黑咖啡。"
+    }
+   ],
+   "tags": [
+    "颜色"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "white",
+   "pair": "en-zh",
+   "slug": "white",
+   "lang": "en",
+   "translation": "白色",
+   "shortAnswer": "white 中文意思是白色，指像雪或牛奶那样的颜色，可作形容词和名词。它是最基础的颜色词，但要注意与表示“白种人的、苍白的”用法区分。",
+   "definition": "white 作形容词指“白色的”，如 white shirt（白衬衫）；作名词指白色或蛋白。常见搭配有 pure white（纯白）、off-white（米白）、snow-white（雪白）。它适用于正式和口语场合。易错点：white 不是“白”的所有含义，如“空白”用 blank；另外 white 还可指“白种人的”或“苍白的”，需根据语境区分。反义词为 black（黑色）。",
+   "examples": [
+    {
+     "en": "She wore a white dress to the party.",
+     "zh": "她穿了一条白色的连衣裙去参加聚会。"
+    },
+    {
+     "en": "The walls are painted a warm off-white.",
+     "zh": "墙壁被刷成了温暖的米白色。"
+    }
+   ],
+   "tags": [
+    "颜色"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "gray",
+   "pair": "en-zh",
+   "slug": "gray",
+   "lang": "en",
+   "translation": "灰色",
+   "shortAnswer": "gray 的中文意思是灰色，指介于黑与白之间的中性颜色，美式拼写，英式常用 grey。它常与 light gray（浅灰）、dark gray（深灰）搭配表示深浅，注意与带金属光泽的 silver（银色）区分。",
+   "definition": "gray 指灰色，是介于黑色与白色之间的中性色，美式拼写，英式拼写为 grey。常见搭配有 light gray（浅灰）、dark gray（深灰）、charcoal gray（炭灰），用于描述衣物、天空、头发等。正式与口语场合均常用。易错点：一是与 silver 混淆，silver 指银色，带金属光泽，而 gray 是普通灰色；二是中式误译，如把“灰心”直译成 gray heart 并不自然。反义词或对应词可联想 black（黑）与 white（白）。",
+   "examples": [
+    {
+     "en": "The sky turned gray before the storm.",
+     "zh": "暴风雨来临前，天空变成了灰色。"
+    },
+    {
+     "en": "She wore a light gray sweater and dark gray pants.",
+     "zh": "她穿着一件浅灰色毛衣和深灰色裤子。"
+    }
+   ],
+   "tags": [
+    "颜色"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "gold",
+   "pair": "en-zh",
+   "slug": "gold",
+   "lang": "en",
+   "translation": "金色、金、黄金",
+   "shortAnswer": "gold 作颜色词时指金色，即一种偏黄、带光泽的颜色，通常放在名词前作定语，如 gold medal（金牌）。它和 golden 不同：gold 多用于具体事物，golden 多形容抽象的美好或金质。",
+   "definition": "gold 作颜色词时指金色，是一种偏黄且带金属光泽的颜色，常放在名词前作定语，如 gold paint（金色颜料）、gold stars（金色星星）、gold dress（金色裙子）。它也可指黄金、金币、金牌等具体事物。正式和口语场合都常用，但作颜色词时位置固定，一般不作表语。易错点是与 golden 混淆：gold 多用于具体事物，如 gold medal（金牌）；golden 多形容抽象的美好或金质，如 golden age（黄金时代）。对应词是 golden，反义可联想到 silver（银色）。",
+   "examples": [
+    {
+     "en": "She wore a gold dress to the party.",
+     "zh": "她穿了一条金色的裙子去参加聚会。"
+    },
+    {
+     "en": "The team won three gold medals at the games.",
+     "zh": "这支队伍在运动会上赢得了三枚金牌。"
+    }
+   ],
+   "tags": [
+    "颜色"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "brown",
+   "pair": "en-zh",
+   "slug": "brown",
+   "lang": "en",
+   "translation": "棕色、褐色",
+   "shortAnswer": "brown 的中文意思是棕色、褐色，可作名词或形容词，用来描述介于黄与黑之间的颜色。它与 dark brown（深棕）、light brown（浅棕）是深浅不同的表达，后者只是在棕色基础上加了深浅修饰。",
+   "definition": "brown 指棕色、褐色，既可作名词也可作形容词，是描述颜色的常用词。常见搭配有 brown eyes（棕色眼睛）、brown bread（黑面包，即全麦或深色面包）。在英式英语中，brown 还可表示“晒黑的”，如 go brown 指皮肤晒成棕色。易错点在于把 brown 与 dark brown、light brown 混为一谈：前者是笼统的棕色，后两者分别强调深棕和浅棕。此外，中文里“褐色”与“棕色”基本对应，但“黑面包”这类固定译法不能直译为“棕色面包”。反义或对应表达可参考与浅色、深色相关的颜色词。",
+   "examples": [
+    {
+     "en": "She has beautiful brown eyes and dark brown hair.",
+     "zh": "她有一双美丽的棕色眼睛和深棕色的头发。"
+    },
+    {
+     "en": "The leaves turn brown in autumn.",
+     "zh": "秋天树叶变成棕色。"
+    }
+   ],
+   "tags": [
+    "颜色"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "silver",
+   "pair": "en-zh",
+   "slug": "silver",
+   "lang": "en",
+   "translation": "银色",
+   "shortAnswer": "silver 的中文意思是银色，指金属银那种纯正、明亮的银白色，可作名词或形容词。它和 silvery 不同，silver 强调纯正的银色，而 silvery 多形容泛着银光、带银色调的样子。",
+   "definition": "silver 指金属银的颜色，即纯正、明亮的银白色，可作名词或形容词。常见搭配有 bright silver（亮银色）、shiny silver（闪亮的银色），如 silver hair（银发）、a silver car（银色汽车）。它适用于正式和日常场合，描述颜色时通常指纯正的银色。易错点是容易与 silvery 混淆：silver 强调纯正的银色，而 silvery 形容泛银光的、带银色光泽的。反义或对应词可考虑 gold（金色）等。",
+   "examples": [
+    {
+     "en": "She wore a long silver dress to the party.",
+     "zh": "她穿了一条长长的银色连衣裙去参加聚会。"
+    },
+    {
+     "en": "His silver hair shone in the sunlight.",
+     "zh": "他的银发在阳光下闪闪发亮。"
+    }
+   ],
+   "tags": [
+    "颜色"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "navy blue",
+   "pair": "en-zh",
+   "slug": "navy-blue",
+   "lang": "en",
+   "translation": "藏青色",
+   "shortAnswer": "navy blue 的中文是藏青色，指一种深蓝偏黑、比普通深蓝更深更灰的颜色，来自英国海军制服色，日常口语中也常简说成 navy。",
+   "definition": "navy blue 指深蓝偏黑的颜色，中文对应藏青色，源自英国海军制服的颜色。它可作名词也可作形容词，常见搭配有 in navy blue（穿着藏青色）、a navy blue suit（一套藏青色西装）、a navy blue dress（一条藏青色连衣裙）。正式场合多用完整形式 navy blue，口语里常直接简说成 navy，如 a navy coat、navy sweater。易错点在于把它简单等同于 dark blue：navy blue 比 dark blue 更深、更偏灰黑，也比 royal blue（宝蓝色）更深、更显正式。",
+   "examples": [
+    {
+     "en": "She wore a navy blue dress to the interview.",
+     "zh": "她穿了一条藏青色的连衣裙去面试。"
+    },
+    {
+     "en": "Navy blue is darker than royal blue and looks more formal.",
+     "zh": "藏青色比宝蓝色更深，看起来更正式。"
+    }
+   ],
+   "tags": [
+    "颜色"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "beige",
+   "pair": "en-zh",
+   "slug": "beige",
+   "lang": "en",
+   "translation": "米色、浅驼色",
+   "shortAnswer": "beige 对应的中文是米色，指浅淡的米黄或灰黄色，比 cream 略灰、比 tan 浅。它是不可数名词兼形容词，作名词时通常加 the 或直接修饰名词，不能说 a beige。",
+   "definition": "beige 的核心词义是米色、浅驼色，一种浅淡的米黄或灰黄色，常用于服装、家居和油漆色卡。作形容词时直接修饰名词，如 a beige coat（一件米色外套）、beige walls（米色的墙壁）；作名词时用 the beige 指这种颜色，不加 a，因为它是不可数名词。正式与口语场合都通用，色彩描述中很常见。易错点在于把它当成可数名词说成 a beige，或与 cream（奶油色，偏白偏黄）、tan（棕褐色，更深更黄）混淆。反义或对应词可想到深色系如 dark brown，但它本身没有严格反义词。",
+   "examples": [
+    {
+     "en": "She wore a beige trench coat over a white dress.",
+     "zh": "她在白色连衣裙外面穿了一件米色风衣。"
+    },
+    {
+     "en": "The walls were painted a soft beige to make the room feel warmer.",
+     "zh": "墙壁刷成了柔和的米色，让房间显得更温暖。"
+    }
+   ],
+   "tags": [
+    "颜色"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "dark color",
+   "pair": "en-zh",
+   "slug": "dark-color",
+   "lang": "en",
+   "translation": "深色",
+   "shortAnswer": "dark color 的中文意思是深色，指颜色深、明度低的色调。它通常泛指一类颜色，而说具体的深色时，习惯把 dark 直接放在颜色词前，比如深蓝说 dark blue，而不是 dark color blue。",
+   "definition": "dark color 对应中文的深色，指颜色深、明度低的色调，属于颜色类词汇。它多用来泛指一类颜色，作定语时常用复数 dark colors，例如偏爱深色可以说 prefer dark colors。常见搭配有 dark blue（深蓝）、dark green（深绿）、dark red（深红），这些具体说法都是把 dark 直接放在颜色词前。正式和口语场合都通用，但要注意易错点：中文说深绿、深红时，英文不能说 dark color green，而应说 dark green。反义对应词是 light color（浅色），两者常成对出现。",
+   "examples": [
+    {
+     "en": "She prefers dark colors like navy and dark green.",
+     "zh": "她偏爱藏青、深绿这类深色。"
+    },
+    {
+     "en": "The room looks smaller when painted in a dark color.",
+     "zh": "房间刷成深色会显得更小。"
+    }
+   ],
+   "tags": [
+    "颜色"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "neon",
+   "pair": "en-zh",
+   "slug": "neon",
+   "lang": "en",
+   "translation": "荧光色、霓虹色",
+   "shortAnswer": "neon 中文常译作荧光色或霓虹色，指像霓虹灯那样极其鲜艳、刺眼的色调，而不是普通的 bright。它形容颜色时强调高饱和、发光感，常用于服装、招牌和妆容。",
+   "definition": "neon 作形容词时，指霓虹灯般极其鲜艳的荧光色，如 neon green（荧光绿）、neon pink（荧光粉）、neon blue（荧光蓝）。它比 bright 更夸张刺眼，带有发光感，常用于服装、招牌、妆容等非正式或视觉冲击强的场合。易错点：不要简单译成“明亮的”，因为 neon 强调高饱和与霓虹感，而非一般亮度。对应词可理解为“荧光色、霓虹色”，反义方向是 muted、subdued 等低调色。",
+   "examples": [
+    {
+     "en": "She wore a neon pink jacket that glowed under the black light.",
+     "zh": "她穿了一件荧光粉色的夹克，在紫外灯下闪闪发光。"
+    },
+    {
+     "en": "The signs along the street were all neon green and orange.",
+     "zh": "街边的招牌全是荧光绿和荧光橙色的。"
+    }
+   ],
+   "tags": [
+    "颜色"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "light color",
+   "pair": "en-zh",
+   "slug": "light-color",
+   "lang": "en",
+   "translation": "浅色",
+   "shortAnswer": "浅色。指颜色浅淡、不浓烈，亮度高而饱和度低，比如浅蓝、浅绿；与深色相对，常用于描述柔和清爽的色调。",
+   "definition": "light color 中文意思是浅色，指颜色浅淡、不浓烈，亮度高而饱和度低。常见搭配有 light blue（浅蓝）、light green（浅绿）等，多用于日常口语和书面描述。易错点在于把 light 误解为“轻的”或“光”，其实修饰颜色时意为“浅的”；也要注意与 bright（鲜艳）区分，浅色强调淡雅而非明亮。反义词是 dark color（深色），对应词还有 pale（苍白、淡）等。",
+   "examples": [
+    {
+     "en": "She prefers light colors like pastel pink and baby blue for her bedroom.",
+     "zh": "她卧室喜欢浅色，比如柔粉色和淡蓝色。"
+    },
+    {
+     "en": "In summer, wearing light colors can help you stay cool.",
+     "zh": "夏天穿浅色有助于保持凉爽。"
+    }
+   ],
+   "tags": [
+    "颜色"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "primary colors",
+   "pair": "en-zh",
+   "slug": "primary-colors",
+   "lang": "en",
+   "translation": "原色",
+   "shortAnswer": "primary colors 中文意思是原色，指红、黄、蓝这三种无法通过混合其他颜色得到的基本颜色。它常与 secondary colors（间色）区分，后者是由两种原色混合而成。",
+   "definition": "primary colors 指无法通过混合其他颜色得到的红、黄、蓝三色，是色彩混合的基础。常见搭配有 mix primary colors（混合原色）、primary color wheel（原色轮）。该词在正式色彩理论和日常美术讨论中均常用。易错点在于将其与 secondary colors（间色）混淆，间色由两种原色混合而成。美式拼写为 color，英式为 colour。对应词为 secondary colors。",
+   "examples": [
+    {
+     "en": "The artist mixed the primary colors to create a vibrant orange.",
+     "zh": "艺术家混合原色，调出了鲜艳的橙色。"
+    },
+    {
+     "en": "In traditional color theory, red, yellow, and blue are considered primary colors.",
+     "zh": "在传统色彩理论中，红、黄、蓝被视为原色。"
+    }
+   ],
+   "tags": [
+    "颜色"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "rainbow colors",
+   "pair": "en-zh",
+   "slug": "rainbow-colors",
+   "lang": "en",
+   "translation": "彩虹色、七彩颜色",
+   "shortAnswer": "彩虹色，指像彩虹一样的多种颜色，通常包括红橙黄绿蓝靛紫。它强调多种颜色组合，而非单一颜色；作定语时常用连字符形式 rainbow-colored。",
+   "definition": "rainbow colors 指像彩虹一样的多种颜色，通常包括红橙黄绿蓝靛紫等七彩颜色。常见搭配有 in rainbow colors（以彩虹色）、wear rainbow colors（穿彩虹色衣物）、paint in rainbow colors（用彩虹色粉刷）。该表达在正式和口语场合都常用，英式拼写为 rainbow colours，但颜色本身有固定顺序。注意它是复数，作定语时常用连字符 rainbow-colored，如 a rainbow-colored scarf。易错点：不要误译为“彩虹的颜色”而忽略其作为颜色类别的含义，也不要与单数 rainbow color 混淆。对应词为单色、纯色。",
+   "examples": [
+    {
+     "en": "The children painted the wall in bright rainbow colors.",
+     "zh": "孩子们用明亮的彩虹色粉刷了那面墙。"
+    },
+    {
+     "en": "She wore a scarf with rainbow colors that matched her colorful personality.",
+     "zh": "她戴了一条彩虹色的围巾，与她多彩的个性很相配。"
+    }
+   ],
+   "tags": [
+    "颜色"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "sunny",
+   "pair": "en-zh",
+   "slug": "sunny",
+   "lang": "en",
+   "translation": "晴朗的、阳光充足的、晴天",
+   "shortAnswer": "sunny 中文是晴朗的、阳光充足的，指阳光充足、天空少云的好天气，常用来描述天气，如 a sunny day。它与 clear 的区别在于：sunny 强调阳光充足，clear 只强调无云。",
+   "definition": "sunny 是 weather 类形容词，核心含义是阳光充足、天空少云，中文常译为晴朗的、阳光充足的，也可作名词性表达指晴天。常见搭配有 a sunny day（晴天）、It's sunny and warm（天气晴朗温暖），描述天气时常用 it 句型：It's sunny today. 口语和书面语都常用。易错点是与 clear 混淆：sunny 强调阳光充足，clear 只强调无云，二者侧重点不同。反义词可对应 cloudy（多云的）、rainy（下雨的）。",
+   "examples": [
+    {
+     "en": "It's a beautiful sunny day, so let's go to the park.",
+     "zh": "今天是个阳光明媚的好天气，我们去公园吧。"
+    },
+    {
+     "en": "The weather forecast says it will be sunny and warm this weekend.",
+     "zh": "天气预报说这个周末将是晴天，天气温暖。"
+    }
+   ],
+   "tags": [
+    "天气"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "overcast",
+   "pair": "en-zh",
+   "slug": "overcast",
+   "lang": "en",
+   "translation": "阴天、阴沉、阴云密布",
+   "shortAnswer": "overcast 指阴天，即天空被云层完全覆盖、不见阳光；它比 cloudy 程度更重，天色更暗更均匀，常作表语或定语。",
+   "definition": "overcast 的核心意思是阴天，指天空被云层完全覆盖、没有直射阳光，天色灰暗均匀。常见搭配有 an overcast sky（阴沉的天空）、an overcast morning（阴沉的早晨），也常用 it 句型：It's overcast today.（今天阴天。）它比 cloudy 程度更重，cloudy 只是多云，overcast 则是全被云遮住。口语和书面语都常用，作表语或定语均可。易错点是中式误译为“多云”或“阴郁”，其实它侧重天气而非心情。反义词是 clear 或 sunny（晴朗）。",
+   "examples": [
+    {
+     "en": "It's been overcast all day, so we stayed indoors.",
+     "zh": "今天一整天都是阴天，所以我们待在室内。"
+    },
+    {
+     "en": "The sky turned overcast before the storm arrived.",
+     "zh": "暴风雨来临前，天空变得阴沉。"
+    }
+   ],
+   "tags": [
+    "天气"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "thunderstorm",
+   "pair": "en-zh",
+   "slug": "thunderstorm",
+   "lang": "en",
+   "translation": "雷雨",
+   "shortAnswer": "thunderstorm 的中文意思是雷雨，指伴有闪电和雷声的强对流天气，不是普通的下雨天。它强调雷电交加的天气现象，常伴随大雨和强风，与一般的降雨有本质区别。",
+   "definition": "thunderstorm 指雷雨，是一种伴有闪电和雷声的强对流天气，通常还会带来大雨和强风。常见搭配有 heavy rain（大雨）、strong winds（强风）、severe thunderstorm（强雷雨）。这个词在天气预报和日常对话中都常用，描述天气时多用 it 句型，如 there's a thunderstorm coming。易错点在于把它简单等同于普通下雨天，其实它强调雷电活动。相关词有 thunder（雷声）和 lightning（闪电），二者是构成雷雨的核心要素。",
+   "examples": [
+    {
+     "en": "A severe thunderstorm hit the city last night, bringing heavy rain and strong winds.",
+     "zh": "昨晚一场强雷雨袭击了这座城市，带来了大雨和强风。"
+    },
+    {
+     "en": "Don't go hiking today; there's a thunderstorm coming this afternoon.",
+     "zh": "今天别去远足了，下午会有雷雨。"
+    }
+   ],
+   "tags": [
+    "天气"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "rainstorm",
+   "pair": "en-zh",
+   "slug": "rainstorm",
+   "lang": "en",
+   "translation": "暴雨",
+   "shortAnswer": "rainstorm 对应的中文是「暴雨」，指短时集中、往往伴随强风的强降雨天气。它比普通的 heavy rain 更强调雨势猛烈，又不同于 storm 泛指暴风雨、typhoon 指台风。",
+   "definition": "rainstorm 的核心含义是「暴雨」，即短时间内强度很大的降雨，常伴有强风。常见搭配有 heavy rainstorm（强暴雨）、be caught in a rainstorm（遇上暴雨）、a sudden rainstorm（突如其来的暴雨）。它既可用于日常叙述，也可用于天气报道等正式场合。易错点在于把它与 storm 混为一谈：storm 泛指暴风雨等恶劣天气，范围更广；typhoon 则专指台风。日常说「下大雨」可用 heavy rain，但强调暴雨天气时用 rainstorm 更贴切。",
+   "examples": [
+    {
+     "en": "We were caught in a sudden rainstorm on our way home.",
+     "zh": "我们在回家的路上遇上了突如其来的暴雨。"
+    },
+    {
+     "en": "The rainstorm flooded many streets and delayed the morning traffic.",
+     "zh": "这场暴雨淹没了许多街道，导致早高峰交通延误。"
+    }
+   ],
+   "tags": [
+    "天气"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "cloudy",
+   "pair": "en-zh",
+   "slug": "cloudy",
+   "lang": "en",
+   "translation": "多云的、阴天的",
+   "shortAnswer": "cloudy 中文意思是“多云的”，指天空被云覆盖但通常没有降水，常用 it 句型如 It's cloudy today；与 overcast 相比，cloudy 云层较薄、天色较亮，而 overcast 更阴沉。",
+   "definition": "cloudy 的核心含义是“多云的”，描述天空被云覆盖但通常没有降水的状态，常用于天气表达，如 It's cloudy today。常见搭配有 partly cloudy（局部多云）和 mostly cloudy（大部分多云），表示云量不同。口语和书面语均常用，正式天气播报也常见。易错点：不要与 overcast 混淆，overcast 指阴天，云层更厚更暗，而 cloudy 云量可多可少、天色相对较亮；也不宜误译为“下雨的”。反义词或对应词是 clear（晴朗的）或 sunny（阳光充足的）。",
+   "examples": [
+    {
+     "en": "It's cloudy this morning, so take an umbrella just in case.",
+     "zh": "今天早上多云，带把伞以防万一。"
+    },
+    {
+     "en": "The sky was cloudy all day, but it didn't rain.",
+     "zh": "天空整天多云，但没有下雨。"
+    }
+   ],
+   "tags": [
+    "天气"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "raining",
+   "pair": "en-zh",
+   "slug": "raining",
+   "lang": "en",
+   "translation": "下雨、正在下雨",
+   "shortAnswer": "raining 中文意思是下雨、正在下雨，指雨正在下。它是动词 rain 的现在分词，常与 be 动词连用构成现在进行时，描述天气时通常用 it 作主语，如 It is raining。",
+   "definition": "raining 是动词 rain 的现在分词，核心意思是“（天）正在下雨”，描述天气时通常用 it 作主语，如 It is raining。常见搭配有 It is raining hard（雨下得很大）、It was raining when...（当……时正在下雨）。正式和口语场合都常用，口语里也常说 It's raining。易错点：一是漏掉 be 动词，说成 It raining；二是把“大雨”说成 big rain，正确说法是 heavy rain，小雨可说 light rain 或 a drizzle。对应词是 rain（雨、下雨），反义或相对情况是晴天、不下雨。",
+   "examples": [
+    {
+     "en": "It is raining hard outside, so take an umbrella with you.",
+     "zh": "外面雨下得很大，所以带把伞吧。"
+    },
+    {
+     "en": "It was raining when we left the station.",
+     "zh": "我们离开车站的时候正在下雨。"
+    }
+   ],
+   "tags": [
+    "天气"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "shower",
+   "pair": "en-zh",
+   "slug": "shower",
+   "lang": "en",
+   "translation": "阵雨、淋浴",
+   "shortAnswer": "shower 对应中文“阵雨”，指来得快去得也快的短时降雨；它也可指“淋浴”，靠语境区分。作天气时是可数名词，常搭配 a shower、showers，多用 it 句型，如 It's just a shower。",
+   "definition": "shower 作天气名词时指“阵雨”，即短时间、来去匆匆的降雨，是可数名词，常搭配 a shower、showers，多用 it 句型，如 It's just a shower. 与不可数的 rain（雨）不同。它还可指“淋浴”，靠语境区分。常见搭配有 a sudden shower（一场突如其来的阵雨）、a passing shower（一场过路的阵雨）、get caught in a shower（遇上阵雨）。口语和书面语均常用。易错点：不要把所有 shower 都译成“淋浴”，看到天气语境应译“阵雨”；也不要把 shower 当作不可数名词，说 a shower 而非 a rain。对应词为 rain（雨）。",
+   "examples": [
+    {
+     "en": "We got caught in a sudden shower on the way home.",
+     "zh": "我们在回家路上遇上一场突如其来的阵雨。"
+    },
+    {
+     "en": "It was only a passing shower, so the sun came out again soon.",
+     "zh": "那只是一场过路的阵雨，所以太阳很快又出来了。"
+    }
+   ],
+   "tags": [
+    "天气"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "snowing",
+   "pair": "en-zh",
+   "slug": "snowing",
+   "lang": "en",
+   "translation": "下雪、正在下雪",
+   "shortAnswer": "snowing 对应的中文是下雪、正在下雪，指雪正从天空落下这一正在进行的天气现象。它强调动作正在进行，通常说 It's snowing，用 it 作主语，而不是说天空在下雪。",
+   "definition": "snowing 是动词 snow 的现在分词，表示正在下雪，常与 be 动词连用构成进行时，如 It's snowing。描述天气时须用 it 作形式主语，不能说 The sky is snowing。常见搭配有 snow heavily（下大雪）、snow lightly（下小雪），表示程度用副词而非 big snow。它多用于口语和日常天气描述，正式书面语中也可出现。易错点是把它与名词 snow（雪）混淆，或按中文习惯误加主语。对应词为下雪，反义情境是不下雪、天晴。",
+   "examples": [
+    {
+     "en": "Look outside, it's snowing heavily.",
+     "zh": "看外面，雪下得很大。"
+    },
+    {
+     "en": "It was snowing all night, so the roads are covered now.",
+     "zh": "雪下了一整夜，所以现在路上都被雪盖住了。"
+    }
+   ],
+   "tags": [
+    "天气"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "blizzard",
+   "pair": "en-zh",
+   "slug": "blizzard",
+   "lang": "en",
+   "translation": "暴雪、暴风雪",
+   "shortAnswer": "blizzard 中文是暴雪、暴风雪，专指风雪交加、风力强劲、能见度极低的暴风雪，多用于北美；普通大雪只说 heavy snow，不要用 blizzard。",
+   "definition": "blizzard 指伴随强风、能见度极低的暴风雪，强调风雪交加而非单纯下大雪，多用于北美地区。常见搭配有 be caught in a blizzard（遭遇暴风雪）、a blizzard hits/blows in（暴风雪来袭），描述天气常用 it 句型，如 It's blowing a blizzard。正式与口语场合均可用。易错点是把普通大雪说成 blizzard，其实普通大雪应说 heavy snow，只有风雪交加、能见度极低时才用 blizzard。对应词为暴雪、暴风雪，反义或对应天气词可理解为晴朗无风。",
+   "examples": [
+    {
+     "en": "We got caught in a blizzard on the way home and could barely see the road.",
+     "zh": "我们在回家路上遭遇了暴风雪，几乎看不清路。"
+    },
+    {
+     "en": "It's blowing a blizzard out there, so all flights have been canceled.",
+     "zh": "外面正刮着暴风雪，所以所有航班都取消了。"
+    }
+   ],
+   "tags": [
+    "天气"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "dense fog",
+   "pair": "en-zh",
+   "slug": "dense-fog",
+   "lang": "en",
+   "translation": "大雾、浓雾",
+   "shortAnswer": "dense fog 中文是「大雾」或「浓雾」，指能见度极低的浓雾。它是天气预报的标准搭配，形容雾浓用 dense 或 thick，不说 big fog。",
+   "definition": "dense fog 指能见度极低的浓雾，是天气预报中的标准搭配，中文常译为「大雾」或「浓雾」。常见搭配有 dense fog warning（大雾预警）、dense fog covered the highway（大雾笼罩高速公路）。正式播报和日常口语都可用，但形容雾浓时用 dense 或 thick，不用 big fog，这是中式英语常见的误译。近义词 thick fog 同样表示浓雾，可互换使用；反义或对应表达是 light fog（轻雾）或 mist（薄雾）。",
+   "examples": [
+    {
+     "en": "Dense fog covered the highway this morning, so all flights were delayed.",
+     "zh": "今天早晨大雾笼罩高速公路，因此所有航班都延误了。"
+    },
+    {
+     "en": "Drivers are advised to slow down because dense fog has reduced visibility to less than 50 meters.",
+     "zh": "由于大雾使能见度降至不足 50 米，建议司机减速慢行。"
+    }
+   ],
+   "tags": [
+    "天气"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "foggy",
+   "pair": "en-zh",
+   "slug": "foggy",
+   "lang": "en",
+   "translation": "有雾的、多雾的、雾天的",
+   "shortAnswer": "foggy 对应的中文是「有雾的、多雾的」，形容被雾笼罩的天气。它和名词 fog（雾）不同，foggy 是形容词，所以要说 It's foggy today，而不能说 It's fog today。",
+   "definition": "foggy 是形容词，核心意思是「有雾的、多雾的」，用来描述被雾气笼罩的天气或环境。常见搭配有 foggy morning（多雾的早晨）、foggy weather（雾天）、a foggy day（雾天），口语中多用 it 句型，如 It's foggy today。它适用于日常口语和书面描述，没有明显的正式与随意之分。易错点在于把名词 fog 当形容词用，说成 It's fog today，这是典型的中式误译；另外要注意与 misty（薄雾的）、cloudy（多云的）区分，foggy 强调雾较浓、能见度低。反义或对应表达可用 clear（晴朗的）、sunny（阳光充足的）。",
+   "examples": [
+    {
+     "en": "It's very foggy this morning, so please drive slowly.",
+     "zh": "今天早上雾很大，请慢点开车。"
+    },
+    {
+     "en": "We stayed home on that cold, foggy day.",
+     "zh": "在那个寒冷多雾的日子，我们待在了家里。"
+    }
+   ],
+   "tags": [
+    "天气"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "smog",
+   "pair": "en-zh",
+   "slug": "smog",
+   "lang": "en",
+   "translation": "雾霾",
+   "shortAnswer": "smog 的中文意思是雾霾，指工业烟尘与雾气混合形成的污染空气。它与自然形成的 fog（雾）不同，smog 强调其中含有污染成分，因此不能把雾霾天说成 foggy。",
+   "definition": "smog 指由烟尘与雾混合形成的空气污染，是 smoke 与 fog 的合成词，多用于描述城市雾霾。常见搭配有 heavy smog（严重雾霾）、thick smog（浓重雾霾）、be blanketed in smog（被雾霾笼罩）。该词在正式报道和日常口语中都常见，但描述天气时更偏正式。易错点在于与 fog 混淆：fog 是自然形成的雾，不含污染义，而 smog 强调污染成分，因此雾霾天不宜用 foggy 形容。对应中文词为雾霾。",
+   "examples": [
+    {
+     "en": "Beijing was covered in thick smog, so schools canceled outdoor activities.",
+     "zh": "北京被厚厚的雾霾笼罩，所以学校取消了户外活动。"
+    },
+    {
+     "en": "The smog in the city is so heavy that you can barely see the buildings across the street.",
+     "zh": "这座城市的雾霾非常严重，你几乎看不清街对面的建筑。"
+    }
+   ],
+   "tags": [
+    "天气"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "windy",
+   "pair": "en-zh",
+   "slug": "windy",
+   "lang": "en",
+   "translation": "大风、风大的、多风的",
+   "shortAnswer": "windy 对应的中文是“大风、风大的、多风的”，核心含义是形容风很大、多风的天气。它只作形容词，不能当名词用，所以“大风”这个名词概念要说 strong wind 或 gale。",
+   "definition": "windy 是形容词，意为“风大的、多风的”，专门描述天气状况，常见搭配有 a windy day（刮风的一天）、It's windy.（今天风很大）、too windy to go out（风太大无法出门）。日常口语和书面语都常用，尤其天气播报里很常见。易错点在于把它当名词用，比如想说“今天有大风”不能写 Today has windy，而应说 It's windy today 或 There's a strong wind today。表示“大风”这一名词概念时，要用 strong wind 或 gale。反义或对应词可想到 calm（无风的）、still（静止无风的）。",
+   "examples": [
+    {
+     "en": "It's very windy today, so hold on to your hat.",
+     "zh": "今天风很大，抓紧你的帽子。"
+    },
+    {
+     "en": "We stayed inside because it was too windy to go hiking.",
+     "zh": "因为风太大无法远足，我们待在了室内。"
+    }
+   ],
+   "tags": [
+    "天气"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "typhoon",
+   "pair": "en-zh",
+   "slug": "typhoon",
+   "lang": "en",
+   "translation": "台风",
+   "shortAnswer": "typhoon 对应的中文是台风，指西北太平洋及中国南海一带的强热带气旋；同样性质的风暴在大西洋叫 hurricane，在印度洋叫 cyclone，区别主要在发生海域。",
+   "definition": "typhoon 指发生在西北太平洋及中国南海的强热带气旋，是这一海域对热带风暴的专称。常见搭配有 a typhoon hits somewhere（台风袭击某地）、the typhoon makes landfall（台风登陆）、a powerful typhoon（强台风）。该词在正式报道和日常口语中都常用，天气预报、新闻里出现频率很高。易错点在于把全球同类风暴都叫 typhoon：大西洋和东北太平洋的应称 hurricane（飓风），印度洋的应称 cyclone（气旋），中文里也常按海域区分。反义或对应词可想到 calm（平静无风）这类表示天气平稳的说法。",
+   "examples": [
+    {
+     "en": "A powerful typhoon hit the coast of Zhejiang last night, bringing heavy rain and strong winds.",
+     "zh": "昨晚一场强台风袭击了浙江沿海，带来暴雨和强风。"
+    },
+    {
+     "en": "The typhoon is moving northwest and is expected to make landfall tomorrow morning.",
+     "zh": "台风正向西北方向移动，预计明天早上登陆。"
+    }
+   ],
+   "tags": [
+    "天气"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "hurricane",
+   "pair": "en-zh",
+   "slug": "hurricane",
+   "lang": "en",
+   "translation": "飓风",
+   "shortAnswer": "hurricane 的中文是飓风，指北大西洋、加勒比海和东北太平洋的强热带气旋。它与西北太平洋的 typhoon 同物异名，只是按海域区分叫法。",
+   "definition": "hurricane 指北大西洋、加勒比海和东北太平洋的强热带气旋，中心风速达到一定强度。常见搭配有 hurricane season（飓风季）、hurricane warning（飓风警报）、hurricane landfall（飓风登陆）。正式和口语场合均可用，但气象报道中更常与 typhoon、cyclone 并列出现。易错点：中文里常把 hurricane 与台风混为一谈，实际上台风对应西北太平洋的 typhoon，而 hurricane 专指另一些海域；也不宜误译为龙卷风，龙卷风是 tornado。对应词为 typhoon、cyclone，三者同物异名，按海域区分。",
+   "examples": [
+    {
+     "en": "The hurricane made landfall in Florida, bringing heavy rain and strong winds.",
+     "zh": "飓风在佛罗里达登陆，带来暴雨和强风。"
+    },
+    {
+     "en": "Residents were advised to evacuate before the hurricane reached the coast.",
+     "zh": "居民被建议在飓风到达海岸前撤离。"
+    }
+   ],
+   "tags": [
+    "天气"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "tornado",
+   "pair": "en-zh",
+   "slug": "tornado",
+   "lang": "en",
+   "translation": "龙卷风",
+   "shortAnswer": "tornado 的中文意思是龙卷风，指陆地上出现的漏斗状强旋风；海上生成的同类风暴多叫 waterspout，注意别与台风 typhoon 混用。",
+   "definition": "tornado 指陆地上生成的漏斗状强旋风，中文译为龙卷风，是可数名词，常与 hit、strike、touch down 等动词搭配，如 A tornado hit the town（一场龙卷风袭击了小镇）。它多指美国内陆常见的龙卷风，口语和正式报道中都常用。易错点在于：海上生成的同类风暴通常叫 waterspout，不要与台风 typhoon、飓风 hurricane 混为一谈，后两者是范围更大的热带气旋。",
+   "examples": [
+    {
+     "en": "A tornado touched down just outside the town and tore roofs off several houses.",
+     "zh": "一场龙卷风在镇外着陆，掀掉了好几户人家的屋顶。"
+    },
+    {
+     "en": "The sky turned greenish black before the tornado hit.",
+     "zh": "龙卷风来袭前，天空变成了墨绿色。"
+    }
+   ],
+   "tags": [
+    "天气"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "hail",
+   "pair": "en-zh",
+   "slug": "hail",
+   "lang": "en",
+   "translation": "冰雹",
+   "shortAnswer": "hail 中文意思是冰雹，指从云中降落的冰粒，通常作不可数名词。它还可作动词表示“招呼、欢呼”，如 hail a taxi，注意与天气义区分。",
+   "definition": "hail 作名词时指冰雹，是从云中降落的坚硬冰粒，通常不可数，如 hail stones（冰雹粒）、a hail storm（冰雹风暴）。作动词时意为“招呼、欢呼”，如 hail a taxi（招呼出租车）、hail a hero（欢呼英雄）。天气义多用于正式或新闻描述，动词义在口语和书面语中均常见。易错点：不要把天气义的 hail 与动词“招呼”义混淆，也不要把 hail 误当可数名词说 a hail。对应词为冰雹，反义或对应概念可联系雪、雨等降水形式。",
+   "examples": [
+    {
+     "en": "The storm brought heavy hail that damaged the crops.",
+     "zh": "这场风暴带来了大冰雹，毁坏了庄稼。"
+    },
+    {
+     "en": "It started to hail, so we ran for cover.",
+     "zh": "开始下冰雹了，所以我们跑去找地方躲避。"
+    }
+   ],
+   "tags": [
+    "天气"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "lightning",
+   "pair": "en-zh",
+   "slug": "lightning",
+   "lang": "en",
+   "translation": "闪电",
+   "shortAnswer": "lightning 的中文意思是闪电，指云层放电产生的闪光。它和 thunder 不同：lightning 是光，thunder 是雷声，先见闪电后闻雷声，两者不能互换。",
+   "definition": "lightning 是不可数名词，指自然界的闪电，即云层放电产生的闪光。常见搭配有 a flash of lightning（一道闪电）、struck by lightning（被闪电击中）。它多用于天气描述和日常表达，正式与口语场合均可。易错点：常与 thunder 混淆，thunder 指雷声，是声音，lightning 是光，不能互换；汉语中“闪电”也指极快，但英文 lightning 作名词时通常不直接表示“极快”，需用 like lightning 等短语。对应词是 thunder（雷声），两者常同时出现于暴风雨场景。",
+   "examples": [
+    {
+     "en": "The storm came with heavy rain and frequent flashes of lightning.",
+     "zh": "暴风雨伴随着大雨和频繁的闪电。"
+    },
+    {
+     "en": "A tree in the park was struck by lightning last night.",
+     "zh": "昨晚公园里的一棵树被闪电击中了。"
+    }
+   ],
+   "tags": [
+    "天气"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "cold snap",
+   "pair": "en-zh",
+   "slug": "cold-snap",
+   "lang": "en",
+   "translation": "寒流、寒潮",
+   "shortAnswer": "cold snap 的中文意思是寒流、寒潮，指突然来袭、持续数日的寒冷天气。它和 cold wave 不同，后者多指气象学上的寒潮警报。",
+   "definition": "cold snap 是口语和新闻中常用的可数名词，指突然来袭、持续数日的寒潮天气，常搭配 a brief cold snap、a severe cold snap 或 in a cold snap。描述天气时多用 it 句型，如 It's a cold snap。它不等于 cold wave，后者多指气象学上的寒潮警报。反义或对应词可想到 warm spell（暖潮）。",
+   "examples": [
+    {
+     "en": "A sudden cold snap hit the city last week, and temperatures dropped below zero overnight.",
+     "zh": "上周一股突如其来的寒流袭击了这座城市，气温一夜之间降到零度以下。"
+    },
+    {
+     "en": "Don't put away your winter coat yet; another cold snap is on the way.",
+     "zh": "先别把冬衣收起来，又一股寒流即将到来。"
+    }
+   ],
+   "tags": [
+    "天气"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "thunder",
+   "pair": "en-zh",
+   "slug": "thunder",
+   "lang": "en",
+   "translation": "打雷、雷声",
+   "shortAnswer": "thunder 的中文意思是打雷、雷声，指雷声而非闪电；常用 it 句型，如 It's thundering outside.（外面在打雷）。",
+   "definition": "thunder 作名词指雷声，不可数，常与 lightning 成对出现；作动词表示打雷，多用 it 作主语。常见搭配有 a clap of thunder（一声响雷）、thunder and lightning（雷电）。正式或口语场合均可使用。易错点：thunder 指雷声，lightning 指闪电，不能混用；中文说“打雷”，英文常用 it 句型，如 It's thundering outside.。对应词为 lightning（闪电）。",
+   "examples": [
+    {
+     "en": "It's thundering outside, so we'd better stay indoors.",
+     "zh": "外面在打雷，我们最好待在室内。"
+    },
+    {
+     "en": "The storm brought heavy rain, and a loud clap of thunder woke everyone up.",
+     "zh": "暴风雨带来了大雨，一声响雷把大家都吵醒了。"
+    }
+   ],
+   "tags": [
+    "天气"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "dry",
+   "pair": "en-zh",
+   "slug": "dry",
+   "lang": "en",
+   "translation": "干燥",
+   "shortAnswer": "dry 对应的中文是干燥，指缺乏水分或降雨稀少。它描述的是状态，比如天气干燥、空气湿度低；注意与 dried 不同，dried 指被弄干。",
+   "definition": "dry 的核心意思是干燥，指缺乏水分或降雨稀少。常见搭配有 dry weather（干燥的天气）、dry season（旱季）、dry spell（持续干旱期），多用于描述气候、天气或空气湿度低。正式和口语场合都常用，比如天气预报说 it is dry。易错点：dry 是状态形容词，表示本身干燥；dried 指被弄干，如 dried fruit（果干），不要混用。反义词是 wet（潮湿的），对应词是干燥。",
+   "examples": [
+    {
+     "en": "The weather has been very dry this month, so we haven't seen any rain.",
+     "zh": "这个月天气非常干燥，所以我们一直没见到雨。"
+    },
+    {
+     "en": "It's so dry that my lips are chapping.",
+     "zh": "天气太干燥了，我的嘴唇都裂了。"
+    }
+   ],
+   "tags": [
+    "天气"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "humid",
+   "pair": "en-zh",
+   "slug": "humid",
+   "lang": "en",
+   "translation": "潮湿、闷热潮湿",
+   "shortAnswer": "humid 指空气潮湿、闷热，中文常说“潮湿”或“闷热潮湿”。它专门形容空气里水汽多，常和 hot、warm 连用，如 hot and humid，而不直接形容物体表面湿。",
+   "definition": "humid 的核心意思是空气潮湿、水汽多，常带闷热感，中文多译为“潮湿”或“闷热潮湿”。常见搭配有 humid weather（潮湿的天气）、hot and humid（又热又潮）、a humid summer（潮湿的夏天）。它多用于描述天气和气候，口语和书面语都常见。易错点是：humid 形容空气，不直接形容物体表面湿，物体表面湿一般用 wet 或 damp，别把“衣服潮湿”说成 humid clothes。反义词是 dry（干燥的）。",
+   "examples": [
+    {
+     "en": "It's hot and humid in Guangzhou in summer, so you sweat as soon as you go outside.",
+     "zh": "广州夏天又热又潮湿，一出门就出汗。"
+    },
+    {
+     "en": "The air felt so humid that my clothes stuck to my skin.",
+     "zh": "空气太潮湿了，我的衣服都粘在皮肤上。"
+    }
+   ],
+   "tags": [
+    "天气"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "muggy",
+   "pair": "en-zh",
+   "slug": "muggy",
+   "lang": "en",
+   "translation": "闷热、湿热的",
+   "shortAnswer": "muggy 对应的中文是闷热、湿热，形容又热又潮湿、空气黏重的天气，多用于夏季，让人浑身黏腻难受。它强调湿热的黏重感，与 dry heat（干热）不同。",
+   "definition": "muggy 形容天气又热又潮湿、空气黏重，令人感觉浑身黏腻难受，多出现在夏季。常见搭配有 It's muggy today.（今天很闷热）、a muggy summer night（闷热的夏夜），也常与 hot、sticky、oppressive 连用。口语和书面语都常用，日常聊天里说天气闷热时很自然。易错点是把它与 dry heat（干热）混用：muggy 的核心是潮湿黏重，干热天气并不闷。反义或对应说法可用 dry、crisp 等表示干爽。",
+   "examples": [
+    {
+     "en": "It's so muggy today that my shirt is sticking to my back.",
+     "zh": "今天太闷热了，我的衬衫都粘在背上了。"
+    },
+    {
+     "en": "We couldn't sleep because of the muggy July night.",
+     "zh": "七月那个闷热的夜晚让我们睡不着觉。"
+    }
+   ],
+   "tags": [
+    "天气"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "heat wave",
+   "pair": "en-zh",
+   "slug": "heat-wave",
+   "lang": "en",
+   "translation": "热浪",
+   "shortAnswer": "heat wave 的中文是热浪，指连续多日的高温天气。它强调持续性的异常高温，是可数名词，常说 a heat wave 或 heat waves，不要写成 hot wave。",
+   "definition": "heat wave 指连续数日的异常高温天气，中文对应热浪。常见搭配有 a heat wave hit（热浪袭击）、suffer a heat wave（遭受热浪）、during the heat wave（热浪期间）。它多用于正式或新闻报道，口语中也常用。注意它是可数名词，前面可加 a，复数形式为 heat waves。易错点：不要按中文直译成 hot wave，也不要用它指单日高温。反义或对应词可想到 cold wave（寒潮），两者都表示持续多日的极端天气。",
+   "examples": [
+    {
+     "en": "A heat wave hit the city last week, with temperatures above 40°C.",
+     "zh": "上周一场热浪袭击了这座城市，气温超过40摄氏度。"
+    },
+    {
+     "en": "During the heat wave, many people stayed indoors with the air conditioning on.",
+     "zh": "热浪期间，许多人待在室内开着空调。"
+    }
+   ],
+   "tags": [
+    "天气"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "dad",
+   "pair": "en-zh",
+   "slug": "dad",
+   "lang": "en",
+   "translation": "爸爸",
+   "shortAnswer": "dad 中文意思是爸爸，是日常口语中最常用的称呼，比 father 更亲昵。它常作称呼语直接叫人或指自己的父亲，如 Hi, Dad!；正式书面语多用 father。",
+   "definition": "dad 指父亲，中文对应爸爸，是口语和非正式场合最常用的说法，比 father 更亲昵。它常作称呼语直接叫人或指自己的父亲，如 Hi, Dad!、my dad。正式书面语多用 father。注意 dad 只指父亲一方，不涉及父系母系或长幼。常见搭配有 my dad（我爸爸）、Hi, Dad!（嗨，爸爸）。易错点：不要与 father 混用场合，正式文书宜用 father；也不要误译成其他亲属称谓。对应词为 father。",
+   "examples": [
+    {
+     "en": "My dad taught me how to ride a bike when I was five.",
+     "zh": "我五岁时，爸爸教我骑自行车。"
+    },
+    {
+     "en": "Dad, can you pick me up after school today?",
+     "zh": "爸爸，你今天放学后能来接我吗？"
+    }
+   ],
+   "tags": [
+    "家庭"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "mom",
+   "pair": "en-zh",
+   "slug": "mom",
+   "lang": "en",
+   "translation": "妈妈、母亲",
+   "shortAnswer": "mom 对应的中文是妈妈，是美式英语中对母亲的口语称呼，语气亲切随意。它与英式拼法 mum 意思相同，只是拼写和发音习惯不同；正式书面语中则多用 mother。",
+   "definition": "mom 是美式英语里对母亲的口语称呼，相当于中文的“妈妈”，语气亲切，多用于日常对话。常见搭配如 my mom（我妈妈）、mom and dad（爸妈）、call my mom（给妈妈打电话）。它属于非正式口语，正式场合或书面语通常改用 mother；英式英语中对应的拼法是 mum。易错点在于，英语亲属称谓不区分父系母系，也不分长幼，妈妈的父母统称 grandparents，不像中文要分“外公外婆”或“爷爷奶奶”。",
+   "examples": [
+    {
+     "en": "My mom makes the best dumplings in the world.",
+     "zh": "我妈妈做的饺子是世界上最好吃的。"
+    },
+    {
+     "en": "I call my mom every Sunday evening.",
+     "zh": "我每周日晚上都给妈妈打电话。"
+    }
+   ],
+   "tags": [
+    "家庭"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "older sister",
+   "pair": "en-zh",
+   "slug": "older-sister",
+   "lang": "en",
+   "translation": "姐姐",
+   "shortAnswer": "older sister 对应的中文是姐姐，指比自己年长的同辈女性手足。英语亲属称谓不区分父系母系，但必须区分长幼，所以姐姐用 older sister，比自己小的妹妹则用 younger sister。",
+   "definition": "older sister 指比自己年长的姐妹，中文通常译为姐姐。英语亲属称谓不区分父系母系，但严格区分长幼，因此姐姐和妹妹要用不同说法。常见搭配有 my older sister（我的姐姐）、her older sister（她的姐姐）、look up to one's older sister（敬佩自己的姐姐）。正式场合可用 elder sister，口语中也可说 big sister。易错点是中式思维容易把姐姐直译成 sister，但 sister 只表示姐妹，不体现长幼，容易造成误解。对应词是 younger sister（妹妹），反义表达可理解为比自己年幼的姐妹。",
+   "examples": [
+    {
+     "en": "My older sister is a doctor, and she often helps me with my homework.",
+     "zh": "我姐姐是一名医生，她经常帮我做作业。"
+    },
+    {
+     "en": "She looks up to her older sister and wants to be just like her.",
+     "zh": "她很敬佩自己的姐姐，想成为像她一样的人。"
+    }
+   ],
+   "tags": [
+    "家庭"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "younger sister",
+   "pair": "en-zh",
+   "slug": "younger-sister",
+   "lang": "en",
+   "translation": "妹妹",
+   "shortAnswer": "younger sister 的中文意思是妹妹，指比自己年纪小的同辈女性手足。英语里必须用 younger 标明长幼，只说 sister 无法区分姐姐还是妹妹，所以 younger sister 对应的是妹妹，而不是姐姐。",
+   "definition": "younger sister 指比自己小的同辈女性手足，中文对应“妹妹”。英语中 sister 只表示姐妹，不体现长幼，因此要靠 younger 或 older 来区分排行，younger sister 即妹妹，older sister 即姐姐。常见搭配如 my younger sister（我的妹妹）、his younger sister（他的妹妹）。正式场合多用 younger sister，口语中也可说 little sister，但后者更随意。易错点是把它误译成“姐姐”，或以为 sister 本身就能表示妹妹。反义对应词是 older sister（姐姐）。",
+   "examples": [
+    {
+     "en": "My younger sister is still in high school, and she wants to study medicine.",
+     "zh": "我妹妹还在上高中，她想学医。"
+    },
+    {
+     "en": "He often takes care of his younger sister when their parents are at work.",
+     "zh": "父母上班时，他经常照顾妹妹。"
+    }
+   ],
+   "tags": [
+    "家庭"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "grandpa",
+   "pair": "en-zh",
+   "slug": "grandpa",
+   "lang": "en",
+   "translation": "爷爷、外公",
+   "shortAnswer": "grandpa 中文意思是爷爷或外公，泛指祖父辈的男性长辈。英语中 grandpa 不区分父系母系，爷爷和外公都叫 grandpa，要明确区分时需加 paternal 或 maternal。",
+   "definition": "grandpa 是口语中常用的称呼，指祖父或外祖父，相当于中文的爷爷或外公。英语本身不区分父系母系，因此同一个 grandpa 既可指父亲的父亲，也可指母亲的父亲。常见搭配有 paternal grandpa（爷爷，父系）和 maternal grandpa（外公，母系），也可说 grandpa on my father's side 或 on my mother's side。正式场合多用 grandfather。易错点在于中文习惯严格区分爷爷奶奶与外公外婆，而英语日常口语通常不区分，直接说 grandpa 即可，需要强调时才加限定词。对应词为 grandma（奶奶或外婆）。",
+   "examples": [
+    {
+     "en": "My grandpa on my father's side taught me how to fish.",
+     "zh": "我的爷爷教了我怎么钓鱼。"
+    },
+    {
+     "en": "She visits her maternal grandpa every weekend.",
+     "zh": "她每个周末都去看望她的外公。"
+    }
+   ],
+   "tags": [
+    "家庭"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "uncle",
+   "pair": "en-zh",
+   "slug": "uncle",
+   "lang": "en",
+   "translation": "叔叔、舅舅、伯伯、姑父、姨父",
+   "shortAnswer": "uncle 对应中文的叔叔、舅舅、伯伯、姑父、姨父等，泛指父母的兄弟及姑姨的丈夫。与中文不同，英语的 uncle 不区分父系母系，也不分长幼，需明确时可加 paternal 或 maternal 说明。",
+   "definition": "uncle 是英语中表示亲属关系的常用词，核心指父母的兄弟以及姑母、姨母的丈夫，涵盖中文的叔叔、舅舅、伯伯、姑父、姨父等。它不区分父系或母系，也不分长幼，因此一个 uncle 可能对应多个中文称谓。若需区分，可用 paternal uncle 表示父系一方，maternal uncle 表示母系一方，也可加 older 或 younger 说明排行。口语中常直接称呼 Uncle 加名字。易错点是中文习惯把父系母系分得很细，而英语统称 uncle，翻译时需根据语境判断具体是哪个亲属。对应词为 aunt（姑姨、舅母等）。",
+   "examples": [
+    {
+     "en": "My uncle taught me how to ride a bike when I was six.",
+     "zh": "我六岁时，叔叔教我骑自行车。"
+    },
+    {
+     "en": "We visited my maternal uncle in Guangzhou during the Spring Festival.",
+     "zh": "春节期间我们去广州看望了舅舅。"
+    }
+   ],
+   "tags": [
+    "家庭"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "son",
+   "pair": "en-zh",
+   "slug": "son",
+   "lang": "en",
+   "translation": "儿子",
+   "shortAnswer": "son 的中文意思是儿子，指男性子女，与 daughter（女儿）相对。英语中 son 不区分长幼，长子可说 eldest son，独子则说 only son。",
+   "definition": "son 指男性子女，即中文的“儿子”，与 daughter 相对。常见搭配有 only son（独子）、eldest son（长子）。英语亲属称谓不区分父系母系，也不像中文那样在单词本身区分长幼，需要表达“长子”时用 eldest son。正式场合和口语中均通用。易错点：不要将 son 与 boy 混淆，boy 泛指男孩，而 son 强调父母与男性子女的亲属关系；反义词或对应词是 daughter。",
+   "examples": [
+    {
+     "en": "Their eldest son is studying medicine at university.",
+     "zh": "他们的长子正在大学学医。"
+    },
+    {
+     "en": "He taught his son how to ride a bicycle.",
+     "zh": "他教儿子怎样骑自行车。"
+    }
+   ],
+   "tags": [
+    "家庭"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "cousin",
+   "pair": "en-zh",
+   "slug": "cousin",
+   "lang": "en",
+   "translation": "表哥、堂哥、表弟、堂弟、表姐、堂姐、表妹、堂妹",
+   "shortAnswer": "cousin 对应的中文是表哥、堂哥、表弟、堂弟、表姐、堂姐、表妹、堂妹等。它指同辈的堂或表兄弟姐妹，不区分父系母系、性别和长幼，所以一个 cousin 可能对应多个中文称呼。",
+   "definition": "cousin 是英语中表示同辈堂/表兄弟姐妹的常用词，涵盖中文的表哥、堂哥、表弟、堂弟、表姐、堂姐、表妹、堂妹等。常见搭配有 older cousin（年长的堂/表亲）、younger cousin（年幼的堂/表亲）、cousin on my mother's side（母亲那边的表亲）。口语和书面语均通用。易错点：中文严格区分堂表、男女、长幼，而英语 cousin 一概不分，因此不能直接对应单一中文词；若需特指，可用 older male cousin 或 cousin on my mother's side 等说明。对应词包括 relative（亲戚）、sibling（兄弟姐妹），但 cousin 专指堂/表同辈。",
+   "examples": [
+    {
+     "en": "My cousin is two years older than me, so I call him my older cousin.",
+     "zh": "我表哥比我大两岁，所以我叫他表哥。"
+    },
+    {
+     "en": "I'm visiting my cousin in Shanghai next week.",
+     "zh": "我下周要去上海看望我的表哥。"
+    }
+   ],
+   "tags": [
+    "家庭"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "aunt",
+   "pair": "en-zh",
+   "slug": "aunt",
+   "lang": "en",
+   "translation": "阿姨、姑姑、姨妈、舅妈、伯母、婶婶",
+   "shortAnswer": "aunt 对应中文的阿姨、姑姑、姨妈、舅妈、伯母、婶婶等，指父母的姐妹或姑姨。它不区分父系母系和长幼，口语中常用 auntie 表示亲昵，必要时用 paternal aunt 或 maternal aunt 明确。",
+   "definition": "aunt 是英语中表示父母姐妹或姑姨的常用词，中文可译为阿姨、姑姑、姨妈、舅妈、伯母、婶婶等，具体译法取决于亲属关系。它不区分父系母系，也不分长幼，因此一个 aunt 可能对应多种中文称谓。常见搭配有 paternal aunt（父系姑母）和 maternal aunt（母系姨母），口语中常用 auntie 表示亲昵。正式场合可用完整称谓，日常则多用 aunt 或 auntie。易错点在于中文习惯区分父系母系和长幼，而英语 aunt 一词统称，翻译时需根据上下文选择合适的中文词。对应词为 uncle（叔叔、舅舅等）。",
+   "examples": [
+    {
+     "en": "My aunt lives in Shanghai and works as a teacher.",
+     "zh": "我的阿姨住在上海，是一名教师。"
+    },
+    {
+     "en": "She is my maternal aunt, my mother's younger sister.",
+     "zh": "她是我的姨妈，我妈妈的妹妹。"
+    }
+   ],
+   "tags": [
+    "家庭"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "daughter",
+   "pair": "en-zh",
+   "slug": "daughter",
+   "lang": "en",
+   "translation": "女儿",
+   "shortAnswer": "daughter 对应的中文是女儿，指父母视角的直系女性后代，亲生或收养皆可。它与 son 相对，且英语不区分长幼，若要强调排行需加 eldest、youngest 等词。",
+   "definition": "daughter 指女儿，即父母视角的直系女性后代，亲生或收养均可，复数为 daughters。常见搭配有 my daughter（我的女儿）、only daughter（独生女）、eldest daughter（长女）。该词在正式与口语场合都通用，属家庭基本词汇。易错点在于英语不区分长幼，中文说大女儿、小女儿时不能只靠 daughter 表达，需加 eldest、youngest 等修饰；也不要与表示一般女性后代的词混淆。其对应词是 son（儿子），二者相对。",
+   "examples": [
+    {
+     "en": "Their eldest daughter is studying medicine in Beijing.",
+     "zh": "他们的大女儿正在北京学医。"
+    },
+    {
+     "en": "She treats her students as if they were her own daughters.",
+     "zh": "她待学生如同自己的女儿一般。"
+    }
+   ],
+   "tags": [
+    "家庭"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "husband",
+   "pair": "en-zh",
+   "slug": "husband",
+   "lang": "en",
+   "translation": "丈夫",
+   "shortAnswer": "husband 对应的中文是丈夫，指已婚女子的配偶，与 wife（妻子）相对，是日常最常用的说法。它不区分长幼或辈分，口语里也常用老公、夫婿来表达同一个意思。",
+   "definition": "husband 的核心词义是丈夫，即已婚女子的配偶，与 wife（妻子）相对。常见搭配如 her husband（她的丈夫）、my husband（我丈夫）、husband and wife（夫妻）。这个词在正式和口语场合都通用，口语中还可以用 hubby 作为亲昵称呼。需要注意的是，英语的 husband 不区分长幼或辈分，中文里的丈夫、老公、夫婿译成英语都用 husband，不要按中文习惯另造说法。对应词是 wife，即妻子。",
+   "examples": [
+    {
+     "en": "Her husband picks her up from work every day.",
+     "zh": "她丈夫每天接她下班。"
+    },
+    {
+     "en": "My husband and I have been married for ten years.",
+     "zh": "我和我丈夫结婚已经十年了。"
+    }
+   ],
+   "tags": [
+    "家庭"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "wife",
+   "pair": "en-zh",
+   "slug": "wife",
+   "lang": "en",
+   "translation": "妻子",
+   "shortAnswer": "wife 对应的中文是妻子，指已婚男性的配偶。它只表示已经结婚的妻子，不包括订婚对象或女友，因此不能用来翻译未婚妻或女朋友。",
+   "definition": "wife 的核心词义是妻子，即已婚男性的配偶，与 husband（丈夫）相对，复数为 wives。常见搭配有 my wife（我的妻子）、ex-wife（前妻）、housewife（家庭主妇）。这个词在正式和口语场合都通用，但使用时要注意它只对应「妻子」这一身份。容易出错的地方是把 wife 与 girlfriend（女友）、fiancée（未婚妻）混用，中文里也不能把未婚妻说成 wife。",
+   "examples": [
+    {
+     "en": "He always helps his wife with the housework on weekends.",
+     "zh": "他周末总是帮妻子做家务。"
+    },
+    {
+     "en": "My wife and I have been married for ten years.",
+     "zh": "我和妻子已经结婚十年了。"
+    }
+   ],
+   "tags": [
+    "家庭"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "parents",
+   "pair": "en-zh",
+   "slug": "parents",
+   "lang": "en",
+   "translation": "父母",
+   "shortAnswer": "parents 的中文意思是父母，指父亲和母亲两个人。它是 parent 的复数形式，单数 parent 只指父亲或母亲中的一位，所以用 parents 时通常意味着双亲都在语境中出现。",
+   "definition": "parents 是名词 parent 的复数，统称父亲和母亲两人，不区分父系母系。常见搭配有 my parents（我的父母）、her parents（她的父母）、live with one's parents（和父母同住）、parents' meeting（家长会）。日常口语和书面语都常用。易错点：中文说“我父母”时对应 my parents，但若只提到其中一位，应说 my mother 或 my father，不能用 parents 指代一人；单亲家庭说 single parent，也不能用 parents。对应词是单数 parent，反义或对照概念可想到 child（孩子）。",
+   "examples": [
+    {
+     "en": "My parents both work in a hospital.",
+     "zh": "我的父母都在医院工作。"
+    },
+    {
+     "en": "She lives with her parents while studying at university.",
+     "zh": "她上大学期间和父母住在一起。"
+    }
+   ],
+   "tags": [
+    "家庭"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "twins",
+   "pair": "en-zh",
+   "slug": "twins",
+   "lang": "en",
+   "translation": "双胞胎",
+   "shortAnswer": "twins 中文意思是双胞胎，指同一胎出生的两个孩子。英语不区分长幼，只说 twin brother 或 twin sister。",
+   "definition": "twins 是英语名词 twin 的复数形式，指同一胎出生的两个孩子，中文对应“双胞胎”。常见搭配有 identical twins（同卵双胞胎）和 fraternal twins（异卵双胞胎）。单数 twin 指双胞胎之一，如 twin brother（双胞胎兄弟）、twin sister（双胞胎姐妹）。英语不区分长幼，没有“哥哥/弟弟”或“姐姐/妹妹”的对应说法。易错点：中文常说“龙凤胎”，英语通常用 boy-girl twins 或 mixed-gender twins 表达。正式和口语场合均通用。",
+   "examples": [
+    {
+     "en": "She gave birth to twins last week.",
+     "zh": "她上周生了一对双胞胎。"
+    },
+    {
+     "en": "The twins look exactly the same, so I can never tell them apart.",
+     "zh": "这对双胞胎长得一模一样，我永远分不清他们谁是谁。"
+    }
+   ],
+   "tags": [
+    "家庭"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "older brother",
+   "pair": "en-zh",
+   "slug": "older-brother",
+   "lang": "en",
+   "translation": "哥哥",
+   "shortAnswer": "older brother 对应的中文是“哥哥”，指比自己年长的兄弟。英语中 brother 不区分长幼，要明确表示“哥哥”就必须加上 older 或 elder 来限定排行。",
+   "definition": "older brother 是英语中表示“哥哥”的常用说法，指比自己年长的男性兄弟。英语的 brother 泛指兄弟，不区分长幼，因此需要加 older 或 elder 来明确排行；口语中也常用 big brother。常见搭配有 my older brother（我哥哥）、her older brother（她哥哥）等。正式场合多用 elder brother，日常口语则 older brother 和 big brother 都很自然。易错点是直接说 brother 可能被理解为弟弟或哥哥，无法确定长幼；反义对应词是 younger brother（弟弟）。",
+   "examples": [
+    {
+     "en": "My older brother taught me how to ride a bike.",
+     "zh": "我哥哥教我骑自行车。"
+    },
+    {
+     "en": "She has two older brothers and one younger sister.",
+     "zh": "她有两个哥哥和一个妹妹。"
+    }
+   ],
+   "tags": [
+    "家庭"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "younger brother",
+   "pair": "en-zh",
+   "slug": "younger-brother",
+   "lang": "en",
+   "translation": "弟弟",
+   "shortAnswer": "younger brother 的中文是弟弟，指比自己小的男性同胞。英语亲属称谓区分长幼，younger brother 强调对方比自己年幼，而 older brother 才是哥哥；口语中若无需强调长幼，常直接说 brother。",
+   "definition": "younger brother 指弟弟，即比自己年幼的男性同胞。英语亲属称谓不区分父系母系，但严格区分长幼：younger brother 对应弟弟，older brother 对应哥哥。常见搭配如 my younger brother（我的弟弟）、her younger brother（她的弟弟）。正式场合或需要明确长幼时用 younger brother，日常口语中常省略 younger，直接说 my brother 或称呼名字。易错点：中文的“弟弟”不能与“哥哥”混用，英语中 younger brother 也不能用来指哥哥。对应词为 older brother（哥哥）。",
+   "examples": [
+    {
+     "en": "My younger brother is still in high school.",
+     "zh": "我弟弟还在上高中。"
+    },
+    {
+     "en": "She has two younger brothers and one older sister.",
+     "zh": "她有两个弟弟和一个姐姐。"
+    }
+   ],
+   "tags": [
+    "家庭"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "mother-in-law",
+   "pair": "en-zh",
+   "slug": "mother-in-law",
+   "lang": "en",
+   "translation": "婆婆、岳母",
+   "shortAnswer": "mother-in-law 对应中文是婆婆或岳母，指配偶的母亲。英语中不区分丈夫的母亲还是妻子的母亲，同一个词既指婆婆也指岳母，具体含义要看说话人是谁。",
+   "definition": "mother-in-law 指配偶的母亲，中文里按说话人性别和婚姻关系分别叫婆婆（丈夫的母亲）或岳母（妻子的母亲）。英语不分父系母系，也不分丈夫或妻子的母亲，统一用 mother-in-law。口语中常说 my mother-in-law，正式场合也用这个词。常见搭配如 live with one's mother-in-law（和婆婆或岳母同住）、get along with one's mother-in-law（与婆婆或岳母相处融洽）。易错点是把它和 stepmother（继母）混淆，前者是配偶的母亲，后者是父亲的再婚妻子。对应词是 father-in-law（公公、岳父）。",
+   "examples": [
+    {
+     "en": "My mother-in-law is coming to stay with us for a week.",
+     "zh": "我婆婆要来我们家住一个星期。"
+    },
+    {
+     "en": "She gets along well with her mother-in-law.",
+     "zh": "她跟婆婆相处得很好。"
+    }
+   ],
+   "tags": [
+    "家庭"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "only child",
+   "pair": "en-zh",
+   "slug": "only-child",
+   "lang": "en",
+   "translation": "独生子女、独生女、独生子",
+   "shortAnswer": "only child 指家中唯一的孩子，中文常说独生子女，不分男女；若特指女儿可说独生女，特指儿子可说独生子，但日常用 only child 即可涵盖。",
+   "definition": "only child 的核心意思是家中唯一的孩子，不区分性别，因此儿子女儿都适用。常见搭配如 an only child（一个独生子女）、the only child in the family（家中唯一的孩子）。正式和口语场合都常用。易错点：中文常按性别说“独生女”或“独生子”，但英文 only child 本身不含性别信息，若想强调女儿应说 only daughter，强调儿子说 only son。反义或对应表达可提及有兄弟姐妹，如 have siblings。",
+   "examples": [
+    {
+     "en": "As an only child, she often wished for a sibling to play with.",
+     "zh": "作为独生女，她常常希望有个兄弟姐妹一起玩。"
+    },
+    {
+     "en": "He married an only child, so they both dote on her parents.",
+     "zh": "他娶了一个独生女，因此他们俩都很孝敬她的父母。"
+    }
+   ],
+   "tags": [
+    "家庭"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "grandma",
+   "pair": "en-zh",
+   "slug": "grandma",
+   "lang": "en",
+   "translation": "奶奶、外婆",
+   "shortAnswer": "grandma 对应中文的奶奶和外婆，指父亲的母亲或母亲的母亲。英语不区分父系母系，一个词统称两边的祖母；要明确区分时，需加 paternal 或 maternal 等说明。",
+   "definition": "grandma 是英语中对祖母和外祖母的统称，对应中文的奶奶（父系）和外婆（母系）。常见搭配有 paternal grandmother（奶奶）、maternal grandmother（外婆）、grandma on my father's side（我奶奶）等。口语中 grandma 最常用，正式场合可用 grandmother。易错点：中文严格区分父系母系，而英语 grandma 本身不区分，若只译成奶奶或外婆会丢失信息，需根据语境补充说明。对应词为 grandpa（爷爷、外公）。",
+   "examples": [
+    {
+     "en": "My grandma on my father's side makes the best dumplings.",
+     "zh": "我奶奶包的饺子最好吃。"
+    },
+    {
+     "en": "In English, both your paternal and maternal grandmother are called grandma.",
+     "zh": "在英语中，你的奶奶和外婆都叫 grandma。"
+    }
+   ],
+   "tags": [
+    "家庭"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "father-in-law",
+   "pair": "en-zh",
+   "slug": "father-in-law",
+   "lang": "en",
+   "translation": "岳父、公公",
+   "shortAnswer": "father-in-law 中文常译为岳父或公公，指配偶的父亲。若说话人是男性，通常指岳父；若说话人是女性，则指公公。英语不区分妻之父与夫之父，需靠语境判断具体所指。",
+   "definition": "father-in-law 指配偶的父亲，中文按说话人性别分为岳父（妻子的父亲）和公公（丈夫的父亲），英语统称一个词。常见搭配如 my father-in-law（我的岳父/公公）、her father-in-law（她的公公）、visit one's father-in-law（看望某人的岳父/公公）。正式与口语场合均通用。易错点：不能一律译成“岳父”，女性说话时通常指公公；复数形式为 fathers-in-law，所有格用 father-in-law's。对应词为 mother-in-law（岳母/婆婆）。",
+   "examples": [
+    {
+     "en": "My father-in-law taught me how to fish.",
+     "zh": "我的岳父教我钓鱼。"
+    },
+    {
+     "en": "We visited her father-in-law in the hospital yesterday.",
+     "zh": "我们昨天去医院看望了她的公公。"
+    }
+   ],
+   "tags": [
+    "家庭"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "hobby",
+   "pair": "en-zh",
+   "slug": "hobby",
+   "lang": "en",
+   "translation": "爱好、兴趣",
+   "shortAnswer": "hobby 的中文意思是爱好，指工作之余为消遣而长期从事的活动。它与兴趣略有不同，更强调长期投入的具体活动，而非一时的好奇。",
+   "definition": "hobby 是可数名词，复数为 hobbies，指工作之余为消遣而长期从事的活动，中文常译为爱好或兴趣。常见搭配有 go swimming（去游泳）、play basketball（打篮球）、do yoga（做瑜伽），其中 go 接动名词，play 接球类棋牌，乐器前加 the，其余多用 do。正式与口语场合均适用。易错点：不要将 hobby 与 habit（习惯）混淆，hobby 强调主动选择的消遣活动，habit 则指不自觉的重复行为。对应词为 pastime（消遣），反义表达可理解为工作或义务。",
+   "examples": [
+    {
+     "en": "My favorite hobby is playing the guitar, and I also go swimming every weekend.",
+     "zh": "我最喜欢的爱好是弹吉他，而且我每个周末还去游泳。"
+    },
+    {
+     "en": "Collecting stamps is a popular hobby among people of all ages.",
+     "zh": "集邮是各个年龄段的人都喜欢的一种爱好。"
+    }
+   ],
+   "tags": [
+    "兴趣爱好"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "dancing",
+   "pair": "en-zh",
+   "slug": "dancing",
+   "lang": "en",
+   "translation": "跳舞",
+   "shortAnswer": "dancing 对应的中文是“跳舞”，指跳舞这项活动或行为。它强调活动本身，常与 go 连用构成 go dancing，表示“去跳舞”，而不是用 go to dance 来表达这个意思。",
+   "definition": "dancing 是动词 dance 的动名词形式，中文意思是“跳舞”，指跳舞这项活动或行为。常见搭配是 go dancing，表示“去跳舞”，例如 go dancing every weekend（每个周末去跳舞）。它多用于日常口语和书面语中谈论兴趣爱好。易错点在于，表示“去跳舞”这一活动时英语习惯说 go dancing，而不说 go to dance；另外，具体舞种如芭蕾、探戈要用 ballet、tango 等词，不用 dancing 代替。与之相关的词有 dance（跳舞，动词或名词）、dancer（舞者）。",
+   "examples": [
+    {
+     "en": "My grandmother loves going dancing with her friends on Saturday nights.",
+     "zh": "我奶奶喜欢周六晚上和朋友们去跳舞。"
+    },
+    {
+     "en": "Learning dancing takes a lot of practice and patience.",
+     "zh": "学跳舞需要大量练习和耐心。"
+    }
+   ],
+   "tags": [
+    "兴趣爱好"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "singing",
+   "pair": "en-zh",
+   "slug": "singing",
+   "lang": "en",
+   "translation": "唱歌",
+   "shortAnswer": "singing 对应的中文是唱歌，指唱歌这一活动，是动词 sing 的动名词形式。它强调唱歌的行为或爱好本身，而不是某一次具体的演唱动作，因此常出现在描述兴趣、习惯或正在进行的活动里。",
+   "definition": "singing 的核心意思是唱歌，是 sing 的动名词形式，既可用作名词表示唱歌活动，也可用作动词的现在分词表示正在唱。常见搭配有 go singing（去唱歌）、singing competition（歌唱比赛）、singing voice（歌喉）。它多用于日常口语和兴趣爱好语境，也可用于正式场合描述声乐表演。易错点在于“去唱歌”应说 go singing，而不是 go to sing；另外要注意与 song（歌曲）区分，singing 指行为，song 指作品。对应词是 singing 的名词形式 song。",
+   "examples": [
+    {
+     "en": "She loves singing in the shower.",
+     "zh": "她喜欢在洗澡时唱歌。"
+    },
+    {
+     "en": "We went singing at the karaoke bar last night.",
+     "zh": "昨晚我们去卡拉OK唱歌了。"
+    }
+   ],
+   "tags": [
+    "兴趣爱好"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "drawing",
+   "pair": "en-zh",
+   "slug": "drawing",
+   "lang": "en",
+   "translation": "画画、图画",
+   "shortAnswer": "drawing 中文是“画画”或“图画”，指画的动作或画出来的作品；它是名词，动词原形是 draw，所以“画画”这个爱好常说 do drawing 或 go drawing。",
+   "definition": "drawing 作名词，核心含义是“画画”这一活动，也可指“图画”本身。常见搭配有 do drawing（进行画画）、go drawing（去画画），表示爱好时不用 play drawing。它多用于日常口语和一般书面语，正式场合也可用。易错点：drawing 是名词，不能直接当动词用，比如“我画画”应说 I draw 或 I do drawing，不能说 I drawing；另外不要与 draw（动词，画）混淆。对应词是 draw，反义或相对概念可指书写、拍照等其他记录方式。",
+   "examples": [
+    {
+     "en": "She likes doing drawing in her free time.",
+     "zh": "她空闲时间喜欢画画。"
+    },
+    {
+     "en": "We often go drawing in the park on weekends.",
+     "zh": "我们周末经常去公园画画。"
+    }
+   ],
+   "tags": [
+    "兴趣爱好"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "photography",
+   "pair": "en-zh",
+   "slug": "photography",
+   "lang": "en",
+   "translation": "摄影、摄影术",
+   "shortAnswer": "photography 的中文是摄影，指用相机拍摄照片的活动或技术。它是不可数名词，强调摄影这件事或摄影术本身，而不是某一张照片；拍照的动作常说 take photos，从事摄影则说 do photography。",
+   "definition": "photography 是名词，不可数，指摄影活动或摄影术，即用相机记录影像的过程与技术。常见搭配有 do photography（从事摄影）、take up photography（开始学摄影）、photography club（摄影俱乐部）。它多用于正式或书面场合，口语里也常见。易错点：不能说 go photography，也不要用它指某张照片，单张照片是 photo 或 photograph；表示拍照动作用 take photos。与它相关的词有 photographer（摄影师）、photographic（摄影的）。",
+   "examples": [
+    {
+     "en": "She took up photography as a hobby after buying her first camera.",
+     "zh": "买了第一台相机后，她把摄影当成了爱好。"
+    },
+    {
+     "en": "He does photography on weekends and often joins a photography club.",
+     "zh": "他周末从事摄影，还经常参加摄影俱乐部。"
+    }
+   ],
+   "tags": [
+    "兴趣爱好"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "reading",
+   "pair": "en-zh",
+   "slug": "reading",
+   "lang": "en",
+   "translation": "读书、阅读",
+   "shortAnswer": "reading 对应的中文是读书、阅读，指看书读报的阅读活动。它作名词时表示阅读这件事本身，常与 love、enjoy 连用，比如 love reading 就是喜欢读书，注意爱好类不能说 go reading。",
+   "definition": "reading 作名词，核心意思是阅读、读书这一活动，也可指读物或阅读材料。常见搭配有 love reading（喜欢阅读）、enjoy reading（享受阅读）、reading novels（读小说）、reading habit（阅读习惯）。它适用于正式和口语场合，描述兴趣爱好时最常用。易错点在于中式表达：表示爱好时不能说 go reading 或 do reading，go 只接 swimming、shopping 这类活动；也不要把它和 read 的动词用法混淆，reading 更强调阅读这件事或状态。对应词是 read（读），反义可联想到不阅读、远离书本。",
+   "examples": [
+    {
+     "en": "I spend an hour reading every night before bed.",
+     "zh": "我每晚睡前花一小时读书。"
+    },
+    {
+     "en": "She loves reading novels in her free time.",
+     "zh": "她空闲时喜欢读小说。"
+    }
+   ],
+   "tags": [
+    "兴趣爱好"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "play the guitar",
+   "pair": "en-zh",
+   "slug": "play-the-guitar",
+   "lang": "en",
+   "translation": "弹吉他",
+   "shortAnswer": "弹吉他，指演奏吉他这种乐器。核心区别在于：乐器前必须加定冠词the，所以是play the guitar，而不是play guitar。",
+   "definition": "弹吉他，指演奏吉他这种乐器。常见搭配有play the guitar（弹吉他）、learn to play the guitar（学弹吉他）、play the guitar well（吉他弹得好）。正式和口语场合都适用。易错点是乐器前必须加定冠词the，中国学习者最爱漏掉，说成play guitar；而球类运动前则不加the，如play basketball。对应词是play the piano（弹钢琴）等play加the加乐器的结构。",
+   "examples": [
+    {
+     "en": "He learned to play the guitar when he was twelve.",
+     "zh": "他十二岁时学会了弹吉他。"
+    },
+    {
+     "en": "She likes to play the guitar and sing along on weekends.",
+     "zh": "她喜欢在周末弹吉他并跟着唱。"
+    }
+   ],
+   "tags": [
+    "兴趣爱好"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "writing",
+   "pair": "en-zh",
+   "slug": "writing",
+   "lang": "en",
+   "translation": "写作",
+   "shortAnswer": "writing 中文意思是写作。它指从事写作这一兴趣活动，通常说 do some writing 或 enjoy writing，强调动笔创作的过程，而不是指写好的作品或书法。",
+   "definition": "writing 作名词时核心含义是写作，指用文字表达思想、讲述故事或记录感受的活动。作为兴趣爱好，常用搭配有 do some writing（写点东西）、creative writing（创意写作）、enjoy writing（喜欢写作），不能说 play writing 或 go writing。它适用于正式与口语场合，既可指日常练笔，也可指文学创作。易错点是把 writing 误当成“书法”或“写好的文章”，其实它更强调写作这一行为过程。与 reading 相对，常作为个人爱好并列出现。",
+   "examples": [
+    {
+     "en": "In my free time, I enjoy writing short stories and poems.",
+     "zh": "空闲时，我喜欢写短篇小说和诗歌。"
+    },
+    {
+     "en": "She does some creative writing every weekend to relax.",
+     "zh": "她每个周末都写点创意作品来放松。"
+    }
+   ],
+   "tags": [
+    "兴趣爱好"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "relatives",
+   "pair": "en-zh",
+   "slug": "relatives",
+   "lang": "en",
+   "translation": "亲戚、亲属",
+   "shortAnswer": "亲戚、亲属。泛指有血缘或婚姻关系的人，不区分父系母系，也不分长幼亲疏；单数形式 relative 指一位亲戚，复数 relatives 则统称多位亲戚。",
+   "definition": "relatives 是 relative 的复数形式，中文常译为“亲戚”或“亲属”，指因血缘或婚姻而关联的人，不区分父系母系，也不分长幼亲疏。常见搭配如 close relatives（近亲）、distant relatives（远亲）、visit relatives（走亲戚）。正式与口语场合均可使用。易错点：中文亲属称谓细致，英语较笼统，如 uncle 可指叔叔、舅舅、伯伯，cousin 不分表堂与男女；需精确时用 paternal/maternal、older/younger 等限定。对应词为 relative（单数），反义可理解为非亲属或外人。",
+   "examples": [
+    {
+     "en": "We visited our relatives in the countryside during the Spring Festival.",
+     "zh": "春节期间我们去看望了乡下的亲戚。"
+    },
+    {
+     "en": "She has many relatives on her mother's side of the family.",
+     "zh": "她在母亲那边有很多亲戚。"
+    }
+   ],
+   "tags": [
+    "家庭"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "traveling",
+   "pair": "en-zh",
+   "slug": "traveling",
+   "lang": "en",
+   "translation": "旅行",
+   "shortAnswer": "traveling 的中文意思是「旅行」，指离开常住地到外地或国外游历。它常与 go 搭配构成 go traveling，表示「去旅行」，类似 go swimming，而不能说 go to travel 或 play traveling。",
+   "definition": "traveling 是动词 travel 的动名词或现在分词形式，核心含义是「旅行、游历」，既可指长途旅行，也可指一般的外出游玩。常见搭配有 go traveling（去旅行）、traveling abroad（出国旅行）、traveling during summer break（暑假期间旅行）。正式场合可用 travel 作名词，口语中更常说 go traveling。易错点：中文「去旅行」应说 go traveling，不能说 go to travel；旅行只能用 go，不能用 play 或 do，因为它是活动而非运动或游戏。对应词为 travel（旅行、行进），反义概念可理解为 stay（停留）或 remain（留下）。",
+   "examples": [
+    {
+     "en": "She loves going traveling during her summer break.",
+     "zh": "她喜欢在暑假期间去旅行。"
+    },
+    {
+     "en": "Traveling abroad can be exciting but also challenging.",
+     "zh": "出国旅行可能很刺激，但也充满挑战。"
+    }
+   ],
+   "tags": [
+    "兴趣爱好"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "camping",
+   "pair": "en-zh",
+   "slug": "camping",
+   "lang": "en",
+   "translation": "露营",
+   "shortAnswer": "camping 对应的中文是露营，指在户外搭帐篷过夜或野营的活动，强调活动本身。它常与 go 连用构成 go camping，而不能说 go to camp，后者指的是去某个营地。",
+   "definition": "camping 的核心意思是露营，指在户外（如山里、湖边）搭帐篷住宿、生火做饭的休闲活动，属于兴趣爱好类词汇。常见搭配有 go camping（去露营）、a camping trip（露营旅行）、camping gear（露营装备）。口语和书面语都常用，尤其多见于旅行、户外话题。易错点：表示去露营要用 go camping，不能说 go to camp，因为 camp 单独作名词指营地、营区，作动词也可表示扎营；也不能说 do camping。对应词 camp 侧重地点或扎营动作，camping 侧重活动本身。",
+   "examples": [
+    {
+     "en": "We go camping in the mountains every summer.",
+     "zh": "我们每年夏天都去山里露营。"
+    },
+    {
+     "en": "She bought a new tent for her camping trip.",
+     "zh": "她为露营旅行买了一个新帐篷。"
+    }
+   ],
+   "tags": [
+    "兴趣爱好"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "hiking",
+   "pair": "en-zh",
+   "slug": "hiking",
+   "lang": "en",
+   "translation": "爬山、徒步、远足",
+   "shortAnswer": "hiking 中文常译作爬山、徒步或远足，指以休闲健身为目的的户外徒步远足。它和 climb 不同，climb 多指攀登陡峭山峰的技术性攀爬，日常说去爬山一般用 go hiking，搭配动词固定用 go。",
+   "definition": "hiking 指以休闲健身为目的的徒步远足，通常在郊野、山间或步道上进行。常见搭配是 go hiking，表示去徒步或去爬山，例如 go hiking in the hills。它属于口语和书面都常用的表达，正式场合也可用 hiking 作名词，如 Hiking is a great way to relax。易错点是不要把它直译成 climb mountain，climb 多指攀登陡峭山峰的技术性攀爬，而日常说去爬山一般用 go hiking。对应词可理解为徒步、远足，反义或相对概念可想到乘车游览等非步行方式。",
+   "examples": [
+    {
+     "en": "We go hiking in the hills every weekend.",
+     "zh": "我们每个周末都去山里爬山。"
+    },
+    {
+     "en": "Hiking is a great way to relax and stay fit.",
+     "zh": "爬山是放松身心、保持健康的好方式。"
+    }
+   ],
+   "tags": [
+    "兴趣爱好"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "fishing",
+   "pair": "en-zh",
+   "slug": "fishing",
+   "lang": "en",
+   "translation": "钓鱼",
+   "shortAnswer": "fishing 的中文意思是钓鱼，指进行钓鱼这项活动或爱好。它常与 go 搭配，说 go fishing 表示去钓鱼，不能按中文习惯说成 play fishing 或 do fishing。",
+   "definition": "fishing 指钓鱼活动或爱好，可作名词使用，如 Fishing is a relaxing hobby。常见搭配有 go fishing（去钓鱼）、enjoy fishing（喜欢钓鱼），其中 go fishing 最常用，表示去做钓鱼这件事。正式或书面场合可用 fishing 指捕鱼业，但日常多指休闲钓鱼。易错点在于中文说“去钓鱼”容易直译成 play fishing 或 do fishing，英语中都不自然，应说 go fishing。与它相关的词有 angling，更强调用鱼竿垂钓；反义或对应活动可想到 hunting（打猎），但两者并非严格反义。",
+   "examples": [
+    {
+     "en": "My grandfather goes fishing by the lake every weekend.",
+     "zh": "我爷爷每个周末都去湖边钓鱼。"
+    },
+    {
+     "en": "Fishing is a relaxing hobby that teaches you patience.",
+     "zh": "钓鱼是一项能教会你耐心的放松型爱好。"
+    }
+   ],
+   "tags": [
+    "兴趣爱好"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "family",
+   "pair": "en-zh",
+   "slug": "family",
+   "lang": "en",
+   "translation": "家人、家庭、亲属",
+   "shortAnswer": "family 对应的中文是家人、家庭，指家庭整体或全体家庭成员，也可指亲属。它强调血缘或婚姻联结的群体，作主语时单复数皆可，与单纯指居住场所的 house 不同。",
+   "definition": "family 的核心含义是家庭或家人，既可指家庭这个整体单位，也可指全体家庭成员，还可泛指亲属。常见搭配有 family member（家庭成员）、start a family（成家、生养子女）、family tree（家谱）。正式与口语场合均常用，作主语时单复数皆可，如 My family lives in Shanghai 或 My family live in Shanghai。易错点是把 family 与 house 混用，house 指房屋建筑，family 指人；中文的“家”有时兼指住所与亲人，翻译时需按语境区分。对应词可包括 household（同住一户的人），反义或相对概念可想到 stranger（外人）。",
+   "examples": [
+    {
+     "en": "My family lives in Shanghai, but my grandparents stay in the countryside.",
+     "zh": "我家人住在上海，但我祖父母留在乡下。"
+    },
+    {
+     "en": "She wants to start a family after she turns thirty.",
+     "zh": "她想在三十岁以后成家。"
+    }
+   ],
+   "tags": [
+    "家庭"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "swimming",
+   "pair": "en-zh",
+   "slug": "swimming",
+   "lang": "en",
+   "translation": "游泳",
+   "shortAnswer": "swimming 对应的中文是游泳，指游泳这项运动或活动。表示去游泳常用 go swimming，不能说 play swimming，因为 play 一般用于球类或乐器。",
+   "definition": "swimming 指游泳运动或游泳活动，作名词时表示这项运动本身。常见搭配有 go swimming（去游泳）、do some swimming（游一会儿泳），口语和书面语都常用。易错点在于动词搭配：游泳只能用 go 或 do，不能说 play swimming，play 用于球类或乐器，如 play basketball。此外要注意与动词原形 swim 区分，swim 表示游泳这个动作，如 I swim every day，而 swimming 更强调运动或活动本身。对应词是游泳，反义或相对概念可理解为陆上运动。",
+   "examples": [
+    {
+     "en": "We often go swimming in the lake during summer.",
+     "zh": "夏天我们经常去湖里游泳。"
+    },
+    {
+     "en": "Swimming is a great way to stay fit and relax.",
+     "zh": "游泳是保持健康和放松的好方法。"
+    }
+   ],
+   "tags": [
+    "兴趣爱好"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "running",
+   "pair": "en-zh",
+   "slug": "running",
+   "lang": "en",
+   "translation": "跑步",
+   "shortAnswer": "running 中文意思是跑步，指以锻炼或休闲为目的的跑步运动。它常与 go 搭配，如 go running，表示去跑步，而不是用 play 或 do 直接接 running。",
+   "definition": "running 作名词或动名词，核心意思是跑步这项运动或活动，强调以双脚快速交替前进的方式锻炼身体。常见搭配有 go running（去跑步）、do some running（跑一会儿步）、take up running（开始跑步）。它多用于日常口语和一般书面语，描述健身习惯或兴趣爱好。易错点在于中式表达容易说成 play running 或 do running，正确说法是 go running。与 jogging（慢跑）相比，running 速度可快可慢，范围更广。对应中文就是跑步。",
+   "examples": [
+    {
+     "en": "I go running every morning to stay fit.",
+     "zh": "我每天早上都去跑步以保持健康。"
+    },
+    {
+     "en": "She took up running last year and has already run a marathon.",
+     "zh": "她去年开始跑步，已经跑过一次马拉松了。"
+    }
+   ],
+   "tags": [
+    "兴趣爱好"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "interest",
+   "pair": "en-zh",
+   "slug": "interest",
+   "lang": "en",
+   "translation": "兴趣",
+   "shortAnswer": "interest 对应中文“兴趣”，指对某人或某事感到好奇、关注或愿意投入时间。与“爱好”不同，兴趣更强调心理上的关注和倾向，不一定已经发展成固定活动。",
+   "definition": "interest 作“兴趣”讲时，指对人或事物感到好奇、关注并愿意了解或参与。常见搭配有 have an interest in（对……有兴趣）、take an interest in（对……产生兴趣）、show interest in（对……表现出兴趣），后接名词或动名词。表示“对……感兴趣”常用 be interested in，注意介词 in 不可省略。正式和口语场合均可用。易错点：不要漏掉介词 in，也不要与“爱好”混淆，兴趣侧重心理倾向，爱好侧重具体活动。对应词为“兴趣”，反义倾向为“漠不关心”。",
+   "examples": [
+    {
+     "en": "She has a strong interest in playing the guitar and practises every day.",
+     "zh": "她对弹吉他有着浓厚的兴趣，每天都练习。"
+    },
+    {
+     "en": "He showed great interest in learning how to swim when he was a child.",
+     "zh": "他小时候对学游泳表现出很大的兴趣。"
+    }
+   ],
+   "tags": [
+    "兴趣爱好"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "cycling",
+   "pair": "en-zh",
+   "slug": "cycling",
+   "lang": "en",
+   "translation": "骑行",
+   "shortAnswer": "cycling 的中文意思是骑行，指骑自行车这项运动或休闲活动，是不可数名词。它强调骑行本身作为爱好或出行方式，常见搭配是 go cycling，而不是 play cycling 或 do cycling。",
+   "definition": "cycling 指骑自行车这项运动或休闲活动，属于不可数名词，常见于兴趣爱好类语境。搭配上通常说 go cycling，也可说 do some cycling、enjoy cycling，强调骑行这项爱好本身。它既可以是日常通勤方式，也可以是周末休闲或锻炼方式。易错点在于中式表达容易说成 play cycling 或 do cycling，但固定搭配是 go cycling。与 riding 相比，cycling 更专指骑自行车，而 riding 还可指骑马、乘车等。对应中文词是骑行。",
+   "examples": [
+    {
+     "en": "My father goes cycling every weekend to stay healthy.",
+     "zh": "我爸爸每个周末都去骑行以保持健康。"
+    },
+    {
+     "en": "Cycling is a great way to explore the countryside.",
+     "zh": "骑行是探索乡间风光的好方式。"
+    }
+   ],
+   "tags": [
+    "兴趣爱好"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "play basketball",
+   "pair": "en-zh",
+   "slug": "play-basketball",
+   "lang": "en",
+   "translation": "打篮球",
+   "shortAnswer": "play basketball 的中文意思是打篮球，指进行篮球这项球类运动。球类运动前用 play，且名词前不加冠词，所以是 play basketball 而不是 play the basketball。",
+   "definition": "play basketball 意为打篮球，指参与篮球这项球类运动。核心结构是 play + 球类名词，且球类名词前不加冠词，如 play basketball、play football。常见搭配有 play basketball with friends（和朋友打篮球）、play basketball every weekend（每周末打篮球）。该表达适用于正式与口语场合。易错点在于受乐器用法影响，误写成 play the basketball；实际上乐器才加 the，如 play the piano，球类和棋类都不加，如 play chess。对应词为打篮球，反义或相对表达可理解为观看篮球比赛等非参与性活动。",
+   "examples": [
+    {
+     "en": "He plays basketball with his friends every Saturday afternoon.",
+     "zh": "他每周六下午都和朋友们打篮球。"
+    },
+    {
+     "en": "I hurt my ankle while playing basketball yesterday.",
+     "zh": "我昨天打篮球时扭伤了脚踝。"
+    }
+   ],
+   "tags": [
+    "兴趣爱好"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "yoga",
+   "pair": "en-zh",
+   "slug": "yoga",
+   "lang": "en",
+   "translation": "瑜伽",
+   "shortAnswer": "yoga 的中文意思是瑜伽，指一种通过体式、呼吸和冥想锻炼身心的运动或修行方式。它和普通运动不同，更强调身心结合，因此中文里没有更贴切的单字对应，直接音译为瑜伽。",
+   "definition": "yoga 是英语中的不可数名词，中文对应词是瑜伽，指起源于古印度、通过体位、呼吸控制和冥想达到身心平衡的练习体系。常见搭配是 do yoga，表示做瑜伽，例如每天练习；不能说 play yoga 或 go yoga，因为 yoga 不是球类或带 go 的活动。它也不可数，所以不说 a yoga 或 yogas。在正式场合可称瑜伽练习或瑜伽修行，口语中直接说做瑜伽即可。与健身、体操等词相比，yoga 更侧重呼吸、柔韧与内在平静，而非单纯的力量或竞技。",
+   "examples": [
+    {
+     "en": "She does yoga for half an hour every morning to stay flexible.",
+     "zh": "她每天早上做半小时瑜伽来保持身体柔韧。"
+    },
+    {
+     "en": "I tried yoga for the first time yesterday, and it was harder than I expected.",
+     "zh": "我昨天第一次尝试瑜伽，比我想象中难多了。"
+    }
+   ],
+   "tags": [
+    "兴趣爱好"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "gaming",
+   "pair": "en-zh",
+   "slug": "gaming",
+   "lang": "en",
+   "translation": "打游戏、玩电子游戏",
+   "shortAnswer": "gaming 中文意思是打游戏、玩电子游戏，指玩电子游戏这项活动或爱好。它作不可数名词，泛指这项爱好时用 gaming，搭配动词常用 go gaming，而不是照搬中文说 play game。",
+   "definition": "gaming 作不可数名词，指玩电子游戏这一活动或爱好，中文可译为打游戏、玩电子游戏。常见搭配有 go gaming（去打游戏）、online gaming（在线游戏）、the gaming industry（游戏产业）。它多用于泛指这项爱好或行业，口语和书面都常见。易错点在于中式表达：不要按中文说 play game，应说 I love gaming 或 go gaming；play 通常要接具体游戏，如 play a game。对应词是游戏活动本身，反义可理解为不玩游戏、远离游戏。",
+   "examples": [
+    {
+     "en": "He spends most of his weekends gaming with friends online.",
+     "zh": "他周末大部分时间都在网上和朋友一起打游戏。"
+    },
+    {
+     "en": "Gaming has become one of the most popular hobbies among teenagers.",
+     "zh": "打游戏已经成为青少年中最流行的爱好之一。"
+    }
+   ],
+   "tags": [
+    "兴趣爱好"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "watching movies",
+   "pair": "en-zh",
+   "slug": "watching-movies",
+   "lang": "en",
+   "translation": "看电影",
+   "shortAnswer": "watching movies 的中文意思是“看电影”，强调观看电影的动作或活动，常指在家或任何场所观看；若特指去电影院看电影，英语更常说 go to the movies。",
+   "definition": "watching movies 指“看电影”这一活动，侧重观看动作本身，不限定地点。常见搭配有 watch movies at home（在家看电影）、watch movies on Netflix（在奈飞上看电影）。口语和书面语均常用，正式场合也可说 viewing films。易错点：中文“看电影”可指去影院，但英语 watching movies 不一定指影院；表示去电影院常用 go to the movies。对应词有 watch a movie（看一部电影），反义或相对表达如 make a movie（拍电影）。",
+   "examples": [
+    {
+     "en": "I usually spend my weekends watching movies at home.",
+     "zh": "我通常在家看电影度过周末。"
+    },
+    {
+     "en": "She loves watching movies, but she prefers going to the movies with friends.",
+     "zh": "她喜欢看电影，但更喜欢和朋友去电影院看。"
+    }
+   ],
+   "tags": [
+    "兴趣爱好"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "binge-watching",
+   "pair": "en-zh",
+   "slug": "binge-watching",
+   "lang": "en",
+   "translation": "追剧",
+   "shortAnswer": "binge-watching 对应的中文是「追剧」，指连续大量地看剧集，一口气连看多集停不下来。它强调的是一次性投入大量时间连续观看，搭配动词用 go，如 go binge-watching，而不能说 play。",
+   "definition": "binge-watching 指一口气连看多集剧集，中文常译为「追剧」。核心含义是连续、大量地观看，隐含「停不下来」的意味，因为 binge 本义是「放纵、狂吃」。常见搭配是 go binge-watching（去追剧），不能说 play。它多用于口语和非正式场合，描述休闲娱乐行为。易错点在于把它直译成「狂看」而忽略「追剧」这一地道说法，或与「看剧」混淆——后者只是观看，不强调连续大量。对应词可理解为「追剧」，反义可联想「偶尔看一集」。",
+   "examples": [
+    {
+     "en": "I spent the whole weekend binge-watching that new series on Netflix.",
+     "zh": "我整个周末都在追 Netflix 上的那部新剧。"
+    },
+    {
+     "en": "We often go binge-watching together after work.",
+     "zh": "我们下班后经常一起追剧。"
+    }
+   ],
+   "tags": [
+    "兴趣爱好"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "play the piano",
+   "pair": "en-zh",
+   "slug": "play-the-piano",
+   "lang": "en",
+   "translation": "弹钢琴",
+   "shortAnswer": "play the piano 的中文意思是弹钢琴，指演奏钢琴这一乐器。注意 play 后接乐器时须加定冠词 the，如 play the piano；但接球类运动时不加 the，如 play basketball。",
+   "definition": "play the piano 表示弹钢琴，是兴趣爱好类固定搭配。核心词义为演奏钢琴，常见搭配如 learn to play the piano（学弹钢琴）、play the piano beautifully（钢琴弹得好）。正式或口语场合均可使用。易错点：乐器前必须加定冠词 the，如 play the piano/guitar/violin；而球类运动前不加 the，如 play basketball。对应词为弹钢琴，反义或对应表达可指其他乐器演奏，如 play the guitar（弹吉他）。",
+   "examples": [
+    {
+     "en": "She has been learning to play the piano since she was six years old.",
+     "zh": "她从六岁起就开始学弹钢琴。"
+    },
+    {
+     "en": "He can play the piano beautifully, and he often performs at school concerts.",
+     "zh": "他钢琴弹得很棒，经常在学校音乐会上表演。"
+    }
+   ],
+   "tags": [
+    "兴趣爱好"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "cooking",
+   "pair": "en-zh",
+   "slug": "cooking",
+   "lang": "en",
+   "translation": "做饭、烹饪",
+   "shortAnswer": "cooking 对应的中文是做饭、烹饪，指把食材加工成饭菜这件事。它常与 do 搭配，do the cooking 就是做饭，侧重家务或日常活动，一般不说 play cooking。",
+   "definition": "cooking 是 cook 的动名词形式，中文常译为做饭、烹饪，指把食材加工成饭菜的过程或这件事。常见搭配有 do the cooking（做饭，多指承担这项家务）、like cooking（喜欢做饭）、good at cooking（擅长做饭）。它既可用于日常口语，也可用于较正式的书面表达，谈论兴趣时很常用，如 I like cooking。易错点是受中文影响说成 play cooking 或 go cooking，这两种搭配都不合英语习惯，表示做饭这项活动应说 do the cooking 或 cook。",
+   "examples": [
+    {
+     "en": "My father does the cooking on weekends, and he is really good at it.",
+     "zh": "我爸爸周末负责做饭，他做得很好吃。"
+    },
+    {
+     "en": "Cooking is one of her favorite hobbies; she tries a new recipe every week.",
+     "zh": "做饭是她最喜欢的爱好之一，她每周都尝试一个新菜谱。"
+    }
+   ],
+   "tags": [
+    "兴趣爱好"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "gardening",
+   "pair": "en-zh",
+   "slug": "gardening",
+   "lang": "en",
+   "translation": "园艺",
+   "shortAnswer": "园艺，指种花、种菜这类爱好活动。它是不可数名词，搭配动词常用 do，比如 do some gardening，不能说 play gardening。",
+   "definition": "gardening 指园艺，即种花、种菜这类爱好活动，属于不可数名词，不加 s，也不说 a gardening。常见搭配有 do (some) gardening（做园艺）、go in for gardening（从事园艺），其中 do 是最常用的动词搭配。它多用于日常口语和一般书面语，描述一种休闲爱好。易错点在于中式表达容易说成 play gardening，但英语中园艺不是游戏类活动，不能用 play；也不要说 a gardening 或 gardenings。对应词是园艺，反义或相对概念可理解为不从事园艺活动。",
+   "examples": [
+    {
+     "en": "My grandfather does some gardening every morning before breakfast.",
+     "zh": "我爷爷每天早饭前都会弄一会儿园艺。"
+    },
+    {
+     "en": "She took up gardening after retiring and now grows her own vegetables.",
+     "zh": "她退休后开始做园艺，现在自己种蔬菜。"
+    }
+   ],
+   "tags": [
+    "兴趣爱好"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "baking",
+   "pair": "en-zh",
+   "slug": "baking",
+   "lang": "en",
+   "translation": "烘焙",
+   "shortAnswer": "baking 对应的中文是烘焙，指烤面包、蛋糕等点心，也可指这类活动本身。作爱好时通常说 go baking 或 do some baking，搭配方式类似 go swimming，一般不用 play。",
+   "definition": "baking 的核心意思是烘焙，即用烤箱烤制面包、蛋糕、饼干等食物，也可指烘焙这件事或这门手艺。常见搭配有 go baking（去烘焙）、do some baking（做些烘焙）、take up baking（开始学烘焙）、baking as a hobby（把烘焙当爱好）。它偏日常口语，也常见于兴趣话题。易错点在于：它是动名词，作爱好时不说 play baking，而用 go baking 或 do some baking，这与 go swimming 的用法一致；另外不要把它与 cooking（泛指烹饪）混为一谈，baking 特指烤箱烘焙。",
+   "examples": [
+    {
+     "en": "She took up baking as a hobby and now makes bread every weekend.",
+     "zh": "她把烘焙当作爱好，现在每个周末都做面包。"
+    },
+    {
+     "en": "We often go baking together on Sunday afternoons.",
+     "zh": "我们经常在周日下午一起去烘焙。"
+    }
+   ],
+   "tags": [
+    "兴趣爱好"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "coding",
+   "pair": "en-zh",
+   "slug": "coding",
+   "lang": "en",
+   "translation": "编程",
+   "shortAnswer": "coding 对应的中文是「编程」，指编写计算机程序这项活动。它是不可数名词，不能说 a coding，常与 do、learn、teach 等动词搭配，如 do coding 表示「编程、写代码」。",
+   "definition": "coding 指编写计算机程序，是动名词形式的不可数名词，中文常译为「编程」。常见搭配有 do coding（编程、写代码）、learn coding（学编程）、teach coding（教编程）。它多用于日常或非正式场合，正式语境中也常用 programming 表达相近意思。易错点在于把它当可数名词，说成 a coding 或 codings，这不符合英语习惯；另外不要与 code（代码、编码）混淆，coding 强调的是写代码这项活动本身。它的对应词是 programming，两者常可互换。",
+   "examples": [
+    {
+     "en": "She spends her weekends doing coding instead of going shopping.",
+     "zh": "她周末都在编程，而不是去购物。"
+    },
+    {
+     "en": "Learning coding has become a popular hobby for many teenagers.",
+     "zh": "学编程已经成为许多青少年热衷的爱好。"
+    }
+   ],
+   "tags": [
+    "兴趣爱好"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "collecting",
+   "pair": "en-zh",
+   "slug": "collecting",
+   "lang": "en",
+   "translation": "收藏",
+   "shortAnswer": "collecting 的中文意思是收藏，指长期、有系统地收集某类物品的动名词。它强调收集行为本身，常与邮票、硬币、手办等搭配，与表示单件收藏品的名词 collection 不同。",
+   "definition": "collecting 是动名词，核心含义是收藏，指长期、有系统地收集某类物品。常见搭配有 collecting stamps（集邮）、collecting coins（收藏硬币）、collecting vinyl records（收藏黑胶唱片）等。它多用于日常口语和书面语，描述个人爱好。易错点：不要与 collection 混淆，collection 指收藏品或收藏系列，而 collecting 强调收集行为；也不宜误译为“收集”以外的“采集”。对应词是 collection（收藏品）。",
+   "examples": [
+    {
+     "en": "My grandfather has been collecting stamps for over thirty years.",
+     "zh": "我祖父集邮已经三十多年了。"
+    },
+    {
+     "en": "Collecting vinyl records is an expensive but rewarding hobby.",
+     "zh": "收藏黑胶唱片是一项昂贵但很有成就感的爱好。"
+    }
+   ],
+   "tags": [
+    "兴趣爱好"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "crafts",
+   "pair": "en-zh",
+   "slug": "crafts",
+   "lang": "en",
+   "translation": "手工、手工艺",
+   "shortAnswer": "crafts 中文意思是手工、手工艺，指编织、陶艺、剪纸等动手制作活动。它通常用复数形式表示这类活动，常见搭配是 do crafts，而不是 play crafts。",
+   "definition": "crafts 指编织、陶艺、剪纸等动手制作活动，中文常译为手工或手工艺。表示这类活动时通常用复数，常见搭配有 do crafts（做手工）、make crafts（制作手工作品）、enjoy crafts（享受手工乐趣）、teach crafts（教手工课）、take part in crafts（参加手工活动）。搭配动词多用 do，不用 play crafts，这是常见的中式误译。crafts 侧重动手制作的过程与活动，与泛指手艺、技艺的 craft 单数形式略有不同，但中文里都可对应手工。",
+   "examples": [
+    {
+     "en": "On rainy days, the children like to do crafts at home with paper and glue.",
+     "zh": "下雨天，孩子们喜欢在家用纸和胶水做手工。"
+    },
+    {
+     "en": "She teaches crafts at the community center, where students learn pottery and weaving.",
+     "zh": "她在社区中心教手工，学生学习陶艺和编织。"
+    }
+   ],
+   "tags": [
+    "兴趣爱好"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "meditation",
+   "pair": "en-zh",
+   "slug": "meditation",
+   "lang": "en",
+   "translation": "冥想",
+   "shortAnswer": "meditation 的中文意思是冥想，指通过专注呼吸或特定对象来训练心智、获得平静的练习。它强调内在的静观与放松，与单纯发呆或走神不同，通常需要主动、有意识地练习。",
+   "definition": "meditation 是不可数名词，泛指冥想活动时不用复数，如 do meditation（做冥想）、practice meditation（练习冥想），不能说 play meditation。指某一次或某种冥想时可加冠词，如 a guided meditation（一次引导式冥想）。它属于兴趣爱好类词汇，正式与口语场合都常用。易错点：中文里「冥想」容易被误解为发呆或空想，但 meditation 强调有意识地专注与觉察，而非无目的的走神。与之相关的词有 mindfulness（正念），侧重当下觉察，而 meditation 更强调练习形式本身。",
+   "examples": [
+    {
+     "en": "I do ten minutes of meditation every morning before breakfast.",
+     "zh": "我每天早上早饭前做十分钟冥想。"
+    },
+    {
+     "en": "She joined a meditation class to help reduce stress.",
+     "zh": "她参加了一个冥想课程来帮助减压。"
+    }
+   ],
+   "tags": [
+    "兴趣爱好"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "play soccer",
+   "pair": "en-zh",
+   "slug": "play-soccer",
+   "lang": "en",
+   "translation": "踢足球",
+   "shortAnswer": "play soccer 的中文意思是踢足球，指进行足球这项运动。play 后接球类或棋类运动时，名词前不加 the，所以是 play soccer 而不是 play the soccer；soccer 是美式说法，英式英语常用 football。",
+   "definition": "play soccer 意为踢足球，指参与足球这项球类运动。play 与球类、棋类运动搭配时，名词前不加冠词，如 play soccer、play basketball；但接乐器时要加 the，如 play the guitar，这是常见易错点。soccer 是美式英语说法，英式英语通常说 football，两者都指足球运动。该短语既可用于日常口语，也可用于书面表达，如 My brother and I play soccer in the park every weekend。注意不要按中文语序误说成 play the soccer 或 play football 时混淆地区用法。对应中文词为踢足球，属于兴趣爱好类表达。",
+   "examples": [
+    {
+     "en": "My brother and I play soccer in the park every weekend.",
+     "zh": "我和我哥哥每个周末都在公园踢足球。"
+    },
+    {
+     "en": "She has played soccer since she was six years old.",
+     "zh": "她从六岁起就一直踢足球。"
+    }
+   ],
+   "tags": [
+    "兴趣爱好"
+   ],
+   "searchIntentType": "meaning"
+  }
+ ]
+}
