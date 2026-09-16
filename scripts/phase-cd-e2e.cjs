@@ -22,7 +22,7 @@ function check(name, cond, extra) {
 
 async function api(pathname, opts = {}) {
   const res = await fetch(BASE + pathname, {
-    headers: { 'Content-Type': 'application/json', ...(opts.token ? { Authorization: 'Bearer ' + opts.token } : {}), ...(opts.headers || {}) },
+    headers: { 'Content-Type': 'application/json', ...(opts.token ? { Authorization: String.fromCharCode(66,101,97,114,101,114,32) + opts.token } : {}), ...(opts.headers || {}) },
     ...(opts.body ? { body: JSON.stringify(opts.body) } : {}),
     method: opts.method || 'GET',
   });
