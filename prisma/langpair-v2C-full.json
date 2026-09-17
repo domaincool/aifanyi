@@ -1,0 +1,5535 @@
+{
+ "meta": {
+  "version": "v2-C-full",
+  "date": "2026-09-17",
+  "model": "deepseek-chat",
+  "source": "langpair-v2-batchC-20260917.json",
+  "pairCounts": {
+   "zh-en": 120,
+   "en-zh": 120
+  },
+  "slugStrategy": "zh=pinyin-pro (toneless, v), en=slugify"
+ },
+ "entries": [
+  {
+   "term": "点外卖",
+   "pair": "zh-en",
+   "slug": "dian-wai-mai",
+   "lang": "zh",
+   "translation": "order takeout",
+   "shortAnswer": "点外卖的英文是 order takeout，美式常用。注意 takeout 指打包带走，若叫外卖送到家则用 order delivery。",
+   "definition": "order takeout 指在餐厅点餐后打包带走，也可泛指叫外卖。美式英语常用 takeout，英式常用 takeaway。若要强调送货上门，应该说 order delivery。",
+   "examples": [
+    {
+     "en": "I'm too tired to cook tonight, so let's just order takeout.",
+     "zh": "今晚我太累了不想做饭，咱们点外卖吧。"
+    },
+    {
+     "en": "She ordered takeout from her favorite Chinese restaurant and picked it up on her way home.",
+     "zh": "她从最喜欢的中国餐馆点了外卖，并在回家路上去取。"
+    }
+   ],
+   "tags": [
+    "餐饮美食"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "order takeout",
+   "pair": "en-zh",
+   "slug": "order-takeout",
+   "lang": "en",
+   "translation": "点外卖",
+   "shortAnswer": "order takeout 的中文意思是点外卖，即从餐厅买食物带走或叫外卖。与 order delivery 不同，takeout 通常指自己去取，delivery 是送到家。",
+   "definition": "order takeout 意为点外卖，指从餐厅订购食物并打包带走。美式英语常用，英式用 takeaway。与 delivery 不同，takeout 一般需自取，delivery 是外送。",
+   "examples": [
+    {
+     "en": "I'm too tired to cook tonight, so let's just order takeout.",
+     "zh": "今晚我太累了不想做饭，咱们点外卖吧。"
+    },
+    {
+     "en": "She ordered takeout from her favorite Chinese restaurant and picked it up on her way home.",
+     "zh": "她从最喜欢的中国餐馆点了外卖，并在回家路上去取。"
+    }
+   ],
+   "tags": [
+    "餐饮美食"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "外带",
+   "pair": "zh-en",
+   "slug": "wai-dai",
+   "lang": "zh",
+   "translation": "to go",
+   "shortAnswer": "“外带”用英语说是 to go，常用于美式快餐点餐。完整说法是 I'd like it to go，与堂食 for here 相对。",
+   "definition": "to go 是美式口语，点餐时说 I'd like it to go 或 Two coffees to go。名词形式是 takeout（美式）/ takeaway（英式）；delivery 指专人送上门，与到店自取的外带不同。",
+   "examples": [
+    {
+     "en": "I'd like a large coffee to go, please.",
+     "zh": "我要一杯大杯咖啡，外带。"
+    },
+    {
+     "en": "Is this for here or to go?",
+     "zh": "您是在这儿吃还是外带？"
+    }
+   ],
+   "tags": [
+    "餐饮美食"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "to go",
+   "pair": "en-zh",
+   "slug": "to-go",
+   "lang": "en",
+   "translation": "外带",
+   "shortAnswer": "“to go”的中文意思是“外带”，指在餐厅点餐后带走食用。它与堂食 for here 相对，名词形式是 takeout 或 takeaway。",
+   "definition": "to go 是美式口语，置于名词后：a coffee to go。名词用 takeout（美）/ takeaway（英），指到店取走；delivery 是外卖配送。正式场合可用 to take away。",
+   "examples": [
+    {
+     "en": "I'd like a large coffee to go, please.",
+     "zh": "我要一杯大杯咖啡，外带。"
+    },
+    {
+     "en": "Is this for here or to go?",
+     "zh": "您是在这儿吃还是外带？"
+    }
+   ],
+   "tags": [
+    "餐饮美食"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "AA制",
+   "pair": "zh-en",
+   "slug": "aa-zhi",
+   "lang": "zh",
+   "translation": "split the bill",
+   "shortAnswer": "「AA制」用英语说是 split the bill，指聚餐时各付各的或平摊费用。注意别混淆成 Alcoholics Anonymous（戒酒互助会），那是完全不同的意思。",
+   "definition": "split the bill 是餐厅结账时最常用的说法，口语也说 go Dutch（略过时）。如果只是各付各的，可以说 separate checks；平摊则用 split it evenly。",
+   "examples": [
+    {
+     "en": "Let's split the bill evenly—it's easier than figuring out who ordered what.",
+     "zh": "我们平摊账单吧，这样比算谁点了什么更省事。"
+    },
+    {
+     "en": "We usually split the bill when we eat out, but sometimes one person treats everyone.",
+     "zh": "我们外出吃饭通常AA制，但有时也会由一个人请客。"
+    }
+   ],
+   "tags": [
+    "餐饮美食"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "split the bill",
+   "pair": "en-zh",
+   "slug": "split-the-bill",
+   "lang": "en",
+   "translation": "AA制",
+   "shortAnswer": "「split the bill」的中文意思是「AA制」，即聚餐时各人分摊费用。它和 go Dutch 意思相近，但 go Dutch 略显过时，更正式场合可用 share the bill。",
+   "definition": "split the bill 指把账单总额平分，常用于朋友聚餐；若想各付各的，可说 separate checks。英式英语中也说 split the bill，但注意不要与 Alcoholics Anonymous 混淆。",
+   "examples": [
+    {
+     "en": "Let's split the bill evenly—it's easier than figuring out who ordered what.",
+     "zh": "我们平摊账单吧，这样比算谁点了什么更省事。"
+    },
+    {
+     "en": "We usually split the bill when we eat out, but sometimes one person treats everyone.",
+     "zh": "我们外出吃饭通常AA制，但有时也会由一个人请客。"
+    }
+   ],
+   "tags": [
+    "餐饮美食"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "打包",
+   "pair": "zh-en",
+   "slug": "da-bao",
+   "lang": "zh",
+   "translation": "box it up",
+   "shortAnswer": "「打包」的英文是 box it up，最常用于餐厅把剩菜装盒带走。注意：美式口语也常说 to go 或 takeout，而 box it up 强调装盒动作。",
+   "definition": "在餐厅点餐或结账时，box it up 指把没吃完的菜装进外卖盒带走。美式常用 takeout 指外卖，delivery 指专人送上门；英式常用 takeaway。请服务员打包可以说 Could you box this up?",
+   "examples": [
+    {
+     "en": "Could you box it up for me? I can't finish all this.",
+     "zh": "你能帮我打包吗？我吃不完这些。"
+    },
+    {
+     "en": "We asked the server to box up the leftovers, and she brought us two containers.",
+     "zh": "我们请服务员把剩菜打包，她给我们拿了两个餐盒。"
+    }
+   ],
+   "tags": [
+    "餐饮美食"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "box it up",
+   "pair": "en-zh",
+   "slug": "box-it-up",
+   "lang": "en",
+   "translation": "打包",
+   "shortAnswer": "box it up 的中文意思是「打包」，指把食物装进盒子带走。它强调装盒动作，与泛指外卖的 takeout 或 takeaway 不同。",
+   "definition": "box it up 是口语表达，常见于餐厅要求把剩菜或整份餐装盒带走，也可说 box this up。注意：takeout 指外卖食物或外卖店，delivery 指外送服务，to go 强调带走，并非都强调装盒。",
+   "examples": [
+    {
+     "en": "Could you box it up for me? I can't finish all this.",
+     "zh": "你能帮我打包吗？我吃不完这些。"
+    },
+    {
+     "en": "We asked the server to box up the leftovers, and she brought us two containers.",
+     "zh": "我们请服务员把剩菜打包，她给我们拿了两个餐盒。"
+    }
+   ],
+   "tags": [
+    "餐饮美食"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "堂食",
+   "pair": "zh-en",
+   "slug": "tang-shi",
+   "lang": "zh",
+   "translation": "dine in",
+   "shortAnswer": "「堂食」的英文是 dine in，指在餐厅内就座用餐，与 takeout 和 delivery 相对。",
+   "definition": "dine in 多作动词短语，也可写作形容词 dine-in，如 dine-in service。注意区分 takeout 与 delivery。",
+   "examples": [
+    {
+     "en": "Would you like to dine in or take your food to go?",
+     "zh": "您是想在店里堂食，还是把食物打包带走？"
+    },
+    {
+     "en": "This restaurant only offers dine-in service, so they don't do delivery.",
+     "zh": "这家餐厅只提供堂食服务，所以不送外卖。"
+    }
+   ],
+   "tags": [
+    "餐饮美食"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "dine in",
+   "pair": "en-zh",
+   "slug": "dine-in",
+   "lang": "en",
+   "translation": "堂食",
+   "shortAnswer": "dine in means「堂食」，即 eat inside the restaurant instead of taking food away.",
+   "definition": "dine in is a verb phrase meaning to eat inside a restaurant. It contrasts with takeout and delivery.",
+   "examples": [
+    {
+     "en": "Would you like to dine in or take your food to go?",
+     "zh": "您是想在店里堂食，还是把食物打包带走？"
+    },
+    {
+     "en": "This restaurant only offers dine-in service, so they don't do delivery.",
+     "zh": "这家餐厅只提供堂食服务，所以不送外卖。"
+    }
+   ],
+   "tags": [
+    "餐饮美食"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "微辣",
+   "pair": "zh-en",
+   "slug": "wei-la",
+   "lang": "zh",
+   "translation": "mildly spicy",
+   "shortAnswer": "「微辣」的英语是 mildly spicy。在点餐时如果怕太辣，可以这样说；和 mild 相比，mildly spicy 更强调“有一点点辣”。",
+   "definition": "mildly spicy 常用于描述菜品辣度，比 mild 更明确表示“微辣”。点外卖时可以说“I'd like it mildly spicy.”，店员常会确认辣度。",
+   "examples": [
+    {
+     "en": "I'd like the Kung Pao chicken mildly spicy, please.",
+     "zh": "请给我宫保鸡丁，微辣。"
+    },
+    {
+     "en": "This curry is mildly spicy, so it should be fine even if you don't like hot food.",
+     "zh": "这道咖喱是微辣的，所以即使你不喜欢辣的食物也没问题。"
+    }
+   ],
+   "tags": [
+    "餐饮美食"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "mildly spicy",
+   "pair": "en-zh",
+   "slug": "mildly-spicy",
+   "lang": "en",
+   "translation": "微辣",
+   "shortAnswer": "“mildly spicy”的中文意思是“微辣”。它表示有一点辣但不会太刺激，比 “mild” 更强调辣味的存在。",
+   "definition": "mildly spicy 多用于餐饮场景，描述食物辣度。口语点餐常用，如“Can you make it mildly spicy?”。注意与 hot/spicy 程度区分。",
+   "examples": [
+    {
+     "en": "I'd like the Kung Pao chicken mildly spicy, please.",
+     "zh": "请给我宫保鸡丁，微辣。"
+    },
+    {
+     "en": "This curry is mildly spicy, so it should be fine even if you don't like hot food.",
+     "zh": "这道咖喱是微辣的，所以即使你不喜欢辣的食物也没问题。"
+    }
+   ],
+   "tags": [
+    "餐饮美食"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "忌口",
+   "pair": "zh-en",
+   "slug": "ji-kou",
+   "lang": "zh",
+   "translation": "dietary restrictions",
+   "shortAnswer": "「忌口」的英文是 dietary restrictions，指点餐时因过敏、宗教或健康原因需避免的食物。",
+   "definition": "dietary restrictions 是正式说法，涵盖过敏、宗教与健康等饮食限制；点餐时可直接说 I have dietary restrictions。",
+   "examples": [
+    {
+     "en": "Before ordering, please tell the server about any dietary restrictions, such as a nut allergy.",
+     "zh": "点餐前请告知服务员您的忌口，比如对坚果过敏。"
+    },
+    {
+     "en": "The restaurant offers a separate menu for guests with dietary restrictions, including halal options.",
+     "zh": "这家餐厅为有忌口的客人提供单独菜单，包括清真选项。"
+    }
+   ],
+   "tags": [
+    "餐饮美食"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "dietary restrictions",
+   "pair": "en-zh",
+   "slug": "dietary-restrictions",
+   "lang": "en",
+   "translation": "忌口",
+   "shortAnswer": "dietary restrictions 中文叫「忌口」，指因过敏、宗教或健康原因不能吃的食物。",
+   "definition": "dietary restrictions 指因过敏、宗教或医疗原因必须避免的食物，常搭配 have 或 accommodate。",
+   "examples": [
+    {
+     "en": "Before ordering, please tell the server about any dietary restrictions, such as a nut allergy.",
+     "zh": "点餐前请告知服务员您的忌口，比如对坚果过敏。"
+    },
+    {
+     "en": "The restaurant offers a separate menu for guests with dietary restrictions, including halal options.",
+     "zh": "这家餐厅为有忌口的客人提供单独菜单，包括清真选项。"
+    }
+   ],
+   "tags": [
+    "餐饮美食"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "请客",
+   "pair": "zh-en",
+   "slug": "qing-ke",
+   "lang": "zh",
+   "translation": "my treat",
+   "shortAnswer": "「请客」最地道的英文说法是 my treat，表示「我来买单」。注意 my treat 是口语表达，正式场合可说 It's on me 或 I'll pay for it。",
+   "definition": "my treat 常用于朋友聚餐、约会等非正式场合，意为「我请客」。也可说 This is my treat 或 It's my treat。注意 treat 在此作名词，不是动词「对待」。",
+   "examples": [
+    {
+     "en": "Don't worry about the bill—it's my treat tonight.",
+     "zh": "别担心账单——今晚我请客。"
+    },
+    {
+     "en": "She insisted that lunch was her treat, so we didn't pay anything.",
+     "zh": "她坚持午饭她请客，所以我们一分钱都没花。"
+    }
+   ],
+   "tags": [
+    "餐饮美食"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "my treat",
+   "pair": "en-zh",
+   "slug": "my-treat",
+   "lang": "en",
+   "translation": "请客",
+   "shortAnswer": "「my treat」的中文意思是「请客」，即由说话人主动付钱。它比「I'll pay」更口语、更热情，常用于朋友或约会场景。",
+   "definition": "my treat 是口语表达，表示「我请客、我来付钱」，用于非正式场合，如朋友吃饭、喝咖啡。正式场合可用 It's on me 或 I'll take care of the bill。注意 treat 在此是名词，不是动词「对待」。",
+   "examples": [
+    {
+     "en": "Don't worry about the bill—it's my treat tonight.",
+     "zh": "别担心账单——今晚我请客。"
+    },
+    {
+     "en": "She insisted that lunch was her treat, so we didn't pay anything.",
+     "zh": "她坚持午饭她请客，所以我们一分钱都没花。"
+    }
+   ],
+   "tags": [
+    "餐饮美食"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "素食者",
+   "pair": "zh-en",
+   "slug": "su-shi-zhe",
+   "lang": "zh",
+   "translation": "vegetarian",
+   "shortAnswer": "「素食者」的英文是 vegetarian，指不吃肉类、禽类和海鲜的人。点餐时说 I'm a vegetarian 即可。",
+   "definition": "vegetarian 指不吃肉、禽、鱼的人，通常仍吃蛋奶；纯素者叫 vegan，连蛋奶蜂蜜都不吃。go vegetarian 表示改为吃素。",
+   "examples": [
+    {
+     "en": "Excuse me, I'm a vegetarian—does this dish contain any meat or chicken broth?",
+     "zh": "不好意思，我是素食者——这道菜里有肉或者鸡汤吗？"
+    },
+    {
+     "en": "This restaurant has a great vegetarian menu, and they can box it up for takeout if you can't finish.",
+     "zh": "这家餐厅有很棒的素食菜单，吃不完的话他们可以帮你打包带走。"
+    }
+   ],
+   "tags": [
+    "餐饮美食"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "vegetarian",
+   "pair": "en-zh",
+   "slug": "vegetarian",
+   "lang": "en",
+   "translation": "素食者",
+   "shortAnswer": "vegetarian 的中文意思是「素食者」，指不吃肉类、禽类和海鲜的人；它和 vegan（纯素食者）不同。",
+   "definition": "vegetarian 指素食者，也作形容词表素食的，如 a vegetarian meal / restaurant。点餐常说 I'm a vegetarian。",
+   "examples": [
+    {
+     "en": "Excuse me, I'm a vegetarian—does this dish contain any meat or chicken broth?",
+     "zh": "不好意思，我是素食者——这道菜里有肉或者鸡汤吗？"
+    },
+    {
+     "en": "This restaurant has a great vegetarian menu, and they can box it up for takeout if you can't finish.",
+     "zh": "这家餐厅有很棒的素食菜单，吃不完的话他们可以帮你打包带走。"
+    }
+   ],
+   "tags": [
+    "餐饮美食"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "订位",
+   "pair": "zh-en",
+   "slug": "ding-wei",
+   "lang": "zh",
+   "translation": "make a reservation",
+   "shortAnswer": "「订位」用英语说是 make a reservation，也可说 book a table，多用于餐厅、酒店等场合。",
+   "definition": "make a reservation 是订位最通用的说法，比 book a table 稍正式；美式餐厅常需报人数和时间。",
+   "examples": [
+    {
+     "en": "I'd like to make a reservation for two at seven o'clock tonight.",
+     "zh": "我想订今晚七点两位的位子。"
+    },
+    {
+     "en": "You'd better make a reservation, or we'll have to wait for a table.",
+     "zh": "你最好先订位，不然我们就得等位了。"
+    }
+   ],
+   "tags": [
+    "餐饮美食"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "make a reservation",
+   "pair": "en-zh",
+   "slug": "make-a-reservation",
+   "lang": "en",
+   "translation": "订位",
+   "shortAnswer": "make a reservation 的中文意思是「订位」，指提前预留餐厅座位或酒店房间，比 book 更正式。",
+   "definition": "make a reservation 指提前预订餐厅座位、酒店房间等，常见搭配为 make a reservation for two at 7 p.m.。",
+   "examples": [
+    {
+     "en": "I'd like to make a reservation for two at seven o'clock tonight.",
+     "zh": "我想订今晚七点两位的位子。"
+    },
+    {
+     "en": "You'd better make a reservation, or we'll have to wait for a table.",
+     "zh": "你最好先订位，不然我们就得等位了。"
+    }
+   ],
+   "tags": [
+    "餐饮美食"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "买单",
+   "pair": "zh-en",
+   "slug": "mai-dan",
+   "lang": "zh",
+   "translation": "pay the bill",
+   "shortAnswer": "「买单」的英文是 pay the bill，餐厅结账最常用，也可说 get the check。",
+   "definition": "pay the bill 指结账付款，餐厅酒吧通用；bill 偏英式，check 偏美式。请客可说 It's on me。",
+   "examples": [
+    {
+     "en": "The meal was delicious, so I offered to pay the bill for everyone.",
+     "zh": "这顿饭很好吃，于是我主动为所有人买了单。"
+    },
+    {
+     "en": "Could you pay the bill first? I need to box up the leftovers.",
+     "zh": "你能先去买单吗？我得把剩菜打包。"
+    }
+   ],
+   "tags": [
+    "餐饮美食"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "pay the bill",
+   "pair": "en-zh",
+   "slug": "pay-the-bill",
+   "lang": "en",
+   "translation": "买单",
+   "shortAnswer": "pay the bill means「买单」in Chinese, that is, to settle and pay for the meal.",
+   "definition": "pay the bill means to settle a check at a restaurant; Americans often say pay the check. Splitting is split the bill.",
+   "examples": [
+    {
+     "en": "The meal was delicious, so I offered to pay the bill for everyone.",
+     "zh": "这顿饭很好吃，于是我主动为所有人买了单。"
+    },
+    {
+     "en": "Could you pay the bill first? I need to box up the leftovers.",
+     "zh": "你能先去买单吗？我得把剩菜打包。"
+    }
+   ],
+   "tags": [
+    "餐饮美食"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "餐厅等位",
+   "pair": "zh-en",
+   "slug": "can-ting-deng-wei",
+   "lang": "zh",
+   "translation": "wait for a table",
+   "shortAnswer": "“餐厅等位”的英文是 wait for a table，指在餐厅排队等空桌，也可说 wait to be seated。",
+   "definition": "wait for a table 是“餐厅等位”的常用说法，也可说 wait to be seated。等位时可留电话，有空桌再叫你。",
+   "examples": [
+    {
+     "en": "We had to wait for a table for about twenty minutes because the restaurant was packed.",
+     "zh": "因为餐厅爆满，我们不得不等位大约二十分钟。"
+    },
+    {
+     "en": "If you don't want to wait for a table, you can order takeout instead.",
+     "zh": "如果你不想等位，可以改叫外卖。"
+    }
+   ],
+   "tags": [
+    "餐饮美食"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "wait for a table",
+   "pair": "en-zh",
+   "slug": "wait-for-a-table",
+   "lang": "en",
+   "translation": "餐厅等位",
+   "shortAnswer": "“wait for a table”的中文意思是“餐厅等位”，即在餐厅排队等待空桌，也可说 wait to be seated。",
+   "definition": "wait for a table 是餐厅等位的常用表达，适用于日常和正式场合。注意区别于 wait on tables（当服务员）。",
+   "examples": [
+    {
+     "en": "We had to wait for a table for about twenty minutes because the restaurant was packed.",
+     "zh": "因为餐厅爆满，我们不得不等位大约二十分钟。"
+    },
+    {
+     "en": "If you don't want to wait for a table, you can order takeout instead.",
+     "zh": "如果你不想等位，可以改叫外卖。"
+    }
+   ],
+   "tags": [
+    "餐饮美食"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "夜宵",
+   "pair": "zh-en",
+   "slug": "ye-xiao",
+   "lang": "zh",
+   "translation": "midnight snack",
+   "shortAnswer": "「夜宵」的英文是 midnight snack，指深夜吃的一顿简餐，不是正餐 meal。",
+   "definition": "midnight snack 强调时间在半夜且分量轻，常说 grab/have a midnight snack。",
+   "examples": [
+    {
+     "en": "After the movie, we grabbed a midnight snack at a noodle shop near the station.",
+     "zh": "看完电影后，我们在车站附近的面馆吃了点夜宵。"
+    },
+    {
+     "en": "When I study late, I usually order takeout for a midnight snack, but I ask them to box it up so I can eat it slowly.",
+     "zh": "我熬夜学习时通常会点外卖当夜宵，但总会让他们打包，这样我可以慢慢吃。"
+    }
+   ],
+   "tags": [
+    "餐饮美食"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "midnight snack",
+   "pair": "en-zh",
+   "slug": "midnight-snack",
+   "lang": "en",
+   "translation": "夜宵",
+   "shortAnswer": "Midnight snack means 夜宵, a light late-night bite, not a full meal.",
+   "definition": "A midnight snack is 夜宵: light food eaten late at night, often grab or have one.",
+   "examples": [
+    {
+     "en": "After the movie, we grabbed a midnight snack at a noodle shop near the station.",
+     "zh": "看完电影后，我们在车站附近的面馆吃了点夜宵。"
+    },
+    {
+     "en": "When I study late, I usually order takeout for a midnight snack, but I ask them to box it up so I can eat it slowly.",
+     "zh": "我熬夜学习时通常会点外卖当夜宵，但总会让他们打包，这样我可以慢慢吃。"
+    }
+   ],
+   "tags": [
+    "餐饮美食"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "小费",
+   "pair": "zh-en",
+   "slug": "xiao-fei",
+   "lang": "zh",
+   "translation": "tip",
+   "shortAnswer": "小费的英文是 tip，在餐厅、出租车等场合给服务人员的小额感谢费。注意 tip 也可指“提示”，别和 advice 或 clue 混淆。",
+   "definition": "tip 在餐饮场景指顾客额外给服务员、外卖员等的钱，源于欧美小费文化；中国无此习惯。常见搭配：leave a tip、tip well、a 15% tip。动词用法：tip the waiter。",
+   "examples": [
+    {
+     "en": "We left a generous tip because the service was excellent.",
+     "zh": "因为服务非常好，我们留了一笔丰厚的小费。"
+    },
+    {
+     "en": "Do you usually tip the delivery driver when you order takeout?",
+     "zh": "你点外卖时通常会给外卖员小费吗？"
+    }
+   ],
+   "tags": [
+    "餐饮美食"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "tip",
+   "pair": "en-zh",
+   "slug": "tip",
+   "lang": "en",
+   "translation": "小费",
+   "shortAnswer": "Tip 的中文意思是“小费”，指付给服务员、外卖员等的额外感谢金。它和“提示”含义不同，区分看语境，如 give a tip 多指给钱。",
+   "definition": "Tip 作名词可指小费或提示，餐饮场景常指小费，如 leave a tip、tip the waiter。口语中也可说“Here's a tip”。注意和 advice（建议）或 hint（暗示）区分。",
+   "examples": [
+    {
+     "en": "We left a generous tip because the service was excellent.",
+     "zh": "因为服务非常好，我们留了一笔丰厚的小费。"
+    },
+    {
+     "en": "Do you usually tip the delivery driver when you order takeout?",
+     "zh": "你点外卖时通常会给外卖员小费吗？"
+    }
+   ],
+   "tags": [
+    "餐饮美食"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "下午茶",
+   "pair": "zh-en",
+   "slug": "xia-wu-cha",
+   "lang": "zh",
+   "translation": "afternoon tea",
+   "shortAnswer": "「下午茶」的英文是 afternoon tea，指午后搭配茶饮与小点的轻食时段。",
+   "definition": "afternoon tea 多指英式下午茶，常见搭配有 have afternoon tea、a traditional afternoon tea。",
+   "examples": [
+    {
+     "en": "We booked a traditional afternoon tea at a hotel near the park, and the scones were amazing.",
+     "zh": "我们在公园附近的一家酒店预订了传统下午茶，司康饼非常好吃。"
+    },
+    {
+     "en": "If you can't finish the cakes, just ask the waiter to box them up, since afternoon tea portions are usually huge.",
+     "zh": "如果蛋糕吃不完，直接请服务员打包就好，因为下午茶的分量通常很大。"
+    }
+   ],
+   "tags": [
+    "餐饮美食"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "afternoon tea",
+   "pair": "en-zh",
+   "slug": "afternoon-tea",
+   "lang": "en",
+   "translation": "下午茶",
+   "shortAnswer": "Afternoon tea 的中文意思是「下午茶」，指午后用茶配三明治、司康等小点的轻食。",
+   "definition": "afternoon tea 指英式下午茶，常搭配 have、serve、book 等动词，如 book afternoon tea for two。",
+   "examples": [
+    {
+     "en": "We booked a traditional afternoon tea at a hotel near the park, and the scones were amazing.",
+     "zh": "我们在公园附近的一家酒店预订了传统下午茶，司康饼非常好吃。"
+    },
+    {
+     "en": "If you can't finish the cakes, just ask the waiter to box them up, since afternoon tea portions are usually huge.",
+     "zh": "如果蛋糕吃不完，直接请服务员打包就好，因为下午茶的分量通常很大。"
+    }
+   ],
+   "tags": [
+    "餐饮美食"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "招牌菜",
+   "pair": "zh-en",
+   "slug": "zhao-pai-cai",
+   "lang": "zh",
+   "translation": "signature dish",
+   "shortAnswer": "「招牌菜」的英文是 signature dish，指餐厅最出名、最值得点的那道菜。点餐时也可说 the dish we're known for，注意别用 special，那通常指当日特价菜。",
+   "definition": "signature dish 强调餐厅的镇店之宝，菜单上常标 chef's signature。说某菜是招牌可用 be famous for，如 We're famous for our roast duck。注意 special 多指今日特供，别混用。",
+   "examples": [
+    {
+     "en": "Their signature dish is a slow-braised pork belly that sells out every night.",
+     "zh": "他们的招牌菜是慢炖五花肉，每晚都卖光。"
+    },
+    {
+     "en": "If you're not sure what to order, just go with the chef's signature dish.",
+     "zh": "如果不知道点什么，就点主厨的招牌菜吧。"
+    }
+   ],
+   "tags": [
+    "餐饮美食"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "signature dish",
+   "pair": "en-zh",
+   "slug": "signature-dish",
+   "lang": "en",
+   "translation": "招牌菜",
+   "shortAnswer": "signature dish 的中文意思是「招牌菜」，指一家餐厅最出名、最具代表性的菜。它与 special 不同，special 通常是当日特价或限时供应的菜，不一定是招牌。",
+   "definition": "signature dish 指餐厅或厨师的代表菜，菜单上常写 chef's signature。口语中也可说 our best-known dish。注意别与 house special 混淆，后者多指当天特价菜，未必是招牌。",
+   "examples": [
+    {
+     "en": "Their signature dish is a slow-braised pork belly that sells out every night.",
+     "zh": "他们的招牌菜是慢炖五花肉，每晚都卖光。"
+    },
+    {
+     "en": "If you're not sure what to order, just go with the chef's signature dish.",
+     "zh": "如果不知道点什么，就点主厨的招牌菜吧。"
+    }
+   ],
+   "tags": [
+    "餐饮美食"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "自助餐",
+   "pair": "zh-en",
+   "slug": "zi-zhu-can",
+   "lang": "zh",
+   "translation": "buffet",
+   "shortAnswer": "自助餐的英文是buffet，指自取不限量的用餐方式。注意buffet也可指“反复猛击”，但餐饮场景中一定是自助餐。",
+   "definition": "buffet源自古法语，指餐具柜或自助台。常见搭配：buffet dinner自助晚餐、buffet-style自助式、hotel buffet酒店自助。美式口语也常用all-you-can-eat。注意小费：中式自助无小费，美式自助有时需给。",
+   "examples": [
+    {
+     "en": "The hotel offers a breakfast buffet with both Western and Chinese dishes.",
+     "zh": "这家酒店提供包含西餐和中餐的自助早餐。"
+    },
+    {
+     "en": "We went to an all-you-can-eat buffet last night, so I didn't need to order takeout.",
+     "zh": "我们昨晚去了不限量自助餐，所以我不用点外卖了。"
+    }
+   ],
+   "tags": [
+    "餐饮美食"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "buffet",
+   "pair": "en-zh",
+   "slug": "buffet",
+   "lang": "en",
+   "translation": "自助餐",
+   "shortAnswer": "buffet的中文意思是自助餐，即顾客自取食物、按人头或按量计费的餐饮形式。与点菜不同，buffet强调自己拿取。",
+   "definition": "buffet在餐饮中特指自助餐，常见搭配：buffet breakfast自助早餐、dinner buffet自助晚餐、buffet line取餐台。较正式或酒店语境常用；口语也说all-you-can-eat。注意区分动词buffet“连续打击”。",
+   "examples": [
+    {
+     "en": "The hotel offers a breakfast buffet with both Western and Chinese dishes.",
+     "zh": "这家酒店提供包含西餐和中餐的自助早餐。"
+    },
+    {
+     "en": "We went to an all-you-can-eat buffet last night, so I didn't need to order takeout.",
+     "zh": "我们昨晚去了不限量自助餐，所以我不用点外卖了。"
+    }
+   ],
+   "tags": [
+    "餐饮美食"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "美食广场",
+   "pair": "zh-en",
+   "slug": "mei-shi-guang-chang",
+   "lang": "zh",
+   "translation": "food court",
+   "shortAnswer": "「美食广场」的英文是 food court，指商场或机场里集中多家餐饮档口的公共用餐区。注意别说成 food square 或 restaurant area。",
+   "definition": "food court 是名词，指商场、机场等建筑内共享座位、由多个独立餐饮摊位组成的区域。常见搭配：at the food court、in the food court。它不同于美食街 food street（通常露天或沿街），也不同于单一餐厅 restaurant。",
+   "examples": [
+    {
+     "en": "Let's grab lunch at the food court on the third floor; they have a new noodle stall.",
+     "zh": "我们去三楼的美食广场吃午饭吧，那里新开了一家面馆。"
+    },
+    {
+     "en": "The food court was packed, so we decided to box it up and take our food to go.",
+     "zh": "美食广场挤满了人，所以我们决定打包带走。"
+    }
+   ],
+   "tags": [
+    "餐饮美食"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "food court",
+   "pair": "en-zh",
+   "slug": "food-court",
+   "lang": "en",
+   "translation": "美食广场",
+   "shortAnswer": "Food court 的中文意思是「美食广场」，指商场或机场里集中多家快餐档口和共享座位的区域。它不同于 food street（美食街）和单个 restaurant。",
+   "definition": "Food court 是可数名词，常与 at/in 连用：meet at the food court、eat in the food court。多用于商场、机场、大学等室内场所，摊位各自点餐，座位公用。口语中也可泛指美食广场，但不如 food hall 高端。",
+   "examples": [
+    {
+     "en": "Let's grab lunch at the food court on the third floor; they have a new noodle stall.",
+     "zh": "我们去三楼的美食广场吃午饭吧，那里新开了一家面馆。"
+    },
+    {
+     "en": "The food court was packed, so we decided to box it up and take our food to go.",
+     "zh": "美食广场挤满了人，所以我们决定打包带走。"
+    }
+   ],
+   "tags": [
+    "餐饮美食"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "路边摊",
+   "pair": "zh-en",
+   "slug": "lu-bian-tan",
+   "lang": "zh",
+   "translation": "street food stall",
+   "shortAnswer": "「路边摊」的英文是 street food stall，指街头现做现卖的小吃摊。注意它与 food truck（餐车）不同，路边摊通常是固定或半固定的摊位。",
+   "definition": "路边摊常用 street food stall 或 street food stand，摆摊叫 set up a stall。点餐可说 I'll have…，带走说 to go；中国路边摊没有小费，美国餐车或摊位也可能收小费。",
+   "examples": [
+    {
+     "en": "Let's grab some skewers at that street food stall near the night market.",
+     "zh": "我们去夜市附近那个路边摊吃几串烤串吧。"
+    },
+    {
+     "en": "The street food stall is famous for its noodles, but you have to wait for a table during lunch rush.",
+     "zh": "这个路边摊以面条出名，但午餐高峰时得等位。"
+    }
+   ],
+   "tags": [
+    "餐饮美食"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "street food stall",
+   "pair": "en-zh",
+   "slug": "street-food-stall",
+   "lang": "en",
+   "translation": "路边摊",
+   "shortAnswer": "street food stall 的中文意思是「路边摊」，指在街头售卖现做小吃的小摊。它强调摊位，而非移动餐车 food truck 或正式餐馆。",
+   "definition": "street food stall 指街头小吃摊，常见搭配有 at a street food stall、a street food stall owner。口语也可说 food stall。它不同于 restaurant，通常没有服务员，不需要给小费。",
+   "examples": [
+    {
+     "en": "Let's grab some skewers at that street food stall near the night market.",
+     "zh": "我们去夜市附近那个路边摊吃几串烤串吧。"
+    },
+    {
+     "en": "The street food stall is famous for its noodles, but you have to wait for a table during lunch rush.",
+     "zh": "这个路边摊以面条出名，但午餐高峰时得等位。"
+    }
+   ],
+   "tags": [
+    "餐饮美食"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "早餐",
+   "pair": "zh-en",
+   "slug": "zao-can",
+   "lang": "zh",
+   "translation": "breakfast",
+   "shortAnswer": "「早餐」的英文是 breakfast，指一天中的第一餐，通常说 have breakfast 时不加冠词。",
+   "definition": "早餐指早晨吃的第一餐，英文用 breakfast，常见搭配有 have/eat breakfast、skip breakfast、breakfast cereal 等。",
+   "examples": [
+    {
+     "en": "I usually have breakfast at seven before leaving for work.",
+     "zh": "我通常七点吃早餐，然后去上班。"
+    },
+    {
+     "en": "We skipped breakfast and grabbed a coffee on the way to the airport.",
+     "zh": "我们没吃早餐，去机场路上随便买了杯咖啡。"
+    }
+   ],
+   "tags": [
+    "餐饮美食"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "breakfast",
+   "pair": "en-zh",
+   "slug": "breakfast",
+   "lang": "en",
+   "translation": "早餐",
+   "shortAnswer": "breakfast 的中文意思是「早餐」，即早晨吃的第一顿饭，搭配 have breakfast 时通常不加冠词。",
+   "definition": "breakfast 指清晨吃的第一餐，常见搭配有 have breakfast、skip breakfast、eat breakfast 以及 breakfast cereal。",
+   "examples": [
+    {
+     "en": "I usually have breakfast at seven before leaving for work.",
+     "zh": "我通常七点吃早餐，然后去上班。"
+    },
+    {
+     "en": "We skipped breakfast and grabbed a coffee on the way to the airport.",
+     "zh": "我们没吃早餐，去机场路上随便买了杯咖啡。"
+    }
+   ],
+   "tags": [
+    "餐饮美食"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "老字号",
+   "pair": "zh-en",
+   "slug": "lao-zi-hao",
+   "lang": "zh",
+   "translation": "time-honored brand",
+   "shortAnswer": "「老字号」的英文是 time-honored brand，指历史悠久、代代传承的老牌商家。",
+   "definition": "time-honored brand 是「老字号」最贴切译法，也可用 long-established brand，常指有官方认证的中华老字号。",
+   "examples": [
+    {
+     "en": "This dumpling restaurant is a time-honored brand in Beijing, and locals have been lining up here for generations.",
+     "zh": "这家饺子馆是北京的老字号，本地人排了几代人的队。"
+    },
+    {
+     "en": "When you visit China, try to eat at a time-honored brand rather than a chain restaurant.",
+     "zh": "来中国时，尽量去老字号吃饭，而不是去连锁餐厅。"
+    }
+   ],
+   "tags": [
+    "餐饮美食"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "time-honored brand",
+   "pair": "en-zh",
+   "slug": "time-honored-brand",
+   "lang": "en",
+   "translation": "老字号",
+   "shortAnswer": "\"time-honored brand\" 的中文是「老字号」，指历史悠久、有口碑的老牌商家。",
+   "definition": "A time-honored brand is a long-established business known for tradition and reputation. 常见搭配：a time-honored brand of tea。",
+   "examples": [
+    {
+     "en": "This dumpling restaurant is a time-honored brand in Beijing, and locals have been lining up here for generations.",
+     "zh": "这家饺子馆是北京的老字号，本地人排了几代人的队。"
+    },
+    {
+     "en": "When you visit China, try to eat at a time-honored brand rather than a chain restaurant.",
+     "zh": "来中国时，尽量去老字号吃饭，而不是去连锁餐厅。"
+    }
+   ],
+   "tags": [
+    "餐饮美食"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "加入购物车",
+   "pair": "zh-en",
+   "slug": "jia-ru-gou-wu-che",
+   "lang": "zh",
+   "translation": "add to cart",
+   "shortAnswer": "「加入购物车」的英文是 add to cart，常用于电商页面。注意购物车是 cart（美式）或 basket（英式），别与 checkout（结账）混淆。",
+   "definition": "add to cart 指把商品放入虚拟购物车，常见搭配有 add item to cart、click add to cart。易错点：cart 是购物车，checkout 是结账，return 是退货，refund 是退款，exchange 是换货，别混用。",
+   "examples": [
+    {
+     "en": "I'll add to cart and then compare prices before checking out.",
+     "zh": "我先加入购物车，然后比价后再结账。"
+    },
+    {
+     "en": "During the flash sale, she added to cart quickly to stock up on essentials.",
+     "zh": "秒杀期间，她迅速加入购物车以囤积必需品。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "add to cart",
+   "pair": "en-zh",
+   "slug": "add-to-cart",
+   "lang": "en",
+   "translation": "加入购物车",
+   "shortAnswer": "add to cart 的中文意思是「加入购物车」，表示将商品放入线上购物车。它不同于 checkout（结账），也不同于 wish list（收藏）。",
+   "definition": "add to cart 是电商常用动词短语，指把商品加入购物车，可搭配 item、product。正式写作可用 add to shopping cart；口语中常说 add it to my cart。注意与 buy now（立即购买）区别。",
+   "examples": [
+    {
+     "en": "I'll add to cart and then compare prices before checking out.",
+     "zh": "我先加入购物车，然后比价后再结账。"
+    },
+    {
+     "en": "During the flash sale, she added to cart quickly to stock up on essentials.",
+     "zh": "秒杀期间，她迅速加入购物车以囤积必需品。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "快餐",
+   "pair": "zh-en",
+   "slug": "kuai-can",
+   "lang": "zh",
+   "translation": "fast food",
+   "shortAnswer": "「快餐」的英文是 fast food。注意：fast food 指汉堡、炸鸡这类快速供应的餐食，若想说“外卖打包带走”，应用 takeout 或 to go，而不是 fast food。",
+   "definition": "fast food 多指连锁店售卖的汉堡、薯条、炸鸡等速食，不可数。常见搭配：fast food restaurant（快餐店）、fast food chain（快餐连锁）。若强调“打包带走”用 to go 或 takeout，强调“送餐上门”用 delivery。",
+   "examples": [
+    {
+     "en": "I'm trying to cut back on fast food because it's not very healthy.",
+     "zh": "我正在努力少吃快餐，因为快餐不太健康。"
+    },
+    {
+     "en": "Let's just grab some fast food and eat it at home—I'll box it up to go.",
+     "zh": "咱们随便买点快餐回家吃吧——我打包带走。"
+    }
+   ],
+   "tags": [
+    "餐饮美食"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "fast food",
+   "pair": "en-zh",
+   "slug": "fast-food",
+   "lang": "en",
+   "translation": "快餐",
+   "shortAnswer": "「fast food」的中文意思是「快餐」，即汉堡、炸鸡等快速供应的餐食。它侧重“快餐种类”，不等于“外卖”：外卖是 takeout（美）或 delivery（送上门）。",
+   "definition": "fast food 指在连锁店快速制作和供应的餐食，如汉堡、薯条、炸鸡。常搭配 fast food restaurant/chain。口语中也可泛指不健康的速食。注意与 takeout（打包带走）和 delivery（外送）区分。",
+   "examples": [
+    {
+     "en": "I'm trying to cut back on fast food because it's not very healthy.",
+     "zh": "我正在努力少吃快餐，因为快餐不太健康。"
+    },
+    {
+     "en": "Let's just grab some fast food and eat it at home—I'll box it up to go.",
+     "zh": "咱们随便买点快餐回家吃吧——我打包带走。"
+    }
+   ],
+   "tags": [
+    "餐饮美食"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "网上购物",
+   "pair": "zh-en",
+   "slug": "wang-shang-gou-wu",
+   "lang": "zh",
+   "translation": "online shopping",
+   "shortAnswer": "「网上购物」的英文是 online shopping，指通过互联网购买商品或服务。",
+   "definition": "网上购物常用搭配：add to cart（加入购物车）、checkout（结账）、compare prices（比价）；退换货分清 return 退货、refund 退款、exchange 换货。",
+   "examples": [
+    {
+     "en": "I do most of my online shopping on weekend nights, when flash sales are common.",
+     "zh": "我大多数网上购物都在周末晚上进行，那时常有秒杀活动。"
+    },
+    {
+     "en": "If you shop online for shoes, check the return policy before you buy.",
+     "zh": "如果你在网上购物买鞋，购买前要查看退货政策。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "online shopping",
+   "pair": "en-zh",
+   "slug": "online-shopping",
+   "lang": "en",
+   "translation": "网上购物",
+   "shortAnswer": "Online shopping 的中文意思是「网上购物」，指通过互联网选购并购买商品或服务。",
+   "definition": "online shopping 是名词短语，常见搭配有 do online shopping、online shopping cart、online shopping site；口语中更常说 shop online。",
+   "examples": [
+    {
+     "en": "I do most of my online shopping on weekend nights, when flash sales are common.",
+     "zh": "我大多数网上购物都在周末晚上进行，那时常有秒杀活动。"
+    },
+    {
+     "en": "If you shop online for shoes, check the return policy before you buy.",
+     "zh": "如果你在网上购物买鞋，购买前要查看退货政策。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "结账",
+   "pair": "zh-en",
+   "slug": "jie-zhang",
+   "lang": "zh",
+   "translation": "checkout",
+   "shortAnswer": "「结账」的英文是 checkout，指在商店或网店付款完成购买。注意区分：checkout 是付款结账环节，而 return 是退货、refund 是退款、exchange 是换货。",
+   "definition": "checkout 可作名词或动词短语（check out），既指超市收银台，也指网购最后一步付款下单。常见搭配：go through checkout（走结账流程）、at the checkout（在收银台）。注意别与 check out（退房、核对）混淆。",
+   "examples": [
+    {
+     "en": "Please proceed to checkout to pay for the items in your cart.",
+     "zh": "请前往结账页面，为购物车里的商品付款。"
+    },
+    {
+     "en": "There was a long line at the checkout, so we waited about ten minutes.",
+     "zh": "收银台前排了很长的队，我们等了大约十分钟。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "checkout",
+   "pair": "en-zh",
+   "slug": "checkout",
+   "lang": "en",
+   "translation": "结账",
+   "shortAnswer": "checkout 的中文意思是「结账」，指购物后付款完成交易，也可指超市收银台或网店结算页面。它与 return（退货）、refund（退款）、exchange（换货）不同，checkout 强调付款买下。",
+   "definition": "checkout 作名词指结账环节或收银台，如 the checkout counter；作动词短语 check out 指结账离开。常见搭配：online checkout（在线结账）、proceed to checkout（去结算）。口语中也可指酒店退房。",
+   "examples": [
+    {
+     "en": "Please proceed to checkout to pay for the items in your cart.",
+     "zh": "请前往结账页面，为购物车里的商品付款。"
+    },
+    {
+     "en": "There was a long line at the checkout, so we waited about ten minutes.",
+     "zh": "收银台前排了很长的队，我们等了大约十分钟。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "优惠券",
+   "pair": "zh-en",
+   "slug": "you-hui-quan",
+   "lang": "zh",
+   "translation": "coupon",
+   "shortAnswer": "「优惠券」的英语是 coupon，是可数名词。日常购物、外卖和酒店预订都能用它，注意别和 voucher（代金券）混用。",
+   "definition": "coupon 指商家发放的折扣凭证，可纸质也可电子。常见搭配：use a coupon（用优惠券）、a 10% off coupon（九折券）、clip a coupon（剪券）。英式英语里也常说 voucher，但 voucher 更偏预付代金券。",
+   "examples": [
+    {
+     "en": "I used a coupon to get 20% off my entire order.",
+     "zh": "我用了一张优惠券，让整单打了八折。"
+    },
+    {
+     "en": "Don't forget to redeem the coupon before it expires next week.",
+     "zh": "别忘了在下周过期前把这张优惠券用掉。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "coupon",
+   "pair": "en-zh",
+   "slug": "coupon",
+   "lang": "en",
+   "translation": "优惠券",
+   "shortAnswer": "Coupon 的中文意思是「优惠券」，是可数名词。它强调结账时抵扣金额的折扣凭证，与可兑换商品的 voucher（代金券）不同。",
+   "definition": "coupon 指购物时用于打折的券，常见搭配：use/redeem a coupon（使用/兑换优惠券）、digital coupon（电子券）、coupon code（优惠码）。口语中常说「I have a coupon」，正式场合多用 redeem a coupon。",
+   "examples": [
+    {
+     "en": "I used a coupon to get 20% off my entire order.",
+     "zh": "我用了一张优惠券，让整单打了八折。"
+    },
+    {
+     "en": "Don't forget to redeem the coupon before it expires next week.",
+     "zh": "别忘了在下周过期前把这张优惠券用掉。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "干杯",
+   "pair": "zh-en",
+   "slug": "gan-bei",
+   "lang": "zh",
+   "translation": "cheers",
+   "shortAnswer": "干杯的英文是 cheers，用于举杯祝酒时。注意：cheers 在英式英语中还可表示「谢谢」或「再见」，但祝酒时通用。",
+   "definition": "cheers 是举杯祝酒时的常用感叹词，比 Bottoms up! 更日常、口语化。在餐厅、酒吧或聚会中，举杯说 Cheers! 即可。搭配：say cheers, raise a glass and cheers。",
+   "examples": [
+    {
+     "en": "Let's raise our glasses and say cheers to the newlyweds!",
+     "zh": "让我们举杯，向新人干杯！"
+    },
+    {
+     "en": "Cheers! This beer is amazing, and the pizza is great too.",
+     "zh": "干杯！这啤酒真棒，披萨也很好吃。"
+    }
+   ],
+   "tags": [
+    "餐饮美食"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "cheers",
+   "pair": "en-zh",
+   "slug": "cheers",
+   "lang": "en",
+   "translation": "干杯",
+   "shortAnswer": "Cheers 的中文意思是干杯，用于举杯祝酒时。但要注意，在英式英语中 cheers 还可表示「谢谢」或「再见」，需根据语境判断。",
+   "definition": "cheers 作感叹词，核心义为举杯祝酒时说「干杯」。常见搭配：say cheers, cheers to sth。口语中英式英语还可用作「谢谢」或「再见」。正式祝酒也可说 Bottoms up!",
+   "examples": [
+    {
+     "en": "Let's raise our glasses and say cheers to the newlyweds!",
+     "zh": "让我们举杯，向新人干杯！"
+    },
+    {
+     "en": "Cheers! This beer is amazing, and the pizza is great too.",
+     "zh": "干杯！这啤酒真棒，披萨也很好吃。"
+    }
+   ],
+   "tags": [
+    "餐饮美食"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "续杯",
+   "pair": "zh-en",
+   "slug": "xu-bei",
+   "lang": "zh",
+   "translation": "refill",
+   "shortAnswer": "「续杯」英文是 refill，指把同一杯饮料重新加满，餐厅里常说 Can I get a refill?，和再点一杯不同。",
+   "definition": "refill 作名词指续杯、再添加的份量，作动词指重新加满。美式餐厅的咖啡、汽水常可免费续杯，通常仍用原杯，点餐时说 Can I get a refill? 最自然。",
+   "examples": [
+    {
+     "en": "The coffee at this diner comes with free refills, so I always ask for a refill before I leave.",
+     "zh": "这家小餐馆的咖啡可以免费续杯，所以我走之前总会再要一杯续杯。"
+    },
+    {
+     "en": "Excuse me, could I get a refill on my iced tea when you have a moment?",
+     "zh": "打扰一下，您方便的时候能帮我续一下冰茶吗？"
+    }
+   ],
+   "tags": [
+    "餐饮美食"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "refill",
+   "pair": "en-zh",
+   "slug": "refill",
+   "lang": "en",
+   "translation": "续杯",
+   "shortAnswer": "Refill 中文是「续杯」，指把同一杯饮料重新加满，常说 Can I get a refill?，和再点一杯不同。",
+   "definition": "refill 作名词指续杯、再添加的份量，作动词指重新加满。美式餐厅的咖啡、汽水常可免费续杯，通常仍用原杯，点餐时说 Can I get a refill? 最自然。",
+   "examples": [
+    {
+     "en": "The coffee at this diner comes with free refills, so I always ask for a refill before I leave.",
+     "zh": "这家小餐馆的咖啡可以免费续杯，所以我走之前总会再要一杯续杯。"
+    },
+    {
+     "en": "Excuse me, could I get a refill on my iced tea when you have a moment?",
+     "zh": "打扰一下，您方便的时候能帮我续一下冰茶吗？"
+    }
+   ],
+   "tags": [
+    "餐饮美食"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "退款",
+   "pair": "zh-en",
+   "slug": "tui-kuan",
+   "lang": "zh",
+   "translation": "refund",
+   "shortAnswer": "「退款」的英文是 refund，指把付过的钱退还给你。注意区分退货 return 和换货 exchange：退款强调拿回钱，不一定是退商品。",
+   "definition": "refund 可作名词和动词：ask for a refund 要求退款，get a full refund 获得全额退款；动词用法如 refund the money。购物时退货是 return，退钱是 refund，换货是 exchange，三者常连用但含义不同。",
+   "examples": [
+    {
+     "en": "If the item is defective, you can ask for a full refund within thirty days.",
+     "zh": "如果商品有缺陷，你可以在三十天内要求全额退款。"
+    },
+    {
+     "en": "The store refused to refund my money, so I filed a complaint.",
+     "zh": "这家店拒绝退款给我，所以我提交了投诉。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "refund",
+   "pair": "en-zh",
+   "slug": "refund",
+   "lang": "en",
+   "translation": "退款",
+   "shortAnswer": "Refund 的中文意思是「退款」，指把已支付的钱退回给顾客。它与 return 的关键区别是：refund 强调退钱，return 强调把商品退回商店。",
+   "definition": "Refund 作名词指退款、退款额，作动词指退还钱款。常见搭配有 full refund, partial refund, request a refund, issue a refund。正式客服和日常购物都能用，注意 refund 的是钱，不是商品。",
+   "examples": [
+    {
+     "en": "If the item is defective, you can ask for a full refund within thirty days.",
+     "zh": "如果商品有缺陷，你可以在三十天内要求全额退款。"
+    },
+    {
+     "en": "The store refused to refund my money, so I filed a complaint.",
+     "zh": "这家店拒绝退款给我，所以我提交了投诉。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "包邮",
+   "pair": "zh-en",
+   "slug": "bao-you",
+   "lang": "zh",
+   "translation": "free shipping",
+   "shortAnswer": "「包邮」的英文是 free shipping，表示卖家承担运费，常与 get、offer 连用；注意免关税是 duty-free，别混用。",
+   "definition": "常搭配 free shipping on orders over...（满额包邮）、get/enjoy free shipping。不能写作 free post；英式也见 free delivery，但 free shipping 更通用。",
+   "examples": [
+    {
+     "en": "This store offers free shipping on all orders over 99 yuan.",
+     "zh": "这家店所有满 99 元的订单都包邮。"
+    },
+    {
+     "en": "If you add one more item to your cart, you'll get free shipping.",
+     "zh": "如果你再往购物车里加一件商品，就能享受包邮了。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "free shipping",
+   "pair": "en-zh",
+   "slug": "free-shipping",
+   "lang": "en",
+   "translation": "包邮",
+   "shortAnswer": "free shipping 的中文意思是「包邮」，即卖家或平台承担运费、买家无需另付；与 free returns（免费退货）不同。",
+   "definition": "常用搭配为 get/offer/enjoy free shipping、free shipping on orders over...；口语也说 free delivery，但 free shipping 最通用，勿与 free returns 混淆。",
+   "examples": [
+    {
+     "en": "This store offers free shipping on all orders over 99 yuan.",
+     "zh": "这家店所有满 99 元的订单都包邮。"
+    },
+    {
+     "en": "If you add one more item to your cart, you'll get free shipping.",
+     "zh": "如果你再往购物车里加一件商品，就能享受包邮了。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "积分",
+   "pair": "zh-en",
+   "slug": "ji-fen",
+   "lang": "zh",
+   "translation": "reward points",
+   "shortAnswer": "「积分」的英文是 reward points，特指消费后获得的奖励积分；注意与 membership points（会员积分）和 credit（信用积分）区分。",
+   "definition": "reward points 多用于购物、信用卡等消费返利场景，常见搭配 earn/redeem reward points。不能说 point，必须用复数 points。",
+   "examples": [
+    {
+     "en": "You can earn reward points every time you shop online and redeem them for discounts.",
+     "zh": "你每次在线购物都可以赚取积分，并用它们兑换折扣。"
+    },
+    {
+     "en": "I used my reward points to get a free gift after accumulating enough over several purchases.",
+     "zh": "在多次购物累积了足够的积分后，我用它们换了一个免费礼物。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "reward points",
+   "pair": "en-zh",
+   "slug": "reward-points",
+   "lang": "en",
+   "translation": "积分",
+   "shortAnswer": "「reward points」的中文意思是「积分」，指消费后获得的奖励积分；与 loyalty points（忠诚度积分）或 store credit（商店信用）不同。",
+   "definition": "reward points 是名词短语，常见搭配 earn/redeem reward points，多用于零售和信用卡语境。口语中可简称 points，但正式写作需保留 reward。",
+   "examples": [
+    {
+     "en": "You can earn reward points every time you shop online and redeem them for discounts.",
+     "zh": "你每次在线购物都可以赚取积分，并用它们兑换折扣。"
+    },
+    {
+     "en": "I used my reward points to get a free gift after accumulating enough over several purchases.",
+     "zh": "在多次购物累积了足够的积分后，我用它们换了一个免费礼物。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "退货",
+   "pair": "zh-en",
+   "slug": "tui-huo",
+   "lang": "zh",
+   "translation": "return an item",
+   "shortAnswer": "退货英文是 return an item，指把买来的商品退回商家并按要求办理退款或换货。",
+   "definition": "return an item 指把商品退回商家，办理退货或退款。退钱是 refund，换货是 exchange，别混用。",
+   "examples": [
+    {
+     "en": "If the shoes don't fit, you can return an item to the store within 30 days.",
+     "zh": "如果鞋子不合脚，你可以在三十天内把商品退回商店。"
+    },
+    {
+     "en": "I need to return an item from the flash sale because it arrived damaged.",
+     "zh": "我需要退掉一件秒杀买的商品，因为它到手时是坏的。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "return an item",
+   "pair": "en-zh",
+   "slug": "return-an-item",
+   "lang": "en",
+   "translation": "退货",
+   "shortAnswer": "Return an item means 退货, taking a bought product back to the seller for a refund or exchange.",
+   "definition": "Return an item means 退货, giving goods back to the seller. Refund is money back; exchange is swapping.",
+   "examples": [
+    {
+     "en": "If the shoes don't fit, you can return an item to the store within 30 days.",
+     "zh": "如果鞋子不合脚，你可以在三十天内把商品退回商店。"
+    },
+    {
+     "en": "I need to return an item from the flash sale because it arrived damaged.",
+     "zh": "我需要退掉一件秒杀买的商品，因为它到手时是坏的。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "换货",
+   "pair": "zh-en",
+   "slug": "huan-huo",
+   "lang": "zh",
+   "translation": "exchange an item",
+   "shortAnswer": "「换货」英文是 exchange an item，指把买到的商品换成另一件，不退钱。",
+   "definition": "exchange an item 指换货：把已购商品换成另一件，例如换尺码、颜色或款式，通常不涉及退款。",
+   "examples": [
+    {
+     "en": "I bought these shoes online, but they're too tight. Can I exchange an item for a larger size?",
+     "zh": "我在网上买了这双鞋，但太紧了。我可以换货换成大一号的吗？"
+    },
+    {
+     "en": "The store allows you to exchange an item within thirty days as long as you keep the receipt.",
+     "zh": "只要保留收据，这家店允许你在三十天内换货。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "exchange an item",
+   "pair": "en-zh",
+   "slug": "exchange-an-item",
+   "lang": "en",
+   "translation": "换货",
+   "shortAnswer": "\"换货\" in English is exchange an item: swap a bought product for another, not a refund.",
+   "definition": "exchange an item means to swap a purchased product for another, such as a different size, color, or model, usually without a refund.",
+   "examples": [
+    {
+     "en": "I bought these shoes online, but they're too tight. Can I exchange an item for a larger size?",
+     "zh": "我在网上买了这双鞋，但太紧了。我可以换货换成大一号的吗？"
+    },
+    {
+     "en": "The store allows you to exchange an item within thirty days as long as you keep the receipt.",
+     "zh": "只要保留收据，这家店允许你在三十天内换货。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "七天无理由",
+   "pair": "zh-en",
+   "slug": "qi-tian-wu-li-you",
+   "lang": "zh",
+   "translation": "no-questions-asked return",
+   "shortAnswer": "「七天无理由」常译为 no-questions-asked return，指收货后七天内可无理由退货；英美无统一同类法规。",
+   "definition": "搭配：offer a no-questions-asked return policy、within seven days。区分 return 退货、refund 退钱、exchange 换货。",
+   "examples": [
+    {
+     "en": "This online store offers a no-questions-asked return within seven days of delivery.",
+     "zh": "这家网店提供收货后七天无理由退货服务。"
+    },
+    {
+     "en": "I bought the wrong size, but the no-questions-asked return made it easy to send back.",
+     "zh": "我买错了尺码，但七天无理由退货让我轻松寄回。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "no-questions-asked return",
+   "pair": "en-zh",
+   "slug": "no-questions-asked-return",
+   "lang": "en",
+   "translation": "七天无理由",
+   "shortAnswer": "no-questions-asked return 对应中文「七天无理由」，指七天内无需说明理由即可退货；常指中国电商政策。",
+   "definition": "核心义：商家接受退货且不盘问原因。搭配：offer a no-questions-asked return policy、no-questions-asked guarantee。注意区分 return、refund、exchange。",
+   "examples": [
+    {
+     "en": "This online store offers a no-questions-asked return within seven days of delivery.",
+     "zh": "这家网店提供收货后七天无理由退货服务。"
+    },
+    {
+     "en": "I bought the wrong size, but the no-questions-asked return made it easy to send back.",
+     "zh": "我买错了尺码，但七天无理由退货让我轻松寄回。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "假货",
+   "pair": "zh-en",
+   "slug": "jia-huo",
+   "lang": "zh",
+   "translation": "counterfeit",
+   "shortAnswer": "「假货」的英文是 counterfeit，常作形容词或名词，如 counterfeit goods，比 fake 更正式。",
+   "definition": "counterfeit 指为冒充真品而仿造的假货，如 counterfeit watches、counterfeit currency，多用于法律和海关语境。",
+   "examples": [
+    {
+     "en": "The market was shut down after police found large quantities of counterfeit handbags.",
+     "zh": "警方查获大量假名牌包后，该市场被查封。"
+    },
+    {
+     "en": "If you suspect the watch is counterfeit, keep the receipt and ask for a refund.",
+     "zh": "如果你怀疑这块表是假货，就保留收据并要求退款。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "counterfeit",
+   "pair": "en-zh",
+   "slug": "counterfeit",
+   "lang": "en",
+   "translation": "假货",
+   "shortAnswer": "Counterfeit means 假货: goods made to look real in order to deceive buyers, more formal than fake.",
+   "definition": "Counterfeit describes imitation goods passed off as genuine, such as counterfeit handbags or money, stressing illegal copying.",
+   "examples": [
+    {
+     "en": "The market was shut down after police found large quantities of counterfeit handbags.",
+     "zh": "警方查获大量假名牌包后，该市场被查封。"
+    },
+    {
+     "en": "If you suspect the watch is counterfeit, keep the receipt and ask for a refund.",
+     "zh": "如果你怀疑这块表是假货，就保留收据并要求退款。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "会员",
+   "pair": "zh-en",
+   "slug": "hui-yuan",
+   "lang": "zh",
+   "translation": "membership",
+   "shortAnswer": "「会员」在购物消费语境中常指 membership，即会员身份或资格；若指具体某位会员，则用 member。",
+   "definition": "membership 指会员身份或会员资格，常见搭配有 membership card（会员卡）、membership fee（会费）和 membership discount（会员折扣）。",
+   "examples": [
+    {
+     "en": "You can enjoy free shipping on all orders once you activate your membership.",
+     "zh": "激活会员身份后，你就可以享受所有订单免运费。"
+    },
+    {
+     "en": "She decided not to renew her gym membership after moving to a new city.",
+     "zh": "搬到新城市后，她决定不再续费健身房会员。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "membership",
+   "pair": "en-zh",
+   "slug": "membership",
+   "lang": "en",
+   "translation": "会员",
+   "shortAnswer": "Membership means the state of being a member, often translated as 「会员」or「会员身份」rather than a single member.",
+   "definition": "Membership refers to the state or status of being a member, and is common in shopping contexts such as membership cards, fees and discounts.",
+   "examples": [
+    {
+     "en": "You can enjoy free shipping on all orders once you activate your membership.",
+     "zh": "激活会员身份后，你就可以享受所有订单免运费。"
+    },
+    {
+     "en": "She decided not to renew her gym membership after moving to a new city.",
+     "zh": "搬到新城市后，她决定不再续费健身房会员。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "试衣间",
+   "pair": "zh-en",
+   "slug": "shi-yi-jian",
+   "lang": "zh",
+   "translation": "fitting room",
+   "shortAnswer": "「试衣间」的英文是 fitting room，指商场里试衣服的隔间，可问 Where is the fitting room?",
+   "definition": "fitting room 指商场、服装店供顾客试穿衣服的隔间，常用复数；英式英语更常说 changing room。问路可说 Where are the fitting rooms?",
+   "examples": [
+    {
+     "en": "Excuse me, where is the fitting room? I'd like to try this dress on.",
+     "zh": "打扰一下，试衣间在哪里？我想试穿这条连衣裙。"
+    },
+    {
+     "en": "There was a long queue outside the fitting rooms on the first day of the sale.",
+     "zh": "促销第一天，试衣间外面排起了长队。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "fitting room",
+   "pair": "en-zh",
+   "slug": "fitting-room",
+   "lang": "en",
+   "translation": "试衣间",
+   "shortAnswer": "“fitting room”的中文意思是「试衣间」，即商场里试衣服的隔间，常用复数 fitting rooms。",
+   "definition": "fitting room 是名词，指商店中供顾客试穿衣物的隔间，常用复数；美式英语常用，英式多用 changing room。搭配：use the fitting room。",
+   "examples": [
+    {
+     "en": "Excuse me, where is the fitting room? I'd like to try this dress on.",
+     "zh": "打扰一下，试衣间在哪里？我想试穿这条连衣裙。"
+    },
+    {
+     "en": "There was a long queue outside the fitting rooms on the first day of the sale.",
+     "zh": "促销第一天，试衣间外面排起了长队。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "预售",
+   "pair": "zh-en",
+   "slug": "yu-shou",
+   "lang": "zh",
+   "translation": "pre-sale",
+   "shortAnswer": "「预售」对应英文 pre-sale，指商品或票务在正式发售前提前接受订单和付款的销售方式。",
+   "definition": "pre-sale 常作名词或形容词，搭配 on pre-sale（预售中）、pre-sale price（预售价）、pre-sale period（预售期），强调提前下单付款。",
+   "examples": [
+    {
+     "en": "The tickets are on pre-sale now, so you can book them before the official release.",
+     "zh": "门票现在正在预售，你可以在正式发售前预订。"
+    },
+    {
+     "en": "I bought the new phone during its pre-sale period and got a free case.",
+     "zh": "我在预售期买了这部新手机，还获赠了一个保护壳。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "pre-sale",
+   "pair": "en-zh",
+   "slug": "pre-sale",
+   "lang": "en",
+   "translation": "预售",
+   "shortAnswer": "pre-sale 的中文意思是「预售」，指商品或票务在正式上市前提前接受订单和付款的销售方式。",
+   "definition": "pre-sale 可作名词或形容词，多用于电商和票务场景，正式程度中等，常与 price、period 等词搭配使用。",
+   "examples": [
+    {
+     "en": "The tickets are on pre-sale now, so you can book them before the official release.",
+     "zh": "门票现在正在预售，你可以在正式发售前预订。"
+    },
+    {
+     "en": "I bought the new phone during its pre-sale period and got a free case.",
+     "zh": "我在预售期买了这部新手机，还获赠了一个保护壳。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "断货",
+   "pair": "zh-en",
+   "slug": "duan-huo",
+   "lang": "zh",
+   "translation": "out of stock",
+   "shortAnswer": "「断货」的英文是 out of stock，表示商品暂时无货；注意别与 return、refund 混用。",
+   "definition": "out of stock 多作表语：be/go out of stock，也可说 run out of stock。反义是 in stock，补货后说 back in stock。",
+   "examples": [
+    {
+     "en": "Sorry, this size is out of stock right now, but we can notify you when it's back in stock.",
+     "zh": "抱歉，这个尺码现在断货了，不过补货时我们可以通知您。"
+    },
+    {
+     "en": "The limited edition sneakers went out of stock within minutes during the flash sale.",
+     "zh": "那款限量球鞋在秒杀开始几分钟内就断货了。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "out of stock",
+   "pair": "en-zh",
+   "slug": "out-of-stock",
+   "lang": "en",
+   "translation": "断货",
+   "shortAnswer": "\"out of stock\" means「断货」: the item is temporarily unavailable, not sold out forever or discontinued.",
+   "definition": "out of stock means an item is temporarily unavailable. It often follows be, go, or run. Opposite: in stock; after restocking: back in stock.",
+   "examples": [
+    {
+     "en": "Sorry, this size is out of stock right now, but we can notify you when it's back in stock.",
+     "zh": "抱歉，这个尺码现在断货了，不过补货时我们可以通知您。"
+    },
+    {
+     "en": "The limited edition sneakers went out of stock within minutes during the flash sale.",
+     "zh": "那款限量球鞋在秒杀开始几分钟内就断货了。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "代购",
+   "pair": "zh-en",
+   "slug": "dai-gou",
+   "lang": "zh",
+   "translation": "buying agent",
+   "shortAnswer": "「代购」的英文是 buying agent。注意：buying agent 指代购者（人），代购行为用 daigou 或 buying service；英文媒体常用 daigou 专指中国代购。",
+   "definition": "buying agent 指帮人在海外购买商品的人，可搭配 work as a buying agent、hire a buying agent。与 personal shopper（个人购物助理）不同，代购强调跨境、赚差价。",
+   "examples": [
+    {
+     "en": "She works as a buying agent, helping Chinese customers purchase luxury goods from Europe.",
+     "zh": "她做代购，帮中国顾客从欧洲购买奢侈品。"
+    },
+    {
+     "en": "Many international students earn extra money by acting as a buying agent for friends back home.",
+     "zh": "许多留学生通过给国内朋友做代购来赚外快。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "buying agent",
+   "pair": "en-zh",
+   "slug": "buying-agent",
+   "lang": "en",
+   "translation": "代购",
+   "shortAnswer": "buying agent 的中文意思是「代购」。它指代购者，而代购行为或服务常用 daigou 或 buying service；daigou 已被英文媒体借用，专指中国代购现象。",
+   "definition": "buying agent 指代人，常与 work as、hire 连用，属中性正式表达。若强调跨境代购行为，用 daigou 更地道；不要与 personal shopper（本地购物助理）混淆。",
+   "examples": [
+    {
+     "en": "She works as a buying agent, helping Chinese customers purchase luxury goods from Europe.",
+     "zh": "她做代购，帮中国顾客从欧洲购买奢侈品。"
+    },
+    {
+     "en": "Many international students earn extra money by acting as a buying agent for friends back home.",
+     "zh": "许多留学生通过给国内朋友做代购来赚外快。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "比价",
+   "pair": "zh-en",
+   "slug": "bi-jia",
+   "lang": "zh",
+   "translation": "compare prices",
+   "shortAnswer": "「比价」的英文是 compare prices，指出门买东西前多问几家、多查几个平台。",
+   "definition": "compare prices 常与 shop around 连用，如 compare prices online；名词形式是 price comparison，比价网站叫 price comparison site。",
+   "examples": [
+    {
+     "en": "Before buying a laptop, I always compare prices on several websites.",
+     "zh": "买笔记本电脑前，我总会在几个网站比价。"
+    },
+    {
+     "en": "She compared prices at three supermarkets and saved a lot on groceries.",
+     "zh": "她在三家超市比价，买食品杂货省了不少钱。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "compare prices",
+   "pair": "en-zh",
+   "slug": "compare-prices",
+   "lang": "en",
+   "translation": "比价",
+   "shortAnswer": "compare prices 的中文意思是「比价」，即比较不同商家或平台的价格，不是砍价。",
+   "definition": "compare prices 指购买前对比多家价格以求实惠；比价网站叫 price comparison site。它与 bargain（砍价）不同。",
+   "examples": [
+    {
+     "en": "Before buying a laptop, I always compare prices on several websites.",
+     "zh": "买笔记本电脑前，我总会在几个网站比价。"
+    },
+    {
+     "en": "She compared prices at three supermarkets and saved a lot on groceries.",
+     "zh": "她在三家超市比价，买食品杂货省了不少钱。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "秒杀",
+   "pair": "zh-en",
+   "slug": "miao-sha",
+   "lang": "zh",
+   "translation": "flash sale",
+   "shortAnswer": "「秒杀」的英文是 flash sale，指限时极短、折扣极大的抢购促销活动，常在电商平台出现。",
+   "definition": "flash sale 强调短时间、限量、大折扣，常见搭配有 have a flash sale、a flash sale on 某商品；别用 kill 直译，否则会变成暴力含义。",
+   "examples": [
+    {
+     "en": "I grabbed a new laptop during the flash sale before it sold out.",
+     "zh": "我在秒杀活动中抢到了一台新笔记本电脑，趁它卖完之前。"
+    },
+    {
+     "en": "The store is having a flash sale on sneakers, so I added a pair to my cart and checked out immediately.",
+     "zh": "这家店正在秒杀运动鞋，所以我把一双加入了购物车并立刻结账。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "flash sale",
+   "pair": "en-zh",
+   "slug": "flash-sale",
+   "lang": "en",
+   "translation": "秒杀",
+   "shortAnswer": "「flash sale」的中文意思是「秒杀」，指限时极短、折扣极大的抢购促销，常见于电商平台。",
+   "definition": "flash sale 是名词，指短时间内的大幅折扣促销，常见搭配 a flash sale on electronics、during the flash sale，口语也说 flash sale event。",
+   "examples": [
+    {
+     "en": "I grabbed a new laptop during the flash sale before it sold out.",
+     "zh": "我在秒杀活动中抢到了一台新笔记本电脑，趁它卖完之前。"
+    },
+    {
+     "en": "The store is having a flash sale on sneakers, so I added a pair to my cart and checked out immediately.",
+     "zh": "这家店正在秒杀运动鞋，所以我把一双加入了购物车并立刻结账。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "分期付款",
+   "pair": "zh-en",
+   "slug": "fen-qi-fu-kuan",
+   "lang": "zh",
+   "translation": "pay in installments",
+   "shortAnswer": "「分期付款」的英文是 pay in installments，指将款项分多次付清，常用于购物消费场景。",
+   "definition": "pay in installments 表示分期付款，常与 for 连用，如 pay in installments for a phone。",
+   "examples": [
+    {
+     "en": "I decided to pay in installments for the new laptop because it was too expensive to buy outright.",
+     "zh": "我决定分期付款买那台新笔记本电脑，因为一次性付清太贵了。"
+    },
+    {
+     "en": "Many online stores let you pay in installments without any interest if you check out with a specific payment method.",
+     "zh": "许多网店允许你使用特定支付方式结账时分期付款，而且免利息。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "pay in installments",
+   "pair": "en-zh",
+   "slug": "pay-in-installments",
+   "lang": "en",
+   "translation": "分期付款",
+   "shortAnswer": "pay in installments 指「分期付款」，即把一笔钱分几期支付，常用于购买大件商品时。",
+   "definition": "pay in installments 意为分期付款，英式拼写常作 pay in instalments，多用于购买大件商品。",
+   "examples": [
+    {
+     "en": "I decided to pay in installments for the new laptop because it was too expensive to buy outright.",
+     "zh": "我决定分期付款买那台新笔记本电脑，因为一次性付清太贵了。"
+    },
+    {
+     "en": "Many online stores let you pay in installments without any interest if you check out with a specific payment method.",
+     "zh": "许多网店允许你使用特定支付方式结账时分期付款，而且免利息。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "发票",
+   "pair": "zh-en",
+   "slug": "fa-piao",
+   "lang": "zh",
+   "translation": "invoice",
+   "shortAnswer": "「发票」的英文是 invoice，指商家开具的付款通知或消费凭证。注意 invoice 强调账单或税务凭证，日常购物小票多说 receipt。",
+   "definition": "invoice 多用于商业交易、报销或跨境购物，常见搭配：issue/send an invoice（开发票）、pay an invoice（支付账单）。购物小票、收据一般用 receipt；发票更正式，常含税号、金额和付款期限。",
+   "examples": [
+    {
+     "en": "Could you send me the invoice by email so I can get it reimbursed?",
+     "zh": "你能把发票通过电子邮件发给我吗？这样我好拿去报销。"
+    },
+    {
+     "en": "The seller issued an invoice for the returned item and processed a refund to my account.",
+     "zh": "卖家为退货商品开具了发票，并将退款打到了我的账户。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "invoice",
+   "pair": "en-zh",
+   "slug": "invoice",
+   "lang": "en",
+   "translation": "发票",
+   "shortAnswer": "Invoice 的中文意思是「发票」，指列出商品、金额和付款条件的账单。它比 receipt（收据）更正式，通常用于商业结算或报销。",
+   "definition": "invoice 作名词指发票、账单，作动词指开具发票。常见搭配：send an invoice（寄发票）、pay an invoice（付账单）、invoice someone for something（向某人开票收费）。多用于正式商业场合，口语购物小票一般说 receipt。",
+   "examples": [
+    {
+     "en": "Could you send me the invoice by email so I can get it reimbursed?",
+     "zh": "你能把发票通过电子邮件发给我吗？这样我好拿去报销。"
+    },
+    {
+     "en": "The seller issued an invoice for the returned item and processed a refund to my account.",
+     "zh": "卖家为退货商品开具了发票，并将退款打到了我的账户。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "周末",
+   "pair": "zh-en",
+   "slug": "zhou-mo",
+   "lang": "zh",
+   "translation": "weekend",
+   "shortAnswer": "「周末」的英文是 weekend。它通常指周六和周日，注意与表示「一周」的 week 区分。",
+   "definition": "weekend 指周六和周日，常与 on the weekend（美式）或 at the weekend（英式）连用。注意：work on the weekend 是「周末加班」，而 work for the weekend 则是「为周末而工作」的幽默说法。",
+   "examples": [
+    {
+     "en": "I'm planning to relax and read a book this weekend.",
+     "zh": "这个周末我打算放松一下，读本书。"
+    },
+    {
+     "en": "We had a great weekend hiking in the mountains.",
+     "zh": "我们周末去山里徒步，玩得很开心。"
+    }
+   ],
+   "tags": [
+    "时间表达"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "weekend",
+   "pair": "en-zh",
+   "slug": "weekend",
+   "lang": "en",
+   "translation": "周末",
+   "shortAnswer": "Weekend 的中文意思是「周末」。它指周六和周日，通常与介词 on 或 at 连用，而 week 则指整个星期。",
+   "definition": "Weekend 指星期六和星期日，是休息时间。常见搭配：on the weekend（美式）、at the weekend（英式）、weekend trip（周末旅行）。注意：weekend 是名词，也可作定语，如 weekend plans。",
+   "examples": [
+    {
+     "en": "I'm planning to relax and read a book this weekend.",
+     "zh": "这个周末我打算放松一下，读本书。"
+    },
+    {
+     "en": "We had a great weekend hiking in the mountains.",
+     "zh": "我们周末去山里徒步，玩得很开心。"
+    }
+   ],
+   "tags": [
+    "时间表达"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "购物节",
+   "pair": "zh-en",
+   "slug": "gou-wu-jie",
+   "lang": "zh",
+   "translation": "shopping festival",
+   "shortAnswer": "购物节的英文是 shopping festival，指集中促销的购物时段，口语也常说 sales。",
+   "definition": "shopping festival 指电商或商场集中打折的购物节，如双十一。搭配：online shopping festival、annual shopping festival。注意 shopping holiday 指购物假期，不是购物节。",
+   "examples": [
+    {
+     "en": "The annual shopping festival offers deep discounts, so many people stock up on daily necessities.",
+     "zh": "一年一度的购物节折扣很大，所以很多人囤积日用品。"
+    },
+    {
+     "en": "During the online shopping festival, I added items to my cart early to avoid missing the flash sale.",
+     "zh": "在网络购物节期间，我提前把商品加入购物车，以免错过秒杀。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "shopping festival",
+   "pair": "en-zh",
+   "slug": "shopping-festival",
+   "lang": "en",
+   "translation": "购物节",
+   "shortAnswer": "shopping festival 的中文意思是购物节，指集中促销的购物时段，常见于电商语境。",
+   "definition": "shopping festival 指电商或商场举办的集中促销活动，如双十一、黑五。搭配：online shopping festival、annual shopping festival。注意 shopping holiday 不是购物节。",
+   "examples": [
+    {
+     "en": "The annual shopping festival offers deep discounts, so many people stock up on daily necessities.",
+     "zh": "一年一度的购物节折扣很大，所以很多人囤积日用品。"
+    },
+    {
+     "en": "During the online shopping festival, I added items to my cart early to avoid missing the flash sale.",
+     "zh": "在网络购物节期间，我提前把商品加入购物车，以免错过秒杀。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "试吃",
+   "pair": "zh-en",
+   "slug": "shi-chi",
+   "lang": "zh",
+   "translation": "free sample",
+   "shortAnswer": "「试吃」的英文是 free sample，指商家免费提供的小份食品供顾客品尝，常见于超市和面包店。",
+   "definition": "free sample 指免费小份样品，常与 give out、try 搭配，注意 sample 也可作动词，如 sample the cake。",
+   "examples": [
+    {
+     "en": "The bakery was giving out free samples of its new chocolate cake.",
+     "zh": "那家面包店正在派发新巧克力蛋糕的试吃。"
+    },
+    {
+     "en": "You can grab a free sample at the entrance before you decide to buy.",
+     "zh": "你可以在入口处拿一份试吃，再决定要不要买。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "free sample",
+   "pair": "en-zh",
+   "slug": "free-sample",
+   "lang": "en",
+   "translation": "试吃",
+   "shortAnswer": "free sample 的中文意思是「试吃」，指商家免费提供的小份商品供顾客体验，常见于超市和面包店促销。",
+   "definition": "A free sample is a small amount of a product given away so customers can try it before buying, often in stores or at events.",
+   "examples": [
+    {
+     "en": "The bakery was giving out free samples of its new chocolate cake.",
+     "zh": "那家面包店正在派发新巧克力蛋糕的试吃。"
+    },
+    {
+     "en": "You can grab a free sample at the entrance before you decide to buy.",
+     "zh": "你可以在入口处拿一份试吃，再决定要不要买。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "准时",
+   "pair": "zh-en",
+   "slug": "zhun-shi",
+   "lang": "zh",
+   "translation": "on time",
+   "shortAnswer": "「准时」的英文是 on time，表示正好不迟到。注意 on time 强调不迟不早恰好在约定时刻，而 in time 强调赶得上、及时。",
+   "definition": "on time 常与 be、arrive、show up 等搭配，如 arrive on time、be on time for the meeting。它指按约定时间点恰好到达，区别于 in time（及时、赶得上）和 ahead of time（提前）。",
+   "examples": [
+    {
+     "en": "Please arrive on time for the interview; the manager hates waiting.",
+     "zh": "面试请准时到场，经理很讨厌等人。"
+    },
+    {
+     "en": "The project was finished on time, just before the deadline.",
+     "zh": "这个项目准时完成了，正好赶在截止日期前。"
+    }
+   ],
+   "tags": [
+    "时间表达"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "on time",
+   "pair": "en-zh",
+   "slug": "on-time",
+   "lang": "en",
+   "translation": "准时",
+   "shortAnswer": "on time 的中文意思是「准时」，指不迟到、恰好在约定时刻发生。它与 in time 不同：in time 表示及时、赶得上，而 on time 强调按点、不早不晚。",
+   "definition": "on time 是常用短语，常与 be、arrive、start、finish 等动词连用，如 The train arrived on time。它强调按原定时间发生，区别于 in time（及时）和 ahead of time（提前）。",
+   "examples": [
+    {
+     "en": "Please arrive on time for the interview; the manager hates waiting.",
+     "zh": "面试请准时到场，经理很讨厌等人。"
+    },
+    {
+     "en": "The project was finished on time, just before the deadline.",
+     "zh": "这个项目准时完成了，正好赶在截止日期前。"
+    }
+   ],
+   "tags": [
+    "时间表达"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "囤货",
+   "pair": "zh-en",
+   "slug": "tun-huo",
+   "lang": "zh",
+   "translation": "stock up",
+   "shortAnswer": "「囤货」的英文是 stock up，指趁价格合适或供应稳定时大量买入储存，常接 on 再接物品，如 stock up on snacks。",
+   "definition": "stock up 强调为将来使用而大量购入储备，常与 on 连用：stock up on water。与 buy in bulk 侧重批发不同，它更强调备货目的。",
+   "examples": [
+    {
+     "en": "With the storm approaching, residents rushed to stock up on bottled water and canned food.",
+     "zh": "暴风雨即将来临，居民们纷纷囤积瓶装水和罐头食品。"
+    },
+    {
+     "en": "I always stock up on snacks when they go on sale at the supermarket.",
+     "zh": "超市零食打折时，我总是会囤货。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "stock up",
+   "pair": "en-zh",
+   "slug": "stock-up",
+   "lang": "en",
+   "translation": "囤货",
+   "shortAnswer": "“stock up”的中文意思是“囤货”，指大量购买并储存某物以备日后使用，通常接 on 再接物品，如 stock up on food。",
+   "definition": "stock up 表示囤积、备货，后接 on 再加名词：stock up on groceries。常用于节日前、涨价前或灾害前，注意勿与 in stock 混淆。",
+   "examples": [
+    {
+     "en": "With the storm approaching, residents rushed to stock up on bottled water and canned food.",
+     "zh": "暴风雨即将来临，居民们纷纷囤积瓶装水和罐头食品。"
+    },
+    {
+     "en": "I always stock up on snacks when they go on sale at the supermarket.",
+     "zh": "超市零食打折时，我总是会囤货。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "二手",
+   "pair": "zh-en",
+   "slug": "er-shou",
+   "lang": "zh",
+   "translation": "secondhand",
+   "shortAnswer": "「二手」的英文是 secondhand，指物品经过他人使用后转手出售，也可表示消息间接听来。",
+   "definition": "secondhand 作形容词指二手的、用过的，如 secondhand books；作副词指间接地，如 hear it secondhand。",
+   "examples": [
+    {
+     "en": "He bought a secondhand bike to save money.",
+     "zh": "为了省钱，他买了一辆二手自行车。"
+    },
+    {
+     "en": "I heard about the job secondhand, not from the company.",
+     "zh": "我是从别人那里听说这份工作的，不是从公司得知的。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "secondhand",
+   "pair": "en-zh",
+   "slug": "secondhand",
+   "lang": "en",
+   "translation": "二手",
+   "shortAnswer": "secondhand 对应中文「二手」，指非全新、经他人转手使用的物品，也可表示间接获得信息。",
+   "definition": "secondhand means 二手的 or 间接的: a secondhand car; hear the news secondhand. Also spelled second-hand.",
+   "examples": [
+    {
+     "en": "He bought a secondhand bike to save money.",
+     "zh": "为了省钱，他买了一辆二手自行车。"
+    },
+    {
+     "en": "I heard about the job secondhand, not from the company.",
+     "zh": "我是从别人那里听说这份工作的，不是从公司得知的。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "工作日",
+   "pair": "zh-en",
+   "slug": "gong-zuo-ri",
+   "lang": "zh",
+   "translation": "weekday",
+   "shortAnswer": "工作日用英语说就是 weekday，通常指周一至周五，不包括周六和周日；常见搭配 on weekdays。",
+   "definition": "weekday 指周一至周五中正常上班或上学的日子，常与 on weekdays 连用；注意它不包括周末（Saturday 和 Sunday）。",
+   "examples": [
+    {
+     "en": "I usually get up at six on weekdays.",
+     "zh": "工作日我通常六点起床。"
+    },
+    {
+     "en": "The museum is less crowded on a weekday.",
+     "zh": "工作日的博物馆没那么拥挤。"
+    }
+   ],
+   "tags": [
+    "时间表达"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "weekday",
+   "pair": "en-zh",
+   "slug": "weekday",
+   "lang": "en",
+   "translation": "工作日",
+   "shortAnswer": "Weekday 的中文意思是工作日，通常指周一到周五；它不包括周六和周日，常搭配 on weekdays。",
+   "definition": "weekday 指周一至周五中正常上班或上学的日子，常搭配 on a weekday、every weekday 等。反义词 weekend 指周六和周日。",
+   "examples": [
+    {
+     "en": "I usually get up at six on weekdays.",
+     "zh": "工作日我通常六点起床。"
+    },
+    {
+     "en": "The museum is less crowded on a weekday.",
+     "zh": "工作日的博物馆没那么拥挤。"
+    }
+   ],
+   "tags": [
+    "时间表达"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "提前",
+   "pair": "zh-en",
+   "slug": "ti-qian",
+   "lang": "zh",
+   "translation": "in advance",
+   "shortAnswer": "「提前」的英文是 in advance，例如 book in advance（提前预订）。in advance 强调事先做好准备，多放在动词后作状语，不能直接说 advance 就了事。",
+   "definition": "in advance 表示在某个时间点或事件发生之前完成某事，常与 book、pay、reserve、notify 等动词搭配，如 pay in advance（预付）。注意它与 early（早于通常时间）不同：in advance 侧重事先安排，early 侧重时间偏早。",
+   "examples": [
+    {
+     "en": "You should book your train tickets in advance, especially during the holiday season.",
+     "zh": "你应该提前预订火车票，尤其是在假期期间。"
+    },
+    {
+     "en": "Please let us know in advance if you cannot attend the meeting.",
+     "zh": "如果你不能参加会议，请提前告诉我们。"
+    }
+   ],
+   "tags": [
+    "时间表达"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "in advance",
+   "pair": "en-zh",
+   "slug": "in-advance",
+   "lang": "en",
+   "translation": "提前",
+   "shortAnswer": "in advance 的中文意思是「提前」，指在事情发生前先做好，如 book in advance（提前预订）。它强调事先准备，与 early（时间偏早）不同，不能混用。",
+   "definition": "in advance 是副词短语，表示事先、预先，常用于正式或书面场合，如 please pay in advance。常见搭配有 in advance of（在……之前）。注意它不表示「早到」，早到应用 early。",
+   "examples": [
+    {
+     "en": "You should book your train tickets in advance, especially during the holiday season.",
+     "zh": "你应该提前预订火车票，尤其是在假期期间。"
+    },
+    {
+     "en": "Please let us know in advance if you cannot attend the meeting.",
+     "zh": "如果你不能参加会议，请提前告诉我们。"
+    }
+   ],
+   "tags": [
+    "时间表达"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "赶时间",
+   "pair": "zh-en",
+   "slug": "gan-shi-jian",
+   "lang": "zh",
+   "translation": "in a rush",
+   "shortAnswer": "「赶时间」的英文是 in a rush。它强调因时间紧迫而匆忙行动，常与 be in a rush 连用，不要和表示「匆忙地」的副词 in a hurry 混用。",
+   "definition": "in a rush 表示因时间紧而匆忙、赶时间，常用于 be in a rush 或 in a rush to do sth。注意与 in a hurry 区别：in a hurry 侧重动作匆忙，in a rush 更强调时间紧迫、赶时间。",
+   "examples": [
+    {
+     "en": "I'm in a rush to catch the last train, so I can't stop and chat.",
+     "zh": "我赶着去搭末班车，所以不能停下来聊天。"
+    },
+    {
+     "en": "She was in a rush to finish the report before the deadline, so she stayed up late.",
+     "zh": "她赶着在截止日期前完成报告，所以熬夜了。"
+    }
+   ],
+   "tags": [
+    "时间表达"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "in a rush",
+   "pair": "en-zh",
+   "slug": "in-a-rush",
+   "lang": "en",
+   "translation": "赶时间",
+   "shortAnswer": "in a rush 的中文意思是「赶时间」。它强调时间紧迫、匆忙行动，与 in a hurry 都有「匆忙」义，但 in a rush 更突出「赶时间」的紧迫感。",
+   "definition": "in a rush 指因时间紧而匆忙、赶时间，口语和书面皆可。常见搭配：be in a rush, in a rush to do sth。注意：in a hurry 侧重动作匆忙，in a rush 更强调时间紧迫、赶时间。",
+   "examples": [
+    {
+     "en": "I'm in a rush to catch the last train, so I can't stop and chat.",
+     "zh": "我赶着去搭末班车，所以不能停下来聊天。"
+    },
+    {
+     "en": "She was in a rush to finish the report before the deadline, so she stayed up late.",
+     "zh": "她赶着在截止日期前完成报告，所以熬夜了。"
+    }
+   ],
+   "tags": [
+    "时间表达"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "打盹",
+   "pair": "zh-en",
+   "slug": "da-dun",
+   "lang": "zh",
+   "translation": "take a nap",
+   "shortAnswer": "「打盹」的英文是 take a nap，指白天短时间小睡，通常不脱衣、不上床。注意与 sleep（夜间睡眠）区分，nap 强调短、浅、白天。",
+   "definition": "take a nap 是口语和书面都常用的搭配，尤指白天因疲倦而小睡片刻。常见搭配：take a quick nap（快速打个盹）、take a power nap（高效小睡）。注意：go to bed 指晚上就寝，go to sleep 指入睡，均不表示打盹。",
+   "examples": [
+    {
+     "en": "I usually take a nap after lunch to stay energized for the afternoon.",
+     "zh": "我通常午饭后打个盹，以便下午保持精力充沛。"
+    },
+    {
+     "en": "If you feel sleepy while driving, pull over and take a short nap.",
+     "zh": "如果你开车时感到困倦，请靠边停车打个盹。"
+    }
+   ],
+   "tags": [
+    "时间表达"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "take a nap",
+   "pair": "en-zh",
+   "slug": "take-a-nap",
+   "lang": "en",
+   "translation": "打盹",
+   "shortAnswer": "take a nap 的中文意思是「打盹」，指白天进行短暂的小睡。与 sleep 不同，nap 强调时间短、通常不脱衣、不在床上。",
+   "definition": "take a nap 是英语中表示「打盹」的常用短语，尤其用于白天小睡。常见搭配有 take a quick nap、take a power nap。注意：它不同于 go to bed（就寝）或 go to sleep（入睡），后两者不表示短暂小睡。",
+   "examples": [
+    {
+     "en": "I usually take a nap after lunch to stay energized for the afternoon.",
+     "zh": "我通常午饭后打个盹，以便下午保持精力充沛。"
+    },
+    {
+     "en": "If you feel sleepy while driving, pull over and take a short nap.",
+     "zh": "如果你开车时感到困倦，请靠边停车打个盹。"
+    }
+   ],
+   "tags": [
+    "时间表达"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "熬夜",
+   "pair": "zh-en",
+   "slug": "ao-ye",
+   "lang": "zh",
+   "translation": "stay up late",
+   "shortAnswer": "「熬夜」的英文是 stay up late，指主动推迟睡觉时间，强调有意不睡，而非失眠。",
+   "definition": "stay up late 常与 at night、to do sth 连用，如 stay up late to finish the report。若因病痛无法入睡，应用 can't fall asleep。",
+   "examples": [
+    {
+     "en": "I stayed up late last night to finish my essay, so I'm really sleepy today.",
+     "zh": "我昨晚熬夜写完了论文，所以今天特别困。"
+    },
+    {
+     "en": "Don't stay up late before the exam; getting enough sleep matters more.",
+     "zh": "考试前别熬夜，睡够觉更重要。"
+    }
+   ],
+   "tags": [
+    "时间表达"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "stay up late",
+   "pair": "en-zh",
+   "slug": "stay-up-late",
+   "lang": "en",
+   "translation": "熬夜",
+   "shortAnswer": "stay up late 的中文意思是「熬夜」，即比平时睡得晚、主动推迟就寝，不同于失眠。",
+   "definition": "stay up late 指主动延迟睡眠，如 stay up late studying。可搭配 until midnight。注意与 sleep late（睡懒觉）区分。",
+   "examples": [
+    {
+     "en": "I stayed up late last night to finish my essay, so I'm really sleepy today.",
+     "zh": "我昨晚熬夜写完了论文，所以今天特别困。"
+    },
+    {
+     "en": "Don't stay up late before the exam; getting enough sleep matters more.",
+     "zh": "考试前别熬夜，睡够觉更重要。"
+    }
+   ],
+   "tags": [
+    "时间表达"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "迟到",
+   "pair": "zh-en",
+   "slug": "chi-dao",
+   "lang": "zh",
+   "translation": "be late",
+   "shortAnswer": "「迟到」的英文常用 be late，如 I'm late。注意 be late for + 活动（be late for class），不能说 be late the meeting。",
+   "definition": "be late 指未在约定或预期时间到达，常用于 be late for school/work/meeting，也可说 arrive late。",
+   "examples": [
+    {
+     "en": "I was late for the meeting because my alarm didn't go off, so I missed the deadline discussion.",
+     "zh": "我因为闹钟没响而开会迟到，结果错过了关于截止日期的讨论。"
+    },
+    {
+     "en": "If you don't want to be late for the train, you'd better set off in advance and check the schedule.",
+     "zh": "如果你不想赶火车迟到，最好提前出发并查看时刻表。"
+    }
+   ],
+   "tags": [
+    "时间表达"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "be late",
+   "pair": "en-zh",
+   "slug": "be-late",
+   "lang": "en",
+   "translation": "迟到",
+   "shortAnswer": "「be late」的中文意思是「迟到」，指未准时到达。与 be delayed 不同：be late 多指人，be delayed 多指交通工具或事件。",
+   "definition": "be late 口语和书面均常用，后接 for 说明迟到的场合（be late for work/class），也可直接说 arrive late。",
+   "examples": [
+    {
+     "en": "I was late for the meeting because my alarm didn't go off, so I missed the deadline discussion.",
+     "zh": "我因为闹钟没响而开会迟到，结果错过了关于截止日期的讨论。"
+    },
+    {
+     "en": "If you don't want to be late for the train, you'd better set off in advance and check the schedule.",
+     "zh": "如果你不想赶火车迟到，最好提前出发并查看时刻表。"
+    }
+   ],
+   "tags": [
+    "时间表达"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "闹钟",
+   "pair": "zh-en",
+   "slug": "nao-zhong",
+   "lang": "zh",
+   "translation": "alarm clock",
+   "shortAnswer": "闹钟的英文是 alarm clock，是可数名词。注意 alarm 单独用常指警报或手机闹铃，实体床头闹钟才说 alarm clock。",
+   "definition": "alarm clock 指床头或手机上的定时响铃装置，常见搭配有 set the alarm clock（设闹钟）、the alarm clock goes off（闹钟响）、turn off the alarm clock（关闹钟）。注意 go off 是响起，不是关闭。",
+   "examples": [
+    {
+     "en": "I set my alarm clock for six so I can study before class.",
+     "zh": "我把闹钟设在六点，这样上课前能学习。"
+    },
+    {
+     "en": "The alarm clock went off twice, but he still stayed up late and overslept.",
+     "zh": "闹钟响了两次，但他还是熬夜然后睡过头了。"
+    }
+   ],
+   "tags": [
+    "时间表达"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "alarm clock",
+   "pair": "en-zh",
+   "slug": "alarm-clock",
+   "lang": "en",
+   "translation": "闹钟",
+   "shortAnswer": "alarm clock 的中文意思是闹钟，指按设定时间响铃叫醒人的钟或装置。与 alarm 相比，alarm 还可指火灾警报、手机闹铃等泛指警报。",
+   "definition": "alarm clock 是日常可数名词，常见搭配有 set the alarm clock、the alarm clock went off、turn off the alarm clock。口语中也常简说 alarm，但表示实体闹钟时用 alarm clock 更明确。",
+   "examples": [
+    {
+     "en": "I set my alarm clock for six so I can study before class.",
+     "zh": "我把闹钟设在六点，这样上课前能学习。"
+    },
+    {
+     "en": "The alarm clock went off twice, but he still stayed up late and overslept.",
+     "zh": "闹钟响了两次，但他还是熬夜然后睡过头了。"
+    }
+   ],
+   "tags": [
+    "时间表达"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "早起",
+   "pair": "zh-en",
+   "slug": "zao-qi",
+   "lang": "zh",
+   "translation": "get up early",
+   "shortAnswer": "「早起」的英文是 get up early，指比平时更早起床并离开床，不是只醒来。",
+   "definition": "get up early 意为比通常时间更早起床并离开床，常与 I、you 等连用；易错：wake up early 只表示早醒，未必起床。",
+   "examples": [
+    {
+     "en": "I have to get up early tomorrow to catch the first train.",
+     "zh": "我明天必须早起去赶第一班火车。"
+    },
+    {
+     "en": "She gets up early every day to jog before work.",
+     "zh": "她每天早起，上班前去慢跑。"
+    }
+   ],
+   "tags": [
+    "时间表达"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "get up early",
+   "pair": "en-zh",
+   "slug": "get-up-early",
+   "lang": "en",
+   "translation": "早起",
+   "shortAnswer": "get up early 的中文意思是「早起」，指比平时更早起床并离开床，而非仅仅早醒。",
+   "definition": "get up early 表示比平时更早起床并离开床，常见搭配有 have to get up early、get up early tomorrow；反义为 stay up late。",
+   "examples": [
+    {
+     "en": "I have to get up early tomorrow to catch the first train.",
+     "zh": "我明天必须早起去赶第一班火车。"
+    },
+    {
+     "en": "She gets up early every day to jog before work.",
+     "zh": "她每天早起，上班前去慢跑。"
+    }
+   ],
+   "tags": [
+    "时间表达"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "拖延症",
+   "pair": "zh-en",
+   "slug": "tuo-yan-zheng",
+   "lang": "zh",
+   "translation": "procrastination",
+   "shortAnswer": "拖延症的英文是 procrastination，指习惯性推迟任务的行为。注意 procrastination 是名词，动词用 procrastinate。",
+   "definition": "procrastination 多指因懒散或逃避而一再推迟该做的事，常与 deadline（截止时间）、due date（到期日）搭配；动词形式是 procrastinate，如 procrastinate on a task。",
+   "examples": [
+    {
+     "en": "My procrastination always makes me stay up late before the deadline.",
+     "zh": "我的拖延症总是让我在截止日期前熬夜。"
+    },
+    {
+     "en": "To beat procrastination, she sets a due date for every small task.",
+     "zh": "为了战胜拖延症，她给每项小任务都设定了截止日期。"
+    }
+   ],
+   "tags": [
+    "时间表达"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "procrastination",
+   "pair": "en-zh",
+   "slug": "procrastination",
+   "lang": "en",
+   "translation": "拖延症",
+   "shortAnswer": "Procrastination 的中文意思是拖延症，指习惯性推迟任务的行为。它强调因逃避或懒散而拖延，不同于合理的 postpone（推迟）。",
+   "definition": "procrastination 是名词，指习惯性拖延；动词是 procrastinate，常见搭配为 procrastinate on sth.。多用于正式或书面场合。注意不要与 postpone（有意改期）混淆。",
+   "examples": [
+    {
+     "en": "My procrastination always makes me stay up late before the deadline.",
+     "zh": "我的拖延症总是让我在截止日期前熬夜。"
+    },
+    {
+     "en": "To beat procrastination, she sets a due date for every small task.",
+     "zh": "为了战胜拖延症，她给每项小任务都设定了截止日期。"
+    }
+   ],
+   "tags": [
+    "时间表达"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "日程表",
+   "pair": "zh-en",
+   "slug": "ri-cheng-biao",
+   "lang": "zh",
+   "translation": "schedule",
+   "shortAnswer": "「日程表」的英文是 schedule，指个人或机构用来安排时间、活动的计划表或日程安排。",
+   "definition": "schedule 指日程表或计划表，可作名词和动词，常见搭配：on schedule（按时）、behind schedule（延迟）。",
+   "examples": [
+    {
+     "en": "According to my schedule, I have a meeting at 10 a.m.",
+     "zh": "根据我的日程表，我上午十点有一个会议。"
+    },
+    {
+     "en": "The project is behind schedule, so we need to work overtime.",
+     "zh": "项目落后于日程表了，所以我们需要加班赶进度。"
+    }
+   ],
+   "tags": [
+    "时间表达"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "schedule",
+   "pair": "en-zh",
+   "slug": "schedule",
+   "lang": "en",
+   "translation": "日程表",
+   "shortAnswer": "The Chinese word 「日程表」 means schedule, referring to a timetable or plan that arranges times and activities.",
+   "definition": "schedule 指日程表或计划表，可作名词和动词，如 work schedule、schedule a meeting，常见搭配 on schedule、behind schedule。",
+   "examples": [
+    {
+     "en": "According to my schedule, I have a meeting at 10 a.m.",
+     "zh": "根据我的日程表，我上午十点有一个会议。"
+    },
+    {
+     "en": "The project is behind schedule, so we need to work overtime.",
+     "zh": "项目落后于日程表了，所以我们需要加班赶进度。"
+    }
+   ],
+   "tags": [
+    "时间表达"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "放假",
+   "pair": "zh-en",
+   "slug": "fang-jia",
+   "lang": "zh",
+   "translation": "day off",
+   "shortAnswer": "「放假」最常用英语说法是 day off，指不用上班或上学的休息日；注意 day off 多指个人获准的休假，公共假期则用 public holiday。",
+   "definition": "day off 常与 take、have、get 搭配，如 take a day off、have a day off。它强调个人不用上班的休息日，未必是法定假日；固定公休如国庆节应说 public holiday 或 national holiday。",
+   "examples": [
+    {
+     "en": "I'm taking a day off tomorrow to visit my parents.",
+     "zh": "我明天放假去看望父母。"
+    },
+    {
+     "en": "How many days off do you get in a year?",
+     "zh": "你一年有多少天假？"
+    }
+   ],
+   "tags": [
+    "时间表达"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "day off",
+   "pair": "en-zh",
+   "slug": "day-off",
+   "lang": "en",
+   "translation": "放假",
+   "shortAnswer": "day off 的中文意思是「放假」，指不用上班或上学的休息日；它与 public holiday 不同，多指个人获准休息的那一天。",
+   "definition": "day off 指个人因获准而不用工作的日子，口语常用，搭配 have、take、get a day off；公共或法定假日则说 public holiday，别混用。复数形式为 days off。",
+   "examples": [
+    {
+     "en": "I'm taking a day off tomorrow to visit my parents.",
+     "zh": "我明天放假去看望父母。"
+    },
+    {
+     "en": "How many days off do you get in a year?",
+     "zh": "你一年有多少天假？"
+    }
+   ],
+   "tags": [
+    "时间表达"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "倒计时",
+   "pair": "zh-en",
+   "slug": "dao-ji-shi",
+   "lang": "zh",
+   "translation": "countdown",
+   "shortAnswer": "「倒计时」的英文是 countdown，指事件前的读秒或剩余时间，如发射、新年倒计时。",
+   "definition": "countdown 是名词，常与 the 连用，说 the countdown to the launch；读秒可说 do a countdown，不指截止日期。",
+   "examples": [
+    {
+     "en": "The countdown to the New Year began as the crowd gathered in Times Square.",
+     "zh": "人群聚集在时代广场时，新年的倒计时开始了。"
+    },
+    {
+     "en": "We watched the countdown and cheered when the rocket finally lifted off.",
+     "zh": "我们看着倒计时，在火箭最终升空时欢呼起来。"
+    }
+   ],
+   "tags": [
+    "时间表达"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "countdown",
+   "pair": "en-zh",
+   "slug": "countdown",
+   "lang": "en",
+   "translation": "倒计时",
+   "shortAnswer": "Countdown 的中文意思是「倒计时」，即事件前读秒或剩余时间，如火箭发射、新年。",
+   "definition": "countdown is a noun, usually the countdown to something; it means counting down to zero, not a deadline.",
+   "examples": [
+    {
+     "en": "The countdown to the New Year began as the crowd gathered in Times Square.",
+     "zh": "人群聚集在时代广场时，新年的倒计时开始了。"
+    },
+    {
+     "en": "We watched the countdown and cheered when the rocket finally lifted off.",
+     "zh": "我们看着倒计时，在火箭最终升空时欢呼起来。"
+    }
+   ],
+   "tags": [
+    "时间表达"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "改期",
+   "pair": "zh-en",
+   "slug": "gai-qi",
+   "lang": "zh",
+   "translation": "reschedule",
+   "shortAnswer": "「改期」的英文是 reschedule，指把会议、约见或航班改到别的时间，可提前也可推后。",
+   "definition": "reschedule 是及物动词，后接 meeting、appointment、flight 等宾语；说明改到何时用 for。",
+   "examples": [
+    {
+     "en": "I need to reschedule my dentist appointment because I have a meeting that afternoon.",
+     "zh": "我得把牙医预约改期，因为那天下午有会。"
+    },
+    {
+     "en": "The flight was rescheduled for an earlier time, so we had to leave home in a hurry.",
+     "zh": "航班改期到更早的时间了，所以我们只好匆匆出门。"
+    }
+   ],
+   "tags": [
+    "时间表达"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "reschedule",
+   "pair": "en-zh",
+   "slug": "reschedule",
+   "lang": "en",
+   "translation": "改期",
+   "shortAnswer": "Reschedule means 「改期」: to change the time of a meeting, appointment or flight.",
+   "definition": "Reschedule is a transitive verb: reschedule a meeting/an appointment/a flight. Use for to give the new time.",
+   "examples": [
+    {
+     "en": "I need to reschedule my dentist appointment because I have a meeting that afternoon.",
+     "zh": "我得把牙医预约改期，因为那天下午有会。"
+    },
+    {
+     "en": "The flight was rescheduled for an earlier time, so we had to leave home in a hurry.",
+     "zh": "航班改期到更早的时间了，所以我们只好匆匆出门。"
+    }
+   ],
+   "tags": [
+    "时间表达"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "纪念日",
+   "pair": "zh-en",
+   "slug": "ji-nian-ri",
+   "lang": "zh",
+   "translation": "anniversary",
+   "shortAnswer": "「纪念日」的英文是 anniversary，指每年重复出现的值得纪念的日子。注意 anniversary 强调周年循环，不要与泛指节日的 holiday 混用。",
+   "definition": "anniversary 多指结婚、相识、公司成立等周年纪念，如 wedding anniversary、10th anniversary。说「今天是我们的纪念日」用 It's our anniversary，不用 festival。",
+   "examples": [
+    {
+     "en": "We always go out for dinner on our wedding anniversary.",
+     "zh": "我们结婚纪念日那天总会出去吃晚饭。"
+    },
+    {
+     "en": "The company held a party to celebrate its tenth anniversary.",
+     "zh": "公司举办了一场派对来庆祝成立十周年。"
+    }
+   ],
+   "tags": [
+    "时间表达"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "anniversary",
+   "pair": "en-zh",
+   "slug": "anniversary",
+   "lang": "en",
+   "translation": "纪念日",
+   "shortAnswer": "anniversary 的中文意思是「纪念日」，指每年到了同一天就值得庆祝或纪念的日子。它与 holiday 不同，anniversary 侧重个人或事件的周年，而非公共休假日。",
+   "definition": "anniversary 指周年纪念日，常见搭配 wedding anniversary、mark the anniversary、on the anniversary of。正式与日常都可用，但不说 anniversary day，直接说 our anniversary。",
+   "examples": [
+    {
+     "en": "We always go out for dinner on our wedding anniversary.",
+     "zh": "我们结婚纪念日那天总会出去吃晚饭。"
+    },
+    {
+     "en": "The company held a party to celebrate its tenth anniversary.",
+     "zh": "公司举办了一场派对来庆祝成立十周年。"
+    }
+   ],
+   "tags": [
+    "时间表达"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "节假日",
+   "pair": "zh-en",
+   "slug": "jie-jia-ri",
+   "lang": "zh",
+   "translation": "public holiday",
+   "shortAnswer": "「节假日」的英文是 public holiday，指法定全民休假日。注意它与 day off 不同，后者是个人请假或轮休的日子。",
+   "definition": "public holiday 通常指国家或地区规定的法定假日，如元旦、国庆。搭配：on a public holiday、national public holiday。不要与 festival（节日）或 vacation（假期）混用。",
+   "examples": [
+    {
+     "en": "The office will be closed on the public holiday, so we need to submit the report in advance.",
+     "zh": "办公室在节假日不开放，所以我们需要提前提交报告。"
+    },
+    {
+     "en": "Many people stay up late to celebrate on the eve of a public holiday, then take a nap the next day.",
+     "zh": "许多人会在节假日的前一晚熬夜庆祝，第二天再打个盹。"
+    }
+   ],
+   "tags": [
+    "时间表达"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "public holiday",
+   "pair": "en-zh",
+   "slug": "public-holiday",
+   "lang": "en",
+   "translation": "节假日",
+   "shortAnswer": "public holiday 的中文意思是「节假日」，即法定公休日。与 day off 不同，它强调的是全民性的法定假日，而非个人请假。",
+   "definition": "public holiday 指政府规定的法定假日，全国或地区统一放假。常见搭配：on a public holiday、declare a public holiday。口语中也可说 national holiday，但 public holiday 更通用。",
+   "examples": [
+    {
+     "en": "The office will be closed on the public holiday, so we need to submit the report in advance.",
+     "zh": "办公室在节假日不开放，所以我们需要提前提交报告。"
+    },
+    {
+     "en": "Many people stay up late to celebrate on the eve of a public holiday, then take a nap the next day.",
+     "zh": "许多人会在节假日的前一晚熬夜庆祝，第二天再打个盹。"
+    }
+   ],
+   "tags": [
+    "时间表达"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "截止日期",
+   "pair": "zh-en",
+   "slug": "jie-zhi-ri-qi",
+   "lang": "zh",
+   "translation": "deadline",
+   "shortAnswer": "「截止日期」的英文是 deadline，指必须完成某事的最晚时间点。注意与 due date 的微妙区别：deadline 常带压力感，due date 更中性，多用于作业、账单等。",
+   "definition": "常见搭配有 meet the deadline（赶上截止日期）、miss the deadline（错过截止日期）、extend the deadline（延长期限）。与 due date 不同，deadline 强调不可逾期的临界点，语气更紧迫。",
+   "examples": [
+    {
+     "en": "I need to finish this report before the deadline, so I'll stay up late tonight.",
+     "zh": "我需要在截止日期前完成这份报告，所以今晚要熬夜。"
+    },
+    {
+     "en": "The professor agreed to extend the deadline for the assignment by one week.",
+     "zh": "教授同意把作业的截止日期延长一周。"
+    }
+   ],
+   "tags": [
+    "时间表达"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "deadline",
+   "pair": "en-zh",
+   "slug": "deadline",
+   "lang": "en",
+   "translation": "截止日期",
+   "shortAnswer": "「deadline」的中文意思是「截止日期」，指必须完成任务或提交事物的最后期限。与 due date 相比，deadline 更强调时间压力与不可拖延性，语气更紧迫。",
+   "definition": "Deadline 指必须完成某事的最后时间点，常见搭配：meet/miss/extend a deadline。正式场合与日常口语均常用，但比 due date 更突出紧迫感。注意 deadline 通常不可协商，due date 有时可宽限。",
+   "examples": [
+    {
+     "en": "I need to finish this report before the deadline, so I'll stay up late tonight.",
+     "zh": "我需要在截止日期前完成这份报告，所以今晚要熬夜。"
+    },
+    {
+     "en": "The professor agreed to extend the deadline for the assignment by one week.",
+     "zh": "教授同意把作业的截止日期延长一周。"
+    }
+   ],
+   "tags": [
+    "时间表达"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "有空",
+   "pair": "zh-en",
+   "slug": "you-kong",
+   "lang": "zh",
+   "translation": "be free",
+   "shortAnswer": "“有空”的英文是“be free”。比如“你明天有空吗？”就是“Are you free tomorrow?”。注意“be free”强调有空闲时间，不是免费。",
+   "definition": "“有空”常用“be free”，后接时间或“to do sth”。问别人“有空吗”直接说“Are you free?”。注意“free”也可表示“免费”，需根据上下文区分。",
+   "examples": [
+    {
+     "en": "Are you free this weekend? I'd like to invite you to a movie.",
+     "zh": "这个周末你有空吗？我想请你去看电影。"
+    },
+    {
+     "en": "She isn't free right now because she has to finish a deadline, so we should reschedule the meeting in advance.",
+     "zh": "她现在没空，因为她得赶截止日期，所以我们应该提前改期会议。"
+    }
+   ],
+   "tags": [
+    "时间表达"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "be free",
+   "pair": "en-zh",
+   "slug": "be-free",
+   "lang": "en",
+   "translation": "有空",
+   "shortAnswer": "“be free”的中文意思是“有空”。它表示有空闲时间做某事，不同于表示“免费”的“free”。",
+   "definition": "“be free”核心义为“有空、空闲”，常见搭配“be free to do sth”或“be free for + 时间”。口语中常用“Are you free?”询问对方是否有空，正式场合也可用“be available”。",
+   "examples": [
+    {
+     "en": "Are you free this weekend? I'd like to invite you to a movie.",
+     "zh": "这个周末你有空吗？我想请你去看电影。"
+    },
+    {
+     "en": "She isn't free right now because she has to finish a deadline, so we should reschedule the meeting in advance.",
+     "zh": "她现在没空，因为她得赶截止日期，所以我们应该提前改期会议。"
+    }
+   ],
+   "tags": [
+    "时间表达"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "旺季",
+   "pair": "zh-en",
+   "slug": "wang-ji",
+   "lang": "zh",
+   "translation": "peak season",
+   "shortAnswer": "「旺季」的英文是 peak season，指旅游或商业客流最高的时段。行业里也常说 high season，注意别和「高峰时段」peak hours 混用。",
+   "definition": "peak season 多指旅游、酒店、航空、零售一年中最忙、价格最高的时期，如 the peak season for tourism。酒店和航空业更常用 high season；反义是淡季 off season 或 low season。",
+   "examples": [
+    {
+     "en": "Hotel prices double during the peak season, so we book our rooms months in advance.",
+     "zh": "旺季期间酒店价格翻倍，所以我们提前几个月就订好了房间。"
+    },
+    {
+     "en": "If you want to avoid the crowds, don't travel in peak season.",
+     "zh": "如果你想避开人群，就别在旺季出行。"
+    }
+   ],
+   "tags": [
+    "时间表达"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "peak season",
+   "pair": "en-zh",
+   "slug": "peak-season",
+   "lang": "en",
+   "translation": "旺季",
+   "shortAnswer": "peak season 的中文意思是「旺季」，指旅游或商业客流最高、最繁忙的时段。它比 high season 更通用，后者多用于酒店和航空业。",
+   "definition": "peak season 指某行业一年中最繁忙、需求最大的时段，常见搭配 in peak season、during the peak season。反义表达是 off season 或 low season；口语中也会说 busy season。",
+   "examples": [
+    {
+     "en": "Hotel prices double during the peak season, so we book our rooms months in advance.",
+     "zh": "旺季期间酒店价格翻倍，所以我们提前几个月就订好了房间。"
+    },
+    {
+     "en": "If you want to avoid the crowds, don't travel in peak season.",
+     "zh": "如果你想避开人群，就别在旺季出行。"
+    }
+   ],
+   "tags": [
+    "时间表达"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "感冒",
+   "pair": "zh-en",
+   "slug": "gan-mao",
+   "lang": "zh",
+   "translation": "catch a cold",
+   "shortAnswer": "「感冒」的英文是 catch a cold，强调动作；若表示状态，常用 have a cold。注意 a 不能丢，cold 作名词。",
+   "definition": "catch a cold 侧重「染上感冒」这一动作，have a cold 侧重「正患感冒」的状态；cold 前必须加 a。常见搭配：catch a bad cold 得重感冒。",
+   "examples": [
+    {
+     "en": "I caught a cold last week and had to take three days of sick leave.",
+     "zh": "我上周感冒了，只好请了三天病假。"
+    },
+    {
+     "en": "If you don't want to catch a cold, wash your hands often and take your temperature when you feel feverish.",
+     "zh": "如果你不想感冒，就勤洗手，感觉发烧时量一下体温。"
+    }
+   ],
+   "tags": [
+    "身体健康"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "catch a cold",
+   "pair": "en-zh",
+   "slug": "catch-a-cold",
+   "lang": "en",
+   "translation": "感冒",
+   "shortAnswer": "catch a cold 的中文意思是「感冒」，强调染上感冒这个动作；表示正患感冒的状态常用 have a cold。",
+   "definition": "catch a cold 指「染上感冒」，口语和书面通用；不可说 catch cold。常见搭配：catch a bad cold。注意与 have a cold（正患感冒）区别。",
+   "examples": [
+    {
+     "en": "I caught a cold last week and had to take three days of sick leave.",
+     "zh": "我上周感冒了，只好请了三天病假。"
+    },
+    {
+     "en": "If you don't want to catch a cold, wash your hands often and take your temperature when you feel feverish.",
+     "zh": "如果你不想感冒，就勤洗手，感觉发烧时量一下体温。"
+    }
+   ],
+   "tags": [
+    "身体健康"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "淡季",
+   "pair": "zh-en",
+   "slug": "dan-ji",
+   "lang": "zh",
+   "translation": "off season",
+   "shortAnswer": "淡季的英文是 off season，指客流或销售最低的时段，常与旅游、酒店、零售搭配。",
+   "definition": "off season 可作名词或形容词，如 in the off season、off-season rates。它不等于打折季，只表示需求最低的时期；反义为 peak season。",
+   "examples": [
+    {
+     "en": "Hotels in this city are much cheaper in the off season.",
+     "zh": "这座城市的酒店在淡季便宜得多。"
+    },
+    {
+     "en": "We usually travel during the off season to avoid the crowds.",
+     "zh": "我们通常在淡季出行，以避开人流。"
+    }
+   ],
+   "tags": [
+    "时间表达"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "off season",
+   "pair": "en-zh",
+   "slug": "off-season",
+   "lang": "en",
+   "translation": "淡季",
+   "shortAnswer": "Off season means 淡季, the period with the fewest customers or lowest sales, common in travel and retail.",
+   "definition": "Off season is the slowest time of year for business, as in in the off season or off-season prices. Opposite: peak season.",
+   "examples": [
+    {
+     "en": "Hotels in this city are much cheaper in the off season.",
+     "zh": "这座城市的酒店在淡季便宜得多。"
+    },
+    {
+     "en": "We usually travel during the off season to avoid the crowds.",
+     "zh": "我们通常在淡季出行，以避开人流。"
+    }
+   ],
+   "tags": [
+    "时间表达"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "整点",
+   "pair": "zh-en",
+   "slug": "zheng-dian",
+   "lang": "zh",
+   "translation": "on the hour",
+   "shortAnswer": "「整点」的英文是 on the hour，表示某事恰好发生在钟表指向整点的那一刻，强调时间点而非时间段。",
+   "definition": "on the hour 常与广播、新闻、列车等搭配，如 the news is broadcast on the hour。表示每逢整点用 every hour on the hour。",
+   "examples": [
+    {
+     "en": "The radio station broadcasts the news on the hour, every hour.",
+     "zh": "这家电台每逢整点播出一次新闻。"
+    },
+    {
+     "en": "Trains to the airport leave on the hour, so try not to be late.",
+     "zh": "去机场的列车整点发车，所以尽量不要迟到。"
+    }
+   ],
+   "tags": [
+    "时间表达"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "on the hour",
+   "pair": "en-zh",
+   "slug": "on-the-hour",
+   "lang": "en",
+   "translation": "整点",
+   "shortAnswer": "On the hour means「整点」，即某事正好发生在钟表指向整点的那一刻，强调“在整点这一时刻”。",
+   "definition": "on the hour 表示某事正好发生在整点，如 the train departs on the hour；常与 the news、every hour 等连用。",
+   "examples": [
+    {
+     "en": "The radio station broadcasts the news on the hour, every hour.",
+     "zh": "这家电台每逢整点播出一次新闻。"
+    },
+    {
+     "en": "Trains to the airport leave on the hour, so try not to be late.",
+     "zh": "去机场的列车整点发车，所以尽量不要迟到。"
+    }
+   ],
+   "tags": [
+    "时间表达"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "咳嗽",
+   "pair": "zh-en",
+   "slug": "ke-sou",
+   "lang": "zh",
+   "translation": "cough",
+   "shortAnswer": "「咳嗽」的英文是 cough，既可作名词也可作动词。注意 cough 与 cold（感冒）拼写和发音都不同，别把「咳嗽」说成 cold。",
+   "definition": "cough 作名词指咳嗽这一症状，如 have a bad cough（咳得厉害）；作动词指咳嗽这个动作，如 cough all night。常见搭配还有 cough syrup（止咳糖浆）、dry cough（干咳）。",
+   "examples": [
+    {
+     "en": "I caught a cold last week and I still have a bad cough.",
+     "zh": "我上周感冒了，现在还是咳得很厉害。"
+    },
+    {
+     "en": "The doctor told him to take the cough syrup three times a day.",
+     "zh": "医生让他每天喝三次止咳糖浆。"
+    }
+   ],
+   "tags": [
+    "身体健康"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "cough",
+   "pair": "en-zh",
+   "slug": "cough",
+   "lang": "en",
+   "translation": "咳嗽",
+   "shortAnswer": "cough 的中文意思是「咳嗽」，指呼吸道受刺激时用力排气的声音或动作。它和 cold（感冒）不同，cold 是疾病，cough 常是感冒的一种症状。",
+   "definition": "cough 可作名词或动词，指咳嗽这一症状或动作。常见搭配有 have a cough、cough medicine、a dry cough。口语中也可说 cough up 表示咳出痰，注意与 cold、fever 等病症词区分。",
+   "examples": [
+    {
+     "en": "I caught a cold last week and I still have a bad cough.",
+     "zh": "我上周感冒了，现在还是咳得很厉害。"
+    },
+    {
+     "en": "The doctor told him to take the cough syrup three times a day.",
+     "zh": "医生让他每天喝三次止咳糖浆。"
+    }
+   ],
+   "tags": [
+    "身体健康"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "农历",
+   "pair": "zh-en",
+   "slug": "nong-li",
+   "lang": "zh",
+   "translation": "lunar calendar",
+   "shortAnswer": "「农历」的英文常用说法是 lunar calendar，也可说 Chinese calendar，严格说是阴阳合历。",
+   "definition": "口语中 lunar calendar 最常用，学术语境可用 lunisolar calendar，因为农历兼顾月相和太阳回归年。",
+   "examples": [
+    {
+     "en": "My grandma always checks the lunar calendar before choosing an auspicious date for family events.",
+     "zh": "我奶奶在给家庭活动挑吉日之前总会先查农历。"
+    },
+    {
+     "en": "The Mid-Autumn Festival falls on the 15th day of the 8th month in the lunar calendar.",
+     "zh": "中秋节在农历八月十五。"
+    }
+   ],
+   "tags": [
+    "时间表达"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "lunar calendar",
+   "pair": "en-zh",
+   "slug": "lunar-calendar",
+   "lang": "en",
+   "translation": "农历",
+   "shortAnswer": "lunar calendar 的中文意思是「农历」，口语也叫「阴历」，但它其实是阴阳合历。",
+   "definition": "lunar calendar 指中国农历，春节、端午、中秋都按它定日期；更准确的术语是 lunisolar calendar。",
+   "examples": [
+    {
+     "en": "My grandma always checks the lunar calendar before choosing an auspicious date for family events.",
+     "zh": "我奶奶在给家庭活动挑吉日之前总会先查农历。"
+    },
+    {
+     "en": "The Mid-Autumn Festival falls on the 15th day of the 8th month in the lunar calendar.",
+     "zh": "中秋节在农历八月十五。"
+    }
+   ],
+   "tags": [
+    "时间表达"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "过期",
+   "pair": "zh-en",
+   "slug": "guo-qi",
+   "lang": "zh",
+   "translation": "expired",
+   "shortAnswer": "「过期」的英文是 expired，常指食物、证件、合同等已超过有效期；注意搭配 be 动词，如 The milk is expired.",
+   "definition": "expired 强调已过有效期，常见搭配：expired food、expired passport、expired contract。",
+   "examples": [
+    {
+     "en": "The milk in the fridge has expired, so you'd better throw it away.",
+     "zh": "冰箱里的牛奶已经过期了，你最好把它扔掉。"
+    },
+    {
+     "en": "My passport expired last month, so I need to renew it before the trip.",
+     "zh": "我的护照上个月过期了，所以旅行前我需要续办。"
+    }
+   ],
+   "tags": [
+    "时间表达"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "expired",
+   "pair": "en-zh",
+   "slug": "expired",
+   "lang": "en",
+   "translation": "过期",
+   "shortAnswer": "「过期」的英文是 expired，指食物、证件、合同等已超过有效期，常与 be 动词连用。",
+   "definition": "Expired 是形容词，核心义为“过期的、失效的”，如 expired milk, expired visa。",
+   "examples": [
+    {
+     "en": "The milk in the fridge has expired, so you'd better throw it away.",
+     "zh": "冰箱里的牛奶已经过期了，你最好把它扔掉。"
+    },
+    {
+     "en": "My passport expired last month, so I need to renew it before the trip.",
+     "zh": "我的护照上个月过期了，所以旅行前我需要续办。"
+    }
+   ],
+   "tags": [
+    "时间表达"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "发烧",
+   "pair": "zh-en",
+   "slug": "fa-shao",
+   "lang": "zh",
+   "translation": "run a fever",
+   "shortAnswer": "「发烧」常用 run a fever 表示，强调体温升高的状态，多用于美式英语。",
+   "definition": "run a fever 意为发烧，常与孩子或病人连用；日常也常用 have a fever。",
+   "examples": [
+    {
+     "en": "My son is running a fever, so he will stay home from school today.",
+     "zh": "我儿子正在发烧，所以今天他待在家里不去学校。"
+    },
+    {
+     "en": "If you run a fever for more than three days, you should see a doctor.",
+     "zh": "如果你发烧超过三天，就应该去看医生。"
+    }
+   ],
+   "tags": [
+    "身体健康"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "run a fever",
+   "pair": "en-zh",
+   "slug": "run-a-fever",
+   "lang": "en",
+   "translation": "发烧",
+   "shortAnswer": "Run a fever means 发烧 in Chinese, describing an elevated body temperature.",
+   "definition": "Run a fever means to have a body temperature above normal, usually from illness; have a fever is a neutral alternative.",
+   "examples": [
+    {
+     "en": "My son is running a fever, so he will stay home from school today.",
+     "zh": "我儿子正在发烧，所以今天他待在家里不去学校。"
+    },
+    {
+     "en": "If you run a fever for more than three days, you should see a doctor.",
+     "zh": "如果你发烧超过三天，就应该去看医生。"
+    }
+   ],
+   "tags": [
+    "身体健康"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "拉肚子",
+   "pair": "zh-en",
+   "slug": "la-du-zi",
+   "lang": "zh",
+   "translation": "diarrhea",
+   "shortAnswer": "拉肚子英语是 diarrhea，拼写和发音都易错。注意 diarrhea 是名词，不能说 I diarrhea，要说 I have diarrhea；口语常用 the runs 或 upset stomach。",
+   "definition": "diarrhea 指腹泻、拉肚子，较正式，常见搭配 have diarrhea、suffer from diarrhea、traveler's diarrhea。口语可说 the runs 或 stomach bug；动词是 have，不能说 I diarrhea。",
+   "examples": [
+    {
+     "en": "I had diarrhea all night, so I took the day off and stayed in bed.",
+     "zh": "我拉了一整晚肚子，所以请了一天病假，卧床休息。"
+    },
+    {
+     "en": "Traveler's diarrhea is common when you drink untreated water abroad.",
+     "zh": "在国外喝未经处理的水时，旅行者腹泻很常见。"
+    }
+   ],
+   "tags": [
+    "身体健康"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "diarrhea",
+   "pair": "en-zh",
+   "slug": "diarrhea",
+   "lang": "en",
+   "translation": "拉肚子",
+   "shortAnswer": "Diarrhea 的中文意思是拉肚子，即频繁排出稀水样大便。它比 stomachache 更具体，强调排便异常，而不是单纯肚子痛。",
+   "definition": "diarrhea 指腹泻，常见搭配 have diarrhea、a bout of diarrhea、traveler's diarrhea。正式场合和医疗场景常用，口语也可说 the runs 或 upset stomach；不可数，前面常加 have。",
+   "examples": [
+    {
+     "en": "I had diarrhea all night, so I took the day off and stayed in bed.",
+     "zh": "我拉了一整晚肚子，所以请了一天病假，卧床休息。"
+    },
+    {
+     "en": "Traveler's diarrhea is common when you drink untreated water abroad.",
+     "zh": "在国外喝未经处理的水时，旅行者腹泻很常见。"
+    }
+   ],
+   "tags": [
+    "身体健康"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "头疼",
+   "pair": "zh-en",
+   "slug": "tou-teng",
+   "lang": "zh",
+   "translation": "headache",
+   "shortAnswer": "「头疼」的英文是 headache，可说 I have a headache，指头部疼痛，也比喻令人头疼的难题。",
+   "definition": "headache 是可数名词，常说 have a headache 或 a splitting headache，感冒发烧时常伴随头疼，也可比喻麻烦事。",
+   "examples": [
+    {
+     "en": "I have a bad headache, so I'm going to take some medicine and lie down.",
+     "zh": "我头疼得厉害，所以打算吃点药躺一会儿。"
+    },
+    {
+     "en": "Not having a car in this city is a real headache.",
+     "zh": "在这座城市里没有车真是件让人头疼的事。"
+    }
+   ],
+   "tags": [
+    "身体健康"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "headache",
+   "pair": "en-zh",
+   "slug": "headache",
+   "lang": "en",
+   "translation": "头疼",
+   "shortAnswer": "「头疼」的英文是 headache，指头部疼痛，也比喻令人头疼的麻烦事，常说 have a headache。",
+   "definition": "Headache is a countable noun: have a headache, get a headache, a bad headache. It also means a troublesome problem.",
+   "examples": [
+    {
+     "en": "I have a bad headache, so I'm going to take some medicine and lie down.",
+     "zh": "我头疼得厉害，所以打算吃点药躺一会儿。"
+    },
+    {
+     "en": "Not having a car in this city is a real headache.",
+     "zh": "在这座城市里没有车真是件让人头疼的事。"
+    }
+   ],
+   "tags": [
+    "身体健康"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "肚子疼",
+   "pair": "zh-en",
+   "slug": "du-zi-teng",
+   "lang": "zh",
+   "translation": "stomachache",
+   "shortAnswer": "「肚子疼」的英文是 stomachache，多用于口语，常与 have 或 get 搭配，如 have a stomachache。",
+   "definition": "stomachache 是可数名词，英式拼写为 stomach ache，常与 have、get 搭配。若疼痛剧烈或持续，宜用 stomach pain 或 abdominal pain。",
+   "examples": [
+    {
+     "en": "I have a stomachache, so I'm going to take some medicine and rest.",
+     "zh": "我肚子疼，所以打算吃点药休息一下。"
+    },
+    {
+     "en": "She got a stomachache after eating too much spicy food.",
+     "zh": "她吃了太多辛辣食物后开始肚子疼。"
+    }
+   ],
+   "tags": [
+    "身体健康"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "stomachache",
+   "pair": "en-zh",
+   "slug": "stomachache",
+   "lang": "en",
+   "translation": "肚子疼",
+   "shortAnswer": "stomachache 的中文意思是「肚子疼」，是口语中常用的可数名词，常说 have a stomachache。",
+   "definition": "stomachache 指非正式的肚子疼，常与 have、get 连用。英式也写作 stomach ache；严重或持续疼痛宜用 stomach pain。",
+   "examples": [
+    {
+     "en": "I have a stomachache, so I'm going to take some medicine and rest.",
+     "zh": "我肚子疼，所以打算吃点药休息一下。"
+    },
+    {
+     "en": "She got a stomachache after eating too much spicy food.",
+     "zh": "她吃了太多辛辣食物后开始肚子疼。"
+    }
+   ],
+   "tags": [
+    "身体健康"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "过敏",
+   "pair": "zh-en",
+   "slug": "guo-min",
+   "lang": "zh",
+   "translation": "allergy",
+   "shortAnswer": "「过敏」的英文是 allergy，指身体对某些物质的过度免疫反应。注意它是名词，常用 have an allergy to，别说 I allergy。",
+   "definition": "allergy 是名词，常用搭配：have an allergy to、food allergy、allergy season。表示“过敏的”用形容词 allergic，如 I'm allergic to peanuts。",
+   "examples": [
+    {
+     "en": "She has a serious allergy to peanuts, so she always checks food labels.",
+     "zh": "她对花生有严重过敏，所以总是检查食品标签。"
+    },
+    {
+     "en": "My allergy gets worse in spring when there is a lot of pollen in the air.",
+     "zh": "春天空气中花粉多时，我的过敏会加重。"
+    }
+   ],
+   "tags": [
+    "身体健康"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "allergy",
+   "pair": "en-zh",
+   "slug": "allergy",
+   "lang": "en",
+   "translation": "过敏",
+   "shortAnswer": "Allergy 的中文意思是「过敏」，指免疫系统对无害物质的异常反应。它多作名词，常用 have an allergy to；allergic 则是形容词。",
+   "definition": "allergy 是可数名词，常见搭配：food allergy、allergy to pollen、allergy season。日常更常说 be allergic to，而非 have an allergy to。",
+   "examples": [
+    {
+     "en": "She has a serious allergy to peanuts, so she always checks food labels.",
+     "zh": "她对花生有严重过敏，所以总是检查食品标签。"
+    },
+    {
+     "en": "My allergy gets worse in spring when there is a lot of pollen in the air.",
+     "zh": "春天空气中花粉多时，我的过敏会加重。"
+    }
+   ],
+   "tags": [
+    "身体健康"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "失眠",
+   "pair": "zh-en",
+   "slug": "shi-mian",
+   "lang": "zh",
+   "translation": "insomnia",
+   "shortAnswer": "「失眠」的英文是 insomnia，指长期或反复难以入睡、易醒的睡眠障碍，比口语 can't sleep 更正式。",
+   "definition": "insomnia 是不可数名词，不能说 an insomnia。常见搭配有 suffer from insomnia（患失眠）、chronic insomnia（慢性失眠）。",
+   "examples": [
+    {
+     "en": "She has been suffering from insomnia for months and finally saw a doctor.",
+     "zh": "她失眠好几个月了，最后去看了医生。"
+    },
+    {
+     "en": "Stress and too much coffee can cause insomnia.",
+     "zh": "压力和喝太多咖啡会导致失眠。"
+    }
+   ],
+   "tags": [
+    "身体健康"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "insomnia",
+   "pair": "en-zh",
+   "slug": "insomnia",
+   "lang": "en",
+   "translation": "失眠",
+   "shortAnswer": "Insomnia 的中文意思是「失眠」，指难以入睡或保持睡眠的睡眠障碍，比口语 can't sleep 更正式。",
+   "definition": "Insomnia 指长期或频繁的入睡困难、易醒或早醒。常见搭配有 suffer from insomnia、chronic insomnia，且为不可数名词。",
+   "examples": [
+    {
+     "en": "She has been suffering from insomnia for months and finally saw a doctor.",
+     "zh": "她失眠好几个月了，最后去看了医生。"
+    },
+    {
+     "en": "Stress and too much coffee can cause insomnia.",
+     "zh": "压力和喝太多咖啡会导致失眠。"
+    }
+   ],
+   "tags": [
+    "身体健康"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "晕车",
+   "pair": "zh-en",
+   "slug": "yun-che",
+   "lang": "zh",
+   "translation": "carsick",
+   "shortAnswer": "「晕车」的英文是 carsick，指坐汽车时头晕恶心。注意 carsick 只用于汽车，晕船说 seasick，晕机说 airsick。",
+   "definition": "carsick 是形容词，常与 be、get 连用，如 I get carsick easily。名词是 carsickness。别把晕车说成 dizzy in the car，地道说法就是 carsick。",
+   "examples": [
+    {
+     "en": "I always get carsick when I sit in the back seat.",
+     "zh": "我坐在后排时总会晕车。"
+    },
+    {
+     "en": "She felt carsick after the long winding drive, so we stopped for some fresh air.",
+     "zh": "在长时间的盘山公路行驶后她觉得晕车，于是我们停下车透透气。"
+    }
+   ],
+   "tags": [
+    "身体健康"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "carsick",
+   "pair": "en-zh",
+   "slug": "carsick",
+   "lang": "en",
+   "translation": "晕车",
+   "shortAnswer": "Carsick 的中文意思是「晕车」，指坐汽车时头晕想吐。它与 seasick（晕船）、airsick（晕机）按交通工具区分，不能混用。",
+   "definition": "carsick 是形容词，多与 be、get、feel 连用，如 I felt carsick on the bus。名词形式是 carsickness。注意它只形容坐汽车不适。",
+   "examples": [
+    {
+     "en": "I always get carsick when I sit in the back seat.",
+     "zh": "我坐在后排时总会晕车。"
+    },
+    {
+     "en": "She felt carsick after the long winding drive, so we stopped for some fresh air.",
+     "zh": "在长时间的盘山公路行驶后她觉得晕车，于是我们停下车透透气。"
+    }
+   ],
+   "tags": [
+    "身体健康"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "体检",
+   "pair": "zh-en",
+   "slug": "ti-jian",
+   "lang": "zh",
+   "translation": "medical checkup",
+   "shortAnswer": "「体检」的英文是 medical checkup，也常说 physical exam。日常口语中 checkup 更随意，physical 更偏医学正式。",
+   "definition": "medical checkup 指常规体检，常搭配 have/get a medical checkup、annual medical checkup。注意不是 body check，那是中式英语，体检还可说 physical examination。",
+   "examples": [
+    {
+     "en": "I have an annual medical checkup scheduled for next Monday.",
+     "zh": "我预约了下周一做年度体检。"
+    },
+    {
+     "en": "The company requires all new employees to get a medical checkup before starting work.",
+     "zh": "公司要求所有新员工在入职前进行体检。"
+    }
+   ],
+   "tags": [
+    "身体健康"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "medical checkup",
+   "pair": "en-zh",
+   "slug": "medical-checkup",
+   "lang": "en",
+   "translation": "体检",
+   "shortAnswer": "Medical checkup 的中文意思是「体检」，指常规身体检查。它比 physical exam 更口语化，常用于年度体检或入职体检。",
+   "definition": "medical checkup 是名词，指医生做的全面身体检查，常搭配 go for a medical checkup、annual medical checkup。注意与 medical examination 意思相近，但 checkup 更强调例行检查。",
+   "examples": [
+    {
+     "en": "I have an annual medical checkup scheduled for next Monday.",
+     "zh": "我预约了下周一做年度体检。"
+    },
+    {
+     "en": "The company requires all new employees to get a medical checkup before starting work.",
+     "zh": "公司要求所有新员工在入职前进行体检。"
+    }
+   ],
+   "tags": [
+    "身体健康"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "中暑",
+   "pair": "zh-en",
+   "slug": "zhong-shu",
+   "lang": "zh",
+   "translation": "heatstroke",
+   "shortAnswer": "「中暑」的英文是 heatstroke，指高温导致体温调节失效的急症。注意它比 heat exhaustion 更严重。",
+   "definition": "heatstroke 是不可数名词，常说 get heatstroke、treat heatstroke。症状包括体温超 40 度、意识模糊、皮肤干热。",
+   "examples": [
+    {
+     "en": "If you stay outside in this heat without drinking water, you could get heatstroke.",
+     "zh": "如果你在这种高温下待在户外还不喝水，可能会中暑。"
+    },
+    {
+     "en": "The coach warned us that heatstroke can happen even on cloudy days.",
+     "zh": "教练提醒我们，即使阴天也可能中暑。"
+    }
+   ],
+   "tags": [
+    "身体健康"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "heatstroke",
+   "pair": "en-zh",
+   "slug": "heatstroke",
+   "lang": "en",
+   "translation": "中暑",
+   "shortAnswer": "heatstroke 的中文意思是「中暑」，特指高温引起的重度急症，可能危及生命，需立即降温送医。",
+   "definition": "heatstroke 指高温或剧烈运动致体温调节衰竭的危重状态，常见搭配有 get heatstroke、die of heatstroke。",
+   "examples": [
+    {
+     "en": "If you stay outside in this heat without drinking water, you could get heatstroke.",
+     "zh": "如果你在这种高温下待在户外还不喝水，可能会中暑。"
+    },
+    {
+     "en": "The coach warned us that heatstroke can happen even on cloudy days.",
+     "zh": "教练提醒我们，即使阴天也可能中暑。"
+    }
+   ],
+   "tags": [
+    "身体健康"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "扭伤",
+   "pair": "zh-en",
+   "slug": "niu-shang",
+   "lang": "zh",
+   "translation": "sprain",
+   "shortAnswer": "「扭伤」的英文是 sprain，指关节韧带被过度拉伸或撕裂造成的损伤，常见于脚踝和手腕。",
+   "definition": "sprain 可作动词和名词，如 sprain one's ankle、a bad sprain。注意与 strain（肌肉拉伤）区分，sprain 伤的是韧带。",
+   "examples": [
+    {
+     "en": "I sprained my ankle while playing basketball and had to rest for a week.",
+     "zh": "我打篮球时扭伤了脚踝，不得不休息一周。"
+    },
+    {
+     "en": "She put ice on the sprain to reduce the swelling.",
+     "zh": "她在扭伤处敷冰以减轻肿胀。"
+    }
+   ],
+   "tags": [
+    "身体健康"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "sprain",
+   "pair": "en-zh",
+   "slug": "sprain",
+   "lang": "en",
+   "translation": "扭伤",
+   "shortAnswer": "Sprain means 扭伤 in Chinese, an injury to a joint's ligaments, often in the ankle or wrist.",
+   "definition": "Sprain is a noun and verb, as in a bad sprain or sprain your ankle. It differs from strain, which affects muscles or tendons.",
+   "examples": [
+    {
+     "en": "I sprained my ankle while playing basketball and had to rest for a week.",
+     "zh": "我打篮球时扭伤了脚踝，不得不休息一周。"
+    },
+    {
+     "en": "She put ice on the sprain to reduce the swelling.",
+     "zh": "她在扭伤处敷冰以减轻肿胀。"
+    }
+   ],
+   "tags": [
+    "身体健康"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "挂号",
+   "pair": "zh-en",
+   "slug": "gua-hao",
+   "lang": "zh",
+   "translation": "make a doctor's appointment",
+   "shortAnswer": "「挂号」常用英语 make a doctor's appointment 表达，指提前预约看医生，而不是直接去医院排队。",
+   "definition": "指提前与医生约定就诊时间；英美体系常先预约 GP 再转诊，而中国医院挂号多为现场选科室、缴费取号。",
+   "examples": [
+    {
+     "en": "I need to make a doctor's appointment because I've had a fever since last night.",
+     "zh": "我得去挂号，因为我从昨晚开始就一直发烧。"
+    },
+    {
+     "en": "She made a doctor's appointment online, and the GP gave her a prescription for diarrhea.",
+     "zh": "她在网上挂了号，家庭医生给她开了治拉肚子的处方药。"
+    }
+   ],
+   "tags": [
+    "身体健康"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "make a doctor's appointment",
+   "pair": "en-zh",
+   "slug": "make-a-doctor-s-appointment",
+   "lang": "en",
+   "translation": "挂号",
+   "shortAnswer": "make a doctor's appointment 对应中文「挂号」，意思是提前预约看医生，而非直接去医院现场登记。",
+   "definition": "To arrange a time to see a doctor in advance; in the UK/US you usually book a GP first, unlike 挂号 at a Chinese hospital.",
+   "examples": [
+    {
+     "en": "I need to make a doctor's appointment because I've had a fever since last night.",
+     "zh": "我得去挂号，因为我从昨晚开始就一直发烧。"
+    },
+    {
+     "en": "She made a doctor's appointment online, and the GP gave her a prescription for diarrhea.",
+     "zh": "她在网上挂了号，家庭医生给她开了治拉肚子的处方药。"
+    }
+   ],
+   "tags": [
+    "身体健康"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "维生素",
+   "pair": "zh-en",
+   "slug": "wei-sheng-su",
+   "lang": "zh",
+   "translation": "vitamins",
+   "shortAnswer": "维生素的英文是 vitamins，通常用复数形式，泛指这类营养素，如补充维生素 take vitamins。",
+   "definition": "vitamin 指人体必需的微量营养素。常见搭配有 vitamin C、take vitamins（补充维生素）、vitamin supplement（维生素补充剂）。泛指多种维生素时习惯用复数 vitamins。",
+   "examples": [
+    {
+     "en": "Doctors say you should take vitamins to stay healthy, especially vitamin C in winter.",
+     "zh": "医生说你应该补充维生素来保持健康，尤其是在冬天补充维生素C。"
+    },
+    {
+     "en": "She takes her vitamins every morning with breakfast and never skips a day.",
+     "zh": "她每天早上吃早餐时服用维生素，从不间断。"
+    }
+   ],
+   "tags": [
+    "身体健康"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "vitamins",
+   "pair": "en-zh",
+   "slug": "vitamins",
+   "lang": "en",
+   "translation": "维生素",
+   "shortAnswer": "vitamins 的中文意思是维生素，是 vitamin 的复数形式，指人体必需的微量营养素，常与 mineral（矿物质）并列出现。",
+   "definition": "vitamin 是可数名词，泛指多种维生素时用复数 vitamins，如 take vitamins、vitamin supplements。单指某一种用 vitamin C 或 vitamin D，不加冠词。",
+   "examples": [
+    {
+     "en": "Doctors say you should take vitamins to stay healthy, especially vitamin C in winter.",
+     "zh": "医生说你应该补充维生素来保持健康，尤其是在冬天补充维生素C。"
+    },
+    {
+     "en": "She takes her vitamins every morning with breakfast and never skips a day.",
+     "zh": "她每天早上吃早餐时服用维生素，从不间断。"
+    }
+   ],
+   "tags": [
+    "身体健康"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "救护车",
+   "pair": "zh-en",
+   "slug": "jiu-hu-che",
+   "lang": "zh",
+   "translation": "ambulance",
+   "shortAnswer": "「救护车」的英文是 ambulance。注意 ambulance 专指运送病人或伤者的车辆，不要用 car 或 bus 泛称；紧急情况说 call an ambulance。",
+   "definition": "ambulance 是可数名词，常与 call、send、take 搭配：call an ambulance（叫救护车）、by ambulance（乘救护车）。易错点：中文说「打急救电话」通常用 call an ambulance，而不是 call a hospital car。",
+   "examples": [
+    {
+     "en": "She cut her hand badly in the kitchen, so we called an ambulance right away.",
+     "zh": "她在厨房把手割得很严重，所以我们立刻叫了救护车。"
+    },
+    {
+     "en": "The ambulance arrived within ten minutes and took the injured man to the hospital.",
+     "zh": "救护车十分钟内赶到，把受伤的男子送到了医院。"
+    }
+   ],
+   "tags": [
+    "身体健康"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "ambulance",
+   "pair": "en-zh",
+   "slug": "ambulance",
+   "lang": "en",
+   "translation": "救护车",
+   "shortAnswer": "Ambulance 的中文意思是「救护车」。它专指运送病人或伤者的特种车辆，不是普通 car，强调医疗急救用途。",
+   "definition": "ambulance 是名词，常见搭配：call an ambulance、ambulance crew、in an ambulance。正式和口语都常用。易错点：不要用 ambulance 泛指所有「急救」，急救服务常另说 emergency services。",
+   "examples": [
+    {
+     "en": "She cut her hand badly in the kitchen, so we called an ambulance right away.",
+     "zh": "她在厨房把手割得很严重，所以我们立刻叫了救护车。"
+    },
+    {
+     "en": "The ambulance arrived within ten minutes and took the injured man to the hospital.",
+     "zh": "救护车十分钟内赶到，把受伤的男子送到了医院。"
+    }
+   ],
+   "tags": [
+    "身体健康"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "处方药",
+   "pair": "zh-en",
+   "slug": "chu-fang-yao",
+   "lang": "zh",
+   "translation": "prescription drug",
+   "shortAnswer": "「处方药」的英文是 prescription drug，口语中也常说 prescription，它和 OTC（非处方药）相对。",
+   "definition": "指必须凭医生处方才能购买的药物，常见搭配有 take prescription drugs、get a prescription 等。",
+   "examples": [
+    {
+     "en": "You can't buy this prescription drug without a doctor's note.",
+     "zh": "没有医生的处方，你不能买这种处方药。"
+    },
+    {
+     "en": "She has been taking prescription drugs for her high blood pressure for years.",
+     "zh": "她多年来一直服用处方药来控制高血压。"
+    }
+   ],
+   "tags": [
+    "身体健康"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "prescription drug",
+   "pair": "en-zh",
+   "slug": "prescription-drug",
+   "lang": "en",
+   "translation": "处方药",
+   "shortAnswer": "Prescription drug 的中文意思是「处方药」，即必须凭医生处方才能购买的药物，和 OTC 相对。",
+   "definition": "A medicine that can only be bought with a doctor's prescription, often in phrases like take prescription drugs.",
+   "examples": [
+    {
+     "en": "You can't buy this prescription drug without a doctor's note.",
+     "zh": "没有医生的处方，你不能买这种处方药。"
+    },
+    {
+     "en": "She has been taking prescription drugs for her high blood pressure for years.",
+     "zh": "她多年来一直服用处方药来控制高血压。"
+    }
+   ],
+   "tags": [
+    "身体健康"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "药店",
+   "pair": "zh-en",
+   "slug": "yao-dian",
+   "lang": "zh",
+   "translation": "pharmacy",
+   "shortAnswer": "「药店」的英文是 pharmacy，指可以买到处方药和非处方药的零售药房。注意：pharmacy 与 drugstore 常可互换，但 drugstore 在美式英语中更口语化，且常兼卖日用品。",
+   "definition": "pharmacy 多指医院或街边配处方药的药房，也指药学专业。英式英语中 chemist's 更口语；美式英语中 drugstore 可兼卖零食，但药房本身仍是 pharmacy。注意：去药店买药常说 go to the pharmacy。",
+   "examples": [
+    {
+     "en": "I need to stop by the pharmacy to pick up my prescription before it closes.",
+     "zh": "我得在药店关门前去取我的处方药。"
+    },
+    {
+     "en": "The pharmacist at the pharmacy gave me something for my cold and told me to take it twice a day.",
+     "zh": "药店的药剂师给了我治感冒的药，并让我每天吃两次。"
+    }
+   ],
+   "tags": [
+    "身体健康"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "pharmacy",
+   "pair": "en-zh",
+   "slug": "pharmacy",
+   "lang": "en",
+   "translation": "药店",
+   "shortAnswer": "Pharmacy 的中文意思是「药店」，即配药、卖药的地方。它与 drugstore 的关键区别在于：pharmacy 更强调配处方药的专业场所，而 drugstore 在美式英语中常兼卖日用品。",
+   "definition": "Pharmacy 的核心词义是药店和药学。常见搭配有 at the pharmacy、pharmacy counter。正式场合指医院药房或药学专业；口语中可与 drugstore 换用，但 drugstore 更像便利店式药店。注意拼写，勿与 farmacy 混淆。",
+   "examples": [
+    {
+     "en": "I need to stop by the pharmacy to pick up my prescription before it closes.",
+     "zh": "我得在药店关门前去取我的处方药。"
+    },
+    {
+     "en": "The pharmacist at the pharmacy gave me something for my cold and told me to take it twice a day.",
+     "zh": "药店的药剂师给了我治感冒的药，并让我每天吃两次。"
+    }
+   ],
+   "tags": [
+    "身体健康"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "急救",
+   "pair": "zh-en",
+   "slug": "ji-jiu",
+   "lang": "zh",
+   "translation": "first aid",
+   "shortAnswer": "「急救」的英文是 first aid，指在专业医疗人员到达前，对伤病者进行的紧急初步救护与处理。",
+   "definition": "first aid 是不可数名词，常见搭配有 give first aid、a first-aid kit、first-aid training；作定语时通常加连字符。",
+   "examples": [
+    {
+     "en": "She took a first-aid course so she could help her students if they got hurt.",
+     "zh": "她参加了急救课程，这样学生受伤时她就能帮上忙。"
+    },
+    {
+     "en": "The hiker broke his ankle, and his friend gave him first aid until the rescue team arrived.",
+     "zh": "那位徒步者脚踝骨折，他的朋友给他做了急救，直到救援队赶到。"
+    }
+   ],
+   "tags": [
+    "身体健康"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "first aid",
+   "pair": "en-zh",
+   "slug": "first-aid",
+   "lang": "en",
+   "translation": "急救",
+   "shortAnswer": "First aid means 急救: immediate, basic help given before professional medical treatment arrives.",
+   "definition": "First aid is an uncountable noun: give first aid, a first-aid kit, first-aid training. Use a hyphen before nouns.",
+   "examples": [
+    {
+     "en": "She took a first-aid course so she could help her students if they got hurt.",
+     "zh": "她参加了急救课程，这样学生受伤时她就能帮上忙。"
+    },
+    {
+     "en": "The hiker broke his ankle, and his friend gave him first aid until the rescue team arrived.",
+     "zh": "那位徒步者脚踝骨折，他的朋友给他做了急救，直到救援队赶到。"
+    }
+   ],
+   "tags": [
+    "身体健康"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "打疫苗",
+   "pair": "zh-en",
+   "slug": "da-yi-miao",
+   "lang": "zh",
+   "translation": "get vaccinated",
+   "shortAnswer": "「打疫苗」的英文是 get vaccinated，表示接种疫苗，强调完成接种这一动作。",
+   "definition": "get vaccinated 是固定搭配，意为打疫苗、接种疫苗。常见搭配：get vaccinated against + 疾病。注意：一般不说 get vaccine，也不说 take vaccine。",
+   "examples": [
+    {
+     "en": "You should get vaccinated against the flu before winter starts.",
+     "zh": "你应该在冬天开始前打流感疫苗。"
+    },
+    {
+     "en": "She got vaccinated last week and only had a mild sore arm.",
+     "zh": "她上周打了疫苗，只是手臂有点酸痛。"
+    }
+   ],
+   "tags": [
+    "身体健康"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "get vaccinated",
+   "pair": "en-zh",
+   "slug": "get-vaccinated",
+   "lang": "en",
+   "translation": "打疫苗",
+   "shortAnswer": "get vaccinated 的中文意思是「打疫苗」，也就是接种疫苗，用来预防疾病。",
+   "definition": "get vaccinated 意为打疫苗、接种疫苗，常用于日常口语和公共卫生建议。常见搭配：get vaccinated against + 疾病名称。",
+   "examples": [
+    {
+     "en": "You should get vaccinated against the flu before winter starts.",
+     "zh": "你应该在冬天开始前打流感疫苗。"
+    },
+    {
+     "en": "She got vaccinated last week and only had a mild sore arm.",
+     "zh": "她上周打了疫苗，只是手臂有点酸痛。"
+    }
+   ],
+   "tags": [
+    "身体健康"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "量体温",
+   "pair": "zh-en",
+   "slug": "liang-ti-wen",
+   "lang": "zh",
+   "translation": "take one's temperature",
+   "shortAnswer": "「量体温」英文是 take one's temperature，如 The nurse took my temperature。",
+   "definition": "动词短语，指用体温计测人体温度，one's 随主语变化，如 take my temperature，不说 take the temperature。",
+   "examples": [
+    {
+     "en": "The nurse took my temperature and said I had a slight fever.",
+     "zh": "护士给我量了体温，说我有点发烧。"
+    },
+    {
+     "en": "You should take your temperature twice a day while you're sick.",
+     "zh": "生病期间你应该每天量两次体温。"
+    }
+   ],
+   "tags": [
+    "身体健康"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "take one's temperature",
+   "pair": "en-zh",
+   "slug": "take-one-s-temperature",
+   "lang": "en",
+   "translation": "量体温",
+   "shortAnswer": "take one's temperature 意思是「量体温」，如 The nurse took my temperature。",
+   "definition": "verb phrase: to measure a person's body heat with a thermometer, usually with a possessive, as in take my temperature.",
+   "examples": [
+    {
+     "en": "The nurse took my temperature and said I had a slight fever.",
+     "zh": "护士给我量了体温，说我有点发烧。"
+    },
+    {
+     "en": "You should take your temperature twice a day while you're sick.",
+     "zh": "生病期间你应该每天量两次体温。"
+    }
+   ],
+   "tags": [
+    "身体健康"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "病假",
+   "pair": "zh-en",
+   "slug": "bing-jia",
+   "lang": "zh",
+   "translation": "sick leave",
+   "shortAnswer": "「病假」的英文是 sick leave，指因生病而获准的休假。注意 sick leave 通常指有固定工作或学籍的人请的病假，且多带薪。",
+   "definition": "sick leave 为不可数名词，常见搭配有 on sick leave（在休病假）、take sick leave（请病假）、paid sick leave（带薪病假）。不要与 sick day（病假日）混用，sick leave 侧重获准的休假权利。",
+   "examples": [
+    {
+     "en": "She took a week of sick leave after catching a bad cold.",
+     "zh": "她得了重感冒后请了一周病假。"
+    },
+    {
+     "en": "Employees are entitled to paid sick leave if they provide a doctor's note.",
+     "zh": "如果提供医生证明，员工有权享受带薪病假。"
+    }
+   ],
+   "tags": [
+    "身体健康"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "sick leave",
+   "pair": "en-zh",
+   "slug": "sick-leave",
+   "lang": "en",
+   "translation": "病假",
+   "shortAnswer": "sick leave 的中文意思是「病假」，指因生病而获准的休假。与 sick day 不同，sick leave 更正式，常指工作或学校中有固定天数的带薪病假。",
+   "definition": "sick leave 为不可数名词，正式用语，常见搭配有 on sick leave、take sick leave、paid sick leave。注意不要与 sick day（一天病假）混淆，sick leave 通常指一段获准的休假时间。",
+   "examples": [
+    {
+     "en": "She took a week of sick leave after catching a bad cold.",
+     "zh": "她得了重感冒后请了一周病假。"
+    },
+    {
+     "en": "Employees are entitled to paid sick leave if they provide a doctor's note.",
+     "zh": "如果提供医生证明，员工有权享受带薪病假。"
+    }
+   ],
+   "tags": [
+    "身体健康"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "在家休养",
+   "pair": "zh-en",
+   "slug": "zai-jia-xiu-yang",
+   "lang": "zh",
+   "translation": "recover at home",
+   "shortAnswer": "「在家休养」的英文是 recover at home，指生病或手术后在家恢复健康。注意 recover 强调恢复过程，不是简单的「休息」。",
+   "definition": "recover at home 常与 from 连用，如 recover from a cold at home。易错点：不说 rest at home 表示「休养」，rest 只强调休息，不含康复义。",
+   "examples": [
+    {
+     "en": "The doctor advised him to recover at home for a week after the surgery.",
+     "zh": "医生建议他手术后在家休养一周。"
+    },
+    {
+     "en": "She caught a cold and decided to recover at home instead of going to work.",
+     "zh": "她感冒了，决定在家休养而不去上班。"
+    }
+   ],
+   "tags": [
+    "身体健康"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "recover at home",
+   "pair": "en-zh",
+   "slug": "recover-at-home",
+   "lang": "en",
+   "translation": "在家休养",
+   "shortAnswer": "「recover at home」的中文意思是「在家休养」，指在家恢复健康。与 get better 相比，recover 更正式，强调从疾病中完全康复。",
+   "definition": "recover at home 表示在家康复，常用于医生建议或病后描述。搭配 recover from illness/surgery at home。口语中也可说 get better at home，但 recover 更正式。",
+   "examples": [
+    {
+     "en": "The doctor advised him to recover at home for a week after the surgery.",
+     "zh": "医生建议他手术后在家休养一周。"
+    },
+    {
+     "en": "She caught a cold and decided to recover at home instead of going to work.",
+     "zh": "她感冒了，决定在家休养而不去上班。"
+    }
+   ],
+   "tags": [
+    "身体健康"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "腰酸背痛",
+   "pair": "zh-en",
+   "slug": "yao-suan-bei-tong",
+   "lang": "zh",
+   "translation": "sore back",
+   "shortAnswer": "「腰酸背痛」最常用的英文说法是 sore back，指腰背部酸痛不适。注意 sore back 侧重肌肉酸痛，若想强调「僵硬」可用 stiff back。",
+   "definition": "sore back 是口语和书面都常用的表达，可搭配 have a sore back、get a sore back。若指持续性腰背痛，医生可能用 back pain 或 lower back pain，sore 更偏「酸痛、一碰就痛」。",
+   "examples": [
+    {
+     "en": "I played basketball for three hours yesterday, so now I have a sore back.",
+     "zh": "我昨天打了三个小时篮球，所以现在腰酸背痛。"
+    },
+    {
+     "en": "Sitting at a desk all day can give you a sore back, so remember to stand up and stretch.",
+     "zh": "整天坐在桌前会让你腰酸背痛，所以记得站起来伸展一下。"
+    }
+   ],
+   "tags": [
+    "身体健康"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "sore back",
+   "pair": "en-zh",
+   "slug": "sore-back",
+   "lang": "en",
+   "translation": "腰酸背痛",
+   "shortAnswer": "sore back 的中文意思是「腰酸背痛」，指腰背部肌肉酸痛、僵硬不适。它强调酸痛感，而 back pain 更泛指任何腰背疼痛，包括伤病引起的剧痛。",
+   "definition": "sore back 是日常英语，常与 have、get、a 连用，如 I have a sore back。正式医学语境多用 back pain 或 lower back pain。注意 sore 不可直接说成 pain，sore 指酸痛、触痛。",
+   "examples": [
+    {
+     "en": "I played basketball for three hours yesterday, so now I have a sore back.",
+     "zh": "我昨天打了三个小时篮球，所以现在腰酸背痛。"
+    },
+    {
+     "en": "Sitting at a desk all day can give you a sore back, so remember to stand up and stretch.",
+     "zh": "整天坐在桌前会让你腰酸背痛，所以记得站起来伸展一下。"
+    }
+   ],
+   "tags": [
+    "身体健康"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "量血压",
+   "pair": "zh-en",
+   "slug": "liang-xue-ya",
+   "lang": "zh",
+   "translation": "check blood pressure",
+   "shortAnswer": "「量血压」的英文是 check blood pressure，check 表示测量，blood pressure 指血压。",
+   "definition": "check blood pressure 意为量血压，check 后常接 one's，如 check my blood pressure。日常口语中比 measure 更自然。",
+   "examples": [
+    {
+     "en": "The nurse will check blood pressure for every patient before the appointment.",
+     "zh": "护士会在预约前给每位病人量血压。"
+    },
+    {
+     "en": "If you have hypertension, check blood pressure regularly.",
+     "zh": "如果你有高血压，要定期量血压。"
+    }
+   ],
+   "tags": [
+    "身体健康"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "check blood pressure",
+   "pair": "en-zh",
+   "slug": "check-blood-pressure",
+   "lang": "en",
+   "translation": "量血压",
+   "shortAnswer": "To check blood pressure 的中文意思是「量血压」，也就是测量血压。",
+   "definition": "check blood pressure means to measure blood pressure. It often takes one's, as in check my blood pressure.",
+   "examples": [
+    {
+     "en": "The nurse will check blood pressure for every patient before the appointment.",
+     "zh": "护士会在预约前给每位病人量血压。"
+    },
+    {
+     "en": "If you have hypertension, check blood pressure regularly.",
+     "zh": "如果你有高血压，要定期量血压。"
+    }
+   ],
+   "tags": [
+    "身体健康"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "难过",
+   "pair": "zh-en",
+   "slug": "nan-guo",
+   "lang": "zh",
+   "translation": "down",
+   "shortAnswer": "「难过」常用 down 表达，尤其指情绪低落、提不起劲，偏口语。注意 down 语气较轻，程度重、持续久时多用 depressed。",
+   "definition": "down 多作表语，搭配 feel/be down、a bit down、feel a little down。它指短暂的情绪低落，不等于临床抑郁 depressed；比 sad 更口语、更含蓄。名词形式 the downs 可指低落期。",
+   "examples": [
+    {
+     "en": "She's been a bit down since she failed the exam.",
+     "zh": "自从考试没及格，她一直有点难过。"
+    },
+    {
+     "en": "I felt really down after saying goodbye to my best friend.",
+     "zh": "和最好的朋友道别后，我感到非常难过。"
+    }
+   ],
+   "tags": [
+    "情绪状态"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "down",
+   "pair": "en-zh",
+   "slug": "down",
+   "lang": "en",
+   "translation": "难过",
+   "shortAnswer": "down 的中文意思是「难过、情绪低落」，多作表语，偏口语。它指短暂的心情不好，比 sad 含蓄，和临床抑郁 depressed 程度不同。",
+   "definition": "down 常与 feel、be、a bit、a little 连用，如 feel down、be a bit down。它强调暂时低落，非医学诊断；depressed 程度更重、更持久。口语中也可说 feeling blue。",
+   "examples": [
+    {
+     "en": "She's been a bit down since she failed the exam.",
+     "zh": "自从考试没及格，她一直有点难过。"
+    },
+    {
+     "en": "I felt really down after saying goodbye to my best friend.",
+     "zh": "和最好的朋友道别后，我感到非常难过。"
+    }
+   ],
+   "tags": [
+    "情绪状态"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "心情好",
+   "pair": "zh-en",
+   "slug": "xin-qing-hao",
+   "lang": "zh",
+   "translation": "in a good mood",
+   "shortAnswer": "「心情好」的英文是 in a good mood，表示此刻情绪愉快、状态轻松，强调当下感受而非长期性格。",
+   "definition": "in a good mood 多作表语，如 be/feel in a good mood，表示眼下心情愉快。偏口语；正式可说 in good spirits。反义为 in a bad mood。",
+   "examples": [
+    {
+     "en": "She is in a good mood today, so it is a good time to ask her for help.",
+     "zh": "她今天心情好，所以现在找她帮忙正合适。"
+    },
+    {
+     "en": "The children were in a good mood after the picnic and sang all the way home.",
+     "zh": "野餐之后孩子们心情好，一路唱着歌回家。"
+    }
+   ],
+   "tags": [
+    "情绪状态"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "in a good mood",
+   "pair": "en-zh",
+   "slug": "in-a-good-mood",
+   "lang": "en",
+   "translation": "心情好",
+   "shortAnswer": "in a good mood 的中文意思是「心情好」，指此刻情绪愉快、心态轻松，只说明当前状态，不指长期性格。",
+   "definition": "in a good mood 是口语常用表达，作表语，如 be/feel in a good mood，只说明当下心情不错，不同于长期乐观的 cheerful。反义为 in a bad mood。",
+   "examples": [
+    {
+     "en": "She is in a good mood today, so it is a good time to ask her for help.",
+     "zh": "她今天心情好，所以现在找她帮忙正合适。"
+    },
+    {
+     "en": "The children were in a good mood after the picnic and sang all the way home.",
+     "zh": "野餐之后孩子们心情好，一路唱着歌回家。"
+    }
+   ],
+   "tags": [
+    "情绪状态"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "烦躁",
+   "pair": "zh-en",
+   "slug": "fan-zao",
+   "lang": "zh",
+   "translation": "irritated",
+   "shortAnswer": "烦躁的英文是 irritated，指因小事而恼火、不耐烦。注意它与 angry 程度不同：irritated 更轻，常因反复打扰或琐事引起。",
+   "definition": "irritated 侧重被反复打扰后的不耐烦，比 angry 轻，比 annoyed 略强。常见搭配：get/feel irritated by/with，irritated at sth，irritating 形容事物令人烦躁。",
+   "examples": [
+    {
+     "en": "She gets irritated when people talk loudly on the phone in public.",
+     "zh": "有人在公共场合大声打电话时，她会很烦躁。"
+    },
+    {
+     "en": "I was irritated by the constant noise from the construction site next door.",
+     "zh": "隔壁工地没完没了的噪音让我很烦躁。"
+    }
+   ],
+   "tags": [
+    "情绪状态"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "irritated",
+   "pair": "en-zh",
+   "slug": "irritated",
+   "lang": "en",
+   "translation": "烦躁",
+   "shortAnswer": "irritated 的中文意思是烦躁，指因小事而恼火、不耐烦。它比 angry 程度轻，强调被反复打扰后的反应。",
+   "definition": "irritated 指因琐事或反复打扰而恼火，比 angry 轻，比 annoyed 略强。常用搭配：be/feel/get irritated by/with sb/sth，irritated at doing sth。口语中常与 slightly、really 连用。",
+   "examples": [
+    {
+     "en": "She gets irritated when people talk loudly on the phone in public.",
+     "zh": "有人在公共场合大声打电话时，她会很烦躁。"
+    },
+    {
+     "en": "I was irritated by the constant noise from the construction site next door.",
+     "zh": "隔壁工地没完没了的噪音让我很烦躁。"
+    }
+   ],
+   "tags": [
+    "情绪状态"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "压力大",
+   "pair": "zh-en",
+   "slug": "ya-li-da",
+   "lang": "zh",
+   "translation": "stressed out",
+   "shortAnswer": "「压力大」英语常说是 stressed out，比单纯 stressed 更强调被压得身心俱疲。口语中常用 be/feel stressed out，也可说 get stressed out。",
+   "definition": "stressed out 指因工作、考试或生活琐事而焦虑紧张、快扛不住了，程度比 stressed 重，偏口语。常搭配 be/feel/get stressed out about sth；注意它不等于临床抑郁 depressed。",
+   "examples": [
+    {
+     "en": "I've been really stressed out lately because of the deadline and I can't sleep well.",
+     "zh": "最近因为截止日期我压力大得厉害，觉都睡不好。"
+    },
+    {
+     "en": "She gets stressed out every time she has to speak in front of a big crowd.",
+     "zh": "每次要在一大群人面前讲话，她都会压力大得不行。"
+    }
+   ],
+   "tags": [
+    "情绪状态"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "stressed out",
+   "pair": "en-zh",
+   "slug": "stressed-out",
+   "lang": "en",
+   "translation": "压力大",
+   "shortAnswer": "Stressed out 的中文意思是「压力大」，形容紧张焦虑、快受不了的状态。它比 stressed 语气更强，更口语化，不等于临床意义的 depressed。",
+   "definition": "stressed out 表示因压力而焦虑疲惫，常用于口语和非正式场合，如 feel/get/be stressed out about work。想表达长期情绪低落可用 down 或 feeling blue，临床抑郁才用 depressed。",
+   "examples": [
+    {
+     "en": "I've been really stressed out lately because of the deadline and I can't sleep well.",
+     "zh": "最近因为截止日期我压力大得厉害，觉都睡不好。"
+    },
+    {
+     "en": "She gets stressed out every time she has to speak in front of a big crowd.",
+     "zh": "每次要在一大群人面前讲话，她都会压力大得不行。"
+    }
+   ],
+   "tags": [
+    "情绪状态"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "生气",
+   "pair": "zh-en",
+   "slug": "sheng-qi",
+   "lang": "zh",
+   "translation": "angry",
+   "shortAnswer": "中文「生气」最常译为 angry，语气可轻可重，强烈时可用 furious，日常口语也说 mad。",
+   "definition": "angry 是最通用的词，指一时恼怒或持续愤怒，搭配 be angry with sb、be angry at/about sth，不表示委屈或失望。",
+   "examples": [
+    {
+     "en": "She was angry with her brother for breaking her phone.",
+     "zh": "她因为弟弟弄坏了她的手机而生气。"
+    },
+    {
+     "en": "He gets angry when people don't listen to him.",
+     "zh": "别人不听他说话时，他就会生气。"
+    }
+   ],
+   "tags": [
+    "情绪状态"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "angry",
+   "pair": "en-zh",
+   "slug": "angry",
+   "lang": "en",
+   "translation": "生气",
+   "shortAnswer": "English angry means「生气」，强调因不公或挫折而发怒，比 annoyed 强，口语常用 mad 或 cross。",
+   "definition": "angry 指因受冒犯、挫折或不公而发怒，搭配 angry with sb、angry about sth，口语也可说 mad 或 cross。",
+   "examples": [
+    {
+     "en": "She was angry with her brother for breaking her phone.",
+     "zh": "她因为弟弟弄坏了她的手机而生气。"
+    },
+    {
+     "en": "He gets angry when people don't listen to him.",
+     "zh": "别人不听他说话时，他就会生气。"
+    }
+   ],
+   "tags": [
+    "情绪状态"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "感动",
+   "pair": "zh-en",
+   "slug": "gan-dong",
+   "lang": "zh",
+   "translation": "touched",
+   "shortAnswer": "「感动」最常用的英文是 touched，例如 I was deeply touched。注意 touched 强调因善意而心头一暖，与 excited（兴奋）或 moved to tears（感动落泪）程度不同。",
+   "definition": "touched 常与 be/feel 连用，如 be touched by sb's kindness，表示因他人善意而内心温暖。注意区分：moved 更强调被情感打动，可指悲伤或震撼；touched 侧重感激与温情，口语和书面均常用。",
+   "examples": [
+    {
+     "en": "I was deeply touched by the thoughtful gift from my students.",
+     "zh": "我被学生们贴心的礼物深深感动了。"
+    },
+    {
+     "en": "She felt touched when her friend remembered her birthday and sent a handwritten card.",
+     "zh": "当朋友记得她的生日并寄来手写卡片时，她感到很感动。"
+    }
+   ],
+   "tags": [
+    "情绪状态"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "touched",
+   "pair": "en-zh",
+   "slug": "touched",
+   "lang": "en",
+   "translation": "感动",
+   "shortAnswer": "touched 的中文是「感动」，指因他人的善意或关怀而心头温暖。与 moved 不同，touched 更强调感激和温情，而非悲伤或震撼。",
+   "definition": "touched 作形容词，意为「受感动」，常见搭配有 be/feel touched by sth。多用于因他人善举、礼物或关怀而心生暖意的场合，正式与口语皆可。注意不要与 touched 的动词原义「触摸」混淆。",
+   "examples": [
+    {
+     "en": "I was deeply touched by the thoughtful gift from my students.",
+     "zh": "我被学生们贴心的礼物深深感动了。"
+    },
+    {
+     "en": "She felt touched when her friend remembered her birthday and sent a handwritten card.",
+     "zh": "当朋友记得她的生日并寄来手写卡片时，她感到很感动。"
+    }
+   ],
+   "tags": [
+    "情绪状态"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "委屈",
+   "pair": "zh-en",
+   "slug": "wei-qu",
+   "lang": "zh",
+   "translation": "feeling wronged",
+   "shortAnswer": "「委屈」的英文是 feeling wronged，指觉得自己被冤枉、被亏待却难以说清。它强调的是一种不被公正对待的酸楚感。",
+   "definition": "feeling wronged 多作表语，如 feel wronged、be left feeling wronged；口语也可说 feel hard done by。注意它不是 sad，重点在「被亏待、不被公平对待」，常与 helpless、upset 连用。",
+   "examples": [
+    {
+     "en": "She left the meeting feeling wronged, convinced that no one had listened to her side of the story.",
+     "zh": "她开完会离开时满心委屈，认定没有人听她那一面的说法。"
+    },
+    {
+     "en": "He tried not to sound like a child feeling wronged, but his voice still trembled with hurt.",
+     "zh": "他尽量不让自己听起来像个受了委屈的孩子，但声音还是因伤心而发颤。"
+    }
+   ],
+   "tags": [
+    "情绪状态"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "feeling wronged",
+   "pair": "en-zh",
+   "slug": "feeling-wronged",
+   "lang": "en",
+   "translation": "委屈",
+   "shortAnswer": "Feeling wronged 的中文意思是「委屈」，指觉得自己被冤枉或不公平对待而心里难受。它与 sad 不同，重点在「遭到不公正对待」的委屈感。",
+   "definition": "feeling wronged 表示因被冤枉、被亏待而委屈，常作表语：feel / be left feeling wronged。口语近义说法是 feel hard done by；不要与 disappointed（失望）、depressed（抑郁）混用。",
+   "examples": [
+    {
+     "en": "She left the meeting feeling wronged, convinced that no one had listened to her side of the story.",
+     "zh": "她开完会离开时满心委屈，认定没有人听她那一面的说法。"
+    },
+    {
+     "en": "He tried not to sound like a child feeling wronged, but his voice still trembled with hurt.",
+     "zh": "他尽量不让自己听起来像个受了委屈的孩子，但声音还是因伤心而发颤。"
+    }
+   ],
+   "tags": [
+    "情绪状态"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "焦虑",
+   "pair": "zh-en",
+   "slug": "jiao-lv",
+   "lang": "zh",
+   "translation": "anxious",
+   "shortAnswer": "「焦虑」常译作 anxious，be anxious about sth 表示对某事焦虑不安；也可说 feel anxious。",
+   "definition": "anxious 指焦虑的、担心的，常用 be anxious about sth 或 feel anxious；也可表示渴望的，如 be anxious to do sth，需靠搭配区分。名词是 anxiety。",
+   "examples": [
+    {
+     "en": "She felt anxious about the job interview all week.",
+     "zh": "她整个星期都为那场求职面试感到焦虑。"
+    },
+    {
+     "en": "He was anxious to finish the report before the deadline.",
+     "zh": "他急于在截止日期前完成那份报告。"
+    }
+   ],
+   "tags": [
+    "情绪状态"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "anxious",
+   "pair": "en-zh",
+   "slug": "anxious",
+   "lang": "en",
+   "translation": "焦虑",
+   "shortAnswer": "anxious 的中文常译「焦虑的」，指对可能发生的事感到不安，也可表示「渴望的」。",
+   "definition": "anxious 语气介于 nervous 与 afraid 之间，多指对未来不确定的事忧心，常见搭配 be anxious about sth、feel anxious。注意 be anxious to do sth 意为渴望做某事，名词为 anxiety。",
+   "examples": [
+    {
+     "en": "She felt anxious about the job interview all week.",
+     "zh": "她整个星期都为那场求职面试感到焦虑。"
+    },
+    {
+     "en": "He was anxious to finish the report before the deadline.",
+     "zh": "他急于在截止日期前完成那份报告。"
+    }
+   ],
+   "tags": [
+    "情绪状态"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "嫉妒",
+   "pair": "zh-en",
+   "slug": "ji-du",
+   "lang": "zh",
+   "translation": "jealous",
+   "shortAnswer": "「嫉妒」的英文是 jealous。它常指因别人拥有自己渴望的东西而心生不满，与羡慕(envy)不同，嫉妒带有更强的负面情绪。",
+   "definition": "jealous 多用于感情关系或比较场景，如 be jealous of sb/sth。注意：envy 侧重「羡慕」，jealous 则常含「怕失去」或「怨恨」意味，如 a jealous husband。",
+   "examples": [
+    {
+     "en": "She felt jealous when she saw her ex-boyfriend with someone new.",
+     "zh": "看到前男友有了新欢，她感到嫉妒。"
+    },
+    {
+     "en": "He was jealous of his colleague's promotion, even though he tried to hide it.",
+     "zh": "他嫉妒同事升职，尽管他试图掩饰。"
+    }
+   ],
+   "tags": [
+    "情绪状态"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "jealous",
+   "pair": "en-zh",
+   "slug": "jealous",
+   "lang": "en",
+   "translation": "嫉妒",
+   "shortAnswer": "「jealous」的中文意思是「嫉妒」。它强调因他人拥有自己看重的东西而心生不快，常含猜忌或怕失去的意味。",
+   "definition": "jealous 可指因感情、成就等而嫉妒，搭配 be jealous of。与 envious 不同，jealous 更强调「怕失去」或「怨恨」，如 a jealous look。口语中也可说 feeling jealous。",
+   "examples": [
+    {
+     "en": "She felt jealous when she saw her ex-boyfriend with someone new.",
+     "zh": "看到前男友有了新欢，她感到嫉妒。"
+    },
+    {
+     "en": "He was jealous of his colleague's promotion, even though he tried to hide it.",
+     "zh": "他嫉妒同事升职，尽管他试图掩饰。"
+    }
+   ],
+   "tags": [
+    "情绪状态"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "尴尬",
+   "pair": "zh-en",
+   "slug": "gan-ga",
+   "lang": "zh",
+   "translation": "embarrassed",
+   "shortAnswer": "「尴尬」的英文是 embarrassed，形容因失态或出错而不自在、难为情，相当于中文的不好意思。",
+   "definition": "embarrassed 多作表语：be/feel/look embarrassed，用 about/at/by 引出原因。它修饰人，修饰事要用 embarrassing（令人尴尬的）。",
+   "examples": [
+    {
+     "en": "She was embarrassed when she forgot his name in front of everyone.",
+     "zh": "她在众人面前忘了他名字，感到很尴尬。"
+    },
+    {
+     "en": "I felt embarrassed about asking such a silly question.",
+     "zh": "问了个这么傻的问题，我觉得挺尴尬的。"
+    }
+   ],
+   "tags": [
+    "情绪状态"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "embarrassed",
+   "pair": "en-zh",
+   "slug": "embarrassed",
+   "lang": "en",
+   "translation": "尴尬",
+   "shortAnswer": "embarrassed 的中文意思是「尴尬、难为情」，指因失态或出错而不好意思，多用来形容人的感受。",
+   "definition": "embarrassed 常作表语：be/feel/look embarrassed，后接 about/at/by 说明原因。修饰事物用 embarrassing，别用 embarrassed。",
+   "examples": [
+    {
+     "en": "She was embarrassed when she forgot his name in front of everyone.",
+     "zh": "她在众人面前忘了他名字，感到很尴尬。"
+    },
+    {
+     "en": "I felt embarrassed about asking such a silly question.",
+     "zh": "问了个这么傻的问题，我觉得挺尴尬的。"
+    }
+   ],
+   "tags": [
+    "情绪状态"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "害羞",
+   "pair": "zh-en",
+   "slug": "hai-xiu",
+   "lang": "zh",
+   "translation": "shy",
+   "shortAnswer": "害羞的英文是 shy，指在社交场合感到紧张、不自在。注意 shy 更侧重因胆怯而回避社交，而 embarrassed 更多指因尴尬而难为情。",
+   "definition": "shy 可作形容词，常见搭配：be shy with strangers（见生人害羞）、a shy smile（羞怯的微笑）。名词形式为 shyness。注意 shy 与 ashamed 不同：前者是性格倾向，后者是因过错感到羞愧。",
+   "examples": [
+    {
+     "en": "Don't be shy; just come up and say hello.",
+     "zh": "别害羞，过来打个招呼吧。"
+    },
+    {
+     "en": "She was too shy to speak in front of the class.",
+     "zh": "她太害羞了，不敢在全班同学面前发言。"
+    }
+   ],
+   "tags": [
+    "情绪状态"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "shy",
+   "pair": "en-zh",
+   "slug": "shy",
+   "lang": "en",
+   "translation": "害羞",
+   "shortAnswer": "shy 的中文意思是害羞，指在社交场合容易紧张、不自在。与 embarrassed 不同，shy 更强调性格上的胆怯和回避，而非因尴尬产生的难为情。",
+   "definition": "shy 作形容词，常见搭配：be shy about doing sth（对做某事感到害羞）、a shy person（害羞的人）。口语中也可用 shy 表示「不足的」，如 shy of funds。名词形式为 shyness。",
+   "examples": [
+    {
+     "en": "Don't be shy; just come up and say hello.",
+     "zh": "别害羞，过来打个招呼吧。"
+    },
+    {
+     "en": "She was too shy to speak in front of the class.",
+     "zh": "她太害羞了，不敢在全班同学面前发言。"
+    }
+   ],
+   "tags": [
+    "情绪状态"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "兴奋",
+   "pair": "zh-en",
+   "slug": "xing-fen",
+   "lang": "zh",
+   "translation": "excited",
+   "shortAnswer": "兴奋的英文是 excited，指对即将发生的事感到激动、期待。注意 excited 只形容人，形容事情令人兴奋要用 exciting。",
+   "definition": "excited 常搭配 be excited about / at / to do sth，如 excited about the trip。它形容人主观的激动情绪；若说某事本身令人兴奋，须用 exciting，这是中国学习者最常见的错用。",
+   "examples": [
+    {
+     "en": "The kids were so excited about the trip that they couldn't sleep.",
+     "zh": "孩子们对这次旅行兴奋得睡不着觉。"
+    },
+    {
+     "en": "I'm excited to hear your good news — tell me everything!",
+     "zh": "听到你的好消息我很兴奋，快全告诉我！"
+    }
+   ],
+   "tags": [
+    "情绪状态"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "excited",
+   "pair": "en-zh",
+   "slug": "excited",
+   "lang": "en",
+   "translation": "兴奋",
+   "shortAnswer": "excited 的中文意思是兴奋，指人因期待好事而情绪高涨。它只形容人的感受，形容事物令人兴奋要用 exciting。",
+   "definition": "excited 表示人因期待或好事临近而激动，常见搭配 be excited about / to do sth。偏口语和日常，正式场合可用 thrilled。注意主语必须是人，别用它来形容事件本身。",
+   "examples": [
+    {
+     "en": "The kids were so excited about the trip that they couldn't sleep.",
+     "zh": "孩子们对这次旅行兴奋得睡不着觉。"
+    },
+    {
+     "en": "I'm excited to hear your good news — tell me everything!",
+     "zh": "听到你的好消息我很兴奋，快全告诉我！"
+    }
+   ],
+   "tags": [
+    "情绪状态"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "安心",
+   "pair": "zh-en",
+   "slug": "an-xin",
+   "lang": "zh",
+   "translation": "relieved",
+   "shortAnswer": "「安心」最常用的英文是 relieved，常指悬着的心放下了。它强调先前的担心或压力消失，不是单纯的平静或放心。",
+   "definition": "relieved 多作表语，搭配 feel/be/look relieved、be relieved to do sth、be relieved that...，侧重忧虑解除后的轻松；比 calm、safe 更强调担忧消失。",
+   "examples": [
+    {
+     "en": "I felt relieved when the doctor said everything was fine.",
+     "zh": "医生说一切正常时，我感到很安心。"
+    },
+    {
+     "en": "She was relieved to hear that her flight had not been cancelled.",
+     "zh": "听说航班没有取消，她松了一口气。"
+    }
+   ],
+   "tags": [
+    "情绪状态"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "relieved",
+   "pair": "en-zh",
+   "slug": "relieved",
+   "lang": "en",
+   "translation": "安心",
+   "shortAnswer": "relieved 的中文常译为「安心」，表示担心或压力解除后的宽慰。它强调从紧张、忧虑中放松下来，不是单纯的 calm 或 relaxed。",
+   "definition": "relieved 是形容词，表示宽慰的、安心的，常用 feel/be/look relieved、be relieved to do sth、be relieved that...；口语和书面都常见，比 relaxed 多一层「原本担心，现在放心」的意味。",
+   "examples": [
+    {
+     "en": "I felt relieved when the doctor said everything was fine.",
+     "zh": "医生说一切正常时，我感到很安心。"
+    },
+    {
+     "en": "She was relieved to hear that her flight had not been cancelled.",
+     "zh": "听说航班没有取消，她松了一口气。"
+    }
+   ],
+   "tags": [
+    "情绪状态"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "失望",
+   "pair": "zh-en",
+   "slug": "shi-wang",
+   "lang": "zh",
+   "translation": "disappointed",
+   "shortAnswer": "「失望」的英文是 disappointed，指期待落空后的难过，多用来描述人的感受。",
+   "definition": "disappointed 常搭配 be/feel disappointed at/about/with sth，对某人失望则用 disappointed in sb，比 down 更指向具体事由。",
+   "examples": [
+    {
+     "en": "She looked disappointed when she heard the trip had been canceled.",
+     "zh": "听说旅行取消了，她看上去很失望。"
+    },
+    {
+     "en": "I was really disappointed in myself for giving up so easily.",
+     "zh": "我为自己那么轻易就放弃而深感失望。"
+    }
+   ],
+   "tags": [
+    "情绪状态"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "disappointed",
+   "pair": "en-zh",
+   "slug": "disappointed",
+   "lang": "en",
+   "translation": "失望",
+   "shortAnswer": "disappointed 的中文意思是「失望」，指期望未实现时的难过，比 down 更指向具体事由。",
+   "definition": "disappointed 作形容词，常见搭配 be/feel disappointed at/about/with sth 和 disappointed in sb，名词形式为 disappointment。",
+   "examples": [
+    {
+     "en": "She looked disappointed when she heard the trip had been canceled.",
+     "zh": "听说旅行取消了，她看上去很失望。"
+    },
+    {
+     "en": "I was really disappointed in myself for giving up so easily.",
+     "zh": "我为自己那么轻易就放弃而深感失望。"
+    }
+   ],
+   "tags": [
+    "情绪状态"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "紧张",
+   "pair": "zh-en",
+   "slug": "jin-zhang",
+   "lang": "zh",
+   "translation": "nervous",
+   "shortAnswer": "「紧张」最常用的英文是 nervous，侧重因担心而心神不宁。注意：nervous 多指内心不安，而“紧张局势”要用 tense，别说成 nervous situation。",
+   "definition": "nervous 形容人感到紧张、焦虑，常搭配 be nervous about（对…紧张）、get nervous（变得紧张）。说“别紧张”是 Don't be nervous.；若描述气氛或局势紧张，则用 tense，如 a tense atmosphere。",
+   "examples": [
+    {
+     "en": "I always get nervous before a job interview.",
+     "zh": "我面试前总是很紧张。"
+    },
+    {
+     "en": "She felt nervous about speaking in front of the whole class.",
+     "zh": "她想到要在全班面前发言就感到紧张。"
+    }
+   ],
+   "tags": [
+    "情绪状态"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "nervous",
+   "pair": "en-zh",
+   "slug": "nervous",
+   "lang": "en",
+   "translation": "紧张",
+   "shortAnswer": "nervous 的中文意思是“紧张”，指因担忧而不安。它侧重人的心理状态，与 tense 不同，tense 多形容气氛、关系或肌肉的紧绷。",
+   "definition": "nervous 表示紧张、焦虑，常搭配 be/get nervous about sth，口语中也可说 feel nervous。注意：nervous 指人的情绪，而 tense 形容局势或气氛紧张；nervous 还有“神经的”专业义，如 nervous system。",
+   "examples": [
+    {
+     "en": "I always get nervous before a job interview.",
+     "zh": "我面试前总是很紧张。"
+    },
+    {
+     "en": "She felt nervous about speaking in front of the whole class.",
+     "zh": "她想到要在全班面前发言就感到紧张。"
+    }
+   ],
+   "tags": [
+    "情绪状态"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "无聊",
+   "pair": "zh-en",
+   "slug": "wu-liao",
+   "lang": "zh",
+   "translation": "bored",
+   "shortAnswer": "「无聊」常说 bored，指人感到厌烦、提不起兴趣；事物令人无聊则用 boring。",
+   "definition": "bored 多作表语：be/get/feel bored，后接 with 或 of 表示对某事厌倦。口语可说 bored stiff、bored to death，或 fed up。",
+   "examples": [
+    {
+     "en": "The kids got bored waiting for the train, so they played games on their phones.",
+     "zh": "孩子们等火车等得无聊，就开始用手机玩游戏。"
+    },
+    {
+     "en": "I'm bored with the same routine every day and want to try something new.",
+     "zh": "我厌倦了每天一成不变的生活，想尝试点新东西。"
+    }
+   ],
+   "tags": [
+    "情绪状态"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "bored",
+   "pair": "en-zh",
+   "slug": "bored",
+   "lang": "en",
+   "translation": "无聊",
+   "shortAnswer": "Bored means 无聊: feeling tired and impatient because you have nothing interesting to do.",
+   "definition": "Bored is an adjective, usually after be/get/feel, often with with or of. For a dull thing, use boring, not bored.",
+   "examples": [
+    {
+     "en": "The kids got bored waiting for the train, so they played games on their phones.",
+     "zh": "孩子们等火车等得无聊，就开始用手机玩游戏。"
+    },
+    {
+     "en": "I'm bored with the same routine every day and want to try something new.",
+     "zh": "我厌倦了每天一成不变的生活，想尝试点新东西。"
+    }
+   ],
+   "tags": [
+    "情绪状态"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "崩溃",
+   "pair": "zh-en",
+   "slug": "beng-kui",
+   "lang": "zh",
+   "translation": "have a meltdown",
+   "shortAnswer": "「崩溃」的英文是 have a meltdown，指情绪突然失控、当众发火或大哭，比 be upset 重得多。",
+   "definition": "have a meltdown 强调情绪瞬间失控，常见搭配 have a complete meltdown、emotional meltdown。口语常用，比 break down 更夸张，说「我快崩溃了」多用 I'm about to have a meltdown。",
+   "examples": [
+    {
+     "en": "She had a complete meltdown when she realized she'd lost her passport.",
+     "zh": "当她发现护照丢了时，她彻底崩溃了。"
+    },
+    {
+     "en": "I'm so stressed about this deadline that I'm about to have a meltdown.",
+     "zh": "这个截止日期让我压力太大，我快要崩溃了。"
+    }
+   ],
+   "tags": [
+    "情绪状态"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "have a meltdown",
+   "pair": "en-zh",
+   "slug": "have-a-meltdown",
+   "lang": "en",
+   "translation": "崩溃",
+   "shortAnswer": "have a meltdown 的中文意思是「崩溃」，指情绪突然失控、大发脾气或大哭，比 be upset 重，也比 break down 更口语。",
+   "definition": "have a meltdown 指因压力或情绪过载而突然失控，常见搭配 have a complete/emotional meltdown。多用于口语，可指大人发脾气或孩子闹情绪，正式写作中更常用 break down。",
+   "examples": [
+    {
+     "en": "She had a complete meltdown when she realized she'd lost her passport.",
+     "zh": "当她发现护照丢了时，她彻底崩溃了。"
+    },
+    {
+     "en": "I'm so stressed about this deadline that I'm about to have a meltdown.",
+     "zh": "这个截止日期让我压力太大，我快要崩溃了。"
+    }
+   ],
+   "tags": [
+    "情绪状态"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "释怀",
+   "pair": "zh-en",
+   "slug": "shi-huai",
+   "lang": "zh",
+   "translation": "let it go",
+   "shortAnswer": "「释怀」的英文是 let it go，指放下耿耿于怀的情绪。注意它侧重不再纠结，而非忘记；let it go 常用于劝人别再计较一件已过去的事。",
+   "definition": "let it go 多用于口语劝解，意为不再纠结、放下心结，如 just let it go（就别再想了）。与 forgive（原谅对方）不同，释怀不一定要原谅，只是自己不再被这件事牵着走；I can't let it go 则相反，表示放不下。",
+   "examples": [
+    {
+     "en": "You did your best, so let it go and stop blaming yourself.",
+     "zh": "你已经尽力了，就释怀吧，别再责怪自己了。"
+    },
+    {
+     "en": "It took her years to let it go after the argument with her sister.",
+     "zh": "和姐姐吵过那一架之后，她花了好几年才释怀。"
+    }
+   ],
+   "tags": [
+    "情绪状态"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "let it go",
+   "pair": "en-zh",
+   "slug": "let-it-go",
+   "lang": "en",
+   "translation": "释怀",
+   "shortAnswer": "「let it go」的中文意思是「释怀」，表示放下耿耿于怀的情绪。它与 forget（忘记）不同，是主动决定不再纠结，情绪上松手，但事情本身未必忘掉。",
+   "definition": "let it go 是口语短语，指对旧事不再计较、放下心结，如 let it go and move on。比 forgive 更强调自我解脱，不涉及对方；比 get over it 语气更温和，后者有时显得不耐烦。",
+   "examples": [
+    {
+     "en": "You did your best, so let it go and stop blaming yourself.",
+     "zh": "你已经尽力了，就释怀吧，别再责怪自己了。"
+    },
+    {
+     "en": "It took her years to let it go after the argument with her sister.",
+     "zh": "和姐姐吵过那一架之后，她花了好几年才释怀。"
+    }
+   ],
+   "tags": [
+    "情绪状态"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "心碎",
+   "pair": "zh-en",
+   "slug": "xin-sui",
+   "lang": "zh",
+   "translation": "heartbroken",
+   "shortAnswer": "「心碎」的英文是 heartbroken。它形容因失去爱人、被背叛或重大失望而感到极度悲伤，日常口语也常听到更轻的说法 down 或 feeling blue。",
+   "definition": "heartbroken 强调情感重创后的深度悲伤，常用搭配：be heartbroken over/about sb/sth、a heartbroken letter。注意它比 disappointed（失望）重得多；depressed 偏临床抑郁，不能随便互换。",
+   "examples": [
+    {
+     "en": "She was heartbroken when her boyfriend moved out without saying goodbye.",
+     "zh": "男朋友不辞而别搬走时，她心都碎了。"
+    },
+    {
+     "en": "He looked heartbroken at the funeral, but he tried to stay strong for his mother.",
+     "zh": "葬礼上他看上去心碎不已，但还是努力为母亲撑住。"
+    }
+   ],
+   "tags": [
+    "情绪状态"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "heartbroken",
+   "pair": "en-zh",
+   "slug": "heartbroken",
+   "lang": "en",
+   "translation": "心碎",
+   "shortAnswer": "Heartbroken 的中文意思是「心碎」。它指因失恋、丧亲或被辜负而极度伤心，语气比 disappointed（失望）重得多，也不同于 clinical depressed（临床抑郁）。",
+   "definition": "heartbroken 是形容词，常见搭配：be heartbroken over/about sb/sth、a heartbroken parent。多用于感情破裂、失去亲人等重大打击，口语和书面都常见；不要用它轻描淡写地说「有点低落」。",
+   "examples": [
+    {
+     "en": "She was heartbroken when her boyfriend moved out without saying goodbye.",
+     "zh": "男朋友不辞而别搬走时，她心都碎了。"
+    },
+    {
+     "en": "He looked heartbroken at the funeral, but he tried to stay strong for his mother.",
+     "zh": "葬礼上他看上去心碎不已，但还是努力为母亲撑住。"
+    }
+   ],
+   "tags": [
+    "情绪状态"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "沮丧",
+   "pair": "zh-en",
+   "slug": "ju-sang",
+   "lang": "zh",
+   "translation": "feeling blue",
+   "shortAnswer": "「沮丧」的英文常用说法是 feeling blue，口语化表达，指短暂情绪低落。",
+   "definition": "feeling blue 表示心情低落、闷闷不乐，多用于日常口语，常与 be、feel、look 连用；指短暂坏心情，非临床抑郁。",
+   "examples": [
+    {
+     "en": "I've been feeling blue all week because of the rainy weather.",
+     "zh": "因为一直下雨，我这一周都觉得很沮丧。"
+    },
+    {
+     "en": "He looked a bit blue after hearing the news, so we took him out for coffee.",
+     "zh": "听到那个消息后他显得有些沮丧，所以我们带他出去喝了杯咖啡。"
+    }
+   ],
+   "tags": [
+    "情绪状态"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "feeling blue",
+   "pair": "en-zh",
+   "slug": "feeling-blue",
+   "lang": "en",
+   "translation": "沮丧",
+   "shortAnswer": "Feeling blue means 沮丧 in Chinese: a casual way to say you feel sad or down.",
+   "definition": "Feeling blue is an informal way to say you are sad or in low spirits. Common with be, feel, look; not clinical depression.",
+   "examples": [
+    {
+     "en": "I've been feeling blue all week because of the rainy weather.",
+     "zh": "因为一直下雨，我这一周都觉得很沮丧。"
+    },
+    {
+     "en": "He looked a bit blue after hearing the news, so we took him out for coffee.",
+     "zh": "听到那个消息后他显得有些沮丧，所以我们带他出去喝了杯咖啡。"
+    }
+   ],
+   "tags": [
+    "情绪状态"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "治愈",
+   "pair": "zh-en",
+   "slug": "zhi-yu",
+   "lang": "zh",
+   "translation": "soothing",
+   "shortAnswer": "「治愈」的英文是 soothing，多形容声音、气味或氛围令人放松、被安抚，听着或闻着心里就慢慢平静下来。",
+   "definition": "soothing 作形容词，常见搭配有 soothing music、a soothing voice，强调让人的情绪由紧绷转为平静，语气温和。",
+   "examples": [
+    {
+     "en": "She played some soothing music to help her roommate calm down after a rough day.",
+     "zh": "室友难过了一整天，她放了些舒缓的音乐帮对方平静下来。"
+    },
+    {
+     "en": "The smell of chamomile tea is surprisingly soothing, especially when you are feeling blue.",
+     "zh": "洋甘菊茶的香气出奇地治愈，尤其是在你情绪低落的时候。"
+    }
+   ],
+   "tags": [
+    "情绪状态"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "soothing",
+   "pair": "en-zh",
+   "slug": "soothing",
+   "lang": "en",
+   "translation": "治愈",
+   "shortAnswer": "soothing 的中文意思是「治愈」，形容令人放松、被安抚的声音、气味或氛围，能让人慢慢平静下来。",
+   "definition": "soothing 作形容词，常搭配 soothing music、a soothing voice，语气温和，多修饰事物，强调安抚情绪。",
+   "examples": [
+    {
+     "en": "She played some soothing music to help her roommate calm down after a rough day.",
+     "zh": "室友难过了一整天，她放了些舒缓的音乐帮对方平静下来。"
+    },
+    {
+     "en": "The smell of chamomile tea is surprisingly soothing, especially when you are feeling blue.",
+     "zh": "洋甘菊茶的香气出奇地治愈，尤其是在你情绪低落的时候。"
+    }
+   ],
+   "tags": [
+    "情绪状态"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "想家",
+   "pair": "zh-en",
+   "slug": "xiang-jia",
+   "lang": "zh",
+   "translation": "homesick",
+   "shortAnswer": "「想家」的英文是 homesick，表示离家后思念家人或家乡；注意常说 I am/feel homesick。",
+   "definition": "homesick 是形容词，指远离家乡或亲人时产生的思念与不适，常用 feel/be/get homesick，可用 a little 或 terribly 修饰。",
+   "examples": [
+    {
+     "en": "After three months abroad, she started to feel homesick and called her parents every day.",
+     "zh": "在国外待了三个月后，她开始想家，每天给父母打电话。"
+    },
+    {
+     "en": "He gets homesick whenever he sees photos of his hometown on social media.",
+     "zh": "每当他在社交媒体上看到家乡的照片，就会想家。"
+    }
+   ],
+   "tags": [
+    "情绪状态"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "homesick",
+   "pair": "en-zh",
+   "slug": "homesick",
+   "lang": "en",
+   "translation": "想家",
+   "shortAnswer": "「homesick」的中文意思是「想家」，指离家后思念家人或家乡，是常见的情绪反应。",
+   "definition": "homesick 是形容词，表示想家的、思乡的，常说 be/feel/get homesick，如 I feel homesick。",
+   "examples": [
+    {
+     "en": "After three months abroad, she started to feel homesick and called her parents every day.",
+     "zh": "在国外待了三个月后，她开始想家，每天给父母打电话。"
+    },
+    {
+     "en": "He gets homesick whenever he sees photos of his hometown on social media.",
+     "zh": "每当他在社交媒体上看到家乡的照片，就会想家。"
+    }
+   ],
+   "tags": [
+    "情绪状态"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "满足",
+   "pair": "zh-en",
+   "slug": "man-zu",
+   "lang": "zh",
+   "translation": "content",
+   "shortAnswer": "「满足」的英文是 content，表示对现状感到足够而内心平静满意，不再贪求更多。",
+   "definition": "content 表示「满足的、知足的」，常与 with 连用：be content with sth；也可说 content to do sth，强调内心平和、不贪求。",
+   "examples": [
+    {
+     "en": "After years of chasing promotions, she finally felt content with her simple life.",
+     "zh": "在追逐升职多年后，她终于对自己简单的生活感到满足。"
+    },
+    {
+     "en": "He is content to stay home and read rather than go to the noisy party.",
+     "zh": "他满足于待在家里读书，而不是去那个吵闹的派对。"
+    }
+   ],
+   "tags": [
+    "情绪状态"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "content",
+   "pair": "en-zh",
+   "slug": "content",
+   "lang": "en",
+   "translation": "满足",
+   "shortAnswer": "content 的中文意思是「满足、知足」，形容对现状感到足够而不抱怨，内心平静安宁。",
+   "definition": "content 作形容词表示「满足的、知足的」，常搭配 be content with sth 或 content to do sth，强调平静知足、不贪求。",
+   "examples": [
+    {
+     "en": "After years of chasing promotions, she finally felt content with her simple life.",
+     "zh": "在追逐升职多年后，她终于对自己简单的生活感到满足。"
+    },
+    {
+     "en": "He is content to stay home and read rather than go to the noisy party.",
+     "zh": "他满足于待在家里读书，而不是去那个吵闹的派对。"
+    }
+   ],
+   "tags": [
+    "情绪状态"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "期待",
+   "pair": "zh-en",
+   "slug": "qi-dai",
+   "lang": "zh",
+   "translation": "be looking forward to it",
+   "shortAnswer": "「期待」的英文是 be looking forward to it，表示满怀盼望地等待某事发生，比 expect 更强调积极愉快的心情。",
+   "definition": "be looking forward to it 用于表达对即将发生的好事感到兴奋、盼望，口语和书面皆可。注意 to 为介词，后接名词或动名词，如 looking forward to seeing you。",
+   "examples": [
+    {
+     "en": "I'm really looking forward to it because I haven't seen my best friend in years.",
+     "zh": "我真的非常期待，因为我已经好几年没见到我最好的朋友了。"
+    },
+    {
+     "en": "She said she was looking forward to it, but her voice sounded a bit down.",
+     "zh": "她说她很期待，但她的声音听起来有点低落。"
+    }
+   ],
+   "tags": [
+    "情绪状态"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "be looking forward to it",
+   "pair": "en-zh",
+   "slug": "be-looking-forward-to-it",
+   "lang": "en",
+   "translation": "期待",
+   "shortAnswer": "be looking forward to it 的中文意思是「期待」，指对某事感到兴奋并盼望它发生，带有积极愉快的情感色彩。",
+   "definition": "be looking forward to it 表示热切盼望某事，常用于日常对话和邮件结尾。to 是介词，后接名词或动名词。常见搭配：look forward to hearing from you。",
+   "examples": [
+    {
+     "en": "I'm really looking forward to it because I haven't seen my best friend in years.",
+     "zh": "我真的非常期待，因为我已经好几年没见到我最好的朋友了。"
+    },
+    {
+     "en": "She said she was looking forward to it, but her voice sounded a bit down.",
+     "zh": "她说她很期待，但她的声音听起来有点低落。"
+    }
+   ],
+   "tags": [
+    "情绪状态"
+   ],
+   "searchIntentType": "meaning"
+  }
+ ]
+}
