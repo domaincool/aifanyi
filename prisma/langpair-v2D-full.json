@@ -1,0 +1,5535 @@
+{
+ "meta": {
+  "version": "v2-C-full",
+  "date": "2026-09-17",
+  "model": "deepseek-chat",
+  "source": "langpair-v2-batchC-20260917.json",
+  "pairCounts": {
+   "zh-en": 120,
+   "en-zh": 120
+  },
+  "slugStrategy": "zh=pinyin-pro (toneless, v), en=slugify"
+ },
+ "entries": [
+  {
+   "term": "开会",
+   "pair": "zh-en",
+   "slug": "kai-hui",
+   "lang": "zh",
+   "translation": "have a meeting",
+   "shortAnswer": "「开会」的英文是 have a meeting，这是日常最常用的说法。注意 meeting 是可数名词，一般要说 have a meeting，不能省略 a。",
+   "definition": "have a meeting 泛指开一次会，也可说 hold a meeting、attend a meeting。注意搭配：have/hold a meeting about/on 某事；开会讨论是 have a meeting to discuss。",
+   "examples": [
+    {
+     "en": "We need to have a meeting about the new project schedule tomorrow morning.",
+     "zh": "我们明天上午需要开个会，讨论一下新项目的进度安排。"
+    },
+    {
+     "en": "I can't have a meeting right now because I'm asking for sick leave this afternoon.",
+     "zh": "我现在不能开会，因为我今天下午要请病假。"
+    }
+   ],
+   "tags": [
+    "职场办公"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "have a meeting",
+   "pair": "en-zh",
+   "slug": "have-a-meeting",
+   "lang": "en",
+   "translation": "开会",
+   "shortAnswer": "have a meeting 的中文意思是「开会」，指聚在一起讨论工作或议题。它偏中性，不如 conference 正式，也不如 get together 随意。",
+   "definition": "have a meeting 表示举行或参加一次会议，口语和书面均常用。常见搭配：have a meeting with sb、have a meeting about sth。易错点：meeting 需加冠词或复数，如 have a meeting。",
+   "examples": [
+    {
+     "en": "We need to have a meeting about the new project schedule tomorrow morning.",
+     "zh": "我们明天上午需要开个会，讨论一下新项目的进度安排。"
+    },
+    {
+     "en": "I can't have a meeting right now because I'm asking for sick leave this afternoon.",
+     "zh": "我现在不能开会，因为我今天下午要请病假。"
+    }
+   ],
+   "tags": [
+    "职场办公"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "请假",
+   "pair": "zh-en",
+   "slug": "qing-jia",
+   "lang": "zh",
+   "translation": "ask for leave",
+   "shortAnswer": "「请假」的英文是 ask for leave，比如 ask for sick leave 就是请病假。注意 leave 在这里是不可数名词，不说 ask for a leave。",
+   "definition": "ask for leave 是通用说法，请假类型前加 for，如 ask for annual leave 请年假、ask for personal leave 请事假。口语中也常说 take a day off 或 take leave。",
+   "examples": [
+    {
+     "en": "I need to ask for leave tomorrow because I have a doctor's appointment.",
+     "zh": "我明天得请假，因为我预约了看医生。"
+    },
+    {
+     "en": "She asked for leave for two days to attend her sister's wedding.",
+     "zh": "她请了两天假去参加妹妹的婚礼。"
+    }
+   ],
+   "tags": [
+    "职场办公"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "ask for leave",
+   "pair": "en-zh",
+   "slug": "ask-for-leave",
+   "lang": "en",
+   "translation": "请假",
+   "shortAnswer": "ask for leave 的中文意思是「请假」，指向单位或上级请求准许离开。它强调请求这个动作，而 take leave 更强调已获准休假。",
+   "definition": "ask for leave 指向负责人请求离开，常见搭配 ask for sick leave 请病假、ask for annual leave 请年假。偏正式，口语也说 take time off 或 take a day off。",
+   "examples": [
+    {
+     "en": "I need to ask for leave tomorrow because I have a doctor's appointment.",
+     "zh": "我明天得请假，因为我预约了看医生。"
+    },
+    {
+     "en": "She asked for leave for two days to attend her sister's wedding.",
+     "zh": "她请了两天假去参加妹妹的婚礼。"
+    }
+   ],
+   "tags": [
+    "职场办公"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "辞职",
+   "pair": "zh-en",
+   "slug": "ci-zhi",
+   "lang": "zh",
+   "translation": "resign",
+   "shortAnswer": "「辞职」的英文是 resign，指主动辞去职位。resign 是不及物动词，后面常接 from，如 resign from the company；说「辞职」本身可直接用 resign。",
+   "definition": "resign 强调主动、正式地提出离职，多用于书面和正式场合。常见搭配 resign from a job/position、「递交辞呈」resign one's post；口语中也可说 quit one's job，但 quit 更随意。",
+   "examples": [
+    {
+     "en": "She decided to resign from her job after five years in the company.",
+     "zh": "在公司工作五年后，她决定辞职。"
+    },
+    {
+     "en": "He resigned as manager last month and is now looking for a new opportunity.",
+     "zh": "他上个月辞去了经理职务，现在正在寻找新的机会。"
+    }
+   ],
+   "tags": [
+    "职场办公"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "resign",
+   "pair": "en-zh",
+   "slug": "resign",
+   "lang": "en",
+   "translation": "辞职",
+   "shortAnswer": "resign 的中文意思是「辞职」，指正式主动地离开某个职位。它比口语的 quit 更正式，常与 from 连用，如 resign from a position。",
+   "definition": "resign 表示主动辞去工作或职务，常见搭配 resign from a job、resign as manager、resign one's post。属正式用词，日常口语中也常说 quit，但 quit 语气更随便、适用范围更广。",
+   "examples": [
+    {
+     "en": "She decided to resign from her job after five years in the company.",
+     "zh": "在公司工作五年后，她决定辞职。"
+    },
+    {
+     "en": "He resigned as manager last month and is now looking for a new opportunity.",
+     "zh": "他上个月辞去了经理职务，现在正在寻找新的机会。"
+    }
+   ],
+   "tags": [
+    "职场办公"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "加班",
+   "pair": "zh-en",
+   "slug": "jia-ban",
+   "lang": "zh",
+   "translation": "work overtime",
+   "shortAnswer": "「加班」的英文是 work overtime，指超时工作。overtime 不可数，不能说 an overtime。",
+   "definition": "work overtime 是最常用表达，口语也可说 do overtime。常见搭配：work overtime to meet a deadline、be on overtime。overtime 通常不用复数。",
+   "examples": [
+    {
+     "en": "I have to work overtime this week to finish the project before the deadline.",
+     "zh": "这周我必须加班，才能在截止日期前完成项目。"
+    },
+    {
+     "en": "She worked overtime every day last month, so she asked for compensatory leave.",
+     "zh": "她上个月每天都加班，所以她申请了调休。"
+    }
+   ],
+   "tags": [
+    "职场办公"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "work overtime",
+   "pair": "en-zh",
+   "slug": "work-overtime",
+   "lang": "en",
+   "translation": "加班",
+   "shortAnswer": "work overtime 的中文意思是「加班」，即在正常工时之外继续工作，常涉及加班费。",
+   "definition": "work overtime 指超过正常工作时间上班，多用于职场。常见搭配：work overtime on weekends、be forced to work overtime。口语也可说 do overtime。",
+   "examples": [
+    {
+     "en": "I have to work overtime this week to finish the project before the deadline.",
+     "zh": "这周我必须加班，才能在截止日期前完成项目。"
+    },
+    {
+     "en": "She worked overtime every day last month, so she asked for compensatory leave.",
+     "zh": "她上个月每天都加班，所以她申请了调休。"
+    }
+   ],
+   "tags": [
+    "职场办公"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "面试",
+   "pair": "zh-en",
+   "slug": "mian-shi",
+   "lang": "zh",
+   "translation": "job interview",
+   "shortAnswer": "面试的英文是 job interview，指求职者与雇主为争取职位而进行的正式会面。",
+   "definition": "job interview 是求职场景的固定说法，常见搭配有 go for a job interview、have a job interview。泛指见面或采访才用 interview。",
+   "examples": [
+    {
+     "en": "I have a job interview at a tech company tomorrow, so I need to prepare some answers about my experience.",
+     "zh": "我明天有一场科技公司的面试，所以需要准备一些关于我经历的回答。"
+    },
+    {
+     "en": "She did well in the job interview and got the offer after a two-week probation period.",
+     "zh": "她在面试中表现出色，经过两周试用期后拿到了录用通知。"
+    }
+   ],
+   "tags": [
+    "职场办公"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "job interview",
+   "pair": "en-zh",
+   "slug": "job-interview",
+   "lang": "en",
+   "translation": "面试",
+   "shortAnswer": "job interview 的中文意思是面试，即求职者与招聘方为争取职位而进行的正式会面。",
+   "definition": "job interview 指求职面试，常见搭配有 go to a job interview、do well in a job interview。口语中也可只说 interview，但需靠语境判断。",
+   "examples": [
+    {
+     "en": "I have a job interview at a tech company tomorrow, so I need to prepare some answers about my experience.",
+     "zh": "我明天有一场科技公司的面试，所以需要准备一些关于我经历的回答。"
+    },
+    {
+     "en": "She did well in the job interview and got the offer after a two-week probation period.",
+     "zh": "她在面试中表现出色，经过两周试用期后拿到了录用通知。"
+    }
+   ],
+   "tags": [
+    "职场办公"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "老板",
+   "pair": "zh-en",
+   "slug": "lao-ban",
+   "lang": "zh",
+   "translation": "boss",
+   "shortAnswer": "「老板」的英文是 boss，日常口语中最常用，正式场合可用 employer 或 manager。注意 boss 偏口语，书面语中直接称呼上级时最好用 Mr./Ms. 加姓氏。",
+   "definition": "boss 指公司或团队中拥有管理权的人，常见搭配有 my boss、talk to the boss、boss around（指使人）。注意 boss 在口语中也可作动词，如 stop bossing me around（别对我指手画脚）。",
+   "examples": [
+    {
+     "en": "My boss asked me to work overtime this week, but he said I can take comp time later.",
+     "zh": "我老板这周让我加班，但他说之后可以调休。"
+    },
+    {
+     "en": "She finally got a promotion and a pay raise after six months of probation period.",
+     "zh": "试用期六个月后，她终于升职加薪了。"
+    }
+   ],
+   "tags": [
+    "职场办公"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "boss",
+   "pair": "en-zh",
+   "slug": "boss",
+   "lang": "en",
+   "translation": "老板",
+   "shortAnswer": "boss 的中文意思是「老板」，指在工作中管理你或公司的人。它比 manager 更口语化，常暗示直接上下级关系，而非正式职位头衔。",
+   "definition": "boss 是口语常用词，可指直属上司或企业主，搭配有 my boss、a good boss、boss someone around。正式简历或商务信函中宜用 manager、supervisor 或 employer 替代。",
+   "examples": [
+    {
+     "en": "My boss asked me to work overtime this week, but he said I can take comp time later.",
+     "zh": "我老板这周让我加班，但他说之后可以调休。"
+    },
+    {
+     "en": "She finally got a promotion and a pay raise after six months of probation period.",
+     "zh": "试用期六个月后，她终于升职加薪了。"
+    }
+   ],
+   "tags": [
+    "职场办公"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "简历",
+   "pair": "zh-en",
+   "slug": "jian-li",
+   "lang": "zh",
+   "translation": "resume",
+   "shortAnswer": "简历的英文是 resume，美式拼写常省略重音符号写作 resume，英式英语中更常用 CV，两者都指求职材料。",
+   "definition": "resume 指求职用的个人简历，常见搭配有 update my resume（更新简历）、send my resume（投递简历）；注意它和 resume（重新开始）拼写相同但读音不同。",
+   "examples": [
+    {
+     "en": "I spent the whole weekend updating my resume for the new job opening.",
+     "zh": "我花了整个周末更新简历，准备应聘那个新职位。"
+    },
+    {
+     "en": "Please attach your resume and a cover letter when you apply for the position.",
+     "zh": "申请这个职位时请附上你的简历和一封求职信。"
+    }
+   ],
+   "tags": [
+    "职场办公"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "resume",
+   "pair": "en-zh",
+   "slug": "resume",
+   "lang": "en",
+   "translation": "简历",
+   "shortAnswer": "resume 的中文意思是简历，是求职时用来介绍个人经历、学历和技能的文件，常见于美式英语。",
+   "definition": "resume 为美式用法，英式英语中求职简历更常说 CV；常见搭配 submit a resume、attach your resume，注意与动词 resume（重新开始，读 /rɪˈzjuːm/）区分。",
+   "examples": [
+    {
+     "en": "I spent the whole weekend updating my resume for the new job opening.",
+     "zh": "我花了整个周末更新简历，准备应聘那个新职位。"
+    },
+    {
+     "en": "Please attach your resume and a cover letter when you apply for the position.",
+     "zh": "申请这个职位时请附上你的简历和一封求职信。"
+    }
+   ],
+   "tags": [
+    "职场办公"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "出差",
+   "pair": "zh-en",
+   "slug": "chu-chai",
+   "lang": "zh",
+   "translation": "business trip",
+   "shortAnswer": "「出差」的英文是 business trip，指因公到外地办事。注意：go on a business trip 更强调状态，而 take a business trip 更强调动作。",
+   "definition": "business trip 是可数名词，常搭配 go on / take / be on a business trip。出差期间处理公司事务，与旅游（vacation）不同，通常可报销差旅费（travel expenses）。",
+   "examples": [
+    {
+     "en": "She is on a business trip to Shanghai this week, so she won't be in the office.",
+     "zh": "她这周去上海出差，所以不在办公室。"
+    },
+    {
+     "en": "I need to take a business trip to Berlin next month to meet our client.",
+     "zh": "下个月我需要去柏林出差见客户。"
+    }
+   ],
+   "tags": [
+    "职场办公"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "business trip",
+   "pair": "en-zh",
+   "slug": "business-trip",
+   "lang": "en",
+   "translation": "出差",
+   "shortAnswer": "「business trip」的中文意思是「出差」，即因工作目的前往外地。它不同于 vacation（度假），重点在公务而非休闲。",
+   "definition": "business trip 指因公出差，常用搭配：go on / take / be on a business trip。正式场合也常说 business travel，但 business trip 更具体指某一次行程。",
+   "examples": [
+    {
+     "en": "She is on a business trip to Shanghai this week, so she won't be in the office.",
+     "zh": "她这周去上海出差，所以不在办公室。"
+    },
+    {
+     "en": "I need to take a business trip to Berlin next month to meet our client.",
+     "zh": "下个月我需要去柏林出差见客户。"
+    }
+   ],
+   "tags": [
+    "职场办公"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "工资",
+   "pair": "zh-en",
+   "slug": "gong-zi",
+   "lang": "zh",
+   "translation": "salary",
+   "shortAnswer": "工资的英文常译作 salary，专指按月或按年发放的固定薪水，多用于白领及办公室职位。",
+   "definition": "salary 指按月或按年支付的固定报酬，常见搭配有 annual salary（年薪）、monthly salary（月薪）；与按小时计算的 wage 不同，salary 多用于专业、管理或办公室工作。",
+   "examples": [
+    {
+     "en": "After the probation period, she got a promotion and a pay raise, which increased her salary by twenty percent.",
+     "zh": "试用期结束后，她升职加薪，工资涨了百分之二十。"
+    },
+    {
+     "en": "He is thinking about job-hopping because the new company offers a higher salary and a year-end bonus.",
+     "zh": "他正在考虑跳槽，因为新公司提供更高的工资和年终奖。"
+    }
+   ],
+   "tags": [
+    "职场办公"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "salary",
+   "pair": "en-zh",
+   "slug": "salary",
+   "lang": "en",
+   "translation": "工资",
+   "shortAnswer": "Salary 的中文意思是工资，通常指按月或按年发放的固定薪水，多用于白领或办公室工作。",
+   "definition": "salary 核心词义为按月或按年支付的固定工资，常见搭配：annual salary（年薪）、salary increase（加薪）、salary range（薪资范围）；小时工工资一般用 wage。",
+   "examples": [
+    {
+     "en": "After the probation period, she got a promotion and a pay raise, which increased her salary by twenty percent.",
+     "zh": "试用期结束后，她升职加薪，工资涨了百分之二十。"
+    },
+    {
+     "en": "He is thinking about job-hopping because the new company offers a higher salary and a year-end bonus.",
+     "zh": "他正在考虑跳槽，因为新公司提供更高的工资和年终奖。"
+    }
+   ],
+   "tags": [
+    "职场办公"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "同事",
+   "pair": "zh-en",
+   "slug": "tong-shi",
+   "lang": "zh",
+   "translation": "coworker",
+   "shortAnswer": "「同事」最常译为 coworker，指在同一单位或团队一起工作的人，不强调职位高低，语气中性。",
+   "definition": "coworker 是中性通用词，口语和书面都常用；colleague 更正式，多指白领同僚或专业人士。",
+   "examples": [
+    {
+     "en": "I get along well with my coworkers, but we rarely meet up after work.",
+     "zh": "我和同事相处得很好，但下班后很少聚会。"
+    },
+    {
+     "en": "She asked a coworker to cover for her while she was on probation.",
+     "zh": "试用期期间，她请一位同事帮她顶班。"
+    }
+   ],
+   "tags": [
+    "职场办公"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "coworker",
+   "pair": "en-zh",
+   "slug": "coworker",
+   "lang": "en",
+   "translation": "同事",
+   "shortAnswer": "The Chinese word 「同事」 means coworker, a person who works with you in the same company or team.",
+   "definition": "Coworker refers to someone you work with, often in the same team or office; it is more everyday than colleague.",
+   "examples": [
+    {
+     "en": "I get along well with my coworkers, but we rarely meet up after work.",
+     "zh": "我和同事相处得很好，但下班后很少聚会。"
+    },
+    {
+     "en": "She asked a coworker to cover for her while she was on probation.",
+     "zh": "试用期期间，她请一位同事帮她顶班。"
+    }
+   ],
+   "tags": [
+    "职场办公"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "试用期",
+   "pair": "zh-en",
+   "slug": "shi-yong-qi",
+   "lang": "zh",
+   "translation": "probation period",
+   "shortAnswer": "「试用期」常用 probation period 表示，例如 a three-month probation period 就是三个月的试用期。",
+   "definition": "probation period 指正式录用前的考察阶段，常见搭配有 on probation、pass probation、probationary period。",
+   "examples": [
+    {
+     "en": "My probation period is three months, and after that I'll be a full-time employee.",
+     "zh": "我的试用期是三个月，之后就会成为正式员工。"
+    },
+    {
+     "en": "During the probation period, the company can end the contract with shorter notice.",
+     "zh": "在试用期内，公司可以提前较短时间通知就解除合同。"
+    }
+   ],
+   "tags": [
+    "职场办公"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "probation period",
+   "pair": "en-zh",
+   "slug": "probation-period",
+   "lang": "en",
+   "translation": "试用期",
+   "shortAnswer": "probation period 的中文是「试用期」，指新员工入职后接受考察的一段时间，通常已签劳动合同。",
+   "definition": "probation period 指雇佣关系开始时的考察期，常用搭配为 on probation、complete/pass probation、probationary period。",
+   "examples": [
+    {
+     "en": "My probation period is three months, and after that I'll be a full-time employee.",
+     "zh": "我的试用期是三个月，之后就会成为正式员工。"
+    },
+    {
+     "en": "During the probation period, the company can end the contract with shorter notice.",
+     "zh": "在试用期内，公司可以提前较短时间通知就解除合同。"
+    }
+   ],
+   "tags": [
+    "职场办公"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "跳槽",
+   "pair": "zh-en",
+   "slug": "tiao-cao",
+   "lang": "zh",
+   "translation": "job-hopping",
+   "shortAnswer": "「跳槽」的英文是 job-hopping，指频繁更换工作，动词形式为 job-hop。注意它是中性偏贬的口语词，正式场合换工作更常说 change jobs 或 switch jobs。",
+   "definition": "job-hopping 强调换工作频繁、缺乏稳定性，常与 frequent、constant 搭配；单次换工作说 change jobs 或 move to a new company 更自然，简历中慎用 job-hopping 以免显得不稳定。",
+   "examples": [
+    {
+     "en": "Frequent job-hopping can make recruiters doubt your stability, so explain each move carefully.",
+     "zh": "频繁跳槽会让招聘方怀疑你的稳定性，所以每次换工作都要解释清楚。"
+    },
+    {
+     "en": "After job-hopping for three years, she decided to settle down at a company with a good year-end bonus.",
+     "zh": "跳槽三年后，她决定留在一家年终奖不错的公司安定下来。"
+    }
+   ],
+   "tags": [
+    "职场办公"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "job-hopping",
+   "pair": "en-zh",
+   "slug": "job-hopping",
+   "lang": "en",
+   "translation": "跳槽",
+   "shortAnswer": "Job-hopping 的中文意思是「跳槽」，指频繁更换工作，动词形式是 job-hop。它与单纯换一次工作的 change jobs 不同，更强调换得频繁、待不长。",
+   "definition": "job-hopping 指频繁换工作，常带贬义，搭配 frequent、constant job-hopping；口语中常说 job-hop around。若只是换过一次工作，用 change jobs 或 switch jobs，不要用 job-hopping。",
+   "examples": [
+    {
+     "en": "Frequent job-hopping can make recruiters doubt your stability, so explain each move carefully.",
+     "zh": "频繁跳槽会让招聘方怀疑你的稳定性，所以每次换工作都要解释清楚。"
+    },
+    {
+     "en": "After job-hopping for three years, she decided to settle down at a company with a good year-end bonus.",
+     "zh": "跳槽三年后，她决定留在一家年终奖不错的公司安定下来。"
+    }
+   ],
+   "tags": [
+    "职场办公"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "年终奖",
+   "pair": "zh-en",
+   "slug": "nian-zhong-jiang",
+   "lang": "zh",
+   "translation": "year-end bonus",
+   "shortAnswer": "「年终奖」英文是 year-end bonus，指公司年底按业绩发的额外奖励，属可数名词。",
+   "definition": "它区别于固定年薪，是浮动奖励；常说 receive/get a year-end bonus，也可能 no year-end bonus。",
+   "examples": [
+    {
+     "en": "All employees received a generous year-end bonus after the company hit its annual targets.",
+     "zh": "公司完成年度目标后，所有员工都拿到了一笔丰厚的年终奖。"
+    },
+    {
+     "en": "She decided to stay until she got her year-end bonus before looking for a new job.",
+     "zh": "她决定先拿到年终奖，然后再去找新工作。"
+    }
+   ],
+   "tags": [
+    "职场办公"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "year-end bonus",
+   "pair": "en-zh",
+   "slug": "year-end-bonus",
+   "lang": "en",
+   "translation": "年终奖",
+   "shortAnswer": "year-end bonus 中文是「年终奖」，指公司年底按业绩发的额外奖金，非固定工资。",
+   "definition": "雇主年末发的额外报酬，常说 receive/get a year-end bonus，别与 signing bonus 混用。",
+   "examples": [
+    {
+     "en": "All employees received a generous year-end bonus after the company hit its annual targets.",
+     "zh": "公司完成年度目标后，所有员工都拿到了一笔丰厚的年终奖。"
+    },
+    {
+     "en": "She decided to stay until she got her year-end bonus before looking for a new job.",
+     "zh": "她决定先拿到年终奖，然后再去找新工作。"
+    }
+   ],
+   "tags": [
+    "职场办公"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "加班费",
+   "pair": "zh-en",
+   "slug": "jia-ban-fei",
+   "lang": "zh",
+   "translation": "overtime pay",
+   "shortAnswer": "加班费的英文是 overtime pay，指正常工作时间之外工作应得的额外报酬。",
+   "definition": "常搭配 get/earn/receive overtime pay，或 be entitled to overtime pay；口语也可直接说 overtime。",
+   "examples": [
+    {
+     "en": "If you work more than eight hours a day, you are entitled to overtime pay.",
+     "zh": "如果你每天工作超过八小时，就有权获得加班费。"
+    },
+    {
+     "en": "She took the job because it offers overtime pay and a year-end bonus.",
+     "zh": "她接受这份工作是因为它有加班费和年终奖。"
+    }
+   ],
+   "tags": [
+    "职场办公"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "overtime pay",
+   "pair": "en-zh",
+   "slug": "overtime-pay",
+   "lang": "en",
+   "translation": "加班费",
+   "shortAnswer": "overtime pay 的中文意思是加班费，即正常工作时间之外工作获得的额外报酬。",
+   "definition": "常见搭配 earn/get/receive overtime pay、be entitled to overtime pay，多用于职场与劳动法语境。",
+   "examples": [
+    {
+     "en": "If you work more than eight hours a day, you are entitled to overtime pay.",
+     "zh": "如果你每天工作超过八小时，就有权获得加班费。"
+    },
+    {
+     "en": "She took the job because it offers overtime pay and a year-end bonus.",
+     "zh": "她接受这份工作是因为它有加班费和年终奖。"
+    }
+   ],
+   "tags": [
+    "职场办公"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "升职",
+   "pair": "zh-en",
+   "slug": "sheng-zhi",
+   "lang": "zh",
+   "translation": "promotion",
+   "shortAnswer": "「升职」最常用的英文是 promotion，指职位晋升；它也可表示「促销」，看语境，如 get a promotion 是升职。",
+   "definition": "promotion 作「升职」时常与 get、earn、deserve 搭配，如 get a promotion。注意它还有「促销、推广」义，职场语境下才多指晋升。",
+   "examples": [
+    {
+     "en": "She worked hard for two years and finally got a promotion to team leader.",
+     "zh": "她努力工作两年，终于升职当了团队主管。"
+    },
+    {
+     "en": "If you keep exceeding your sales targets, you might earn a promotion and a pay raise.",
+     "zh": "如果你持续超额完成销售目标，可能会升职加薪。"
+    }
+   ],
+   "tags": [
+    "职场办公"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "promotion",
+   "pair": "en-zh",
+   "slug": "promotion",
+   "lang": "en",
+   "translation": "升职",
+   "shortAnswer": "Promotion 常译「升职」，指被提升到更高职位；它也可指「促销」，需看语境，如 get a promotion 就是升职。",
+   "definition": "promotion 作「升职」时常见搭配 get a promotion、earn a promotion。它和 raise 不同：raise 多指加薪，promotion 侧重职位晋升。",
+   "examples": [
+    {
+     "en": "She worked hard for two years and finally got a promotion to team leader.",
+     "zh": "她努力工作两年，终于升职当了团队主管。"
+    },
+    {
+     "en": "If you keep exceeding your sales targets, you might earn a promotion and a pay raise.",
+     "zh": "如果你持续超额完成销售目标，可能会升职加薪。"
+    }
+   ],
+   "tags": [
+    "职场办公"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "加薪",
+   "pair": "zh-en",
+   "slug": "jia-xin",
+   "lang": "zh",
+   "translation": "pay raise",
+   "shortAnswer": "「加薪」的英文是 pay raise，美式常用，英式则说 pay rise。注意 raise 与 rise 的及物性区别。",
+   "definition": "pay raise 指工资上调，常与 get、ask for、give 搭配。英式英语多用 pay rise，raise 作名词时为美式用法。",
+   "examples": [
+    {
+     "en": "After two years of hard work, she finally got a pay raise.",
+     "zh": "努力工作两年后，她终于获得了加薪。"
+    },
+    {
+     "en": "He decided to ask for a pay raise after taking on more responsibilities.",
+     "zh": "承担更多职责后，他决定要求加薪。"
+    }
+   ],
+   "tags": [
+    "职场办公"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "pay raise",
+   "pair": "en-zh",
+   "slug": "pay-raise",
+   "lang": "en",
+   "translation": "加薪",
+   "shortAnswer": "「pay raise」的中文意思是「加薪」，指工资上涨，与 bonus 不同，强调基本工资永久性提高。",
+   "definition": "pay raise 是美式英语，英式常用 pay rise，指雇主提高员工基本工资。常见搭配：get/ask for/give a pay raise。",
+   "examples": [
+    {
+     "en": "After two years of hard work, she finally got a pay raise.",
+     "zh": "努力工作两年后，她终于获得了加薪。"
+    },
+    {
+     "en": "He decided to ask for a pay raise after taking on more responsibilities.",
+     "zh": "承担更多职责后，他决定要求加薪。"
+    }
+   ],
+   "tags": [
+    "职场办公"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "下班",
+   "pair": "zh-en",
+   "slug": "xia-ban",
+   "lang": "zh",
+   "translation": "get off work",
+   "shortAnswer": "「下班」的英文是 get off work，表示结束当天工作离开岗位。注意它强调离开工作，别与 go to work 混用。",
+   "definition": "get off work 多用于日常口语，指按规定时间结束工作、离开岗位。常见搭配：What time do you get off work?（你几点下班？）I just got off work.（我刚下班。）",
+   "examples": [
+    {
+     "en": "What time do you usually get off work?",
+     "zh": "你通常几点下班？"
+    },
+    {
+     "en": "I got off work late yesterday because I had to finish a report.",
+     "zh": "我昨天很晚才下班，因为要赶完一份报告。"
+    }
+   ],
+   "tags": [
+    "职场办公"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "get off work",
+   "pair": "en-zh",
+   "slug": "get-off-work",
+   "lang": "en",
+   "translation": "下班",
+   "shortAnswer": "get off work 的中文意思是「下班」，指结束当天工作离开岗位。它侧重「离开工作」这一动作。",
+   "definition": "get off work 是英语口语常用表达，意为下班、收工，常用于询问或描述结束工作的时间：What time do you get off work? I get off work at six. 也可加 late 表示晚下班。",
+   "examples": [
+    {
+     "en": "What time do you usually get off work?",
+     "zh": "你通常几点下班？"
+    },
+    {
+     "en": "I got off work late yesterday because I had to finish a report.",
+     "zh": "我昨天很晚才下班，因为要赶完一份报告。"
+    }
+   ],
+   "tags": [
+    "职场办公"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "打卡",
+   "pair": "zh-en",
+   "slug": "da-ka",
+   "lang": "zh",
+   "translation": "clock in",
+   "shortAnswer": "「打卡」上班就是 clock in，下班打卡是 clock out；但网红店拍照分享的打卡要说 check in at。",
+   "definition": "职场考勤中，clock in 指上班打卡，clock out 指下班打卡，打卡机叫 punch clock 或 time clock。",
+   "examples": [
+    {
+     "en": "I have to clock in before nine every morning, or the system marks me late.",
+     "zh": "我每天早上九点前必须打卡，否则系统会记我迟到。"
+    },
+    {
+     "en": "After clocking in, she grabbed a coffee and started replying to emails.",
+     "zh": "打完卡后，她拿了杯咖啡就开始回邮件。"
+    }
+   ],
+   "tags": [
+    "职场办公"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "clock in",
+   "pair": "en-zh",
+   "slug": "clock-in",
+   "lang": "en",
+   "translation": "打卡",
+   "shortAnswer": "clock in 的中文意思是「上班打卡」，下班打卡是 clock out；但景点探店打卡不能用它，要说 check in at。",
+   "definition": "clock in 指员工到岗时在考勤机或系统上记录上班时间，反义搭配为 clock out，名词形式是 clock-in 或 punch in。",
+   "examples": [
+    {
+     "en": "I have to clock in before nine every morning, or the system marks me late.",
+     "zh": "我每天早上九点前必须打卡，否则系统会记我迟到。"
+    },
+    {
+     "en": "After clocking in, she grabbed a coffee and started replying to emails.",
+     "zh": "打完卡后，她拿了杯咖啡就开始回邮件。"
+    }
+   ],
+   "tags": [
+    "职场办公"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "午休",
+   "pair": "zh-en",
+   "slug": "wu-xiu",
+   "lang": "zh",
+   "translation": "lunch break",
+   "shortAnswer": "午休的英文是 lunch break，指中午吃饭休息的时间；coffee break 则是上下午更短的茶歇。",
+   "definition": "lunch break 常搭配 take/have a lunch break，如 take a one-hour lunch break。问「你午休几点」说 When is your lunch break?",
+   "examples": [
+    {
+     "en": "I usually take a lunch break at noon and grab a quick bite with my colleagues.",
+     "zh": "我通常中午午休，和同事一起快速吃点东西。"
+    },
+    {
+     "en": "Sorry, she's on her lunch break right now. Can I take a message?",
+     "zh": "抱歉，她正在午休。需要我留言吗？"
+    }
+   ],
+   "tags": [
+    "职场办公"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "lunch break",
+   "pair": "en-zh",
+   "slug": "lunch-break",
+   "lang": "en",
+   "translation": "午休",
+   "shortAnswer": "lunch break 的中文意思是「午休」，即中午停下工作吃饭休息的时间，和 coffee break 不同。",
+   "definition": "lunch break 指工作日中午的用餐休息时段，常搭配 take/have a lunch break、a 30-minute lunch break。注意标准写法是分开的 lunch break。",
+   "examples": [
+    {
+     "en": "I usually take a lunch break at noon and grab a quick bite with my colleagues.",
+     "zh": "我通常中午午休，和同事一起快速吃点东西。"
+    },
+    {
+     "en": "Sorry, she's on her lunch break right now. Can I take a message?",
+     "zh": "抱歉，她正在午休。需要我留言吗？"
+    }
+   ],
+   "tags": [
+    "职场办公"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "绩效",
+   "pair": "zh-en",
+   "slug": "ji-xiao",
+   "lang": "zh",
+   "translation": "performance review",
+   "shortAnswer": "「绩效」的英文是 performance review，指对员工工作表现的定期评估。强调考核评估这个动作，不是工资或奖金。",
+   "definition": "常用搭配：annual performance review（年度绩效评估）、conduct a review（进行考核）。若指绩效奖金，应说 performance bonus 或 performance-based pay。",
+   "examples": [
+    {
+     "en": "My manager scheduled a performance review for next Friday to discuss my progress.",
+     "zh": "我的主管把绩效评估安排在下周五，用来讨论我的工作进展。"
+    },
+    {
+     "en": "She got a promotion and a pay raise after an excellent performance review.",
+     "zh": "她的绩效评估结果很优秀，因此获得了升职加薪。"
+    }
+   ],
+   "tags": [
+    "职场办公"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "performance review",
+   "pair": "en-zh",
+   "slug": "performance-review",
+   "lang": "en",
+   "translation": "绩效",
+   "shortAnswer": "performance review 的中文意思是「绩效」，指公司对员工一段时间内工作表现做的正式评估。与 appraisal 近义，但更强调定期复盘与反馈。",
+   "definition": "正式职场用语，常见搭配：annual performance review、performance review meeting、get a good review。口语也说 perf review。若指评估结果应说 performance rating。",
+   "examples": [
+    {
+     "en": "My manager scheduled a performance review for next Friday to discuss my progress.",
+     "zh": "我的主管把绩效评估安排在下周五，用来讨论我的工作进展。"
+    },
+    {
+     "en": "She got a promotion and a pay raise after an excellent performance review.",
+     "zh": "她的绩效评估结果很优秀，因此获得了升职加薪。"
+    }
+   ],
+   "tags": [
+    "职场办公"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "培训",
+   "pair": "zh-en",
+   "slug": "pei-xun",
+   "lang": "zh",
+   "translation": "training",
+   "shortAnswer": "培训的英文是 training。注意：training 通常指系统的职业或技能训练，与 education（教育）不同，强调实践与应用。",
+   "definition": "training 在职场中常指公司提供的岗位技能培训，如 orientation training（入职培训）、on-the-job training（在职培训）。注意区分 training 与 education：前者侧重技能，后者侧重知识体系。",
+   "examples": [
+    {
+     "en": "All new employees must complete a two-week training program before starting work.",
+     "zh": "所有新员工在开始工作前必须完成为期两周的培训项目。"
+    },
+    {
+     "en": "The company offers on-the-job training to help staff improve their professional skills.",
+     "zh": "公司提供在职培训，帮助员工提升专业技能。"
+    }
+   ],
+   "tags": [
+    "职场办公"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "training",
+   "pair": "en-zh",
+   "slug": "training",
+   "lang": "en",
+   "translation": "培训",
+   "shortAnswer": "training 的中文意思是培训。它侧重职业技能或实践训练，与 education（教育）不同，后者更偏向理论知识。",
+   "definition": "training 指为掌握特定技能或职业要求而进行的系统学习，常见搭配：on-the-job training、training program。在职场中常与 development 连用，如 training and development。",
+   "examples": [
+    {
+     "en": "All new employees must complete a two-week training program before starting work.",
+     "zh": "所有新员工在开始工作前必须完成为期两周的培训项目。"
+    },
+    {
+     "en": "The company offers on-the-job training to help staff improve their professional skills.",
+     "zh": "公司提供在职培训，帮助员工提升专业技能。"
+    }
+   ],
+   "tags": [
+    "职场办公"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "地铁",
+   "pair": "zh-en",
+   "slug": "di-tie",
+   "lang": "zh",
+   "translation": "subway",
+   "shortAnswer": "地铁的英文是 subway，美式英语常用；英式英语多用 underground 或 tube。subway 在美式英语中即指城市地铁，和英式用法不同。",
+   "definition": "subway 在美式英语中指城市地下铁路系统，英式英语则常用 the underground 或 the tube；注意 subway 在英式英语中常指地下通道。常见搭配：take the subway、subway station、subway line。",
+   "examples": [
+    {
+     "en": "I usually take the subway to work because it's faster than driving during rush hour.",
+     "zh": "我通常坐地铁上班，因为高峰时段比开车快。"
+    },
+    {
+     "en": "The subway station is just around the corner, so we can walk there in five minutes.",
+     "zh": "地铁站就在拐角处，我们走五分钟就能到。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "subway",
+   "pair": "en-zh",
+   "slug": "subway",
+   "lang": "en",
+   "translation": "地铁",
+   "shortAnswer": "subway 的中文意思是地铁，指城市地下铁路系统。它主要用于美式英语，英式英语常用 underground 或 tube，且 subway 在英式英语中另指地下通道。",
+   "definition": "subway 是美式英语中表示城市地铁的常用词，可作名词，常见搭配有 take the subway、subway station、subway line。注意英式英语中 subway 常指地下人行通道，地铁多用 underground 或 tube。",
+   "examples": [
+    {
+     "en": "I usually take the subway to work because it's faster than driving during rush hour.",
+     "zh": "我通常坐地铁上班，因为高峰时段比开车快。"
+    },
+    {
+     "en": "The subway station is just around the corner, so we can walk there in five minutes.",
+     "zh": "地铁站就在拐角处，我们走五分钟就能到。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "汇报",
+   "pair": "zh-en",
+   "slug": "hui-bao",
+   "lang": "zh",
+   "translation": "give a report",
+   "shortAnswer": "职场中「汇报」常用 give a report，表示向上级或团队正式陈述工作进展与结果。",
+   "definition": "「汇报」指下级或成员向他人正式、系统地陈述工作进展、调查结果或情况，常用短语 give a report on sth。",
+   "examples": [
+    {
+     "en": "I need to give a report on the project's progress to the manager tomorrow morning.",
+     "zh": "我明天上午需要向经理汇报项目进展。"
+    },
+    {
+     "en": "She gave a detailed report about the market research at the meeting.",
+     "zh": "她在会议上就市场调研做了详细的汇报。"
+    }
+   ],
+   "tags": [
+    "职场办公"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "give a report",
+   "pair": "en-zh",
+   "slug": "give-a-report",
+   "lang": "en",
+   "translation": "汇报",
+   "shortAnswer": "give a report means「汇报」, to formally present work progress or results to a manager or team.",
+   "definition": "To give a report is to formally present findings, progress, or results to others, often in a workplace setting.",
+   "examples": [
+    {
+     "en": "I need to give a report on the project's progress to the manager tomorrow morning.",
+     "zh": "我明天上午需要向经理汇报项目进展。"
+    },
+    {
+     "en": "She gave a detailed report about the market research at the meeting.",
+     "zh": "她在会议上就市场调研做了详细的汇报。"
+    }
+   ],
+   "tags": [
+    "职场办公"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "调休",
+   "pair": "zh-en",
+   "slug": "tiao-xiu",
+   "lang": "zh",
+   "translation": "compensatory leave",
+   "shortAnswer": "「调休」的英文是 compensatory leave，指加班后累积的补休时间。",
+   "definition": "compensatory leave 指加班换来的补休，常搭配 take/accrue compensatory leave；不同于 annual leave（年假）。",
+   "examples": [
+    {
+     "en": "I worked overtime all weekend, so I'm taking compensatory leave on Friday.",
+     "zh": "我整个周末都在加班，所以周五调休。"
+    },
+    {
+     "en": "Employees can accrue compensatory leave instead of getting paid for extra hours.",
+     "zh": "员工可以选择累积调休，而不是领取加班费。"
+    }
+   ],
+   "tags": [
+    "职场办公"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "compensatory leave",
+   "pair": "en-zh",
+   "slug": "compensatory-leave",
+   "lang": "en",
+   "translation": "调休",
+   "shortAnswer": "Compensatory leave 即中文「调休」，指加班后换来的补休时间，不同于 annual leave（年假）。",
+   "definition": "compensatory leave 指加班累积的补休时间，常用搭配 take/accrue compensatory leave，口语也作 comp time。",
+   "examples": [
+    {
+     "en": "I worked overtime all weekend, so I'm taking compensatory leave on Friday.",
+     "zh": "我整个周末都在加班，所以周五调休。"
+    },
+    {
+     "en": "Employees can accrue compensatory leave instead of getting paid for extra hours.",
+     "zh": "员工可以选择累积调休，而不是领取加班费。"
+    }
+   ],
+   "tags": [
+    "职场办公"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "公交",
+   "pair": "zh-en",
+   "slug": "gong-jiao",
+   "lang": "zh",
+   "translation": "bus",
+   "shortAnswer": "“公交”的英文是 bus，指城市里按固定线路运行的公共汽车。注意 bus 通常指市内公交车，长途客运多用 coach 或 long-distance bus。",
+   "definition": "bus 泛指市内公共汽车，常见搭配有 take the bus（乘公交）、catch the bus（赶公交）、by bus（乘公交出行）、bus stop（公交站）、bus route（公交线路）。英式英语中长途大巴常说 coach。",
+   "examples": [
+    {
+     "en": "I usually take the bus to work, but today I transferred to the subway because of the traffic jam.",
+     "zh": "我通常乘公交上班，但今天因为堵车换乘了地铁。"
+    },
+    {
+     "en": "The last bus leaves at eleven, so don't miss it or you'll have to hail a cab.",
+     "zh": "末班公交十一点发车，别错过了，否则就只能打车了。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "bus",
+   "pair": "en-zh",
+   "slug": "bus",
+   "lang": "en",
+   "translation": "公交",
+   "shortAnswer": "bus 的中文意思是“公交”，即城市中按固定线路运行的公共汽车。它与地铁 subway、出租车 taxi 并列，是日常通勤最常见的公共交通方式。",
+   "definition": "bus 作名词指公共汽车，作动词指用大巴运送。常见搭配：take/catch the bus（乘公交、赶公交）、by bus（乘公交）、bus stop（公交站）、school bus（校车）。口语中 on the bus 表示在车上，注意与长途 coach 区分。",
+   "examples": [
+    {
+     "en": "I usually take the bus to work, but today I transferred to the subway because of the traffic jam.",
+     "zh": "我通常乘公交上班，但今天因为堵车换乘了地铁。"
+    },
+    {
+     "en": "The last bus leaves at eleven, so don't miss it or you'll have to hail a cab.",
+     "zh": "末班公交十一点发车，别错过了，否则就只能打车了。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "打车",
+   "pair": "zh-en",
+   "slug": "da-che",
+   "lang": "zh",
+   "translation": "take a taxi",
+   "shortAnswer": "「打车」的英文是 take a taxi，也可说 hail a cab 或 call a ride。take a taxi 侧重随手拦车，call a ride 多指用手机叫网约车。",
+   "definition": "take a taxi 是英美都通用的说法，强调在路边拦车或直接乘出租车；英式口语常用 hail a cab，美式日常也常说 get a cab。用 App 叫车则说 call a ride 或 book a ride，别说 take a car。",
+   "examples": [
+    {
+     "en": "It's raining hard, so let's take a taxi instead of walking to the subway station.",
+     "zh": "雨下得很大，我们打车去地铁站吧，别走路了。"
+    },
+    {
+     "en": "We took a taxi to the airport and still made it before the security check closed.",
+     "zh": "我们打车去了机场，最后还是赶在安检关闭前到了。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "take a taxi",
+   "pair": "en-zh",
+   "slug": "take-a-taxi",
+   "lang": "en",
+   "translation": "打车",
+   "shortAnswer": "take a taxi 的中文意思是「打车」，指乘出租车出行。它与 hail a cab 意思接近，但 call a ride 更强调用手机叫网约车。",
+   "definition": "take a taxi 是动词短语，后接地点用 to，如 take a taxi to the airport。口语中可省略 taxi 说 take a cab。注意它强调乘坐出租车这一动作，不表示自己开车。",
+   "examples": [
+    {
+     "en": "It's raining hard, so let's take a taxi instead of walking to the subway station.",
+     "zh": "雨下得很大，我们打车去地铁站吧，别走路了。"
+    },
+    {
+     "en": "We took a taxi to the airport and still made it before the security check closed.",
+     "zh": "我们打车去了机场，最后还是赶在安检关闭前到了。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "年假",
+   "pair": "zh-en",
+   "slug": "nian-jia",
+   "lang": "zh",
+   "translation": "annual leave",
+   "shortAnswer": "「年假」的英文是 annual leave，指员工每年享有的带薪休假，常见于 HR 与职场场景。",
+   "definition": "annual leave 是正式说法，常见搭配 take annual leave、on annual leave，区别于 sick leave、personal leave。",
+   "examples": [
+    {
+     "en": "I still have five days of annual leave left, so I'm taking next week off.",
+     "zh": "我还剩五天年假，所以打算下周休假。"
+    },
+    {
+     "en": "She was on annual leave when the project kicked off, so she missed the first meeting.",
+     "zh": "项目启动时她正在休年假，因此错过了第一次会议。"
+    }
+   ],
+   "tags": [
+    "职场办公"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "annual leave",
+   "pair": "en-zh",
+   "slug": "annual-leave",
+   "lang": "en",
+   "translation": "年假",
+   "shortAnswer": "Annual leave means 中文「年假」, the paid time off employees get each year for rest or travel.",
+   "definition": "Annual leave means paid yearly vacation time. Common in UK English and HR documents; in US English people say vacation days or PTO.",
+   "examples": [
+    {
+     "en": "I still have five days of annual leave left, so I'm taking next week off.",
+     "zh": "我还剩五天年假，所以打算下周休假。"
+    },
+    {
+     "en": "She was on annual leave when the project kicked off, so she missed the first meeting.",
+     "zh": "项目启动时她正在休年假，因此错过了第一次会议。"
+    }
+   ],
+   "tags": [
+    "职场办公"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "堵车",
+   "pair": "zh-en",
+   "slug": "du-che",
+   "lang": "zh",
+   "translation": "traffic jam",
+   "shortAnswer": "堵车用英语说是 traffic jam。traffic jam 通常指车辆排成长龙、几乎无法移动的严重拥堵，而 traffic congestion 更偏交通流量大的泛指状态。",
+   "definition": "traffic jam 是可数名词，常说 be stuck in a traffic jam（堵在路上）、get caught in a traffic jam。注意 jam 本身也有果酱、堵塞之意；口语中 heavy traffic 只表示车多，不一定完全堵死。",
+   "examples": [
+    {
+     "en": "I was stuck in a traffic jam for an hour, so I missed the last train.",
+     "zh": "我堵车堵了一个小时，所以错过了末班车。"
+    },
+    {
+     "en": "There was a terrible traffic jam near the airport, and I almost missed my boarding pass check.",
+     "zh": "机场附近堵车非常严重，我差点错过登机牌查验。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "traffic jam",
+   "pair": "en-zh",
+   "slug": "traffic-jam",
+   "lang": "en",
+   "translation": "堵车",
+   "shortAnswer": "Traffic jam 的中文意思是堵车，指车辆密集、缓慢甚至停滞的交通状况。它比 traffic congestion 更口语、更强调堵到几乎不动的状态。",
+   "definition": "Traffic jam 是常见可数名词，搭配有 be stuck in a traffic jam、a huge traffic jam。日常口语常用；正式报告多用 traffic congestion。注意 jam 还可指果酱或机器卡住，需靠语境区分。",
+   "examples": [
+    {
+     "en": "I was stuck in a traffic jam for an hour, so I missed the last train.",
+     "zh": "我堵车堵了一个小时，所以错过了末班车。"
+    },
+    {
+     "en": "There was a terrible traffic jam near the airport, and I almost missed my boarding pass check.",
+     "zh": "机场附近堵车非常严重，我差点错过登机牌查验。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "导航",
+   "pair": "zh-en",
+   "slug": "dao-hang",
+   "lang": "zh",
+   "translation": "navigation",
+   "shortAnswer": "「导航」的英文是 navigation，作名词指规划路线的行为或系统。手机里的导航 App 多说 navigation app 或 GPS，动词「导航」常用 navigate。",
+   "definition": "navigation 是名词，指确定位置与路线的技术或过程，如 car navigation system（车载导航）、navigation app（导航软件）。表示「给某人导航」用 navigate for someone，不要直接说 navigate somebody。",
+   "examples": [
+    {
+     "en": "Turn on the navigation so we don't get lost on the way to the airport.",
+     "zh": "把导航打开吧，免得去机场的路上迷路。"
+    },
+    {
+     "en": "The subway app includes navigation that tells you where to transfer.",
+     "zh": "这个地铁应用带有导航功能，会告诉你在哪里换乘。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "navigation",
+   "pair": "en-zh",
+   "slug": "navigation",
+   "lang": "en",
+   "translation": "导航",
+   "shortAnswer": "navigation 的中文意思是「导航」，指规划路线、确定方位的过程或技术。它偏正式或技术性，日常口语里指手机导航时也常说 GPS 或 maps。",
+   "definition": "navigation 作名词，可指航海、航空的领航技术，也可指手机或车机的导航功能，如 turn-by-turn navigation（逐向语音导航）。动词形式是 navigate，表示「导航、找到路线」，注意不是 navigation 直接作动词。",
+   "examples": [
+    {
+     "en": "Turn on the navigation so we don't get lost on the way to the airport.",
+     "zh": "把导航打开吧，免得去机场的路上迷路。"
+    },
+    {
+     "en": "The subway app includes navigation that tells you where to transfer.",
+     "zh": "这个地铁应用带有导航功能，会告诉你在哪里换乘。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "停车",
+   "pair": "zh-en",
+   "slug": "ting-che",
+   "lang": "zh",
+   "translation": "parking",
+   "shortAnswer": "「停车」的英文是 parking，指停放车辆或停车空间。注意区分：park 是动词（停车），parking 可指动作或停车场。",
+   "definition": "parking 作名词指停车行为或停车位，常见搭配如 parking lot（停车场）、no parking（禁止停车）、parking space（车位）。英式英语中停车场也常用 car park。",
+   "examples": [
+    {
+     "en": "The hotel offers free parking for all guests.",
+     "zh": "这家酒店为所有客人提供免费停车。"
+    },
+    {
+     "en": "Finding parking near the stadium on game day is nearly impossible.",
+     "zh": "比赛日在体育场附近几乎找不到停车位。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "parking",
+   "pair": "en-zh",
+   "slug": "parking",
+   "lang": "en",
+   "translation": "停车",
+   "shortAnswer": "Parking 的中文意思是停车，指停放车辆或停车的地方。它可指动作或停车位，而 park 是动词。",
+   "definition": "parking 作名词，指停车行为或停车设施，如 parking lot（停车场）、parking space（车位）、free parking（免费停车）。英式英语停车场多说 car park。",
+   "examples": [
+    {
+     "en": "The hotel offers free parking for all guests.",
+     "zh": "这家酒店为所有客人提供免费停车。"
+    },
+    {
+     "en": "Finding parking near the stadium on game day is nearly impossible.",
+     "zh": "比赛日在体育场附近几乎找不到停车位。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "加油",
+   "pair": "zh-en",
+   "slug": "jia-you",
+   "lang": "zh",
+   "translation": "refuel",
+   "shortAnswer": "「加油」在交通出行中常用「refuel」表示，特指给车辆或飞机补充燃料；注意与日常鼓劲的「加油」区分。",
+   "definition": "refuel 强调补充燃料的动作或过程，常用于汽车、飞机、轮船等。搭配：refuel a car/plane、stop to refuel。注意：表示「加汽油」也可说 fill up (with petrol/gas)，但 refuel 更正式通用。",
+   "examples": [
+    {
+     "en": "We need to refuel the car before driving to the airport.",
+     "zh": "开车去机场之前，我们需要给车加油。"
+    },
+    {
+     "en": "The plane stopped in Anchorage to refuel before continuing to Tokyo.",
+     "zh": "飞机在安克雷奇停留加油，然后继续飞往东京。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "refuel",
+   "pair": "en-zh",
+   "slug": "refuel",
+   "lang": "en",
+   "translation": "加油",
+   "shortAnswer": "「refuel」的中文意思是「加油」，指给交通工具补充燃料；与「fill up」近义，但 refuel 更正式，且不限于加汽油。",
+   "definition": "refuel 作动词，意为给（车辆、飞机等）加油或补充燃料。常见搭配：refuel the car、refuel at a station。正式和日常场合均可用；注意与「加油」的鼓劲义区分。",
+   "examples": [
+    {
+     "en": "We need to refuel the car before driving to the airport.",
+     "zh": "开车去机场之前，我们需要给车加油。"
+    },
+    {
+     "en": "The plane stopped in Anchorage to refuel before continuing to Tokyo.",
+     "zh": "飞机在安克雷奇停留加油，然后继续飞往东京。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "红绿灯",
+   "pair": "zh-en",
+   "slug": "hong-lv-deng",
+   "lang": "zh",
+   "translation": "traffic lights",
+   "shortAnswer": "「红绿灯」在英文中是 traffic lights，通常用复数，指路口指挥交通的整套信号灯。",
+   "definition": "traffic lights 英式美式通用，常搭配 run a red light（闯红灯）、wait at the traffic lights（在红绿灯处等待）。",
+   "examples": [
+    {
+     "en": "Turn left at the traffic lights, and you'll see the subway station on your right.",
+     "zh": "在红绿灯处左转，你就会看到地铁站在你的右边。"
+    },
+    {
+     "en": "The traffic lights were not working, so a police officer was directing the traffic.",
+     "zh": "红绿灯坏了，所以一名警察在指挥交通。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "traffic lights",
+   "pair": "en-zh",
+   "slug": "traffic-lights",
+   "lang": "en",
+   "translation": "红绿灯",
+   "shortAnswer": "Traffic lights 就是「红绿灯」，即路口用红黄绿三色指挥车辆行人的信号灯组。",
+   "definition": "traffic lights 常用复数，指整套信号灯；单盏灯可用 a traffic light。搭配：run the traffic lights（闯红灯）。",
+   "examples": [
+    {
+     "en": "Turn left at the traffic lights, and you'll see the subway station on your right.",
+     "zh": "在红绿灯处左转，你就会看到地铁站在你的右边。"
+    },
+    {
+     "en": "The traffic lights were not working, so a police officer was directing the traffic.",
+     "zh": "红绿灯坏了，所以一名警察在指挥交通。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "首班车",
+   "pair": "zh-en",
+   "slug": "shou-ban-che",
+   "lang": "zh",
+   "translation": "first train",
+   "shortAnswer": "「首班车」的英文是 first train，指一天中最早发出的那班车。注意它不是 early bus，公交首班车也可说 the first bus。",
+   "definition": "first train 常用于地铁、火车等轨道交通，指当日最早一班，对应末班车 the last train。搭配：catch/miss the first train（赶上/错过首班车）、take the first train to…（乘首班车去某地）。",
+   "examples": [
+    {
+     "en": "We need to catch the first train to the airport to avoid the morning rush.",
+     "zh": "我们得赶上开往机场的首班车，好避开早高峰。"
+    },
+    {
+     "en": "When is the first train from this station on Sunday morning?",
+     "zh": "周日早上这站的首班车是几点？"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "first train",
+   "pair": "en-zh",
+   "slug": "first-train",
+   "lang": "en",
+   "translation": "首班车",
+   "shortAnswer": "First train 的中文意思是「首班车」，即当天最早发出的那班列车。近义词 the first bus 只用于公交，别混用。",
+   "definition": "first train 指地铁、火车等当日最早的一班车，与 the last train（末班车）相对。口语常说 catch the first train；问时间可用 When is the first train? 注意不用于公交，公交车用 the first bus。",
+   "examples": [
+    {
+     "en": "We need to catch the first train to the airport to avoid the morning rush.",
+     "zh": "我们得赶上开往机场的首班车，好避开早高峰。"
+    },
+    {
+     "en": "When is the first train from this station on Sunday morning?",
+     "zh": "周日早上这站的首班车是几点？"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "高铁",
+   "pair": "zh-en",
+   "slug": "gao-tie",
+   "lang": "zh",
+   "translation": "high-speed rail",
+   "shortAnswer": "「高铁」的英文是 high-speed rail，指高速铁路系统；作定语时常用 high-speed 加名词。",
+   "definition": "high-speed rail 多指整个高速铁路系统，如 China's high-speed rail network。指具体一趟列车时，英语常说 high-speed train 或口语 bullet train。注意别写成 high iron，那是高炉铁。",
+   "examples": [
+    {
+     "en": "China's high-speed rail network is one of the largest in the world, connecting hundreds of cities.",
+     "zh": "中国的高铁网络是世界上最大的之一，连接着数百座城市。"
+    },
+    {
+     "en": "We took high-speed rail from Beijing to Shanghai and the trip only took about four and a half hours.",
+     "zh": "我们坐高铁从北京到上海，旅程只花了大约四个半小时。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "high-speed rail",
+   "pair": "en-zh",
+   "slug": "high-speed-rail",
+   "lang": "en",
+   "translation": "高铁",
+   "shortAnswer": "「high-speed rail」的中文意思是「高铁」，即高速铁路系统，与具体列车 high-speed train 有别。",
+   "definition": "high-speed rail 是正式用语，指运行时速很高的铁路系统，常见搭配有 high-speed rail network、high-speed rail line、invest in high-speed rail。口语中也用 bullet train 指高铁列车。",
+   "examples": [
+    {
+     "en": "China's high-speed rail network is one of the largest in the world, connecting hundreds of cities.",
+     "zh": "中国的高铁网络是世界上最大的之一，连接着数百座城市。"
+    },
+    {
+     "en": "We took high-speed rail from Beijing to Shanghai and the trip only took about four and a half hours.",
+     "zh": "我们坐高铁从北京到上海，旅程只花了大约四个半小时。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "换乘",
+   "pair": "zh-en",
+   "slug": "huan-cheng",
+   "lang": "zh",
+   "translation": "transfer",
+   "shortAnswer": "「换乘」的英文是 transfer，地铁、火车、公交之间换线或换车都用它，指同一次行程内转乘。",
+   "definition": "作名词常用 a transfer（一次换乘），动词说 transfer to Line 2 / transfer at Xizhimen。美式地铁报站常说 Transfer to the Red Line，英式则多说 change trains。",
+   "examples": [
+    {
+     "en": "You need to transfer to Line 2 at Xizhimen to get to the airport.",
+     "zh": "你要在西直门换乘 2 号线才能到机场。"
+    },
+    {
+     "en": "The ticket includes one free transfer within ninety minutes.",
+     "zh": "这张票包含九十分钟内一次免费换乘。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "transfer",
+   "pair": "en-zh",
+   "slug": "transfer",
+   "lang": "en",
+   "translation": "换乘",
+   "shortAnswer": "transfer 的中文意思是「换乘」，指同一行程中从一条线路或一种交通工具换到另一种。",
+   "definition": "作名词指换乘、换乘点（a free transfer 免费换乘），作动词后接 to：transfer to the subway。也指转机、转账，需靠上下文区分。",
+   "examples": [
+    {
+     "en": "You need to transfer to Line 2 at Xizhimen to get to the airport.",
+     "zh": "你要在西直门换乘 2 号线才能到机场。"
+    },
+    {
+     "en": "The ticket includes one free transfer within ninety minutes.",
+     "zh": "这张票包含九十分钟内一次免费换乘。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "站台",
+   "pair": "zh-en",
+   "slug": "zhan-tai",
+   "lang": "zh",
+   "translation": "platform",
+   "shortAnswer": "「站台」的英文是 platform，最常用于火车站和地铁站。注意：公交车站通常用 bus stop，不用 platform。",
+   "definition": "platform 指火车站、地铁站供乘客上下车的站台，也指高铁站台。常见搭配：on the platform（在站台上）、Platform 3（3号站台）。英式地铁称 underground/tube，美式称 subway。",
+   "examples": [
+    {
+     "en": "The train to Shanghai will depart from Platform 3 at 9:30, so please wait on the platform after the security check.",
+     "zh": "开往上海的列车将于9:30从3号站台发车，所以请在安检后在站台上等候。"
+    },
+    {
+     "en": "We need to transfer at the next station, but the platform is on the other side, so take the subway and hurry before the last train leaves.",
+     "zh": "我们需要在下一站换乘，但站台在另一边，所以坐地铁，赶在末班车开走前快点。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "platform",
+   "pair": "en-zh",
+   "slug": "platform",
+   "lang": "en",
+   "translation": "站台",
+   "shortAnswer": "Platform 的中文意思是「站台」，尤指火车站或地铁站。它也可指讲台或平台，但交通场景中就是站台。",
+   "definition": "platform 在交通出行中核心义为站台，常见于高铁、地铁、火车。搭配：arrive at the platform、wait on the platform、Platform 2。注意公交车站通常不说 platform，而说 bus stop。",
+   "examples": [
+    {
+     "en": "The train to Shanghai will depart from Platform 3 at 9:30, so please wait on the platform after the security check.",
+     "zh": "开往上海的列车将于9:30从3号站台发车，所以请在安检后在站台上等候。"
+    },
+    {
+     "en": "We need to transfer at the next station, but the platform is on the other side, so take the subway and hurry before the last train leaves.",
+     "zh": "我们需要在下一站换乘，但站台在另一边，所以坐地铁，赶在末班车开走前快点。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "末班车",
+   "pair": "zh-en",
+   "slug": "mo-ban-che",
+   "lang": "zh",
+   "translation": "last train",
+   "shortAnswer": "末班车用英语说是 last train，指当天最后一班列车。地铁、火车用 last train，公交末班车则说 the last bus。",
+   "definition": "last train 是固定搭配，常与 catch、miss、take 连用。问时间可说 When is the last train?，特指某趟末班车时前加 the。",
+   "examples": [
+    {
+     "en": "We had to leave the party early to catch the last train home.",
+     "zh": "我们不得不提前离开聚会，好赶上回家的末班车。"
+    },
+    {
+     "en": "If you miss the last train, you can take a taxi back.",
+     "zh": "如果你错过末班车，可以打车回去。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "last train",
+   "pair": "en-zh",
+   "slug": "last-train",
+   "lang": "en",
+   "translation": "末班车",
+   "shortAnswer": "last train 的中文意思是末班车，指当天最后一班火车或地铁。若末班车是公交车，则说 the last bus。",
+   "definition": "last train 指当晚最后一班列车，多用于地铁、火车。常见搭配 catch/miss/take the last train，说上一班车用 the previous train。",
+   "examples": [
+    {
+     "en": "We had to leave the party early to catch the last train home.",
+     "zh": "我们不得不提前离开聚会，好赶上回家的末班车。"
+    },
+    {
+     "en": "If you miss the last train, you can take a taxi back.",
+     "zh": "如果你错过末班车，可以打车回去。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "直飞",
+   "pair": "zh-en",
+   "slug": "zhi-fei",
+   "lang": "zh",
+   "translation": "direct flight",
+   "shortAnswer": "「直飞」的英文是 direct flight，指同一航班号一路到底、不用换飞机，但中途可能经停。",
+   "definition": "direct flight 是可数名词，常搭配 take/book a direct flight。问「有直飞吗」说 Is there a direct flight?。它强调不换机，若强调全程不停，用 non-stop flight 更准确。",
+   "examples": [
+    {
+     "en": "Is there a direct flight from Shanghai to Paris, or do I have to transfer?",
+     "zh": "从上海到巴黎有直飞航班吗，还是我得换乘？"
+    },
+    {
+     "en": "Booking a direct flight costs more, but it saves you the hassle of a layover.",
+     "zh": "订直飞航班贵一些，但省去了中途转机的麻烦。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "direct flight",
+   "pair": "en-zh",
+   "slug": "direct-flight",
+   "lang": "en",
+   "translation": "直飞",
+   "shortAnswer": "direct flight 的中文意思是「直飞」，指同一航班从出发地飞到目的地、不用换飞机，但未必中途不停。",
+   "definition": "direct flight 为航空出行常用语，take/book a direct flight 表示搭乘或预订直飞航班，口语也可说 fly direct。与 non-stop flight 相比，direct 侧重不换机，non-stop 侧重全程不停靠。",
+   "examples": [
+    {
+     "en": "Is there a direct flight from Shanghai to Paris, or do I have to transfer?",
+     "zh": "从上海到巴黎有直飞航班吗，还是我得换乘？"
+    },
+    {
+     "en": "Booking a direct flight costs more, but it saves you the hassle of a layover.",
+     "zh": "订直飞航班贵一些，但省去了中途转机的麻烦。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "登机牌",
+   "pair": "zh-en",
+   "slug": "deng-ji-pai",
+   "lang": "zh",
+   "translation": "boarding pass",
+   "shortAnswer": "登机牌用英语说是 boarding pass，是机场值机后拿到、登机前必须出示的凭证。",
+   "definition": "boarding pass 指登机牌，含航班号、座位和登机口，常在值机后获得。搭配：show/print a boarding pass。",
+   "examples": [
+    {
+     "en": "Please have your boarding pass and ID ready before you reach the security check.",
+     "zh": "请在到达安检处之前准备好登机牌和身份证件。"
+    },
+    {
+     "en": "I checked in online and saved my boarding pass on my phone.",
+     "zh": "我在网上办了值机，把登机牌保存在手机里。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "boarding pass",
+   "pair": "en-zh",
+   "slug": "boarding-pass",
+   "lang": "en",
+   "translation": "登机牌",
+   "shortAnswer": "boarding pass 的中文意思是登机牌，是机场登机前必须出示的凭证，通常在值机后拿到。",
+   "definition": "boarding pass 指登机牌，含航班、座位和登机口信息。搭配：show/scan/print a boarding pass；电子版叫 mobile boarding pass。",
+   "examples": [
+    {
+     "en": "Please have your boarding pass and ID ready before you reach the security check.",
+     "zh": "请在到达安检处之前准备好登机牌和身份证件。"
+    },
+    {
+     "en": "I checked in online and saved my boarding pass on my phone.",
+     "zh": "我在网上办了值机，把登机牌保存在手机里。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "电动车",
+   "pair": "zh-en",
+   "slug": "dian-dong-che",
+   "lang": "zh",
+   "translation": "e-bike",
+   "shortAnswer": "电动车的英文是 e-bike，指电动自行车或电动助力车。注意 car 指汽车，电动车不译 electric car，除非说的是电动汽车。",
+   "definition": "e-bike 多指电动助力自行车，日常通勤、共享出行常用；电动汽车则是 electric car 或 EV。搭配如 ride an e-bike、share an e-bike。",
+   "examples": [
+    {
+     "en": "I usually ride an e-bike to the subway station instead of taking a taxi.",
+     "zh": "我通常骑电动车到地铁站，而不是打车。"
+    },
+    {
+     "en": "Many cities now offer shared e-bikes, but you still need to pass a security check at the station.",
+     "zh": "现在很多城市都有共享电动车，但进站时仍需过安检。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "e-bike",
+   "pair": "en-zh",
+   "slug": "e-bike",
+   "lang": "en",
+   "translation": "电动车",
+   "shortAnswer": "e-bike 的中文意思是电动车，通常指电动自行车或电动助力车；它不等于电动汽车，电动汽车说 electric car 或 EV。",
+   "definition": "e-bike 是 electric bicycle 的缩略，口语常用，指带电机助力的自行车；共享出行、通勤场景常见，搭配有 ride an e-bike、charge an e-bike。",
+   "examples": [
+    {
+     "en": "I usually ride an e-bike to the subway station instead of taking a taxi.",
+     "zh": "我通常骑电动车到地铁站，而不是打车。"
+    },
+    {
+     "en": "Many cities now offer shared e-bikes, but you still need to pass a security check at the station.",
+     "zh": "现在很多城市都有共享电动车，但进站时仍需过安检。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "转机",
+   "pair": "zh-en",
+   "slug": "zhuan-ji",
+   "lang": "zh",
+   "translation": "connecting flight",
+   "shortAnswer": "「转机」的英文是 connecting flight，指中途换乘另一架航班。注意它强调换乘航班，不是换乘其他交通工具，别用 transfer 泛指。",
+   "definition": "connecting flight 是名词短语，常与 take、catch、miss 连用，如 take a connecting flight。转机需留足时间，机场设有 connecting flights 指示牌。",
+   "examples": [
+    {
+     "en": "We have a two-hour layover in Tokyo before our connecting flight to Sydney.",
+     "zh": "我们在东京有两小时的停留时间，然后转机去悉尼。"
+    },
+    {
+     "en": "If you miss your connecting flight, the airline will rebook you on the next available one.",
+     "zh": "如果你错过转机航班，航空公司会为你改签下一班可用的航班。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "connecting flight",
+   "pair": "en-zh",
+   "slug": "connecting-flight",
+   "lang": "en",
+   "translation": "转机",
+   "shortAnswer": "「connecting flight」的中文意思是「转机」，指中途换乘另一架航班。它强调航班衔接，不同于泛指换乘的 transfer 或指停留的 layover。",
+   "definition": "connecting flight 指旅客途中换乘的另一架航班，常见搭配有 catch/miss a connecting flight、a short connection，口语中也说 connection。",
+   "examples": [
+    {
+     "en": "We have a two-hour layover in Tokyo before our connecting flight to Sydney.",
+     "zh": "我们在东京有两小时的停留时间，然后转机去悉尼。"
+    },
+    {
+     "en": "If you miss your connecting flight, the airline will rebook you on the next available one.",
+     "zh": "如果你错过转机航班，航空公司会为你改签下一班可用的航班。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "安检",
+   "pair": "zh-en",
+   "slug": "an-jian",
+   "lang": "zh",
+   "translation": "security check",
+   "shortAnswer": "安检的英文是 security check，指机场、车站等场所对人和行李的安全检查，也常说 security screening。",
+   "definition": "security check 泛指安全检查，机场、高铁、地铁等交通枢纽及大型活动入场都常用，动词搭配为 go through a security check。",
+   "examples": [
+    {
+     "en": "Please arrive at the airport two hours early, because the security check can take a long time.",
+     "zh": "请提前两小时到达机场，因为安检可能需要很长时间。"
+    },
+    {
+     "en": "We went through a security check before boarding the high-speed train.",
+     "zh": "我们在登上高铁之前通过了安检。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "security check",
+   "pair": "en-zh",
+   "slug": "security-check",
+   "lang": "en",
+   "translation": "安检",
+   "shortAnswer": "security check 的中文意思是安检，指机场、车站等场所对人员或行李的安全检查，比 screening 更口语、更通用。",
+   "definition": "security check 指安检，常见搭配为 go through a security check；机场、高铁站、演唱会入场都可用，注意与 customs 区分。",
+   "examples": [
+    {
+     "en": "Please arrive at the airport two hours early, because the security check can take a long time.",
+     "zh": "请提前两小时到达机场，因为安检可能需要很长时间。"
+    },
+    {
+     "en": "We went through a security check before boarding the high-speed train.",
+     "zh": "我们在登上高铁之前通过了安检。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "人行道",
+   "pair": "zh-en",
+   "slug": "ren-xing-dao",
+   "lang": "zh",
+   "translation": "sidewalk",
+   "shortAnswer": "人行道的英文是 sidewalk，美式英语常用；英式英语则多用 pavement。指马路两旁供行人走的通道。",
+   "definition": "sidewalk 是美式英语，英国人说 pavement。常见搭配有 on the sidewalk（在人行道上）、a crowded sidewalk。注意别和 road（车道）或 crosswalk（人行横道）混淆。",
+   "examples": [
+    {
+     "en": "Please walk on the sidewalk, not in the street.",
+     "zh": "请走人行道，不要走在车道上。"
+    },
+    {
+     "en": "The sidewalk was crowded with people heading to the subway station.",
+     "zh": "人行道上挤满了前往地铁站的人。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "sidewalk",
+   "pair": "en-zh",
+   "slug": "sidewalk",
+   "lang": "en",
+   "translation": "人行道",
+   "shortAnswer": "Sidewalk 的中文意思是人行道，指街道两旁专供行人步行的路面。它主要用于美式英语，英式英语里常说 pavement。",
+   "definition": "Sidewalk 是美式英语名词，指马路旁供行人走的铺装步道；英式英语对应 pavement。常见搭配 walk on the sidewalk、a wide sidewalk。注意与 crosswalk（人行横道）、roadway（车行道）区分。",
+   "examples": [
+    {
+     "en": "Please walk on the sidewalk, not in the street.",
+     "zh": "请走人行道，不要走在车道上。"
+    },
+    {
+     "en": "The sidewalk was crowded with people heading to the subway station.",
+     "zh": "人行道上挤满了前往地铁站的人。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "靠窗",
+   "pair": "zh-en",
+   "slug": "kao-chuang",
+   "lang": "zh",
+   "translation": "window seat",
+   "shortAnswer": "靠窗常译作 window seat，指交通工具上靠窗的座位，飞机、高铁、火车选座常用。",
+   "definition": "window seat 是可数名词，指飞机、火车等靠窗座位，与 aisle seat 相对；地铁公交多用 by the window。",
+   "examples": [
+    {
+     "en": "I'd like a window seat on the high-speed train so I can enjoy the view.",
+     "zh": "我想在高铁上要一个靠窗的座位，这样就能欣赏风景了。"
+    },
+    {
+     "en": "When you check in online, don't forget to choose a window seat if you prefer looking outside.",
+     "zh": "网上值机时，如果你喜欢看窗外，别忘了选一个靠窗的座位。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "window seat",
+   "pair": "en-zh",
+   "slug": "window-seat",
+   "lang": "en",
+   "translation": "靠窗",
+   "shortAnswer": "The Chinese term 靠窗 often translates to window seat, a seat next to the window on public transport.",
+   "definition": "A window seat is a seat beside the window, especially on a plane or train, as opposed to an aisle seat.",
+   "examples": [
+    {
+     "en": "I'd like a window seat on the high-speed train so I can enjoy the view.",
+     "zh": "我想在高铁上要一个靠窗的座位，这样就能欣赏风景了。"
+    },
+    {
+     "en": "When you check in online, don't forget to choose a window seat if you prefer looking outside.",
+     "zh": "网上值机时，如果你喜欢看窗外，别忘了选一个靠窗的座位。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "斑马线",
+   "pair": "zh-en",
+   "slug": "ban-ma-xian",
+   "lang": "zh",
+   "translation": "zebra crossing",
+   "shortAnswer": "「斑马线」的英文是 zebra crossing，指马路上供行人过街的白色条纹标线，英式说法。",
+   "definition": "zebra crossing 是英式英语里最常见的「斑马线」说法，因白色条纹似斑马纹而得名；美式英语多用 crosswalk。常见搭配：at a zebra crossing。",
+   "examples": [
+    {
+     "en": "Always cross the road at a zebra crossing.",
+     "zh": "过马路时一定要走斑马线。"
+    },
+    {
+     "en": "The driver stopped to let the children use the zebra crossing.",
+     "zh": "司机停下车，让孩子们走斑马线过马路。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "zebra crossing",
+   "pair": "en-zh",
+   "slug": "zebra-crossing",
+   "lang": "en",
+   "translation": "斑马线",
+   "shortAnswer": "zebra crossing 的中文意思是「斑马线」，即马路上供行人过街的白色条纹标线，属英式说法。",
+   "definition": "zebra crossing 是英式英语中「斑马线」的常用说法，因白色条纹像斑马纹而得名；美式英语通常用 crosswalk，多用于道路与过街场景。",
+   "examples": [
+    {
+     "en": "Always cross the road at a zebra crossing.",
+     "zh": "过马路时一定要走斑马线。"
+    },
+    {
+     "en": "The driver stopped to let the children use the zebra crossing.",
+     "zh": "司机停下车，让孩子们走斑马线过马路。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "收费站",
+   "pair": "zh-en",
+   "slug": "shou-fei-zhan",
+   "lang": "zh",
+   "translation": "toll station",
+   "shortAnswer": "收费站的英文是 toll station，也常说 toll booth 或 toll plaza。toll booth 多指具体收费亭，toll station 更强调整个收费站设施。",
+   "definition": "toll station 是高速公路上收取过路费的站点统称；toll booth 指单个收费亭，toll plaza 指收费广场。常见搭配：at the toll station（在收费站）、pass through a toll station（通过收费站）。",
+   "examples": [
+    {
+     "en": "We had to slow down as we approached the toll station on the highway.",
+     "zh": "我们接近高速公路上的收费站时不得不减速。"
+    },
+    {
+     "en": "The toll station was crowded with cars waiting to pay the fee.",
+     "zh": "收费站挤满了等待缴费的车辆。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "toll station",
+   "pair": "en-zh",
+   "slug": "toll-station",
+   "lang": "en",
+   "translation": "收费站",
+   "shortAnswer": "toll station 的中文意思是收费站，即公路上收取通行费的地方。它与 toll booth 略有区别：toll booth 指具体的收费亭，toll station 指整个站点区域。",
+   "definition": "toll station 指高速或桥梁上收取过路费的设施，正式和口语均可用。常见搭配：stop at a toll station（在收费站停车）、toll station on the highway（公路上的收费站）。注意不要与 gas station（加油站）混淆。",
+   "examples": [
+    {
+     "en": "We had to slow down as we approached the toll station on the highway.",
+     "zh": "我们接近高速公路上的收费站时不得不减速。"
+    },
+    {
+     "en": "The toll station was crowded with cars waiting to pay the fee.",
+     "zh": "收费站挤满了等待缴费的车辆。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "共享单车",
+   "pair": "zh-en",
+   "slug": "gong-xiang-dan-che",
+   "lang": "zh",
+   "translation": "shared bike",
+   "shortAnswer": "「共享单车」的英文是 shared bike，指扫码解锁、随停随还的无桩单车，常用于短途通勤。",
+   "definition": "shared bike 泛指扫码解锁的共享单车；常用搭配：ride a shared bike、park a shared bike、unlock a shared bike。",
+   "examples": [
+    {
+     "en": "I usually ride a shared bike to the subway station to avoid traffic.",
+     "zh": "我通常骑共享单车去地铁站，以免堵车。"
+    },
+    {
+     "en": "You need to scan the QR code to unlock a shared bike.",
+     "zh": "你需要扫描二维码才能解锁一辆共享单车。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "shared bike",
+   "pair": "en-zh",
+   "slug": "shared-bike",
+   "lang": "en",
+   "translation": "共享单车",
+   "shortAnswer": "A shared bike, 共享单车 in Chinese, is a stationless bike unlocked by an app for short trips.",
+   "definition": "shared bike 指共享单车；常见搭配：ride/park/unlock a shared bike；也可说 shared bicycle，注意与 public bike 区分。",
+   "examples": [
+    {
+     "en": "I usually ride a shared bike to the subway station to avoid traffic.",
+     "zh": "我通常骑共享单车去地铁站，以免堵车。"
+    },
+    {
+     "en": "You need to scan the QR code to unlock a shared bike.",
+     "zh": "你需要扫描二维码才能解锁一辆共享单车。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "服务区",
+   "pair": "zh-en",
+   "slug": "fu-wu-qu",
+   "lang": "zh",
+   "translation": "highway rest area",
+   "shortAnswer": "「服务区」英文是 highway rest area，指高速公路旁供休息、加油、用餐的区域。",
+   "definition": "highway rest area 常见搭配：pull into a highway rest area（驶入服务区）。易错点：不要直译成 service zone。",
+   "examples": [
+    {
+     "en": "We pulled into the next highway rest area to grab a coffee and stretch our legs.",
+     "zh": "我们驶入下一个服务区，买了杯咖啡，活动了一下腿脚。"
+    },
+    {
+     "en": "The highway rest area was crowded with travelers during the holiday rush.",
+     "zh": "假期高峰时，服务区里挤满了出行的人。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "highway rest area",
+   "pair": "en-zh",
+   "slug": "highway-rest-area",
+   "lang": "en",
+   "translation": "服务区",
+   "shortAnswer": "Highway rest area means 服务区 in Chinese, a place beside a highway for resting, refueling and eating.",
+   "definition": "Highway rest area is a countable noun, often used with pull into or stop at. Rest stop is more casual.",
+   "examples": [
+    {
+     "en": "We pulled into the next highway rest area to grab a coffee and stretch our legs.",
+     "zh": "我们驶入下一个服务区，买了杯咖啡，活动了一下腿脚。"
+    },
+    {
+     "en": "The highway rest area was crowded with travelers during the holiday rush.",
+     "zh": "假期高峰时，服务区里挤满了出行的人。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "前台",
+   "pair": "zh-en",
+   "slug": "qian-tai",
+   "lang": "zh",
+   "translation": "front desk",
+   "shortAnswer": "前台在英语里常说 front desk，指酒店办理入住退房的柜台，注意与 lobby（大堂）不同。",
+   "definition": "front desk 指酒店前台柜台及人员，常搭配 check in at the front desk、the front desk clerk。英式英语多用 reception。",
+   "examples": [
+    {
+     "en": "Please check in at the front desk when you arrive; they will give you your room key.",
+     "zh": "您到达后请到前台办理入住，他们会给您房卡。"
+    },
+    {
+     "en": "The front desk can store your luggage after check-out.",
+     "zh": "退房后前台可以帮您寄存行李。"
+    }
+   ],
+   "tags": [
+    "住宿酒店"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "front desk",
+   "pair": "en-zh",
+   "slug": "front-desk",
+   "lang": "en",
+   "translation": "前台",
+   "shortAnswer": "front desk 的中文是前台，即酒店办理入住退房的柜台；它指柜台与人员，lobby 指整个大堂。",
+   "definition": "front desk 指酒店入口处的接待柜台，常见搭配 check in at the front desk、the front desk clerk。英式英语多用 reception。",
+   "examples": [
+    {
+     "en": "Please check in at the front desk when you arrive; they will give you your room key.",
+     "zh": "您到达后请到前台办理入住，他们会给您房卡。"
+    },
+    {
+     "en": "The front desk can store your luggage after check-out.",
+     "zh": "退房后前台可以帮您寄存行李。"
+    }
+   ],
+   "tags": [
+    "住宿酒店"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "入住",
+   "pair": "zh-en",
+   "slug": "ru-zhu",
+   "lang": "zh",
+   "translation": "check in",
+   "shortAnswer": "「入住」的英文是 check in，指到酒店前台登记并领房卡，名词形式为 check-in。",
+   "definition": "check in 指到达酒店或民宿后登记入住；名词形式 check-in 指入住手续本身，如入住时间 check-in time，与退房 check out 相对。",
+   "examples": [
+    {
+     "en": "We arrived at the hotel at 3 p.m. and checked in at the front desk; the clerk told us breakfast was included and asked whether we preferred a twin room or a king bed room.",
+     "zh": "我们下午三点到酒店，在前台办理了入住；前台告诉我们含早餐，并问我们是要双床房还是大床房。"
+    },
+    {
+     "en": "Since our flight landed late, we asked the guesthouse to arrange airport pickup and let us check in after midnight, and they kindly kept our luggage in storage until the room was ready.",
+     "zh": "因为航班落地很晚，我们请民宿安排接机，并允许我们半夜后办理入住，他们还帮我们把行李寄存到房间准备好。"
+    }
+   ],
+   "tags": [
+    "住宿酒店"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "check in",
+   "pair": "en-zh",
+   "slug": "check-in",
+   "lang": "en",
+   "translation": "入住",
+   "shortAnswer": "“check in”的中文意思是「入住」，即到酒店前台登记并拿到房卡，与退房 check out 相对。",
+   "definition": "check in 表示到达酒店或民宿后办理入住登记，通常在前台出示证件并领取房卡；名词形式 check-in 指入住手续本身。",
+   "examples": [
+    {
+     "en": "We arrived at the hotel at 3 p.m. and checked in at the front desk; the clerk told us breakfast was included and asked whether we preferred a twin room or a king bed room.",
+     "zh": "我们下午三点到酒店，在前台办理了入住；前台告诉我们含早餐，并问我们是要双床房还是大床房。"
+    },
+    {
+     "en": "Since our flight landed late, we asked the guesthouse to arrange airport pickup and let us check in after midnight, and they kindly kept our luggage in storage until the room was ready.",
+     "zh": "因为航班落地很晚，我们请民宿安排接机，并允许我们半夜后办理入住，他们还帮我们把行李寄存到房间准备好。"
+    }
+   ],
+   "tags": [
+    "住宿酒店"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "酒店",
+   "pair": "zh-en",
+   "slug": "jiu-dian",
+   "lang": "zh",
+   "translation": "hotel",
+   "shortAnswer": "「酒店」的英文是 hotel，指提供住宿、餐饮等服务的场所；入住 check in、退房 check out 是必会搭配。",
+   "definition": "hotel 常搭配 book a hotel、stay at a hotel。相比民宿，hotel 通常规模更大、服务更全，但价格也可能更高。",
+   "examples": [
+    {
+     "en": "We checked into the hotel at 3 p.m. and asked for a king bed room instead of a twin room.",
+     "zh": "我们下午三点入住了酒店，并要求把双床房换成大床房。"
+    },
+    {
+     "en": "The hotel offers airport pickup, luggage storage, and breakfast included, which makes check-out very convenient.",
+     "zh": "这家酒店提供接机、行李寄存和含早餐服务，让退房非常方便。"
+    }
+   ],
+   "tags": [
+    "住宿酒店"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "hotel",
+   "pair": "en-zh",
+   "slug": "hotel",
+   "lang": "en",
+   "translation": "酒店",
+   "shortAnswer": "Hotel 的中文意思是酒店，即提供客房住宿的场所，比民宿更正式、规模更大，且服务更全面。",
+   "definition": "hotel 指酒店，常用搭配有 check into a hotel、stay at a hotel。名词 check-in 用连字符，注意与 check in 区分。",
+   "examples": [
+    {
+     "en": "We checked into the hotel at 3 p.m. and asked for a king bed room instead of a twin room.",
+     "zh": "我们下午三点入住了酒店，并要求把双床房换成大床房。"
+    },
+    {
+     "en": "The hotel offers airport pickup, luggage storage, and breakfast included, which makes check-out very convenient.",
+     "zh": "这家酒店提供接机、行李寄存和含早餐服务，让退房非常方便。"
+    }
+   ],
+   "tags": [
+    "住宿酒店"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "含早",
+   "pair": "zh-en",
+   "slug": "han-zao",
+   "lang": "zh",
+   "translation": "breakfast included",
+   "shortAnswer": "「含早」的英文是 breakfast included，常用于酒店房价说明。注意与含早餐的「早餐」不同，它指房价已包含早餐，不单独收费。",
+   "definition": "含早指酒店房价包含早餐，办理入住 check-in 时确认，退房 check-out 时无需另付早餐费。常见搭配：breakfast included in the rate。",
+   "examples": [
+    {
+     "en": "I booked a king bed room with breakfast included, and check-in was at 3 PM.",
+     "zh": "我订了一间含早的大床房，入住时间是下午三点。"
+    },
+    {
+     "en": "The guesthouse offers breakfast included, and they also provide luggage storage after check-out.",
+     "zh": "这家民宿提供含早服务，退房后还可寄存行李。"
+    }
+   ],
+   "tags": [
+    "住宿酒店"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "breakfast included",
+   "pair": "en-zh",
+   "slug": "breakfast-included",
+   "lang": "en",
+   "translation": "含早",
+   "shortAnswer": "「breakfast included」的中文意思是「含早」，即房价已包含早餐。与「免费早餐」不同，它强调早餐费用已计入房价。",
+   "definition": "breakfast included 用于酒店预订，表示房价含早餐，无需额外付费。常见于 check-in 确认，check-out 时直接退房。反义为 breakfast not included。",
+   "examples": [
+    {
+     "en": "I booked a king bed room with breakfast included, and check-in was at 3 PM.",
+     "zh": "我订了一间含早的大床房，入住时间是下午三点。"
+    },
+    {
+     "en": "The guesthouse offers breakfast included, and they also provide luggage storage after check-out.",
+     "zh": "这家民宿提供含早服务，退房后还可寄存行李。"
+    }
+   ],
+   "tags": [
+    "住宿酒店"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "房卡",
+   "pair": "zh-en",
+   "slug": "fang-ka",
+   "lang": "zh",
+   "translation": "room key card",
+   "shortAnswer": "「房卡」的英文是 room key card，入住时前台发给你，用来开门和取电。",
+   "definition": "room key card 指酒店入住时发放的钥匙卡，用于开门和插卡取电，退房时交回前台。注意别只说 key，那可能指传统钥匙。",
+   "examples": [
+    {
+     "en": "Please insert your room key card into the slot to turn on the lights.",
+     "zh": "请将房卡插入卡槽以打开房间的灯。"
+    },
+    {
+     "en": "I left my room key card in the room, so I asked the front desk for a new one.",
+     "zh": "我把房卡落在房间里了，只好去前台补办一张。"
+    }
+   ],
+   "tags": [
+    "住宿酒店"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "room key card",
+   "pair": "en-zh",
+   "slug": "room-key-card",
+   "lang": "en",
+   "translation": "房卡",
+   "shortAnswer": "room key card 的中文意思是「房卡」，酒店入住时领取，用于开门和取电。",
+   "definition": "room key card 指酒店客房的电子钥匙卡，check in 时由前台提供，可开门和插卡取电，退房时归还。",
+   "examples": [
+    {
+     "en": "Please insert your room key card into the slot to turn on the lights.",
+     "zh": "请将房卡插入卡槽以打开房间的灯。"
+    },
+    {
+     "en": "I left my room key card in the room, so I asked the front desk for a new one.",
+     "zh": "我把房卡落在房间里了，只好去前台补办一张。"
+    }
+   ],
+   "tags": [
+    "住宿酒店"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "大床房",
+   "pair": "zh-en",
+   "slug": "da-chuang-fang",
+   "lang": "zh",
+   "translation": "king bed room",
+   "shortAnswer": "大床房的英文是 king bed room，指房内配一张大床的房间；若要两张单人床，应说 twin room。",
+   "definition": "king bed room 指酒店里配一张 king size 大床的房型，通常限住两人，也可写作 king room，与 twin room（双床房）相对。",
+   "examples": [
+    {
+     "en": "I'd like to book a king bed room with breakfast included for two nights.",
+     "zh": "我想订一间含早餐的大床房，住两晚。"
+    },
+    {
+     "en": "At check-in, the front desk upgraded us to a king bed room with a city view.",
+     "zh": "办理入住时，前台把我们升级成了一间可看城景的大床房。"
+    }
+   ],
+   "tags": [
+    "住宿酒店"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "king bed room",
+   "pair": "en-zh",
+   "slug": "king-bed-room",
+   "lang": "en",
+   "translation": "大床房",
+   "shortAnswer": "king bed room 的中文意思是「大床房」，即房内配一张特大双人床的房间，与 twin room（双床房）相对。",
+   "definition": "king bed room 指酒店里配一张 king size 大床的房型，一般适合两人入住，办理入住或预订时可直接报此房型名。",
+   "examples": [
+    {
+     "en": "I'd like to book a king bed room with breakfast included for two nights.",
+     "zh": "我想订一间含早餐的大床房，住两晚。"
+    },
+    {
+     "en": "At check-in, the front desk upgraded us to a king bed room with a city view.",
+     "zh": "办理入住时，前台把我们升级成了一间可看城景的大床房。"
+    }
+   ],
+   "tags": [
+    "住宿酒店"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "民宿",
+   "pair": "zh-en",
+   "slug": "min-su",
+   "lang": "zh",
+   "translation": "guesthouse",
+   "shortAnswer": "「民宿」用英语说是 guesthouse，指家庭经营的小型住宿，通常比 hotel 小。",
+   "definition": "guesthouse 指家庭经营的小型旅馆，常见于英国和东南亚。搭配：book a guesthouse、stay at a guesthouse。",
+   "examples": [
+    {
+     "en": "We stayed at a family-run guesthouse near the old town.",
+     "zh": "我们住在老城区附近一家家庭经营的民宿。"
+    },
+    {
+     "en": "The guesthouse offers luggage storage but breakfast is not included.",
+     "zh": "这家民宿提供行李寄存，但不含早餐。"
+    }
+   ],
+   "tags": [
+    "住宿酒店"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "guesthouse",
+   "pair": "en-zh",
+   "slug": "guesthouse",
+   "lang": "en",
+   "translation": "民宿",
+   "shortAnswer": "guesthouse 的中文是「民宿」，指家庭式小型住宿，常比 hotel 便宜。",
+   "definition": "guesthouse 指家庭经营的小型旅馆，即「民宿」。搭配：stay at a guesthouse、book a guesthouse。",
+   "examples": [
+    {
+     "en": "We stayed at a family-run guesthouse near the old town.",
+     "zh": "我们住在老城区附近一家家庭经营的民宿。"
+    },
+    {
+     "en": "The guesthouse offers luggage storage but breakfast is not included.",
+     "zh": "这家民宿提供行李寄存，但不含早餐。"
+    }
+   ],
+   "tags": [
+    "住宿酒店"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "双床房",
+   "pair": "zh-en",
+   "slug": "shuang-chuang-fang",
+   "lang": "zh",
+   "translation": "twin room",
+   "shortAnswer": "「双床房」的英文是 twin room，房内有两张单人床；若想要一张大床，应说 double room 或 king bed room。",
+   "definition": "twin room 指房内并排两张单人床，适合朋友或同事同住；与一大床的 double room 相对。",
+   "examples": [
+    {
+     "en": "I'd like to book a twin room for two nights, please.",
+     "zh": "我想订一间双床房，住两晚。"
+    },
+    {
+     "en": "At check-in, the receptionist confirmed our twin room and asked if we needed airport pickup.",
+     "zh": "办理入住时，前台确认了我们的双床房，并询问是否需要接机服务。"
+    }
+   ],
+   "tags": [
+    "住宿酒店"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "twin room",
+   "pair": "en-zh",
+   "slug": "twin-room",
+   "lang": "en",
+   "translation": "双床房",
+   "shortAnswer": "A twin room is a hotel room with two single beds, 中文叫「双床房」；它不等于一张大床的 double room。",
+   "definition": "Twin room means a room with two single beds, common in hotels, guesthouses and B&Bs; book it if you want separate beds.",
+   "examples": [
+    {
+     "en": "I'd like to book a twin room for two nights, please.",
+     "zh": "我想订一间双床房，住两晚。"
+    },
+    {
+     "en": "At check-in, the receptionist confirmed our twin room and asked if we needed airport pickup.",
+     "zh": "办理入住时，前台确认了我们的双床房，并询问是否需要接机服务。"
+    }
+   ],
+   "tags": [
+    "住宿酒店"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "续住",
+   "pair": "zh-en",
+   "slug": "xu-zhu",
+   "lang": "zh",
+   "translation": "extend the stay",
+   "shortAnswer": "「续住」的英文是 extend the stay，表示在原定退房日之后继续住下去。它多用于酒店前台或电话沟通，通常要和 check-out date（退房日期）一起说清楚。",
+   "definition": "extend the stay 是动词短语，后接 by one night / for two more days 说明延长多久；名词形式可说 a stay extension。注意它指延长本次住宿，不是重新订房，因此常需先确认空房和房价。",
+   "examples": [
+    {
+     "en": "I'd like to extend the stay by two nights; could you check if the same twin room is available?",
+     "zh": "我想续住两晚，能帮我查一下同一间双床房还有空吗？"
+    },
+    {
+     "en": "We extended the stay until Sunday, so we'll need luggage storage after check-out.",
+     "zh": "我们把住宿续到了周日，所以退房后需要行李寄存。"
+    }
+   ],
+   "tags": [
+    "住宿酒店"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "extend the stay",
+   "pair": "en-zh",
+   "slug": "extend-the-stay",
+   "lang": "en",
+   "translation": "续住",
+   "shortAnswer": "extend the stay 的中文意思是「续住」，即在原定退房日之后继续入住同一家酒店。它强调在原预订基础上延长，和再订一晚（book another night）不同。",
+   "definition": "extend the stay 是酒店场景的常用表达，多用于前台、电话或邮件；可加 by one night、until Friday 等说明时长。名词形式为 a stay extension。近义表达有 extend one's reservation，语气更正式。",
+   "examples": [
+    {
+     "en": "I'd like to extend the stay by two nights; could you check if the same twin room is available?",
+     "zh": "我想续住两晚，能帮我查一下同一间双床房还有空吗？"
+    },
+    {
+     "en": "We extended the stay until Sunday, so we'll need luggage storage after check-out.",
+     "zh": "我们把住宿续到了周日，所以退房后需要行李寄存。"
+    }
+   ],
+   "tags": [
+    "住宿酒店"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "接机",
+   "pair": "zh-en",
+   "slug": "jie-ji",
+   "lang": "zh",
+   "translation": "airport pickup",
+   "shortAnswer": "「接机」英文是 airport pickup，指从机场接客人到酒店，常说 arrange airport pickup。",
+   "definition": "airport pickup 指酒店或司机到机场接客人并送往住处的服务，常见搭配有 free airport pickup、airport pickup service。",
+   "examples": [
+    {
+     "en": "The hotel offers free airport pickup for guests staying three nights or more, and they also help with luggage storage after check-out.",
+     "zh": "这家酒店为入住三晚及以上的客人提供免费接机，退房后还可以帮忙寄存行李。"
+    },
+    {
+     "en": "I emailed the guesthouse to arrange airport pickup, and they confirmed they would be waiting at arrivals with a sign showing my name.",
+     "zh": "我给民宿发了邮件安排接机，他们确认会举着写有我名字的牌子在到达口等我。"
+    }
+   ],
+   "tags": [
+    "住宿酒店"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "airport pickup",
+   "pair": "en-zh",
+   "slug": "airport-pickup",
+   "lang": "en",
+   "translation": "接机",
+   "shortAnswer": "Airport pickup means 接机: a service that picks you up at the airport and takes you to your hotel.",
+   "definition": "Airport pickup refers to a driver or hotel meeting you at the airport and taking you to your lodging, as in arrange airport pickup.",
+   "examples": [
+    {
+     "en": "The hotel offers free airport pickup for guests staying three nights or more, and they also help with luggage storage after check-out.",
+     "zh": "这家酒店为入住三晚及以上的客人提供免费接机，退房后还可以帮忙寄存行李。"
+    },
+    {
+     "en": "I emailed the guesthouse to arrange airport pickup, and they confirmed they would be waiting at arrivals with a sign showing my name.",
+     "zh": "我给民宿发了邮件安排接机，他们确认会举着写有我名字的牌子在到达口等我。"
+    }
+   ],
+   "tags": [
+    "住宿酒店"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "行李寄存",
+   "pair": "zh-en",
+   "slug": "xing-li-ji-cun",
+   "lang": "zh",
+   "translation": "luggage storage",
+   "shortAnswer": "「行李寄存」的英文是 luggage storage，酒店入住前或退房后常用来暂放行李。",
+   "definition": "luggage storage 指酒店或车站提供的行李寄存服务，常见搭配有 luggage storage room（行李寄存处）。",
+   "examples": [
+    {
+     "en": "Can I leave my bags in luggage storage before check-in?",
+     "zh": "我可以在入住前把行李寄存在行李寄存处吗？"
+    },
+    {
+     "en": "The hotel offers free luggage storage after check-out.",
+     "zh": "这家酒店退房后提供免费行李寄存。"
+    }
+   ],
+   "tags": [
+    "住宿酒店"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "luggage storage",
+   "pair": "en-zh",
+   "slug": "luggage-storage",
+   "lang": "en",
+   "translation": "行李寄存",
+   "shortAnswer": "Luggage storage means 行李寄存, a service to leave bags at a hotel before or after your stay.",
+   "definition": "Luggage storage is a hotel service for keeping bags before check-in or after check-out, as in 'luggage storage room'.",
+   "examples": [
+    {
+     "en": "Can I leave my bags in luggage storage before check-in?",
+     "zh": "我可以在入住前把行李寄存在行李寄存处吗？"
+    },
+    {
+     "en": "The hotel offers free luggage storage after check-out.",
+     "zh": "这家酒店退房后提供免费行李寄存。"
+    }
+   ],
+   "tags": [
+    "住宿酒店"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "送机",
+   "pair": "zh-en",
+   "slug": "song-ji",
+   "lang": "zh",
+   "translation": "airport drop-off",
+   "shortAnswer": "「送机」英文是 airport drop-off，指开车送人到机场出发层，与接机 airport pickup 方向相反。",
+   "definition": "airport drop-off 指把人送到机场航站楼出发层，酒店礼宾与民宿常用，为名词，可搭配 free、offer、arrange。",
+   "examples": [
+    {
+     "en": "The hotel offers a free airport drop-off for guests with early flights.",
+     "zh": "酒店为搭乘早班航班的客人提供免费送机服务。"
+    },
+    {
+     "en": "Could you arrange an airport drop-off at seven tomorrow morning?",
+     "zh": "你能安排明天早上七点的送机吗？"
+    }
+   ],
+   "tags": [
+    "住宿酒店"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "airport drop-off",
+   "pair": "en-zh",
+   "slug": "airport-drop-off",
+   "lang": "en",
+   "translation": "送机",
+   "shortAnswer": "Airport drop-off is 送机: driving someone to the airport for departure, the opposite of airport pickup.",
+   "definition": "Airport drop-off is a noun for taking a guest to the departure terminal. Hotels and B&Bs offer or arrange it, often free.",
+   "examples": [
+    {
+     "en": "The hotel offers a free airport drop-off for guests with early flights.",
+     "zh": "酒店为搭乘早班航班的客人提供免费送机服务。"
+    },
+    {
+     "en": "Could you arrange an airport drop-off at seven tomorrow morning?",
+     "zh": "你能安排明天早上七点的送机吗？"
+    }
+   ],
+   "tags": [
+    "住宿酒店"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "叫醒服务",
+   "pair": "zh-en",
+   "slug": "jiao-xing-fu-wu",
+   "lang": "zh",
+   "translation": "wake-up call",
+   "shortAnswer": "叫醒服务的英文是 wake-up call，也可说 wake-up service，在酒店前台预约时说 I'd like a wake-up call at 7 a.m. 即可。",
+   "definition": "wake-up call 指酒店前台按客人要求打电话把人叫醒，常与 request、give 搭配，如 request a wake-up call；入住或退房时都可预约。",
+   "examples": [
+    {
+     "en": "I'd like a wake-up call at six thirty, please.",
+     "zh": "请帮我安排六点半的叫醒服务。"
+    },
+    {
+     "en": "The front desk gave us a wake-up call, so we didn't miss our flight after check-out.",
+     "zh": "前台给我们打了叫醒电话，所以我们退房后没有误机。"
+    }
+   ],
+   "tags": [
+    "住宿酒店"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "wake-up call",
+   "pair": "en-zh",
+   "slug": "wake-up-call",
+   "lang": "en",
+   "translation": "叫醒服务",
+   "shortAnswer": "wake-up call 的中文意思是叫醒服务，指酒店按客人要求打电话把人叫醒；它不同于自己设定的 alarm clock。",
+   "definition": "wake-up call 指酒店前台应客人要求打来的叫醒电话，常见搭配有 request a wake-up call、morning wake-up call，需提前告知时间。",
+   "examples": [
+    {
+     "en": "I'd like a wake-up call at six thirty, please.",
+     "zh": "请帮我安排六点半的叫醒服务。"
+    },
+    {
+     "en": "The front desk gave us a wake-up call, so we didn't miss our flight after check-out.",
+     "zh": "前台给我们打了叫醒电话，所以我们退房后没有误机。"
+    }
+   ],
+   "tags": [
+    "住宿酒店"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "毛巾",
+   "pair": "zh-en",
+   "slug": "mao-jin",
+   "lang": "zh",
+   "translation": "towel",
+   "shortAnswer": "毛巾的英文是 towel，是可数名词，酒店里通常写作 bath towel（浴巾）或 hand towel（方巾）。",
+   "definition": "towel 泛指毛巾、浴巾；酒店入住 check in 时可问前台要 extra towels（额外毛巾），退房 check out 前把用过的毛巾留在浴室即可。注意 towel 是可数名词，一条毛巾要说 a towel，不能说 a towel 之外的量词搭配。",
+   "examples": [
+    {
+     "en": "Could I get two extra towels for the twin room, please?",
+     "zh": "请再给我两条毛巾，这是双床房用的。"
+    },
+    {
+     "en": "After check-out, we left the used towels on the bathroom floor.",
+     "zh": "退房之后，我们把用过的毛巾留在了浴室地板上。"
+    }
+   ],
+   "tags": [
+    "住宿酒店"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "towel",
+   "pair": "en-zh",
+   "slug": "towel",
+   "lang": "en",
+   "translation": "毛巾",
+   "shortAnswer": "Towel 的中文意思是毛巾，指用来擦干身体、脸或手的吸水织物，在酒店常分 bath towel 和 hand towel。",
+   "definition": "towel 是可数名词，常见搭配有 bath towel（浴巾）、hand towel（方巾）、beach towel（沙滩巾）；口语中也可说 towel off 表示擦干。入住 check-in 或退房 check-out 时，酒店一般提供毛巾，不需要自带。",
+   "examples": [
+    {
+     "en": "Could I get two extra towels for the twin room, please?",
+     "zh": "请再给我两条毛巾，这是双床房用的。"
+    },
+    {
+     "en": "After check-out, we left the used towels on the bathroom floor.",
+     "zh": "退房之后，我们把用过的毛巾留在了浴室地板上。"
+    }
+   ],
+   "tags": [
+    "住宿酒店"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "马桶",
+   "pair": "zh-en",
+   "slug": "ma-tong",
+   "lang": "zh",
+   "translation": "toilet",
+   "shortAnswer": "在住宿酒店场景中，「马桶」对应的英文是 toilet，指客房卫生间里的具体便器。",
+   "definition": "指卫生间里供大小便的陶瓷器具，即 toilet；在酒店场景中常用于询问或描述马桶故障、清洁与使用。常见搭配：flush the toilet（冲马桶）、toilet seat（马桶圈）。",
+   "examples": [
+    {
+     "en": "The toilet in our hotel room wouldn't stop running, so we called the front desk.",
+     "zh": "我们酒店房间的马桶一直不停冲水，于是我们打电话给前台。"
+    },
+    {
+     "en": "You can still use the toilet in the lobby before your airport pickup arrives.",
+     "zh": "接机的车到之前，你仍然可以使用大堂的卫生间。"
+    }
+   ],
+   "tags": [
+    "住宿酒店"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "toilet",
+   "pair": "en-zh",
+   "slug": "toilet",
+   "lang": "en",
+   "translation": "马桶",
+   "shortAnswer": "In hotel settings, toilet 的中文对应词是「马桶」，指客房里具体的便器。",
+   "definition": "抽水马桶；也引申指卫生间。在住宿酒店场景中常用于描述马桶堵塞、漏水或清洁问题。常见搭配：flush the toilet（冲马桶）、toilet paper（卫生纸）。",
+   "examples": [
+    {
+     "en": "The toilet in our hotel room wouldn't stop running, so we called the front desk.",
+     "zh": "我们酒店房间的马桶一直不停冲水，于是我们打电话给前台。"
+    },
+    {
+     "en": "You can still use the toilet in the lobby before your airport pickup arrives.",
+     "zh": "接机的车到之前，你仍然可以使用大堂的卫生间。"
+    }
+   ],
+   "tags": [
+    "住宿酒店"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "拖鞋",
+   "pair": "zh-en",
+   "slug": "tuo-xie",
+   "lang": "zh",
+   "translation": "slippers",
+   "shortAnswer": "「拖鞋」的英文是 slippers，多指室内穿的软底拖鞋。入住酒店时，房间里的拖鞋通常就说 slippers，而人字拖叫 flip-flops，别混用。",
+   "definition": "slippers 恒用复数，指室内或酒店客房提供的软底拖鞋，也常出现在 check in 后询问备品的场景，如 a pair of slippers。注意 flip-flops 指人字拖，浴室防滑拖可说 shower slippers。",
+   "examples": [
+    {
+     "en": "Could I have a pair of slippers sent to my room? I just checked in and the floor is cold.",
+     "zh": "我刚办完入住，能送一双拖鞋到房间吗？地板有点凉。"
+    },
+    {
+     "en": "The guesthouse offers breakfast included, and they even put slippers by the bed before check-out.",
+     "zh": "这家民宿含早餐，退房前他们甚至在床边放了拖鞋。"
+    }
+   ],
+   "tags": [
+    "住宿酒店"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "slippers",
+   "pair": "en-zh",
+   "slug": "slippers",
+   "lang": "en",
+   "translation": "拖鞋",
+   "shortAnswer": "slippers 的中文意思是「拖鞋」，通常指室内穿的软底鞋。它和 flip-flops（人字拖）不同，slippers 更强调保暖、柔软，多在酒店或家中穿。",
+   "definition": "slippers 为复数名词，指室内软底拖鞋，常见搭配 a pair of slippers、hotel slippers。酒店 check in 询问备品时会用到；口语中一般不说 a slipper 表示一双。与 sandals 不同，slippers 不适合户外长时间行走。",
+   "examples": [
+    {
+     "en": "Could I have a pair of slippers sent to my room? I just checked in and the floor is cold.",
+     "zh": "我刚办完入住，能送一双拖鞋到房间吗？地板有点凉。"
+    },
+    {
+     "en": "The guesthouse offers breakfast included, and they even put slippers by the bed before check-out.",
+     "zh": "这家民宿含早餐，退房前他们甚至在床边放了拖鞋。"
+    }
+   ],
+   "tags": [
+    "住宿酒店"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "电梯",
+   "pair": "zh-en",
+   "slug": "dian-ti",
+   "lang": "zh",
+   "translation": "elevator",
+   "shortAnswer": "电梯的英文是 elevator，美式常用，英式常说 lift。在酒店入住时，问电梯在哪可以说 Where is the elevator?，注意别说成 stairs。",
+   "definition": "elevator 指楼内载人载货的升降电梯，酒店场景与 check-in 前台、luggage storage 行李寄存、room service 送餐都常一起出现；英式表达 lift 同义，指自动扶梯时用 escalator。",
+   "examples": [
+    {
+     "en": "After check-in, we took the elevator to the twelfth floor and found our twin room ready with breakfast included.",
+     "zh": "入住后，我们乘电梯到十二楼，发现双床房已经准备好，还含早餐。"
+    },
+    {
+     "en": "If you need luggage storage after check-out, take the elevator down to the lobby and ask the front desk about airport pickup.",
+     "zh": "退房后如果需要寄存行李，乘电梯下到大堂，向前台咨询接机服务。"
+    }
+   ],
+   "tags": [
+    "住宿酒店"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "elevator",
+   "pair": "en-zh",
+   "slug": "elevator",
+   "lang": "en",
+   "translation": "电梯",
+   "shortAnswer": "Elevator 的中文意思是电梯，美式英语常用，英式英语多说 lift。它指楼内垂直载人载货的升降设备，不是 escalator 自动扶梯。",
+   "definition": "elevator 是名词，指建筑内垂直升降的电梯，常见搭配 take the elevator、elevator button、elevator lobby；美式正式与口语都常用，英式对应 lift，别与 escalator 自动扶梯混用。",
+   "examples": [
+    {
+     "en": "After check-in, we took the elevator to the twelfth floor and found our twin room ready with breakfast included.",
+     "zh": "入住后，我们乘电梯到十二楼，发现双床房已经准备好，还含早餐。"
+    },
+    {
+     "en": "If you need luggage storage after check-out, take the elevator down to the lobby and ask the front desk about airport pickup.",
+     "zh": "退房后如果需要寄存行李，乘电梯下到大堂，向前台咨询接机服务。"
+    }
+   ],
+   "tags": [
+    "住宿酒店"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "隔音",
+   "pair": "zh-en",
+   "slug": "ge-yin",
+   "lang": "zh",
+   "translation": "soundproofing",
+   "shortAnswer": "「隔音」的英文名词是 soundproofing，指阻断声音传播的材料或工艺；形容词用 soundproof。",
+   "definition": "soundproofing 常作不可数名词，指墙体、门窗等的隔音处理；说房间隔音好也可用形容词 soundproof。",
+   "examples": [
+    {
+     "en": "After a long flight, I specifically asked for a room with good soundproofing so I could sleep well before check-out.",
+     "zh": "长途飞行后，我特意要求一间隔音好的房间，以便在退房前睡个好觉。"
+    },
+    {
+     "en": "The guesthouse offers breakfast included and free luggage storage, but the soundproofing is not great, so light sleepers may want earplugs.",
+     "zh": "这家民宿提供含早餐和免费行李寄存，但隔音不太好，所以睡眠浅的人可能需要耳塞。"
+    }
+   ],
+   "tags": [
+    "住宿酒店"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "soundproofing",
+   "pair": "en-zh",
+   "slug": "soundproofing",
+   "lang": "en",
+   "translation": "隔音",
+   "shortAnswer": "Soundproofing 的中文意思是「隔音」，指用材料或结构阻挡声音传播，而 soundproof 是形容词。",
+   "definition": "soundproofing 为不可数名词，常见搭配有 hotel soundproofing、improve soundproofing；询问房间可问 Is the room soundproof?",
+   "examples": [
+    {
+     "en": "After a long flight, I specifically asked for a room with good soundproofing so I could sleep well before check-out.",
+     "zh": "长途飞行后，我特意要求一间隔音好的房间，以便在退房前睡个好觉。"
+    },
+    {
+     "en": "The guesthouse offers breakfast included and free luggage storage, but the soundproofing is not great, so light sleepers may want earplugs.",
+     "zh": "这家民宿提供含早餐和免费行李寄存，但隔音不太好，所以睡眠浅的人可能需要耳塞。"
+    }
+   ],
+   "tags": [
+    "住宿酒店"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "吹风机",
+   "pair": "zh-en",
+   "slug": "chui-feng-ji",
+   "lang": "zh",
+   "translation": "hair dryer",
+   "shortAnswer": "「吹风机」的英文是 hair dryer，也可写作 hairdryer，住酒店想借用时可直接问前台。",
+   "definition": "hair dryer 指用电吹干头发的电器，酒店浴室或衣柜常见。可说 Could I borrow a hair dryer?",
+   "examples": [
+    {
+     "en": "Could I borrow a hair dryer? I just checked in and mine didn't fit in my carry-on.",
+     "zh": "我可以借一个吹风机吗？我刚办完入住，我的吹风机随身行李装不下。"
+    },
+    {
+     "en": "The hotel room has a hair dryer, twin beds, and breakfast included, so check-out will be easy.",
+     "zh": "这间酒店客房配有吹风机、双床和含早餐，所以退房会很方便。"
+    }
+   ],
+   "tags": [
+    "住宿酒店"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "hair dryer",
+   "pair": "en-zh",
+   "slug": "hair-dryer",
+   "lang": "en",
+   "translation": "吹风机",
+   "shortAnswer": "hair dryer 的中文意思是「吹风机」，也写作 hairdryer，指用电吹干头发的电器。",
+   "definition": "hair dryer 是酒店常见电器名词，英式常拼作 hairdryer，搭配 borrow a hair dryer、hotel hair dryer。",
+   "examples": [
+    {
+     "en": "Could I borrow a hair dryer? I just checked in and mine didn't fit in my carry-on.",
+     "zh": "我可以借一个吹风机吗？我刚办完入住，我的吹风机随身行李装不下。"
+    },
+    {
+     "en": "The hotel room has a hair dryer, twin beds, and breakfast included, so check-out will be easy.",
+     "zh": "这间酒店客房配有吹风机、双床和含早餐，所以退房会很方便。"
+    }
+   ],
+   "tags": [
+    "住宿酒店"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "大堂",
+   "pair": "zh-en",
+   "slug": "da-tang",
+   "lang": "zh",
+   "translation": "lobby",
+   "shortAnswer": "「大堂」用英语说是 lobby，指酒店办理入住和休息的公共区域。注意 lobby 不指房间，别和 hall 混用。",
+   "definition": "lobby 通常指酒店进门后的公共大堂，办理 check-in 与 check-out 都在这里。常见搭配：hotel lobby 酒店大堂、wait in the lobby 在大堂等。指走廊、门厅时多用 hallway 或 entrance hall。",
+   "examples": [
+    {
+     "en": "Please wait in the lobby while I finish the check-in.",
+     "zh": "我办完入住手续时，请在大堂稍等。"
+    },
+    {
+     "en": "The hotel lobby has a luggage storage area for guests who check out early.",
+     "zh": "酒店大堂为提前退房的客人设有行李寄存处。"
+    }
+   ],
+   "tags": [
+    "住宿酒店"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "lobby",
+   "pair": "en-zh",
+   "slug": "lobby",
+   "lang": "en",
+   "translation": "大堂",
+   "shortAnswer": "Lobby 的中文意思是「大堂」，指酒店进门处办理入住和休息的公共区域。它不指客房，也不等于走廊 hall。",
+   "definition": "lobby 是酒店、剧院等的公共门厅或大堂；入住 check-in、退房 check-out、寄存行李 luggage storage 多在此办理。指家中门厅或走廊一般用 hallway，不用 lobby。",
+   "examples": [
+    {
+     "en": "Please wait in the lobby while I finish the check-in.",
+     "zh": "我办完入住手续时，请在大堂稍等。"
+    },
+    {
+     "en": "The hotel lobby has a luggage storage area for guests who check out early.",
+     "zh": "酒店大堂为提前退房的客人设有行李寄存处。"
+    }
+   ],
+   "tags": [
+    "住宿酒店"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "楼层",
+   "pair": "zh-en",
+   "slug": "lou-ceng",
+   "lang": "zh",
+   "translation": "floor",
+   "shortAnswer": "「楼层」的英文是 floor，如“我住八楼”说 I'm on the eighth floor，注意英美对首层的说法不同。",
+   "definition": "floor 指建筑物内的楼层，也可指地板。常见搭配：on the third floor、the top floor。英式 ground floor 相当于美式 first floor，易混淆。",
+   "examples": [
+    {
+     "en": "Could you tell me which floor the breakfast room is on? I'd like to grab something before check-out.",
+     "zh": "能告诉我早餐厅在几楼吗？我想在退房前吃点东西。"
+    },
+    {
+     "en": "We booked a twin room on the third floor, and the front desk offered luggage storage after check-out.",
+     "zh": "我们订了三楼的双床房，退房后前台还提供了行李寄存服务。"
+    }
+   ],
+   "tags": [
+    "住宿酒店"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "floor",
+   "pair": "en-zh",
+   "slug": "floor",
+   "lang": "en",
+   "translation": "楼层",
+   "shortAnswer": "floor 的中文意思是「楼层」，如 the tenth floor 指第十层；它还可指地板、地面。",
+   "definition": "floor 作名词指建筑物的一层或室内地面，常用搭配：on the second floor、the ground floor、top floor。美式 first floor 等于英式 ground floor。",
+   "examples": [
+    {
+     "en": "Could you tell me which floor the breakfast room is on? I'd like to grab something before check-out.",
+     "zh": "能告诉我早餐厅在几楼吗？我想在退房前吃点东西。"
+    },
+    {
+     "en": "We booked a twin room on the third floor, and the front desk offered luggage storage after check-out.",
+     "zh": "我们订了三楼的双床房，退房后前台还提供了行李寄存服务。"
+    }
+   ],
+   "tags": [
+    "住宿酒店"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "充电器",
+   "pair": "zh-en",
+   "slug": "chong-dian-qi",
+   "lang": "zh",
+   "translation": "charger",
+   "shortAnswer": "充电器的英文是 charger，指给手机、平板等设备补充电量的装置。注意 charger 通常指充电头或整套充电设备，充电线则说 charging cable。",
+   "definition": "charger 是可数名词，常与 phone、laptop 搭配，如 phone charger（手机充电器）。出门借充电器可说 Do you have a charger? 若指充电宝，英语多说 power bank，而不是 charger。",
+   "examples": [
+    {
+     "en": "I forgot my charger at home, so my phone died during the trip.",
+     "zh": "我把充电器忘在家里了，所以旅途中手机没电了。"
+    },
+    {
+     "en": "This charger can charge two devices at the same time.",
+     "zh": "这个充电器可以同时给两台设备充电。"
+    }
+   ],
+   "tags": [
+    "手机与快递"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "charger",
+   "pair": "en-zh",
+   "slug": "charger",
+   "lang": "en",
+   "translation": "充电器",
+   "shortAnswer": "charger 的中文意思是充电器，即给手机、电脑等设备充电的装置。它一般指充电头或整套充电设备，充电线则是 charging cable。",
+   "definition": "charger 为可数名词，常见搭配有 phone charger、laptop charger、wall charger。口语中借充电器常说 Can I borrow your charger? 注意充电宝是 power bank，不是 charger，两者别混用。",
+   "examples": [
+    {
+     "en": "I forgot my charger at home, so my phone died during the trip.",
+     "zh": "我把充电器忘在家里了，所以旅途中手机没电了。"
+    },
+    {
+     "en": "This charger can charge two devices at the same time.",
+     "zh": "这个充电器可以同时给两台设备充电。"
+    }
+   ],
+   "tags": [
+    "手机与快递"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "客房服务",
+   "pair": "zh-en",
+   "slug": "ke-fang-fu-wu",
+   "lang": "zh",
+   "translation": "room service",
+   "shortAnswer": "「客房服务」的英文是 room service，指酒店把餐食饮料送到客人房间的服务。注意它不等于 housekeeping（客房清洁）。",
+   "definition": "room service 为不可数名词，常搭配 order room service、room service menu。它与 housekeeping（打扫房间）分工不同，点餐送餐用前者。",
+   "examples": [
+    {
+     "en": "We were too tired to go out, so we ordered room service and had dinner in bed.",
+     "zh": "我们太累了不想出门，就叫了客房服务，在床上吃了晚饭。"
+    },
+    {
+     "en": "Does this hotel offer 24-hour room service? I'd like some hot soup after my late flight.",
+     "zh": "这家酒店提供全天候客房服务吗？我坐晚班飞机到，想喝点热汤。"
+    }
+   ],
+   "tags": [
+    "住宿酒店"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "room service",
+   "pair": "en-zh",
+   "slug": "room-service",
+   "lang": "en",
+   "translation": "客房服务",
+   "shortAnswer": "room service 的中文意思是「客房服务」，特指酒店送餐到房的服务。它与 housekeeping（客房清洁）不同，不要混用。",
+   "definition": "room service 指酒店送餐到房的客房服务，常搭配 order room service、room service menu。不可数名词，与 housekeeping（打扫房间）相对。",
+   "examples": [
+    {
+     "en": "We were too tired to go out, so we ordered room service and had dinner in bed.",
+     "zh": "我们太累了不想出门，就叫了客房服务，在床上吃了晚饭。"
+    },
+    {
+     "en": "Does this hotel offer 24-hour room service? I'd like some hot soup after my late flight.",
+     "zh": "这家酒店提供全天候客房服务吗？我坐晚班飞机到，想喝点热汤。"
+    }
+   ],
+   "tags": [
+    "住宿酒店"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "手机",
+   "pair": "zh-en",
+   "slug": "shou-ji",
+   "lang": "zh",
+   "translation": "cellphone",
+   "shortAnswer": "「手机」的英文是 cellphone，美式常用；英式多说 mobile，智能手机是 smartphone。",
+   "definition": "cellphone 指移动电话，常搭配 charge my cellphone（充电）、cellphone number（手机号）。收快递时常需用它出示取件码或扫码。",
+   "examples": [
+    {
+     "en": "I left my cellphone at home, so I couldn't show the courier my pickup code.",
+     "zh": "我把手机落在家里了，所以没法向快递员出示取件码。"
+    },
+    {
+     "en": "Please charge your cellphone before the trip; you'll need it to scan the QR code when you sign for the delivery.",
+     "zh": "出发前请把手机充好电，签收快递时你需要用它扫描二维码。"
+    }
+   ],
+   "tags": [
+    "手机与快递"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "cellphone",
+   "pair": "en-zh",
+   "slug": "cellphone",
+   "lang": "en",
+   "translation": "手机",
+   "shortAnswer": "cellphone 的中文意思是「手机」，即移动电话；英式多说 mobile，智能手机则说 smartphone。",
+   "definition": "cellphone 是可数名词，美式常用。常见搭配有 cellphone charger（充电器）、cellphone number（手机号）。",
+   "examples": [
+    {
+     "en": "I left my cellphone at home, so I couldn't show the courier my pickup code.",
+     "zh": "我把手机落在家里了，所以没法向快递员出示取件码。"
+    },
+    {
+     "en": "Please charge your cellphone before the trip; you'll need it to scan the QR code when you sign for the delivery.",
+     "zh": "出发前请把手机充好电，签收快递时你需要用它扫描二维码。"
+    }
+   ],
+   "tags": [
+    "手机与快递"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "洗漱用品",
+   "pair": "zh-en",
+   "slug": "xi-shu-yong-pin",
+   "lang": "zh",
+   "translation": "toiletries",
+   "shortAnswer": "洗漱用品的英文是 toiletries，通常指酒店提供的牙刷、洗发水等个人清洁用品，且常用复数。记：toiletries 就是洗漱用品。",
+   "definition": "toiletries 统称旅行或酒店提供的个人清洁用品，如 shampoo、soap、toothbrush。与 amenities 不同，后者含拖鞋、浴袍等设施。",
+   "examples": [
+    {
+     "en": "I left my toiletry bag at home, so I asked the front desk for some basic toiletries after check-in.",
+     "zh": "我把洗漱包忘在家里了，所以入住后向前台要了一些基本的洗漱用品。"
+    },
+    {
+     "en": "Before check-out, make sure you pack your own toiletries, because the hotel only provides them for free during your stay.",
+     "zh": "退房前请确保收拾好自己的洗漱用品，因为酒店仅在入住期间免费提供。"
+    }
+   ],
+   "tags": [
+    "住宿酒店"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "toiletries",
+   "pair": "en-zh",
+   "slug": "toiletries",
+   "lang": "en",
+   "translation": "洗漱用品",
+   "shortAnswer": "toiletries 的中文意思是洗漱用品，指旅行或酒店提供的个人清洁护理用品，如牙刷、洗发水等。记住：toiletries 即洗漱用品。",
+   "definition": "toiletries 指个人清洁用品，如牙膏、肥皂、洗发水。酒店语境中常与 check-in、check-out 搭配。注意勿与 amenities（含拖鞋、浴袍）混淆。",
+   "examples": [
+    {
+     "en": "I left my toiletry bag at home, so I asked the front desk for some basic toiletries after check-in.",
+     "zh": "我把洗漱包忘在家里了，所以入住后向前台要了一些基本的洗漱用品。"
+    },
+    {
+     "en": "Before check-out, make sure you pack your own toiletries, because the hotel only provides them for free during your stay.",
+     "zh": "退房前请确保收拾好自己的洗漱用品，因为酒店仅在入住期间免费提供。"
+    }
+   ],
+   "tags": [
+    "住宿酒店"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "流量",
+   "pair": "zh-en",
+   "slug": "liu-liang",
+   "lang": "zh",
+   "translation": "mobile data",
+   "shortAnswer": "「流量」的英文是 mobile data，特指手机上网数据；但网红或平台的「流量」英文不用 flow，而是 traffic 或 views。",
+   "definition": "手机流量常见搭配：mobile data plan（流量套餐）、run out of data（流量用完）、data usage（流量用量）。网红/主播的「流量」意为关注度，英文说 traffic、views 或 popularity，与手机流量完全不同。",
+   "examples": [
+    {
+     "en": "I ran out of mobile data, so I can't watch videos until I get a new data plan.",
+     "zh": "我的流量用完了，所以在换新套餐之前看不了视频。"
+    },
+    {
+     "en": "Turn off mobile data when you're on Wi‑Fi to avoid extra charges.",
+     "zh": "连 Wi‑Fi 时关掉流量，避免产生额外费用。"
+    }
+   ],
+   "tags": [
+    "手机与快递"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "mobile data",
+   "pair": "en-zh",
+   "slug": "mobile-data",
+   "lang": "en",
+   "translation": "流量",
+   "shortAnswer": "mobile data 的中文意思是「流量」，即手机上网使用的数据；它和 Wi‑Fi 相对，不指网红或平台的人气流量。",
+   "definition": "mobile data 是手机通过蜂窝网络上网的数据，常搭配 use、run out of、turn on/off。日常可省略 mobile 只说 data。指网红人气时英文用 traffic 或 views，不用 mobile data。",
+   "examples": [
+    {
+     "en": "I ran out of mobile data, so I can't watch videos until I get a new data plan.",
+     "zh": "我的流量用完了，所以在换新套餐之前看不了视频。"
+    },
+    {
+     "en": "Turn off mobile data when you're on Wi‑Fi to avoid extra charges.",
+     "zh": "连 Wi‑Fi 时关掉流量，避免产生额外费用。"
+    }
+   ],
+   "tags": [
+    "手机与快递"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "免打扰",
+   "pair": "zh-en",
+   "slug": "mian-da-rao",
+   "lang": "zh",
+   "translation": "do not disturb",
+   "shortAnswer": "「免打扰」的英文是 do not disturb，酒店房门牌常用，固定短语，不可写成 no disturb。",
+   "definition": "do not disturb 是酒店固定标识，指免打扰，可作名词短语如 a do not disturb sign。",
+   "examples": [
+    {
+     "en": "I put the do not disturb sign on the door before my nap.",
+     "zh": "午睡前我把免打扰牌挂在了门上。"
+    },
+    {
+     "en": "Could you set my room to do not disturb until tomorrow morning?",
+     "zh": "能否把我的房间设为免打扰，直到明天早上？"
+    }
+   ],
+   "tags": [
+    "住宿酒店"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "do not disturb",
+   "pair": "en-zh",
+   "slug": "do-not-disturb",
+   "lang": "en",
+   "translation": "免打扰",
+   "shortAnswer": "Do not disturb 的中文意思是「免打扰」，常见于酒店房门牌，表示请勿打扰。",
+   "definition": "do not disturb is a fixed phrase meaning 免打扰, used as a sign or room status in hotels.",
+   "examples": [
+    {
+     "en": "I put the do not disturb sign on the door before my nap.",
+     "zh": "午睡前我把免打扰牌挂在了门上。"
+    },
+    {
+     "en": "Could you set my room to do not disturb until tomorrow morning?",
+     "zh": "能否把我的房间设为免打扰，直到明天早上？"
+    }
+   ],
+   "tags": [
+    "住宿酒店"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "验证码",
+   "pair": "zh-en",
+   "slug": "yan-zheng-ma",
+   "lang": "zh",
+   "translation": "verification code",
+   "shortAnswer": "「验证码」的英文是 verification code。注意：短信验证码是 SMS verification code，不是 password 或 PIN。",
+   "definition": "verification code 指登录、支付或注册时系统发送的一次性安全码，常说 receive/enter/request a verification code，口语中也说 code。",
+   "examples": [
+    {
+     "en": "Please enter the verification code we sent to your phone.",
+     "zh": "请输入我们发送到你手机上的验证码。"
+    },
+    {
+     "en": "If you didn't receive the verification code, you can request a new one.",
+     "zh": "如果你没有收到验证码，可以重新获取一个。"
+    }
+   ],
+   "tags": [
+    "手机与快递"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "verification code",
+   "pair": "en-zh",
+   "slug": "verification-code",
+   "lang": "en",
+   "translation": "验证码",
+   "shortAnswer": "“verification code”的中文意思是「验证码」。它特指一次性安全码，区别于长期使用的 password 和 PIN。",
+   "definition": "verification code 是可数名词，指系统发送的一次性安全码，常见搭配有 enter/request/resend a verification code，正式场合常与 SMS 连用。",
+   "examples": [
+    {
+     "en": "Please enter the verification code we sent to your phone.",
+     "zh": "请输入我们发送到你手机上的验证码。"
+    },
+    {
+     "en": "If you didn't receive the verification code, you can request a new one.",
+     "zh": "如果你没有收到验证码，可以重新获取一个。"
+    }
+   ],
+   "tags": [
+    "手机与快递"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "二维码",
+   "pair": "zh-en",
+   "slug": "er-wei-ma",
+   "lang": "zh",
+   "translation": "QR code",
+   "shortAnswer": "「二维码」的英文是 QR code，全称 Quick Response code。日常口语中直接说 QR code 即可，不要逐字翻译成 two-dimensional code。",
+   "definition": "QR code 是手机与快递场景中的高频词，常搭配 scan a QR code（扫二维码）、generate a QR code（生成二维码）。注意快递取件码是 pickup code，不是 QR code；验证码是 verification code。",
+   "examples": [
+    {
+     "en": "Please scan the QR code at the pickup station to collect your package.",
+     "zh": "请在取件站扫描二维码领取你的包裹。"
+    },
+    {
+     "en": "The courier asked me to show the QR code on my phone before signing for delivery.",
+     "zh": "快递员让我在签收前出示手机上的二维码。"
+    }
+   ],
+   "tags": [
+    "手机与快递"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "QR code",
+   "pair": "en-zh",
+   "slug": "qr-code",
+   "lang": "en",
+   "translation": "二维码",
+   "shortAnswer": "QR code 的中文意思是「二维码」，其中 QR 是 Quick Response 的缩写。它和普通条形码 bar code 不同，能存储更多信息，且可被手机摄像头快速扫描。",
+   "definition": "QR code 是手机与快递场景的常用词，搭配 scan a QR code、show your QR code。在快递语境中，QR code 常用于扫码取件，但取件码是 pickup code，不要混淆。",
+   "examples": [
+    {
+     "en": "Please scan the QR code at the pickup station to collect your package.",
+     "zh": "请在取件站扫描二维码领取你的包裹。"
+    },
+    {
+     "en": "The courier asked me to show the QR code on my phone before signing for delivery.",
+     "zh": "快递员让我在签收前出示手机上的二维码。"
+    }
+   ],
+   "tags": [
+    "手机与快递"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "充电宝",
+   "pair": "zh-en",
+   "slug": "chong-dian-bao",
+   "lang": "zh",
+   "translation": "power bank",
+   "shortAnswer": "充电宝的英文是 power bank，也可说 portable charger；最标准、最通用的说法是 power bank。",
+   "definition": "power bank 指可随身携带、给手机等设备充电的移动电源，常见搭配：bring a power bank、power bank is dead。",
+   "examples": [
+    {
+     "en": "I always carry a power bank in my bag because my phone battery dies quickly.",
+     "zh": "我包里总是带着一个充电宝，因为我的手机电池耗电很快。"
+    },
+    {
+     "en": "Can I borrow your power bank? My phone is about to shut down.",
+     "zh": "能借一下你的充电宝吗？我的手机快关机了。"
+    }
+   ],
+   "tags": [
+    "手机与快递"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "power bank",
+   "pair": "en-zh",
+   "slug": "power-bank",
+   "lang": "en",
+   "translation": "充电宝",
+   "shortAnswer": "power bank 的中文意思是充电宝，指可随身携带的移动电源；它自带电池，与普通 charger 不同。",
+   "definition": "power bank 是可数名词，指内置电池、能给手机充电的便携设备，搭配：a power bank、my power bank ran out。",
+   "examples": [
+    {
+     "en": "I always carry a power bank in my bag because my phone battery dies quickly.",
+     "zh": "我包里总是带着一个充电宝，因为我的手机电池耗电很快。"
+    },
+    {
+     "en": "Can I borrow your power bank? My phone is about to shut down.",
+     "zh": "能借一下你的充电宝吗？我的手机快关机了。"
+    }
+   ],
+   "tags": [
+    "手机与快递"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "密码",
+   "pair": "zh-en",
+   "slug": "mi-ma",
+   "lang": "zh",
+   "translation": "password",
+   "shortAnswer": "「密码」的英文是 password，指登录或解锁用的字符组合。注意手机解锁密码、支付密码和一次性验证码要区分。",
+   "definition": "password 常用于账号、Wi-Fi、手机屏幕锁；一次性短信码叫 verification code，取快递的取件码是 pickup code，别混用。",
+   "examples": [
+    {
+     "en": "I forgot my password, so I had to reset it through the app.",
+     "zh": "我忘了密码，只好通过这个应用重置了它。"
+    },
+    {
+     "en": "Never share your password with anyone, even if they claim to be customer service.",
+     "zh": "不要把你的密码告诉任何人，即使对方自称是客服。"
+    }
+   ],
+   "tags": [
+    "手机与快递"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "password",
+   "pair": "en-zh",
+   "slug": "password",
+   "lang": "en",
+   "translation": "密码",
+   "shortAnswer": "Password 的中文意思是密码，指登录账号或解锁设备时输入的一串字符。它强调的是长期设定的口令，而非一次性的验证码。",
+   "definition": "password 可指账号密码、开机密码、Wi-Fi 密码；动词搭配 enter/set/change a password，口语常说 put in your password，注意别与 code、PIN 混用。",
+   "examples": [
+    {
+     "en": "I forgot my password, so I had to reset it through the app.",
+     "zh": "我忘了密码，只好通过这个应用重置了它。"
+    },
+    {
+     "en": "Never share your password with anyone, even if they claim to be customer service.",
+     "zh": "不要把你的密码告诉任何人，即使对方自称是客服。"
+    }
+   ],
+   "tags": [
+    "手机与快递"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "寄件",
+   "pair": "zh-en",
+   "slug": "ji-jian",
+   "lang": "zh",
+   "translation": "send a parcel",
+   "shortAnswer": "「寄件」的英文是 send a parcel，指把包裹交给快递或邮局寄出。注意 send a parcel 强调动作，若要强调寄件这个行为本身，口语也常说 send a package。",
+   "definition": "send a parcel 是英式常用说法，美式多说 send a package；寄件时可说 I want to send a parcel。注意与 express delivery（快递服务）、courier（快递员/快递公司）区分。",
+   "examples": [
+    {
+     "en": "I need to send a parcel to Shanghai, so I'll take it to the courier station this afternoon.",
+     "zh": "我要往上海寄件，所以今天下午把包裹送到快递站。"
+    },
+    {
+     "en": "You can send a parcel at the post office, but the courier app is usually cheaper.",
+     "zh": "你可以去邮局寄件，但用快递App通常更便宜。"
+    }
+   ],
+   "tags": [
+    "手机与快递"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "send a parcel",
+   "pair": "en-zh",
+   "slug": "send-a-parcel",
+   "lang": "en",
+   "translation": "寄件",
+   "shortAnswer": "「send a parcel」的中文意思是「寄件」，即把包裹寄出去。它强调寄包裹这个动作，而 courier 指快递员或快递公司，delivery 指派送。",
+   "definition": "send a parcel 是寄包裹的通用说法，多用于英式英语，美式常用 send a package。常见搭配：send a parcel by express、send a parcel overseas。注意别和 pick up a parcel（取件）混淆。",
+   "examples": [
+    {
+     "en": "I need to send a parcel to Shanghai, so I'll take it to the courier station this afternoon.",
+     "zh": "我要往上海寄件，所以今天下午把包裹送到快递站。"
+    },
+    {
+     "en": "You can send a parcel at the post office, but the courier app is usually cheaper.",
+     "zh": "你可以去邮局寄件，但用快递App通常更便宜。"
+    }
+   ],
+   "tags": [
+    "手机与快递"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "包裹",
+   "pair": "zh-en",
+   "slug": "bao-guo",
+   "lang": "zh",
+   "translation": "package",
+   "shortAnswer": "「包裹」的英文是 package，多指快递寄送的包装件或软件安装包。注意日常口语里快递包裹也常说 parcel，而 package 更偏美式、也可指打包好的整件物品。",
+   "definition": "package 在快递场景中常与 send/receive/track a package 搭配，指寄送或收到的包裹；也可作动词表示打包。注意与 parcel 略有地域差异：美式多用 package，英式快递语境更常用 parcel；软件安装包同样用 package。",
+   "examples": [
+    {
+     "en": "The courier just delivered a package for you at the front desk.",
+     "zh": "快递员刚在前台给你送来了一个包裹。"
+    },
+    {
+     "en": "Please track your package with the pickup code and remember to sign for delivery.",
+     "zh": "请用取件码查询你的包裹，并记得签收。"
+    }
+   ],
+   "tags": [
+    "手机与快递"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "package",
+   "pair": "en-zh",
+   "slug": "package",
+   "lang": "en",
+   "translation": "包裹",
+   "shortAnswer": "Package 的中文意思是「包裹」，指快递寄送或打包好的成件物品。它和 parcel 意思接近，但 package 在美式英语中更常用，还可指软件安装包或一整套方案。",
+   "definition": "package 作名词指包裹、包装件，也指软件包或整套方案；作动词表示打包、包装。快递场景常见搭配有 send/receive/track a package. 英式英语中快递包裹更常用 parcel，但 package 也可通用，注意不要与包装材料 packaging 混淆。",
+   "examples": [
+    {
+     "en": "The courier just delivered a package for you at the front desk.",
+     "zh": "快递员刚在前台给你送来了一个包裹。"
+    },
+    {
+     "en": "Please track your package with the pickup code and remember to sign for delivery.",
+     "zh": "请用取件码查询你的包裹，并记得签收。"
+    }
+   ],
+   "tags": [
+    "手机与快递"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "扫码",
+   "pair": "zh-en",
+   "slug": "sao-ma",
+   "lang": "zh",
+   "translation": "scan the code",
+   "shortAnswer": "「扫码」的英文是 scan the code，常用于扫码支付、扫码取件等场合，code 指二维码。",
+   "definition": "扫码指用手机摄像头读取二维码或条形码以完成操作，英文常说 scan the code。快递取件、扫码支付均可用此表达。",
+   "examples": [
+    {
+     "en": "When you pick up your express delivery, just scan the code on the locker.",
+     "zh": "取快递时，只需扫描快递柜上的二维码即可。"
+    },
+    {
+     "en": "She scanned the code at the checkout counter to pay for her power bank.",
+     "zh": "她在收银台扫码支付了充电宝的费用。"
+    }
+   ],
+   "tags": [
+    "手机与快递"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "scan the code",
+   "pair": "en-zh",
+   "slug": "scan-the-code",
+   "lang": "en",
+   "translation": "扫码",
+   "shortAnswer": "scan the code 的中文意思是「扫码」，指用手机扫描二维码或条形码来完成操作。",
+   "definition": "scan the code 指扫描编码以获取信息或完成操作，常用于支付、取件等场景，也可说 scan the QR code。",
+   "examples": [
+    {
+     "en": "When you pick up your express delivery, just scan the code on the locker.",
+     "zh": "取快递时，只需扫描快递柜上的二维码即可。"
+    },
+    {
+     "en": "She scanned the code at the checkout counter to pay for her power bank.",
+     "zh": "她在收银台扫码支付了充电宝的费用。"
+    }
+   ],
+   "tags": [
+    "手机与快递"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "快递",
+   "pair": "zh-en",
+   "slug": "kuai-di",
+   "lang": "zh",
+   "translation": "express delivery",
+   "shortAnswer": "「快递」的英文是 express delivery，指快递服务或快递件；口语也常说 courier 或 package。",
+   "definition": "express delivery 强调快速投递，可指服务本身，也可指一件快递。常见搭配：send by express delivery（寄快递）、sign for delivery（签收）。注意快递员一般叫 courier。",
+   "examples": [
+    {
+     "en": "I sent the documents by express delivery so they would arrive tomorrow morning.",
+     "zh": "我把文件用快递寄出，这样明天上午就能到。"
+    },
+    {
+     "en": "The courier asked me to sign for the express delivery at the front desk.",
+     "zh": "快递员让我在前台签收这份快递。"
+    }
+   ],
+   "tags": [
+    "手机与快递"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "express delivery",
+   "pair": "en-zh",
+   "slug": "express-delivery",
+   "lang": "en",
+   "translation": "快递",
+   "shortAnswer": "express delivery 的中文意思是「快递」，指快速投递服务或快递件，比普通 mail 更快。",
+   "definition": "express delivery 较正式，常见于物流、电商和商务语境。可搭配 send、receive、arrange、sign for。口语中常直接说 express 或 courier，但不指快递员本人。",
+   "examples": [
+    {
+     "en": "I sent the documents by express delivery so they would arrive tomorrow morning.",
+     "zh": "我把文件用快递寄出，这样明天上午就能到。"
+    },
+    {
+     "en": "The courier asked me to sign for the express delivery at the front desk.",
+     "zh": "快递员让我在前台签收这份快递。"
+    }
+   ],
+   "tags": [
+    "手机与快递"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "取件码",
+   "pair": "zh-en",
+   "slug": "qu-jian-ma",
+   "lang": "zh",
+   "translation": "pickup code",
+   "shortAnswer": "取件码的英文是 pickup code，指取快递时用的短码或二维码。别和验证码或运单号混用。",
+   "definition": "pickup code 指快递到柜或到站后发给收件人的取件凭证，常用搭配有 enter the pickup code、show the pickup code。",
+   "examples": [
+    {
+     "en": "The courier texted me a pickup code, so I can get my parcel from the locker.",
+     "zh": "快递员给我发了一个取件码，我可以从快递柜里取包裹了。"
+    },
+    {
+     "en": "Please enter the pickup code on the screen to open the locker and sign for delivery.",
+     "zh": "请在屏幕上输入取件码，打开柜门并签收快递。"
+    }
+   ],
+   "tags": [
+    "手机与快递"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "pickup code",
+   "pair": "en-zh",
+   "slug": "pickup-code",
+   "lang": "en",
+   "translation": "取件码",
+   "shortAnswer": "pickup code 的中文意思是取件码，指取快递时用来开柜或领包裹的短数字或二维码。",
+   "definition": "A pickup code is a short number or QR code sent to the recipient for collecting a parcel, often used in enter / show the pickup code.",
+   "examples": [
+    {
+     "en": "The courier texted me a pickup code, so I can get my parcel from the locker.",
+     "zh": "快递员给我发了一个取件码，我可以从快递柜里取包裹了。"
+    },
+    {
+     "en": "Please enter the pickup code on the screen to open the locker and sign for delivery.",
+     "zh": "请在屏幕上输入取件码，打开柜门并签收快递。"
+    }
+   ],
+   "tags": [
+    "手机与快递"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "差评",
+   "pair": "zh-en",
+   "slug": "cha-ping",
+   "lang": "zh",
+   "translation": "negative review",
+   "shortAnswer": "「差评」的英文是 negative review，指顾客对商品或服务给出的负面评价。注意别把它和售后 after-sales service 混为一谈，差评是评价，售后是服务。",
+   "definition": "常用搭配：leave a negative review（留差评）、get a negative review（收到差评）。在手机与快递场景中，买家常因快递延误、取件码出错或售后推诿而留差评。",
+   "examples": [
+    {
+     "en": "After the courier lost my package, I left a negative review for the store.",
+     "zh": "快递把我的包裹弄丢后，我给这家店留了差评。"
+    },
+    {
+     "en": "The power bank stopped working within a week, so many buyers posted negative reviews about its warranty.",
+     "zh": "那个充电宝一周内就坏了，所以很多买家针对它的保修发了差评。"
+    }
+   ],
+   "tags": [
+    "手机与快递"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "negative review",
+   "pair": "en-zh",
+   "slug": "negative-review",
+   "lang": "en",
+   "translation": "差评",
+   "shortAnswer": "negative review 的中文意思是「差评」，指对商品、服务或商家的负面评价。它强调评价内容是负面的，与一般说法 review（评价）不同。",
+   "definition": "常见搭配：leave / post / receive a negative review。手机与快递场景中，物流慢、包装破损、售后差都可能导致 negative review，语气中性偏正式，比口语的 bad review 更书面。",
+   "examples": [
+    {
+     "en": "After the courier lost my package, I left a negative review for the store.",
+     "zh": "快递把我的包裹弄丢后，我给这家店留了差评。"
+    },
+    {
+     "en": "The power bank stopped working within a week, so many buyers posted negative reviews about its warranty.",
+     "zh": "那个充电宝一周内就坏了，所以很多买家针对它的保修发了差评。"
+    }
+   ],
+   "tags": [
+    "手机与快递"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "好评",
+   "pair": "zh-en",
+   "slug": "hao-ping",
+   "lang": "zh",
+   "translation": "positive review",
+   "shortAnswer": "好评的英文是 positive review。在手机与快递场景中，它常指对网购商品或快递服务的正面评价；注意评价是 review，不是 praise。",
+   "definition": "positive review 作名词短语，指用户给出的好评；常用搭配有 leave a positive review、get positive reviews。辨析：review 是具体评价，rating 是星级评分，praise 是抽象赞扬。",
+   "examples": [
+    {
+     "en": "After the courier delivered my power bank, I left a positive review because the packaging was excellent.",
+     "zh": "快递员把我的充电宝送到后，我因为包装很好而给了好评。"
+    },
+    {
+     "en": "The seller asked me to scan the QR code and leave a positive review after signing for delivery.",
+     "zh": "卖家让我签收后扫描二维码并给个好评。"
+    }
+   ],
+   "tags": [
+    "手机与快递"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "positive review",
+   "pair": "en-zh",
+   "slug": "positive-review",
+   "lang": "en",
+   "translation": "好评",
+   "shortAnswer": "positive review 的中文意思是好评。它强调对商品或服务的正面评价，通常以文字或评分形式出现，反义为 negative review。",
+   "definition": "positive review 指对产品、服务或商家的正面评价。常见搭配：leave/post/write a positive review，收到好评可用 get/receive positive reviews。注意 review 指具体评论，rating 侧重量化评分。",
+   "examples": [
+    {
+     "en": "After the courier delivered my power bank, I left a positive review because the packaging was excellent.",
+     "zh": "快递员把我的充电宝送到后，我因为包装很好而给了好评。"
+    },
+    {
+     "en": "The seller asked me to scan the QR code and leave a positive review after signing for delivery.",
+     "zh": "卖家让我签收后扫描二维码并给个好评。"
+    }
+   ],
+   "tags": [
+    "手机与快递"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "售后",
+   "pair": "zh-en",
+   "slug": "shou-hou",
+   "lang": "zh",
+   "translation": "after-sales service",
+   "shortAnswer": "「售后」的英文是 after-sales service，指商品售出后的维修、退换等支持。注意与「保修」warranty 区分：保修常指免费维修期限，售后则涵盖更广的服务。",
+   "definition": "after-sales service 是固定搭配，作名词用，常见于手机、家电、快递等行业。口语中也可说 after-sales support。搭配：provide/good after-sales service。注意不要漏掉连字符和复数 s。",
+   "examples": [
+    {
+     "en": "The phone comes with a one-year warranty and free after-sales service.",
+     "zh": "这款手机附带一年保修和免费售后服务。"
+    },
+    {
+     "en": "If you have any problems with the delivery, please contact our after-sales service.",
+     "zh": "如果快递有任何问题，请联系我们的售后服务。"
+    }
+   ],
+   "tags": [
+    "手机与快递"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "after-sales service",
+   "pair": "en-zh",
+   "slug": "after-sales-service",
+   "lang": "en",
+   "translation": "售后",
+   "shortAnswer": "After-sales service 的中文意思是「售后」，即商品售出后提供的维修、退换、咨询等服务。它比 warranty（保修）范围更广，warranty 通常只指免费维修的承诺。",
+   "definition": "after-sales service 是正式商务用语，指售后支持，常见搭配有 offer/provide after-sales service。口语中也可用 after-sales support。注意拼写：after-sales 带连字符，service 可作不可数名词。",
+   "examples": [
+    {
+     "en": "The phone comes with a one-year warranty and free after-sales service.",
+     "zh": "这款手机附带一年保修和免费售后服务。"
+    },
+    {
+     "en": "If you have any problems with the delivery, please contact our after-sales service.",
+     "zh": "如果快递有任何问题，请联系我们的售后服务。"
+    }
+   ],
+   "tags": [
+    "手机与快递"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "签收",
+   "pair": "zh-en",
+   "slug": "qian-shou",
+   "lang": "zh",
+   "translation": "sign for delivery",
+   "shortAnswer": "「签收」即 sign for delivery，指快递送达时签字确认收货，强调签字动作而非仅收到包裹。",
+   "definition": "sign for delivery 指收件人在快递或挂号信送达时签字确认，常见搭配有 refuse to sign for delivery（拒签）。",
+   "examples": [
+    {
+     "en": "The courier asked me to sign for delivery at the door.",
+     "zh": "快递员让我在门口签收。"
+    },
+    {
+     "en": "If nobody can sign for delivery, the package will be sent back.",
+     "zh": "如果没人能签收，包裹就会被退回。"
+    }
+   ],
+   "tags": [
+    "手机与快递"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "sign for delivery",
+   "pair": "en-zh",
+   "slug": "sign-for-delivery",
+   "lang": "en",
+   "translation": "签收",
+   "shortAnswer": "Sign for delivery means 签收: signing to confirm you received a package, not just receiving it.",
+   "definition": "Sign for delivery is used when a courier hands you a parcel and you sign to confirm receipt, as in someone must sign for delivery.",
+   "examples": [
+    {
+     "en": "The courier asked me to sign for delivery at the door.",
+     "zh": "快递员让我在门口签收。"
+    },
+    {
+     "en": "If nobody can sign for delivery, the package will be sent back.",
+     "zh": "如果没人能签收，包裹就会被退回。"
+    }
+   ],
+   "tags": [
+    "手机与快递"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "信号",
+   "pair": "zh-en",
+   "slug": "xin-hao",
+   "lang": "zh",
+   "translation": "signal",
+   "shortAnswer": "「信号」的英文是 signal，指手机信号、Wi-Fi 信号或传递信息的信号。注意别用 sign（标志牌）或 symbol（符号）来表达手机信号。",
+   "definition": "手机信号说 cell signal、signal strength 或 no signal；也常与 receive、lose、bad、weak 搭配。寄快递时「收到信号」不用 signal，而是收到短信通知。与 sign（标牌、签名）、symbol（象征符号）区分使用。",
+   "examples": [
+    {
+     "en": "I can't get a signal in the elevator, so I'll call you back later.",
+     "zh": "电梯里没信号，我晚点再打给你。"
+    },
+    {
+     "en": "The courier will send you a signal by text when your package is delivered.",
+     "zh": "快递员会在包裹送达时发短信通知你。"
+    }
+   ],
+   "tags": [
+    "手机与快递"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "signal",
+   "pair": "en-zh",
+   "slug": "signal",
+   "lang": "en",
+   "translation": "信号",
+   "shortAnswer": "signal 的中文意思是「信号」，指手机、Wi-Fi 或通信中传递的信息。它比 sign（标志牌、签名）更强调传递消息的动作与载体。",
+   "definition": "signal 作名词指手机信号、通信信号或暗示；作动词指发信号、示意。常见搭配有 signal strength、lose signal、send a signal。注意 sign 是看得见的标志或签名，symbol 是象征符号，不要混用。",
+   "examples": [
+    {
+     "en": "I can't get a signal in the elevator, so I'll call you back later.",
+     "zh": "电梯里没信号，我晚点再打给你。"
+    },
+    {
+     "en": "The courier will send you a signal by text when your package is delivered.",
+     "zh": "快递员会在包裹送达时发短信通知你。"
+    }
+   ],
+   "tags": [
+    "手机与快递"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "客服",
+   "pair": "zh-en",
+   "slug": "ke-fu",
+   "lang": "zh",
+   "translation": "customer service",
+   "shortAnswer": "「客服」的英文是 customer service，指企业为顾客提供的咨询、投诉等服务。",
+   "definition": "customer service 指客服部门或人员，常见搭配有 contact customer service、customer service hotline。",
+   "examples": [
+    {
+     "en": "If your package hasn't arrived, please contact customer service for a tracking update.",
+     "zh": "如果您的包裹还没到，请联系客服获取物流更新。"
+    },
+    {
+     "en": "The customer service team helped me sign for delivery after I lost my pickup code.",
+     "zh": "在我弄丢取件码后，客服团队帮我完成了签收。"
+    }
+   ],
+   "tags": [
+    "手机与快递"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "customer service",
+   "pair": "en-zh",
+   "slug": "customer-service",
+   "lang": "en",
+   "translation": "客服",
+   "shortAnswer": "Customer service means 客服, the help a company gives customers with questions or problems.",
+   "definition": "Customer service is the help a company offers customers, as in call customer service or customer service hotline.",
+   "examples": [
+    {
+     "en": "If your package hasn't arrived, please contact customer service for a tracking update.",
+     "zh": "如果您的包裹还没到，请联系客服获取物流更新。"
+    },
+    {
+     "en": "The customer service team helped me sign for delivery after I lost my pickup code.",
+     "zh": "在我弄丢取件码后，客服团队帮我完成了签收。"
+    }
+   ],
+   "tags": [
+    "手机与快递"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "保修",
+   "pair": "zh-en",
+   "slug": "bao-xiu",
+   "lang": "zh",
+   "translation": "warranty",
+   "shortAnswer": "「保修」的英文是 warranty，指厂商对产品维修或更换的承诺，注意与售后维修服务区分。",
+   "definition": "warranty 是可数名词，常说 under warranty（在保修期内）、extend the warranty（延保）、void the warranty（保修失效）。手机常见 one-year warranty。",
+   "examples": [
+    {
+     "en": "My phone is still under warranty, so the repair won't cost me anything.",
+     "zh": "我的手机还在保修期内，所以维修不用花钱。"
+    },
+    {
+     "en": "Keep your receipt, or the warranty will be void.",
+     "zh": "保留好收据，否则保修会失效。"
+    }
+   ],
+   "tags": [
+    "手机与快递"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "warranty",
+   "pair": "en-zh",
+   "slug": "warranty",
+   "lang": "en",
+   "translation": "保修",
+   "shortAnswer": "warranty 的中文意思是「保修」，指厂商承诺免费维修或更换产品，比 guarantee 更常用于正式条款。",
+   "definition": "warranty 作名词，常见搭配为 under warranty、warranty period、extended warranty。多用于手机、电器；口语也说 it's still under warranty。",
+   "examples": [
+    {
+     "en": "My phone is still under warranty, so the repair won't cost me anything.",
+     "zh": "我的手机还在保修期内，所以维修不用花钱。"
+    },
+    {
+     "en": "Keep your receipt, or the warranty will be void.",
+     "zh": "保留好收据，否则保修会失效。"
+    }
+   ],
+   "tags": [
+    "手机与快递"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "重启",
+   "pair": "zh-en",
+   "slug": "chong-qi",
+   "lang": "zh",
+   "translation": "reboot",
+   "shortAnswer": "「重启」的英文动词是 reboot，如重启手机就是 reboot your phone。注意 reboot 指系统级重新启动，而 restart 更泛用于程序或服务。",
+   "definition": "reboot 专指设备或系统重新启动，常见搭配：reboot the phone / system / router。名词用法 a reboot 可指重启操作或重启过程。注意与 restart 区别：重启手机用 reboot 更地道，重启应用可用 restart。",
+   "examples": [
+    {
+     "en": "If your phone keeps freezing, try to reboot it by holding the power button.",
+     "zh": "如果你的手机一直卡死，试着按住电源键重启它。"
+    },
+    {
+     "en": "The courier's scanner needed a reboot before it could scan the QR code on the package.",
+     "zh": "快递员的扫描仪需要重启一下，才能扫描包裹上的二维码。"
+    }
+   ],
+   "tags": [
+    "手机与快递"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "reboot",
+   "pair": "en-zh",
+   "slug": "reboot",
+   "lang": "en",
+   "translation": "重启",
+   "shortAnswer": "「reboot」的中文意思是「重启」，特指设备或系统重新启动，比如重启手机。它比 restart 更强调系统级重载。",
+   "definition": "reboot 作动词指重新启动计算机、手机等设备，也作名词。常见搭配：reboot the system, a full reboot。正式与口语均可用，但日常说重启手机多用 reboot，重启应用多用 restart。",
+   "examples": [
+    {
+     "en": "If your phone keeps freezing, try to reboot it by holding the power button.",
+     "zh": "如果你的手机一直卡死，试着按住电源键重启它。"
+    },
+    {
+     "en": "The courier's scanner needed a reboot before it could scan the QR code on the package.",
+     "zh": "快递员的扫描仪需要重启一下，才能扫描包裹上的二维码。"
+    }
+   ],
+   "tags": [
+    "手机与快递"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "截屏",
+   "pair": "zh-en",
+   "slug": "jie-ping",
+   "lang": "zh",
+   "translation": "screenshot",
+   "shortAnswer": "截屏用英语说就是screenshot，既是名词也是动词。注意与截取整个屏幕的screen capture区分，screenshot更常用于手机或电脑上快速保存当前画面。",
+   "definition": "screenshot作名词指屏幕截图，作动词直接说screenshot the page；常见搭配take a screenshot。注意它不用于指屏幕录制（screen recording）或快递里的拍照签收（photo proof of delivery）。",
+   "examples": [
+    {
+     "en": "Can you send me a screenshot of the pickup code so I can collect the package?",
+     "zh": "你能把取件码截屏发给我吗？我好去取快递。"
+    },
+    {
+     "en": "I took a screenshot of the warranty page in case I need after-sales service later.",
+     "zh": "我把保修页面截屏了，以防之后需要售后服务。"
+    }
+   ],
+   "tags": [
+    "手机与快递"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "screenshot",
+   "pair": "en-zh",
+   "slug": "screenshot",
+   "lang": "en",
+   "translation": "截屏",
+   "shortAnswer": "Screenshot的中文意思是截屏，指保存当前屏幕画面的图片。与screen capture含义接近，但screenshot更强调用户主动用设备快捷键或应用功能截取的图像。",
+   "definition": "screenshot是名词兼动词，常见搭配take a screenshot、send a screenshot。日常口语和书面语都常用，电脑和手机皆可。易错点：别与screen recording（录屏）或screen capture（较为技术化）混用。",
+   "examples": [
+    {
+     "en": "Can you send me a screenshot of the pickup code so I can collect the package?",
+     "zh": "你能把取件码截屏发给我吗？我好去取快递。"
+    },
+    {
+     "en": "I took a screenshot of the warranty page in case I need after-sales service later.",
+     "zh": "我把保修页面截屏了，以防之后需要售后服务。"
+    }
+   ],
+   "tags": [
+    "手机与快递"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "耳机",
+   "pair": "zh-en",
+   "slug": "er-ji",
+   "lang": "zh",
+   "translation": "earphones",
+   "shortAnswer": "「耳机」英文是 earphones，指塞入耳道或挂耳的小型听音设备；头戴式耳机则说 headphones。",
+   "definition": "earphones 是复数名词，常说 a pair of earphones、wireless earphones，搭配 listen with earphones、use earphones on the phone。口语也常用 earbuds。",
+   "examples": [
+    {
+     "en": "I always carry a pair of earphones in my bag so I can listen to music on the subway.",
+     "zh": "我包里总会带一副耳机，这样就能在地铁上听音乐。"
+    },
+    {
+     "en": "She took out her earphones and started a video call with her friend.",
+     "zh": "她拿出耳机，开始和朋友视频通话。"
+    }
+   ],
+   "tags": [
+    "手机与快递"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "earphones",
+   "pair": "en-zh",
+   "slug": "earphones",
+   "lang": "en",
+   "translation": "耳机",
+   "shortAnswer": "earphones 的中文意思是「耳机」，通常指小巧的入耳式或耳塞式设备，强调便携与贴近耳廓。",
+   "definition": "earphones is a plural noun: a pair of earphones, wireless earphones, use earphones with your phone. For over-ear devices, say headphones.",
+   "examples": [
+    {
+     "en": "I always carry a pair of earphones in my bag so I can listen to music on the subway.",
+     "zh": "我包里总会带一副耳机，这样就能在地铁上听音乐。"
+    },
+    {
+     "en": "She took out her earphones and started a video call with her friend.",
+     "zh": "她拿出耳机，开始和朋友视频通话。"
+    }
+   ],
+   "tags": [
+    "手机与快递"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "死机",
+   "pair": "zh-en",
+   "slug": "si-ji",
+   "lang": "zh",
+   "translation": "freeze up",
+   "shortAnswer": "“死机”的英文是 freeze up，常指手机、电脑等设备突然卡住、无法操作。注意 freeze up 多强调完全无响应，而 lag 只是暂时卡顿。",
+   "definition": "freeze up 常用于科技口语，主语是设备，如 my phone froze up。若指电脑也可说 crash，但 crash 更强调程序崩溃或系统宕机，freeze up 更侧重画面卡死、触屏无反应。",
+   "examples": [
+    {
+     "en": "My phone froze up while I was scanning the QR code to pick up my express delivery.",
+     "zh": "我在扫二维码取快递的时候，手机突然死机了。"
+    },
+    {
+     "en": "If your device freezes up again, try turning it off and on before contacting after-sales service.",
+     "zh": "如果你的设备再次死机，联系售后之前先试着关机再开机。"
+    }
+   ],
+   "tags": [
+    "手机与快递"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "freeze up",
+   "pair": "en-zh",
+   "slug": "freeze-up",
+   "lang": "en",
+   "translation": "死机",
+   "shortAnswer": "“freeze up”的中文意思是“死机”，指设备突然卡住、完全无法操作。它和 lag 不同，lag 是暂时卡顿，freeze up 是彻底无响应。",
+   "definition": "freeze up 多用于口语和非正式场合，主语常为 phone、computer、screen 等。常见搭配：my phone froze up、the screen freezes up。注意别与“冻僵”义混淆，科技语境中才指死机。",
+   "examples": [
+    {
+     "en": "My phone froze up while I was scanning the QR code to pick up my express delivery.",
+     "zh": "我在扫二维码取快递的时候，手机突然死机了。"
+    },
+    {
+     "en": "If your device freezes up again, try turning it off and on before contacting after-sales service.",
+     "zh": "如果你的设备再次死机，联系售后之前先试着关机再开机。"
+    }
+   ],
+   "tags": [
+    "手机与快递"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "考试",
+   "pair": "zh-en",
+   "slug": "kao-shi",
+   "lang": "zh",
+   "translation": "exam",
+   "shortAnswer": "「考试」的英文是 exam，多指学校里的正式考试。口语中也常用 test，但 exam 更强调重要的大考。",
+   "definition": "exam 是 examination 的缩写，常指期中、期末等正式考试。常见搭配：take an exam 参加考试，fail an exam 挂科，make-up exam 补考，final exam 期末考试。",
+   "examples": [
+    {
+     "en": "I have to study hard for my final exam next week.",
+     "zh": "我得为下周的期末考试努力学习。"
+    },
+    {
+     "en": "If you fail the exam, you can take a make-up exam later.",
+     "zh": "如果你考试不及格，之后可以参加补考。"
+    }
+   ],
+   "tags": [
+    "校园学习"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "exam",
+   "pair": "en-zh",
+   "slug": "exam",
+   "lang": "en",
+   "translation": "考试",
+   "shortAnswer": "Exam 的中文意思是「考试」，通常指学校里的正式考试。它和 test 意思相近，但 exam 往往更正式、更重要。",
+   "definition": "exam 指学校或机构组织的正式考试，如 final exam（期末考试）、entrance exam（入学考试）。口语中可指任何测验，但比 quiz 正式，比 test 更强调大考。",
+   "examples": [
+    {
+     "en": "I have to study hard for my final exam next week.",
+     "zh": "我得为下周的期末考试努力学习。"
+    },
+    {
+     "en": "If you fail the exam, you can take a make-up exam later.",
+     "zh": "如果你考试不及格，之后可以参加补考。"
+    }
+   ],
+   "tags": [
+    "校园学习"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "下课",
+   "pair": "zh-en",
+   "slug": "xia-ke",
+   "lang": "zh",
+   "translation": "class is over",
+   "shortAnswer": "「下课」的英文是 class is over，指一节课结束。注意 class is over 是句子，不是名词；表示「下课时间」常说 break 或 time for a break。",
+   "definition": "class is over 用于宣布某节课结束，也可说 the class is over；与之相对的是 class begins/starts。若想说「下课了，我们走吧」，用 Class is over. Let's go. 不要生造 class over 作名词。",
+   "examples": [
+    {
+     "en": "Class is over, so let's go grab lunch before the next lecture.",
+     "zh": "下课了，我们去吃午饭吧，下节课之前还有时间。"
+    },
+    {
+     "en": "As soon as class is over, I need to rush to the library to return these books.",
+     "zh": "一下课我就得赶去图书馆还这些书。"
+    }
+   ],
+   "tags": [
+    "校园学习"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "class is over",
+   "pair": "en-zh",
+   "slug": "class-is-over",
+   "lang": "en",
+   "translation": "下课",
+   "shortAnswer": "Class is over 的中文意思是「下课」，表示一节课结束。它强调课程结束的状态，而 dismiss class 强调老师宣布下课、让学生离开。",
+   "definition": "class is over 是常用表达，指一节课已经结束，多用于口语和校园场景。同类说法有 the class is finished/done；正式通知也可说 The class has been dismissed。注意不要说 Class is over 后接名词。",
+   "examples": [
+    {
+     "en": "Class is over, so let's go grab lunch before the next lecture.",
+     "zh": "下课了，我们去吃午饭吧，下节课之前还有时间。"
+    },
+    {
+     "en": "As soon as class is over, I need to rush to the library to return these books.",
+     "zh": "一下课我就得赶去图书馆还这些书。"
+    }
+   ],
+   "tags": [
+    "校园学习"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "开学",
+   "pair": "zh-en",
+   "slug": "kai-xue",
+   "lang": "zh",
+   "translation": "school starts",
+   "shortAnswer": "开学的英文是 school starts，也可以说 school begins。注意 school starts 强调“学校开始上课”，不指学生个人去学校报到。",
+   "definition": "school starts 用于描述新学期或新学年开始，常见搭配有 when school starts、before school starts。口语中也可说 school begins，但 school starts 更常用。",
+   "examples": [
+    {
+     "en": "School starts on September 1st, so we need to buy our textbooks now.",
+     "zh": "9月1日开学，所以我们现在需要买课本了。"
+    },
+    {
+     "en": "When school starts, I usually get up at six thirty.",
+     "zh": "开学的时候，我通常六点半起床。"
+    }
+   ],
+   "tags": [
+    "校园学习"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "school starts",
+   "pair": "en-zh",
+   "slug": "school-starts",
+   "lang": "en",
+   "translation": "开学",
+   "shortAnswer": "school starts 的中文意思是开学，指学校开始上课。它和 school begins 意思相近，但 school starts 更口语化、更常用。",
+   "definition": "school starts 表示学校开学、开始上课，常用于描述学期或学年开始。搭配有 when school starts、school starts in September。注意不是“去学校报到”。",
+   "examples": [
+    {
+     "en": "School starts on September 1st, so we need to buy our textbooks now.",
+     "zh": "9月1日开学，所以我们现在需要买课本了。"
+    },
+    {
+     "en": "When school starts, I usually get up at six thirty.",
+     "zh": "开学的时候，我通常六点半起床。"
+    }
+   ],
+   "tags": [
+    "校园学习"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "删除",
+   "pair": "zh-en",
+   "slug": "shan-chu",
+   "lang": "zh",
+   "translation": "delete",
+   "shortAnswer": "在手机与快递场景里，「删除」通常说 delete，比如删除取件码短信或旧地址；彻底移除数据。",
+   "definition": "delete 指把短信、地址或订单等信息从手机或账号中移除，常搭配 delete the message、delete my address。",
+   "examples": [
+    {
+     "en": "Please delete the old pickup code message after you collect your parcel.",
+     "zh": "取完快递后，请把旧的取件码短信删除。"
+    },
+    {
+     "en": "I had to delete my previous delivery address before adding the new one.",
+     "zh": "添加新地址前，我不得不先把之前的收货地址删除。"
+    }
+   ],
+   "tags": [
+    "手机与快递"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "delete",
+   "pair": "en-zh",
+   "slug": "delete",
+   "lang": "en",
+   "translation": "删除",
+   "shortAnswer": "delete 在中文里就是「删除」，多用于手机与快递场景，如删除取件短信或旧地址，强调彻底移除数据。",
+   "definition": "delete means to remove a message, address, or order from your phone or account; patterns include delete the message.",
+   "examples": [
+    {
+     "en": "Please delete the old pickup code message after you collect your parcel.",
+     "zh": "取完快递后，请把旧的取件码短信删除。"
+    },
+    {
+     "en": "I had to delete my previous delivery address before adding the new one.",
+     "zh": "添加新地址前，我不得不先把之前的收货地址删除。"
+    }
+   ],
+   "tags": [
+    "手机与快递"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "上课",
+   "pair": "zh-en",
+   "slug": "shang-ke",
+   "lang": "zh",
+   "translation": "attend class",
+   "shortAnswer": "「上课」的英文常用 attend class 表示，指出席课堂、去听课，较为正式。",
+   "definition": "attend class 是正式说法，指出席课堂、去听课；口语中更常说 go to class 或 have class。",
+   "examples": [
+    {
+     "en": "Students who attend class regularly are less likely to fail an exam.",
+     "zh": "按时上课的学生更不容易挂科。"
+    },
+    {
+     "en": "If you skip class too often, the teacher may notice during roll call and mark you absent.",
+     "zh": "如果你逃课太多，老师可能会在点名时注意到并记你缺勤。"
+    }
+   ],
+   "tags": [
+    "校园学习"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "attend class",
+   "pair": "en-zh",
+   "slug": "attend-class",
+   "lang": "en",
+   "translation": "上课",
+   "shortAnswer": "「attend class」的中文意思是「上课」，指出席课堂、去听课，属正式表达。",
+   "definition": "attend class 意为“上课、出席课堂”，常见搭配 attend class regularly，多用于正式或学术场合。",
+   "examples": [
+    {
+     "en": "Students who attend class regularly are less likely to fail an exam.",
+     "zh": "按时上课的学生更不容易挂科。"
+    },
+    {
+     "en": "If you skip class too often, the teacher may notice during roll call and mark you absent.",
+     "zh": "如果你逃课太多，老师可能会在点名时注意到并记你缺勤。"
+    }
+   ],
+   "tags": [
+    "校园学习"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "作业",
+   "pair": "zh-en",
+   "slug": "zuo-ye",
+   "lang": "zh",
+   "translation": "homework",
+   "shortAnswer": "作业的英文是 homework，指老师布置的课外学习任务，不可数，不能说 a homework。",
+   "definition": "homework 指学生回家完成的练习或预习，常搭配 do homework、hand in homework；不可数，表示“一份作业”用 a piece of homework。",
+   "examples": [
+    {
+     "en": "I have to finish my math homework before dinner.",
+     "zh": "我得在晚饭前完成数学作业。"
+    },
+    {
+     "en": "The teacher gave us a lot of homework over the weekend.",
+     "zh": "老师周末给我们布置了很多作业。"
+    }
+   ],
+   "tags": [
+    "校园学习"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "homework",
+   "pair": "en-zh",
+   "slug": "homework",
+   "lang": "en",
+   "translation": "作业",
+   "shortAnswer": "Homework 的中文意思是作业，指老师让学生在课外完成的学习任务，通常不可数，与课堂练习 classwork 相对。",
+   "definition": "homework 是名词，指家庭作业或课外准备，常搭配 do homework、finish homework；美式英语中 assignment 可指具体一项作业。",
+   "examples": [
+    {
+     "en": "I have to finish my math homework before dinner.",
+     "zh": "我得在晚饭前完成数学作业。"
+    },
+    {
+     "en": "The teacher gave us a lot of homework over the weekend.",
+     "zh": "老师周末给我们布置了很多作业。"
+    }
+   ],
+   "tags": [
+    "校园学习"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "毕业",
+   "pair": "zh-en",
+   "slug": "bi-ye",
+   "lang": "zh",
+   "translation": "graduation",
+   "shortAnswer": "「毕业」的英文是 graduation，指完成学业、获授学位或文凭；常用搭配 graduation ceremony 表示毕业典礼。",
+   "definition": "graduation 指毕业或毕业典礼，如 graduation ceremony；不说 graduation 表示毕业证，那是 diploma。",
+   "examples": [
+    {
+     "en": "She plans to travel around Europe after graduation.",
+     "zh": "她打算毕业后去欧洲旅行。"
+    },
+    {
+     "en": "The graduation ceremony will be held in the main hall next Friday.",
+     "zh": "毕业典礼将于下周五在主礼堂举行。"
+    }
+   ],
+   "tags": [
+    "校园学习"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "graduation",
+   "pair": "en-zh",
+   "slug": "graduation",
+   "lang": "en",
+   "translation": "毕业",
+   "shortAnswer": "graduation 的中文意思是「毕业」，指完成学业并获得学位或文凭；也可指毕业典礼，如 graduation ceremony。",
+   "definition": "graduation means 毕业 or a graduation ceremony, as in graduation ceremony. A diploma, not graduation, is the certificate.",
+   "examples": [
+    {
+     "en": "She plans to travel around Europe after graduation.",
+     "zh": "她打算毕业后去欧洲旅行。"
+    },
+    {
+     "en": "The graduation ceremony will be held in the main hall next Friday.",
+     "zh": "毕业典礼将于下周五在主礼堂举行。"
+    }
+   ],
+   "tags": [
+    "校园学习"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "同桌",
+   "pair": "zh-en",
+   "slug": "tong-zhuo",
+   "lang": "zh",
+   "translation": "deskmate",
+   "shortAnswer": "「同桌」的英文是 deskmate，指坐在你旁边共用一张课桌的同学。注意 deskmate 是英式拼法，美式常写作 desk mate 或 seatmate。",
+   "definition": "deskmate 是中性名词，小学到高中阶段最常用，大学里更常说 classmate 或 the person I sit next to。搭配动词常用 be my deskmate、sit with my deskmate。不要用 tablemate（多指饭友）。",
+   "examples": [
+    {
+     "en": "My deskmate always reminds me to hand in my homework on time.",
+     "zh": "我的同桌总是提醒我按时交作业。"
+    },
+    {
+     "en": "During the self-study period, I whispered to my deskmate about the make-up exam.",
+     "zh": "自习课上，我和同桌小声议论补考的事。"
+    }
+   ],
+   "tags": [
+    "校园学习"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "deskmate",
+   "pair": "en-zh",
+   "slug": "deskmate",
+   "lang": "en",
+   "translation": "同桌",
+   "shortAnswer": "deskmate 的中文意思是「同桌」，即在同一张课桌旁与你并排坐的同学。它强调物理位置的相邻，而不只是同班关系。",
+   "definition": "deskmate 指班级里坐在你旁边的同学，多见于中小学语境。与 classmate 不同，classmate 只表示同班同学，不一定挨着坐；deskmate 强调共桌。口语中也可说 the person sitting next to me。",
+   "examples": [
+    {
+     "en": "My deskmate always reminds me to hand in my homework on time.",
+     "zh": "我的同桌总是提醒我按时交作业。"
+    },
+    {
+     "en": "During the self-study period, I whispered to my deskmate about the make-up exam.",
+     "zh": "自习课上，我和同桌小声议论补考的事。"
+    }
+   ],
+   "tags": [
+    "校园学习"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "班主任",
+   "pair": "zh-en",
+   "slug": "ban-zhu-ren",
+   "lang": "zh",
+   "translation": "head teacher",
+   "shortAnswer": "班主任的英文是 head teacher，指中小学里管理一个班级的老师；英式英语中也可指校长。",
+   "definition": "head teacher 指中小学的班主任，负责班级日常管理、考勤、纪律和家校沟通。英式英语中也可指校长，美式英语常用 homeroom teacher。",
+   "examples": [
+    {
+     "en": "Our head teacher reminded us that anyone caught skipping class would have to take a make-up exam.",
+     "zh": "班主任提醒我们，凡是逃课被抓到的人都要补考。"
+    },
+    {
+     "en": "I asked my head teacher to write me a recommendation letter for my college application.",
+     "zh": "我请班主任为我的大学申请写了一封推荐信。"
+    }
+   ],
+   "tags": [
+    "校园学习"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "head teacher",
+   "pair": "en-zh",
+   "slug": "head-teacher",
+   "lang": "en",
+   "translation": "班主任",
+   "shortAnswer": "head teacher 的中文意思是班主任，指中小学里管理一个班级的老师；英式英语中也可指校长。",
+   "definition": "head teacher 指中小学的班主任，负责班级日常管理、考勤、纪律和家校联系。英式英语中也可指校长，美式英语常用 homeroom teacher。",
+   "examples": [
+    {
+     "en": "Our head teacher reminded us that anyone caught skipping class would have to take a make-up exam.",
+     "zh": "班主任提醒我们，凡是逃课被抓到的人都要补考。"
+    },
+    {
+     "en": "I asked my head teacher to write me a recommendation letter for my college application.",
+     "zh": "我请班主任为我的大学申请写了一封推荐信。"
+    }
+   ],
+   "tags": [
+    "校园学习"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "学费",
+   "pair": "zh-en",
+   "slug": "xue-fei",
+   "lang": "zh",
+   "translation": "tuition",
+   "shortAnswer": "学费的英文是 tuition，特指大学或私立学校收取的教学费用，不包括书本费和住宿费。注意 tuition 在美式英语中常指学费，在英式英语中可泛指教学。",
+   "definition": "tuition 常与 pay、afford、cover 等动词搭配，如 pay tuition（交学费）、tuition fee（学费）。易错点：不要用 tuition 指代书本费或住宿费，这些分别是 textbook fees 和 room and board。",
+   "examples": [
+    {
+     "en": "Many students work part-time to pay their tuition.",
+     "zh": "许多学生做兼职来支付学费。"
+    },
+    {
+     "en": "The university offers a tuition waiver for outstanding applicants.",
+     "zh": "这所大学为优秀申请者提供学费减免。"
+    }
+   ],
+   "tags": [
+    "校园学习"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "tuition",
+   "pair": "en-zh",
+   "slug": "tuition",
+   "lang": "en",
+   "translation": "学费",
+   "shortAnswer": "Tuition 的中文意思是学费，指学校收取的教学费用，尤其用于大学。与 fee 不同，tuition 特指教学费，不包含杂费或生活费。",
+   "definition": "Tuition 是名词，常见搭配有 pay tuition、tuition costs、tuition waiver（学费减免）。在美式英语中常与 room and board（食宿费）并列；在英式英语中也可指教学本身。",
+   "examples": [
+    {
+     "en": "Many students work part-time to pay their tuition.",
+     "zh": "许多学生做兼职来支付学费。"
+    },
+    {
+     "en": "The university offers a tuition waiver for outstanding applicants.",
+     "zh": "这所大学为优秀申请者提供学费减免。"
+    }
+   ],
+   "tags": [
+    "校园学习"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "宿舍",
+   "pair": "zh-en",
+   "slug": "su-she",
+   "lang": "zh",
+   "translation": "dormitory",
+   "shortAnswer": "「宿舍」的英文是 dormitory，日常口语也常用 dorms。英式英语里学生宿舍楼常叫 hall of residence，美式宿舍区则可能叫 residence hall。",
+   "definition": "Dormitory 是正式说法，指学校提供给学生住宿的楼。口语中常用简称 dorm，例如住宿舍 live in a dorm。搭配：dormitory room 宿舍房间，dormitory life 宿舍生活。",
+   "examples": [
+    {
+     "en": "My dormitory is just a five-minute walk from the library, so I often go there to study.",
+     "zh": "我的宿舍离图书馆只有五分钟步行路程，所以我经常去那里自习。"
+    },
+    {
+     "en": "During the first week, the dormitory organizes orientation activities to help new students settle in.",
+     "zh": "第一周，宿舍会组织迎新活动，帮助新生安顿下来。"
+    }
+   ],
+   "tags": [
+    "校园学习"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "dormitory",
+   "pair": "en-zh",
+   "slug": "dormitory",
+   "lang": "en",
+   "translation": "宿舍",
+   "shortAnswer": "Dormitory 的中文意思是「宿舍」，特指学校或机构提供给学生住宿的楼。它比 hall 更正式；口语中常简称为 dorm。",
+   "definition": "Dormitory 指学校、大学等提供给学生住宿的建筑物，一般有多个房间或床位。常见搭配：student dormitory、dormitory room。口语和非正式场合常用 dorm；英式英语中大学宿舍楼也称 hall of residence。",
+   "examples": [
+    {
+     "en": "My dormitory is just a five-minute walk from the library, so I often go there to study.",
+     "zh": "我的宿舍离图书馆只有五分钟步行路程，所以我经常去那里自习。"
+    },
+    {
+     "en": "During the first week, the dormitory organizes orientation activities to help new students settle in.",
+     "zh": "第一周，宿舍会组织迎新活动，帮助新生安顿下来。"
+    }
+   ],
+   "tags": [
+    "校园学习"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "自习",
+   "pair": "zh-en",
+   "slug": "zi-xi",
+   "lang": "zh",
+   "translation": "self-study",
+   "shortAnswer": "「自习」的英文是 self-study，指学生自主安排、没有老师授课的学习时间。注意：英式英语里常与 revise 搭配，美式英语则说 study on your own。",
+   "definition": "self-study 作名词或形容词，如 self-study period（自习课）、do self-study（自习）。不可说成 study myself，那表示「研究我自己」；若强调在教室集体自习，可说 supervised self-study。",
+   "examples": [
+    {
+     "en": "We have a self-study period every afternoon, so I usually review my notes in the classroom.",
+     "zh": "我们每天下午都有一节自习课，所以我通常在教室里复习笔记。"
+    },
+    {
+     "en": "If you want to improve your English, self-study is just as important as attending classes.",
+     "zh": "如果你想提高英语，自习和上课同样重要。"
+    }
+   ],
+   "tags": [
+    "校园学习"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "self-study",
+   "pair": "en-zh",
+   "slug": "self-study",
+   "lang": "en",
+   "translation": "自习",
+   "shortAnswer": "self-study 的中文意思是「自习」，即学生自己安排、没有老师讲课的学习。它强调自主学习，与 revision（复习）或 homework（家庭作业）侧重点不同。",
+   "definition": "self-study 常与 do、time、period 搭配：do self-study、self-study time、a self-study room。口语中也可说 study by myself。注意与 self-taught 区分，后者指「自学成才」，不指在校自习。",
+   "examples": [
+    {
+     "en": "We have a self-study period every afternoon, so I usually review my notes in the classroom.",
+     "zh": "我们每天下午都有一节自习课，所以我通常在教室里复习笔记。"
+    },
+    {
+     "en": "If you want to improve your English, self-study is just as important as attending classes.",
+     "zh": "如果你想提高英语，自习和上课同样重要。"
+    }
+   ],
+   "tags": [
+    "校园学习"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "补习班",
+   "pair": "zh-en",
+   "slug": "bu-xi-ban",
+   "lang": "zh",
+   "translation": "cram school",
+   "shortAnswer": "补习班在英语中常说 cram school，指为考试提分而高强度授课的课外辅导机构。",
+   "definition": "cram school 指以应试提分为目标的课外补习机构，常搭配 go to、attend，如 go to a cram school。cram 本义为临时抱佛脚，暗示高强度集中授课。",
+   "examples": [
+    {
+     "en": "After failing the math exam, he started attending a cram school every weekend to prepare for the make-up exam.",
+     "zh": "数学考试挂科后，他开始每周末去补习班，为补考做准备。"
+    },
+    {
+     "en": "Many high school students in East Asia go to a cram school after regular classes to improve their college application chances.",
+     "zh": "东亚的许多高中生放学后去补习班，以提高大学申请的成功率。"
+    }
+   ],
+   "tags": [
+    "校园学习"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "cram school",
+   "pair": "en-zh",
+   "slug": "cram-school",
+   "lang": "en",
+   "translation": "补习班",
+   "shortAnswer": "cram school 的中文意思是“补习班”，指为应对考试而高强度、集中授课的课外辅导机构。",
+   "definition": "cram school 指以备考提分为目标的辅导机构，常见搭配有 attend/go to a cram school。cram 有临时抱佛脚之意，故强调高强度、时间紧凑。",
+   "examples": [
+    {
+     "en": "After failing the math exam, he started attending a cram school every weekend to prepare for the make-up exam.",
+     "zh": "数学考试挂科后，他开始每周末去补习班，为补考做准备。"
+    },
+    {
+     "en": "Many high school students in East Asia go to a cram school after regular classes to improve their college application chances.",
+     "zh": "东亚的许多高中生放学后去补习班，以提高大学申请的成功率。"
+    }
+   ],
+   "tags": [
+    "校园学习"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "食堂",
+   "pair": "zh-en",
+   "slug": "shi-tang",
+   "lang": "zh",
+   "translation": "canteen",
+   "shortAnswer": "食堂的英文是 canteen。在校园里，canteen 通常指学校食堂；若强调学生用餐和社交，也可用 dining hall，但 canteen 更常见于英式英语。",
+   "definition": "canteen 多指学校、工厂等机构内提供饭菜的固定场所。常见搭配：school canteen、staff canteen、eat in the canteen。注意与 restaurant 区分：canteen 更强调内部、平价、自助或半自助。",
+   "examples": [
+    {
+     "en": "I usually have lunch in the school canteen because it's cheap and close to the library.",
+     "zh": "我通常在学校食堂吃午饭，因为那里便宜又离图书馆近。"
+    },
+    {
+     "en": "The canteen was so crowded after the roll call that we decided to skip class and grab a sandwich elsewhere.",
+     "zh": "点名后食堂太挤了，我们决定逃课去别处买个三明治。"
+    }
+   ],
+   "tags": [
+    "校园学习"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "canteen",
+   "pair": "en-zh",
+   "slug": "canteen",
+   "lang": "en",
+   "translation": "食堂",
+   "shortAnswer": "canteen 的中文意思是食堂，常指学校或机构内供餐的地方。与 restaurant 不同，canteen 通常更平价、更内部化，常见搭配有 school canteen、staff canteen。",
+   "definition": "canteen 核心义为食堂，指机构内设的用餐处。常见搭配：school canteen、canteen food、eat at the canteen。在英式英语中更常用；美式英语有时用 cafeteria。注意不要与“水壶”义混淆。",
+   "examples": [
+    {
+     "en": "I usually have lunch in the school canteen because it's cheap and close to the library.",
+     "zh": "我通常在学校食堂吃午饭，因为那里便宜又离图书馆近。"
+    },
+    {
+     "en": "The canteen was so crowded after the roll call that we decided to skip class and grab a sandwich elsewhere.",
+     "zh": "点名后食堂太挤了，我们决定逃课去别处买个三明治。"
+    }
+   ],
+   "tags": [
+    "校园学习"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "补考",
+   "pair": "zh-en",
+   "slug": "bu-kao",
+   "lang": "zh",
+   "translation": "make-up exam",
+   "shortAnswer": "补考的英文是 make-up exam（美式），英式拼写为 resit 或 retake。注意它指因挂科或缺考而额外安排的考试，不是普通期末考。",
+   "definition": "「补考」指考试未通过或请假缺考后另行安排的考试，美式英语常用 make-up exam，英式多用 resit。搭配：take/sit a make-up exam（参加补考）、fail the make-up exam（补考没过）。",
+   "examples": [
+    {
+     "en": "I failed the final, so I have to take a make-up exam next week.",
+     "zh": "我期末考挂了，所以下周得参加补考。"
+    },
+    {
+     "en": "She missed the midterm because of illness and was allowed to sit a make-up exam.",
+     "zh": "她因病错过了期中考试，获准参加补考。"
+    }
+   ],
+   "tags": [
+    "校园学习"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "make-up exam",
+   "pair": "en-zh",
+   "slug": "make-up-exam",
+   "lang": "en",
+   "translation": "补考",
+   "shortAnswer": "make-up exam 的中文意思是「补考」，指挂科或缺考后额外安排的考试。它与 resit 意思相近，但 make-up 更偏美式，且还可指补做的测验。",
+   "definition": "make-up exam 指因不及格、缺考或请假而额外安排的考试，多用于美式英语；英式英语常用 resit 或 retake。常见搭配：take a make-up exam、schedule a make-up exam、pass/fail the make-up exam。",
+   "examples": [
+    {
+     "en": "I failed the final, so I have to take a make-up exam next week.",
+     "zh": "我期末考挂了，所以下周得参加补考。"
+    },
+    {
+     "en": "She missed the midterm because of illness and was allowed to sit a make-up exam.",
+     "zh": "她因病错过了期中考试，获准参加补考。"
+    }
+   ],
+   "tags": [
+    "校园学习"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "点名",
+   "pair": "zh-en",
+   "slug": "dian-ming",
+   "lang": "zh",
+   "translation": "roll call",
+   "shortAnswer": "「点名」的英文是 roll call。老师上课前确认谁到了，就叫 roll call；它也是军队、宿舍等正式场合点名的常用说法。",
+   "definition": "roll call 指逐一念名字确认是否到场。常见搭配：take roll call（点名）、do roll call（点名）、miss roll call（没被点到/错点名）。注意：call someone's name 更强调“叫某人名字”，不一定是点名。",
+   "examples": [
+    {
+     "en": "The teacher takes roll call at the beginning of every class.",
+     "zh": "老师每节课开始都会点名。"
+    },
+    {
+     "en": "If you miss roll call, you may be marked absent.",
+     "zh": "如果你点名时不在，可能会被记为缺勤。"
+    }
+   ],
+   "tags": [
+    "校园学习"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "roll call",
+   "pair": "en-zh",
+   "slug": "roll-call",
+   "lang": "en",
+   "translation": "点名",
+   "shortAnswer": "roll call 的中文意思是「点名」。它指按名单逐个确认是否在场，也可指点名的时间或仪式，常出现在学校、军队等场合。",
+   "definition": "roll call 是名词，指按名单点名确认到场。常见搭配：take roll call、do roll call、at roll call。与 attendance 不同：attendance 强调“出勤”本身，roll call 强调“点名”这个动作或时间。",
+   "examples": [
+    {
+     "en": "The teacher takes roll call at the beginning of every class.",
+     "zh": "老师每节课开始都会点名。"
+    },
+    {
+     "en": "If you miss roll call, you may be marked absent.",
+     "zh": "如果你点名时不在，可能会被记为缺勤。"
+    }
+   ],
+   "tags": [
+    "校园学习"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "图书馆",
+   "pair": "zh-en",
+   "slug": "tu-shu-guan",
+   "lang": "zh",
+   "translation": "library",
+   "shortAnswer": "「图书馆」的英文就是 library，这里是借书、看书和安静自习的地方，可别和卖书的书店搞混了。",
+   "definition": "library 是可数名词，常见搭配有 school library、public library、go to the library、borrow books from the library，注意别拼成 libary。",
+   "examples": [
+    {
+     "en": "I usually go to the library after class to review my notes.",
+     "zh": "我通常下课后去图书馆复习笔记。"
+    },
+    {
+     "en": "She borrowed three books from the school library for her history report.",
+     "zh": "她从学校图书馆借了三本书来写历史报告。"
+    }
+   ],
+   "tags": [
+    "校园学习"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "library",
+   "pair": "en-zh",
+   "slug": "library",
+   "lang": "en",
+   "translation": "图书馆",
+   "shortAnswer": "library 的中文意思是「图书馆」，指可以借阅图书、阅读和自习的场所，和卖书的书店不一样。",
+   "definition": "library 是名词，常见搭配有 school library、public library、go to the library，也可指藏书或书房。",
+   "examples": [
+    {
+     "en": "I usually go to the library after class to review my notes.",
+     "zh": "我通常下课后去图书馆复习笔记。"
+    },
+    {
+     "en": "She borrowed three books from the school library for her history report.",
+     "zh": "她从学校图书馆借了三本书来写历史报告。"
+    }
+   ],
+   "tags": [
+    "校园学习"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "课表",
+   "pair": "zh-en",
+   "slug": "ke-biao",
+   "lang": "zh",
+   "translation": "class schedule",
+   "shortAnswer": "「课表」的英文是 class schedule，指学校或课程安排的时间表。注意与 timetable 的区别：class schedule 更常用于美式英语，且常指个人选课后的时间安排。",
+   "definition": "class schedule 常与 check、change、fit into 等动词搭配，如 check my class schedule（查看课表）。在美式校园中，它多指学生个人的课程时间表；英式英语更常用 timetable。",
+   "examples": [
+    {
+     "en": "I checked my class schedule and realized I have three classes in a row on Monday.",
+     "zh": "我查看了课表，发现周一连续有三节课。"
+    },
+    {
+     "en": "She changed her class schedule to avoid a conflict with her part-time job.",
+     "zh": "她调整了课表，以避免和兼职工作冲突。"
+    }
+   ],
+   "tags": [
+    "校园学习"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "class schedule",
+   "pair": "en-zh",
+   "slug": "class-schedule",
+   "lang": "en",
+   "translation": "课表",
+   "shortAnswer": "「class schedule」的中文意思是「课表」，即学校课程的时间安排表。它和 timetable 意思相近，但 class schedule 更强调个人选课后的上课时间安排，常见于美式英语。",
+   "definition": "class schedule 指学生或教师个人课程的时间表，常见搭配有 check my class schedule、a busy class schedule。美式英语常用，英式英语则多说 timetable；注意不要与 syllabus（教学大纲）混淆。",
+   "examples": [
+    {
+     "en": "I checked my class schedule and realized I have three classes in a row on Monday.",
+     "zh": "我查看了课表，发现周一连续有三节课。"
+    },
+    {
+     "en": "She changed her class schedule to avoid a conflict with her part-time job.",
+     "zh": "她调整了课表，以避免和兼职工作冲突。"
+    }
+   ],
+   "tags": [
+    "校园学习"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "挂科",
+   "pair": "zh-en",
+   "slug": "gua-ke",
+   "lang": "zh",
+   "translation": "fail an exam",
+   "shortAnswer": "「挂科」的英文是 fail an exam，也可说 flunk an exam，多用于考试或课程不及格。注意 fail 作不及物时也可直接说 fail the course，不必加 exam。",
+   "definition": "fail an exam 指某门考试没通过，口语里常用 flunk；若说挂了一门课，用 fail a course。补考是 make-up exam，重考是 retake。",
+   "examples": [
+    {
+     "en": "He was so afraid of failing an exam that he stayed up late studying every night.",
+     "zh": "他特别怕挂科，所以每晚都熬夜学习。"
+    },
+    {
+     "en": "If you fail an exam, you usually have to take a make-up exam before the next term.",
+     "zh": "如果挂科了，通常要在下学期前参加补考。"
+    }
+   ],
+   "tags": [
+    "校园学习"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "fail an exam",
+   "pair": "en-zh",
+   "slug": "fail-an-exam",
+   "lang": "en",
+   "translation": "挂科",
+   "shortAnswer": "fail an exam 的中文意思是「挂科」，即考试未通过。它强调考试结果不合格，而 flunk 更口语，fail a course 则指整门课程不及格。",
+   "definition": "fail an exam 是中性偏正式说法，口语常用 flunk an exam；搭配有 fail a test、fail a course。注意 fail 后接考试或科目，不接分数。",
+   "examples": [
+    {
+     "en": "He was so afraid of failing an exam that he stayed up late studying every night.",
+     "zh": "他特别怕挂科，所以每晚都熬夜学习。"
+    },
+    {
+     "en": "If you fail an exam, you usually have to take a make-up exam before the next term.",
+     "zh": "如果挂科了，通常要在下学期前参加补考。"
+    }
+   ],
+   "tags": [
+    "校园学习"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "奖学金",
+   "pair": "zh-en",
+   "slug": "jiang-xue-jin",
+   "lang": "zh",
+   "translation": "scholarship",
+   "shortAnswer": "奖学金英文是 scholarship，指奖励学业或科研优秀者的资助，与 grant（助学金）、loan（贷款）不同。",
+   "definition": "scholarship 常指学校或机构为奖励优秀学生提供的资助，常见搭配有 win/receive/apply for a scholarship。",
+   "examples": [
+    {
+     "en": "She worked hard to win a full scholarship to her dream university.",
+     "zh": "她努力学习，赢得了梦想大学的全额奖学金。"
+    },
+    {
+     "en": "He applied for several scholarships to cover his tuition and living expenses.",
+     "zh": "他申请了好几项奖学金来支付学费和生活费。"
+    }
+   ],
+   "tags": [
+    "校园学习"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "scholarship",
+   "pair": "en-zh",
+   "slug": "scholarship",
+   "lang": "en",
+   "translation": "奖学金",
+   "shortAnswer": "Scholarship 的中文是奖学金，指基于学业或才能发放的资助，通常无需偿还，与 grant 和 loan 不同。",
+   "definition": "Scholarship 作名词指奖学金，也指学术研究；常见搭配有 receive/win/apply for a scholarship。",
+   "examples": [
+    {
+     "en": "She worked hard to win a full scholarship to her dream university.",
+     "zh": "她努力学习，赢得了梦想大学的全额奖学金。"
+    },
+    {
+     "en": "He applied for several scholarships to cover his tuition and living expenses.",
+     "zh": "他申请了好几项奖学金来支付学费和生活费。"
+    }
+   ],
+   "tags": [
+    "校园学习"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "逃课",
+   "pair": "zh-en",
+   "slug": "tao-ke",
+   "lang": "zh",
+   "translation": "skip class",
+   "shortAnswer": "「逃课」的英文是 skip class，指故意不去上课，口语中也说 play hooky。",
+   "definition": "skip class 搭配：skip a class 或 skip history，指逃某节课。名词为 class skipping。口语 play hooky 更俏皮；正式场合用 miss class，但未必是故意。",
+   "examples": [
+    {
+     "en": "He decided to skip class and go to the basketball game instead.",
+     "zh": "他决定逃课去看篮球赛。"
+    },
+    {
+     "en": "If you skip class too often, you might fail the final exam.",
+     "zh": "如果你逃课太多，期末考试可能会挂科。"
+    }
+   ],
+   "tags": [
+    "校园学习"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "skip class",
+   "pair": "en-zh",
+   "slug": "skip-class",
+   "lang": "en",
+   "translation": "逃课",
+   "shortAnswer": "「skip class」的中文意思是「逃课」，指故意不去上课，口语中常说 play hooky。",
+   "definition": "skip class 是口语短语，意为故意缺课。搭配：skip a class 或 skip school。名词形式 class skipping。英式英语也常用 bunk off。",
+   "examples": [
+    {
+     "en": "He decided to skip class and go to the basketball game instead.",
+     "zh": "他决定逃课去看篮球赛。"
+    },
+    {
+     "en": "If you skip class too often, you might fail the final exam.",
+     "zh": "如果你逃课太多，期末考试可能会挂科。"
+    }
+   ],
+   "tags": [
+    "校园学习"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "志愿",
+   "pair": "zh-en",
+   "slug": "zhi-yuan",
+   "lang": "zh",
+   "translation": "college application",
+   "shortAnswer": "「志愿」在英文里常对应 college application，指大学申请时提交的志愿选择。",
+   "definition": "college application 指大学申请，包含填写志愿。中文“填志愿”也可说 list your college preferences。",
+   "examples": [
+    {
+     "en": "I need to finish my college application before the deadline next week.",
+     "zh": "我得在下周截止日期前完成我的大学申请（志愿）。"
+    },
+    {
+     "en": "She listed her top three college applications, but only got into her second choice.",
+     "zh": "她填了三个志愿，但只被第二志愿录取了。"
+    }
+   ],
+   "tags": [
+    "校园学习"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "college application",
+   "pair": "en-zh",
+   "slug": "college-application",
+   "lang": "en",
+   "translation": "志愿",
+   "shortAnswer": "College application 的中文意思是“志愿”，指大学申请中填写的志愿或申请本身。",
+   "definition": "college application 指大学入学申请，常搭配 submit 或 complete。中文“志愿”也可说 preferences。",
+   "examples": [
+    {
+     "en": "I need to finish my college application before the deadline next week.",
+     "zh": "我得在下周截止日期前完成我的大学申请（志愿）。"
+    },
+    {
+     "en": "She listed her top three college applications, but only got into her second choice.",
+     "zh": "她填了三个志愿，但只被第二志愿录取了。"
+    }
+   ],
+   "tags": [
+    "校园学习"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "成绩单",
+   "pair": "zh-en",
+   "slug": "cheng-ji-dan",
+   "lang": "zh",
+   "translation": "report card",
+   "shortAnswer": "「成绩单」的英文是 report card。它指学校定期发给家长的学生成绩报告单；大学官方成绩单一般说 transcript 或 academic transcript。",
+   "definition": "report card 常用于中小学，记录各科成绩、评语和出勤，美式英语常用；大学申请或求职用的正式成绩单是 transcript（美式也常说 academic record）。Grade report 较少作名词指成绩单，grade 本身多指分数。",
+   "examples": [
+    {
+     "en": "My son brought home his report card yesterday, and he got an A in math.",
+     "zh": "我儿子昨天把成绩单带回家了，他数学得了 A。"
+    },
+    {
+     "en": "She was afraid to show her parents the report card because she had failed two subjects.",
+     "zh": "她不敢把成绩单给父母看，因为她有两门科目不及格。"
+    }
+   ],
+   "tags": [
+    "校园学习"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "report card",
+   "pair": "en-zh",
+   "slug": "report-card",
+   "lang": "en",
+   "translation": "成绩单",
+   "shortAnswer": "report card 的中文意思是「成绩单」。它通常指学校发给家长的学生成绩报告单，而大学正式成绩单常用 transcript。",
+   "definition": "report card 是名词，指学校定期发给家长的成绩报告单，美式英语常用；英式英语有时说 school report。大学申请用的官方成绩单是 transcript，不要混用。",
+   "examples": [
+    {
+     "en": "My son brought home his report card yesterday, and he got an A in math.",
+     "zh": "我儿子昨天把成绩单带回家了，他数学得了 A。"
+    },
+    {
+     "en": "She was afraid to show her parents the report card because she had failed two subjects.",
+     "zh": "她不敢把成绩单给父母看，因为她有两门科目不及格。"
+    }
+   ],
+   "tags": [
+    "校园学习"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "文具",
+   "pair": "zh-en",
+   "slug": "wen-ju",
+   "lang": "zh",
+   "translation": "stationery",
+   "shortAnswer": "文具的英文是 stationery，不可数名词，指笔、本子、信封等书写用品总称，与 stationary（静止的）形近但不同。",
+   "definition": "不可数名词，文具的统称，无复数，不能说 a stationery。常见搭配：stationery shop（文具店）、office stationery（办公文具）。具体物件用 pen、notebook 等。",
+   "examples": [
+    {
+     "en": "I need to buy some stationery for the new semester, such as notebooks, pens, and folders.",
+     "zh": "我需要为新学期买些文具，比如笔记本、笔和文件夹。"
+    },
+    {
+     "en": "The teacher asked us to bring our own stationery to the exam, including pencils and erasers.",
+     "zh": "老师要求我们考试时自带文具，包括铅笔和橡皮。"
+    }
+   ],
+   "tags": [
+    "校园学习"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "stationery",
+   "pair": "en-zh",
+   "slug": "stationery",
+   "lang": "en",
+   "translation": "文具",
+   "shortAnswer": "stationery 的中文意思是文具，指笔、本子、信封等书写用品的总称，不可数，与形近词 stationary（静止的）不同。",
+   "definition": "不可数名词，文具的总称，包括笔、纸、信封、便签等。常见搭配：stationery store（文具店）、office stationery（办公文具）。问具体物品时用 pen、notebook 等可数名词。",
+   "examples": [
+    {
+     "en": "I need to buy some stationery for the new semester, such as notebooks, pens, and folders.",
+     "zh": "我需要为新学期买些文具，比如笔记本、笔和文件夹。"
+    },
+    {
+     "en": "The teacher asked us to bring our own stationery to the exam, including pencils and erasers.",
+     "zh": "老师要求我们考试时自带文具，包括铅笔和橡皮。"
+    }
+   ],
+   "tags": [
+    "校园学习"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "录取通知书",
+   "pair": "zh-en",
+   "slug": "lu-qu-tong-zhi-shu",
+   "lang": "zh",
+   "translation": "admission letter",
+   "shortAnswer": "录取通知书常说 admission letter，也可叫 acceptance letter 或 offer，是学校正式通知你被录取的文件。",
+   "definition": "admission letter 指大学录取通知书，正式用语；口语也常用 acceptance letter 或 offer。注意与 application（申请）和 enrollment（入学注册）区分。",
+   "examples": [
+    {
+     "en": "She was thrilled when she received her admission letter from the university.",
+     "zh": "收到大学的录取通知书时，她激动不已。"
+    },
+    {
+     "en": "He checked the mailbox every day, hoping his admission letter would arrive soon.",
+     "zh": "他每天查看邮箱，希望录取通知书能快点到。"
+    }
+   ],
+   "tags": [
+    "校园学习"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "admission letter",
+   "pair": "en-zh",
+   "slug": "admission-letter",
+   "lang": "en",
+   "translation": "录取通知书",
+   "shortAnswer": "admission letter 的中文意思是录取通知书，也可说 acceptance letter；它是学校正式通知你被录取的文件。",
+   "definition": "admission letter 或 acceptance letter 指录取通知书，为正式用语。常见搭配：receive an admission letter；注意与 application letter（申请信）区分。",
+   "examples": [
+    {
+     "en": "She was thrilled when she received her admission letter from the university.",
+     "zh": "收到大学的录取通知书时，她激动不已。"
+    },
+    {
+     "en": "He checked the mailbox every day, hoping his admission letter would arrive soon.",
+     "zh": "他每天查看邮箱，希望录取通知书能快点到。"
+    }
+   ],
+   "tags": [
+    "校园学习"
+   ],
+   "searchIntentType": "meaning"
+  }
+ ]
+}

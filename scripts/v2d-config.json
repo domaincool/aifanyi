@@ -1,0 +1,13 @@
+{
+  "SPECIAL": {
+    "打卡": "一词两义必须双义辨析：①上班/下班打卡 = clock in / clock out（打卡机 punch clock，考勤场景）；②网红店打卡/景点打卡 = 社交分享式到访，英文口语可说 check in at the trendy café 或 visit the hotspot；两义在 shortAnswer 里都要点到并讲清区别。",
+    "流量": "一词两义必须双义辨析：①手机流量 = (mobile) data（data plan 套餐、run out of data 流量用完、data usage 流量用量）；②网红/主播流量 = traffic / views（平台流量也可说 popularity）；英文不对应 flow，两义都要点到。"
+  },
+  "CAT_HINT": {
+    "职场办公": "重点写加班 work overtime、调休 compensatory leave（口语也常说 comp time）、跳槽 job-hopping（动词 job-hop）、年终奖 year-end bonus、试用期 probation period、升职加薪 promotion and pay raise；请假 ask for leave + for（ask for sick leave 病假）。",
+    "交通出行": "重点写高铁 high-speed rail、地铁 subway（美）与 underground/tube（英）之别、打车 take a taxi / hail a cab / call a ride（网约车说法）、换乘 transfer、末班车 the last train、安检 security check、登机牌 boarding pass。",
+    "住宿酒店": "重点写入住 check in 与退房 check out（名词形式 check-in/check-out）、含早 breakfast included、双床房 twin room 与大床房 king bed room 之别、民宿 guesthouse / B&B、行李寄存 luggage storage、接机 airport pickup。",
+    "手机与快递": "重点写充电宝 power bank、二维码 QR code、验证码 verification code、快递 express delivery / courier、取件码 pickup code、签收 sign for delivery、保修 warranty 与售后 after-sales service 之别。",
+    "校园学习": "重点写挂科 fail an exam（口语 flunk）、补考 make-up exam、自习 self-study、点名 roll call、逃课 skip class（口语 play hooky）、录取通知书 admission letter（美式口语也常说 acceptance letter / offer）、志愿 college application。"
+  }
+}
