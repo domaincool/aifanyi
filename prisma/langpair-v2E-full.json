@@ -1,0 +1,5535 @@
+{
+ "meta": {
+  "version": "v2-C-full",
+  "date": "2026-09-17",
+  "model": "deepseek-chat",
+  "source": "langpair-v2-batchC-20260917.json",
+  "pairCounts": {
+   "zh-en": 120,
+   "en-zh": 120
+  },
+  "slugStrategy": "zh=pinyin-pro (toneless, v), en=slugify"
+ },
+ "entries": [
+  {
+   "term": "下雨",
+   "pair": "zh-en",
+   "slug": "xia-yu",
+   "lang": "zh",
+   "translation": "rain",
+   "shortAnswer": "「下雨」的英文是 rain，既可作动词也可作名词。注意 rain 多指一般下雨，而 drizzle 指毛毛雨、pour 指倾盆大雨。",
+   "definition": "rain 作名词不可数，如 heavy rain、light rain；作动词时主语常用 it，如 It's raining。表示进入雨季可说 the rainy season，东亚梅雨常意译为 plum rain season 并加解释。",
+   "examples": [
+    {
+     "en": "It's raining heavily, so take an umbrella with you.",
+     "zh": "雨下得很大，你带把伞吧。"
+    },
+    {
+     "en": "The rainy season in East Asia often brings weeks of continuous rain.",
+     "zh": "东亚的梅雨季节常常带来连续数周的降雨。"
+    }
+   ],
+   "tags": [
+    "天气与季节"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "rain",
+   "pair": "en-zh",
+   "slug": "rain",
+   "lang": "en",
+   "translation": "下雨",
+   "shortAnswer": "“rain”的中文意思是「下雨」，常作名词或动词。它泛指降雨，而 drizzle 指毛毛雨，pour 强调倾盆大雨。",
+   "definition": "rain 作名词不可数，常见搭配有 heavy rain、light rain、acid rain；作动词时通常用 it 作主语，如 It's raining。口语中也可说 It looks like rain 表示天要下雨。",
+   "examples": [
+    {
+     "en": "It's raining heavily, so take an umbrella with you.",
+     "zh": "雨下得很大，你带把伞吧。"
+    },
+    {
+     "en": "The rainy season in East Asia often brings weeks of continuous rain.",
+     "zh": "东亚的梅雨季节常常带来连续数周的降雨。"
+    }
+   ],
+   "tags": [
+    "天气与季节"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "晴天",
+   "pair": "zh-en",
+   "slug": "qing-tian",
+   "lang": "zh",
+   "translation": "sunny day",
+   "shortAnswer": "晴天的英文是 sunny day，指天空无云或少云、阳光充足的日子。注意它强调“天气晴好”，而 clear 更侧重天空无云，不一定有阳光。",
+   "definition": "说“今天是个晴天”常用 It's a sunny day 或 It's sunny today。sunny day 是名词短语，可作主语或表语；形容天气好、适合出门时最自然。注意不要用 sun day 表示晴天，那会被理解为“太阳日/星期日”。",
+   "examples": [
+    {
+     "en": "It's a sunny day, so let's go to the park.",
+     "zh": "今天是个晴天，我们去公园吧。"
+    },
+    {
+     "en": "We had three sunny days in a row during our trip.",
+     "zh": "旅行期间我们连续遇到了三个晴天。"
+    }
+   ],
+   "tags": [
+    "天气与季节"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "sunny day",
+   "pair": "en-zh",
+   "slug": "sunny-day",
+   "lang": "en",
+   "translation": "晴天",
+   "shortAnswer": "sunny day 的中文意思是晴天，表示阳光充足、天空少云的日子。它与 fine weather 的区别是更强调阳光明媚，而不只是天气不错。",
+   "definition": "sunny day 是名词短语，日常口语和书面都常用，如 on a sunny day、a warm sunny day。注意 sunny 已有“晴”义，不要再说 sunny and no clouds；形容人开朗也可用 sunny，如 a sunny smile。",
+   "examples": [
+    {
+     "en": "It's a sunny day, so let's go to the park.",
+     "zh": "今天是个晴天，我们去公园吧。"
+    },
+    {
+     "en": "We had three sunny days in a row during our trip.",
+     "zh": "旅行期间我们连续遇到了三个晴天。"
+    }
+   ],
+   "tags": [
+    "天气与季节"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "降温",
+   "pair": "zh-en",
+   "slug": "jiang-wen",
+   "lang": "zh",
+   "translation": "temperature drop",
+   "shortAnswer": "「降温」的英文是 temperature drop，指气温下降，也可说 a drop in temperature。",
+   "definition": "temperature drop 是名词短语，常与 sharp、sudden 等词连用，如 a sharp temperature drop；也可用动词 drop：Temperatures will drop tonight。注意与 cold snap（寒潮）区分。",
+   "examples": [
+    {
+     "en": "The weather forecast says there will be a sharp temperature drop tonight, so remember to bring a jacket.",
+     "zh": "天气预报说今晚会大幅降温，记得带件外套。"
+    },
+    {
+     "en": "A sudden temperature drop in late autumn often catches people off guard, especially during the rainy season.",
+     "zh": "深秋的突然降温常常让人措手不及，尤其是在梅雨季节。"
+    }
+   ],
+   "tags": [
+    "天气与季节"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "temperature drop",
+   "pair": "en-zh",
+   "slug": "temperature-drop",
+   "lang": "en",
+   "translation": "降温",
+   "shortAnswer": "temperature drop 的中文意思是「降温」，指气温下降，强调下降的事实或幅度。",
+   "definition": "temperature drop 是可数名词短语，常用于天气报道，如 a sudden temperature drop；正式语境可用 drop in temperature，指温度下降的过程或结果，而非持续寒冷。",
+   "examples": [
+    {
+     "en": "The weather forecast says there will be a sharp temperature drop tonight, so remember to bring a jacket.",
+     "zh": "天气预报说今晚会大幅降温，记得带件外套。"
+    },
+    {
+     "en": "A sudden temperature drop in late autumn often catches people off guard, especially during the rainy season.",
+     "zh": "深秋的突然降温常常让人措手不及，尤其是在梅雨季节。"
+    }
+   ],
+   "tags": [
+    "天气与季节"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "寒潮",
+   "pair": "zh-en",
+   "slug": "han-chao",
+   "lang": "zh",
+   "translation": "cold wave",
+   "shortAnswer": "「寒潮」的英文是 cold wave，指强冷空气南下引发的大范围剧烈降温；注意与冷锋（cold front）不同。",
+   "definition": "cold wave 为可数名词，常见搭配有 a cold wave warning、hit by a cold wave，口语中也可用 a cold snap 表示短促寒潮。",
+   "examples": [
+    {
+     "en": "A cold wave swept across northern China last week, sending temperatures plunging below minus twenty.",
+     "zh": "上周一场寒潮席卷中国北方，气温骤降至零下二十度以下。"
+    },
+    {
+     "en": "The weather forecast says a cold wave is on the way, so remember to bundle up.",
+     "zh": "天气预报说寒潮即将来袭，记得多穿点。"
+    }
+   ],
+   "tags": [
+    "天气与季节"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "cold wave",
+   "pair": "en-zh",
+   "slug": "cold-wave",
+   "lang": "en",
+   "translation": "寒潮",
+   "shortAnswer": "Cold wave 中文意思是「寒潮」，指短时间气温骤降的强冷空气过程，与 cold front（冷锋）不同。",
+   "definition": "Cold wave 指大范围强降温天气，常见搭配有 a cold wave warning、a cold wave swept across the region，口语中多称 cold snap。",
+   "examples": [
+    {
+     "en": "A cold wave swept across northern China last week, sending temperatures plunging below minus twenty.",
+     "zh": "上周一场寒潮席卷中国北方，气温骤降至零下二十度以下。"
+    },
+    {
+     "en": "The weather forecast says a cold wave is on the way, so remember to bundle up.",
+     "zh": "天气预报说寒潮即将来袭，记得多穿点。"
+    }
+   ],
+   "tags": [
+    "天气与季节"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "阴天",
+   "pair": "zh-en",
+   "slug": "yin-tian",
+   "lang": "zh",
+   "translation": "cloudy day",
+   "shortAnswer": "「阴天」的英文是 cloudy day，指天空被云层覆盖、少见阳光的天气，通常不下雨。",
+   "definition": "cloudy day 指多云、天色灰暗的日子，可与 overcast 互换，但后者云层更厚、更书面。常用搭配：on a cloudy day。",
+   "examples": [
+    {
+     "en": "It was a cloudy day, so we decided to stay indoors and read.",
+     "zh": "那是个阴天，所以我们决定待在室内看书。"
+    },
+    {
+     "en": "Even on a cloudy day, the park looks beautiful with all the green trees.",
+     "zh": "即使是阴天，公园里满眼绿树也依然很美。"
+    }
+   ],
+   "tags": [
+    "天气与季节"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "cloudy day",
+   "pair": "en-zh",
+   "slug": "cloudy-day",
+   "lang": "en",
+   "translation": "阴天",
+   "shortAnswer": "A cloudy day means 阴天 in Chinese: the sky is mostly covered by clouds. It is not a rainy day.",
+   "definition": "cloudy day 指天空多云的阴天，通常不下雨，语气比 overcast day 更日常。常用搭配：on a cloudy day。",
+   "examples": [
+    {
+     "en": "It was a cloudy day, so we decided to stay indoors and read.",
+     "zh": "那是个阴天，所以我们决定待在室内看书。"
+    },
+    {
+     "en": "Even on a cloudy day, the park looks beautiful with all the green trees.",
+     "zh": "即使是阴天，公园里满眼绿树也依然很美。"
+    }
+   ],
+   "tags": [
+    "天气与季节"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "天气预报",
+   "pair": "zh-en",
+   "slug": "tian-qi-yu-bao",
+   "lang": "zh",
+   "translation": "weather forecast",
+   "shortAnswer": "「天气预报」的英文是 weather forecast，指对未来天气的预测，常用搭配 check the weather forecast。",
+   "definition": "weather forecast 指对未来天气的预测，可指预报内容或电视广播中的预报节目。常见搭配：check the weather forecast。",
+   "examples": [
+    {
+     "en": "The weather forecast says it will rain tomorrow, so remember to bring an umbrella.",
+     "zh": "天气预报说明天会下雨，记得带把伞。"
+    },
+    {
+     "en": "I always check the weather forecast before going hiking in the mountains.",
+     "zh": "我去山里徒步之前总是会查看天气预报。"
+    }
+   ],
+   "tags": [
+    "天气与季节"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "weather forecast",
+   "pair": "en-zh",
+   "slug": "weather-forecast",
+   "lang": "en",
+   "translation": "天气预报",
+   "shortAnswer": "weather forecast 的中文意思是「天气预报」，指对未来天气状况的预测，常见搭配 check the weather forecast。",
+   "definition": "weather forecast means 天气预报 in Chinese: a prediction of future weather, or the broadcast itself. Common: check the weather forecast。",
+   "examples": [
+    {
+     "en": "The weather forecast says it will rain tomorrow, so remember to bring an umbrella.",
+     "zh": "天气预报说明天会下雨，记得带把伞。"
+    },
+    {
+     "en": "I always check the weather forecast before going hiking in the mountains.",
+     "zh": "我去山里徒步之前总是会查看天气预报。"
+    }
+   ],
+   "tags": [
+    "天气与季节"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "三伏天",
+   "pair": "zh-en",
+   "slug": "san-fu-tian",
+   "lang": "zh",
+   "translation": "dog days",
+   "shortAnswer": "三伏天的英文是 dog days（of summer），指北半球夏季最炎热潮湿的一段时期，常与三伏天对应翻译。",
+   "definition": "dog days 常与 the 连用，如 the dog days of summer；口语中也说 the dog days。注意它不特指农历三伏，而是泛称盛夏酷热期，翻译时多可互换。",
+   "examples": [
+    {
+     "en": "During the dog days of summer, we stay indoors with the air conditioner on.",
+     "zh": "在三伏天里，我们待在室内开着空调。"
+    },
+    {
+     "en": "The dog days in this city are so humid that even the evenings feel like a sauna.",
+     "zh": "这座城市的三伏天非常潮湿，连傍晚都像蒸桑拿一样。"
+    }
+   ],
+   "tags": [
+    "天气与季节"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "dog days",
+   "pair": "en-zh",
+   "slug": "dog-days",
+   "lang": "en",
+   "translation": "三伏天",
+   "shortAnswer": "Dog days 中文意思是三伏天，指夏季最炎热潮湿的时期。它源自天狼星与太阳同升的古老说法，与汉语按农历计算的三伏天来源不同。",
+   "definition": "dog days 指北半球七月至八月间的酷热时期，常搭配 the dog days of summer。口语和书面均可用，但不宜直译为“狗的日子”。",
+   "examples": [
+    {
+     "en": "During the dog days of summer, we stay indoors with the air conditioner on.",
+     "zh": "在三伏天里，我们待在室内开着空调。"
+    },
+    {
+     "en": "The dog days in this city are so humid that even the evenings feel like a sauna.",
+     "zh": "这座城市的三伏天非常潮湿，连傍晚都像蒸桑拿一样。"
+    }
+   ],
+   "tags": [
+    "天气与季节"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "回暖",
+   "pair": "zh-en",
+   "slug": "hui-nuan",
+   "lang": "zh",
+   "translation": "warm up",
+   "shortAnswer": "回暖的英文是 warm up，指气温由冷转暖。注意它强调天气变暖的过程，不是形容当天热，别和 warm 混用。",
+   "definition": "warm up 作不及物动词，主语常是 weather、temperature、spring。例：The weather is warming up. 常见搭配 warm up quickly/again。倒春寒后的回暖也可用 warm up。名词形式是 warming。",
+   "examples": [
+    {
+     "en": "After the long cold spell, the weather finally started to warm up in late March.",
+     "zh": "经过漫长的寒潮，天气终于在三月下旬开始回暖。"
+    },
+    {
+     "en": "The forecast says it will warm up by the weekend, so we can eat outside.",
+     "zh": "天气预报说周末前会回暖，所以我们可以到户外吃饭。"
+    }
+   ],
+   "tags": [
+    "天气与季节"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "warm up",
+   "pair": "en-zh",
+   "slug": "warm-up",
+   "lang": "en",
+   "translation": "回暖",
+   "shortAnswer": "warm up 的中文意思是回暖，指天气或气温由冷变暖。它强调变暖的过程，不同于表示状态的 warm 或形容闷热的 humid。",
+   "definition": "warm up 用于天气时多为不及物，主语是 weather、it 或具体季节，如 It's warming up outside. 口语常用进行时。天预报中常说 It will warm up tomorrow. 注意天气义与运动前热身义不同。",
+   "examples": [
+    {
+     "en": "After the long cold spell, the weather finally started to warm up in late March.",
+     "zh": "经过漫长的寒潮，天气终于在三月下旬开始回暖。"
+    },
+    {
+     "en": "The forecast says it will warm up by the weekend, so we can eat outside.",
+     "zh": "天气预报说周末前会回暖，所以我们可以到户外吃饭。"
+    }
+   ],
+   "tags": [
+    "天气与季节"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "下雪",
+   "pair": "zh-en",
+   "slug": "xia-xue",
+   "lang": "zh",
+   "translation": "snow",
+   "shortAnswer": "「下雪」的英文是 snow，可作动词，也可作名词。作动词时主语常用 it，如 It's snowing。",
+   "definition": "snow 作动词指「下雪」，常用 it 作主语：It snowed all night. 作名词指「雪」，不可数。",
+   "examples": [
+    {
+     "en": "It snowed heavily last night, so the roads are covered in snow.",
+     "zh": "昨晚下了大雪，所以路面上覆盖着积雪。"
+    },
+    {
+     "en": "Look, it's snowing outside! The kids are excited to play in the snow.",
+     "zh": "快看，外面下雪了！孩子们兴奋地想在雪里玩。"
+    }
+   ],
+   "tags": [
+    "天气与季节"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "snow",
+   "pair": "en-zh",
+   "slug": "snow",
+   "lang": "en",
+   "translation": "下雪",
+   "shortAnswer": "snow 的中文意思是「下雪」，也可指「雪」。作动词表示雪从天降，作名词指固态降水。",
+   "definition": "snow 作名词指「雪」，不可数；作动词指「下雪」，主语用 it，如 It snows in winter.",
+   "examples": [
+    {
+     "en": "It snowed heavily last night, so the roads are covered in snow.",
+     "zh": "昨晚下了大雪，所以路面上覆盖着积雪。"
+    },
+    {
+     "en": "Look, it's snowing outside! The kids are excited to play in the snow.",
+     "zh": "快看，外面下雪了！孩子们兴奋地想在雪里玩。"
+    }
+   ],
+   "tags": [
+    "天气与季节"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "霜冻",
+   "pair": "zh-en",
+   "slug": "shuang-dong",
+   "lang": "zh",
+   "translation": "frost",
+   "shortAnswer": "霜冻的英文是 frost，指气温降到冰点以下时，地面或植物表面水汽凝华成白色冰晶的现象。",
+   "definition": "frost 多作名词，也作动词；常见搭配有 early frost（早霜）、frost damage（霜冻灾害）、hard frost（重霜）。",
+   "examples": [
+    {
+     "en": "The farmers covered the young plants with plastic to protect them from the frost.",
+     "zh": "农民用塑料布盖住幼苗，以保护它们免受霜冻的影响。"
+    },
+    {
+     "en": "There was a heavy frost last night, and the whole field turned white this morning.",
+     "zh": "昨晚下了重霜，今天早上整片田野都变白了。"
+    }
+   ],
+   "tags": [
+    "天气与季节"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "frost",
+   "pair": "en-zh",
+   "slug": "frost",
+   "lang": "en",
+   "translation": "霜冻",
+   "shortAnswer": "Frost 的中文意思是霜冻，指气温降到冰点以下时，水汽在物体表面凝华成白色冰晶的现象。",
+   "definition": "frost 指天冷时地面或植物上结的白霜，也可作动词表示结霜；常见搭配：a hard frost、frost on the windows。",
+   "examples": [
+    {
+     "en": "The farmers covered the young plants with plastic to protect them from the frost.",
+     "zh": "农民用塑料布盖住幼苗，以保护它们免受霜冻的影响。"
+    },
+    {
+     "en": "There was a heavy frost last night, and the whole field turned white this morning.",
+     "zh": "昨晚下了重霜，今天早上整片田野都变白了。"
+    }
+   ],
+   "tags": [
+    "天气与季节"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "阵风",
+   "pair": "zh-en",
+   "slug": "zhen-feng",
+   "lang": "zh",
+   "translation": "gust",
+   "shortAnswer": "「阵风」的英文是 gust，指短时风速突增。注意 gust 是名词，说「一阵大风」用 a gust of wind，不说 a gust wind。",
+   "definition": "gust 常搭配 a gust of wind 或 strong gust。天气预报里用 gusts of up to 60 km/h 表示阵风时速。与 breeze（微风）不同，gust 强调短暂、突然增强的风。",
+   "examples": [
+    {
+     "en": "A sudden gust of wind blew my hat off.",
+     "zh": "一阵突如其来的阵风把我的帽子吹掉了。"
+    },
+    {
+     "en": "The forecast warns of strong gusts up to 70 kilometers per hour.",
+     "zh": "天气预报警告有高达每小时七十公里的强阵风。"
+    }
+   ],
+   "tags": [
+    "天气与季节"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "gust",
+   "pair": "en-zh",
+   "slug": "gust",
+   "lang": "en",
+   "translation": "阵风",
+   "shortAnswer": "Gust 的中文意思是「阵风」，指风速突然短暂增强。它不同于持续稳定的 wind，强调突发性和短时性。",
+   "definition": "Gust 作名词，常见搭配 a gust of wind、strong gust。天气预报常用 gusts of up to... 表示阵风风速。口语中也可说 a gust of laughter 表示一阵大笑。",
+   "examples": [
+    {
+     "en": "A sudden gust of wind blew my hat off.",
+     "zh": "一阵突如其来的阵风把我的帽子吹掉了。"
+    },
+    {
+     "en": "The forecast warns of strong gusts up to 70 kilometers per hour.",
+     "zh": "天气预报警告有高达每小时七十公里的强阵风。"
+    }
+   ],
+   "tags": [
+    "天气与季节"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "气温",
+   "pair": "zh-en",
+   "slug": "qi-wen",
+   "lang": "zh",
+   "translation": "temperature",
+   "shortAnswer": "「气温」的英文是 temperature，指空气的冷热，通常说 the temperature。",
+   "definition": "temperature 指空气冷热的度数，常搭配 the：the temperature is 30°C。它也指体温、水温等。",
+   "examples": [
+    {
+     "en": "The temperature dropped below zero last night, so the roads are icy this morning.",
+     "zh": "昨晚气温降到了零度以下，所以今天早上路面结冰了。"
+    },
+    {
+     "en": "During the plum rain season, the temperature stays high and the air feels muggy.",
+     "zh": "梅雨季节里气温一直很高，空气闷热潮湿。"
+    }
+   ],
+   "tags": [
+    "天气与季节"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "temperature",
+   "pair": "en-zh",
+   "slug": "temperature",
+   "lang": "en",
+   "translation": "气温",
+   "shortAnswer": "temperature 指「气温」，即空气的冷热程度，常说 the temperature。",
+   "definition": "temperature 表示冷热的度数，可指气温、体温、水温。常见搭配：high/low temperature、the temperature drops。",
+   "examples": [
+    {
+     "en": "The temperature dropped below zero last night, so the roads are icy this morning.",
+     "zh": "昨晚气温降到了零度以下，所以今天早上路面结冰了。"
+    },
+    {
+     "en": "During the plum rain season, the temperature stays high and the air feels muggy.",
+     "zh": "梅雨季节里气温一直很高，空气闷热潮湿。"
+    }
+   ],
+   "tags": [
+    "天气与季节"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "防晒",
+   "pair": "zh-en",
+   "slug": "fang-shai",
+   "lang": "zh",
+   "translation": "sunscreen",
+   "shortAnswer": "「防晒」的英文是 sunscreen，指防晒霜或防晒产品；日常口语中也常用 sunblock，但 sunscreen 更强调化学吸收紫外线。",
+   "definition": "sunscreen 多指涂抹的防晒霜，搭配 apply/wear sunscreen；防晒的统称还可用 sun protection，如 sun protection factor（SPF）。注意 umbrella 是遮阳伞，不等于防晒霜。",
+   "examples": [
+    {
+     "en": "Don't forget to apply sunscreen before you go out; the UV index is really high today.",
+     "zh": "出门前别忘了涂防晒，今天的紫外线指数很高。"
+    },
+    {
+     "en": "She always carries a bottle of sunscreen in her bag, even on cloudy days.",
+     "zh": "她包里总是带着一瓶防晒，即使是阴天也不例外。"
+    }
+   ],
+   "tags": [
+    "天气与季节"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "sunscreen",
+   "pair": "en-zh",
+   "slug": "sunscreen",
+   "lang": "en",
+   "translation": "防晒",
+   "shortAnswer": "Sunscreen 的中文意思是「防晒」，通常指防晒霜或防晒乳；它和 sunblock 近义，但 sunscreen 更常指化学防晒产品。",
+   "definition": "sunscreen 是名词，指涂抹于皮肤以防止晒伤的防晒产品，常见搭配 apply/wear/reapply sunscreen。口语中也可说 sun cream；注意它不是遮阳伞（parasol）或防晒衣。",
+   "examples": [
+    {
+     "en": "Don't forget to apply sunscreen before you go out; the UV index is really high today.",
+     "zh": "出门前别忘了涂防晒，今天的紫外线指数很高。"
+    },
+    {
+     "en": "She always carries a bottle of sunscreen in her bag, even on cloudy days.",
+     "zh": "她包里总是带着一瓶防晒，即使是阴天也不例外。"
+    }
+   ],
+   "tags": [
+    "天气与季节"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "回南天",
+   "pair": "zh-en",
+   "slug": "hui-nan-tian",
+   "lang": "zh",
+   "translation": "returning south wind",
+   "shortAnswer": "「回南天」的英文是 returning south wind。这是华南春季特有的返潮天气，英文无标准对应词，需解释现象。",
+   "definition": "回南天指华南春季冷空气走后暖湿气流北上，墙壁地板「冒水」、衣物难干。说 returning south wind 时最好加解释，如 damp days 或 back-to-south days。",
+   "examples": [
+    {
+     "en": "During the returning south wind, the walls and floors sweat, and clothes take days to dry.",
+     "zh": "回南天时，墙壁和地板冒水，衣服几天都干不了。"
+    },
+    {
+     "en": "Spring in southern China often brings the returning south wind, a humid spell that makes everything damp.",
+     "zh": "华南的春天常会带来回南天，一段让所有东西都潮湿的返潮期。"
+    }
+   ],
+   "tags": [
+    "天气与季节"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "returning south wind",
+   "pair": "en-zh",
+   "slug": "returning-south-wind",
+   "lang": "en",
+   "translation": "回南天",
+   "shortAnswer": "Returning south wind 的中文意思是「回南天」。它特指中国华南春季的返潮天气，不是普通的南风。",
+   "definition": "Returning south wind 指华南春季暖湿气流回归导致的极端潮湿天气，墙壁地板凝水、衣物不干。日常可说 back-to-south days 或 humid spring days，需加解释。",
+   "examples": [
+    {
+     "en": "During the returning south wind, the walls and floors sweat, and clothes take days to dry.",
+     "zh": "回南天时，墙壁和地板冒水，衣服几天都干不了。"
+    },
+    {
+     "en": "Spring in southern China often brings the returning south wind, a humid spell that makes everything damp.",
+     "zh": "华南的春天常会带来回南天，一段让所有东西都潮湿的返潮期。"
+    }
+   ],
+   "tags": [
+    "天气与季节"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "雨伞",
+   "pair": "zh-en",
+   "slug": "yu-san",
+   "lang": "zh",
+   "translation": "umbrella",
+   "shortAnswer": "雨伞的英文是 umbrella，可数名词，一把伞说 an umbrella。既指雨伞也指遮阳伞，口语常说 take an umbrella。",
+   "definition": "umbrella 泛指各类伞，英式口语也常用 brolly。搭配：take an umbrella（带伞）、put up an umbrella（撑伞）。",
+   "examples": [
+    {
+     "en": "It looks like rain, so take an umbrella with you.",
+     "zh": "看样子要下雨了，带把伞吧。"
+    },
+    {
+     "en": "She put up her umbrella and walked into the rainy season drizzle.",
+     "zh": "她撑起雨伞，走进梅雨季的细雨中。"
+    }
+   ],
+   "tags": [
+    "天气与季节"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "umbrella",
+   "pair": "en-zh",
+   "slug": "umbrella",
+   "lang": "en",
+   "translation": "雨伞",
+   "shortAnswer": "Umbrella 的中文意思是雨伞，也可指遮阳伞，是撑在头顶挡雨或遮阳的用具，不同于 raincoat。",
+   "definition": "umbrella 是可数名词，指雨伞或遮阳伞，英式口语也说 brolly。搭配：take an umbrella、put up an umbrella、under an umbrella。",
+   "examples": [
+    {
+     "en": "It looks like rain, so take an umbrella with you.",
+     "zh": "看样子要下雨了，带把伞吧。"
+    },
+    {
+     "en": "She put up her umbrella and walked into the rainy season drizzle.",
+     "zh": "她撑起雨伞，走进梅雨季的细雨中。"
+    }
+   ],
+   "tags": [
+    "天气与季节"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "湿度",
+   "pair": "zh-en",
+   "slug": "shi-du",
+   "lang": "zh",
+   "translation": "humidity",
+   "shortAnswer": "「湿度」的英文是 humidity，通常指空气中的水汽含量。注意 humid 是形容词，表示「潮湿的」，而 humidity 是名词，不能混用。",
+   "definition": "humidity 多用于天气和气候描述，常见搭配有 high/low humidity（湿度高/低）。口语中也常用 humid 形容闷热潮湿的天气，如 It's humid today。",
+   "examples": [
+    {
+     "en": "The humidity is really high today, so it feels much hotter than the actual temperature.",
+     "zh": "今天湿度很高，所以体感温度比实际气温热得多。"
+    },
+    {
+     "en": "During the rainy season, the humidity stays above 80% for weeks, making everything feel damp.",
+     "zh": "梅雨季节期间，湿度连续几周保持在80%以上，感觉什么东西都潮乎乎的。"
+    }
+   ],
+   "tags": [
+    "天气与季节"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "humidity",
+   "pair": "en-zh",
+   "slug": "humidity",
+   "lang": "en",
+   "translation": "湿度",
+   "shortAnswer": "Humidity 的中文意思是「湿度」，指空气中水蒸气的含量。它和 moisture 不同，humidity 专指空气的潮湿程度。",
+   "definition": "humidity 是名词，常见搭配如 high humidity、relative humidity（相对湿度）。天气预报中常用来描述闷热天气，日常口语也可用 humid 形容词形式。",
+   "examples": [
+    {
+     "en": "The humidity is really high today, so it feels much hotter than the actual temperature.",
+     "zh": "今天湿度很高，所以体感温度比实际气温热得多。"
+    },
+    {
+     "en": "During the rainy season, the humidity stays above 80% for weeks, making everything feel damp.",
+     "zh": "梅雨季节期间，湿度连续几周保持在80%以上，感觉什么东西都潮乎乎的。"
+    }
+   ],
+   "tags": [
+    "天气与季节"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "秋老虎",
+   "pair": "zh-en",
+   "slug": "qiu-lao-hu",
+   "lang": "zh",
+   "translation": "Indian summer",
+   "shortAnswer": "「秋老虎」英文常译为 Indian summer，但两者有时间差：秋老虎指立秋（8月）后回热，Indian summer 指深秋（10-11月）的回暖。",
+   "definition": "Indian summer 多用于北美深秋回暖，常搭配 a brief/late Indian summer；译「秋老虎」时需加时间说明，避免让英语母语者误以为指8月。",
+   "examples": [
+    {
+     "en": "The weather forecast says we're in for a brief Indian summer before the first frost.",
+     "zh": "天气预报说初霜前我们会经历一次短暂的回暖，也就是秋老虎天气。"
+    },
+    {
+     "en": "After a week of cold rain, an Indian summer brought warm afternoons back to the town.",
+     "zh": "冷雨一周后，一段深秋回暖期让小镇的午后重新暖和起来。"
+    }
+   ],
+   "tags": [
+    "天气与季节"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "Indian summer",
+   "pair": "en-zh",
+   "slug": "indian-summer",
+   "lang": "en",
+   "translation": "秋老虎",
+   "shortAnswer": "Indian summer 中文常译作「秋老虎」，但关键区别是时间：Indian summer 指深秋（10-11月）回暖，中文「秋老虎」指立秋（8月）后回热。",
+   "definition": "Indian summer 指深秋短暂回暖，常见搭配 a late/a brief Indian summer，偏文学口语；也可喻指晚年或事业后期的短暂回春，非正式场合可用。",
+   "examples": [
+    {
+     "en": "The weather forecast says we're in for a brief Indian summer before the first frost.",
+     "zh": "天气预报说初霜前我们会经历一次短暂的回暖，也就是秋老虎天气。"
+    },
+    {
+     "en": "After a week of cold rain, an Indian summer brought warm afternoons back to the town.",
+     "zh": "冷雨一周后，一段深秋回暖期让小镇的午后重新暖和起来。"
+    }
+   ],
+   "tags": [
+    "天气与季节"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "雨过天晴",
+   "pair": "zh-en",
+   "slug": "yu-guo-tian-qing",
+   "lang": "zh",
+   "translation": "clear up after rain",
+   "shortAnswer": "「雨过天晴」的英文是 clear up after rain，指雨后天空放晴，天气转好。",
+   "definition": "clear up after rain 强调雨停后云散日出，主语多为 it 或 the sky，如 It will clear up after rain tomorrow。",
+   "examples": [
+    {
+     "en": "The forecast says it will clear up after rain tomorrow, so we can still go hiking.",
+     "zh": "天气预报说明天雨过天晴，所以我们还是可以去徒步。"
+    },
+    {
+     "en": "After the storm, it finally cleared up after rain, and a rainbow appeared.",
+     "zh": "暴风雨过后，终于雨过天晴，天空出现了一道彩虹。"
+    }
+   ],
+   "tags": [
+    "天气与季节"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "clear up after rain",
+   "pair": "en-zh",
+   "slug": "clear-up-after-rain",
+   "lang": "en",
+   "translation": "雨过天晴",
+   "shortAnswer": "clear up after rain 的中文意思是「雨过天晴」，指雨后天空放晴，也可比喻情况好转。",
+   "definition": "clear up after rain 是天气类动词短语，主语常用 it 或 the sky，多见于天气预报，强调雨后转晴。",
+   "examples": [
+    {
+     "en": "The forecast says it will clear up after rain tomorrow, so we can still go hiking.",
+     "zh": "天气预报说明天雨过天晴，所以我们还是可以去徒步。"
+    },
+    {
+     "en": "After the storm, it finally cleared up after rain, and a rainbow appeared.",
+     "zh": "暴风雨过后，终于雨过天晴，天空出现了一道彩虹。"
+    }
+   ],
+   "tags": [
+    "天气与季节"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "梅雨",
+   "pair": "zh-en",
+   "slug": "mei-yu",
+   "lang": "zh",
+   "translation": "rainy season",
+   "shortAnswer": "「梅雨」的英文常说 rainy season，但 rainy season 泛指雨季，特指东亚梅雨时可说 East Asian rainy season 或 plum rain season。",
+   "definition": "梅雨指东亚春末夏初的持续阴雨天气，英文常用 rainy season 表示。短语 the rainy season begins/ends，during the rainy season。",
+   "examples": [
+    {
+     "en": "The rainy season in East Asia usually begins in early June and lasts about a month.",
+     "zh": "东亚的梅雨通常从六月初开始，持续约一个月。"
+    },
+    {
+     "en": "During the rainy season, it is humid and things easily get moldy, so people often use dehumidifiers.",
+     "zh": "梅雨季节空气潮湿，东西容易发霉，所以人们常用除湿机。"
+    }
+   ],
+   "tags": [
+    "天气与季节"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "rainy season",
+   "pair": "en-zh",
+   "slug": "rainy-season",
+   "lang": "en",
+   "translation": "梅雨",
+   "shortAnswer": "“rainy season”常译为「梅雨」，也泛指雨季。在东亚语境下特指梅雨；热带地区则指雨季。",
+   "definition": "rainy season 指一年中降雨集中的时期，在东亚常对应梅雨。搭配 during the rainy season，the rainy season starts。",
+   "examples": [
+    {
+     "en": "The rainy season in East Asia usually begins in early June and lasts about a month.",
+     "zh": "东亚的梅雨通常从六月初开始，持续约一个月。"
+    },
+    {
+     "en": "During the rainy season, it is humid and things easily get moldy, so people often use dehumidifiers.",
+     "zh": "梅雨季节空气潮湿，东西容易发霉，所以人们常用除湿机。"
+    }
+   ],
+   "tags": [
+    "天气与季节"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "倒春寒",
+   "pair": "zh-en",
+   "slug": "dao-chun-han",
+   "lang": "zh",
+   "translation": "late spring cold snap",
+   "shortAnswer": "倒春寒的英文是 late spring cold snap，指春季回暖后突然出现的持续低温天气。",
+   "definition": "倒春寒是汉语特有天气词，英语常意译为 late spring cold snap，也可说 late spring cold spell。切勿直译成 spring cold。",
+   "examples": [
+    {
+     "en": "A late spring cold snap hit the north last week, and farmers rushed to cover their seedlings.",
+     "zh": "上周一场倒春寒袭击了北方，农民们赶紧给幼苗盖上覆盖物。"
+    },
+    {
+     "en": "Don't put away your coat yet; a late spring cold snap can still catch us off guard.",
+     "zh": "先别把外套收起来，倒春寒还可能让我们措手不及。"
+    }
+   ],
+   "tags": [
+    "天气与季节"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "late spring cold snap",
+   "pair": "en-zh",
+   "slug": "late-spring-cold-snap",
+   "lang": "en",
+   "translation": "倒春寒",
+   "shortAnswer": "late spring cold snap 的中文意思是倒春寒，指春末回暖后突然来袭、易冻伤作物的低温天气。",
+   "definition": "late spring cold snap 多用于农业与气象语境，口语也说 a cold spell in late spring。snap 强调突然而猛烈。",
+   "examples": [
+    {
+     "en": "A late spring cold snap hit the north last week, and farmers rushed to cover their seedlings.",
+     "zh": "上周一场倒春寒袭击了北方，农民们赶紧给幼苗盖上覆盖物。"
+    },
+    {
+     "en": "Don't put away your coat yet; a late spring cold snap can still catch us off guard.",
+     "zh": "先别把外套收起来，倒春寒还可能让我们措手不及。"
+    }
+   ],
+   "tags": [
+    "天气与季节"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "晴转多云",
+   "pair": "zh-en",
+   "slug": "qing-zhuan-duo-yun",
+   "lang": "zh",
+   "translation": "partly cloudy",
+   "shortAnswer": "晴转多云 的英文是 partly cloudy，表示天空由晴逐渐转为部分有云，云量通常在25%到50%之间。",
+   "definition": "partly cloudy 常用于天气预报，云量比 cloudy 少、比 mostly sunny 多。它强调多云状态，而非「转」的变化过程；若要突出转变，可用 becoming partly cloudy。",
+   "examples": [
+    {
+     "en": "The forecast says it will be partly cloudy this afternoon, so we can still go hiking.",
+     "zh": "天气预报说今天下午晴转多云，所以我们还是可以去徒步。"
+    },
+    {
+     "en": "It was partly cloudy in the morning, and by noon the sun was completely hidden.",
+     "zh": "早上天气晴转多云，到了中午太阳就完全被遮住了。"
+    }
+   ],
+   "tags": [
+    "天气与季节"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "partly cloudy",
+   "pair": "en-zh",
+   "slug": "partly-cloudy",
+   "lang": "en",
+   "translation": "晴转多云",
+   "shortAnswer": "partly cloudy 的中文意思是晴转多云，指天空有部分云但仍有阳光，云量约四分之一到一半。",
+   "definition": "partly cloudy 是天气预报常用词，描述云量中等、仍有较多阳光的天气。常见搭配：It's partly cloudy today、partly cloudy skies。口语中也说 partly sunny。",
+   "examples": [
+    {
+     "en": "The forecast says it will be partly cloudy this afternoon, so we can still go hiking.",
+     "zh": "天气预报说今天下午晴转多云，所以我们还是可以去徒步。"
+    },
+    {
+     "en": "It was partly cloudy in the morning, and by noon the sun was completely hidden.",
+     "zh": "早上天气晴转多云，到了中午太阳就完全被遮住了。"
+    }
+   ],
+   "tags": [
+    "天气与季节"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "桑拿天",
+   "pair": "zh-en",
+   "slug": "sang-na-tian",
+   "lang": "zh",
+   "translation": "sauna-like heat",
+   "shortAnswer": "「桑拿天」的英文是 sauna-like heat，形容又闷又热、汗黏在身上的天气，常用于口语和天气报道。",
+   "definition": "常与 in / during 搭配，如 in this sauna-like heat。强调湿热闷蒸，不等于普通热或干热。",
+   "examples": [
+    {
+     "en": "We stayed indoors all afternoon because of the sauna-like heat outside.",
+     "zh": "因为外面是桑拿天，我们整个下午都待在室内。"
+    },
+    {
+     "en": "The rainy season often brings sauna-like heat to southern China.",
+     "zh": "雨季常常给中国南方带来桑拿天。"
+    }
+   ],
+   "tags": [
+    "天气与季节"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "sauna-like heat",
+   "pair": "en-zh",
+   "slug": "sauna-like-heat",
+   "lang": "en",
+   "translation": "桑拿天",
+   "shortAnswer": "sauna-like heat 的中文意思是「桑拿天」，指高温高湿、闷热难耐的天气，常用于口语和天气描述。",
+   "definition": "名词短语，核心义为湿热闷蒸的天气。常见搭配：in the sauna-like heat。多用于口语和天气报道，不指干热。",
+   "examples": [
+    {
+     "en": "We stayed indoors all afternoon because of the sauna-like heat outside.",
+     "zh": "因为外面是桑拿天，我们整个下午都待在室内。"
+    },
+    {
+     "en": "The rainy season often brings sauna-like heat to southern China.",
+     "zh": "雨季常常给中国南方带来桑拿天。"
+    }
+   ],
+   "tags": [
+    "天气与季节"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "雷阵雨",
+   "pair": "zh-en",
+   "slug": "lei-zhen-yu",
+   "lang": "zh",
+   "translation": "thundershower",
+   "shortAnswer": "「雷阵雨」的英文是 thundershower，指伴有雷电、来去较快的阵性降雨。",
+   "definition": "thundershower 指短暂、局部的雷阵雨，常发生在夏季午后，常见搭配 scattered thundershowers。",
+   "examples": [
+    {
+     "en": "The weather forecast says there will be scattered thundershowers this afternoon, so take an umbrella.",
+     "zh": "天气预报说今天下午有零星雷阵雨，所以带把伞吧。"
+    },
+    {
+     "en": "We got caught in a sudden thundershower on the way home and were soaked through.",
+     "zh": "我们在回家路上碰到一场突如其来的雷阵雨，全身都淋透了。"
+    }
+   ],
+   "tags": [
+    "天气与季节"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "thundershower",
+   "pair": "en-zh",
+   "slug": "thundershower",
+   "lang": "en",
+   "translation": "雷阵雨",
+   "shortAnswer": "Thundershower means 「雷阵雨」: a brief rain shower with thunder and lightning.",
+   "definition": "A thundershower is a short, local rain shower with thunder and lightning, common on summer afternoons.",
+   "examples": [
+    {
+     "en": "The weather forecast says there will be scattered thundershowers this afternoon, so take an umbrella.",
+     "zh": "天气预报说今天下午有零星雷阵雨，所以带把伞吧。"
+    },
+    {
+     "en": "We got caught in a sudden thundershower on the way home and were soaked through.",
+     "zh": "我们在回家路上碰到一场突如其来的雷阵雨，全身都淋透了。"
+    }
+   ],
+   "tags": [
+    "天气与季节"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "元宵节",
+   "pair": "zh-en",
+   "slug": "yuan-xiao-jie",
+   "lang": "zh",
+   "translation": "Lantern Festival",
+   "shortAnswer": "元宵节的英文是 Lantern Festival，指农历正月十五赏花灯的节日。注意别直译成 Yuanxiao Festival，国际通用说法是 Lantern Festival。",
+   "definition": "元宵节固定译为 Lantern Festival，强调赏灯习俗；食物“元宵/汤圆”常音译为 tangyuan，不叫 dumpling。常见搭配 celebrate the Lantern Festival、on the Lantern Festival。",
+   "examples": [
+    {
+     "en": "We usually eat tangyuan and watch the lantern show with our family on the Lantern Festival.",
+     "zh": "元宵节我们通常和家人一起吃汤圆、看灯展。"
+    },
+    {
+     "en": "The Lantern Festival falls on the fifteenth day of the first lunar month, marking the end of the Spring Festival celebrations.",
+     "zh": "元宵节在农历正月十五，标志着春节庆祝活动的结束。"
+    }
+   ],
+   "tags": [
+    "节日与假期"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "Lantern Festival",
+   "pair": "en-zh",
+   "slug": "lantern-festival",
+   "lang": "en",
+   "translation": "元宵节",
+   "shortAnswer": "Lantern Festival 的中文意思是元宵节，即农历正月十五、人们赏灯吃汤圆的节日。它不指一般灯会，而是特指中国农历节日。",
+   "definition": "Lantern Festival 专指中国元宵节，常搭配 celebrate/hold the Lantern Festival；与 Bon Festival（日本盂兰盆节）、Carnival 不同，指农历正月十五，英文中一般不加 the 首字母不大写。",
+   "examples": [
+    {
+     "en": "We usually eat tangyuan and watch the lantern show with our family on the Lantern Festival.",
+     "zh": "元宵节我们通常和家人一起吃汤圆、看灯展。"
+    },
+    {
+     "en": "The Lantern Festival falls on the fifteenth day of the first lunar month, marking the end of the Spring Festival celebrations.",
+     "zh": "元宵节在农历正月十五，标志着春节庆祝活动的结束。"
+    }
+   ],
+   "tags": [
+    "节日与假期"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "除夕",
+   "pair": "zh-en",
+   "slug": "chu-xi",
+   "lang": "zh",
+   "translation": "Chinese New Year's Eve",
+   "shortAnswer": "除夕的英文是 Chinese New Year's Eve，指农历年的最后一天。",
+   "definition": "Chinese New Year's Eve 指农历年的最后一天，即春节前夜，常搭配年夜饭、守岁等。",
+   "examples": [
+    {
+     "en": "On Chinese New Year's Eve, families gather for a reunion dinner and stay up late.",
+     "zh": "除夕夜，家家户户团聚吃年夜饭，并守岁迎接新年。"
+    },
+    {
+     "en": "Many people travel home before Chinese New Year's Eve, so train tickets are hard to get.",
+     "zh": "很多人赶在除夕前回家，所以火车票常常很难买。"
+    }
+   ],
+   "tags": [
+    "节日与假期"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "Chinese New Year's Eve",
+   "pair": "en-zh",
+   "slug": "chinese-new-year-s-eve",
+   "lang": "en",
+   "translation": "除夕",
+   "shortAnswer": "Chinese New Year's Eve means 除夕, the last day of the lunar year.",
+   "definition": "Chinese New Year's Eve is 除夕, the final day of the lunar year, before Spring Festival Day.",
+   "examples": [
+    {
+     "en": "On Chinese New Year's Eve, families gather for a reunion dinner and stay up late.",
+     "zh": "除夕夜，家家户户团聚吃年夜饭，并守岁迎接新年。"
+    },
+    {
+     "en": "Many people travel home before Chinese New Year's Eve, so train tickets are hard to get.",
+     "zh": "很多人赶在除夕前回家，所以火车票常常很难买。"
+    }
+   ],
+   "tags": [
+    "节日与假期"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "春节",
+   "pair": "zh-en",
+   "slug": "chun-jie",
+   "lang": "zh",
+   "translation": "Chinese New Year",
+   "shortAnswer": "春节的英文常称 Chinese New Year，也叫 Spring Festival，指中国农历新年。",
+   "definition": "Chinese New Year 是「春节」最通行的英文说法，指中国农历新年；Spring Festival 更直译，常见于国内英文媒体。",
+   "examples": [
+    {
+     "en": "Millions of people travel home to celebrate Chinese New Year with their families.",
+     "zh": "数百万人赶回家与家人一起庆祝春节。"
+    },
+    {
+     "en": "During Chinese New Year, children receive lucky money in red envelopes.",
+     "zh": "春节期间，孩子们会收到装在红包里的压岁钱。"
+    }
+   ],
+   "tags": [
+    "节日与假期"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "Chinese New Year",
+   "pair": "en-zh",
+   "slug": "chinese-new-year",
+   "lang": "en",
+   "translation": "春节",
+   "shortAnswer": "Chinese New Year means 春节, the whole Chinese lunar new year holiday, not just one day.",
+   "definition": "Chinese New Year means 春节, the Chinese lunar new year; it names the whole holiday season, not the single day.",
+   "examples": [
+    {
+     "en": "Millions of people travel home to celebrate Chinese New Year with their families.",
+     "zh": "数百万人赶回家与家人一起庆祝春节。"
+    },
+    {
+     "en": "During Chinese New Year, children receive lucky money in red envelopes.",
+     "zh": "春节期间，孩子们会收到装在红包里的压岁钱。"
+    }
+   ],
+   "tags": [
+    "节日与假期"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "清明节",
+   "pair": "zh-en",
+   "slug": "qing-ming-jie",
+   "lang": "zh",
+   "translation": "Tomb-Sweeping Day",
+   "shortAnswer": "清明节的英文是 Tomb-Sweeping Day，意为扫墓日，口语中也说 Qingming Festival。",
+   "definition": "Tomb-Sweeping Day 指清明节，字面意“扫墓日”。常见搭配：sweep the tombs（扫墓）、pay respects to ancestors（祭祖）。",
+   "examples": [
+    {
+     "en": "During Tomb-Sweeping Day, many Chinese families visit their ancestors' graves to pay respects.",
+     "zh": "清明节期间，许多中国家庭会去祖先的墓地祭拜。"
+    },
+    {
+     "en": "Tomb-Sweeping Day is a public holiday in China, and people often enjoy spring outings after sweeping the tombs.",
+     "zh": "清明节是中国的公共假期，人们扫墓后常常会去春游踏青。"
+    }
+   ],
+   "tags": [
+    "节日与假期"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "Tomb-Sweeping Day",
+   "pair": "en-zh",
+   "slug": "tomb-sweeping-day",
+   "lang": "en",
+   "translation": "清明节",
+   "shortAnswer": "Tomb-Sweeping Day is 清明节 in Chinese, a traditional festival for honoring ancestors.",
+   "definition": "Tomb-Sweeping Day means 清明节, a Chinese festival when people sweep tombs and pay respects to ancestors.",
+   "examples": [
+    {
+     "en": "During Tomb-Sweeping Day, many Chinese families visit their ancestors' graves to pay respects.",
+     "zh": "清明节期间，许多中国家庭会去祖先的墓地祭拜。"
+    },
+    {
+     "en": "Tomb-Sweeping Day is a public holiday in China, and people often enjoy spring outings after sweeping the tombs.",
+     "zh": "清明节是中国的公共假期，人们扫墓后常常会去春游踏青。"
+    }
+   ],
+   "tags": [
+    "节日与假期"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "沙尘暴",
+   "pair": "zh-en",
+   "slug": "sha-chen-bao",
+   "lang": "zh",
+   "translation": "sandstorm",
+   "shortAnswer": "「沙尘暴」的英文是 sandstorm，指强风卷起大量沙尘、能见度骤降的天气现象。",
+   "definition": "sandstorm 为可数名词，常与 blow、hit、sweep 等动词搭配，如 a sandstorm hit the city。",
+   "examples": [
+    {
+     "en": "A sudden sandstorm forced the airport to cancel all flights.",
+     "zh": "一场突如其来的沙尘暴迫使机场取消了所有航班。"
+    },
+    {
+     "en": "If you're driving through the desert, keep an eye out for sandstorms.",
+     "zh": "如果你开车穿越沙漠，要留意沙尘暴。"
+    }
+   ],
+   "tags": [
+    "天气与季节"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "sandstorm",
+   "pair": "en-zh",
+   "slug": "sandstorm",
+   "lang": "en",
+   "translation": "沙尘暴",
+   "shortAnswer": "Sandstorm 的中文意思是「沙尘暴」，指强风将沙尘吹起、能见度极低的天气。",
+   "definition": "sandstorm is a countable noun; common collocations include a heavy sandstorm and be caught in a sandstorm.",
+   "examples": [
+    {
+     "en": "A sudden sandstorm forced the airport to cancel all flights.",
+     "zh": "一场突如其来的沙尘暴迫使机场取消了所有航班。"
+    },
+    {
+     "en": "If you're driving through the desert, keep an eye out for sandstorms.",
+     "zh": "如果你开车穿越沙漠，要留意沙尘暴。"
+    }
+   ],
+   "tags": [
+    "天气与季节"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "中秋节",
+   "pair": "zh-en",
+   "slug": "zhong-qiu-jie",
+   "lang": "zh",
+   "translation": "Mid-Autumn Festival",
+   "shortAnswer": "中秋节的英文是 Mid-Autumn Festival，这是固定译名，不要直译成 Middle Autumn Day。",
+   "definition": "Mid-Autumn Festival 是中秋节的标准英文名，首字母大写，常与 the 连用；月饼译为 mooncake。",
+   "examples": [
+    {
+     "en": "During the Mid-Autumn Festival, families gather together to eat mooncakes and admire the full moon.",
+     "zh": "中秋节期间，家人聚在一起吃月饼、赏满月。"
+    },
+    {
+     "en": "The Mid-Autumn Festival is one of the most important traditional holidays in China, second only to the Spring Festival.",
+     "zh": "中秋节是中国最重要的传统节日之一，重要性仅次于春节。"
+    }
+   ],
+   "tags": [
+    "节日与假期"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "Mid-Autumn Festival",
+   "pair": "en-zh",
+   "slug": "mid-autumn-festival",
+   "lang": "en",
+   "translation": "中秋节",
+   "shortAnswer": "Mid-Autumn Festival 的中文意思是中秋节，指中国农历八月十五的传统团圆节日。",
+   "definition": "Mid-Autumn Festival 是中国农历八月十五的团圆节日，常见搭配有 celebrate the Mid-Autumn Festival。",
+   "examples": [
+    {
+     "en": "During the Mid-Autumn Festival, families gather together to eat mooncakes and admire the full moon.",
+     "zh": "中秋节期间，家人聚在一起吃月饼、赏满月。"
+    },
+    {
+     "en": "The Mid-Autumn Festival is one of the most important traditional holidays in China, second only to the Spring Festival.",
+     "zh": "中秋节是中国最重要的传统节日之一，重要性仅次于春节。"
+    }
+   ],
+   "tags": [
+    "节日与假期"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "端午节",
+   "pair": "zh-en",
+   "slug": "duan-wu-jie",
+   "lang": "zh",
+   "translation": "Dragon Boat Festival",
+   "shortAnswer": "端午节的英文是 Dragon Boat Festival，国际最通行的译名，考试与正式场合都用它。",
+   "definition": "Dragon Boat Festival 是「端午节」的标准译名，因赛龙舟得名，首字母大写。相关词：zongzi 粽子、dragon boat race 赛龙舟。",
+   "examples": [
+    {
+     "en": "We eat zongzi and watch dragon boat races during the Dragon Boat Festival.",
+     "zh": "端午节我们吃粽子、看赛龙舟。"
+    },
+    {
+     "en": "The Dragon Boat Festival is a public holiday in China, usually in June.",
+     "zh": "端午节是中国的法定假日，通常在六月。"
+    }
+   ],
+   "tags": [
+    "节日与假期"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "Dragon Boat Festival",
+   "pair": "en-zh",
+   "slug": "dragon-boat-festival",
+   "lang": "en",
+   "translation": "端午节",
+   "shortAnswer": "Dragon Boat Festival 即「端午节」，中国农历五月初五的传统节日，与春节、中秋节并列。",
+   "definition": "Dragon Boat Festival 指中国端午节，因赛龙舟得名，译名固定，首字母大写。搭配：celebrate the Dragon Boat Festival。",
+   "examples": [
+    {
+     "en": "We eat zongzi and watch dragon boat races during the Dragon Boat Festival.",
+     "zh": "端午节我们吃粽子、看赛龙舟。"
+    },
+    {
+     "en": "The Dragon Boat Festival is a public holiday in China, usually in June.",
+     "zh": "端午节是中国的法定假日，通常在六月。"
+    }
+   ],
+   "tags": [
+    "节日与假期"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "劳动节",
+   "pair": "zh-en",
+   "slug": "lao-dong-jie",
+   "lang": "zh",
+   "translation": "Labor Day",
+   "shortAnswer": "“劳动节”的英文是 Labor Day。美国的劳动节在九月，而中国和多数国家的劳动节在五月一日，对应 International Workers' Day。",
+   "definition": "说“五一劳动节”时，常用 May Day 或 International Workers' Day；Labor Day 一般特指美国、加拿大九月的那个节日。写日期、假日安排时可用 Labor Day holiday、Labor Day weekend 等搭配。",
+   "examples": [
+    {
+     "en": "We're planning a short trip to the lake over Labor Day weekend.",
+     "zh": "我们打算在劳动节长周末去湖边小旅行。"
+    },
+    {
+     "en": "Many stores hold big sales on Labor Day.",
+     "zh": "许多商店在劳动节当天举办大促销。"
+    }
+   ],
+   "tags": [
+    "节日与假期"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "Labor Day",
+   "pair": "en-zh",
+   "slug": "labor-day",
+   "lang": "en",
+   "translation": "劳动节",
+   "shortAnswer": "Labor Day 的中文意思是“劳动节”。在美国它指九月第一个星期一，不是五月一日的 International Workers' Day。",
+   "definition": "Labor Day 是美加两国的全国性假日，在九月第一个星期一，标志夏季结束；常搭配 Labor Day weekend、Labor Day sale。注意别和 May Day（五一劳动节）混用。",
+   "examples": [
+    {
+     "en": "We're planning a short trip to the lake over Labor Day weekend.",
+     "zh": "我们打算在劳动节长周末去湖边小旅行。"
+    },
+    {
+     "en": "Many stores hold big sales on Labor Day.",
+     "zh": "许多商店在劳动节当天举办大促销。"
+    }
+   ],
+   "tags": [
+    "节日与假期"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "压岁钱",
+   "pair": "zh-en",
+   "slug": "ya-sui-qian",
+   "lang": "zh",
+   "translation": "lucky money",
+   "shortAnswer": "压岁钱的英文是 lucky money，也可说 red envelope money 或 New Year's money，指长辈春节给孩子的现金红包。不要直译成 pressure money。",
+   "definition": "lucky money 特指春节红包里的钱，寓意压祟祈福。常见搭配有 give lucky money、get lucky money；泛指红包本身时可说 red envelope，但强调钱时用 lucky money。",
+   "examples": [
+    {
+     "en": "My grandparents gave me lucky money in a red envelope on Chinese New Year's Eve.",
+     "zh": "除夕夜，爷爷奶奶给了我一个红包，里面装着压岁钱。"
+    },
+    {
+     "en": "Children usually receive lucky money from their elders during the Spring Festival.",
+     "zh": "春节期间，孩子们通常会从长辈那里收到压岁钱。"
+    }
+   ],
+   "tags": [
+    "节日与假期"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "lucky money",
+   "pair": "en-zh",
+   "slug": "lucky-money",
+   "lang": "en",
+   "translation": "压岁钱",
+   "shortAnswer": "Lucky money 的中文意思是压岁钱，即长辈在春节给孩子装在红包里的现金。它不等于普通 gift money，而是带有压祟祈福寓意的节庆红包。",
+   "definition": "Lucky money 是春节特有的红包钱，也可说 red envelope money 或 New Year's money。常见搭配有 give/get lucky money；不要按字面误读成“幸运的钱”，它核心是压岁钱。",
+   "examples": [
+    {
+     "en": "My grandparents gave me lucky money in a red envelope on Chinese New Year's Eve.",
+     "zh": "除夕夜，爷爷奶奶给了我一个红包，里面装着压岁钱。"
+    },
+    {
+     "en": "Children usually receive lucky money from their elders during the Spring Festival.",
+     "zh": "春节期间，孩子们通常会从长辈那里收到压岁钱。"
+    }
+   ],
+   "tags": [
+    "节日与假期"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "国庆节",
+   "pair": "zh-en",
+   "slug": "guo-qing-jie",
+   "lang": "zh",
+   "translation": "National Day",
+   "shortAnswer": "国庆节的英文是 National Day，指本国国庆日；说中国国庆时加 China's 更清楚。",
+   "definition": "National Day 是可数名词，泛指各国国庆；指中国常说 China's National Day。搭配：celebrate National Day、National Day holiday、National Day parade。",
+   "examples": [
+    {
+     "en": "We watched the National Day parade on TV with the whole family.",
+     "zh": "我们全家一起在电视上看了国庆节阅兵。"
+    },
+    {
+     "en": "Many people travel during the National Day holiday, so train tickets sell out fast.",
+     "zh": "很多人在国庆假期出行，所以火车票很快就卖光了。"
+    }
+   ],
+   "tags": [
+    "节日与假期"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "National Day",
+   "pair": "en-zh",
+   "slug": "national-day",
+   "lang": "en",
+   "translation": "国庆节",
+   "shortAnswer": "National Day 的中文意思是国庆节，即纪念建国或独立的法定节日；中国国庆节是十月一日。",
+   "definition": "National Day means 国庆节 in Chinese, a national holiday marking a country's founding or independence. For China, say China's National Day.",
+   "examples": [
+    {
+     "en": "We watched the National Day parade on TV with the whole family.",
+     "zh": "我们全家一起在电视上看了国庆节阅兵。"
+    },
+    {
+     "en": "Many people travel during the National Day holiday, so train tickets sell out fast.",
+     "zh": "很多人在国庆假期出行，所以火车票很快就卖光了。"
+    }
+   ],
+   "tags": [
+    "节日与假期"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "红包",
+   "pair": "zh-en",
+   "slug": "hong-bao",
+   "lang": "zh",
+   "translation": "red envelope",
+   "shortAnswer": "红包的英文是 red envelope，指内装现金的红色信封。注意，微信和支付宝上发的红包叫 digital red envelope，不是 red bag。",
+   "definition": "red envelope 是标准译法，春节给压岁钱常说 give red envelopes 或 hand out red envelopes。电子红包用 digital red envelope，动词可用 send a digital red envelope。",
+   "examples": [
+    {
+     "en": "During Chinese New Year, parents give their children red envelopes with lucky money inside.",
+     "zh": "春节期间，父母会给孩子发内装压岁钱的红包。"
+    },
+    {
+     "en": "My cousin sent me a digital red envelope on WeChat to celebrate my birthday.",
+     "zh": "我表弟在微信上给我发了一个电子红包庆祝生日。"
+    }
+   ],
+   "tags": [
+    "节日与假期"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "red envelope",
+   "pair": "en-zh",
+   "slug": "red-envelope",
+   "lang": "en",
+   "translation": "红包",
+   "shortAnswer": "Red envelope 的中文意思是红包，指内装现金的红色信封。它特指传统红色信封，不泛指礼物或一般信封，区别于 gift card 或 plain envelope。",
+   "definition": "Red envelope 指中国节日或庆典中装现金的红色信封，常见搭配 give/hand out/receive a red envelope。手机上发的电子红包叫 digital red envelope，口语中也可说 send a red envelope。",
+   "examples": [
+    {
+     "en": "During Chinese New Year, parents give their children red envelopes with lucky money inside.",
+     "zh": "春节期间，父母会给孩子发内装压岁钱的红包。"
+    },
+    {
+     "en": "My cousin sent me a digital red envelope on WeChat to celebrate my birthday.",
+     "zh": "我表弟在微信上给我发了一个电子红包庆祝生日。"
+    }
+   ],
+   "tags": [
+    "节日与假期"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "拜年",
+   "pair": "zh-en",
+   "slug": "bai-nian",
+   "lang": "zh",
+   "translation": "New Year visit",
+   "shortAnswer": "拜年的英文是 New Year visit，指春节期间向亲友登门祝贺新年。注意它强调“拜访”这一动作，不是泛指所有新年祝福；线上发祝福一般不说 New Year visit。",
+   "definition": "New Year visit 多指春节期间走亲访友、上门拜年的活动，常与 pay/make a New Year visit to sb 搭配；也可说 New Year's visit。区别：send New Year greetings 指发祝福，不一定登门。",
+   "examples": [
+    {
+     "en": "Every Spring Festival, we pay a New Year visit to my grandparents and give them lucky money.",
+     "zh": "每年春节，我们都会去给祖父母拜年，并给他们压岁钱。"
+    },
+    {
+     "en": "During the holiday, she made a New Year visit to her old friends and wished them good luck.",
+     "zh": "假期里，她去给老朋友拜年，祝他们好运。"
+    }
+   ],
+   "tags": [
+    "节日与假期"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "New Year visit",
+   "pair": "en-zh",
+   "slug": "new-year-visit",
+   "lang": "en",
+   "translation": "拜年",
+   "shortAnswer": "New Year visit 的中文意思是拜年，即春节期间到亲友家登门祝贺新年。它强调亲自上门拜访，不只是发消息祝福；发祝福可用 send New Year greetings。",
+   "definition": "New Year visit 指春节期间走亲访友、上门拜年的行为，正式和口语都可用，常搭配 pay/make a New Year visit to sb。注意：它不等于 New Year's resolution（新年决心）或 New Year greetings（新年祝福）。",
+   "examples": [
+    {
+     "en": "Every Spring Festival, we pay a New Year visit to my grandparents and give them lucky money.",
+     "zh": "每年春节，我们都会去给祖父母拜年，并给他们压岁钱。"
+    },
+    {
+     "en": "During the holiday, she made a New Year visit to her old friends and wished them good luck.",
+     "zh": "假期里，她去给老朋友拜年，祝他们好运。"
+    }
+   ],
+   "tags": [
+    "节日与假期"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "粽子",
+   "pair": "zh-en",
+   "slug": "zong-zi",
+   "lang": "zh",
+   "translation": "zongzi",
+   "shortAnswer": "「粽子」的英文是 zongzi，指端午节吃的一种糯米食物。注意 zongzi 是音译借词，通常直接用，不要翻译成 rice dumpling。",
+   "definition": "「粽子」的常用英文是 zongzi，复数形式常见为 zongzi，也可写 zongzis；它用糯米和馅料包在竹叶或芦苇叶里，通常在 Dragon Boat Festival（端午节）吃。最易错的是把它译成 rice dumpling，容易让人以为是无馅的米团。",
+   "examples": [
+    {
+     "en": "During the Dragon Boat Festival, my family always makes zongzi with bamboo leaves.",
+     "zh": "端午节期间，我家总会用竹叶包粽子。"
+    },
+    {
+     "en": "Do you prefer sweet zongzi or savory zongzi?",
+     "zh": "你更喜欢甜粽子还是咸粽子？"
+    }
+   ],
+   "tags": [
+    "节日与假期"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "zongzi",
+   "pair": "en-zh",
+   "slug": "zongzi",
+   "lang": "en",
+   "translation": "粽子",
+   "shortAnswer": "zongzi 的中文意思是「粽子」，一种用竹叶或芦苇叶包裹糯米和馅料的传统食物。注意它常与端午节（Dragon Boat Festival）关联，不是普通 rice dumpling。",
+   "definition": "zongzi 是英语中从汉语借入的音译词，指端午节吃的糯米粽；常见搭配有 eat zongzi、make zongzi、sweet/savory zongzi。它比 rice dumpling 更准确，因为后者容易指无馅米团，且馅料可甜可咸。",
+   "examples": [
+    {
+     "en": "During the Dragon Boat Festival, my family always makes zongzi with bamboo leaves.",
+     "zh": "端午节期间，我家总会用竹叶包粽子。"
+    },
+    {
+     "en": "Do you prefer sweet zongzi or savory zongzi?",
+     "zh": "你更喜欢甜粽子还是咸粽子？"
+    }
+   ],
+   "tags": [
+    "节日与假期"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "春运",
+   "pair": "zh-en",
+   "slug": "chun-yun",
+   "lang": "zh",
+   "translation": "Spring Festival travel rush",
+   "shortAnswer": "「春运」英文常说 Spring Festival travel rush，指春节前后的大规模返乡返程潮。",
+   "definition": "用法：可数，常见搭配 during the Spring Festival travel rush；也作 chunyun，指节前节后出行高峰，非节日本身。",
+   "examples": [
+    {
+     "en": "The Spring Festival travel rush is the largest annual human migration, with billions of trips across the country.",
+     "zh": "春运是全球最大规模的年度人口迁徙，全国出行人次达数十亿。"
+    },
+    {
+     "en": "Train tickets sell out quickly during the Spring Festival travel rush, so many people book weeks in advance.",
+     "zh": "春运期间火车票很快售罄，所以许多人提前几周订票。"
+    }
+   ],
+   "tags": [
+    "节日与假期"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "Spring Festival travel rush",
+   "pair": "en-zh",
+   "slug": "spring-festival-travel-rush",
+   "lang": "en",
+   "translation": "春运",
+   "shortAnswer": "Spring Festival travel rush means 春运, the huge holiday travel peak in China.",
+   "definition": "Use Spring Festival travel rush for the peak travel around Chinese New Year; countable, also called chunyun, not the festival itself.",
+   "examples": [
+    {
+     "en": "The Spring Festival travel rush is the largest annual human migration, with billions of trips across the country.",
+     "zh": "春运是全球最大规模的年度人口迁徙，全国出行人次达数十亿。"
+    },
+    {
+     "en": "Train tickets sell out quickly during the Spring Festival travel rush, so many people book weeks in advance.",
+     "zh": "春运期间火车票很快售罄，所以许多人提前几周订票。"
+    }
+   ],
+   "tags": [
+    "节日与假期"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "月饼",
+   "pair": "zh-en",
+   "slug": "yue-bing",
+   "lang": "zh",
+   "translation": "mooncake",
+   "shortAnswer": "月饼的英文是 mooncake，它是中秋节的应节糕点，口味有莲蓉、豆沙、五仁等。",
+   "definition": "mooncake 是可数名词，通常连写成一个词，复数形式为 mooncakes，常搭配 eat mooncakes、a box of mooncakes 等表达。",
+   "examples": [
+    {
+     "en": "My family always eats mooncakes together while watching the full moon on Mid-Autumn Festival.",
+     "zh": "中秋节我们一家人总是一边赏月一边吃月饼。"
+    },
+    {
+     "en": "She gave me a box of mooncakes filled with lotus seed paste.",
+     "zh": "她送了我一盒莲蓉馅的月饼。"
+    }
+   ],
+   "tags": [
+    "节日与假期"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "mooncake",
+   "pair": "en-zh",
+   "slug": "mooncake",
+   "lang": "en",
+   "translation": "月饼",
+   "shortAnswer": "The English word for 月饼 (mooncake) is mooncake, a pastry eaten during the Mid-Autumn Festival.",
+   "definition": "Mooncake is a countable noun, usually written as one word, with the plural form mooncakes, as in eat mooncakes or a box of mooncakes.",
+   "examples": [
+    {
+     "en": "My family always eats mooncakes together while watching the full moon on Mid-Autumn Festival.",
+     "zh": "中秋节我们一家人总是一边赏月一边吃月饼。"
+    },
+    {
+     "en": "She gave me a box of mooncakes filled with lotus seed paste.",
+     "zh": "她送了我一盒莲蓉馅的月饼。"
+    }
+   ],
+   "tags": [
+    "节日与假期"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "补班",
+   "pair": "zh-en",
+   "slug": "bu-ban",
+   "lang": "zh",
+   "translation": "make-up workday",
+   "shortAnswer": "「补班」英文是 make-up workday，指调休时把周末改成上班的日子，别和加班混淆。",
+   "definition": "make-up workday 指为凑长假而把周末调成工作日。常搭配 on a make-up workday，注意与 overtime（加班）区别。",
+   "examples": [
+    {
+     "en": "Our company has a make-up workday this Saturday to cover the National Day holiday.",
+     "zh": "我们公司这周六补班，以弥补国庆假期的调休。"
+    },
+    {
+     "en": "Many people complain about make-up workdays because they have to work seven days in a row.",
+     "zh": "很多人抱怨补班，因为要连续上班七天。"
+    }
+   ],
+   "tags": [
+    "节日与假期"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "make-up workday",
+   "pair": "en-zh",
+   "slug": "make-up-workday",
+   "lang": "en",
+   "translation": "补班",
+   "shortAnswer": "A make-up workday is 补班 in Chinese: a weekend moved to a workday to offset a long holiday.",
+   "definition": "A make-up workday is a weekend day turned into a regular workday so a Chinese holiday can be extended. Not the same as overtime.",
+   "examples": [
+    {
+     "en": "Our company has a make-up workday this Saturday to cover the National Day holiday.",
+     "zh": "我们公司这周六补班，以弥补国庆假期的调休。"
+    },
+    {
+     "en": "Many people complain about make-up workdays because they have to work seven days in a row.",
+     "zh": "很多人抱怨补班，因为要连续上班七天。"
+    }
+   ],
+   "tags": [
+    "节日与假期"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "汤圆",
+   "pair": "zh-en",
+   "slug": "tang-yuan",
+   "lang": "zh",
+   "translation": "tangyuan",
+   "shortAnswer": "「汤圆」英文通常写作 tangyuan，是已被英语词典收录的音译借词，多指元宵节吃的糯米甜馅圆子。",
+   "definition": "tangyuan 是按拼音整体借入英语的音译词，指糯米做的甜馅汤圆，常与 Lantern Festival 连用。",
+   "examples": [
+    {
+     "en": "During the Lantern Festival, my family always sits together and eats sweet tangyuan in ginger syrup.",
+     "zh": "元宵节那天，我们一家人总会坐在一起，吃泡在姜汤里的甜汤圆。"
+    },
+    {
+     "en": "The supermarket sells frozen tangyuan all year round, but they taste best when freshly boiled.",
+     "zh": "超市一年四季都卖冷冻汤圆，不过刚煮好的时候味道最好。"
+    }
+   ],
+   "tags": [
+    "节日与假期"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "tangyuan",
+   "pair": "en-zh",
+   "slug": "tangyuan",
+   "lang": "en",
+   "translation": "汤圆",
+   "shortAnswer": "Tangyuan is the Chinese word 汤圆: sweet glutinous rice balls eaten at the Lantern Festival.",
+   "definition": "Tangyuan are round, chewy balls of glutinous rice flour, often filled with sweet sesame or peanut paste and served in hot syrup.",
+   "examples": [
+    {
+     "en": "During the Lantern Festival, my family always sits together and eats sweet tangyuan in ginger syrup.",
+     "zh": "元宵节那天，我们一家人总会坐在一起，吃泡在姜汤里的甜汤圆。"
+    },
+    {
+     "en": "The supermarket sells frozen tangyuan all year round, but they taste best when freshly boiled.",
+     "zh": "超市一年四季都卖冷冻汤圆，不过刚煮好的时候味道最好。"
+    }
+   ],
+   "tags": [
+    "节日与假期"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "黄金周",
+   "pair": "zh-en",
+   "slug": "huang-jin-zhou",
+   "lang": "zh",
+   "translation": "Golden Week",
+   "shortAnswer": "黄金周的英文是 Golden Week，指中国、日本等国的连续长假，属于固定专有名词。",
+   "definition": "Golden Week 源自日本，现多指中国国庆、春节等连休假期，常见搭配有 during the Golden Week。",
+   "examples": [
+    {
+     "en": "Millions of people travel during the National Day Golden Week every year.",
+     "zh": "每年国庆黄金周期间，数百万人出行旅游。"
+    },
+    {
+     "en": "Hotel prices usually rise sharply during Golden Week.",
+     "zh": "黄金周期间酒店价格通常大幅上涨。"
+    }
+   ],
+   "tags": [
+    "节日与假期"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "Golden Week",
+   "pair": "en-zh",
+   "slug": "golden-week",
+   "lang": "en",
+   "translation": "黄金周",
+   "shortAnswer": "Golden Week means 黄金周, a week-long national holiday in China and Japan, and it is a proper noun.",
+   "definition": "Golden Week is a proper noun for multi-day holidays like China's National Day, often used as during Golden Week.",
+   "examples": [
+    {
+     "en": "Millions of people travel during the National Day Golden Week every year.",
+     "zh": "每年国庆黄金周期间，数百万人出行旅游。"
+    },
+    {
+     "en": "Hotel prices usually rise sharply during Golden Week.",
+     "zh": "黄金周期间酒店价格通常大幅上涨。"
+    }
+   ],
+   "tags": [
+    "节日与假期"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "带薪假",
+   "pair": "zh-en",
+   "slug": "dai-xin-jia",
+   "lang": "zh",
+   "translation": "paid leave",
+   "shortAnswer": "「带薪假」英文是 paid leave，指休假期间工资照发的假期，与全民公休日不同。",
+   "definition": "paid leave 常见于劳动法与公司制度，如 annual paid leave、paid maternity leave，口语也说 PTO，勿与 public holiday 混用。",
+   "examples": [
+    {
+     "en": "She is on paid leave for two weeks after giving birth.",
+     "zh": "她生完孩子后正在休两周带薪假。"
+    },
+    {
+     "en": "The company offers twenty days of paid leave per year.",
+     "zh": "公司每年提供二十天带薪假。"
+    }
+   ],
+   "tags": [
+    "节日与假期"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "paid leave",
+   "pair": "en-zh",
+   "slug": "paid-leave",
+   "lang": "en",
+   "translation": "带薪假",
+   "shortAnswer": "paid leave 的中文意思是「带薪假」，指休假期间工资照发的假期，不同于全民公休日。",
+   "definition": "paid leave 是正式用语，见于劳动合同与政策，如 annual paid leave、paid maternity leave，美式口语常说 PTO。",
+   "examples": [
+    {
+     "en": "She is on paid leave for two weeks after giving birth.",
+     "zh": "她生完孩子后正在休两周带薪假。"
+    },
+    {
+     "en": "The company offers twenty days of paid leave per year.",
+     "zh": "公司每年提供二十天带薪假。"
+    }
+   ],
+   "tags": [
+    "节日与假期"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "跨年",
+   "pair": "zh-en",
+   "slug": "kua-nian",
+   "lang": "zh",
+   "translation": "New Year countdown",
+   "shortAnswer": "「跨年」的英文常说是 New Year countdown，指倒计时迎接新年的那一刻。也可说 New Year's Eve celebration，但别直译成 cross the year。",
+   "definition": "New Year countdown 强调新年到来前的倒数计时，常与 watch、join、do 连用。若指整晚聚会或晚会，用 New Year's Eve party 更自然。",
+   "examples": [
+    {
+     "en": "We stayed up late to watch the New Year countdown on TV.",
+     "zh": "我们熬夜看电视上的跨年倒计时。"
+    },
+    {
+     "en": "Thousands of people gathered in the square for the New Year countdown.",
+     "zh": "成千上万的人聚集在广场上参加跨年倒计时活动。"
+    }
+   ],
+   "tags": [
+    "节日与假期"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "New Year countdown",
+   "pair": "en-zh",
+   "slug": "new-year-countdown",
+   "lang": "en",
+   "translation": "跨年",
+   "shortAnswer": "New Year countdown 的中文意思是「跨年」，即新年到来前一起倒数计时。它只指倒计时这一环节，不等于整晚的跨年晚会。",
+   "definition": "New Year countdown 指12月31日午夜前倒数读秒迎接新年的活动，常用于 watch/join/do the New Year countdown。口语也可说 count down to the new year。",
+   "examples": [
+    {
+     "en": "We stayed up late to watch the New Year countdown on TV.",
+     "zh": "我们熬夜看电视上的跨年倒计时。"
+    },
+    {
+     "en": "Thousands of people gathered in the square for the New Year countdown.",
+     "zh": "成千上万的人聚集在广场上参加跨年倒计时活动。"
+    }
+   ],
+   "tags": [
+    "节日与假期"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "团圆饭",
+   "pair": "zh-en",
+   "slug": "tuan-yuan-fan",
+   "lang": "zh",
+   "translation": "family reunion dinner",
+   "shortAnswer": "「团圆饭」的英文是 family reunion dinner，指一家人聚在一起吃的那顿丰盛晚餐。它多用于除夕年夜饭，也可泛指中秋等节日家人团聚的饭局。",
+   "definition": "固定说法是 family reunion dinner，常与 have/eat 连用，如 have a family reunion dinner。年夜饭也可说 Chinese New Year's Eve dinner，强调“除夕”时更准确。",
+   "examples": [
+    {
+     "en": "On Chinese New Year's Eve, my whole family gets together for a big family reunion dinner.",
+     "zh": "除夕那天，我们全家聚在一起吃一顿丰盛的年夜团圆饭。"
+    },
+    {
+     "en": "Even though we live in different cities, we always go home for the family reunion dinner.",
+     "zh": "虽然我们住在不同的城市，但每年都会回家吃团圆饭。"
+    }
+   ],
+   "tags": [
+    "节日与假期"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "family reunion dinner",
+   "pair": "en-zh",
+   "slug": "family-reunion-dinner",
+   "lang": "en",
+   "translation": "团圆饭",
+   "shortAnswer": "family reunion dinner 的中文意思是「团圆饭」，指全家人团聚时一起吃的一顿正式晚餐。它与普通 dinner 的区别在于强调“团聚”这一节日含义。",
+   "definition": "family reunion dinner 是名词短语，常见搭配 have/hold a family reunion dinner。多指除夕年夜饭，也可指中秋等节日聚餐，语气偏正式、书面。",
+   "examples": [
+    {
+     "en": "On Chinese New Year's Eve, my whole family gets together for a big family reunion dinner.",
+     "zh": "除夕那天，我们全家聚在一起吃一顿丰盛的年夜团圆饭。"
+    },
+    {
+     "en": "Even though we live in different cities, we always go home for the family reunion dinner.",
+     "zh": "虽然我们住在不同的城市，但每年都会回家吃团圆饭。"
+    }
+   ],
+   "tags": [
+    "节日与假期"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "春联",
+   "pair": "zh-en",
+   "slug": "chun-lian",
+   "lang": "zh",
+   "translation": "Spring Festival couplets",
+   "shortAnswer": "「春联」的英文是 Spring Festival couplets，指春节贴在门上的红色成对对联。",
+   "definition": "常用搭配：put up / paste up Spring Festival couplets（贴春联）、write Spring Festival couplets（写春联）。",
+   "examples": [
+    {
+     "en": "Every New Year's Eve, my family puts up Spring Festival couplets on both sides of the front door.",
+     "zh": "每年除夕，我们家都会在大门两侧贴上春联。"
+    },
+    {
+     "en": "Grandpa wrote the Spring Festival couplets himself, using gold ink on red paper.",
+     "zh": "春联是爷爷亲手写的，用的是红纸和金墨。"
+    }
+   ],
+   "tags": [
+    "节日与假期"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "Spring Festival couplets",
+   "pair": "en-zh",
+   "slug": "spring-festival-couplets",
+   "lang": "en",
+   "translation": "春联",
+   "shortAnswer": "Spring Festival couplets 的意思是「春联」，即春节期间贴在门框上的红色成对对联。",
+   "definition": "Chinese New Year couplets 是常见同义说法，口语也简称 couplets；搭配 put up / write Spring Festival couplets。",
+   "examples": [
+    {
+     "en": "Every New Year's Eve, my family puts up Spring Festival couplets on both sides of the front door.",
+     "zh": "每年除夕，我们家都会在大门两侧贴上春联。"
+    },
+    {
+     "en": "Grandpa wrote the Spring Festival couplets himself, using gold ink on red paper.",
+     "zh": "春联是爷爷亲手写的，用的是红纸和金墨。"
+    }
+   ],
+   "tags": [
+    "节日与假期"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "灯谜",
+   "pair": "zh-en",
+   "slug": "deng-mi",
+   "lang": "zh",
+   "translation": "lantern riddle",
+   "shortAnswer": "灯谜的英文是 lantern riddle，指写在灯笼上供人猜测的谜语，元宵节常见。注意不要与字面直译的 riddles on lanterns 混淆，后者不强调猜谜活动。",
+   "definition": "Lantern riddle 是元宵节猜灯谜活动的标准英文说法，动词常用 solve/guess a lantern riddle，搭配 lantern riddles 指多个谜语。节日名译法惯例：元宵节为 Lantern Festival，与灯谜紧密相关。",
+   "examples": [
+    {
+     "en": "During the Lantern Festival, people gather to solve lantern riddles written on colorful lanterns.",
+     "zh": "元宵节期间，人们聚在一起猜写在彩色灯笼上的灯谜。"
+    },
+    {
+     "en": "She won a small prize by correctly guessing a lantern riddle about a Chinese character.",
+     "zh": "她猜中了一个关于汉字的灯谜，赢得了一个小奖品。"
+    }
+   ],
+   "tags": [
+    "节日与假期"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "lantern riddle",
+   "pair": "en-zh",
+   "slug": "lantern-riddle",
+   "lang": "en",
+   "translation": "灯谜",
+   "shortAnswer": "lantern riddle 的中文意思是“灯谜”，即写在灯笼上供人猜测的谜语。与一般 riddle 不同，lantern riddle 特指元宵节期间的传统猜谜活动。",
+   "definition": "Lantern riddle 指元宵节时写在灯笼上供人猜测的谜语，常见搭配 solve/guess a lantern riddle，为文化专有名词。正式场合可用，口语中也可直接说 lantern riddle。易错点：不要误用为 riddles on lanterns。",
+   "examples": [
+    {
+     "en": "During the Lantern Festival, people gather to solve lantern riddles written on colorful lanterns.",
+     "zh": "元宵节期间，人们聚在一起猜写在彩色灯笼上的灯谜。"
+    },
+    {
+     "en": "She won a small prize by correctly guessing a lantern riddle about a Chinese character.",
+     "zh": "她猜中了一个关于汉字的灯谜，赢得了一个小奖品。"
+    }
+   ],
+   "tags": [
+    "节日与假期"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "舞龙舞狮",
+   "pair": "zh-en",
+   "slug": "wu-long-wu-shi",
+   "lang": "zh",
+   "translation": "dragon and lion dance",
+   "shortAnswer": "「舞龙舞狮」英文常说 dragon and lion dance，是节庆中的传统表演。",
+   "definition": "dragon and lion dance 是「舞龙舞狮」的常用译法，dragon dance 指舞龙，lion dance 指舞狮。",
+   "examples": [
+    {
+     "en": "Every Spring Festival, the village performs a dragon and lion dance.",
+     "zh": "每年春节，村里都会表演舞龙舞狮。"
+    },
+    {
+     "en": "Tourists watched the dragon and lion dance in the square.",
+     "zh": "游客们在广场上观看舞龙舞狮。"
+    }
+   ],
+   "tags": [
+    "节日与假期"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "dragon and lion dance",
+   "pair": "en-zh",
+   "slug": "dragon-and-lion-dance",
+   "lang": "en",
+   "translation": "舞龙舞狮",
+   "shortAnswer": "Dragon and lion dance means 舞龙舞狮, a festive Chinese performance.",
+   "definition": "Dragon and lion dance is the usual English for 舞龙舞狮: the dragon dance plus the lion dance, seen at festivals.",
+   "examples": [
+    {
+     "en": "Every Spring Festival, the village performs a dragon and lion dance.",
+     "zh": "每年春节，村里都会表演舞龙舞狮。"
+    },
+    {
+     "en": "Tourists watched the dragon and lion dance in the square.",
+     "zh": "游客们在广场上观看舞龙舞狮。"
+    }
+   ],
+   "tags": [
+    "节日与假期"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "打喷嚏",
+   "pair": "zh-en",
+   "slug": "da-pen-ti",
+   "lang": "zh",
+   "translation": "sneeze",
+   "shortAnswer": "「打喷嚏」的英文是 sneeze，既可作动词也可作名词。注意它不是指过敏或感冒本身，而是描述这个动作或声音。",
+   "definition": "sneeze 作动词时常见搭配 sneeze loudly、sneeze into a tissue；作名词时常用 have a sneeze、a loud sneeze。就医时医生可能问 Do you sneeze a lot? 与 cough（咳嗽）常一起出现。",
+   "examples": [
+    {
+     "en": "Cover your mouth when you sneeze to avoid spreading germs.",
+     "zh": "打喷嚏时捂住嘴，以免传播细菌。"
+    },
+    {
+     "en": "I started to sneeze and my eyes were itchy, so the doctor said it was an allergy.",
+     "zh": "我开始打喷嚏，眼睛也痒，所以医生说这是过敏。"
+    }
+   ],
+   "tags": [
+    "就医用药"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "sneeze",
+   "pair": "en-zh",
+   "slug": "sneeze",
+   "lang": "en",
+   "translation": "打喷嚏",
+   "shortAnswer": "Sneeze 的中文意思是「打喷嚏」，指突然从鼻子和嘴巴猛烈喷出空气的动作或声音。它不同于 cough，咳嗽主要从喉咙和胸部用力。",
+   "definition": "sneeze 可作动词和名词。常见搭配：sneeze into a tissue（对着纸巾打喷嚏）、sneeze loudly；名词形式如 a sneeze。就医时描述症状常与 runny nose、itchy eyes 一起出现。",
+   "examples": [
+    {
+     "en": "Cover your mouth when you sneeze to avoid spreading germs.",
+     "zh": "打喷嚏时捂住嘴，以免传播细菌。"
+    },
+    {
+     "en": "I started to sneeze and my eyes were itchy, so the doctor said it was an allergy.",
+     "zh": "我开始打喷嚏，眼睛也痒，所以医生说这是过敏。"
+    }
+   ],
+   "tags": [
+    "就医用药"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "庙会",
+   "pair": "zh-en",
+   "slug": "miao-hui",
+   "lang": "zh",
+   "translation": "temple fair",
+   "shortAnswer": "「庙会」的英文是 “temple fair”。在向外国朋友介绍时，直接说 temple fair 即可，不要自造 “temple meeting” 等说法。",
+   "definition": "temple fair 指在寺庙周边定期举办的集市与民俗活动，常见搭配有 visit a temple fair、at the temple fair；注意不要把“庙会”直译成 temple gathering 或 temple market。",
+   "examples": [
+    {
+     "en": "Every Spring Festival, my grandparents take me to the temple fair near the old temple to eat snacks and watch folk performances.",
+     "zh": "每年春节，我爷爷奶奶都会带我去老寺庙附近的庙会吃小吃、看民俗表演。"
+    },
+    {
+     "en": "The temple fair was crowded with visitors buying handicrafts and enjoying traditional opera.",
+     "zh": "庙会上挤满了购买手工艺品和欣赏传统戏曲的游客。"
+    }
+   ],
+   "tags": [
+    "节日与假期"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "temple fair",
+   "pair": "en-zh",
+   "slug": "temple-fair",
+   "lang": "en",
+   "translation": "庙会",
+   "shortAnswer": "“Temple fair”的中文意思是“庙会”。它通常指在寺庙附近举行的传统集市和民俗节庆活动，不等于普通的“集市” market。",
+   "definition": "temple fair 是可数名词，常见搭配为 go to a temple fair、during the temple fair；口语中可泛指有传统表演和小吃的节庆集市，正式场合多用于介绍中国民俗文化。",
+   "examples": [
+    {
+     "en": "Every Spring Festival, my grandparents take me to the temple fair near the old temple to eat snacks and watch folk performances.",
+     "zh": "每年春节，我爷爷奶奶都会带我去老寺庙附近的庙会吃小吃、看民俗表演。"
+    },
+    {
+     "en": "The temple fair was crowded with visitors buying handicrafts and enjoying traditional opera.",
+     "zh": "庙会上挤满了购买手工艺品和欣赏传统戏曲的游客。"
+    }
+   ],
+   "tags": [
+    "节日与假期"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "流鼻血",
+   "pair": "zh-en",
+   "slug": "liu-bi-xue",
+   "lang": "zh",
+   "translation": "nosebleed",
+   "shortAnswer": "「流鼻血」的英文是 nosebleed。就医时说 I have a nosebleed 即可，注意别按中文直译成 flow blood from nose。",
+   "definition": "nosebleed 是可数名词，常用 have/get a nosebleed 表示流鼻血；就医时医生会问是否 frequent（频繁），并可能建议 pinch the nose 止血或 use a nasal spray。",
+   "examples": [
+    {
+     "en": "He got a nosebleed during the dry winter and had to pinch his nose for a few minutes.",
+     "zh": "干燥的冬天他流鼻血了，只得捏住鼻子几分钟。"
+    },
+    {
+     "en": "If you have a nosebleed that won't stop, you should see a doctor.",
+     "zh": "如果流鼻血止不住，你应该去看医生。"
+    }
+   ],
+   "tags": [
+    "就医用药"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "nosebleed",
+   "pair": "en-zh",
+   "slug": "nosebleed",
+   "lang": "en",
+   "translation": "流鼻血",
+   "shortAnswer": "Nosebleed 的意思是「流鼻血」，指鼻腔出血。它与 bloody nose 近义，但 nosebleed 更常用作医学或日常说法。",
+   "definition": "nosebleed 是可数名词，常见搭配 have/get a nosebleed；口语中也说 bloody nose。医学上分 anterior（前部）和 posterior（后部）鼻出血，严重时需就医。",
+   "examples": [
+    {
+     "en": "He got a nosebleed during the dry winter and had to pinch his nose for a few minutes.",
+     "zh": "干燥的冬天他流鼻血了，只得捏住鼻子几分钟。"
+    },
+    {
+     "en": "If you have a nosebleed that won't stop, you should see a doctor.",
+     "zh": "如果流鼻血止不住，你应该去看医生。"
+    }
+   ],
+   "tags": [
+    "就医用药"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "发烧",
+   "pair": "zh-en",
+   "slug": "fa-shao",
+   "lang": "zh",
+   "translation": "have a fever",
+   "shortAnswer": "「发烧」的英文是 have a fever，指体温升高。注意 fever 常搭配 have 或 run，轻微发热可说 have a slight fever。",
+   "definition": "have a fever 用于描述发烧，口语和书面均可；高热说 have a high fever，退烧常用 reduce the fever。",
+   "examples": [
+    {
+     "en": "The child has a fever, so the doctor told him to take some medicine and rest.",
+     "zh": "孩子发烧了，所以医生让他吃点药并休息。"
+    },
+    {
+     "en": "If you have a high fever for more than two days, you should go to the hospital and get an injection.",
+     "zh": "如果你发高烧超过两天，就应该去医院打针。"
+    }
+   ],
+   "tags": [
+    "就医用药"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "have a fever",
+   "pair": "en-zh",
+   "slug": "have-a-fever",
+   "lang": "en",
+   "translation": "发烧",
+   "shortAnswer": "have a fever 的中文意思是「发烧」，指体温高于正常。常与 high、slight 连用，如 have a high fever。",
+   "definition": "have a fever 是描述发烧的常用搭配，口语和医学语境均可使用；低热说 have a slight fever，退烧常用 reduce the fever。",
+   "examples": [
+    {
+     "en": "The child has a fever, so the doctor told him to take some medicine and rest.",
+     "zh": "孩子发烧了，所以医生让他吃点药并休息。"
+    },
+    {
+     "en": "If you have a high fever for more than two days, you should go to the hospital and get an injection.",
+     "zh": "如果你发高烧超过两天，就应该去医院打针。"
+    }
+   ],
+   "tags": [
+    "就医用药"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "头晕",
+   "pair": "zh-en",
+   "slug": "tou-yun",
+   "lang": "zh",
+   "translation": "dizzy",
+   "shortAnswer": "「头晕」的英文是 dizzy，常指天旋地转或站立不稳的感觉。注意 dizzy 多描述自身感受，别与表示「迷茫」的 confused 或「昏倒」的 faint 混用。",
+   "definition": "dizzy 可作形容词，常见搭配 feel dizzy、get dizzy、a dizzy spell（一阵头晕）。就医时还可说 I feel lightheaded 表示「头重脚轻、眼前发黑」，与眩晕 vertigo 所指的旋转感不同。",
+   "examples": [
+    {
+     "en": "I felt dizzy after taking the painkiller on an empty stomach.",
+     "zh": "我空腹吃了止痛药后感到头晕。"
+    },
+    {
+     "en": "If you get dizzy while standing up, sit down and tell the nurse before getting an injection.",
+     "zh": "如果你站起来时头晕，先坐下，并在打针前告诉护士。"
+    }
+   ],
+   "tags": [
+    "就医用药"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "dizzy",
+   "pair": "en-zh",
+   "slug": "dizzy",
+   "lang": "en",
+   "translation": "头晕",
+   "shortAnswer": "dizzy 的中文意思是「头晕」，指感觉天旋地转或站立不稳。它强调自身眩晕感，不等于昏倒（faint），也不等于一般的困惑（confused）。",
+   "definition": "dizzy 是形容词，用于 feel/get dizzy、a dizzy spell 等搭配，口语和书面均常用。医学上更精确的「眩晕」是 vertigo，而 lightheaded 偏指头重脚轻、快晕倒的感觉。",
+   "examples": [
+    {
+     "en": "I felt dizzy after taking the painkiller on an empty stomach.",
+     "zh": "我空腹吃了止痛药后感到头晕。"
+    },
+    {
+     "en": "If you get dizzy while standing up, sit down and tell the nurse before getting an injection.",
+     "zh": "如果你站起来时头晕，先坐下，并在打针前告诉护士。"
+    }
+   ],
+   "tags": [
+    "就医用药"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "流鼻涕",
+   "pair": "zh-en",
+   "slug": "liu-bi-ti",
+   "lang": "zh",
+   "translation": "runny nose",
+   "shortAnswer": "流鼻涕的英文是 runny nose，指鼻子不断流出清鼻涕，注意是鼻子在流，别说成 running nose。",
+   "definition": "常用搭配 have a runny nose、a runny nose and sneezing。感冒时更常说 I have a runny nose，而不是 I am runny nose。",
+   "examples": [
+    {
+     "en": "I have a runny nose and a sore throat, so I'll take some cold medicine and get some rest.",
+     "zh": "我流鼻涕还嗓子疼，所以打算吃点感冒药休息一下。"
+    },
+    {
+     "en": "If your runny nose lasts more than a week, see a doctor instead of buying more painkillers.",
+     "zh": "如果流鼻涕持续一周以上，就该去看医生，而不是继续买止痛药。"
+    }
+   ],
+   "tags": [
+    "就医用药"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "runny nose",
+   "pair": "en-zh",
+   "slug": "runny-nose",
+   "lang": "en",
+   "translation": "流鼻涕",
+   "shortAnswer": "Runny nose 的中文意思是流鼻涕，指鼻腔分泌物增多、清鼻涕不断流出，和鼻塞正好相反。",
+   "definition": "口语中最常用的说法，搭配 have a runny nose、a runny nose and a sore throat，多指感冒或过敏引起的清水样鼻涕。",
+   "examples": [
+    {
+     "en": "I have a runny nose and a sore throat, so I'll take some cold medicine and get some rest.",
+     "zh": "我流鼻涕还嗓子疼，所以打算吃点感冒药休息一下。"
+    },
+    {
+     "en": "If your runny nose lasts more than a week, see a doctor instead of buying more painkillers.",
+     "zh": "如果流鼻涕持续一周以上，就该去看医生，而不是继续买止痛药。"
+    }
+   ],
+   "tags": [
+    "就医用药"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "嗓子疼",
+   "pair": "zh-en",
+   "slug": "sang-zi-teng",
+   "lang": "zh",
+   "translation": "sore throat",
+   "shortAnswer": "「嗓子疼」用英语说是 sore throat，常说 I have a sore throat 或 My throat hurts。",
+   "definition": "sore throat 指咽喉疼痛，多由感冒、流感或过度用嗓引起。常见搭配：have a sore throat、a bad sore throat、throat lozenges。",
+   "examples": [
+    {
+     "en": "I have a sore throat, so I bought some lozenges.",
+     "zh": "我嗓子疼，所以买了些润喉糖。"
+    },
+    {
+     "en": "If your sore throat gets worse, you should see a doctor.",
+     "zh": "如果你的嗓子疼加重，应该去看医生。"
+    }
+   ],
+   "tags": [
+    "就医用药"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "sore throat",
+   "pair": "en-zh",
+   "slug": "sore-throat",
+   "lang": "en",
+   "translation": "嗓子疼",
+   "shortAnswer": "「sore throat」的中文意思是「嗓子疼」，指咽喉疼痛、发炎，常伴随吞咽不适。",
+   "definition": "sore throat 指咽喉疼痛发炎，常由感冒或流感引起，也可能因说话过多或干燥导致。搭配：have a sore throat。",
+   "examples": [
+    {
+     "en": "I have a sore throat, so I bought some lozenges.",
+     "zh": "我嗓子疼，所以买了些润喉糖。"
+    },
+    {
+     "en": "If your sore throat gets worse, you should see a doctor.",
+     "zh": "如果你的嗓子疼加重，应该去看医生。"
+    }
+   ],
+   "tags": [
+    "就医用药"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "打针",
+   "pair": "zh-en",
+   "slug": "da-zhen",
+   "lang": "zh",
+   "translation": "get an injection",
+   "shortAnswer": "「打针」的英文是 get an injection，强调接受注射这一动作；口语中也常用 have a shot，但 shot 在美式英语里更随意。",
+   "definition": "get an injection 是「打针」最通用的说法，侧重接受注射；英式英语常说 have an injection，美式口语常用 get a shot。注意：打针不说 take an injection，吃药才用 take medicine。",
+   "examples": [
+    {
+     "en": "The nurse gave me an injection in the arm, and I didn't even feel it.",
+     "zh": "护士在我胳膊上打了一针，我甚至没感觉到。"
+    },
+    {
+     "en": "If the fever doesn't go down, you may need to get an injection at the clinic.",
+     "zh": "如果烧不退，你可能需要去诊所打一针。"
+    }
+   ],
+   "tags": [
+    "就医用药"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "get an injection",
+   "pair": "en-zh",
+   "slug": "get-an-injection",
+   "lang": "en",
+   "translation": "打针",
+   "shortAnswer": "「get an injection」的中文意思是「打针」，指接受药物注射；比 have a shot 稍正式，后者更口语化。",
+   "definition": "get an injection 意为「打针」，指接受注射，常用于医疗场合；同义 have a shot 更口语（尤美式）。注意：吃药是 take medicine，不是 eat medicine；打针不用 take an injection。",
+   "examples": [
+    {
+     "en": "The nurse gave me an injection in the arm, and I didn't even feel it.",
+     "zh": "护士在我胳膊上打了一针，我甚至没感觉到。"
+    },
+    {
+     "en": "If the fever doesn't go down, you may need to get an injection at the clinic.",
+     "zh": "如果烧不退，你可能需要去诊所打一针。"
+    }
+   ],
+   "tags": [
+    "就医用药"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "便秘",
+   "pair": "zh-en",
+   "slug": "bian-mi",
+   "lang": "zh",
+   "translation": "constipation",
+   "shortAnswer": "便秘的英文是 constipation，指排便困难或次数减少，不是拉肚子 diarrhea，描述症状时注意区分。",
+   "definition": "constipation 多作不可数名词，常说 suffer from constipation、relieve constipation、chronic constipation；缓解便秘可用 laxative（泻药）。",
+   "examples": [
+    {
+     "en": "If you have constipation for more than a week, you should see a doctor.",
+     "zh": "如果你便秘超过一周，就应该去看医生。"
+    },
+    {
+     "en": "Drinking more water and eating more fiber can help relieve constipation.",
+     "zh": "多喝水和多吃纤维有助于缓解便秘。"
+    }
+   ],
+   "tags": [
+    "就医用药"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "constipation",
+   "pair": "en-zh",
+   "slug": "constipation",
+   "lang": "en",
+   "translation": "便秘",
+   "shortAnswer": "Constipation 的中文意思是便秘，指排便困难、次数减少或粪便干硬，与 diarrhea（腹泻）相反。",
+   "definition": "constipation 是不可数名词，常搭配 suffer from、relieve、chronic；口语也说 be constipated。注意与 diarrhea（腹泻）区分。",
+   "examples": [
+    {
+     "en": "If you have constipation for more than a week, you should see a doctor.",
+     "zh": "如果你便秘超过一周，就应该去看医生。"
+    },
+    {
+     "en": "Drinking more water and eating more fiber can help relieve constipation.",
+     "zh": "多喝水和多吃纤维有助于缓解便秘。"
+    }
+   ],
+   "tags": [
+    "就医用药"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "消化不良",
+   "pair": "zh-en",
+   "slug": "xiao-hua-bu-liang",
+   "lang": "zh",
+   "translation": "indigestion",
+   "shortAnswer": "「消化不良」的英文是 indigestion，指胃部不适、消化困难，是不可数名词。",
+   "definition": "indigestion 常与 have、get、suffer from 搭配，如 have indigestion（消化不良）。它侧重胃部灼热、胀气等症状，不是具体疾病名。",
+   "examples": [
+    {
+     "en": "I ate too much spicy food and got indigestion.",
+     "zh": "我吃了太多辛辣食物，结果消化不良了。"
+    },
+    {
+     "en": "She often suffers from indigestion after heavy meals.",
+     "zh": "她在大吃一顿后经常消化不良。"
+    }
+   ],
+   "tags": [
+    "就医用药"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "indigestion",
+   "pair": "en-zh",
+   "slug": "indigestion",
+   "lang": "en",
+   "translation": "消化不良",
+   "shortAnswer": "Indigestion means 消化不良 in Chinese: stomach discomfort from difficulty digesting food.",
+   "definition": "Indigestion is an uncountable noun for stomach discomfort, often after eating. Say have indigestion; formally, dyspepsia.",
+   "examples": [
+    {
+     "en": "I ate too much spicy food and got indigestion.",
+     "zh": "我吃了太多辛辣食物，结果消化不良了。"
+    },
+    {
+     "en": "She often suffers from indigestion after heavy meals.",
+     "zh": "她在大吃一顿后经常消化不良。"
+    }
+   ],
+   "tags": [
+    "就医用药"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "落枕",
+   "pair": "zh-en",
+   "slug": "lao-zhen",
+   "lang": "zh",
+   "translation": "crick in the neck",
+   "shortAnswer": "落枕的英文是 crick in the neck，指睡姿不当或受凉后颈部肌肉痉挛僵硬，医生问诊常说 I woke up with a crick in my neck。",
+   "definition": "crick in the neck 多指晨起后颈部僵硬疼痛、转头受限，属口语表达，搭配 get/have a crick in the neck；颈椎病等慢性问题说 neck pain。",
+   "examples": [
+    {
+     "en": "I woke up with a crick in my neck and could barely turn my head.",
+     "zh": "我落枕了，脖子几乎转不动。"
+    },
+    {
+     "en": "She got a crick in the neck from sleeping in a draft, so she put a warm towel on it.",
+     "zh": "她因为吹着风睡觉落枕了，所以用热毛巾敷了敷。"
+    }
+   ],
+   "tags": [
+    "就医用药"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "crick in the neck",
+   "pair": "en-zh",
+   "slug": "crick-in-the-neck",
+   "lang": "en",
+   "translation": "落枕",
+   "shortAnswer": "A crick in the neck 的意思是落枕，即睡醒后脖子僵硬疼痛、转动不便，多因睡姿不当或受凉引起。",
+   "definition": "crick in the neck 为口语说法，指颈部肌肉痉挛造成的急性僵硬疼痛，常见搭配 get/have a crick in the neck、wake up with a crick。",
+   "examples": [
+    {
+     "en": "I woke up with a crick in my neck and could barely turn my head.",
+     "zh": "我落枕了，脖子几乎转不动。"
+    },
+    {
+     "en": "She got a crick in the neck from sleeping in a draft, so she put a warm towel on it.",
+     "zh": "她因为吹着风睡觉落枕了，所以用热毛巾敷了敷。"
+    }
+   ],
+   "tags": [
+    "就医用药"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "创可贴",
+   "pair": "zh-en",
+   "slug": "chuang-ke-tie",
+   "lang": "zh",
+   "translation": "band-aid",
+   "shortAnswer": "「创可贴」的英文最常见说法是 band-aid，英式英语中也常说 plaster。注意 Band-Aid 本是美国强生公司的注册商标，泛指时小写即可，口语里可数。",
+   "definition": "band-aid 指贴在伤口上的小敷料，口语中引申为「临时补救措施」。美式多用 band-aid，英式常用 plaster，正式场合也说 adhesive bandage。",
+   "examples": [
+    {
+     "en": "He cut his finger while cooking and put a band-aid on it.",
+     "zh": "他做饭时切到了手指，贴了一张创可贴。"
+    },
+    {
+     "en": "The new tax cut is just a band-aid for the country's economic problems.",
+     "zh": "新的减税政策只是对国家经济问题的临时补救措施。"
+    }
+   ],
+   "tags": [
+    "就医用药"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "band-aid",
+   "pair": "en-zh",
+   "slug": "band-aid",
+   "lang": "en",
+   "translation": "创可贴",
+   "shortAnswer": "band-aid 的中文意思是「创可贴」，指贴在伤口上的小敷料。它本是美国强生公司的商标，泛指时小写；英式英语中对应常用词是 plaster。",
+   "definition": "band-aid 作名词指创可贴，美式口语常用，可引申为「临时补救办法」；英式英语更常说 plaster，正式语境可用 adhesive bandage。",
+   "examples": [
+    {
+     "en": "He cut his finger while cooking and put a band-aid on it.",
+     "zh": "他做饭时切到了手指，贴了一张创可贴。"
+    },
+    {
+     "en": "The new tax cut is just a band-aid for the country's economic problems.",
+     "zh": "新的减税政策只是对国家经济问题的临时补救措施。"
+    }
+   ],
+   "tags": [
+    "就医用药"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "吃药",
+   "pair": "zh-en",
+   "slug": "chi-yao",
+   "lang": "zh",
+   "translation": "take medicine",
+   "shortAnswer": "「吃药」的英文是 take medicine，不是 eat medicine；服药强调按时按量吞服，take 在此表示服用。",
+   "definition": "take medicine 是固定搭配，指按医嘱或说明书服用药物，适用于日常和医疗场合；take your medicine 还引申为承担后果、自食其果。",
+   "examples": [
+    {
+     "en": "The doctor told me to take medicine three times a day after meals.",
+     "zh": "医生让我每天饭后吃这个药，一天三次。"
+    },
+    {
+     "en": "If you have a fever, take medicine and get some rest.",
+     "zh": "如果你发烧，就吃点药，然后好好休息。"
+    }
+   ],
+   "tags": [
+    "就医用药"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "take medicine",
+   "pair": "en-zh",
+   "slug": "take-medicine",
+   "lang": "en",
+   "translation": "吃药",
+   "shortAnswer": "take medicine 的中文意思是「吃药」，指按时按量服下药物，与 eat 无关，强调服用动作。",
+   "definition": "take medicine 是英语固定搭配，表示服药，常用于医嘱和日常表达；take your medicine 另有接受惩罚或自食其果之义。",
+   "examples": [
+    {
+     "en": "The doctor told me to take medicine three times a day after meals.",
+     "zh": "医生让我每天饭后吃这个药，一天三次。"
+    },
+    {
+     "en": "If you have a fever, take medicine and get some rest.",
+     "zh": "如果你发烧，就吃点药，然后好好休息。"
+    }
+   ],
+   "tags": [
+    "就医用药"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "开药",
+   "pair": "zh-en",
+   "slug": "kai-yao",
+   "lang": "zh",
+   "translation": "prescribe medication",
+   "shortAnswer": "「开药」用英语说是 prescribe medication，也可简说 prescribe。",
+   "definition": "prescribe medication 指医生为患者开具处方药。主语是医生，患者是 receive a prescription；取药说 fill a prescription。",
+   "examples": [
+    {
+     "en": "The doctor prescribed medication to bring down my fever and told me to rest.",
+     "zh": "医生给我开药退烧，并让我休息。"
+    },
+    {
+     "en": "If your side effects get worse, the doctor may prescribe medication to help you sleep.",
+     "zh": "如果你的副作用加重，医生可能会开药帮助你入睡。"
+    }
+   ],
+   "tags": [
+    "就医用药"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "prescribe medication",
+   "pair": "en-zh",
+   "slug": "prescribe-medication",
+   "lang": "en",
+   "translation": "开药",
+   "shortAnswer": "Prescribe medication 的中文意思是「开药」，指医生为患者开具药物处方。",
+   "definition": "prescribe medication 是医疗场景的标准搭配，主语通常是医生。患者是 receive a prescription，取药说 fill a prescription。",
+   "examples": [
+    {
+     "en": "The doctor prescribed medication to bring down my fever and told me to rest.",
+     "zh": "医生给我开药退烧，并让我休息。"
+    },
+    {
+     "en": "If your side effects get worse, the doctor may prescribe medication to help you sleep.",
+     "zh": "如果你的副作用加重，医生可能会开药帮助你入睡。"
+    }
+   ],
+   "tags": [
+    "就医用药"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "输液",
+   "pair": "zh-en",
+   "slug": "shu-ye",
+   "lang": "zh",
+   "translation": "IV drip",
+   "shortAnswer": "「输液」英文是 IV drip，即静脉滴注，也常说 put someone on an IV drip。",
+   "definition": "IV drip 指静脉滴注，常搭配 be on an IV drip 或 put someone on an IV drip。注意：打针是 get an injection，吃药是 take medicine，不能说 eat medicine。",
+   "examples": [
+    {
+     "en": "The doctor put her on an IV drip to treat the severe dehydration.",
+     "zh": "医生给她输液以治疗严重的脱水。"
+    },
+    {
+     "en": "In many Chinese hospitals, patients with minor illnesses receive an IV drip, while in the US they are usually given oral medicine.",
+     "zh": "在中国许多医院，轻症患者也会输液，而在美国通常只给口服药。"
+    }
+   ],
+   "tags": [
+    "就医用药"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "IV drip",
+   "pair": "en-zh",
+   "slug": "iv-drip",
+   "lang": "en",
+   "translation": "输液",
+   "shortAnswer": "IV drip 对应中文「输液」，即静脉滴注，常搭配 be on an IV drip 或 put someone on an IV drip。",
+   "definition": "IV drip 是 intravenous drip 的缩写，指通过静脉持续滴注药液或营养液，口语中也可说 IV。注意与 injection（打针）区别：injection 是推注，IV drip 是滴注。",
+   "examples": [
+    {
+     "en": "The doctor put her on an IV drip to treat the severe dehydration.",
+     "zh": "医生给她输液以治疗严重的脱水。"
+    },
+    {
+     "en": "In many Chinese hospitals, patients with minor illnesses receive an IV drip, while in the US they are usually given oral medicine.",
+     "zh": "在中国许多医院，轻症患者也会输液，而在美国通常只给口服药。"
+    }
+   ],
+   "tags": [
+    "就医用药"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "痊愈",
+   "pair": "zh-en",
+   "slug": "quan-yu",
+   "lang": "zh",
+   "translation": "fully recovered",
+   "shortAnswer": "「痊愈」的英文是 fully recovered，指完全恢复健康，比 get better 更强调彻底康复。",
+   "definition": "fully recovered 指病后或术后完全康复，常作表语：be fully recovered from an illness。",
+   "examples": [
+    {
+     "en": "After two weeks of rest and medicine, she was fully recovered from the flu.",
+     "zh": "休息并吃药两周后，她流感痊愈了。"
+    },
+    {
+     "en": "The doctor said I would be fully recovered within a month after the surgery.",
+     "zh": "医生说手术后一个月内我就会痊愈。"
+    }
+   ],
+   "tags": [
+    "就医用药"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "fully recovered",
+   "pair": "en-zh",
+   "slug": "fully-recovered",
+   "lang": "en",
+   "translation": "痊愈",
+   "shortAnswer": "fully recovered 的中文意思是「痊愈」，指完全恢复健康，强调彻底康复而非仅仅好转。",
+   "definition": "fully recovered 指病后或术后完全康复，常作表语：be fully recovered from…，强调「完全」。",
+   "examples": [
+    {
+     "en": "After two weeks of rest and medicine, she was fully recovered from the flu.",
+     "zh": "休息并吃药两周后，她流感痊愈了。"
+    },
+    {
+     "en": "The doctor said I would be fully recovered within a month after the surgery.",
+     "zh": "医生说手术后一个月内我就会痊愈。"
+    }
+   ],
+   "tags": [
+    "就医用药"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "复发",
+   "pair": "zh-en",
+   "slug": "fu-fa",
+   "lang": "zh",
+   "translation": "relapse",
+   "shortAnswer": "「复发」的英文是 relapse；通常用于疾病好转后再次发作，也可指戒瘾后复吸或旧习重现。",
+   "definition": "relapse 常作名词或不及物动词，多指病情、毒瘾、酒瘾等好转后又回到原来的状态；医学语境里强调“再次发作”。搭配如 relapse of the disease、relapse into drinking。",
+   "examples": [
+    {
+     "en": "The patient relapsed after stopping the medication too early.",
+     "zh": "病人过早停药后病情复发了。"
+    },
+    {
+     "en": "Stress and lack of sleep can increase the risk of a relapse.",
+     "zh": "压力和睡眠不足会增加复发风险。"
+    }
+   ],
+   "tags": [
+    "就医用药"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "relapse",
+   "pair": "en-zh",
+   "slug": "relapse",
+   "lang": "en",
+   "translation": "复发",
+   "shortAnswer": "Relapse 的中文意思是「复发」；常指疾病好转后再次发作，或戒瘾后重新吸食、饮酒。",
+   "definition": "relapse 可作名词或动词，强调病愈或戒断后再次回到原先的病症或不良状态。常见搭配有 relapse of the illness、relapse into addiction。与 recurrence 相比，relapse 更侧重“旧病/旧瘾重来”。",
+   "examples": [
+    {
+     "en": "The patient relapsed after stopping the medication too early.",
+     "zh": "病人过早停药后病情复发了。"
+    },
+    {
+     "en": "Stress and lack of sleep can increase the risk of a relapse.",
+     "zh": "压力和睡眠不足会增加复发风险。"
+    }
+   ],
+   "tags": [
+    "就医用药"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "拔罐",
+   "pair": "zh-en",
+   "slug": "ba-guan",
+   "lang": "zh",
+   "translation": "cupping therapy",
+   "shortAnswer": "「拔罐」英文是 cupping therapy，口语常简称 cupping，如 get cupping therapy。",
+   "definition": "cupping therapy 指用负压把罐吸附在皮肤上的中医疗法，常见搭配 receive cupping therapy、cupping marks（罐印）。",
+   "examples": [
+    {
+     "en": "After the marathon, she tried cupping therapy to relieve her tight back muscles, leaving round purple marks on her shoulders.",
+     "zh": "马拉松之后，她尝试了拔罐来缓解背部肌肉紧绷，肩上留下了圆圆的紫色罐印。"
+    },
+    {
+     "en": "Many people first heard of cupping therapy during the Olympics, when swimmers with circular bruises went viral online.",
+     "zh": "很多人第一次听说拔罐是在奥运会期间，当时背上带着圆形瘀印的游泳运动员在网上走红。"
+    }
+   ],
+   "tags": [
+    "就医用药"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "cupping therapy",
+   "pair": "en-zh",
+   "slug": "cupping-therapy",
+   "lang": "en",
+   "translation": "拔罐",
+   "shortAnswer": "Cupping therapy is 拔罐 in Chinese; people say get cupping therapy for this TCM suction treatment.",
+   "definition": "cupping therapy (n.): a TCM treatment using suction cups on the skin; common with get/receive, cupping marks.",
+   "examples": [
+    {
+     "en": "After the marathon, she tried cupping therapy to relieve her tight back muscles, leaving round purple marks on her shoulders.",
+     "zh": "马拉松之后，她尝试了拔罐来缓解背部肌肉紧绷，肩上留下了圆圆的紫色罐印。"
+    },
+    {
+     "en": "Many people first heard of cupping therapy during the Olympics, when swimmers with circular bruises went viral online.",
+     "zh": "很多人第一次听说拔罐是在奥运会期间，当时背上带着圆形瘀印的游泳运动员在网上走红。"
+    }
+   ],
+   "tags": [
+    "就医用药"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "副作用",
+   "pair": "zh-en",
+   "slug": "fu-zuo-yong",
+   "lang": "zh",
+   "translation": "side effect",
+   "shortAnswer": "「副作用」的英文是 side effect，常用复数 side effects。它指药物或治疗在主要疗效之外带来的不良反应，不叫 other effect。",
+   "definition": "side effect 多指药物、疫苗或治疗引起的身体不良反应，常搭配 have / cause / experience side effects，轻微副作用可说 mild side effects。",
+   "examples": [
+    {
+     "en": "This medicine may cause mild side effects, such as drowsiness or a dry mouth.",
+     "zh": "这种药可能会引起轻微的副作用，比如犯困或口干。"
+    },
+    {
+     "en": "Tell your doctor if you have any serious side effects after taking the pills.",
+     "zh": "服药后如果出现任何严重的副作用，请告诉你的医生。"
+    }
+   ],
+   "tags": [
+    "就医用药"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "side effect",
+   "pair": "en-zh",
+   "slug": "side-effect",
+   "lang": "en",
+   "translation": "副作用",
+   "shortAnswer": "side effect 的中文意思是「副作用」，指药物或治疗主要作用之外的不良反应。它强调附带发生的不良结果，不同于表示次要影响的 byproduct。",
+   "definition": "side effect 指药物、治疗或某行为在主要效果之外产生的附带（通常不良的）反应，医学语境常与 drug、medication、vaccine 搭配，口语也说 side effects of the medicine。",
+   "examples": [
+    {
+     "en": "This medicine may cause mild side effects, such as drowsiness or a dry mouth.",
+     "zh": "这种药可能会引起轻微的副作用，比如犯困或口干。"
+    },
+    {
+     "en": "Tell your doctor if you have any serious side effects after taking the pills.",
+     "zh": "服药后如果出现任何严重的副作用，请告诉你的医生。"
+    }
+   ],
+   "tags": [
+    "就医用药"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "消炎药",
+   "pair": "zh-en",
+   "slug": "xiao-yan-yao",
+   "lang": "zh",
+   "translation": "antibiotics",
+   "shortAnswer": "「消炎药」的英文常译作 antibiotics，但严格说这是个俗称误区：antibiotics 是抗生素（杀细菌），而真正的消炎药是 anti-inflammatory drugs，如布洛芬。",
+   "definition": "中文口语里的「消炎药」多指抗生素 antibiotics，用于细菌感染，如 take antibiotics 吃抗生素、be on antibiotics 在服抗生素；但医学上消炎药是 anti-inflammatory drugs，用于退烧、消肿、止痛，二者不可混用。",
+   "examples": [
+    {
+     "en": "The doctor said my infection is bacterial, so he prescribed antibiotics and told me to finish the whole course.",
+     "zh": "医生说我的感染是细菌性的，所以开了抗生素，并叮嘱我要吃完整个疗程。"
+    },
+    {
+     "en": "Many people take antibiotics for a cold, but that is a common mistake because colds are usually caused by viruses.",
+     "zh": "很多人感冒就吃抗生素，但这是个常见错误，因为感冒通常由病毒引起。"
+    }
+   ],
+   "tags": [
+    "就医用药"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "antibiotics",
+   "pair": "en-zh",
+   "slug": "antibiotics",
+   "lang": "en",
+   "translation": "消炎药",
+   "shortAnswer": "Antibiotics 的中文意思是「抗生素」，中文口语常称为「消炎药」，但严格说消炎药是 anti-inflammatory drugs，如布洛芬。",
+   "definition": "Antibiotics 指杀灭或抑制细菌的药物，如 take antibiotics 吃抗生素、be on antibiotics 在服抗生素疗程，只对细菌感染有效，不能治普通感冒或病毒；口语中它与中文「消炎药」常被混用，是典型易错点。",
+   "examples": [
+    {
+     "en": "The doctor said my infection is bacterial, so he prescribed antibiotics and told me to finish the whole course.",
+     "zh": "医生说我的感染是细菌性的，所以开了抗生素，并叮嘱我要吃完整个疗程。"
+    },
+    {
+     "en": "Many people take antibiotics for a cold, but that is a common mistake because colds are usually caused by viruses.",
+     "zh": "很多人感冒就吃抗生素，但这是个常见错误，因为感冒通常由病毒引起。"
+    }
+   ],
+   "tags": [
+    "就医用药"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "体温计",
+   "pair": "zh-en",
+   "slug": "ti-wen-ji",
+   "lang": "zh",
+   "translation": "thermometer",
+   "shortAnswer": "体温计的英文是 thermometer，专指测量体温的仪器，不等于 temperature 温度。",
+   "definition": "thermometer 是可数名词，常搭配 digital thermometer、ear thermometer；易错点：temperature 指温度或发热，不指仪器。",
+   "examples": [
+    {
+     "en": "The nurse put a thermometer under my tongue to check my temperature.",
+     "zh": "护士把体温计放在我舌头下面量体温。"
+    },
+    {
+     "en": "You should buy a digital thermometer so you can monitor your fever at home.",
+     "zh": "你应该买个电子体温计，这样在家就能监测发烧情况。"
+    }
+   ],
+   "tags": [
+    "就医用药"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "thermometer",
+   "pair": "en-zh",
+   "slug": "thermometer",
+   "lang": "en",
+   "translation": "体温计",
+   "shortAnswer": "Thermometer 的中文是体温计，指测量体温的仪器，不等于 temperature 温度本身。",
+   "definition": "Thermometer is a countable noun; common collocations include digital thermometer and ear thermometer; avoid confusing it with temperature.",
+   "examples": [
+    {
+     "en": "The nurse put a thermometer under my tongue to check my temperature.",
+     "zh": "护士把体温计放在我舌头下面量体温。"
+    },
+    {
+     "en": "You should buy a digital thermometer so you can monitor your fever at home.",
+     "zh": "你应该买个电子体温计，这样在家就能监测发烧情况。"
+    }
+   ],
+   "tags": [
+    "就医用药"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "化验单",
+   "pair": "zh-en",
+   "slug": "hua-yan-dan",
+   "lang": "zh",
+   "translation": "lab report",
+   "shortAnswer": "「化验单」的英文是 lab report。在医院抽血、验尿后拿到的那张结果单，英语里最常就说 lab report，不是 test paper。",
+   "definition": "lab report 指实验室检验后出具的结果报告，如血常规、尿检、肝功能。注意不能译为 test paper（试卷）或 medical certificate（诊断证明）。口语也可说 lab results。",
+   "examples": [
+    {
+     "en": "The doctor looked at my lab report and said my blood sugar was a little high.",
+     "zh": "医生看了我的化验单，说我的血糖有点高。"
+    },
+    {
+     "en": "Can you help me understand this lab report? I don't know what these numbers mean.",
+     "zh": "你能帮我看看这张化验单吗？我不明白这些数字是什么意思。"
+    }
+   ],
+   "tags": [
+    "就医用药"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "lab report",
+   "pair": "en-zh",
+   "slug": "lab-report",
+   "lang": "en",
+   "translation": "化验单",
+   "shortAnswer": "「lab report」的中文意思是「化验单」，即医院检验后拿到的结果报告。它与 test paper（试卷）不同，强调实验室检测数据的报告单。",
+   "definition": "lab report 是医院实验室检验（抽血、验尿等）后出具的结果报告，常搭配 get/receive/check a lab report。口语也说 lab results；不要与 test paper（试卷）或 doctor's note（病假条）混淆。",
+   "examples": [
+    {
+     "en": "The doctor looked at my lab report and said my blood sugar was a little high.",
+     "zh": "医生看了我的化验单，说我的血糖有点高。"
+    },
+    {
+     "en": "Can you help me understand this lab report? I don't know what these numbers mean.",
+     "zh": "你能帮我看看这张化验单吗？我不明白这些数字是什么意思。"
+    }
+   ],
+   "tags": [
+    "就医用药"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "量血压",
+   "pair": "zh-en",
+   "slug": "liang-xue-ya",
+   "lang": "zh",
+   "translation": "blood pressure",
+   "shortAnswer": "量血压的英文是 blood pressure，常用搭配 take one's blood pressure，注意它指血压数值，测量动作要加 take 或 check。",
+   "definition": "量血压英语说 take 或 check someone's blood pressure。blood pressure 是名词，指血压数值，不能当动词用，别说 blood pressure me。",
+   "examples": [
+    {
+     "en": "The nurse took my blood pressure before the doctor came in.",
+     "zh": "医生进来之前，护士给我量了血压。"
+    },
+    {
+     "en": "If you often feel dizzy, you should check your blood pressure regularly.",
+     "zh": "如果你经常感到头晕，应该定期量血压。"
+    }
+   ],
+   "tags": [
+    "就医用药"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "blood pressure",
+   "pair": "en-zh",
+   "slug": "blood-pressure",
+   "lang": "en",
+   "translation": "量血压",
+   "shortAnswer": "blood pressure 的中文意思是血压，中文常说量血压，即 take one's blood pressure，它指血压数值本身。",
+   "definition": "blood pressure 指血液对血管壁的压力，常见搭配 take/check one's blood pressure、high/low blood pressure，不可直接作动词。",
+   "examples": [
+    {
+     "en": "The nurse took my blood pressure before the doctor came in.",
+     "zh": "医生进来之前，护士给我量了血压。"
+    },
+    {
+     "en": "If you often feel dizzy, you should check your blood pressure regularly.",
+     "zh": "如果你经常感到头晕，应该定期量血压。"
+    }
+   ],
+   "tags": [
+    "就医用药"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "取钱",
+   "pair": "zh-en",
+   "slug": "qu-qian",
+   "lang": "zh",
+   "translation": "withdraw money",
+   "shortAnswer": "「取钱」的英文是 withdraw money。最常用搭配是 withdraw money from the bank/ATM，表示从银行或自动取款机取出现金。",
+   "definition": "withdraw money 指从银行账户中取出现金，是正式说法；口语中也可说 get/take out money。注意 withdraw 是及物动词，后面直接接钱，不说 withdraw from the bank money。",
+   "examples": [
+    {
+     "en": "I need to withdraw money from the ATM before the store closes.",
+     "zh": "商店关门前，我需要去自动取款机取钱。"
+    },
+    {
+     "en": "She withdrew money from her savings account to pay for the trip.",
+     "zh": "她从储蓄账户里取了钱来支付旅行费用。"
+    }
+   ],
+   "tags": [
+    "金钱银行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "withdraw money",
+   "pair": "en-zh",
+   "slug": "withdraw-money",
+   "lang": "en",
+   "translation": "取钱",
+   "shortAnswer": "“withdraw money”的中文意思是“取钱”，指从银行账户取出现金。和“deposit money（存钱）”相对，比“take out money”更正式。",
+   "definition": "withdraw money 表示从银行账户中取出现金，常用于银行、ATM 等场合。名词形式为 withdrawal。注意 withdraw 是及物动词，直接跟宾语，如 withdraw money from the bank。",
+   "examples": [
+    {
+     "en": "I need to withdraw money from the ATM before the store closes.",
+     "zh": "商店关门前，我需要去自动取款机取钱。"
+    },
+    {
+     "en": "She withdrew money from her savings account to pay for the trip.",
+     "zh": "她从储蓄账户里取了钱来支付旅行费用。"
+    }
+   ],
+   "tags": [
+    "金钱银行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "存钱",
+   "pair": "zh-en",
+   "slug": "cun-qian",
+   "lang": "zh",
+   "translation": "deposit money",
+   "shortAnswer": "「存钱」的英文是 deposit money。注意：deposit money 指把钱存入银行账户；若想表达「攒钱」，用 save money 更准确。",
+   "definition": "deposit money 强调将现金存入银行账户的动作，常与 into 连用，如 deposit money into a bank account。日常口语中也可省略 money，直接说 deposit a check。",
+   "examples": [
+    {
+     "en": "I need to deposit money into my savings account before the bank closes.",
+     "zh": "我需要在银行关门前把钱存进储蓄账户。"
+    },
+    {
+     "en": "She deposits money at the ATM every Friday to avoid service fees.",
+     "zh": "她每周五都在自动取款机存钱，以避免手续费。"
+    }
+   ],
+   "tags": [
+    "金钱银行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "deposit money",
+   "pair": "en-zh",
+   "slug": "deposit-money",
+   "lang": "en",
+   "translation": "存钱",
+   "shortAnswer": "“deposit money”的中文意思是「存钱」。它特指把钱存入银行账户，而 save money 侧重攒钱，不涉及银行动作。",
+   "definition": "deposit money 表示将资金存入银行账户，属正式/银行业用语，搭配为 deposit money into an account。注意与 withdraw money（取钱）互为反义，避免与 remit money（汇款）混淆。",
+   "examples": [
+    {
+     "en": "I need to deposit money into my savings account before the bank closes.",
+     "zh": "我需要在银行关门前把钱存进储蓄账户。"
+    },
+    {
+     "en": "She deposits money at the ATM every Friday to avoid service fees.",
+     "zh": "她每周五都在自动取款机存钱，以避免手续费。"
+    }
+   ],
+   "tags": [
+    "金钱银行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "转账",
+   "pair": "zh-en",
+   "slug": "zhuan-zhang",
+   "lang": "zh",
+   "translation": "transfer money",
+   "shortAnswer": "转账的英文是 transfer money，指在账户间转移资金。注意与 remit money 区别：后者多指跨境汇款，而 transfer money 更通用。",
+   "definition": "transfer money 泛指银行或电子账户间转移资金，可搭配 bank transfer、wire transfer；与 remit money（跨境汇款）不同，后者强调汇往异地或境外且常涉及手续费。",
+   "examples": [
+    {
+     "en": "I need to transfer money to my landlord before the rent is due.",
+     "zh": "我需要在房租到期前给房东转账。"
+    },
+    {
+     "en": "You can transfer money internationally through a wire transfer, but the bank charges a service fee.",
+     "zh": "你可以通过电汇进行国际转账，但银行会收取手续费。"
+    }
+   ],
+   "tags": [
+    "金钱银行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "transfer money",
+   "pair": "en-zh",
+   "slug": "transfer-money",
+   "lang": "en",
+   "translation": "转账",
+   "shortAnswer": "transfer money 的中文意思是转账，指在账户间转移资金。它比 remit money 更通用，后者特指跨境汇款。",
+   "definition": "transfer money 表示在银行或电子账户间转移资金，常用于日常转账、手机银行操作；与 remit money（跨境汇款）不同，后者更正式且涉及跨境。",
+   "examples": [
+    {
+     "en": "I need to transfer money to my landlord before the rent is due.",
+     "zh": "我需要在房租到期前给房东转账。"
+    },
+    {
+     "en": "You can transfer money internationally through a wire transfer, but the bank charges a service fee.",
+     "zh": "你可以通过电汇进行国际转账，但银行会收取手续费。"
+    }
+   ],
+   "tags": [
+    "金钱银行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "止痛药",
+   "pair": "zh-en",
+   "slug": "zhi-tong-yao",
+   "lang": "zh",
+   "translation": "painkiller",
+   "shortAnswer": "「止痛药」的英文是 painkiller，属于日常口语和药品标签都常用的词。注意它多指非处方类止痛片，医院里的强效镇痛药常用 analgesic。",
+   "definition": "painkiller 是可数名词，常说 take a painkiller（吃止痛药），搭配 take 而不是 eat；也有 painkiller 作定语，如 painkiller tablet。复数为 painkillers。美式口语还常用 pain reliever。",
+   "examples": [
+    {
+     "en": "I have a bad headache, so I'm going to take a painkiller.",
+     "zh": "我头疼得厉害，打算吃一片止痛药。"
+    },
+    {
+     "en": "These painkillers work quickly, but you shouldn't take them on an empty stomach.",
+     "zh": "这些止痛药见效很快，但不应该空腹服用。"
+    }
+   ],
+   "tags": [
+    "就医用药"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "painkiller",
+   "pair": "en-zh",
+   "slug": "painkiller",
+   "lang": "en",
+   "translation": "止痛药",
+   "shortAnswer": "Painkiller 的中文意思是「止痛药」，指缓解疼痛的药物。它偏日常和药品标签用语，医学语境里更强效的镇痛药多用 analgesic。",
+   "definition": "painkiller 为可数名词，口语中常说 take a painkiller（吃止痛药），搭配动词 take 而非 eat。常见搭配有 a strong/mild painkiller、over-the-counter painkiller；复数是 painkillers。",
+   "examples": [
+    {
+     "en": "I have a bad headache, so I'm going to take a painkiller.",
+     "zh": "我头疼得厉害，打算吃一片止痛药。"
+    },
+    {
+     "en": "These painkillers work quickly, but you shouldn't take them on an empty stomach.",
+     "zh": "这些止痛药见效很快，但不应该空腹服用。"
+    }
+   ],
+   "tags": [
+    "就医用药"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "汇款",
+   "pair": "zh-en",
+   "slug": "hui-kuan",
+   "lang": "zh",
+   "translation": "remit money",
+   "shortAnswer": "「汇款」的英文是 remit money，指通过银行把钱汇往异地或境外，比 transfer money 更正式。",
+   "definition": "remit money 指通过银行或金融机构汇款，常搭配 remit money to sb、abroad，比 transfer 更正式。",
+   "examples": [
+    {
+     "en": "I need to remit money to my family in China every month.",
+     "zh": "我每个月都需要给在中国的家人汇款。"
+    },
+    {
+     "en": "The bank charges a service fee to remit money overseas.",
+     "zh": "银行对境外汇款收取手续费。"
+    }
+   ],
+   "tags": [
+    "金钱银行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "remit money",
+   "pair": "en-zh",
+   "slug": "remit-money",
+   "lang": "en",
+   "translation": "汇款",
+   "shortAnswer": "“remit money”的中文意思是「汇款」，指通过银行把钱汇出，尤其用于跨境或异地，比 transfer money 正式。",
+   "definition": "remit money 意为汇款，指通过银行等把钱寄给他人，常用于跨境场景，搭配 remit money to sb。",
+   "examples": [
+    {
+     "en": "I need to remit money to my family in China every month.",
+     "zh": "我每个月都需要给在中国的家人汇款。"
+    },
+    {
+     "en": "The bank charges a service fee to remit money overseas.",
+     "zh": "银行对境外汇款收取手续费。"
+    }
+   ],
+   "tags": [
+    "金钱银行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "现金",
+   "pair": "zh-en",
+   "slug": "xian-jin",
+   "lang": "zh",
+   "translation": "cash",
+   "shortAnswer": "现金的英文是 cash。注意 cash 通常指纸币和硬币，强调即时支付；与 card（刷卡）相对，取钱常说 withdraw cash。",
+   "definition": "cash 多指实体货币，常用于 pay in cash（现金支付）、withdraw cash（取现）、cash on delivery（货到付款）。易错：check 是支票，credit 是赊账，均非现金。",
+   "examples": [
+    {
+     "en": "Do you want to pay in cash or by card?",
+     "zh": "您想付现金还是刷卡？"
+    },
+    {
+     "en": "I need to withdraw some cash from the ATM before dinner.",
+     "zh": "晚饭前我需要从自动取款机取些现金。"
+    }
+   ],
+   "tags": [
+    "金钱银行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "cash",
+   "pair": "en-zh",
+   "slug": "cash",
+   "lang": "en",
+   "translation": "现金",
+   "shortAnswer": "cash 的中文意思是现金。它指纸币和硬币，与信用卡、支票等支付方式相对，强调立刻支付。",
+   "definition": "cash 作名词时指现钞，常见搭配：in cash（用现金）、cash machine（取款机）、cashier（收银员）。作动词可表兑现，如 cash a check。口语中也泛指钱。",
+   "examples": [
+    {
+     "en": "Do you want to pay in cash or by card?",
+     "zh": "您想付现金还是刷卡？"
+    },
+    {
+     "en": "I need to withdraw some cash from the ATM before dinner.",
+     "zh": "晚饭前我需要从自动取款机取些现金。"
+    }
+   ],
+   "tags": [
+    "金钱银行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "刷卡",
+   "pair": "zh-en",
+   "slug": "shua-ka",
+   "lang": "zh",
+   "translation": "pay by card",
+   "shortAnswer": "「刷卡」的英文是 pay by card，指用银行卡付款。注意它强调付款方式，若特指刷信用卡可说 pay by credit card。",
+   "definition": "pay by card 是「用银行卡付款」的通用说法，口语和书面都常用；同类搭配还有 pay in cash（付现金）、pay by phone（手机支付）。若想强调刷卡这个动作，也可说 swipe the card，但如今插卡和感应支付更常见。",
+   "examples": [
+    {
+     "en": "Can I pay by card here, or do you only take cash?",
+     "zh": "这里可以刷卡吗，还是只收现金？"
+    },
+    {
+     "en": "She paid by card at the supermarket and kept the receipt for the record.",
+     "zh": "她在超市刷了卡，并留下小票备查。"
+    }
+   ],
+   "tags": [
+    "金钱银行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "pay by card",
+   "pair": "en-zh",
+   "slug": "pay-by-card",
+   "lang": "en",
+   "translation": "刷卡",
+   "shortAnswer": "pay by card 的中文意思是「刷卡」，指用银行卡而非现金付款。它只说明付款方式，不涉及具体是借记卡还是信用卡。",
+   "definition": "pay by card 指以银行卡完成支付，常见于收银台、餐厅、网购等场景；正式场合也说 pay by credit/debit card。与 pay in cash 相对，不强调刷的动作，插卡、感应支付都算。",
+   "examples": [
+    {
+     "en": "Can I pay by card here, or do you only take cash?",
+     "zh": "这里可以刷卡吗，还是只收现金？"
+    },
+    {
+     "en": "She paid by card at the supermarket and kept the receipt for the record.",
+     "zh": "她在超市刷了卡，并留下小票备查。"
+    }
+   ],
+   "tags": [
+    "金钱银行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "存折",
+   "pair": "zh-en",
+   "slug": "cun-zhe",
+   "lang": "zh",
+   "translation": "passbook",
+   "shortAnswer": "存折的英文是 passbook。注意，passbook 特指银行纸质储蓄本，而 bankbook 更老式，日常说银行账户一般用 bank account。",
+   "definition": "passbook 常见搭配：update the passbook（补登存折）、passbook savings account（存折储蓄账户）。存钱、取钱、转账时银行可能要求出示存折。与 debit card（借记卡）不同，passbook 是纸质记录本。",
+   "examples": [
+    {
+     "en": "I need to update my passbook at the bank to see the latest transactions.",
+     "zh": "我需要去银行补登存折，看看最新的交易记录。"
+    },
+    {
+     "en": "She deposited money into her passbook savings account and checked the exchange rate for a transfer.",
+     "zh": "她把钱存入了存折储蓄账户，并查看了转账的汇率。"
+    }
+   ],
+   "tags": [
+    "金钱银行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "passbook",
+   "pair": "en-zh",
+   "slug": "passbook",
+   "lang": "en",
+   "translation": "存折",
+   "shortAnswer": "Passbook 的中文意思是存折。它指银行发给储户的纸质小本，用于记录存款、取款和利息，区别于 bank statement（对账单）和 debit card。",
+   "definition": "Passbook 是纸质储蓄记录本，常见搭配：passbook savings account（存折储蓄账户）、update your passbook（补登存折）。在柜台存钱、取钱、转账时使用。注意：现在多用 bank statement 或手机银行，passbook 偏传统。",
+   "examples": [
+    {
+     "en": "I need to update my passbook at the bank to see the latest transactions.",
+     "zh": "我需要去银行补登存折，看看最新的交易记录。"
+    },
+    {
+     "en": "She deposited money into her passbook savings account and checked the exchange rate for a transfer.",
+     "zh": "她把钱存入了存折储蓄账户，并查看了转账的汇率。"
+    }
+   ],
+   "tags": [
+    "金钱银行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "退烧",
+   "pair": "zh-en",
+   "slug": "tui-shao",
+   "lang": "zh",
+   "translation": "reduce fever",
+   "shortAnswer": "「退烧」的英文是 reduce fever，例如：吃药退烧 take medicine to reduce fever，更口语的说法是 bring down the fever。",
+   "definition": "reduce fever 强调降低体温、把烧退下去，常用于吃药、打针等就医用药场景；bring down the fever 更口语，英式也常用 bring the fever down。",
+   "examples": [
+    {
+     "en": "The doctor told me to take this medicine to reduce fever.",
+     "zh": "医生让我吃这种药来退烧。"
+    },
+    {
+     "en": "You should drink plenty of water and get some rest to help reduce fever.",
+     "zh": "你应该多喝水、多休息，这样有助于退烧。"
+    }
+   ],
+   "tags": [
+    "就医用药"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "reduce fever",
+   "pair": "en-zh",
+   "slug": "reduce-fever",
+   "lang": "en",
+   "translation": "退烧",
+   "shortAnswer": "「reduce fever」的中文意思是「退烧」，指把发烧的体温降下来，比 bring down the fever 稍正式，常用于药物或治疗。",
+   "definition": "reduce fever 是动词短语，表示退烧、降低体温，常与 medicine、drugs、treatment 搭配，如 take medicine to reduce fever，口语更常说 bring down the fever。",
+   "examples": [
+    {
+     "en": "The doctor told me to take this medicine to reduce fever.",
+     "zh": "医生让我吃这种药来退烧。"
+    },
+    {
+     "en": "You should drink plenty of water and get some rest to help reduce fever.",
+     "zh": "你应该多喝水、多休息，这样有助于退烧。"
+    }
+   ],
+   "tags": [
+    "就医用药"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "银行卡",
+   "pair": "zh-en",
+   "slug": "yin-hang-ka",
+   "lang": "zh",
+   "translation": "bank card",
+   "shortAnswer": "银行卡的英文是 bank card，指银行发行的用于存取款、转账或支付的塑料卡片。注意 bank card 常特指借记卡，而信用卡更常说 credit card。",
+   "definition": "bank card 是统称，包括借记卡 debit card 和信用卡 credit card。常见搭配：use a bank card、insert your bank card、bank card number。在英式英语中，bank card 有时也泛指银行卡。",
+   "examples": [
+    {
+     "en": "I need to withdraw some money from the ATM, but I forgot my bank card at home.",
+     "zh": "我需要从自动取款机取点钱，但把银行卡忘在家里了。"
+    },
+    {
+     "en": "You can pay by bank card, but there is a small transaction fee for credit cards.",
+     "zh": "你可以用银行卡支付，但信用卡会收取少量手续费。"
+    }
+   ],
+   "tags": [
+    "金钱银行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "bank card",
+   "pair": "en-zh",
+   "slug": "bank-card",
+   "lang": "en",
+   "translation": "银行卡",
+   "shortAnswer": "bank card 的中文意思是银行卡，即银行发行的用于取款、存款或支付的卡片。它通常指借记卡，区别于 credit card（信用卡）。",
+   "definition": "bank card 是通用术语，可指借记卡或信用卡。常见搭配：pay by bank card、bank card details、swipe your bank card。口语中常说 card，但正式场合用 bank card 更明确。",
+   "examples": [
+    {
+     "en": "I need to withdraw some money from the ATM, but I forgot my bank card at home.",
+     "zh": "我需要从自动取款机取点钱，但把银行卡忘在家里了。"
+    },
+    {
+     "en": "You can pay by bank card, but there is a small transaction fee for credit cards.",
+     "zh": "你可以用银行卡支付，但信用卡会收取少量手续费。"
+    }
+   ],
+   "tags": [
+    "金钱银行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "信用卡",
+   "pair": "zh-en",
+   "slug": "xin-yong-ka",
+   "lang": "zh",
+   "translation": "credit card",
+   "shortAnswer": "「信用卡」的英文是 credit card，指银行发行的可先消费后还款的支付卡。注意它与借记卡 debit card 不同，后者直接从账户扣款。",
+   "definition": "credit card 是可数名词，常与 apply for（申请）、use（使用）、pay off（还清）等动词搭配。申请说 apply for a credit card，刷卡付款说 pay by credit card。",
+   "examples": [
+    {
+     "en": "Can I pay by credit card, or do you only accept cash?",
+     "zh": "我可以刷信用卡支付吗，还是你们只收现金？"
+    },
+    {
+     "en": "She applied for a new credit card with a lower interest rate.",
+     "zh": "她申请了一张利率更低的新信用卡。"
+    }
+   ],
+   "tags": [
+    "金钱银行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "credit card",
+   "pair": "en-zh",
+   "slug": "credit-card",
+   "lang": "en",
+   "translation": "信用卡",
+   "shortAnswer": "credit card 的中文意思是「信用卡」，一种由银行发行的、允许先消费后还款的支付卡。它与借记卡 debit card 不同，后者直接从银行账户扣款。",
+   "definition": "credit card 常指银行或金融机构发行的塑料支付卡，可透支消费并需按期还款。常见搭配有 apply for a credit card、pay by credit card、max out a credit card。",
+   "examples": [
+    {
+     "en": "Can I pay by credit card, or do you only accept cash?",
+     "zh": "我可以刷信用卡支付吗，还是你们只收现金？"
+    },
+    {
+     "en": "She applied for a new credit card with a lower interest rate.",
+     "zh": "她申请了一张利率更低的新信用卡。"
+    }
+   ],
+   "tags": [
+    "金钱银行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "充值",
+   "pair": "zh-en",
+   "slug": "chong-zhi",
+   "lang": "zh",
+   "translation": "top up",
+   "shortAnswer": "“充值”用英语说是 top up，常用于给手机、交通卡或账户充值。注意 top up 强调补足余额，不是“转账”（transfer）。",
+   "definition": "top up 多用于英式英语，搭配 top up your phone／card／account。给手机充话费可说 top up my phone。与 deposit（往银行存钱）、transfer（转账）不同，top up 侧重把余额补满。",
+   "examples": [
+    {
+     "en": "I need to top up my phone before the trip.",
+     "zh": "旅行前我得给手机充点话费。"
+    },
+    {
+     "en": "You can top up your transport card at any station.",
+     "zh": "你可以在任何车站给交通卡充值。"
+    }
+   ],
+   "tags": [
+    "金钱银行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "top up",
+   "pair": "en-zh",
+   "slug": "top-up",
+   "lang": "en",
+   "translation": "充值",
+   "shortAnswer": "top up 的中文意思是“充值”，指给手机、交通卡或账户补充余额。它与 deposit 不同，deposit 是往银行存钱，而 top up 强调补足已有余额。",
+   "definition": "top up 在英式英语中很常见，如 top up your phone、top up your account。表示给账户补钱或续费，口语和日常场合常用；美式英语更常说 refill 或 add money。名词形式为 a top-up。",
+   "examples": [
+    {
+     "en": "I need to top up my phone before the trip.",
+     "zh": "旅行前我得给手机充点话费。"
+    },
+    {
+     "en": "You can top up your transport card at any station.",
+     "zh": "你可以在任何车站给交通卡充值。"
+    }
+   ],
+   "tags": [
+    "金钱银行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "汇率",
+   "pair": "zh-en",
+   "slug": "hui-lv",
+   "lang": "zh",
+   "translation": "exchange rate",
+   "shortAnswer": "汇率用英语说是 exchange rate，就是两种货币兑换的比率，常见于银行换汇和跨境汇款，别和利率搞混。",
+   "definition": "exchange rate 指一国货币兑换另一国货币的比率，常见搭配有 current exchange rate、exchange rate fluctuation。银行换汇、跨境汇款都离不开它，别和 interest rate（利率）混淆。",
+   "examples": [
+    {
+     "en": "The exchange rate between the dollar and the yuan has changed a lot this year.",
+     "zh": "今年美元兑人民币的汇率变化很大。"
+    },
+    {
+     "en": "Before you transfer money abroad, check the exchange rate and any service fees.",
+     "zh": "跨境汇款前，先查一下汇率和手续费。"
+    }
+   ],
+   "tags": [
+    "金钱银行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "exchange rate",
+   "pair": "en-zh",
+   "slug": "exchange-rate",
+   "lang": "en",
+   "translation": "汇率",
+   "shortAnswer": "Exchange rate 就是“汇率”，指两种货币之间的兑换比率，不是利率，也不是普通比率，常见于银行换汇。",
+   "definition": "exchange rate 指两种货币兑换的比率，常见搭配有 foreign exchange rate、fixed/floating exchange rate。多用于银行、外汇和跨境汇款场景，注意与 interest rate（利率）区分。",
+   "examples": [
+    {
+     "en": "The exchange rate between the dollar and the yuan has changed a lot this year.",
+     "zh": "今年美元兑人民币的汇率变化很大。"
+    },
+    {
+     "en": "Before you transfer money abroad, check the exchange rate and any service fees.",
+     "zh": "跨境汇款前，先查一下汇率和手续费。"
+    }
+   ],
+   "tags": [
+    "金钱银行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "零钱",
+   "pair": "zh-en",
+   "slug": "ling-qian",
+   "lang": "zh",
+   "translation": "small change",
+   "shortAnswer": "「零钱」的英文是 small change，指随身携带的少量硬币或小额钞票。注意 give change 才是「找零」，别把零钱说成 change money。",
+   "definition": "small change 强调金额小、面额零散的现金，多指硬币或零钞；统称「零钱」还可用 loose change。与找零 give change（keep the change 意为不用找了）不同，deposit money 是存钱，withdraw money 是取钱。",
+   "examples": [
+    {
+     "en": "I always keep some small change in my pocket for the bus.",
+     "zh": "我口袋里总放着一些零钱，用来坐公交车。"
+    },
+    {
+     "en": "Could you give me small change for a ten-yuan note?",
+     "zh": "你能把这张十元纸币换成零钱给我吗？"
+    }
+   ],
+   "tags": [
+    "金钱银行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "small change",
+   "pair": "en-zh",
+   "slug": "small-change",
+   "lang": "en",
+   "translation": "零钱",
+   "shortAnswer": "small change 的中文意思是零钱，即少量的硬币或小面额钞票。它强调金额小，不等于中文常说的「找零」，找零在英文里是 give change。",
+   "definition": "small change 指随身携带的零散硬币或小额钞票，多用于口语，常见搭配 have some small change、for small change。注意与 change 表「找回的钱」的用法区分，大额换零可用 break a bill。",
+   "examples": [
+    {
+     "en": "I always keep some small change in my pocket for the bus.",
+     "zh": "我口袋里总放着一些零钱，用来坐公交车。"
+    },
+    {
+     "en": "Could you give me small change for a ten-yuan note?",
+     "zh": "你能把这张十元纸币换成零钱给我吗？"
+    }
+   ],
+   "tags": [
+    "金钱银行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "找零",
+   "pair": "zh-en",
+   "slug": "zhao-ling",
+   "lang": "zh",
+   "translation": "give change",
+   "shortAnswer": "「找零」的英文是 give change，指收钱后把多出的余额退还顾客。注意 give change 强调退钱动作，而 change 单独作名词才表示零钱本身。",
+   "definition": "give change 是收银、乘车、集市等现金交易中的常用说法，常搭配 give sb change 或 give change for sth。若想表达不用找零，英语固定说 keep the change，不能说 no change。",
+   "examples": [
+    {
+     "en": "The cashier gave me change for a twenty-dollar bill.",
+     "zh": "收银员给了我一张二十美元钞票的找零。"
+    },
+    {
+     "en": "Keep the change, and thank you for your help.",
+     "zh": "不用找零了，谢谢你的帮助。"
+    }
+   ],
+   "tags": [
+    "金钱银行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "give change",
+   "pair": "en-zh",
+   "slug": "give-change",
+   "lang": "en",
+   "translation": "找零",
+   "shortAnswer": "give change 的中文意思是「找零」，即把顾客多付的金额退还给他。它与 change 作名词时表示零钱不同，give change 强调的是找钱这个动作。",
+   "definition": "give change 用于现金付款场合，搭配 give sb change、give change for a note。口语中 keep the change 表示不用找了；注意 extend 和 transfer 等词与找零无关。",
+   "examples": [
+    {
+     "en": "The cashier gave me change for a twenty-dollar bill.",
+     "zh": "收银员给了我一张二十美元钞票的找零。"
+    },
+    {
+     "en": "Keep the change, and thank you for your help.",
+     "zh": "不用找零了，谢谢你的帮助。"
+    }
+   ],
+   "tags": [
+    "金钱银行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "借钱",
+   "pair": "zh-en",
+   "slug": "jie-qian",
+   "lang": "zh",
+   "translation": "borrow money",
+   "shortAnswer": "「借钱」的英文是 borrow money，指从别人那里借入钱款。注意：borrow 是「借入」，不是「借出」，「借出」要用 lend。",
+   "definition": "borrow money 表示「借入钱」，常见搭配：borrow money from a bank（向银行借钱）、borrow money from a friend（向朋友借钱）。易错点：borrow 是借进来，lend 是借出去，方向相反，不要混用。",
+   "examples": [
+    {
+     "en": "I had to borrow money from my parents to pay the deposit on the apartment.",
+     "zh": "我不得不向父母借钱来付公寓的押金。"
+    },
+    {
+     "en": "If you borrow money from the bank, remember to check the interest rate and service fees first.",
+     "zh": "如果你向银行借钱，记得先查看利率和手续费。"
+    }
+   ],
+   "tags": [
+    "金钱银行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "borrow money",
+   "pair": "en-zh",
+   "slug": "borrow-money",
+   "lang": "en",
+   "translation": "借钱",
+   "shortAnswer": "borrow money 的中文意思是「借钱」，即从别人处借入钱款。它强调借入方向，与 lend money（把钱借给别人）正好相反。",
+   "definition": "borrow money 表示向他人或机构借入钱款，常与 from 连用：borrow money from the bank。口语和正式场合均可用；注意不要与 lend money（借出钱）混淆。",
+   "examples": [
+    {
+     "en": "I had to borrow money from my parents to pay the deposit on the apartment.",
+     "zh": "我不得不向父母借钱来付公寓的押金。"
+    },
+    {
+     "en": "If you borrow money from the bank, remember to check the interest rate and service fees first.",
+     "zh": "如果你向银行借钱，记得先查看利率和手续费。"
+    }
+   ],
+   "tags": [
+    "金钱银行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "账户",
+   "pair": "zh-en",
+   "slug": "zhang-hu",
+   "lang": "zh",
+   "translation": "account",
+   "shortAnswer": "「账户」的英文是 account，如银行账户 bank account；也可指网络账号、账目或解释，需按语境判断。",
+   "definition": "account 指账户，如开账户 open an account、账户余额 account balance、储蓄账户 savings account。",
+   "examples": [
+    {
+     "en": "I opened a savings account at the bank to save money for a new car.",
+     "zh": "我在银行开了一个储蓄账户，用来存钱买新车。"
+    },
+    {
+     "en": "Please transfer the money to my account and tell me the transaction fee.",
+     "zh": "请把钱转到我的账户，并告诉我手续费。"
+    }
+   ],
+   "tags": [
+    "金钱银行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "account",
+   "pair": "en-zh",
+   "slug": "account",
+   "lang": "en",
+   "translation": "账户",
+   "shortAnswer": "account 的中文意思是「账户」，指银行账户或网络账号，也可表示账目、客户或解释。",
+   "definition": "account 在金钱银行场景指账户，如 open an account 开账户、account balance 账户余额、savings account 储蓄账户。",
+   "examples": [
+    {
+     "en": "I opened a savings account at the bank to save money for a new car.",
+     "zh": "我在银行开了一个储蓄账户，用来存钱买新车。"
+    },
+    {
+     "en": "Please transfer the money to my account and tell me the transaction fee.",
+     "zh": "请把钱转到我的账户，并告诉我手续费。"
+    }
+   ],
+   "tags": [
+    "金钱银行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "硬币",
+   "pair": "zh-en",
+   "slug": "ying-bi",
+   "lang": "zh",
+   "translation": "coin",
+   "shortAnswer": "「硬币」的英文是 coin，指金属制成的小额货币。需注意 coin 与纸币 (bill/note) 相对，找零给的零钱若全是硬币也可说成 coins。",
+   "definition": "coin 作名词指硬币，作动词有「创造新词、铸造硬币」之意。常见搭配：a coin 一枚硬币、flip a coin 抛硬币、coin-operated 投币式的。注意 she gave me change 是「她给我找零」，可能是硬币也可能是纸币，不必强行用 coin。",
+   "examples": [
+    {
+     "en": "She dropped a coin into the parking meter and walked away.",
+     "zh": "她把一枚硬币投入停车计时器，然后走开了。"
+    },
+    {
+     "en": "The cashier gave me back a few coins as change, but I told her to keep the change.",
+     "zh": "收银员找给我几枚硬币作为零钱，但我告诉她不用找了。"
+    }
+   ],
+   "tags": [
+    "金钱银行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "coin",
+   "pair": "en-zh",
+   "slug": "coin",
+   "lang": "en",
+   "translation": "硬币",
+   "shortAnswer": "「Coin」的中文意思是「硬币」，即金属铸成的小额钱币。它常与 note/bill（纸币）相对，也可作动词表示「铸造（硬币）」或「创造（新词）」。",
+   "definition": "coin 作名词时指金属货币，常出现在 toss a coin、a rare coin、coin collection 等搭配中；作动词指铸造硬币或新造词语。日常口语里说零钱常用 change，若特指金属硬币才用 coins，注意与 paper money 区分。",
+   "examples": [
+    {
+     "en": "She dropped a coin into the parking meter and walked away.",
+     "zh": "她把一枚硬币投入停车计时器，然后走开了。"
+    },
+    {
+     "en": "The cashier gave me back a few coins as change, but I told her to keep the change.",
+     "zh": "收银员找给我几枚硬币作为零钱，但我告诉她不用找了。"
+    }
+   ],
+   "tags": [
+    "金钱银行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "手续费",
+   "pair": "zh-en",
+   "slug": "shou-xu-fei",
+   "lang": "zh",
+   "translation": "service fee",
+   "shortAnswer": "手续费 的英文是 service fee；它常指银行或服务方收取的服务费用，强调服务成本，不同于按交易金额计算的 transaction fee。",
+   "definition": "service fee 在银行场景中多指固定或按次收取的服务手续费，如账户管理费、汇款手续费；transaction fee 更侧重交易本身，常按比例收取。",
+   "examples": [
+    {
+     "en": "The bank charges a service fee for international transfers.",
+     "zh": "银行对国际转账收取手续费。"
+    },
+    {
+     "en": "Please note that a small service fee will be deducted from your account each month.",
+     "zh": "请注意，每月会从您的账户中扣除一小笔手续费。"
+    }
+   ],
+   "tags": [
+    "金钱银行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "service fee",
+   "pair": "en-zh",
+   "slug": "service-fee",
+   "lang": "en",
+   "translation": "手续费",
+   "shortAnswer": "service fee 的中文意思是 手续费；它强调服务方收取的费用，与按交易金额计算的 transaction fee 不同，后者更侧重交易本身。",
+   "definition": "service fee 指银行为提供服务而收取的手续费，常见搭配 pay a service fee、charge a service fee；比 transaction fee 更强调服务性质，正式与口语均可用。",
+   "examples": [
+    {
+     "en": "The bank charges a service fee for international transfers.",
+     "zh": "银行对国际转账收取手续费。"
+    },
+    {
+     "en": "Please note that a small service fee will be deducted from your account each month.",
+     "zh": "请注意，每月会从您的账户中扣除一小笔手续费。"
+    }
+   ],
+   "tags": [
+    "金钱银行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "欠款",
+   "pair": "zh-en",
+   "slug": "qian-kuan",
+   "lang": "zh",
+   "translation": "debt",
+   "shortAnswer": "「欠款」用英语说是 debt，指欠别人的钱。注意 debt 是不可数名词，不能说 a debt（除非指某一笔具体债务）；还清欠款是 pay off the debt。",
+   "definition": "debt 指所欠的钱，常搭配 pay off / repay / clear a debt（还清欠款）、be in debt（负债）、get into debt（开始欠债）。注意发音 /det/，b 不发音；与 loan（贷款）不同，debt 侧重欠款状态。",
+   "examples": [
+    {
+     "en": "He borrowed a lot of money and now he is deep in debt.",
+     "zh": "他借了很多钱，如今负债累累。"
+    },
+    {
+     "en": "She worked two jobs to pay off her credit card debt.",
+     "zh": "她打两份工来还清信用卡欠款。"
+    }
+   ],
+   "tags": [
+    "金钱银行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "debt",
+   "pair": "en-zh",
+   "slug": "debt",
+   "lang": "en",
+   "translation": "欠款",
+   "shortAnswer": "debt 的中文意思是「欠款」，即所欠他人的钱。它和 loan 不同：loan 指借来的贷款，debt 强调欠钱的状态，还清欠款用 pay off a debt。",
+   "definition": "debt 指欠别人的钱，常见搭配 pay off / repay a debt（还清欠款）、be in debt（负债）、run up debts（积欠债务）。b 不发音，读 /det/；正式与日常场合均可用。",
+   "examples": [
+    {
+     "en": "He borrowed a lot of money and now he is deep in debt.",
+     "zh": "他借了很多钱，如今负债累累。"
+    },
+    {
+     "en": "She worked two jobs to pay off her credit card debt.",
+     "zh": "她打两份工来还清信用卡欠款。"
+    }
+   ],
+   "tags": [
+    "金钱银行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "存款",
+   "pair": "zh-en",
+   "slug": "cun-kuan",
+   "lang": "zh",
+   "translation": "savings",
+   "shortAnswer": "「存款」的英文是 savings，通常指个人或家庭在银行积累的储蓄。注意区分：deposit 多指存入银行的行为或一笔具体存款，而 savings 强调整体积蓄。",
+   "definition": "savings 常用复数，指储蓄总额或存款，如 put money into savings（存钱）、dip into savings（动用存款）。与 deposit 不同，deposit 可指押金或单次存入；说银行存款时，savings account 是储蓄账户。",
+   "examples": [
+    {
+     "en": "She deposits part of her salary into her savings account every month.",
+     "zh": "她每月把一部分工资存入储蓄账户。"
+    },
+    {
+     "en": "He withdrew all his savings to pay for the house.",
+     "zh": "他取出全部存款来买房。"
+    }
+   ],
+   "tags": [
+    "金钱银行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "savings",
+   "pair": "en-zh",
+   "slug": "savings",
+   "lang": "en",
+   "translation": "存款",
+   "shortAnswer": "savings 的中文意思是「存款」，指积蓄下来的钱，常存银行。注意与 deposit 区别：deposit 强调存入的动作或一笔押金，savings 强调积累的储蓄总额。",
+   "definition": "savings 常用复数，指储蓄、存款，搭配有 savings account（储蓄账户）、savings rate（储蓄率）。口语中可指全部积蓄，如 live on savings；正式场合说 personal savings。别与单个存款 deposit 混淆。",
+   "examples": [
+    {
+     "en": "She deposits part of her salary into her savings account every month.",
+     "zh": "她每月把一部分工资存入储蓄账户。"
+    },
+    {
+     "en": "He withdrew all his savings to pay for the house.",
+     "zh": "他取出全部存款来买房。"
+    }
+   ],
+   "tags": [
+    "金钱银行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "网银",
+   "pair": "zh-en",
+   "slug": "wang-yin",
+   "lang": "zh",
+   "translation": "online banking",
+   "shortAnswer": "「网银」的英文是 online banking，指通过银行网站或App在线办理转账、缴费等业务。",
+   "definition": "online banking 指银行提供的线上服务，可查余额、转账、缴费，注意手续费和汇率。",
+   "examples": [
+    {
+     "en": "I use online banking to transfer money to my savings account and check the exchange rate before traveling abroad.",
+     "zh": "我用网银转账到储蓄账户，并在出国前查看汇率。"
+    },
+    {
+     "en": "Online banking makes it easy to pay bills and remit money overseas, but you should compare the service fee and transaction fee first.",
+     "zh": "网银让支付账单和跨境汇款变得容易，但你应该先比较服务费和交易手续费。"
+    }
+   ],
+   "tags": [
+    "金钱银行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "online banking",
+   "pair": "en-zh",
+   "slug": "online-banking",
+   "lang": "en",
+   "translation": "网银",
+   "shortAnswer": "“网银”的英文是 online banking, meaning managing bank accounts over the internet.",
+   "definition": "online banking lets you check balances, transfer money and pay bills via a bank website or app, often with fees.",
+   "examples": [
+    {
+     "en": "I use online banking to transfer money to my savings account and check the exchange rate before traveling abroad.",
+     "zh": "我用网银转账到储蓄账户，并在出国前查看汇率。"
+    },
+    {
+     "en": "Online banking makes it easy to pay bills and remit money overseas, but you should compare the service fee and transaction fee first.",
+     "zh": "网银让支付账单和跨境汇款变得容易，但你应该先比较服务费和交易手续费。"
+    }
+   ],
+   "tags": [
+    "金钱银行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "取款机",
+   "pair": "zh-en",
+   "slug": "qu-kuan-ji",
+   "lang": "zh",
+   "translation": "ATM",
+   "shortAnswer": "「取款机」的英文是 ATM，也常说 cash machine，注意 bank 是银行，不是取款机。",
+   "definition": "ATM 指自动取款机，英美口语也常说 cash machine 或 cashpoint。常用搭配：use an ATM、at the ATM、withdraw money from an ATM。",
+   "examples": [
+    {
+     "en": "I need to find an ATM to withdraw some cash before dinner.",
+     "zh": "晚饭前我得找台取款机取点现金。"
+    },
+    {
+     "en": "The ATM charged me a service fee, so I withdrew money inside the bank instead.",
+     "zh": "这台取款机收了我手续费，所以我改去银行柜台取钱了。"
+    }
+   ],
+   "tags": [
+    "金钱银行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "ATM",
+   "pair": "en-zh",
+   "slug": "atm",
+   "lang": "en",
+   "translation": "取款机",
+   "shortAnswer": "ATM 的中文意思是「取款机」，即自动取款机，只办理取款、查询、转账等自助业务。",
+   "definition": "ATM 是 automated teller machine 的缩写，也常说 cash machine、cashpoint。常用搭配：use an ATM、at the ATM、withdraw money from an ATM。",
+   "examples": [
+    {
+     "en": "I need to find an ATM to withdraw some cash before dinner.",
+     "zh": "晚饭前我得找台取款机取点现金。"
+    },
+    {
+     "en": "The ATM charged me a service fee, so I withdrew money inside the bank instead.",
+     "zh": "这台取款机收了我手续费，所以我改去银行柜台取钱了。"
+    }
+   ],
+   "tags": [
+    "金钱银行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "还钱",
+   "pair": "zh-en",
+   "slug": "hai-qian",
+   "lang": "zh",
+   "translation": "pay back",
+   "shortAnswer": "「还钱」的英文是 pay back，指把借来的钱或欠款归还给对方，日常口语常用，正式场合则可用 repay。",
+   "definition": "pay back 后接人或机构作宾语，如 pay him back、pay the bank back，也可说 pay back the money。名词形式为 payback；正式场合可用 repay。",
+   "examples": [
+    {
+     "en": "I borrowed two hundred yuan from Tom last week, so I need to pay him back before Friday.",
+     "zh": "我上周向汤姆借了两百元，所以得在周五前把钱还给他。"
+    },
+    {
+     "en": "She finally paid back all the money she owed the bank after three years.",
+     "zh": "三年后，她终于还清了欠银行的所有钱。"
+    }
+   ],
+   "tags": [
+    "金钱银行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "pay back",
+   "pair": "en-zh",
+   "slug": "pay-back",
+   "lang": "en",
+   "translation": "还钱",
+   "shortAnswer": "pay back 的中文意思是「还钱」，即把借来的钱归还给某人，强调偿还欠款，口语中常用，也可说 repay。",
+   "definition": "pay back 意为归还借款，宾语可放 back 前或后：pay back the loan / pay the loan back。名词 payback 指回报或偿还；正式可用 repay。",
+   "examples": [
+    {
+     "en": "I borrowed two hundred yuan from Tom last week, so I need to pay him back before Friday.",
+     "zh": "我上周向汤姆借了两百元，所以得在周五前把钱还给他。"
+    },
+    {
+     "en": "She finally paid back all the money she owed the bank after three years.",
+     "zh": "三年后，她终于还清了欠银行的所有钱。"
+    }
+   ],
+   "tags": [
+    "金钱银行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "支付宝",
+   "pair": "zh-en",
+   "slug": "zhi-fu-bao",
+   "lang": "zh",
+   "translation": "Alipay",
+   "shortAnswer": "支付宝的英文是 Alipay，它是中国最常用的移动支付平台之一，日常扫码付款非常普遍。",
+   "definition": "Alipay 是蚂蚁集团旗下的支付品牌，音译自「支付宝」，和微信支付并列为中国两大移动支付方式。",
+   "examples": [
+    {
+     "en": "Street vendors in China often accept Alipay, so you can pay for a pancake with a quick scan.",
+     "zh": "中国的街边摊贩通常都接受支付宝，所以你可以快速扫码买一个煎饼。"
+    },
+    {
+     "en": "When I transfer money to my friend, I usually use Alipay because it's faster than a bank transfer.",
+     "zh": "我给朋友转账时通常用支付宝，因为比银行转账更快。"
+    }
+   ],
+   "tags": [
+    "金钱银行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "Alipay",
+   "pair": "en-zh",
+   "slug": "alipay",
+   "lang": "en",
+   "translation": "支付宝",
+   "shortAnswer": "Alipay means 支付宝, China's leading mobile payment app used for scanning, paying, and transferring.",
+   "definition": "Alipay is Ant Group's payment app. Common collocations: pay with Alipay, Alipay balance.",
+   "examples": [
+    {
+     "en": "Street vendors in China often accept Alipay, so you can pay for a pancake with a quick scan.",
+     "zh": "中国的街边摊贩通常都接受支付宝，所以你可以快速扫码买一个煎饼。"
+    },
+    {
+     "en": "When I transfer money to my friend, I usually use Alipay because it's faster than a bank transfer.",
+     "zh": "我给朋友转账时通常用支付宝，因为比银行转账更快。"
+    }
+   ],
+   "tags": [
+    "金钱银行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "移动支付",
+   "pair": "zh-en",
+   "slug": "yi-dong-zhi-fu",
+   "lang": "zh",
+   "translation": "mobile payment",
+   "shortAnswer": "「移动支付」的英文是 mobile payment，泛指用手机完成付款，涵盖扫码及 NFC 等方式。",
+   "definition": "mobile payment 指用手机完成的支付，如扫码或 Apple Pay 等。注意手续费与汇率。",
+   "examples": [
+    {
+     "en": "In China, mobile payment is so common that many people scan a QR code to pay even for a bottle of water.",
+     "zh": "在中国，移动支付非常普遍，很多人连买一瓶水都扫码付款。"
+    },
+    {
+     "en": "If you're traveling abroad, check whether your mobile payment app charges a transaction fee or uses a poor exchange rate.",
+     "zh": "如果你出国旅行，要查一下你的移动支付应用是否收取手续费，或者是否使用不划算的汇率。"
+    }
+   ],
+   "tags": [
+    "金钱银行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "mobile payment",
+   "pair": "en-zh",
+   "slug": "mobile-payment",
+   "lang": "en",
+   "translation": "移动支付",
+   "shortAnswer": "mobile payment 的中文是「移动支付」，指用手机完成付款，涵盖扫码和 NFC 等方式。",
+   "definition": "mobile payment means paying with a phone, including QR code and NFC. Watch fees and exchange rates.",
+   "examples": [
+    {
+     "en": "In China, mobile payment is so common that many people scan a QR code to pay even for a bottle of water.",
+     "zh": "在中国，移动支付非常普遍，很多人连买一瓶水都扫码付款。"
+    },
+    {
+     "en": "If you're traveling abroad, check whether your mobile payment app charges a transaction fee or uses a poor exchange rate.",
+     "zh": "如果你出国旅行，要查一下你的移动支付应用是否收取手续费，或者是否使用不划算的汇率。"
+    }
+   ],
+   "tags": [
+    "金钱银行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "左转",
+   "pair": "zh-en",
+   "slug": "zuo-zhuan",
+   "lang": "zh",
+   "translation": "turn left",
+   "shortAnswer": "「左转」的英文是 turn left，用于指路或描述向左转的动作。注意区分 turn left（动作）和 on the left（位置）。",
+   "definition": "turn left 是问路、指路时最常用的表达，意为向左转。常见搭配：在十字路口左转 turn left at the crossroads。注意区分 turn left（动作）和 on the left（位置）。",
+   "examples": [
+    {
+     "en": "Turn left at the crossroads, then go straight ahead for two blocks.",
+     "zh": "在十字路口左转，然后直走两个街区。"
+    },
+    {
+     "en": "If you get lost, just turn left at the roundabout and follow the signs.",
+     "zh": "如果你迷路了，就在环岛左转，然后跟着路标走。"
+    }
+   ],
+   "tags": [
+    "方位问路"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "turn left",
+   "pair": "en-zh",
+   "slug": "turn-left",
+   "lang": "en",
+   "translation": "左转",
+   "shortAnswer": "「turn left」的中文意思是「左转」，指向左方转。它强调转弯的动作，而 on the left 指在左侧的位置，不要混淆。",
+   "definition": "turn left 是动词短语，意为向左转，用于指路或描述方向。常用于祈使句：Turn left at the traffic lights. 注意区分 turn left（动作）和 on the left（位置）。",
+   "examples": [
+    {
+     "en": "Turn left at the crossroads, then go straight ahead for two blocks.",
+     "zh": "在十字路口左转，然后直走两个街区。"
+    },
+    {
+     "en": "If you get lost, just turn left at the roundabout and follow the signs.",
+     "zh": "如果你迷路了，就在环岛左转，然后跟着路标走。"
+    }
+   ],
+   "tags": [
+    "方位问路"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "直走",
+   "pair": "zh-en",
+   "slug": "zhi-zou",
+   "lang": "zh",
+   "translation": "go straight",
+   "shortAnswer": "「直走」用英语说通常是 go straight，常搭配 ahead，如 go straight ahead。",
+   "definition": "go straight 指沿当前方向继续前行，不转弯，问路时常用祈使句。注意它也可表示「改邪归正」。",
+   "examples": [
+    {
+     "en": "Go straight ahead for two blocks, then turn left at the traffic lights.",
+     "zh": "直走两个街区，然后在红绿灯处左转。"
+    },
+    {
+     "en": "After the roundabout, go straight on until you see the bank on your right.",
+     "zh": "过了环岛后一直直走，直到你看到右边的银行。"
+    }
+   ],
+   "tags": [
+    "方位问路"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "go straight",
+   "pair": "en-zh",
+   "slug": "go-straight",
+   "lang": "en",
+   "translation": "直走",
+   "shortAnswer": "Go straight means 直走 in Chinese, as in go straight ahead.",
+   "definition": "Go straight means 直走: to continue forward without turning left or right. Common in directions.",
+   "examples": [
+    {
+     "en": "Go straight ahead for two blocks, then turn left at the traffic lights.",
+     "zh": "直走两个街区，然后在红绿灯处左转。"
+    },
+    {
+     "en": "After the roundabout, go straight on until you see the bank on your right.",
+     "zh": "过了环岛后一直直走，直到你看到右边的银行。"
+    }
+   ],
+   "tags": [
+    "方位问路"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "右转",
+   "pair": "zh-en",
+   "slug": "you-zhuan",
+   "lang": "zh",
+   "translation": "turn right",
+   "shortAnswer": "「右转」用英语说就是 turn right，指向右侧改变行进方向；问路常用 Turn right at the corner，注意后面不接介词。",
+   "definition": "turn right 是动词短语，可单独作指令，也可说 turn right at the traffic lights，与 go straight ahead、turn left 对举；名词形式是 a right turn。",
+   "examples": [
+    {
+     "en": "When you reach the crossroads, turn right and go straight ahead for about two blocks.",
+     "zh": "到十字路口时右转，然后直走大约两个街区。"
+    },
+    {
+     "en": "If you turn right at the roundabout, you'll see the museum on your left.",
+     "zh": "如果在环岛右转，你会看到博物馆在你的左边。"
+    }
+   ],
+   "tags": [
+    "方位问路"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "turn right",
+   "pair": "en-zh",
+   "slug": "turn-right",
+   "lang": "en",
+   "translation": "右转",
+   "shortAnswer": "“turn right”的中文意思是「右转」，即行进时向右侧改变方向；它强调动作本身，与名词短语“a right turn”用法不同。",
+   "definition": "turn right 是常用指路祈使句，口语和书面都自然；常搭配 at the corner、at the traffic lights、into the street，后面不直接加宾语。",
+   "examples": [
+    {
+     "en": "When you reach the crossroads, turn right and go straight ahead for about two blocks.",
+     "zh": "到十字路口时右转，然后直走大约两个街区。"
+    },
+    {
+     "en": "If you turn right at the roundabout, you'll see the museum on your left.",
+     "zh": "如果在环岛右转，你会看到博物馆在你的左边。"
+    }
+   ],
+   "tags": [
+    "方位问路"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "问路",
+   "pair": "zh-en",
+   "slug": "wen-lu",
+   "lang": "zh",
+   "translation": "ask for directions",
+   "shortAnswer": "「问路」的英文是 ask for directions，指向人打听去某地怎么走；注意 direction 通常用复数 directions。",
+   "definition": "常用搭配：ask sb for directions、stop to ask for directions。问路时用 Excuse me, could you tell me how to get to...? 比直接问 Where is...? 更礼貌。",
+   "examples": [
+    {
+     "en": "We got lost on the way to the museum, so we stopped to ask a police officer for directions.",
+     "zh": "我们在去博物馆的路上迷路了，于是停下来向一位警察问路。"
+    },
+    {
+     "en": "If you don't have GPS, just ask for directions at the gas station.",
+     "zh": "如果你没有导航，就在加油站问路吧。"
+    }
+   ],
+   "tags": [
+    "方位问路"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "ask for directions",
+   "pair": "en-zh",
+   "slug": "ask-for-directions",
+   "lang": "en",
+   "translation": "问路",
+   "shortAnswer": "ask for directions 的中文是「问路」，即向别人打听去某地怎么走，比 ask the way 更常用、更标准。",
+   "definition": "ask for directions 指向他人询问路线，常见于出行场景，如 stop and ask for directions；directions 习惯用复数，回答时用 go straight、turn left 等。",
+   "examples": [
+    {
+     "en": "We got lost on the way to the museum, so we stopped to ask a police officer for directions.",
+     "zh": "我们在去博物馆的路上迷路了，于是停下来向一位警察问路。"
+    },
+    {
+     "en": "If you don't have GPS, just ask for directions at the gas station.",
+     "zh": "如果你没有导航，就在加油站问路吧。"
+    }
+   ],
+   "tags": [
+    "方位问路"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "掉头",
+   "pair": "zh-en",
+   "slug": "diao-tou",
+   "lang": "zh",
+   "translation": "make a U-turn",
+   "shortAnswer": "「掉头」用英语说是 make a U-turn，多用于开车时在马路或路口把车转向相反方向。注意它是动词短语，交通规则禁止掉头处常写 No U-turn。",
+   "definition": "指车辆转向 180 度往回开，常见搭配有 make a U-turn at the intersection、do a U-turn。注意 make 不能省，单独说 turn around 更多指人转身或泛泛地改变方向。",
+   "examples": [
+    {
+     "en": "Make a U-turn at the next intersection and the parking lot will be on your right.",
+     "zh": "在下一个十字路口掉头，停车场就在你右手边。"
+    },
+    {
+     "en": "The driver made a U-turn and headed back toward the roundabout.",
+     "zh": "司机掉了头，朝环岛方向开回去。"
+    }
+   ],
+   "tags": [
+    "方位问路"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "make a U-turn",
+   "pair": "en-zh",
+   "slug": "make-a-u-turn",
+   "lang": "en",
+   "translation": "掉头",
+   "shortAnswer": "“make a U-turn”的中文意思是「掉头」，指车辆转向 180 度往回开。它与 turn around 的关键区别是：U-turn 专指道路上的掉头动作。",
+   "definition": "动词短语，常用于驾驶与问路场景，如 make a U-turn at the next intersection、He made a U-turn。口语也可说 do a U-turn；路上标志 No U-turn 表示此处禁止掉头。",
+   "examples": [
+    {
+     "en": "Make a U-turn at the next intersection and the parking lot will be on your right.",
+     "zh": "在下一个十字路口掉头，停车场就在你右手边。"
+    },
+    {
+     "en": "The driver made a U-turn and headed back toward the roundabout.",
+     "zh": "司机掉了头，朝环岛方向开回去。"
+    }
+   ],
+   "tags": [
+    "方位问路"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "路口",
+   "pair": "zh-en",
+   "slug": "lu-kou",
+   "lang": "zh",
+   "translation": "intersection",
+   "shortAnswer": "「路口」的英文是 intersection。它多指十字路口或道路交汇处，问路时常用 at the intersection 表示「在路口」。",
+   "definition": "intersection 偏正式，常见搭配有 at the intersection、turn left at the next intersection、a busy intersection。口语中也可用 crossroads，但 intersection 更中性、通用。",
+   "examples": [
+    {
+     "en": "Go straight ahead and turn left at the next intersection.",
+     "zh": "一直往前走，在下一个路口左转。"
+    },
+    {
+     "en": "There was a traffic accident at the busy intersection this morning.",
+     "zh": "今天早上那个繁忙的路口发生了一起交通事故。"
+    }
+   ],
+   "tags": [
+    "方位问路"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "intersection",
+   "pair": "en-zh",
+   "slug": "intersection",
+   "lang": "en",
+   "translation": "路口",
+   "shortAnswer": "intersection 的中文意思是「路口」，通常指道路交汇处或十字路口。它比 crossroads 更正式，常出现在交通指示和问路场景中。",
+   "definition": "intersection 指两条或更多道路相交的地方，常见搭配有 at the intersection、a busy intersection、turn at the intersection。问路时用它很自然，口语中 crossroads 也可表示路口。",
+   "examples": [
+    {
+     "en": "Go straight ahead and turn left at the next intersection.",
+     "zh": "一直往前走，在下一个路口左转。"
+    },
+    {
+     "en": "There was a traffic accident at the busy intersection this morning.",
+     "zh": "今天早上那个繁忙的路口发生了一起交通事故。"
+    }
+   ],
+   "tags": [
+    "方位问路"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "十字路口",
+   "pair": "zh-en",
+   "slug": "shi-zi-lu-kou",
+   "lang": "zh",
+   "translation": "crossroads",
+   "shortAnswer": "「十字路口」的英文是 crossroads，英式常用复数形式，美式口语也常说 intersection。问路时直接说 at the crossroads 即可，注意它永远带 s。",
+   "definition": "crossroads 指两条道路交叉的路口，英式英语几乎只用复数形式，前面常搭配 at 或 reach。美式日常更爱用 intersection，正式交通标识上 crossroads 仍常见。不要写成单数 crossroad，那多指抽象的人生抉择点。",
+   "examples": [
+    {
+     "en": "Turn left at the crossroads and you will see the bank on your right.",
+     "zh": "在十字路口左转，你就会看到银行在你右边。"
+    },
+    {
+     "en": "We stood at the crossroads, unsure which road led to the station.",
+     "zh": "我们站在十字路口，不确定哪条路通往车站。"
+    }
+   ],
+   "tags": [
+    "方位问路"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "crossroads",
+   "pair": "en-zh",
+   "slug": "crossroads",
+   "lang": "en",
+   "translation": "十字路口",
+   "shortAnswer": "Crossroads 的中文意思是「十字路口」，即两条道路相交的地方。它与 intersection 意思接近，但 crossroads 更偏英式，且通常只用复数形式。",
+   "definition": "crossroads 指道路交叉口，常见搭配 at the crossroads、reach a crossroads。英式英语日常多用它，美式口语更常说 intersection；抽象义指人生或事业的抉择关头，此时也用复数。",
+   "examples": [
+    {
+     "en": "Turn left at the crossroads and you will see the bank on your right.",
+     "zh": "在十字路口左转，你就会看到银行在你右边。"
+    },
+    {
+     "en": "We stood at the crossroads, unsure which road led to the station.",
+     "zh": "我们站在十字路口，不确定哪条路通往车站。"
+    }
+   ],
+   "tags": [
+    "方位问路"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "胡同",
+   "pair": "zh-en",
+   "slug": "hu-tong",
+   "lang": "zh",
+   "translation": "hutong",
+   "shortAnswer": "「胡同」的英文是 hutong，直接借用汉语拼音，指北京老城窄巷。不要译成 small alley，胡同承载四合院与市井文化，是专有文化词。",
+   "definition": "hutong 是进入英文的汉语借词，常与北京连用，如 Beijing hutong、walk through the hutongs。问路时胡同可指死胡同或窄巷，但文化上特指老北京街区。",
+   "examples": [
+    {
+     "en": "Turn left at the crossroads, go straight ahead, and you'll find a narrow hutong on your right.",
+     "zh": "在十字路口左转，一直往前走，你会在右边看到一条窄胡同。"
+    },
+    {
+     "en": "We got lost in the hutongs behind the drum tower, but a local showed us the way to the main street.",
+     "zh": "我们在鼓楼后面的胡同里迷路了，但一位当地人给我们指了去主街的路。"
+    }
+   ],
+   "tags": [
+    "方位问路"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "hutong",
+   "pair": "en-zh",
+   "slug": "hutong",
+   "lang": "en",
+   "translation": "胡同",
+   "shortAnswer": "hutong 的中文意思是「胡同」，特指北京老城的传统窄巷。它不同于普通 alley，常与四合院和市井生活文化相连。",
+   "definition": "hutong 是源自汉语的借词，英文中直接使用，常见搭配有 explore the hutongs、a hutong tour。问路时若指死胡同，英文更常用 dead end，而非 hutong。",
+   "examples": [
+    {
+     "en": "Turn left at the crossroads, go straight ahead, and you'll find a narrow hutong on your right.",
+     "zh": "在十字路口左转，一直往前走，你会在右边看到一条窄胡同。"
+    },
+    {
+     "en": "We got lost in the hutongs behind the drum tower, but a local showed us the way to the main street.",
+     "zh": "我们在鼓楼后面的胡同里迷路了，但一位当地人给我们指了去主街的路。"
+    }
+   ],
+   "tags": [
+    "方位问路"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "单行道",
+   "pair": "zh-en",
+   "slug": "dan-hang-dao",
+   "lang": "zh",
+   "translation": "one-way street",
+   "shortAnswer": "「单行道」的英文是 one-way street，指车辆只能朝一个方向行驶的道路。",
+   "definition": "one-way street 作名词，指只准单向通行的街道，常与 go down、turn onto、be on 搭配。",
+   "examples": [
+    {
+     "en": "Turn left at the crossroads, then go down the one-way street until you reach the roundabout.",
+     "zh": "在十字路口左转，然后沿着这条单行道直走，一直走到环岛。"
+    },
+    {
+     "en": "He didn't realize it was a one-way street and almost drove straight into oncoming traffic.",
+     "zh": "他没意识到那是条单行道，差点迎面撞上对向来车。"
+    }
+   ],
+   "tags": [
+    "方位问路"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "one-way street",
+   "pair": "en-zh",
+   "slug": "one-way-street",
+   "lang": "en",
+   "translation": "单行道",
+   "shortAnswer": "One-way street means 单行道 in Chinese, a road where traffic moves in only one direction.",
+   "definition": "A one-way street is a road carrying traffic in a single direction, often paired with go down, turn onto, or be on.",
+   "examples": [
+    {
+     "en": "Turn left at the crossroads, then go down the one-way street until you reach the roundabout.",
+     "zh": "在十字路口左转，然后沿着这条单行道直走，一直走到环岛。"
+    },
+    {
+     "en": "He didn't realize it was a one-way street and almost drove straight into oncoming traffic.",
+     "zh": "他没意识到那是条单行道，差点迎面撞上对向来车。"
+    }
+   ],
+   "tags": [
+    "方位问路"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "斜对面",
+   "pair": "zh-en",
+   "slug": "xie-dui-mian",
+   "lang": "zh",
+   "translation": "diagonally across",
+   "shortAnswer": "「斜对面」英文是 diagonally across，常与 from 连用，如 diagonally across from the bank；不是正对面 opposite。",
+   "definition": "「斜对面」译作 diagonally across，常接 from，指隔着街道或路口斜对着，不同于正对面 opposite。",
+   "examples": [
+    {
+     "en": "The cafe is diagonally across from the subway entrance, so you can see it as soon as you come out.",
+     "zh": "那家咖啡馆在地铁入口的斜对面，你一出来就能看到。"
+    },
+    {
+     "en": "Go straight to the crossroads, turn left, and the post office is diagonally across the street.",
+     "zh": "一直走到十字路口，左转，邮局就在街的斜对面。"
+    }
+   ],
+   "tags": [
+    "方位问路"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "diagonally across",
+   "pair": "en-zh",
+   "slug": "diagonally-across",
+   "lang": "en",
+   "translation": "斜对面",
+   "shortAnswer": "Diagonally across means 「斜对面」in Chinese: on the other side but at an angle, not directly facing.",
+   "definition": "Diagonally across means 「斜对面」: on the other side of a street or crossroads but offset at an angle, usually with from.",
+   "examples": [
+    {
+     "en": "The cafe is diagonally across from the subway entrance, so you can see it as soon as you come out.",
+     "zh": "那家咖啡馆在地铁入口的斜对面，你一出来就能看到。"
+    },
+    {
+     "en": "Go straight to the crossroads, turn left, and the post office is diagonally across the street.",
+     "zh": "一直走到十字路口，左转，邮局就在街的斜对面。"
+    }
+   ],
+   "tags": [
+    "方位问路"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "过马路",
+   "pair": "zh-en",
+   "slug": "guo-ma-lu",
+   "lang": "zh",
+   "translation": "cross the street",
+   "shortAnswer": "“过马路”的英文是 cross the street，指从街道一边走到另一边，也可说 cross the road。",
+   "definition": "cross 表示“横穿”，street 指城镇街道；cross the street 即“过马路”，如 Cross the street at the crosswalk。",
+   "examples": [
+    {
+     "en": "Look both ways before you cross the street.",
+     "zh": "过马路前要左右看。"
+    },
+    {
+     "en": "To get to the bank, cross the street at the crosswalk and go straight ahead.",
+     "zh": "要去银行，走人行横道过马路，然后一直往前走。"
+    }
+   ],
+   "tags": [
+    "方位问路"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "cross the street",
+   "pair": "en-zh",
+   "slug": "cross-the-street",
+   "lang": "en",
+   "translation": "过马路",
+   "shortAnswer": "“cross the street”的中文意思是“过马路”，指从街道一边走到另一边，也可说 cross the road。",
+   "definition": "cross the street 意为“过马路、横穿街道”，cross 是及物动词，后直接跟 the street，如 Cross the street at the lights。",
+   "examples": [
+    {
+     "en": "Look both ways before you cross the street.",
+     "zh": "过马路前要左右看。"
+    },
+    {
+     "en": "To get to the bank, cross the street at the crosswalk and go straight ahead.",
+     "zh": "要去银行，走人行横道过马路，然后一直往前走。"
+    }
+   ],
+   "tags": [
+    "方位问路"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "公交站",
+   "pair": "zh-en",
+   "slug": "gong-jiao-zhan",
+   "lang": "zh",
+   "translation": "bus stop",
+   "shortAnswer": "「公交站」的英文是 bus stop，指公交车按固定路线停靠、供乘客上下车的路边站点；bus station 则是大型公交总站。",
+   "definition": "bus stop 指马路边供公交车停靠的站点，通常有站牌，可能带候车亭和时刻表。常见搭配：at the bus stop、wait at a bus stop、the next bus stop。",
+   "examples": [
+    {
+     "en": "Go straight ahead and turn left at the crossroads; the bus stop is right in front of the bank.",
+     "zh": "一直往前走，在十字路口左转，公交站就在银行正前方。"
+    },
+    {
+     "en": "I got lost on my way here, so I asked a stranger where the nearest bus stop was.",
+     "zh": "我来的时候迷路了，只好问一个路人最近的公交站在哪里。"
+    }
+   ],
+   "tags": [
+    "方位问路"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "bus stop",
+   "pair": "en-zh",
+   "slug": "bus-stop",
+   "lang": "en",
+   "translation": "公交站",
+   "shortAnswer": "“bus stop”的意思是「公交站」，即公交车沿线停靠、让乘客上下车的路边站点；与 bus station 不同。",
+   "definition": "bus stop 指路边的单个公交站点，一般只有站牌，有时带候车亭；bus station 则是成规模的公交总站。常见搭配：wait at the bus stop、get off at the next bus stop。",
+   "examples": [
+    {
+     "en": "Go straight ahead and turn left at the crossroads; the bus stop is right in front of the bank.",
+     "zh": "一直往前走，在十字路口左转，公交站就在银行正前方。"
+    },
+    {
+     "en": "I got lost on my way here, so I asked a stranger where the nearest bus stop was.",
+     "zh": "我来的时候迷路了，只好问一个路人最近的公交站在哪里。"
+    }
+   ],
+   "tags": [
+    "方位问路"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "郊区",
+   "pair": "zh-en",
+   "slug": "jiao-qu",
+   "lang": "zh",
+   "translation": "suburbs",
+   "shortAnswer": "「郊区」的英文是 suburbs，通常指城市外围的住宅区。注意 suburb 是可数名词，指整个郊区地带时常用复数 suburbs，如 in the suburbs。",
+   "definition": "suburbs 常用复数，指城市边缘的住宅区域，常与 live in、move to、the outer 等搭配。单数 suburb 指一个具体郊区，如 a suburb of Beijing。",
+   "examples": [
+    {
+     "en": "They moved to the suburbs to have a bigger house and a quieter life.",
+     "zh": "他们搬到了郊区，为了住更大的房子，过更安静的生活。"
+    },
+    {
+     "en": "The new subway line makes it easier for people in the suburbs to get to the city center.",
+     "zh": "新开通的地铁线路让郊区居民去市中心更方便了。"
+    }
+   ],
+   "tags": [
+    "方位问路"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "suburbs",
+   "pair": "en-zh",
+   "slug": "suburbs",
+   "lang": "en",
+   "translation": "郊区",
+   "shortAnswer": "Suburbs 的中文意思是「郊区」，指城市外围的居住区。它和 outskirt 不同，suburbs 强调住宅区，且常用复数形式。",
+   "definition": "suburbs 是名词复数，指城市边缘的住宅区，常搭配 live in、the outer suburbs。口语中 the burbs 也可指郊区，但 suburbs 更正式通用。",
+   "examples": [
+    {
+     "en": "They moved to the suburbs to have a bigger house and a quieter life.",
+     "zh": "他们搬到了郊区，为了住更大的房子，过更安静的生活。"
+    },
+    {
+     "en": "The new subway line makes it easier for people in the suburbs to get to the city center.",
+     "zh": "新开通的地铁线路让郊区居民去市中心更方便了。"
+    }
+   ],
+   "tags": [
+    "方位问路"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "市中心",
+   "pair": "zh-en",
+   "slug": "shi-zhong-xin",
+   "lang": "zh",
+   "translation": "city center",
+   "shortAnswer": "「市中心」的英文是 city center，问路或描述位置时常用。注意美式英语更常说 downtown。",
+   "definition": "「市中心」译为 city center，指城市商业购物核心区；常见 in the city center。美式英语多称 downtown。",
+   "examples": [
+    {
+     "en": "Go straight for two blocks, then turn left, and you'll be in the city center.",
+     "zh": "直走两个街区，然后左转，你就到市中心了。"
+    },
+    {
+     "en": "We got lost, but a kind local showed us the way to the city center.",
+     "zh": "我们迷路了，但一位好心的当地人给我们指了去市中心的路。"
+    }
+   ],
+   "tags": [
+    "方位问路"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "city center",
+   "pair": "en-zh",
+   "slug": "city-center",
+   "lang": "en",
+   "translation": "市中心",
+   "shortAnswer": "「city center」的中文意思是「市中心」，指城市商业与文化核心区，英式英语常用。",
+   "definition": "city center 指城市商业购物核心区，英式拼写 city centre，常用 in the city center；美式多说 downtown。",
+   "examples": [
+    {
+     "en": "Go straight for two blocks, then turn left, and you'll be in the city center.",
+     "zh": "直走两个街区，然后左转，你就到市中心了。"
+    },
+    {
+     "en": "We got lost, but a kind local showed us the way to the city center.",
+     "zh": "我们迷路了，但一位好心的当地人给我们指了去市中心的路。"
+    }
+   ],
+   "tags": [
+    "方位问路"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "出口",
+   "pair": "zh-en",
+   "slug": "chu-kou",
+   "lang": "zh",
+   "translation": "exit",
+   "shortAnswer": "「出口」的英文是 exit。在公共场所找出口时，直接看标有 EXIT 的绿色指示牌即可；注意 exit 也常指「退场」，与「入口」entrance 相对。",
+   "definition": "exit 作名词指建筑物的出口、通道或高速公路的出口匝道；作动词指离开、退出（如退出程序）。问路时常用 Where is the exit? 或 How do I get to the exit? 注意不要与 entrance（入口）混淆。",
+   "examples": [
+    {
+     "en": "Excuse me, where is the nearest exit?",
+     "zh": "打扰一下，最近的出口在哪里？"
+    },
+    {
+     "en": "Please exit through the rear door after the show.",
+     "zh": "演出结束后请从后门退场。"
+    }
+   ],
+   "tags": [
+    "方位问路"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "exit",
+   "pair": "en-zh",
+   "slug": "exit",
+   "lang": "en",
+   "translation": "出口",
+   "shortAnswer": "Exit 的中文意思是「出口」，指离开建筑物或场所的通道。它常与 entrance（入口）相对，也可作动词表示「退出、离开」，如退出应用程序。",
+   "definition": "exit 作名词指出口、安全门或公路出口，常见搭配有 emergency exit（紧急出口）、exit sign（出口标志）；作动词指退出、离场，较正式。问路时可用 Where is the nearest exit?",
+   "examples": [
+    {
+     "en": "Excuse me, where is the nearest exit?",
+     "zh": "打扰一下，最近的出口在哪里？"
+    },
+    {
+     "en": "Please exit through the rear door after the show.",
+     "zh": "演出结束后请从后门退场。"
+    }
+   ],
+   "tags": [
+    "方位问路"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "楼上",
+   "pair": "zh-en",
+   "slug": "lou-shang",
+   "lang": "zh",
+   "translation": "upstairs",
+   "shortAnswer": "“楼上”的英文是 upstairs，表示在楼上或往楼上走。注意英式英语“二楼”是 first floor，而“楼上”泛指更高楼层。",
+   "definition": "upstairs 作副词表示“在楼上”或“往楼上”，如 go upstairs；作形容词表示“楼上的”，如 an upstairs room。与 downstairs 相对。",
+   "examples": [
+    {
+     "en": "Go straight ahead, turn left at the crossroads, and you'll find the bathroom upstairs.",
+     "zh": "一直往前走，在十字路口左转，你就会在楼上找到洗手间。"
+    },
+    {
+     "en": "We got lost in the roundabout, but a kind local told us the café is upstairs on the second floor.",
+     "zh": "我们在环岛迷路了，但一位好心的当地人告诉我们咖啡馆在楼上二楼。"
+    }
+   ],
+   "tags": [
+    "方位问路"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "upstairs",
+   "pair": "en-zh",
+   "slug": "upstairs",
+   "lang": "en",
+   "translation": "楼上",
+   "shortAnswer": "“upstairs”的中文意思是“楼上”，指在楼上或往楼上走。与 downstairs 相对，可作副词或形容词。",
+   "definition": "upstairs 作副词表示“在楼上”或“往楼上”，如 go upstairs；作形容词表示“楼上的”，如 an upstairs room。中文常译为“楼上”。",
+   "examples": [
+    {
+     "en": "Go straight ahead, turn left at the crossroads, and you'll find the bathroom upstairs.",
+     "zh": "一直往前走，在十字路口左转，你就会在楼上找到洗手间。"
+    },
+    {
+     "en": "We got lost in the roundabout, but a kind local told us the café is upstairs on the second floor.",
+     "zh": "我们在环岛迷路了，但一位好心的当地人告诉我们咖啡馆在楼上二楼。"
+    }
+   ],
+   "tags": [
+    "方位问路"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "入口",
+   "pair": "zh-en",
+   "slug": "ru-kou",
+   "lang": "zh",
+   "translation": "entrance",
+   "shortAnswer": "「入口」的英文是 entrance，指建筑物或场地可供进出的门或通道；问路时也可说 the way in。注意 entrance 强调进入处，与出口 exit 相对。",
+   "definition": "entrance 多指大楼、场馆、公园的正式入口，常搭配 the main entrance（正门）、at the entrance（在入口处）。口语问路也可说 Where's the entrance?；不要与 enter（动词，进入）混用。",
+   "examples": [
+    {
+     "en": "Go straight ahead and you'll see the main entrance on your left.",
+     "zh": "一直往前走，你就会看到左手边的主入口。"
+    },
+    {
+     "en": "We waited for her at the entrance to the museum.",
+     "zh": "我们在博物馆入口处等她。"
+    }
+   ],
+   "tags": [
+    "方位问路"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "entrance",
+   "pair": "en-zh",
+   "slug": "entrance",
+   "lang": "en",
+   "translation": "入口",
+   "shortAnswer": "Entrance 的中文意思是「入口」，指进入某个地方的门或通道；它强调「进」的方向，与表示「出」的 exit 相对。",
+   "definition": "entrance 作名词指入口、大门，常见搭配 the main entrance、at the entrance to sth。也可引申为「进入、登场」。注意与 enter（动词）区分，不要写成 enterance。",
+   "examples": [
+    {
+     "en": "Go straight ahead and you'll see the main entrance on your left.",
+     "zh": "一直往前走，你就会看到左手边的主入口。"
+    },
+    {
+     "en": "We waited for her at the entrance to the museum.",
+     "zh": "我们在博物馆入口处等她。"
+    }
+   ],
+   "tags": [
+    "方位问路"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "迷路",
+   "pair": "zh-en",
+   "slug": "mi-lu",
+   "lang": "zh",
+   "translation": "get lost",
+   "shortAnswer": "「迷路」的英文是 get lost，也可说 be lost。注意 get lost 在口语中还有「滚开」的意思，需根据语境判断。",
+   "definition": "get lost 强调迷路的过程或结果，be lost 强调迷路的状态。问路时常用：I think I got lost. 或 I'm lost. 注意 get lost 单独成句时可能表示「走开」，语气粗鲁。",
+   "examples": [
+    {
+     "en": "We got lost in the old town and had to ask a local for directions.",
+     "zh": "我们在老城区迷路了，只好向当地人问路。"
+    },
+    {
+     "en": "If you don't pay attention to the road signs, you'll easily get lost.",
+     "zh": "如果你不注意路标，很容易迷路。"
+    }
+   ],
+   "tags": [
+    "方位问路"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "get lost",
+   "pair": "en-zh",
+   "slug": "get-lost",
+   "lang": "en",
+   "translation": "迷路",
+   "shortAnswer": "get lost 的中文意思是「迷路」，强调迷路的结果或动作。与 be lost 不同，get lost 更侧重从没迷路到迷路的变化。",
+   "definition": "get lost 是口语常用短语，表示迷路。常见搭配：get lost in a city, get lost on the way。注意单独说 Get lost! 是粗鲁地叫人走开，不是迷路。",
+   "examples": [
+    {
+     "en": "We got lost in the old town and had to ask a local for directions.",
+     "zh": "我们在老城区迷路了，只好向当地人问路。"
+    },
+    {
+     "en": "If you don't pay attention to the road signs, you'll easily get lost.",
+     "zh": "如果你不注意路标，很容易迷路。"
+    }
+   ],
+   "tags": [
+    "方位问路"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "地下室",
+   "pair": "zh-en",
+   "slug": "di-xia-shi",
+   "lang": "zh",
+   "translation": "basement",
+   "shortAnswer": "地下室的英文是 basement，指建筑物地面以下的房间或楼层。问路时如果说 the basement，通常指商场或大楼的地下层，不是地窖。",
+   "definition": "basement 是可数名词，常见搭配有 in the basement（在地下室）、basement floor（地下层）。英式英语中地下层常标为 lower ground floor，美式则直接用 basement。",
+   "examples": [
+    {
+     "en": "The laundry room is in the basement, so go down the stairs and turn left.",
+     "zh": "洗衣间在地下室，所以下楼梯后左转。"
+    },
+    {
+     "en": "We got lost looking for the parking garage and ended up in the basement of the wrong building.",
+     "zh": "我们找停车场时迷了路，结果跑错了大楼的地下室。"
+    }
+   ],
+   "tags": [
+    "方位问路"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "basement",
+   "pair": "en-zh",
+   "slug": "basement",
+   "lang": "en",
+   "translation": "地下室",
+   "shortAnswer": "Basement 的中文意思是地下室，指建筑物地面以下的楼层或房间。它和 cellar 不同：basement 通常可住人或营业，cellar 多用于储酒或储物。",
+   "definition": "Basement 是名词，指建筑中地面以下的楼层，常与 in、the 连用，如 in the basement、basement apartment。口语中可指商场地下层；cellar 更偏储藏用途，不能随意互换。",
+   "examples": [
+    {
+     "en": "The laundry room is in the basement, so go down the stairs and turn left.",
+     "zh": "洗衣间在地下室，所以下楼梯后左转。"
+    },
+    {
+     "en": "We got lost looking for the parking garage and ended up in the basement of the wrong building.",
+     "zh": "我们找停车场时迷了路，结果跑错了大楼的地下室。"
+    }
+   ],
+   "tags": [
+    "方位问路"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "死胡同",
+   "pair": "zh-en",
+   "slug": "si-hu-tong",
+   "lang": "zh",
+   "translation": "dead end",
+   "shortAnswer": "「死胡同」的英文是 dead end，指走不通的封闭路段。问路时说 at a dead end。",
+   "definition": "dead end 是名词，指道路尽头无法通行。常用搭配 at a dead end，比喻义表示陷入僵局。",
+   "examples": [
+    {
+     "en": "Go straight and turn left at the crossroads; the post office is at a dead end.",
+     "zh": "一直往前走，在十字路口左转；邮局就在死胡同尽头。"
+    },
+    {
+     "en": "After asking for directions, we realized we were in a dead end and had to turn around.",
+     "zh": "问路之后，我们才发现自己走进了一条死胡同，只好掉头。"
+    }
+   ],
+   "tags": [
+    "方位问路"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "dead end",
+   "pair": "en-zh",
+   "slug": "dead-end",
+   "lang": "en",
+   "translation": "死胡同",
+   "shortAnswer": "Dead end means 死胡同 in Chinese, a road with no way out. Say at a dead end when asking directions.",
+   "definition": "A dead end is a street with no way out, matching 死胡同. It also means a hopeless situation or standstill.",
+   "examples": [
+    {
+     "en": "Go straight and turn left at the crossroads; the post office is at a dead end.",
+     "zh": "一直往前走，在十字路口左转；邮局就在死胡同尽头。"
+    },
+    {
+     "en": "After asking for directions, we realized we were in a dead end and had to turn around.",
+     "zh": "问路之后，我们才发现自己走进了一条死胡同，只好掉头。"
+    }
+   ],
+   "tags": [
+    "方位问路"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "楼下",
+   "pair": "zh-en",
+   "slug": "lou-xia",
+   "lang": "zh",
+   "translation": "downstairs",
+   "shortAnswer": "「楼下」的英文是 downstairs，指同一建筑中较低的那一层，也可表示朝下的方向。",
+   "definition": "downstairs 作副词时表示「在楼下」或「往楼下」，常与 go、come、be 等动词连用，如 go downstairs、be downstairs；也可作形容词或名词使用。",
+   "examples": [
+    {
+     "en": "She went downstairs to answer the door.",
+     "zh": "她下楼去开门。"
+    },
+    {
+     "en": "The kitchen is downstairs, next to the living room.",
+     "zh": "厨房在楼下，紧挨着客厅。"
+    }
+   ],
+   "tags": [
+    "方位问路"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "downstairs",
+   "pair": "en-zh",
+   "slug": "downstairs",
+   "lang": "en",
+   "translation": "楼下",
+   "shortAnswer": "Downstairs 的中文意思是「楼下」，指建筑中较低的一层，也可表示朝下的方向。",
+   "definition": "downstairs 表示「在楼下」或「往楼下」，常见搭配有 go downstairs、come downstairs、be downstairs，也可作形容词或名词使用。",
+   "examples": [
+    {
+     "en": "She went downstairs to answer the door.",
+     "zh": "她下楼去开门。"
+    },
+    {
+     "en": "The kitchen is downstairs, next to the living room.",
+     "zh": "厨房在楼下，紧挨着客厅。"
+    }
+   ],
+   "tags": [
+    "方位问路"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "二楼",
+   "pair": "zh-en",
+   "slug": "er-lou",
+   "lang": "zh",
+   "translation": "second floor",
+   "shortAnswer": "「二楼」的英文是 second floor；注意英式英语中该层叫 first floor。",
+   "definition": "美式英语里 second floor 指底楼之上的楼层，即中文的「二楼」；英式英语中同一层叫 first floor。",
+   "examples": [
+    {
+     "en": "The restroom is on the second floor, right next to the elevator.",
+     "zh": "洗手间在二楼，就在电梯旁边。"
+    },
+    {
+     "en": "Go straight ahead to the crossroads, then turn left and you'll see the stairs to the second floor.",
+     "zh": "一直往前走，到十字路口后左转，就能看到上二楼的楼梯。"
+    }
+   ],
+   "tags": [
+    "方位问路"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "second floor",
+   "pair": "en-zh",
+   "slug": "second-floor",
+   "lang": "en",
+   "translation": "二楼",
+   "shortAnswer": "The English for 「二楼」 is second floor, though British English calls it first floor.",
+   "definition": "In American English second floor is the level above the ground floor, equivalent to Chinese 二楼; in British English it is first floor.",
+   "examples": [
+    {
+     "en": "The restroom is on the second floor, right next to the elevator.",
+     "zh": "洗手间在二楼，就在电梯旁边。"
+    },
+    {
+     "en": "Go straight ahead to the crossroads, then turn left and you'll see the stairs to the second floor.",
+     "zh": "一直往前走，到十字路口后左转，就能看到上二楼的楼梯。"
+    }
+   ],
+   "tags": [
+    "方位问路"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "地标",
+   "pair": "zh-en",
+   "slug": "di-biao",
+   "lang": "zh",
+   "translation": "landmark",
+   "shortAnswer": "「地标」的英文是 landmark，指城市中显眼、好辨认、可用来定位的建筑或地点，是问路时的常用参照词。",
+   "definition": "landmark 指城市中显眼易认的建筑或地点，也可引申为里程碑事件；问路常说 use sth as a landmark。注意它不是交通指示牌 sign。",
+   "examples": [
+    {
+     "en": "Walk two blocks, then use the clock tower as a landmark to find the museum.",
+     "zh": "走两个街区，然后以那座钟楼为地标来找博物馆。"
+    },
+    {
+     "en": "If you get lost, look for the old bridge, a famous local landmark.",
+     "zh": "如果你迷路了，就找那座老桥，它是当地有名的地标。"
+    }
+   ],
+   "tags": [
+    "方位问路"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "landmark",
+   "pair": "en-zh",
+   "slug": "landmark",
+   "lang": "en",
+   "translation": "地标",
+   "shortAnswer": "landmark 的中文意思是「地标」，指城市里显眼、易辨认、可用来认路定位的建筑或地点，问路时常用作参照。",
+   "definition": "landmark 指显眼、易辨认、可作参照的标志性建筑或地点，也可指里程碑事件；问路常说 use sth as a landmark，它不同于指示牌 sign。",
+   "examples": [
+    {
+     "en": "Walk two blocks, then use the clock tower as a landmark to find the museum.",
+     "zh": "走两个街区，然后以那座钟楼为地标来找博物馆。"
+    },
+    {
+     "en": "If you get lost, look for the old bridge, a famous local landmark.",
+     "zh": "如果你迷路了，就找那座老桥，它是当地有名的地标。"
+    }
+   ],
+   "tags": [
+    "方位问路"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "环岛",
+   "pair": "zh-en",
+   "slug": "huan-dao",
+   "lang": "zh",
+   "translation": "roundabout",
+   "shortAnswer": "「环岛」的英文是 roundabout，指多条道路交汇处的环形交叉路口，美式英语中也常叫 traffic circle。",
+   "definition": "roundabout 是英式英语常用说法，美式英语更常说 traffic circle。常见搭配：at the roundabout、take the second exit at the roundabout，问路时很实用。",
+   "examples": [
+    {
+     "en": "Go straight for about two hundred meters, then turn left at the roundabout.",
+     "zh": "直走大约两百米，然后在环岛处左转。"
+    },
+    {
+     "en": "Take the second exit at the roundabout and the museum is on your right.",
+     "zh": "在环岛走第二个出口，博物馆就在你右手边。"
+    }
+   ],
+   "tags": [
+    "方位问路"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "roundabout",
+   "pair": "en-zh",
+   "slug": "roundabout",
+   "lang": "en",
+   "translation": "环岛",
+   "shortAnswer": "roundabout 的中文意思是「环岛」，指车辆绕中心岛单向行驶的环形交叉路口，美式英语常用 traffic circle。",
+   "definition": "roundabout 在英式英语里指道路交汇处的环岛，美式英语常用 traffic circle；常见搭配有 at the roundabout、go around the roundabout、take the first exit。",
+   "examples": [
+    {
+     "en": "Go straight for about two hundred meters, then turn left at the roundabout.",
+     "zh": "直走大约两百米，然后在环岛处左转。"
+    },
+    {
+     "en": "Take the second exit at the roundabout and the museum is on your right.",
+     "zh": "在环岛走第二个出口，博物馆就在你右手边。"
+    }
+   ],
+   "tags": [
+    "方位问路"
+   ],
+   "searchIntentType": "meaning"
+  }
+ ]
+}

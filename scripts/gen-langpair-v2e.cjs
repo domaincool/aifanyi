@@ -7,9 +7,9 @@ const path = require('path');
 
 const WS = 'C:/Users/Administrator/.openclaw-autoclaw/agents/agent-nc6bvi/workspace';
 const TMP = path.join(WS, '.openclaw/tmp');
-const SRC = 'C:/Users/Administrator/.openclaw-autoclaw/agents/agent-p6qd/workspace/projects/aifanyi/research/langpair-v2-batchD-20260917.json';
-const OUT = path.join(TMP, 'langpair-v2D-full.json');
-const PROG = path.join(TMP, 'langpair-v2D-progress.json');
+const SRC = 'C:/Users/Administrator/.openclaw-autoclaw/agents/agent-p6qd/workspace/projects/aifanyi/research/langpair-v2-batchE-20260919.json';
+const OUT = path.join(TMP, 'langpair-v2E-full.json');
+const PROG = path.join(TMP, 'langpair-v2E-progress.json');
 const REPAIR_KEYS = new Set((process.env.REPAIR_KEYS || '').split(';').filter(Boolean));
 
 const envText = fs.readFileSync('G:/autoclaw/aifanyi/.env', 'utf8');
@@ -33,7 +33,7 @@ const slugZh = (zh) => toSlug(zh) || zh.toLowerCase().replace(/[^a-z0-9]+/g, '-'
 const slugEn = (en) => en.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
 
 // ---- ops-flagged cultural words: grounded analysis required, no lazy literal translation ----
-const CFG = JSON.parse(fs.readFileSync(path.join(TMP, 'v2d-config.json'), 'utf8'));
+const CFG = JSON.parse(fs.readFileSync(path.join(TMP, 'v2e-config.json'), 'utf8'));
 const SPECIAL = CFG.SPECIAL;
 const CAT_HINT = CFG.CAT_HINT;
 
@@ -97,6 +97,12 @@ function hasTerm(text, term) {
   if (core && new RegExp('(^|[^a-z])' + esc(core) + '([^a-z]|$)').test(t)) return true;
   const head = core.split(' ')[0].replace(/[^a-z]/g, '');
   const stem = head.replace(/(ing|ed|s)$/, '');
+  // phrase-level match: tokens in order, up to 2 inserted words between, regular suffixes allowed
+  const words = core.split(' ').filter(Boolean);
+  if (words.length >= 2) {
+    const pattern = words.map((w, i) => (i ? '(?: [a-z]+){0,2} ' : '') + w.replace(/[.*+?^${}()|[\]\\]/g, '\\  const ir = IRREG[head];') + '(?:ing|ed|es|s|d)?').join('');
+    if (new RegExp('(^|[^a-z])' + pattern + '([^a-z]|$)').test(t)) return true;
+  }
   const ir = IRREG[head];
   if (ir && ir.some((form) => new RegExp('(^|[^a-z])' + esc(form) + '([^a-z]|$)').test(t))) return true;
   return stem.length >= 4 && new RegExp('(^|[^a-z])' + esc(stem) + '([^a-z]|$)').test(t);
@@ -108,7 +114,7 @@ function validate(w, o) {
     const e = o[k];
     if (!e || typeof e !== 'object') { issues.push(k + ' 缺失'); continue; }
     const sa = clen(e.shortAnswer || '');
-    if (sa < 40 || sa > 110) issues.push(k + '.shortAnswer ' + sa + ' 字符（要求 40-110）');
+    if (sa < 40 || sa > 100) issues.push(k + '.shortAnswer ' + sa + ' 字符（要求 40-100）');
     if (!hasTerm(e.shortAnswer || '', mustEn)) issues.push(k + '.shortAnswer 未包含 ' + mustEn);
     if (!String(e.shortAnswer || '').includes(mustZh)) issues.push(k + '.shortAnswer 未包含中文词 ' + mustZh);
     const de = clen(e.definition || '');
@@ -117,6 +123,10 @@ function validate(w, o) {
   let ex = Array.isArray(o.examples) ? o.examples.filter(x => x && typeof x.en === 'string' && typeof x.zh === 'string' && x.en.trim() && x.zh.trim()) : [];
   if (ex.length < 1) issues.push('examples 无有效例句');
   if (ex.length > 0 && !hasTerm(ex.map(x => x.en).join(' || '), w.en)) issues.push('英文例句未包含词头 ' + w.en);
+  for (const x of ex) {
+    if (/[\u4e00-\u9fff]/.test(x.en)) issues.push('例句英文字段混入中文');
+    if (/[a-zA-Z]{3,}/.test(x.zh)) issues.push('中文翻译混入英文单词');
+  }
   o.examples = ex.slice(0, 2);
   const all = JSON.stringify(o);
   if (all.includes('*'.repeat(3))) issues.push('输出含异常掩码字符');
@@ -180,7 +190,8 @@ const saveProg = () => fs.writeFileSync(PROG, JSON.stringify(prog), 'utf8');
         try {
           const txt = await callDS([{ role: 'user', content: buildFixPrompt(w, out, lastIssues) }], 2000);
           const o2 = parseJson(txt);
-          out = o2; lastIssues = validate(w, o2);
+          if (o2 && o2.zh && o2.en && Array.isArray(o2.examples)) { out = o2; lastIssues = validate(w, o2); }
+          else { lastIssues = ['修复输出结构不完整（保留上一版结构）']; }
         } catch (err) {
           lastIssues.push('修复请求失败: ' + String(err.message || err).slice(0, 70));
           break;

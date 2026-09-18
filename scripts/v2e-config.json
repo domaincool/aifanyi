@@ -1,0 +1,24 @@
+{
+  "SPECIAL": {
+    "春运": "文化辨析：春运 = Spring Festival travel rush，人类最大规模的周期性迁徙（几十亿人次跨区域流动），英文媒体也直接借用拼音 chunyun。shortAnswer 必须点出「全球最大规模周期性迁徙」这一现象级特征。",
+    "压岁钱": "文化辨析：压岁钱 = lucky money（也可说 red envelope money / New Year's money），长辈春节给孩子的现金红包，寓意压祟祈福。不要直译成 pressure money。",
+    "红包": "文化辨析：红包 = red envelope（内装现金的红色信封），必须提及现代演变：微信/支付宝电子红包 digital red envelope（在手机上发红包），这是传统习俗的数字化形态。",
+    "秋老虎": "文化辨析：秋老虎常译 Indian summer，但两者不完全对等：英语 Indian summer 指深秋（10-11 月）的回暖期，源于北美；中文秋老虎指立秋（8 月）后回热的天气。shortAnswer 里要点出这个时间差，不要含糊画等号。",
+    "回南天": "文化辨析：回南天 = returning south wind（也可意译 back-to-south days），华南地区春季湿度灾害：墙壁地板「冒水」返潮、衣物难干。英文无标准对应词，页面要把现象本身解释清楚。",
+    "三伏天": "文化辨析：三伏天 = dog days（of summer），但文化来源不同：英语 dog days 源白天狼星（Sirius）与太阳同升的季节，古罗马认为此时狗易狂躁；中文三伏天按农历初伏中伏末伏计算。shortAnswer 点出这一文化差异。",
+    "拔罐": "文化辨析：拔罐 = cupping therapy（或 cupping），必须提到奥运游泳运动员肩背圆形拔罐印走红国际媒体的出圈事件，让西方读者对这个疗法有画面感。",
+    "胡同": "文化辨析：hutong 是进入英文的汉语借词（北京老城窄巷），英文媒体普遍直接用 hutong；页面要讲清北京胡同文化（四合院、市井生活），不要只说 small alley。",
+    "二楼": "文化辨析（本批最实用辨析点）：中文二楼 = second floor（美式），但英式英语一楼是 ground floor、二楼是 first floor！shortAnswer 必须讲清英美楼层差异，这是学习者高频踩坑点。",
+    "输液": "文化辨析：输液 = IV drip（intravenous drip），中国就医特色：门诊输液极普遍；欧美以口服药为主、极少输液（多用于住院重症）。shortAnswer 必须点出这种就医文化差异。",
+    "消炎药": "文化辨析（中式误解高危点）：中文大众常把抗生素统称「消炎药」，词表对应 antibiotics；但严格说消炎药（anti-inflammatory drugs，如布洛芬）与抗生素（antibiotics，杀细菌）是两类药！shortAnswer 务必辨析这个俗称误区。",
+    "支付宝": "文化辨析：支付宝 = Alipay（蚂蚁集团支付平台，品牌名音译），与 WeChat Pay 微信支付并列中国两大移动支付；外国游客常惊讶于扫码支付的渗透率（街边煎饼摊都收码）。",
+    "移动支付": "文化辨析：移动支付 = mobile payment，中国场景主要是 QR code 扫码支付（scan to pay），渗透率极高；欧美仍以刷卡/Apple Pay 为主。可提 cashless society 无现金社会趋势。"
+  },
+  "CAT_HINT": {
+    "天气与季节": "重点写梅雨 rainy season（东亚季风特有现象）、桑拿天 sauna-like heat 的口语表达、秋老虎/倒春寒/回南天等汉语特有天气词的英译处理（意译+解释）、天气预报的 it 句型（It's sunny / It looks like rain）。",
+    "节日与假期": "重点写节日名译法惯例（Dragon Boat Festival / Tomb-Sweeping Day 等通行译名）、zongzi/tangyuan 等食物音译借词现象、黄金周 Golden Week、补班 make-up workday（中国调休制度特有）、压岁钱 lucky money。",
+    "就医用药": "重点写吃药 take medicine（不说 eat medicine）、打针 get an injection / have a shot、副作用 side effect、止痛药 painkiller、退烧 reduce/bring down the fever；输液与消炎药词条要讲清中外就医用药文化差异。",
+    "金钱银行": "重点写存钱 deposit money / 取钱 withdraw money、转账 transfer money 与汇款 remit money（跨境汇款）之别、汇率 exchange rate、手续费 service fee/transaction fee、找零 give change（keep the change=不用找了）。",
+    "方位问路": "重点写直走 go straight (ahead)、十字路口 crossroads/intersection、环岛 roundabout（美式 traffic circle）、死胡同 dead end、迷路 get lost/be lost；二楼词条必须讲清英式 ground floor 楼层差异。"
+  }
+}
