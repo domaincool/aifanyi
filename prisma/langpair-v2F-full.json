@@ -1,0 +1,5535 @@
+{
+ "meta": {
+  "version": "v2-C-full",
+  "date": "2026-09-17",
+  "model": "deepseek-chat",
+  "source": "langpair-v2-batchC-20260917.json",
+  "pairCounts": {
+   "zh-en": 120,
+   "en-zh": 120
+  },
+  "slugStrategy": "zh=pinyin-pro (toneless, v), en=slugify"
+ },
+ "entries": [
+  {
+   "term": "甜",
+   "pair": "zh-en",
+   "slug": "tian",
+   "lang": "zh",
+   "translation": "sweet",
+   "shortAnswer": "「甜」的英文是 sweet，如 This cake is too sweet。注意 sweet 也可形容人「贴心」，但说食物「甜」不能用 sweetish（微甜）或 sugary（含糖多）。",
+   "definition": "甜在英语中通常说 sweet，指蛋糕、水果的甜味。sweet 还可形容人「温柔体贴」或「可爱」，如 a sweet girl。描述口味时，sweet 为五味词之一；想说「有点甜」用 a bit sweet，说「太甜」用 too sweet。",
+   "examples": [
+    {
+     "en": "This mango is very sweet, so I'll add some lemon juice to balance it.",
+     "zh": "这个芒果很甜，所以我加了些柠檬汁来平衡味道。"
+    },
+    {
+     "en": "She has a sweet smile that makes everyone feel welcome.",
+     "zh": "她笑起来很甜，让每个人都感到亲切。"
+    }
+   ],
+   "tags": [
+    "餐饮口味"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "sweet",
+   "pair": "en-zh",
+   "slug": "sweet",
+   "lang": "en",
+   "translation": "甜",
+   "shortAnswer": "sweet 的中文意思是「甜」，如 The tea is sweet。它还可形容人「贴心、可爱」，但表达「甜味」时不用 sugary（含糖多）或 sweetish（微甜）。",
+   "definition": "sweet 的核心词义是「有甜味的」，如 sweet fruit 甜水果。口语中可形容人「善良、温柔」，如 a sweet smile。注意区分：sweet 是味道甜，sugary 强调多糖，sweetish 指微甜。",
+   "examples": [
+    {
+     "en": "This mango is very sweet, so I'll add some lemon juice to balance it.",
+     "zh": "这个芒果很甜，所以我加了些柠檬汁来平衡味道。"
+    },
+    {
+     "en": "She has a sweet smile that makes everyone feel welcome.",
+     "zh": "她笑起来很甜，让每个人都感到亲切。"
+    }
+   ],
+   "tags": [
+    "餐饮口味"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "咸",
+   "pair": "zh-en",
+   "slug": "xian",
+   "lang": "zh",
+   "translation": "salty",
+   "shortAnswer": "「咸」的英文是 salty，指食物含盐分多、味道重。注意 salty 通常带贬义，说「咸淡适中」要用 well-seasoned 或 just right，别直接说 not salty。",
+   "definition": "salty 主要形容食物盐味重，如 salty soup、too salty；也可形容人「爱记仇、容易炸毛」的口语义。问咸淡常用 How salty is it?；「有点咸」是 a bit salty，「太咸了」是 way too salty。",
+   "examples": [
+    {
+     "en": "This soup is way too salty—did you add salt twice?",
+     "zh": "这汤太咸了，你是不是放了两次盐？"
+    },
+    {
+     "en": "He's still salty about losing the game last week.",
+     "zh": "他还在为上周输掉比赛而耿耿于怀。"
+    }
+   ],
+   "tags": [
+    "餐饮口味"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "salty",
+   "pair": "en-zh",
+   "slug": "salty",
+   "lang": "en",
+   "translation": "咸",
+   "shortAnswer": "salty 的中文意思是「咸」，形容食物盐放多了、味道偏重。和中文「咸」不同，salty 在口语里还常指人「爱记仇、动不动就炸」，这是中文「咸」没有的引申义。",
+   "definition": "salty 是五味词之一，常搭配 salty food、salty soup、taste salty；口语中形容人 bitter/salty 表示因小事耿耿于怀。日常说「咸淡正好」用 perfectly seasoned，别用 not salty。",
+   "examples": [
+    {
+     "en": "This soup is way too salty—did you add salt twice?",
+     "zh": "这汤太咸了，你是不是放了两次盐？"
+    },
+    {
+     "en": "He's still salty about losing the game last week.",
+     "zh": "他还在为上周输掉比赛而耿耿于怀。"
+    }
+   ],
+   "tags": [
+    "餐饮口味"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "油腻",
+   "pair": "zh-en",
+   "slug": "you-ni",
+   "lang": "zh",
+   "translation": "greasy",
+   "shortAnswer": "「油腻」的英文是 greasy，形容食物含油多、口感肥腻。注意 greasy 多带贬义，指油得让人不舒服；若只是「油润适中」，用 oily 或 rich 更中性。",
+   "definition": "greasy 常搭配 greasy food、greasy pizza、greasy spoon（廉价小餐馆）。口语里也说 It's too greasy. 表示太油了。辨析：greasy 强调表面或口感油滑发腻，多贬义；oily 偏中性，可指含油；rich 指味道浓郁厚重。",
+   "examples": [
+    {
+     "en": "The fried chicken was so greasy that my fingers were covered in oil.",
+     "zh": "炸鸡太油腻了，我手指上全是油。"
+    },
+    {
+     "en": "I don't like greasy food; I prefer something light and refreshing.",
+     "zh": "我不喜欢油腻的食物，更偏爱清淡爽口的。"
+    }
+   ],
+   "tags": [
+    "餐饮口味"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "greasy",
+   "pair": "en-zh",
+   "slug": "greasy",
+   "lang": "en",
+   "translation": "油腻",
+   "shortAnswer": "greasy 的中文意思是「油腻」，形容食物油多、吃起来肥腻。它通常带贬义，指油得让人不舒服；比 oily 更强调「腻」的口感，而 oily 偏中性。",
+   "definition": "greasy 形容食物表面或口感油滑发腻，如 greasy chips、greasy burger。口语常用 too greasy 抱怨太油。注意与 oily 区别：oily 中性，可指含油；greasy 多贬义，暗示不健康或不清爽。",
+   "examples": [
+    {
+     "en": "The fried chicken was so greasy that my fingers were covered in oil.",
+     "zh": "炸鸡太油腻了，我手指上全是油。"
+    },
+    {
+     "en": "I don't like greasy food; I prefer something light and refreshing.",
+     "zh": "我不喜欢油腻的食物，更偏爱清淡爽口的。"
+    }
+   ],
+   "tags": [
+    "餐饮口味"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "苦",
+   "pair": "zh-en",
+   "slug": "ku",
+   "lang": "zh",
+   "translation": "bitter",
+   "shortAnswer": "「苦」的英文是 bitter，指黑咖啡、苦瓜那种令人皱眉的味道。注意 bitter 还可指「怨恨的」，如 bitter about the past。",
+   "definition": "形容词，指味觉的苦：bitter coffee（苦咖啡）、bitter melon（苦瓜）。引申指愤懑、苦涩，如 a bitter argument。中文「辛苦」不用 bitter，用 hard。",
+   "examples": [
+    {
+     "en": "This black coffee is too bitter for me; I need some sugar.",
+     "zh": "这杯黑咖啡对我来说太苦了，我需要加点糖。"
+    },
+    {
+     "en": "Bitter melon tastes bitter at first, but it has a refreshing aftertaste.",
+     "zh": "苦瓜刚入口时是苦的，但回味很清爽。"
+    }
+   ],
+   "tags": [
+    "餐饮口味"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "bitter",
+   "pair": "en-zh",
+   "slug": "bitter",
+   "lang": "en",
+   "translation": "苦",
+   "shortAnswer": "bitter 的中文意思是「苦」，指像黑咖啡、苦瓜那样令人皱眉的味觉，与 sour（酸）、salty（咸）并列。也可引申为「愤懑的」。",
+   "definition": "形容词，表味觉的苦：bitter coffee、bitter melon。引申为愤懑、痛苦，如 bitter disappointment。名词指英式苦啤，a pint of bitter。勿与 sour（酸）混用。",
+   "examples": [
+    {
+     "en": "This black coffee is too bitter for me; I need some sugar.",
+     "zh": "这杯黑咖啡对我来说太苦了，我需要加点糖。"
+    },
+    {
+     "en": "Bitter melon tastes bitter at first, but it has a refreshing aftertaste.",
+     "zh": "苦瓜刚入口时是苦的，但回味很清爽。"
+    }
+   ],
+   "tags": [
+    "餐饮口味"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "饱",
+   "pair": "zh-en",
+   "slug": "bao",
+   "lang": "zh",
+   "translation": "full",
+   "shortAnswer": "「饱」的英文是 full，表示吃饱了。最关键的辨析是：full 指已经吃饱，若想说吃得太撑，英语常用 stuffed。",
+   "definition": "full 作形容词表示吃饱的，常用搭配有 I'm full（我吃饱了）、feel full（觉得饱）。注意 full 是状态词，不表示正在吃；吃撑了用 stuffed 更贴切。",
+   "examples": [
+    {
+     "en": "No thanks, I'm full. I couldn't eat another bite.",
+     "zh": "不了，谢谢，我吃饱了，一口也吃不下了。"
+    },
+    {
+     "en": "The kids were so full after dinner that they fell asleep on the couch.",
+     "zh": "孩子们晚饭吃得太饱，直接在沙发上睡着了。"
+    }
+   ],
+   "tags": [
+    "餐饮口味"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "full",
+   "pair": "en-zh",
+   "slug": "full",
+   "lang": "en",
+   "translation": "饱",
+   "shortAnswer": "full 的中文意思是「饱」，指已经吃饱的状态。它与 stuffed 的关键区别是：full 表示吃饱，stuffed 表示吃得太撑。",
+   "definition": "full 形容吃饱的，口语常说 I'm full 或 I feel full，礼貌谢绝加菜时也用。注意不要用 full 表示吃撑，那种感觉用 stuffed；full 还可指容器装满。",
+   "examples": [
+    {
+     "en": "No thanks, I'm full. I couldn't eat another bite.",
+     "zh": "不了，谢谢，我吃饱了，一口也吃不下了。"
+    },
+    {
+     "en": "The kids were so full after dinner that they fell asleep on the couch.",
+     "zh": "孩子们晚饭吃得太饱，直接在沙发上睡着了。"
+    }
+   ],
+   "tags": [
+    "餐饮口味"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "剩饭",
+   "pair": "zh-en",
+   "slug": "sheng-fan",
+   "lang": "zh",
+   "translation": "leftovers",
+   "shortAnswer": "「剩饭」最常用英语 leftovers，指吃剩的饭菜；注意不要用 leftover rice 表达所有剩饭，它特指剩米饭。",
+   "definition": "leftovers 恒为复数，搭配 eat/finish/reheat leftovers、leftovers from dinner；可指餐厅打包菜，也可指冰箱存货。leftover 作形容词时意为剩余的。",
+   "examples": [
+    {
+     "en": "We had leftovers from dinner last night, so I just heated them up for lunch.",
+     "zh": "我们昨晚晚饭剩了菜，所以我中午热了热就吃了。"
+    },
+    {
+     "en": "Don't throw away the leftovers—they'll go well with rice tomorrow.",
+     "zh": "别把剩饭扔了，明天用来下饭正好。"
+    }
+   ],
+   "tags": [
+    "餐饮口味"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "leftovers",
+   "pair": "en-zh",
+   "slug": "leftovers",
+   "lang": "en",
+   "translation": "剩饭",
+   "shortAnswer": "leftovers 中文常译「剩饭」，指吃剩的饭菜；与 leftover 不同，leftovers 是名词复数，leftover 多作形容词。",
+   "definition": "leftovers 指饭后剩下的食物，口语常用，搭配 eat/heat up/finish leftovers。可表示餐厅打包食物或冰箱里的存货，不是指剩米饭。",
+   "examples": [
+    {
+     "en": "We had leftovers from dinner last night, so I just heated them up for lunch.",
+     "zh": "我们昨晚晚饭剩了菜，所以我中午热了热就吃了。"
+    },
+    {
+     "en": "Don't throw away the leftovers—they'll go well with rice tomorrow.",
+     "zh": "别把剩饭扔了，明天用来下饭正好。"
+    }
+   ],
+   "tags": [
+    "餐饮口味"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "小菜",
+   "pair": "zh-en",
+   "slug": "xiao-cai",
+   "lang": "zh",
+   "translation": "side dish",
+   "shortAnswer": "「小菜」最常说的英文是 side dish，指搭配主菜的小份菜；但中式「小菜」也常指开胃腌菜 pickles 或凉拌小菜 appetizer，别一律译成 vegetable。",
+   "definition": "作「配菜」时用 side dish，如 a side dish of pickles；作早餐清粥小菜里的「咸菜、酱菜」时常用 pickles 或 pickled vegetables。口语也可说 side，如 fries as a side。",
+   "examples": [
+    {
+     "en": "This pickled cucumber is a great side dish for rice because it goes well with rice.",
+     "zh": "这道腌黄瓜是很棒的下饭小菜，因为它很下饭。"
+    },
+    {
+     "en": "We ordered grilled fish with two side dishes: a light flavor salad and some pickles.",
+     "zh": "我们点了烤鱼和两道小菜：一份清淡的沙拉和一些腌菜。"
+    }
+   ],
+   "tags": [
+    "餐饮口味"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "side dish",
+   "pair": "en-zh",
+   "slug": "side-dish",
+   "lang": "en",
+   "translation": "小菜",
+   "shortAnswer": "side dish 的中文意思是「小菜」，指与主菜一起上桌的配菜；它不等于 appetizer（开胃菜），side dish 通常随主菜同吃，分量较小。",
+   "definition": "side dish 是可数名词，常见搭配 a side dish of…、as a side dish、side dishes。餐厅点餐时也可简说 side，如 choice of side。多指配菜，不指主菜，也不一定都是蔬菜。",
+   "examples": [
+    {
+     "en": "This pickled cucumber is a great side dish for rice because it goes well with rice.",
+     "zh": "这道腌黄瓜是很棒的下饭小菜，因为它很下饭。"
+    },
+    {
+     "en": "We ordered grilled fish with two side dishes: a light flavor salad and some pickles.",
+     "zh": "我们点了烤鱼和两道小菜：一份清淡的沙拉和一些腌菜。"
+    }
+   ],
+   "tags": [
+    "餐饮口味"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "清淡",
+   "pair": "zh-en",
+   "slug": "qing-dan",
+   "lang": "zh",
+   "translation": "light flavor",
+   "shortAnswer": "「清淡」的英文是 light flavor，形容食物味道柔和、不油不咸不辣不重。",
+   "definition": "light flavor 指食物口味清淡、调味不重，常用于汤、蒸菜、粥。口语也说 mild 或 not too heavy。",
+   "examples": [
+    {
+     "en": "This steamed fish has a light flavor, so it goes well with rice.",
+     "zh": "这道清蒸鱼口味清淡，所以很下饭。"
+    },
+    {
+     "en": "I prefer a light flavor when I'm not feeling well, like plain congee or clear soup.",
+     "zh": "我不舒服的时候更喜欢清淡的口味，比如白粥或清汤。"
+    }
+   ],
+   "tags": [
+    "餐饮口味"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "light flavor",
+   "pair": "en-zh",
+   "slug": "light-flavor",
+   "lang": "en",
+   "translation": "清淡",
+   "shortAnswer": "light flavor 的中文意思是「清淡」，指食物味道柔和、不油腻、不咸不辣、调味不重。",
+   "definition": "light flavor 指清淡口味，常见搭配 a light flavor、light flavor profile，用于汤、蒸菜、粥。",
+   "examples": [
+    {
+     "en": "This steamed fish has a light flavor, so it goes well with rice.",
+     "zh": "这道清蒸鱼口味清淡，所以很下饭。"
+    },
+    {
+     "en": "I prefer a light flavor when I'm not feeling well, like plain congee or clear soup.",
+     "zh": "我不舒服的时候更喜欢清淡的口味，比如白粥或清汤。"
+    }
+   ],
+   "tags": [
+    "餐饮口味"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "大排档",
+   "pair": "zh-en",
+   "slug": "da-pai-dang",
+   "lang": "zh",
+   "translation": "open-air food stall",
+   "shortAnswer": "「大排档」的英文是 open-air food stall。特指街头露天、现炒现卖、价格亲民、烟火气浓的夜宵摊档，正式餐馆不用这个词。",
+   "definition": "常搭配 open-air food stall 表示路边露天排档，香港粤语借词作 dai pai dong。核心是便宜热闹、坐在路边吃夜宵，与正规餐厅 restaurant 不同。",
+   "examples": [
+    {
+     "en": "We grabbed late-night noodles at an open-air food stall near the night market.",
+     "zh": "我们在夜市附近的露天大排档吃了宵夜面条。"
+    },
+    {
+     "en": "The open-air food stalls are always packed with people looking for cheap and tasty dishes.",
+     "zh": "大排档总是挤满了寻找便宜又好吃菜肴的人。"
+    }
+   ],
+   "tags": [
+    "餐饮口味"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "open-air food stall",
+   "pair": "en-zh",
+   "slug": "open-air-food-stall",
+   "lang": "en",
+   "translation": "大排档",
+   "shortAnswer": "「open-air food stall」的中文意思是「大排档」。指街头露天、便宜热闹、现做现吃的摊档，不是正式餐馆。",
+   "definition": "open-air food stall 指路边露天排档，常见于夜市和街头，也可用粤语借词 dai pai dong。口语中强调便宜、烟火气和夜宵，正式场合少用。",
+   "examples": [
+    {
+     "en": "We grabbed late-night noodles at an open-air food stall near the night market.",
+     "zh": "我们在夜市附近的露天大排档吃了宵夜面条。"
+    },
+    {
+     "en": "The open-air food stalls are always packed with people looking for cheap and tasty dishes.",
+     "zh": "大排档总是挤满了寻找便宜又好吃菜肴的人。"
+    }
+   ],
+   "tags": [
+    "餐饮口味"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "酸",
+   "pair": "zh-en",
+   "slug": "suan",
+   "lang": "zh",
+   "translation": "sour",
+   "shortAnswer": "「酸」的英文是 sour，指醋、柠檬那种酸味。注意 sour 常带“发酸、变馊”的负面意味，说食物变质常用 go sour。",
+   "definition": "sour 作形容词覆盖五味中的酸；搭配有 sour taste、sour and sweet（酸甜）。说“有点酸”用 a bit sour；食物变馊则说 The milk went sour。若强调开胃的酸，可用 tart 或 tangy，避免误用 sour 让人联想到坏掉。",
+   "examples": [
+    {
+     "en": "This green apple is too sour for me; I prefer something sweeter.",
+     "zh": "这个青苹果对我来说太酸了，我更喜欢吃甜一点的。"
+    },
+    {
+     "en": "The milk has gone sour, so don't drink it.",
+     "zh": "牛奶已经变酸了，别喝了。"
+    }
+   ],
+   "tags": [
+    "餐饮口味"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "sour",
+   "pair": "en-zh",
+   "slug": "sour",
+   "lang": "en",
+   "translation": "酸",
+   "shortAnswer": "sour 的中文意思是「酸」，指像柠檬、醋那样的味道。与 bitter（苦）不同，sour 是五味之一，也可引申为“变馊、发酸”。",
+   "definition": "sour 作形容词指酸味，常见搭配 sour taste、sweet and sour、go sour（变馊、变坏）。口语中 a sour face 指脸色难看。注意它多含负面意味，描述水果的天然酸味可用 tart 或 tangy 更贴切。",
+   "examples": [
+    {
+     "en": "This green apple is too sour for me; I prefer something sweeter.",
+     "zh": "这个青苹果对我来说太酸了，我更喜欢吃甜一点的。"
+    },
+    {
+     "en": "The milk has gone sour, so don't drink it.",
+     "zh": "牛奶已经变酸了，别喝了。"
+    }
+   ],
+   "tags": [
+    "餐饮口味"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "麻",
+   "pair": "zh-en",
+   "slug": "ma",
+   "lang": "zh",
+   "translation": "numbing spice",
+   "shortAnswer": "「麻」的英文是 numbing spice，指花椒带来的刺痛麻木感，不是 spicy（辣）。「又麻又辣」可说 numbing and spicy，或直接用借词 mala。",
+   "definition": "numbing spice 指产生麻感的花椒类香料，核心是刺痛麻木而非灼烧辣感。常见搭配：a numbing sensation、numbing and spicy。易错点：麻≠辣，不能只用 spicy 翻译「麻」。",
+   "examples": [
+    {
+     "en": "This Sichuan hotpot has a strong numbing spice from the Sichuan peppercorns, which makes your lips tingle.",
+     "zh": "这个四川火锅有很强的麻感，来自花椒，让你的嘴唇发麻。"
+    },
+    {
+     "en": "If you can't handle numbing spice, ask for less Sichuan pepper in the dish.",
+     "zh": "如果你受不了麻，就请他们在菜里少放点花椒。"
+    }
+   ],
+   "tags": [
+    "餐饮口味"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "numbing spice",
+   "pair": "en-zh",
+   "slug": "numbing-spice",
+   "lang": "en",
+   "translation": "麻",
+   "shortAnswer": "「numbing spice」中文意思是「麻」，指花椒引起的刺痛麻木感，不是「辣」(spicy)。常与 spicy 并用：numbing and spicy，或直接用借词 mala。",
+   "definition": "numbing spice 指产生麻感的花椒类香料，核心是刺痛麻木而非灼烧辣感。常见搭配：numbing and spicy、a numbing sensation。口语也常用借词 mala。易错点：不要用 spicy 单独翻译「麻」。",
+   "examples": [
+    {
+     "en": "This Sichuan hotpot has a strong numbing spice from the Sichuan peppercorns, which makes your lips tingle.",
+     "zh": "这个四川火锅有很强的麻感，来自花椒，让你的嘴唇发麻。"
+    },
+    {
+     "en": "If you can't handle numbing spice, ask for less Sichuan pepper in the dish.",
+     "zh": "如果你受不了麻，就请他们在菜里少放点花椒。"
+    }
+   ],
+   "tags": [
+    "餐饮口味"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "发物",
+   "pair": "zh-en",
+   "slug": "fa-wu",
+   "lang": "zh",
+   "translation": "food to avoid when sick",
+   "shortAnswer": "「发物」指生病或伤口恢复期应避开的食物，英文近似说法是 food to avoid when sick，如海鲜、羊肉等。",
+   "definition": "发物是中医食忌概念，指易诱发旧疾或加重病情的食物，如海鲜、羊肉、香菜。英文无对应词，常译作 food to avoid when sick。",
+   "examples": [
+    {
+     "en": "In traditional Chinese medicine, seafood is often seen as food to avoid when sick, especially during wound recovery.",
+     "zh": "在中医里，海鲜常被视为发物，尤其在伤口恢复期间应避免食用。"
+    },
+    {
+     "en": "My grandmother says lamb is food to avoid when sick, so she never cooks it when I have a cold.",
+     "zh": "我奶奶说羊肉是发物，所以我感冒时她从不做羊肉。"
+    }
+   ],
+   "tags": [
+    "餐饮口味"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "food to avoid when sick",
+   "pair": "en-zh",
+   "slug": "food-to-avoid-when-sick",
+   "lang": "en",
+   "translation": "发物",
+   "shortAnswer": "food to avoid when sick 近似中医「发物」，指生病或伤口恢复期应避开的食物，如海鲜、羊肉、香菜等。",
+   "definition": "food to avoid when sick 是中医「发物」的近似说法，并非西医术语，指生病或伤口恢复期可能加重病情的食物，如海鲜、羊肉。",
+   "examples": [
+    {
+     "en": "In traditional Chinese medicine, seafood is often seen as food to avoid when sick, especially during wound recovery.",
+     "zh": "在中医里，海鲜常被视为发物，尤其在伤口恢复期间应避免食用。"
+    },
+    {
+     "en": "My grandmother says lamb is food to avoid when sick, so she never cooks it when I have a cold.",
+     "zh": "我奶奶说羊肉是发物，所以我感冒时她从不做羊肉。"
+    }
+   ],
+   "tags": [
+    "餐饮口味"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "挑食",
+   "pair": "zh-en",
+   "slug": "tiao-shi",
+   "lang": "zh",
+   "translation": "picky eater",
+   "shortAnswer": "「挑食」的英文是 picky eater，意思是吃东西很挑剔、只肯吃固定几样的人。",
+   "definition": "picky eater 是名词，常用 be a picky eater 或 be picky about food；比 fussy eater 更日常。",
+   "examples": [
+    {
+     "en": "My little brother is such a picky eater that he refuses to touch any vegetable.",
+     "zh": "我弟弟特别挑食，什么蔬菜都不肯碰。"
+    },
+    {
+     "en": "If you're a picky eater, it's hard to enjoy a set menu at a restaurant.",
+     "zh": "如果你挑食，在餐厅就很难享受固定套餐。"
+    }
+   ],
+   "tags": [
+    "餐饮口味"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "picky eater",
+   "pair": "en-zh",
+   "slug": "picky-eater",
+   "lang": "en",
+   "translation": "挑食",
+   "shortAnswer": "A picky eater is someone very fussy about food—the everyday English for「挑食」.",
+   "definition": "Picky eater is a common noun; use be a picky eater or be picky about food, milder than fussy eater.",
+   "examples": [
+    {
+     "en": "My little brother is such a picky eater that he refuses to touch any vegetable.",
+     "zh": "我弟弟特别挑食，什么蔬菜都不肯碰。"
+    },
+    {
+     "en": "If you're a picky eater, it's hard to enjoy a set menu at a restaurant.",
+     "zh": "如果你挑食，在餐厅就很难享受固定套餐。"
+    }
+   ],
+   "tags": [
+    "餐饮口味"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "口味",
+   "pair": "zh-en",
+   "slug": "kou-wei",
+   "lang": "zh",
+   "translation": "flavor preference",
+   "shortAnswer": "「口味」的英文是 flavor preference，指个人对甜酸苦咸等味道的偏好。点餐或聊天时用 flavor preference 最自然，别硬说 taste mouth。",
+   "definition": "flavor preference 是名词短语，常见搭配有 personal flavor preference、change one's flavor preference。注意「口味」还可指菜系风味（如川菜口味），这时用 flavor 或 cuisine 更合适。",
+   "examples": [
+    {
+     "en": "My flavor preference leans toward spicy food, so I always add chili oil to my noodles.",
+     "zh": "我的口味偏辣，所以吃面时总要加辣椒油。"
+    },
+    {
+     "en": "The restaurant lets you choose your flavor preference, from light to extra salty.",
+     "zh": "这家餐厅让你选择口味，从清淡到重咸都可以。"
+    }
+   ],
+   "tags": [
+    "餐饮口味"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "flavor preference",
+   "pair": "en-zh",
+   "slug": "flavor-preference",
+   "lang": "en",
+   "translation": "口味",
+   "shortAnswer": "flavor preference 的中文意思是「口味」，指个人对食物味道的喜好倾向。它强调长期偏好，而 taste 多指当下的味觉感受。",
+   "definition": "flavor preference 常用于餐饮、营养和消费调查语境，如 ask about someone's flavor preference。口语中也可说 taste preference，但 flavor 更侧重甜酸苦咸等具体风味。",
+   "examples": [
+    {
+     "en": "My flavor preference leans toward spicy food, so I always add chili oil to my noodles.",
+     "zh": "我的口味偏辣，所以吃面时总要加辣椒油。"
+    },
+    {
+     "en": "The restaurant lets you choose your flavor preference, from light to extra salty.",
+     "zh": "这家餐厅让你选择口味，从清淡到重咸都可以。"
+    }
+   ],
+   "tags": [
+    "餐饮口味"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "加菜",
+   "pair": "zh-en",
+   "slug": "jia-cai",
+   "lang": "zh",
+   "translation": "add a dish",
+   "shortAnswer": "「加菜」在英文里常说 add a dish，意思是在已经点好的菜之外再添一道菜，不是把某道菜加量。",
+   "definition": "add a dish 多用于点餐、聚餐或请客的场合，如 Let's add a dish 就是「我们再点一道菜吧」。也可说 order one more dish。",
+   "examples": [
+    {
+     "en": "There are six of us, so let's add a dish or two to the order.",
+     "zh": "我们有六个人，所以点餐时再加一两道菜吧。"
+    },
+    {
+     "en": "If the table still looks empty, the host will add a dish before the soup is served.",
+     "zh": "如果桌上看着还空，主人会在上汤之前再加一道菜。"
+    }
+   ],
+   "tags": [
+    "餐饮口味"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "add a dish",
+   "pair": "en-zh",
+   "slug": "add-a-dish",
+   "lang": "en",
+   "translation": "加菜",
+   "shortAnswer": "add a dish 的中文意思就是「加菜」，指在原有菜品之外再点一道或再做一道菜，而不是加饭或加汤。",
+   "definition": "add a dish 常用于点餐、聚餐、请客的场合，如 We should add a dish for the guests，强调增添一道菜，而非加大份量。",
+   "examples": [
+    {
+     "en": "There are six of us, so let's add a dish or two to the order.",
+     "zh": "我们有六个人，所以点餐时再加一两道菜吧。"
+    },
+    {
+     "en": "If the table still looks empty, the host will add a dish before the soup is served.",
+     "zh": "如果桌上看着还空，主人会在上汤之前再加一道菜。"
+    }
+   ],
+   "tags": [
+    "餐饮口味"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "拼桌",
+   "pair": "zh-en",
+   "slug": "pin-zhuo",
+   "lang": "zh",
+   "translation": "share a table",
+   "shortAnswer": "「拼桌」的英文是 share a table，指和陌生人同桌吃饭，常见于茶餐厅高峰期。",
+   "definition": "拼桌常见于网红店、茶餐厅高峰期，英语常说 share a table with strangers；欧美餐厅较少拼桌。",
+   "examples": [
+    {
+     "en": "We had to share a table with another couple because the restaurant was packed.",
+     "zh": "餐厅爆满，我们只好和另一对夫妇拼桌。"
+    },
+    {
+     "en": "In many Chinese diners, you may share a table with strangers during rush hour.",
+     "zh": "在中国的很多小餐馆，高峰时段你可能要和陌生人拼桌。"
+    }
+   ],
+   "tags": [
+    "餐饮口味"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "share a table",
+   "pair": "en-zh",
+   "slug": "share-a-table",
+   "lang": "en",
+   "translation": "拼桌",
+   "shortAnswer": "“share a table” means 拼桌, sitting at one table with strangers, common in crowded diners.",
+   "definition": "To share a table is to sit with strangers at one table, common in China's busy restaurants; in the West it is less common.",
+   "examples": [
+    {
+     "en": "We had to share a table with another couple because the restaurant was packed.",
+     "zh": "餐厅爆满，我们只好和另一对夫妇拼桌。"
+    },
+    {
+     "en": "In many Chinese diners, you may share a table with strangers during rush hour.",
+     "zh": "在中国的很多小餐馆，高峰时段你可能要和陌生人拼桌。"
+    }
+   ],
+   "tags": [
+    "餐饮口味"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "下饭菜",
+   "pair": "zh-en",
+   "slug": "xia-fan-cai",
+   "lang": "zh",
+   "translation": "dish that goes with rice",
+   "shortAnswer": "「下饭菜」的英文是 dish that goes with rice。指专门配米饭吃、能让人多扒几口饭的咸香开胃菜，比如麻婆豆腐或咸菜炒肉。",
+   "definition": "dish that goes with rice 多作可数名词，口语里也说 a good dish to go with rice。注意它强调「配饭」而非「下酒」，下酒菜应说 dish that goes with alcohol 或 bar snack。",
+   "examples": [
+    {
+     "en": "Mapo tofu is a classic dish that goes with rice, so I always order it when I want to eat more.",
+     "zh": "麻婆豆腐是一道经典的下饭菜，所以我想多吃点饭时总会点它。"
+    },
+    {
+     "en": "My grandmother made a salty pickled vegetable dish that goes with rice perfectly.",
+     "zh": "我奶奶做了一道咸香的腌菜，特别下饭。"
+    }
+   ],
+   "tags": [
+    "餐饮口味"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "dish that goes with rice",
+   "pair": "en-zh",
+   "slug": "dish-that-goes-with-rice",
+   "lang": "en",
+   "translation": "下饭菜",
+   "shortAnswer": "dish that goes with rice 的中文意思是「下饭菜」。指口味咸香、开胃、特别适合搭配白米饭吃的菜，和单纯形容味道的 savory 不同。",
+   "definition": "dish that goes with rice 用于描述配米饭吃的菜，可数，常说 a dish that goes with rice。它强调「下饭」这个功能，不表示菜本身是主食；若想说「下酒菜」应用 dish that goes with alcohol。",
+   "examples": [
+    {
+     "en": "Mapo tofu is a classic dish that goes with rice, so I always order it when I want to eat more.",
+     "zh": "麻婆豆腐是一道经典的下饭菜，所以我想多吃点饭时总会点它。"
+    },
+    {
+     "en": "My grandmother made a salty pickled vegetable dish that goes with rice perfectly.",
+     "zh": "我奶奶做了一道咸香的腌菜，特别下饭。"
+    }
+   ],
+   "tags": [
+    "餐饮口味"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "解辣",
+   "pair": "zh-en",
+   "slug": "jie-la",
+   "lang": "zh",
+   "translation": "relieve spiciness",
+   "shortAnswer": "「解辣」的英文是 relieve spiciness，指缓解口腔辣感，常搭配 milk、yogurt、sugar，用于吃喝场景。",
+   "definition": "relieve spiciness 意为缓解辛辣灼烧感，主语多为饮品或食物，如 milk can relieve spiciness；口语也说 cool down your mouth。",
+   "examples": [
+    {
+     "en": "Drinking a glass of milk can quickly relieve spiciness after eating hot pot.",
+     "zh": "吃完火锅后喝一杯牛奶能快速解辣。"
+    },
+    {
+     "en": "Some people chew on a piece of sugar to relieve spiciness when the dish is too hot.",
+     "zh": "菜太辣时，有些人会嚼一块糖来解辣。"
+    }
+   ],
+   "tags": [
+    "餐饮口味"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "relieve spiciness",
+   "pair": "en-zh",
+   "slug": "relieve-spiciness",
+   "lang": "en",
+   "translation": "解辣",
+   "shortAnswer": "relieve spiciness 的中文是「解辣」，指缓解吃辣后的灼烧感，常与 milk、yogurt 等搭配，偏口语。",
+   "definition": "relieve spiciness 指缓解口腔辛辣刺激，常搭配 drink milk to relieve spiciness；正式场合可用 mitigate the burning sensation。",
+   "examples": [
+    {
+     "en": "Drinking a glass of milk can quickly relieve spiciness after eating hot pot.",
+     "zh": "吃完火锅后喝一杯牛奶能快速解辣。"
+    },
+    {
+     "en": "Some people chew on a piece of sugar to relieve spiciness when the dish is too hot.",
+     "zh": "菜太辣时，有些人会嚼一块糖来解辣。"
+    }
+   ],
+   "tags": [
+    "餐饮口味"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "素菜",
+   "pair": "zh-en",
+   "slug": "su-cai",
+   "lang": "zh",
+   "translation": "vegetarian dish",
+   "shortAnswer": "「素菜」的英文是 vegetarian dish，指不含肉、禽、海鲜的菜肴，常见于餐厅菜单。",
+   "definition": "vegetarian dish 指一道不含肉、禽、海鲜的菜，常用于餐厅点餐；注意区别于 vegan dish（纯素，不含蛋奶）。",
+   "examples": [
+    {
+     "en": "Could you recommend a vegetarian dish that isn’t too spicy?",
+     "zh": "你能推荐一道不太辣的素菜吗？"
+    },
+    {
+     "en": "This restaurant’s vegetarian dish is made with fresh mushrooms and tofu.",
+     "zh": "这家餐厅的素菜是用新鲜蘑菇和豆腐做的。"
+    }
+   ],
+   "tags": [
+    "餐饮口味"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "vegetarian dish",
+   "pair": "en-zh",
+   "slug": "vegetarian-dish",
+   "lang": "en",
+   "translation": "素菜",
+   "shortAnswer": "“vegetarian dish”的中文意思是“素菜”，即不含肉类、家禽或海鲜的菜肴，常见于餐厅点餐。",
+   "definition": "vegetarian dish 指一道不含肉、禽、海鲜的菜，常出现在菜单或点餐中；与 vegan dish 不同，后者还排除蛋、奶、蜂蜜。",
+   "examples": [
+    {
+     "en": "Could you recommend a vegetarian dish that isn’t too spicy?",
+     "zh": "你能推荐一道不太辣的素菜吗？"
+    },
+    {
+     "en": "This restaurant’s vegetarian dish is made with fresh mushrooms and tofu.",
+     "zh": "这家餐厅的素菜是用新鲜蘑菇和豆腐做的。"
+    }
+   ],
+   "tags": [
+    "餐饮口味"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "撑",
+   "pair": "zh-en",
+   "slug": "cheng",
+   "lang": "zh",
+   "translation": "stuffed",
+   "shortAnswer": "「撑」说英语就是 stuffed，指吃得太饱、肚子发胀。注意 stuffed 也可表示「塞满馅料的」，如 stuffed turkey 火鸡酿馅；说人吃撑了用 I'm stuffed 最地道。",
+   "definition": "I'm stuffed 是口语里表示「我吃撑了」的常用说法，比 I'm full 程度更重，full 是「吃饱了」，stuffed 是「撑到不行、一口都吃不下了」。也可说 I'm so stuffed 加强语气；问别人「你撑了吗」用 Are you stuffed?",
+   "examples": [
+    {
+     "en": "I ate three bowls of noodles and now I'm completely stuffed.",
+     "zh": "我吃了三碗面，现在撑得不行。"
+    },
+    {
+     "en": "Thanks, I can't eat another bite—I'm stuffed.",
+     "zh": "谢谢，我一口都吃不下了，我吃撑了。"
+    }
+   ],
+   "tags": [
+    "餐饮口味"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "stuffed",
+   "pair": "en-zh",
+   "slug": "stuffed",
+   "lang": "en",
+   "translation": "撑",
+   "shortAnswer": "Stuffed means「撑」——吃得太饱、肚子塞满的感觉。它比 full（吃饱）程度更强，口语中 I'm stuffed 就是「我吃撑了」。",
+   "definition": "Stuffed 在饮食语境里指吃得极饱、撑得难受，常用于口语：I'm stuffed.（我吃撑了。）程度强于 full。另一常见义是「填了馅的」，如 stuffed peppers 酿甜椒、stuffed turkey 火鸡酿馅，需靠上下文区分。",
+   "examples": [
+    {
+     "en": "I ate three bowls of noodles and now I'm completely stuffed.",
+     "zh": "我吃了三碗面，现在撑得不行。"
+    },
+    {
+     "en": "Thanks, I can't eat another bite—I'm stuffed.",
+     "zh": "谢谢，我一口都吃不下了，我吃撑了。"
+    }
+   ],
+   "tags": [
+    "餐饮口味"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "垫肚子",
+   "pair": "zh-en",
+   "slug": "dian-du-zi",
+   "lang": "zh",
+   "translation": "fill the stomach",
+   "shortAnswer": "「垫肚子」的英文是 fill the stomach，指简单吃点东西缓解饥饿。注意：它强调临时充饥，不是正式吃饱，多用于口语。",
+   "definition": "fill the stomach 常与 a bit、just、quickly 连用，如 fill the stomach with a bun。易错点：别与 fill one's stomach（吃饱）混淆，垫肚子侧重暂时解饿。",
+   "examples": [
+    {
+     "en": "I had a piece of bread to fill the stomach before the meeting.",
+     "zh": "开会前我吃了一片面包垫肚子。"
+    },
+    {
+     "en": "She bought some biscuits to fill the stomach during the long trip.",
+     "zh": "长途旅行中她买了些饼干垫肚子。"
+    }
+   ],
+   "tags": [
+    "餐饮口味"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "fill the stomach",
+   "pair": "en-zh",
+   "slug": "fill-the-stomach",
+   "lang": "en",
+   "translation": "垫肚子",
+   "shortAnswer": "「fill the stomach」的中文意思是「垫肚子」，指吃少量食物暂时缓解饥饿。与 eat a full meal 不同，它强调临时充饥，不追求吃饱。",
+   "definition": "fill the stomach 为口语表达，常搭配 with snacks、a little 等，表示临时解饿。正式场合可用 satisfy one's hunger。注意：它不等于「吃饱」（be full）。",
+   "examples": [
+    {
+     "en": "I had a piece of bread to fill the stomach before the meeting.",
+     "zh": "开会前我吃了一片面包垫肚子。"
+    },
+    {
+     "en": "She bought some biscuits to fill the stomach during the long trip.",
+     "zh": "长途旅行中她买了些饼干垫肚子。"
+    }
+   ],
+   "tags": [
+    "餐饮口味"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "抢着买单",
+   "pair": "zh-en",
+   "slug": "qiang-zhe-mai-dan",
+   "lang": "zh",
+   "translation": "fighting over the bill",
+   "shortAnswer": "「抢着买单」即英文 fighting over the bill，指饭后争着付账，是常见的中式人情表达。",
+   "definition": "聚餐后争相付账的口语表达，常见搭配 fight over the bill，并非真打架，体现中式人情与面子文化。",
+   "examples": [
+    {
+     "en": "Every time we eat out, my Chinese friends end up fighting over the bill.",
+     "zh": "每次出去吃饭，我的中国朋友最后都会抢着买单。"
+    },
+    {
+     "en": "They were fighting over the bill so loudly that the waiter had to step in.",
+     "zh": "他们抢着买单的声音太大，服务员不得不出面调解。"
+    }
+   ],
+   "tags": [
+    "餐饮口味"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "fighting over the bill",
+   "pair": "en-zh",
+   "slug": "fighting-over-the-bill",
+   "lang": "en",
+   "translation": "抢着买单",
+   "shortAnswer": "Fighting over the bill means 抢着买单, competing to pay after a meal among friends.",
+   "definition": "Informal phrase in which friends playfully argue about who pays the check, not a real fight; Westerners often go Dutch.",
+   "examples": [
+    {
+     "en": "Every time we eat out, my Chinese friends end up fighting over the bill.",
+     "zh": "每次出去吃饭，我的中国朋友最后都会抢着买单。"
+    },
+    {
+     "en": "They were fighting over the bill so loudly that the waiter had to step in.",
+     "zh": "他们抢着买单的声音太大，服务员不得不出面调解。"
+    }
+   ],
+   "tags": [
+    "餐饮口味"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "逛街",
+   "pair": "zh-en",
+   "slug": "guang-jie",
+   "lang": "zh",
+   "translation": "go shopping",
+   "shortAnswer": "「逛街」的英文是 go shopping，特指去商店浏览和购买商品。注意：go shopping 强调购物行为，而 hang out 更侧重闲逛，不一定买东西。",
+   "definition": "go shopping 常与 go window shopping（只逛不买）、go shopping for clothes 等搭配。日常口语中可替换为 do some shopping，但 go shopping 更强调外出过程。",
+   "examples": [
+    {
+     "en": "We usually go shopping on weekends to check out the clearance sale and avoid impulse buying.",
+     "zh": "我们通常在周末去逛街，看看清仓促销，避免冲动消费。"
+    },
+    {
+     "en": "She likes to go shopping at duty-free shops before her flight, but she never buys overstock goods from a scalper.",
+     "zh": "她喜欢在起飞前去免税店逛街，但从不从黄牛那里买尾货。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "go shopping",
+   "pair": "en-zh",
+   "slug": "go-shopping",
+   "lang": "en",
+   "translation": "逛街",
+   "shortAnswer": "go shopping 的中文意思是「逛街」，即去商店浏览或购买商品。它侧重外出购物的行为，而 hang out 则强调闲逛，不一定消费。",
+   "definition": "go shopping 是口语常用短语，指为了休闲或购买必需品而逛商店。常见搭配：go shopping for gifts, go shopping online。注意：go shopping 是固定搭配，不能说 go to shopping。",
+   "examples": [
+    {
+     "en": "We usually go shopping on weekends to check out the clearance sale and avoid impulse buying.",
+     "zh": "我们通常在周末去逛街，看看清仓促销，避免冲动消费。"
+    },
+    {
+     "en": "She likes to go shopping at duty-free shops before her flight, but she never buys overstock goods from a scalper.",
+     "zh": "她喜欢在起飞前去免税店逛街，但从不从黄牛那里买尾货。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "锅气",
+   "pair": "zh-en",
+   "slug": "wok-hei",
+   "lang": "zh",
+   "translation": "wok hei",
+   "shortAnswer": "「锅气」的英文是 wok hei，粤语借词，指猛火爆炒的焦香锅味，别说 pot air。",
+   "definition": "wok hei 即粤语「镬气」，指食材在极热炒锅中快炒产生的焦香与锅味，常见搭配有 with wok hei。",
+   "examples": [
+    {
+     "en": "This beef chow fun is amazing—it really has that wok hei aroma.",
+     "zh": "这盘干炒牛河太棒了，真的有那股锅气。"
+    },
+    {
+     "en": "Without a high flame, it's hard to get wok hei into the fried rice.",
+     "zh": "没有猛火，很难让炒饭带上锅气。"
+    }
+   ],
+   "tags": [
+    "餐饮口味"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "wok hei",
+   "pair": "en-zh",
+   "slug": "wok-hei",
+   "lang": "en",
+   "translation": "锅气",
+   "shortAnswer": "wok hei means 锅气 in Chinese: the smoky, seared aroma from stir-frying in a very hot wok.",
+   "definition": "Wok hei is the Cantonese term for the charred, savory aroma from tossing food in a screaming-hot wok; not generic pot smell.",
+   "examples": [
+    {
+     "en": "This beef chow fun is amazing—it really has that wok hei aroma.",
+     "zh": "这盘干炒牛河太棒了，真的有那股锅气。"
+    },
+    {
+     "en": "Without a high flame, it's hard to get wok hei into the fried rice.",
+     "zh": "没有猛火，很难让炒饭带上锅气。"
+    }
+   ],
+   "tags": [
+    "餐饮口味"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "苍蝇馆子",
+   "pair": "zh-en",
+   "slug": "cang-ying-guan-zi",
+   "lang": "zh",
+   "translation": "hole-in-the-wall eatery",
+   "shortAnswer": "「苍蝇馆子」英文说 hole-in-the-wall eatery，指不起眼却往往极好吃的小店，别译成 fly restaurant。",
+   "definition": "hole-in-the-wall eatery 是英语地道说法，强调店面小、装修简陋但味道出众。中文「苍蝇馆子」带亲切褒义，常说「苍蝇馆子才是隐藏的美味」；fly restaurant 只会让老外以为店里真有苍蝇。",
+   "examples": [
+    {
+     "en": "That hole-in-the-wall eatery near the station serves the best noodles in town.",
+     "zh": "车站附近那家苍蝇馆子做的面条是城里最好吃的。"
+    },
+    {
+     "en": "Don't judge by the shabby front; this hole-in-the-wall eatery is always packed at dinner.",
+     "zh": "别被破旧的门面骗了，这家苍蝇馆子晚饭时总是挤满人。"
+    }
+   ],
+   "tags": [
+    "餐饮口味"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "hole-in-the-wall eatery",
+   "pair": "en-zh",
+   "slug": "hole-in-the-wall-eatery",
+   "lang": "en",
+   "translation": "苍蝇馆子",
+   "shortAnswer": "A hole-in-the-wall eatery is 苍蝇馆子 in Chinese: a small, unassuming spot with great food.",
+   "definition": "hole-in-the-wall eatery 指不起眼的小饭馆，常含「低调但好吃」的褒义，偏口语。与 dive（廉价酒吧）不同，它强调食物地道；不是真的有苍蝇，别理解为 fly restaurant。",
+   "examples": [
+    {
+     "en": "That hole-in-the-wall eatery near the station serves the best noodles in town.",
+     "zh": "车站附近那家苍蝇馆子做的面条是城里最好吃的。"
+    },
+    {
+     "en": "Don't judge by the shabby front; this hole-in-the-wall eatery is always packed at dinner.",
+     "zh": "别被破旧的门面骗了，这家苍蝇馆子晚饭时总是挤满人。"
+    }
+   ],
+   "tags": [
+    "餐饮口味"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "会员卡",
+   "pair": "zh-en",
+   "slug": "hui-yuan-ka",
+   "lang": "zh",
+   "translation": "membership card",
+   "shortAnswer": "会员卡用英语说是 membership card，是商家发给顾客的身份凭证，凭卡享会员价或专属权益。",
+   "definition": "membership card 指证明会员身份的实体卡或电子卡，常见搭配有 apply for a membership card、show your membership card，注意与 loyalty card（积分卡）区分。",
+   "examples": [
+    {
+     "en": "Could you show me your membership card before I apply the discount?",
+     "zh": "在给您打折之前，能出示一下您的会员卡吗？"
+    },
+    {
+     "en": "I forgot my membership card at home, so I couldn't get the member price.",
+     "zh": "我把会员卡忘在家里了，所以没能享受会员价。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "membership card",
+   "pair": "en-zh",
+   "slug": "membership-card",
+   "lang": "en",
+   "translation": "会员卡",
+   "shortAnswer": "membership card 的中文意思是会员卡，是商家发给会员的身份凭证，凭卡可享会员价和专属权益。",
+   "definition": "membership card 指证明会员资格的卡片，可实体可电子；常见搭配有 present a membership card、renew a membership card，与 loyalty card 区分。",
+   "examples": [
+    {
+     "en": "Could you show me your membership card before I apply the discount?",
+     "zh": "在给您打折之前，能出示一下您的会员卡吗？"
+    },
+    {
+     "en": "I forgot my membership card at home, so I couldn't get the member price.",
+     "zh": "我把会员卡忘在家里了，所以没能享受会员价。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "收银台",
+   "pair": "zh-en",
+   "slug": "shou-yin-tai",
+   "lang": "zh",
+   "translation": "checkout counter",
+   "shortAnswer": "在购物消费场景中，收银台的英文是 checkout counter，指商店里顾客排队付款结账的柜台。",
+   "definition": "checkout counter 指实体店结账付款的柜台，常与 cashier、queue、pay 搭配。英式英语中也用 till。电商中 checkout 指结算页面。",
+   "examples": [
+    {
+     "en": "Please proceed to the checkout counter to pay for your items.",
+     "zh": "请前往收银台为您的商品付款。"
+    },
+    {
+     "en": "There was a long queue at the checkout counter because of the clearance sale.",
+     "zh": "由于清仓大甩卖，收银台前排起了长队。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "checkout counter",
+   "pair": "en-zh",
+   "slug": "checkout-counter",
+   "lang": "en",
+   "translation": "收银台",
+   "shortAnswer": "Checkout counter 在购物消费场景中的中文意思是收银台，即商店里顾客付款结账的柜台。",
+   "definition": "Checkout counter 指实体店中结账付款的柜台，常见搭配 at the checkout counter, pay at the checkout counter。英式英语常用 till。",
+   "examples": [
+    {
+     "en": "Please proceed to the checkout counter to pay for your items.",
+     "zh": "请前往收银台为您的商品付款。"
+    },
+    {
+     "en": "There was a long queue at the checkout counter because of the clearance sale.",
+     "zh": "由于清仓大甩卖，收银台前排起了长队。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "冲动消费",
+   "pair": "zh-en",
+   "slug": "chong-dong-xiao-fei",
+   "lang": "zh",
+   "translation": "impulse buying",
+   "shortAnswer": "「冲动消费」的英文是 impulse buying，指未加计划、受情绪驱使的购买行为。",
+   "definition": "强调一时兴起、无计划，常与 avoid、encourage、regret 等动词搭配，多作不可数名词。",
+   "examples": [
+    {
+     "en": "Online flash sales are designed to trigger impulse buying, so I always wait a day before checking out.",
+     "zh": "网络限时秒杀就是为了诱发冲动消费，所以我总会等一天再下单。"
+    },
+    {
+     "en": "She regretted her impulse buying after realizing most of the clothes still had tags on.",
+     "zh": "她发现自己买的衣服大多还带着吊牌，便后悔了自己的冲动消费。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "impulse buying",
+   "pair": "en-zh",
+   "slug": "impulse-buying",
+   "lang": "en",
+   "translation": "冲动消费",
+   "shortAnswer": "Impulse buying means 冲动消费 in Chinese: buying on a sudden urge without planning.",
+   "definition": "Impulse buying is unplanned, emotion-driven purchasing. An impulse buy is the item; impulse buying is the behavior.",
+   "examples": [
+    {
+     "en": "Online flash sales are designed to trigger impulse buying, so I always wait a day before checking out.",
+     "zh": "网络限时秒杀就是为了诱发冲动消费，所以我总会等一天再下单。"
+    },
+    {
+     "en": "She regretted her impulse buying after realizing most of the clothes still had tags on.",
+     "zh": "她发现自己买的衣服大多还带着吊牌，便后悔了自己的冲动消费。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "尾货",
+   "pair": "zh-en",
+   "slug": "wei-huo",
+   "lang": "zh",
+   "translation": "overstock goods",
+   "shortAnswer": "“尾货”的英文是 overstock goods，指库存积压、清仓处理的剩余商品，常见于折扣店和促销语境。",
+   "definition": "overstock goods 是复数名词，指超出正常销量的库存商品，常搭配 buy/sell overstock goods。注意：它不是假货或二手货。",
+   "examples": [
+    {
+     "en": "The store is selling overstock goods at half price to clear out its warehouse.",
+     "zh": "这家店半价出售尾货，以清空仓库。"
+    },
+    {
+     "en": "She often hunts for overstock goods online because they are authentic but much cheaper.",
+     "zh": "她经常在网上淘尾货，因为它们是正品但便宜很多。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "overstock goods",
+   "pair": "en-zh",
+   "slug": "overstock-goods",
+   "lang": "en",
+   "translation": "尾货",
+   "shortAnswer": "“overstock goods”的中文意思是“尾货”，即商家库存过多、降价清仓的商品。",
+   "definition": "overstock goods 指超出正常销售需求的库存商品，常以折扣价出售。常见搭配：sell/buy overstock goods。不是二手货或假货。",
+   "examples": [
+    {
+     "en": "The store is selling overstock goods at half price to clear out its warehouse.",
+     "zh": "这家店半价出售尾货，以清空仓库。"
+    },
+    {
+     "en": "She often hunts for overstock goods online because they are authentic but much cheaper.",
+     "zh": "她经常在网上淘尾货，因为它们是正品但便宜很多。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "免税",
+   "pair": "zh-en",
+   "slug": "mian-shui",
+   "lang": "zh",
+   "translation": "duty-free",
+   "shortAnswer": "「免税」的英文是 duty-free，指商品免交进口关税或消费税。它常修饰 shop、goods 等名词，也可作副词：buy alcohol duty-free。",
+   "definition": "duty-free 多作形容词或副词，指免征关税或消费税，常见于机场、港口、飞机上的免税店（duty-free shop）。注意 duty-free 不等于 tax-free：前者通常指免关税，后者常指免销售税等一般税。",
+   "examples": [
+    {
+     "en": "I bought some duty-free perfume at the airport before my flight.",
+     "zh": "我在机场登机前买了一些免税香水。"
+    },
+    {
+     "en": "You can buy alcohol duty-free when you travel between countries.",
+     "zh": "跨境旅行时，你可以购买免税酒类。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "duty-free",
+   "pair": "en-zh",
+   "slug": "duty-free",
+   "lang": "en",
+   "translation": "免税",
+   "shortAnswer": "duty-free 的中文意思是「免税」，指商品免交关税或消费税。它强调免除进口税，与仅免销售税的 tax-free 不同，常见于机场和边境的免税店。",
+   "definition": "duty-free 作形容词或副词，指进口商品免征关税或消费税，常搭配 duty-free shop、duty-free goods、buy something duty-free。正式文体和旅游场景都常用，注意不能随意等同于 tax-free。",
+   "examples": [
+    {
+     "en": "I bought some duty-free perfume at the airport before my flight.",
+     "zh": "我在机场登机前买了一些免税香水。"
+    },
+    {
+     "en": "You can buy alcohol duty-free when you travel between countries.",
+     "zh": "跨境旅行时，你可以购买免税酒类。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "跳蚤市场",
+   "pair": "zh-en",
+   "slug": "tiao-zao-shi-chang",
+   "lang": "zh",
+   "translation": "flea market",
+   "shortAnswer": "跳蚤市场的英文是 flea market，指摆摊售卖旧货、手工艺品和廉价商品的集市。",
+   "definition": "flea market 指临时摊位市场，卖二手货、古董和便宜杂货；常说 at a flea market。",
+   "examples": [
+    {
+     "en": "We spent Sunday morning browsing the flea market for vintage posters and old records.",
+     "zh": "我们周日早上逛跳蚤市场，寻找复古海报和旧唱片。"
+    },
+    {
+     "en": "She found a rare teapot at a flea market for just a few dollars.",
+     "zh": "她在跳蚤市场只花了几美元就淘到一个稀有的茶壶。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "flea market",
+   "pair": "en-zh",
+   "slug": "flea-market",
+   "lang": "en",
+   "translation": "跳蚤市场",
+   "shortAnswer": "Flea market means 跳蚤市场: a market with stalls selling used goods, crafts, and cheap items.",
+   "definition": "A flea market is a temporary market with stalls selling used goods, antiques, and bargains. Say at a flea market.",
+   "examples": [
+    {
+     "en": "We spent Sunday morning browsing the flea market for vintage posters and old records.",
+     "zh": "我们周日早上逛跳蚤市场，寻找复古海报和旧唱片。"
+    },
+    {
+     "en": "She found a rare teapot at a flea market for just a few dollars.",
+     "zh": "她在跳蚤市场只花了几美元就淘到一个稀有的茶壶。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "凑单",
+   "pair": "zh-en",
+   "slug": "cou-dan",
+   "lang": "zh",
+   "translation": "add items to reach a discount",
+   "shortAnswer": "「凑单」英文是 add items to reach a discount，为满减或免邮多加商品。",
+   "definition": "凑单 = add items to reach a discount，指为达到满减或包邮门槛而额外购买商品，常出现在电商场景，口语也说 top up the cart。",
+   "examples": [
+    {
+     "en": "I only needed a ten-dollar item, but I added items to reach a discount and spent thirty dollars.",
+     "zh": "我本来只缺十美元的东西，但为了凑单反而花了三十美元。"
+    },
+    {
+     "en": "To avoid shipping fees, she added items to reach a discount, saying she was just topping up the cart.",
+     "zh": "为了免运费，她凑单加了几件商品，说自己只是把购物车凑够门槛。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "add items to reach a discount",
+   "pair": "en-zh",
+   "slug": "add-items-to-reach-a-discount",
+   "lang": "en",
+   "translation": "凑单",
+   "shortAnswer": "「add items to reach a discount」意思是「凑单」，为满减或免邮门槛多买商品。",
+   "definition": "add items to reach a discount 对应中文「凑单」，用于电商满减、包邮场景，口语常说 top up the cart，与 impulse buying 不同。",
+   "examples": [
+    {
+     "en": "I only needed a ten-dollar item, but I added items to reach a discount and spent thirty dollars.",
+     "zh": "我本来只缺十美元的东西，但为了凑单反而花了三十美元。"
+    },
+    {
+     "en": "To avoid shipping fees, she added items to reach a discount, saying she was just topping up the cart.",
+     "zh": "为了免运费，她凑单加了几件商品，说自己只是把购物车凑够门槛。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "清仓",
+   "pair": "zh-en",
+   "slug": "qing-cang",
+   "lang": "zh",
+   "translation": "clearance sale",
+   "shortAnswer": "「清仓」的英文是 clearance sale，指商家为了清空库存而低价甩卖。注意它强调\"清光存货\"，不是单纯打折，日常也说 going out of business sale。",
+   "definition": "clearance sale 常指季末或歇业前的清货促销，搭配 hold/have a clearance sale。与 on sale（泛指打折）不同，它侧重清空库存。英式口语也说 clearance。",
+   "examples": [
+    {
+     "en": "The store is holding a clearance sale to make room for new arrivals.",
+     "zh": "这家店正在清仓甩卖，为新货腾出空间。"
+    },
+    {
+     "en": "I bought this jacket at a clearance sale for half price.",
+     "zh": "我在清仓促销时半价买了这件夹克。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "clearance sale",
+   "pair": "en-zh",
+   "slug": "clearance-sale",
+   "lang": "en",
+   "translation": "清仓",
+   "shortAnswer": "\"clearance sale\" 的中文意思是「清仓」，指商家为清空库存而大幅降价出售商品。它强调的是清光存货，而不仅是普通促销打折。",
+   "definition": "clearance sale 指清仓促销，常见搭配 have/hold a clearance sale、clearance sale prices。比 on sale 语气更强，多用于季末、换季或关店前，价格通常最低。",
+   "examples": [
+    {
+     "en": "The store is holding a clearance sale to make room for new arrivals.",
+     "zh": "这家店正在清仓甩卖，为新货腾出空间。"
+    },
+    {
+     "en": "I bought this jacket at a clearance sale for half price.",
+     "zh": "我在清仓促销时半价买了这件夹克。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "购物袋",
+   "pair": "zh-en",
+   "slug": "gou-wu-dai",
+   "lang": "zh",
+   "translation": "shopping bag",
+   "shortAnswer": "购物袋的英文是 shopping bag，指商场或超市提供的装商品袋子；注意拼写为 shopping bag，不是 shop bag 或 shoppingbag。",
+   "definition": "shopping bag 是购物时用来装物品的袋子，常见搭配有 reusable shopping bag（环保购物袋）、paper shopping bag（纸购物袋）。在英式英语中，也可用 carrier bag 指超市购物袋。",
+   "examples": [
+    {
+     "en": "I always bring a reusable shopping bag to the supermarket to reduce plastic waste.",
+     "zh": "我总是带一个可重复使用的购物袋去超市，以减少塑料浪费。"
+    },
+    {
+     "en": "The cashier asked if I needed a shopping bag for my groceries.",
+     "zh": "收银员问我是否需要购物袋来装食品杂货。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "shopping bag",
+   "pair": "en-zh",
+   "slug": "shopping-bag",
+   "lang": "en",
+   "translation": "购物袋",
+   "shortAnswer": "Shopping bag 的中文意思是“购物袋”，即购物时用来装东西的袋子；它与 tote bag 不同，tote bag 通常指日常手提包或帆布袋，不限于购物场景。",
+   "definition": "Shopping bag 指商店提供的用于携带所购物品的袋子，常见搭配有 reusable shopping bag、plastic shopping bag。在英式英语中，carrier bag 更常指超市购物袋，而 shopping bag 更通用。",
+   "examples": [
+    {
+     "en": "I always bring a reusable shopping bag to the supermarket to reduce plastic waste.",
+     "zh": "我总是带一个可重复使用的购物袋去超市，以减少塑料浪费。"
+    },
+    {
+     "en": "The cashier asked if I needed a shopping bag for my groceries.",
+     "zh": "收银员问我是否需要购物袋来装食品杂货。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "爆款",
+   "pair": "zh-en",
+   "slug": "bao-kuan",
+   "lang": "zh",
+   "translation": "best seller",
+   "shortAnswer": "「爆款」的英文是 best seller，指销量极高、供不应求、常被抢购的商品。",
+   "definition": "best seller 多作名词，常搭配 become/be a best seller。中文「爆款」偏电商口语，可指一时爆红单品；英文更看重实际销量榜单。",
+   "examples": [
+    {
+     "en": "This lightweight sunscreen became a best seller within a week of its launch.",
+     "zh": "这款轻薄的防晒霜上市一周就成了爆款。"
+    },
+    {
+     "en": "The store restocked the best seller three times before the holiday sale ended.",
+     "zh": "假期促销结束前，这家店把这款爆款补了三次货。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "best seller",
+   "pair": "en-zh",
+   "slug": "best-seller",
+   "lang": "en",
+   "translation": "爆款",
+   "shortAnswer": "「best seller」的中文意思是「爆款」，指卖得最好、销量遥遥领先的畅销商品。",
+   "definition": "best seller 指销量名列前茅的商品或书，常见 a best seller、become a best seller。正式商业报道与书评常用，口语也常见。",
+   "examples": [
+    {
+     "en": "This lightweight sunscreen became a best seller within a week of its launch.",
+     "zh": "这款轻薄的防晒霜上市一周就成了爆款。"
+    },
+    {
+     "en": "The store restocked the best seller three times before the holiday sale ended.",
+     "zh": "假期促销结束前，这家店把这款爆款补了三次货。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "过季",
+   "pair": "zh-en",
+   "slug": "guo-ji",
+   "lang": "zh",
+   "translation": "out of season",
+   "shortAnswer": "「过季」英文是 out of season，指商品过了当季销售期，常打折清仓；也指不合时宜。",
+   "definition": "out of season 在购物中表示服装、果蔬等已过当季，常搭配 sale、clearance、discount，如 out-of-season clothes 过季服装。也可表示不合时宜。注意与 off-season（淡季、休赛期）区分。",
+   "examples": [
+    {
+     "en": "These winter coats are out of season now, so they're on clearance sale.",
+     "zh": "这些冬装现在过季了，所以在清仓促销。"
+    },
+    {
+     "en": "Buying out of season fruits can save money, but the taste often isn't as good.",
+     "zh": "购买过季水果能省钱，但味道往往不如当季的。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "out of season",
+   "pair": "en-zh",
+   "slug": "out-of-season",
+   "lang": "en",
+   "translation": "过季",
+   "shortAnswer": "「out of season」中文意思是「过季」，指商品过当季销售期，常打折清仓；也指不合时宜。",
+   "definition": "out of season 核心义为过季的，用于服装、果蔬等，常搭配 sale、clearance、discount，如 out-of-season produce。口语中也可表示不合时宜。注意与 off-season（淡季、休赛期）区分。",
+   "examples": [
+    {
+     "en": "These winter coats are out of season now, so they're on clearance sale.",
+     "zh": "这些冬装现在过季了，所以在清仓促销。"
+    },
+    {
+     "en": "Buying out of season fruits can save money, but the taste often isn't as good.",
+     "zh": "购买过季水果能省钱，但味道往往不如当季的。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "按斤称",
+   "pair": "zh-en",
+   "slug": "an-jin-cheng",
+   "lang": "zh",
+   "translation": "sold by weight",
+   "shortAnswer": "「按斤称」的英文是 sold by weight，指散装称重售卖；注意「斤」是500克，英文中不说 jin，可说 500g per jin。",
+   "definition": "常见搭配：sold by weight（按重量出售）、by the jin（按斤）。易错点：欧美超市多为 pre-packaged 固定包装定价，散装称重较少，需向英语学习者说明零售文化差异。",
+   "examples": [
+    {
+     "en": "In Chinese wet markets, fresh produce is usually sold by weight, so you can buy exactly how much you need.",
+     "zh": "在中国菜市场，生鲜通常按斤称，所以你可以想买多少就买多少。"
+    },
+    {
+     "en": "Unlike pre-packaged snacks in Western supermarkets, these bulk candies are sold by weight, allowing customers to mix and match.",
+     "zh": "与欧美超市的固定包装零食不同，这些散装糖果按斤称，顾客可以随意混搭。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "sold by weight",
+   "pair": "en-zh",
+   "slug": "sold-by-weight",
+   "lang": "en",
+   "translation": "按斤称",
+   "shortAnswer": "sold by weight 的中文意思是「按斤称」，即按重量计价售卖；它与固定包装的 pre-packaged 相对，常见于散装商品。",
+   "definition": "核心义：按重量单位计价出售。搭配：be sold by weight, sell by weight。口语中也可说 by the pound/kilo。注意：中文的「斤」等于500克，不要直接说 jin。",
+   "examples": [
+    {
+     "en": "In Chinese wet markets, fresh produce is usually sold by weight, so you can buy exactly how much you need.",
+     "zh": "在中国菜市场，生鲜通常按斤称，所以你可以想买多少就买多少。"
+    },
+    {
+     "en": "Unlike pre-packaged snacks in Western supermarkets, these bulk candies are sold by weight, allowing customers to mix and match.",
+     "zh": "与欧美超市的固定包装零食不同，这些散装糖果按斤称，顾客可以随意混搭。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "假一赔十",
+   "pair": "zh-en",
+   "slug": "jia-yi-pei-shi",
+   "lang": "zh",
+   "translation": "tenfold compensation for fakes",
+   "shortAnswer": "「假一赔十」的英文是 tenfold compensation for fakes，指中国电商承诺售假按售价十倍赔偿，欧美无同款法定承诺。",
+   "definition": "常用作商家承诺或平台标语，强调对假货的惩罚性赔偿，多见于商品详情页。英文可意译为 tenfold compensation for fakes。",
+   "examples": [
+    {
+     "en": "The online store promises tenfold compensation for fakes, so customers feel safer buying brand-name goods.",
+     "zh": "这家网店承诺假一赔十，所以顾客买品牌商品时更放心。"
+    },
+    {
+     "en": "Under the policy of tenfold compensation for fakes, the seller had to pay ten times the price after selling a counterfeit bag.",
+     "zh": "根据假一赔十的政策，卖家在售出假包后必须支付十倍于售价的赔偿。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "tenfold compensation for fakes",
+   "pair": "en-zh",
+   "slug": "tenfold-compensation-for-fakes",
+   "lang": "en",
+   "translation": "假一赔十",
+   "shortAnswer": "「tenfold compensation for fakes」即「假一赔十」，指中国电商卖家承诺售假则按售价十倍赔偿，属惩罚性承诺，英文无完全对等说法。",
+   "definition": "该短语描述中国消保承诺或电商标语，可译为 tenfold compensation for counterfeit goods，口语说 get ten times your money back if it's fake。",
+   "examples": [
+    {
+     "en": "The online store promises tenfold compensation for fakes, so customers feel safer buying brand-name goods.",
+     "zh": "这家网店承诺假一赔十，所以顾客买品牌商品时更放心。"
+    },
+    {
+     "en": "Under the policy of tenfold compensation for fakes, the seller had to pay ten times the price after selling a counterfeit bag.",
+     "zh": "根据假一赔十的政策，卖家在售出假包后必须支付十倍于售价的赔偿。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "砍单",
+   "pair": "zh-en",
+   "slug": "kan-dan",
+   "lang": "zh",
+   "translation": "order cancellation",
+   "shortAnswer": "「砍单」的英文是 order cancellation，指订单被取消。cancel an order 是动作，order cancellation 是行为或结果。",
+   "definition": "常用搭配：the seller canceled the order、a wave of order cancellations。砍单多指商家主动取消，不同于买家退货 return。",
+   "examples": [
+    {
+     "en": "The store issued an order cancellation because the item was out of stock.",
+     "zh": "由于商品缺货，店家直接砍单了。"
+    },
+    {
+     "en": "After a wave of order cancellations, the seller apologized and offered coupons.",
+     "zh": "经历一波砍单潮后，卖家道歉并发放了优惠券。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "order cancellation",
+   "pair": "en-zh",
+   "slug": "order-cancellation",
+   "lang": "en",
+   "translation": "砍单",
+   "shortAnswer": "order cancellation 的中文意思是「砍单」，即取消订单。它指取消行为或结果，cancel an order 则是动词短语。",
+   "definition": "常见于电商条款和客服邮件，口语也说 cancel my order 或 get canceled。注意与 return（退货）、refund（退款）区分。",
+   "examples": [
+    {
+     "en": "The store issued an order cancellation because the item was out of stock.",
+     "zh": "由于商品缺货，店家直接砍单了。"
+    },
+    {
+     "en": "After a wave of order cancellations, the seller apologized and offered coupons.",
+     "zh": "经历一波砍单潮后，卖家道歉并发放了优惠券。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "开箱",
+   "pair": "zh-en",
+   "slug": "kai-xiang",
+   "lang": "zh",
+   "translation": "unboxing",
+   "shortAnswer": "「开箱」的英文是 unboxing，指拆开新购商品包装并展示的过程。它通常用于数码、美妆等测评视频，不是简单说 open the box。",
+   "definition": "unboxing 多指博主或消费者拍摄的拆箱展示，常见搭配有 unboxing video、unboxing experience。日常随手拆快递别用 unboxing，那只是 open a package。",
+   "examples": [
+    {
+     "en": "She filmed an unboxing of her new phone and shared it with her followers.",
+     "zh": "她拍了一段新手机的开箱视频，分享给粉丝。"
+    },
+    {
+     "en": "The unboxing experience matters a lot to online shoppers.",
+     "zh": "开箱体验对网购消费者来说很重要。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "unboxing",
+   "pair": "en-zh",
+   "slug": "unboxing",
+   "lang": "en",
+   "translation": "开箱",
+   "shortAnswer": "Unboxing means 开箱，即拆开新商品包装并展示内容的过程。它强调首次开箱的展示性，与单纯 open a box 不同。",
+   "definition": "unboxing 指拍摄或直播拆开新购物品包装，常见于数码、美妆测评。搭配有 unboxing video、do an unboxing。口语也说 unbox sth，注意它不是普通拆快递。",
+   "examples": [
+    {
+     "en": "She filmed an unboxing of her new phone and shared it with her followers.",
+     "zh": "她拍了一段新手机的开箱视频，分享给粉丝。"
+    },
+    {
+     "en": "The unboxing experience matters a lot to online shoppers.",
+     "zh": "开箱体验对网购消费者来说很重要。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "以旧换新",
+   "pair": "zh-en",
+   "slug": "yi-jiu-huan-xin",
+   "lang": "zh",
+   "translation": "trade-in",
+   "shortAnswer": "以旧换新的英文是 trade-in，指把旧商品折价抵扣新商品货款。名词或定语，动词写作 trade in。",
+   "definition": "trade-in 指旧物折价抵扣新货款，常见搭配 trade-in value、trade-in offer。作动词写 trade in，如 trade in old phone。",
+   "examples": [
+    {
+     "en": "The store offers a trade-in program that lets you swap your old phone for credit toward a new one.",
+     "zh": "这家店提供以旧换新项目，你可以用旧手机折价购买新手机。"
+    },
+    {
+     "en": "I traded in my old car and got a decent trade-in value on the new model.",
+     "zh": "我把旧车拿去以旧换新，在新车型上拿到了不错的折价。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "trade-in",
+   "pair": "en-zh",
+   "slug": "trade-in",
+   "lang": "en",
+   "translation": "以旧换新",
+   "shortAnswer": "trade-in 的中文意思是「以旧换新」，指用旧物品折价抵扣购买新物品。它强调交出旧物，而非单纯降价。",
+   "definition": "trade-in 指旧商品折价换购新商品，常见搭配 trade-in value、trade-in deal。作动词写 trade in，中间不加连字符。",
+   "examples": [
+    {
+     "en": "The store offers a trade-in program that lets you swap your old phone for credit toward a new one.",
+     "zh": "这家店提供以旧换新项目，你可以用旧手机折价购买新手机。"
+    },
+    {
+     "en": "I traded in my old car and got a decent trade-in value on the new model.",
+     "zh": "我把旧车拿去以旧换新，在新车型上拿到了不错的折价。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "刷单",
+   "pair": "zh-en",
+   "slug": "shua-dan",
+   "lang": "zh",
+   "translation": "fake orders",
+   "shortAnswer": "「刷单」的英文是 fake orders，指伪造订单与评价的违规行为。它属于中国电商生态特有的黑产，英文媒体也借用 brushify 或 click farming 来描述类似操作。",
+   "definition": "刷单常译为 fake orders 或 order farming，指商家通过虚假交易抬高销量和好评。它不同于普通促销，而是平台禁止的违规行为；相关搭配有 fake reviews、sales manipulation。",
+   "examples": [
+    {
+     "en": "The platform banned several shops for using fake orders to boost their ratings.",
+     "zh": "该平台封禁了多家店铺，因为它们用刷单来抬高评分。"
+    },
+    {
+     "en": "Consumer groups warn that fake orders mislead shoppers into trusting unreliable sellers.",
+     "zh": "消费者组织警告，刷单会误导购物者去信任不可靠的卖家。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "fake orders",
+   "pair": "en-zh",
+   "slug": "fake-orders",
+   "lang": "en",
+   "translation": "刷单",
+   "shortAnswer": "“fake orders”中文意思是「刷单」，指电商中伪造订单和评价以虚增销量的违规行为。它与普通假订单不同，核心是人为制造虚假交易记录和好评。",
+   "definition": "fake orders 常译为刷单，指商家伪造交易和评价来提升排名。常见搭配有 place fake orders、fake order farming。该词多用于电商、消费维权和平台治理语境，属贬义。",
+   "examples": [
+    {
+     "en": "The platform banned several shops for using fake orders to boost their ratings.",
+     "zh": "该平台封禁了多家店铺，因为它们用刷单来抬高评分。"
+    },
+    {
+     "en": "Consumer groups warn that fake orders mislead shoppers into trusting unreliable sellers.",
+     "zh": "消费者组织警告，刷单会误导购物者去信任不可靠的卖家。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "海淘",
+   "pair": "zh-en",
+   "slug": "hai-tao",
+   "lang": "zh",
+   "translation": "overseas online shopping",
+   "shortAnswer": "海淘的英文是 overseas online shopping，指直接从海外网站下单并跨境收货。注意它强调“跨境网购”这一行为，不含代购。",
+   "definition": "海淘常用搭配：do overseas online shopping、overseas online shopping site。易错点：代购是 daigou，海淘是自己下单，别混用。",
+   "examples": [
+    {
+     "en": "She does overseas online shopping every Black Friday to grab duty-free deals and avoid impulse buying.",
+     "zh": "她每年黑色星期五都海淘，抢免税优惠并避免冲动消费。"
+    },
+    {
+     "en": "Overseas online shopping can be tricky when it comes to clearance sale items, overstock goods, and trade-in policies.",
+     "zh": "海淘清仓商品、尾货和以旧换新政策时可能会比较麻烦。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "overseas online shopping",
+   "pair": "en-zh",
+   "slug": "overseas-online-shopping",
+   "lang": "en",
+   "translation": "海淘",
+   "shortAnswer": "overseas online shopping 的中文意思是海淘，指消费者在境外电商网站下单并跨境收货。它比 cross-border shopping 更强调网购这一渠道。",
+   "definition": "overseas online shopping 为中性/正式用语，常见于购物、物流和税务语境，如 duty-free、clearance sale、unboxing。注意它不等于代购。",
+   "examples": [
+    {
+     "en": "She does overseas online shopping every Black Friday to grab duty-free deals and avoid impulse buying.",
+     "zh": "她每年黑色星期五都海淘，抢免税优惠并避免冲动消费。"
+    },
+    {
+     "en": "Overseas online shopping can be tricky when it comes to clearance sale items, overstock goods, and trade-in policies.",
+     "zh": "海淘清仓商品、尾货和以旧换新政策时可能会比较麻烦。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "晒单",
+   "pair": "zh-en",
+   "slug": "shai-dan",
+   "lang": "zh",
+   "translation": "post a review with photos",
+   "shortAnswer": "「晒单」的英文是 post a review with photos，指在电商平台上传实物照片并写使用感受，常与返现活动搭配。",
+   "definition": "晒单指买家收货后在淘宝、京东等平台上传实拍图并附文字评价，常搭配 post a review with photos；与 unboxing 不同，它侧重使用反馈而非开箱。",
+   "examples": [
+    {
+     "en": "After trying the skincare set for a week, I decided to post a review with photos so others could see the real texture.",
+     "zh": "试用那套护肤品一周后，我决定晒单，让别人看到真实的质地。"
+    },
+    {
+     "en": "The seller offered a small refund if buyers post a review with photos, but I only do it when I genuinely like the product.",
+     "zh": "卖家提供小额返现鼓励买家晒单，但我只在真心喜欢商品时才这么做。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "post a review with photos",
+   "pair": "en-zh",
+   "slug": "post-a-review-with-photos",
+   "lang": "en",
+   "translation": "晒单",
+   "shortAnswer": "「post a review with photos」的中文意思是「晒单」，指在电商平台上传实物照片并写使用评价，强调评价附带图片。",
+   "definition": "post a review with photos 指购买后在电商平台发布带图评价，常见于淘宝、京东等；与 write a review 相比，它突出图片证据，口语中也说 post a photo review。",
+   "examples": [
+    {
+     "en": "After trying the skincare set for a week, I decided to post a review with photos so others could see the real texture.",
+     "zh": "试用那套护肤品一周后，我决定晒单，让别人看到真实的质地。"
+    },
+    {
+     "en": "The seller offered a small refund if buyers post a review with photos, but I only do it when I genuinely like the product.",
+     "zh": "卖家提供小额返现鼓励买家晒单，但我只在真心喜欢商品时才这么做。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "宰客",
+   "pair": "zh-en",
+   "slug": "zai-ke",
+   "lang": "zh",
+   "translation": "rip off customers",
+   "shortAnswer": "「宰客」的英文是 rip off customers，指商家对顾客（尤指游客）漫天要价。最地道的关联说法是 tourist trap（游客陷阱），常见于景区餐厅和出租车绕路抬价。",
+   "definition": "rip off customers 强调故意多收钱、坑骗顾客；rip-off 可作名词，如「That's a rip-off!」。注意与 charge a premium（合理溢价）区分，宰客含欺诈和恶意。景区、出租车、纪念品店是高频场景。",
+   "examples": [
+    {
+     "en": "That restaurant near the beach is a tourist trap and tries to rip off customers with overpriced seafood.",
+     "zh": "海滩附近那家餐厅是个游客陷阱，用天价海鲜宰客。"
+    },
+    {
+     "en": "Some taxi drivers take a longer route to rip off customers, especially those who don't know the city.",
+     "zh": "有些出租车司机绕远路宰客，尤其是对那些不熟悉城市的乘客。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "rip off customers",
+   "pair": "en-zh",
+   "slug": "rip-off-customers",
+   "lang": "en",
+   "translation": "宰客",
+   "shortAnswer": "「rip off customers」的中文意思是「宰客」，即商家对顾客（尤其游客）漫天要价或坑骗。与 overcharge 相比，rip off 更强调欺诈性和不道德。",
+   "definition": "rip off customers 是动词短语，口语常用，指故意多收钱、坑骗顾客。名词形式 rip-off 指宰客行为或贵得离谱的东西。常见搭配：rip off tourists / get ripped off。正式场合可用 exploit customers。",
+   "examples": [
+    {
+     "en": "That restaurant near the beach is a tourist trap and tries to rip off customers with overpriced seafood.",
+     "zh": "海滩附近那家餐厅是个游客陷阱，用天价海鲜宰客。"
+    },
+    {
+     "en": "Some taxi drivers take a longer route to rip off customers, especially those who don't know the city.",
+     "zh": "有些出租车司机绕远路宰客，尤其是对那些不熟悉城市的乘客。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "好评返现",
+   "pair": "zh-en",
+   "slug": "hao-ping-fan-xian",
+   "lang": "zh",
+   "translation": "cashback for good reviews",
+   "shortAnswer": "「好评返现」英文常说 cashback for good reviews，指商家返小额现金换好评。",
+   "definition": "常见搭配 offer/provide cashback for good reviews；中性说法为 incentive for positive reviews，正式场合更宜用后者。",
+   "examples": [
+    {
+     "en": "Many Taobao sellers quietly offer cashback for good reviews by slipping a small card into the package.",
+     "zh": "很多淘宝卖家会在包裹里塞一张小卡片，悄悄提供好评返现。"
+    },
+    {
+     "en": "Platforms ban cashback for good reviews, yet shoppers still get messages asking them to rate five stars first.",
+     "zh": "平台明令禁止好评返现，但买家仍会收到要求先打五星的消息。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "cashback for good reviews",
+   "pair": "en-zh",
+   "slug": "cashback-for-good-reviews",
+   "lang": "en",
+   "translation": "好评返现",
+   "shortAnswer": "\"cashback for good reviews\" is 「好评返现」: sellers refund a little cash for positive reviews.",
+   "definition": "A gray Chinese e-commerce practice: sellers offer small cash rebates to get good reviews; platforms ban it.",
+   "examples": [
+    {
+     "en": "Many Taobao sellers quietly offer cashback for good reviews by slipping a small card into the package.",
+     "zh": "很多淘宝卖家会在包裹里塞一张小卡片，悄悄提供好评返现。"
+    },
+    {
+     "en": "Platforms ban cashback for good reviews, yet shoppers still get messages asking them to rate five stars first.",
+     "zh": "平台明令禁止好评返现，但买家仍会收到要求先打五星的消息。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "均码",
+   "pair": "zh-en",
+   "slug": "jun-ma",
+   "lang": "zh",
+   "translation": "one size fits all",
+   "shortAnswer": "「均码」的英文是 one size fits all，常见于服装标签，表示一个尺码适合大多数人，但不保证人人合身。",
+   "definition": "one size fits all 可作形容词，也可写成 one-size-fits-all，表示不细分码数、靠宽松或弹性适配，常出现在服装标签和购物页面中。",
+   "examples": [
+    {
+     "en": "This beanie is one size fits all, so you don't need to worry about choosing a size when you buy it online.",
+     "zh": "这顶毛线帽是均码，所以你在网购时不用担心选尺码的问题。"
+    },
+    {
+     "en": "The store labeled the dress as one size fits all, but many customers still complained that it was too tight.",
+     "zh": "这家店把那条连衣裙标为均码，但很多顾客仍抱怨穿着太紧。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "one size fits all",
+   "pair": "en-zh",
+   "slug": "one-size-fits-all",
+   "lang": "en",
+   "translation": "均码",
+   "shortAnswer": "「one size fits all」的中文意思是「均码」，指服装不分尺码、一个号适合大多数人穿，但不保证人人合身。",
+   "definition": "one size fits all 是购物消费类常见表达，可作形容词或名词短语，指不区分尺码、单一尺码适合多数人的服装设计。",
+   "examples": [
+    {
+     "en": "This beanie is one size fits all, so you don't need to worry about choosing a size when you buy it online.",
+     "zh": "这顶毛线帽是均码，所以你在网购时不用担心选尺码的问题。"
+    },
+    {
+     "en": "The store labeled the dress as one size fits all, but many customers still complained that it was too tight.",
+     "zh": "这家店把那条连衣裙标为均码，但很多顾客仍抱怨穿着太紧。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "黄牛",
+   "pair": "zh-en",
+   "slug": "huang-niu",
+   "lang": "zh",
+   "translation": "ticket scalper",
+   "shortAnswer": "中文「黄牛」常译作 ticket scalper，指抢购门票后加价倒卖的人，带明显贬义。",
+   "definition": "ticket scalper 指抢购演出或体育门票再加价倒卖的人，含贬义；相关动词为 scalp tickets。",
+   "examples": [
+    {
+     "en": "I refused to pay triple the price to a ticket scalper outside the stadium.",
+     "zh": "我不愿在场馆外向黄牛付三倍的价钱。"
+    },
+    {
+     "en": "Ticket scalpers were asking absurd amounts online after the concert sold out.",
+     "zh": "演唱会售罄后，黄牛在网上开出离谱的高价。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "ticket scalper",
+   "pair": "en-zh",
+   "slug": "ticket-scalper",
+   "lang": "en",
+   "translation": "黄牛",
+   "shortAnswer": "「黄牛」 is ticket scalper: someone who buys tickets in bulk and resells them at inflated prices.",
+   "definition": "ticket scalper: a person who buys tickets in bulk and resells them at inflated prices, often illegally outside venues or online.",
+   "examples": [
+    {
+     "en": "I refused to pay triple the price to a ticket scalper outside the stadium.",
+     "zh": "我不愿在场馆外向黄牛付三倍的价钱。"
+    },
+    {
+     "en": "Ticket scalpers were asking absurd amounts online after the concert sold out.",
+     "zh": "演唱会售罄后，黄牛在网上开出离谱的高价。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "拉伸",
+   "pair": "zh-en",
+   "slug": "la-shen",
+   "lang": "zh",
+   "translation": "stretching",
+   "shortAnswer": "「拉伸」的英文是 stretching，指提高柔韧性、放松肌肉的动作；注意它与热身（warm-up）不同，热身通常包含动态动作。",
+   "definition": "stretching 不可数，常搭配 do stretching、static/dynamic stretching。指运动前后提高柔韧性或放松肌肉的动作；热身 warm-up 是运动前升高心率和体温的整体准备，可能包含动态拉伸，但不等同于拉伸。",
+   "examples": [
+    {
+     "en": "After a long run, I always do some stretching to relax my tight leg muscles.",
+     "zh": "长跑之后，我总是做一些拉伸来放松紧绷的腿部肌肉。"
+    },
+    {
+     "en": "Dynamic stretching before a workout can help prepare your body for squats and push-ups.",
+     "zh": "锻炼前做动态拉伸有助于让身体为深蹲和俯卧撑做好准备。"
+    }
+   ],
+   "tags": [
+    "美容健身"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "stretching",
+   "pair": "en-zh",
+   "slug": "stretching",
+   "lang": "en",
+   "translation": "拉伸",
+   "shortAnswer": "Stretching 的中文意思是「拉伸」，指伸展肌肉、提高柔韧性的动作；它常与 warm-up（热身）不同，warm-up 更侧重运动前准备。",
+   "definition": "Stretching 指伸展肌肉以提高柔韧性或放松，常见搭配 do stretching、static/dynamic stretching。在健身语境中，它应与 warm-up（热身）区分：热身多为运动前动态准备，拉伸可独立进行或作为其中一环。",
+   "examples": [
+    {
+     "en": "After a long run, I always do some stretching to relax my tight leg muscles.",
+     "zh": "长跑之后，我总是做一些拉伸来放松紧绷的腿部肌肉。"
+    },
+    {
+     "en": "Dynamic stretching before a workout can help prepare your body for squats and push-ups.",
+     "zh": "锻炼前做动态拉伸有助于让身体为深蹲和俯卧撑做好准备。"
+    }
+   ],
+   "tags": [
+    "美容健身"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "痘痘",
+   "pair": "zh-en",
+   "slug": "dou-dou",
+   "lang": "zh",
+   "translation": "pimple",
+   "shortAnswer": "痘痘的英文是 pimple。注意 pimple 通常指单个小脓包或红肿点，而 acne 是痘痘的统称，口语更常用 pimple 指具体一颗。",
+   "definition": "pimple 是可数名词，指脸上或身上冒出的单个小疙瘩，常搭配 pop a pimple（挤痘痘）、get a pimple（长痘痘）。若指成片、反复发作的痤疮，英语常用 acne 或 acne breakout，而不用 pimple。",
+   "examples": [
+    {
+     "en": "I woke up with a big pimple on my nose, so I tried not to touch it.",
+     "zh": "我醒来发现鼻子上冒了一颗大痘痘，所以尽量不去碰它。"
+    },
+    {
+     "en": "She uses a gentle cleanser every night to keep pimples from getting worse.",
+     "zh": "她每晚用温和的洁面乳，防止痘痘变得更严重。"
+    }
+   ],
+   "tags": [
+    "美容健身"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "pimple",
+   "pair": "en-zh",
+   "slug": "pimple",
+   "lang": "en",
+   "translation": "痘痘",
+   "shortAnswer": "pimple 的中文意思是痘痘。它特指一颗颗的小疙瘩或小脓包，而 acne 是痘痘的医学统称，通常指成片、反复的痤疮问题。",
+   "definition": "pimple 是日常口语词，指皮肤上冒出的单个小突起，常见搭配有 pop a pimple、get a pimple。正式或医学语境指痤疮整体时用 acne；说某人长痘可讲 have pimples 或 break out。",
+   "examples": [
+    {
+     "en": "I woke up with a big pimple on my nose, so I tried not to touch it.",
+     "zh": "我醒来发现鼻子上冒了一颗大痘痘，所以尽量不去碰它。"
+    },
+    {
+     "en": "She uses a gentle cleanser every night to keep pimples from getting worse.",
+     "zh": "她每晚用温和的洁面乳，防止痘痘变得更严重。"
+    }
+   ],
+   "tags": [
+    "美容健身"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "热身",
+   "pair": "zh-en",
+   "slug": "re-shen",
+   "lang": "zh",
+   "translation": "warm-up exercise",
+   "shortAnswer": "「热身」的英文是 warm-up exercise，指正式运动前的低强度准备活动，动词短语写作 warm up。",
+   "definition": "warm-up exercise 指运动前的低强度准备活动，如慢跑、动态拉伸，用于升高体温、激活肌肉、减少受伤。名词写 warm-up，动词写 warm up。",
+   "examples": [
+    {
+     "en": "Do a few warm-up exercises before you start lifting weights.",
+     "zh": "开始举重之前先做几组热身运动。"
+    },
+    {
+     "en": "A proper warm-up exercise routine can lower your risk of injury during squats and push-ups.",
+     "zh": "一套合适的热身运动流程可以降低你做深蹲和俯卧撑时受伤的风险。"
+    }
+   ],
+   "tags": [
+    "美容健身"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "warm-up exercise",
+   "pair": "en-zh",
+   "slug": "warm-up-exercise",
+   "lang": "en",
+   "translation": "热身",
+   "shortAnswer": "A warm-up exercise is 「热身」: light activity before a workout that prepares the body.",
+   "definition": "A warm-up exercise is gentle activity like jogging or dynamic stretching done before training to raise body temperature and prevent injury.",
+   "examples": [
+    {
+     "en": "Do a few warm-up exercises before you start lifting weights.",
+     "zh": "开始举重之前先做几组热身运动。"
+    },
+    {
+     "en": "A proper warm-up exercise routine can lower your risk of injury during squats and push-ups.",
+     "zh": "一套合适的热身运动流程可以降低你做深蹲和俯卧撑时受伤的风险。"
+    }
+   ],
+   "tags": [
+    "美容健身"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "肌肉酸痛",
+   "pair": "zh-en",
+   "slug": "ji-rou-suan-tong",
+   "lang": "zh",
+   "translation": "muscle soreness",
+   "shortAnswer": "「肌肉酸痛」的英文是 muscle soreness，指运动后延迟出现的酸痛，需与拉伤区分。",
+   "definition": "muscle soreness 指运动后 24-72 小时出现的迟发性肌肉酸痛，即 DOMS，常见于抗阻训练后。搭配 feel/relieve muscle soreness。",
+   "examples": [
+    {
+     "en": "I always feel muscle soreness in my legs after doing squats and lunges.",
+     "zh": "做完深蹲和弓步后，我的腿总是肌肉酸痛。"
+    },
+    {
+     "en": "Gentle stretching can help relieve muscle soreness after push-ups.",
+     "zh": "温和的拉伸有助于缓解俯卧撑后的肌肉酸痛。"
+    }
+   ],
+   "tags": [
+    "美容健身"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "muscle soreness",
+   "pair": "en-zh",
+   "slug": "muscle-soreness",
+   "lang": "en",
+   "translation": "肌肉酸痛",
+   "shortAnswer": "Muscle soreness means 肌肉酸痛 in Chinese, the delayed ache after exercise, not a muscle strain.",
+   "definition": "Muscle soreness is the ache in muscles 24-72 hours after exercise, known as DOMS. Collocations: feel or relieve muscle soreness.",
+   "examples": [
+    {
+     "en": "I always feel muscle soreness in my legs after doing squats and lunges.",
+     "zh": "做完深蹲和弓步后，我的腿总是肌肉酸痛。"
+    },
+    {
+     "en": "Gentle stretching can help relieve muscle soreness after push-ups.",
+     "zh": "温和的拉伸有助于缓解俯卧撑后的肌肉酸痛。"
+    }
+   ],
+   "tags": [
+    "美容健身"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "黑眼圈",
+   "pair": "zh-en",
+   "slug": "hei-yan-quan",
+   "lang": "zh",
+   "translation": "dark circles",
+   "shortAnswer": "「黑眼圈」的英文是 dark circles，通常用复数，指眼周暗沉，也可说 dark circles under the eyes。",
+   "definition": "dark circles 指眼周暗沉，常与疲劳、熬夜、遗传有关。常见搭配有 get/have dark circles，美妆语境可说 cover dark circles。",
+   "examples": [
+    {
+     "en": "I didn't sleep well last night, so I woke up with dark circles under my eyes.",
+     "zh": "我昨晚没睡好，所以醒来时眼睛下面有了黑眼圈。"
+    },
+    {
+     "en": "She uses a concealer to cover her dark circles before going to work.",
+     "zh": "她上班前用遮瑕膏遮住自己的黑眼圈。"
+    }
+   ],
+   "tags": [
+    "美容健身"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "dark circles",
+   "pair": "en-zh",
+   "slug": "dark-circles",
+   "lang": "en",
+   "translation": "黑眼圈",
+   "shortAnswer": "「dark circles」的中文意思是「黑眼圈」，指眼下暗色环状区域，通常用复数，单数 dark circle 很少使用。",
+   "definition": "dark circles 指眼周暗沉，常因疲劳、睡眠不足或遗传产生。常见搭配有 get/have dark circles，美妆语境可说 cover dark circles。",
+   "examples": [
+    {
+     "en": "I didn't sleep well last night, so I woke up with dark circles under my eyes.",
+     "zh": "我昨晚没睡好，所以醒来时眼睛下面有了黑眼圈。"
+    },
+    {
+     "en": "She uses a concealer to cover her dark circles before going to work.",
+     "zh": "她上班前用遮瑕膏遮住自己的黑眼圈。"
+    }
+   ],
+   "tags": [
+    "美容健身"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "皮肤干燥",
+   "pair": "zh-en",
+   "slug": "pi-fu-gan-zao",
+   "lang": "zh",
+   "translation": "dry skin",
+   "shortAnswer": "「皮肤干燥」用英语说是 dry skin，指皮肤缺水缺油、容易起皮紧绷的状态，常见于秋冬或干性肤质。",
+   "definition": "dry skin 是形容词加名词的固定搭配，描述皮肤干燥、起皮、紧绷。常见搭配有 have dry skin、dry skin care。",
+   "examples": [
+    {
+     "en": "In winter, my dry skin often feels tight and flaky, so I use a richer moisturizer.",
+     "zh": "冬天我的皮肤干燥，常常感觉紧绷起皮，所以我会用更滋润的面霜。"
+    },
+    {
+     "en": "If you have dry skin, avoid washing your face with hot water because it strips natural oils.",
+     "zh": "如果你是干性皮肤，避免用热水洗脸，因为热水会带走天然油脂。"
+    }
+   ],
+   "tags": [
+    "美容健身"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "dry skin",
+   "pair": "en-zh",
+   "slug": "dry-skin",
+   "lang": "en",
+   "translation": "皮肤干燥",
+   "shortAnswer": "「dry skin」的中文意思是「皮肤干燥」，指皮肤缺水缺油、容易起皮紧绷的状态，多见于秋冬或干性肤质。",
+   "definition": "dry skin 指皮肤干燥，常与 have、get 连用，如 I have dry skin。美容语境中常搭配 moisturizer。",
+   "examples": [
+    {
+     "en": "In winter, my dry skin often feels tight and flaky, so I use a richer moisturizer.",
+     "zh": "冬天我的皮肤干燥，常常感觉紧绷起皮，所以我会用更滋润的面霜。"
+    },
+    {
+     "en": "If you have dry skin, avoid washing your face with hot water because it strips natural oils.",
+     "zh": "如果你是干性皮肤，避免用热水洗脸，因为热水会带走天然油脂。"
+    }
+   ],
+   "tags": [
+    "美容健身"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "美白",
+   "pair": "zh-en",
+   "slug": "mei-bai",
+   "lang": "zh",
+   "translation": "skin whitening",
+   "shortAnswer": "美白的英文是 skin whitening，指通过护肤或医美手段让肤色变浅、提亮。",
+   "definition": "skin whitening 常指用精华或医美淡化黑色素、提亮肤色；日常也说 brightening，以避开敏感联想。",
+   "examples": [
+    {
+     "en": "She uses a skin whitening serum to even out her skin tone.",
+     "zh": "她使用一款美白精华来均匀肤色。"
+    },
+    {
+     "en": "Many dermatologists recommend skin whitening treatments for fading dark spots.",
+     "zh": "许多皮肤科医生推荐用美白疗程来淡化色斑。"
+    }
+   ],
+   "tags": [
+    "美容健身"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "skin whitening",
+   "pair": "en-zh",
+   "slug": "skin-whitening",
+   "lang": "en",
+   "translation": "美白",
+   "shortAnswer": "Skin whitening means 美白, lightening skin tone with skincare or medical treatments.",
+   "definition": "Skin whitening uses products or treatments to reduce melanin and even out tone; brightening is a softer term.",
+   "examples": [
+    {
+     "en": "She uses a skin whitening serum to even out her skin tone.",
+     "zh": "她使用一款美白精华来均匀肤色。"
+    },
+    {
+     "en": "Many dermatologists recommend skin whitening treatments for fading dark spots.",
+     "zh": "许多皮肤科医生推荐用美白疗程来淡化色斑。"
+    }
+   ],
+   "tags": [
+    "美容健身"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "护肤品",
+   "pair": "zh-en",
+   "slug": "hu-fu-pin",
+   "lang": "zh",
+   "translation": "skincare products",
+   "shortAnswer": "护肤品的英文是 skincare products。日常口语也常用 skincare 单指护肤品，但正式场合或强调产品时宜用完整短语 skincare products。",
+   "definition": "skincare products 是复数名词短语，泛指面霜、精华、洁面等护肤产品；英式拼写常作 skincare，美式亦写 skin care。注意与 makeup（化妆品）区别，护肤品侧重护理而非修饰。",
+   "examples": [
+    {
+     "en": "She spends a lot of money on skincare products, especially serums and moisturizers.",
+     "zh": "她在护肤品上花了很多钱，尤其是精华和保湿霜。"
+    },
+    {
+     "en": "Before traveling, I always pack my essential skincare products like sunscreen and cleanser.",
+     "zh": "旅行前，我总是会带上防晒霜和洁面乳等必备护肤品。"
+    }
+   ],
+   "tags": [
+    "美容健身"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "skincare products",
+   "pair": "en-zh",
+   "slug": "skincare-products",
+   "lang": "en",
+   "translation": "护肤品",
+   "shortAnswer": "Skincare products 中文意思是护肤品。它统指护理皮肤的产品，与 cosmetic products（美容产品，可能含彩妆）不同，更强调清洁、保湿、防护等护肤功能。",
+   "definition": "Skincare products 是复数名词短语，指面霜、精华、洁面等护肤品，正式和口语均常用。英式拼写常连写为 skincare，美式可分开写 skin care。注意不要与 makeup（彩妆）混淆。",
+   "examples": [
+    {
+     "en": "She spends a lot of money on skincare products, especially serums and moisturizers.",
+     "zh": "她在护肤品上花了很多钱，尤其是精华和保湿霜。"
+    },
+    {
+     "en": "Before traveling, I always pack my essential skincare products like sunscreen and cleanser.",
+     "zh": "旅行前，我总是会带上防晒霜和洁面乳等必备护肤品。"
+    }
+   ],
+   "tags": [
+    "美容健身"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "化妆",
+   "pair": "zh-en",
+   "slug": "hua-zhuang",
+   "lang": "zh",
+   "translation": "put on makeup",
+   "shortAnswer": "「化妆」的英文是 put on makeup，表示涂抹化妆品、修饰面容的动作。注意 makeup 是名词，动词短语要加 put on；只说 makeup 则是名词。",
+   "definition": "put on makeup 强调「上妆」这一动作过程，常用于日常口语；名词形式是 makeup（不可数），如 wear makeup 表示「化着妆」。若指化妆这个行为本身，也可说 do one's makeup，但 do makeup 更偏专业化妆师的工作。",
+   "examples": [
+    {
+     "en": "She spends about ten minutes putting on makeup every morning before work.",
+     "zh": "她每天早上上班前花大约十分钟化妆。"
+    },
+    {
+     "en": "If you're going to the party, you might want to put on some makeup first.",
+     "zh": "如果你要去参加派对，也许最好先化点妆。"
+    }
+   ],
+   "tags": [
+    "美容健身"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "put on makeup",
+   "pair": "en-zh",
+   "slug": "put-on-makeup",
+   "lang": "en",
+   "translation": "化妆",
+   "shortAnswer": "put on makeup 的中文意思是「化妆」，指往脸上涂抹化妆品来修饰容貌。它强调上妆的动作，而 wear makeup 强调化着妆的状态，两者侧重点不同。",
+   "definition": "put on makeup 是口语常用的动词短语，表示「上妆、化妆」；名词 makeup 不可数，搭配 wear/apply/remove makeup。日常说 do one's makeup 也指化妆，但偏打理妆容的过程；正式场合多用 apply makeup。",
+   "examples": [
+    {
+     "en": "She spends about ten minutes putting on makeup every morning before work.",
+     "zh": "她每天早上上班前花大约十分钟化妆。"
+    },
+    {
+     "en": "If you're going to the party, you might want to put on some makeup first.",
+     "zh": "如果你要去参加派对，也许最好先化点妆。"
+    }
+   ],
+   "tags": [
+    "美容健身"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "卸妆",
+   "pair": "zh-en",
+   "slug": "xie-zhuang",
+   "lang": "zh",
+   "translation": "makeup remover",
+   "shortAnswer": "「卸妆」的英文是 makeup remover，指卸除彩妆的产品。注意动词「卸妆」常用 remove makeup，而 makeup remover 是名词，指卸妆产品。",
+   "definition": "makeup remover 是名词，指卸妆水、卸妆油等产品。常见搭配：use makeup remover、gentle makeup remover。动词「卸妆」应说 remove makeup，例如 I need to remove my makeup。",
+   "examples": [
+    {
+     "en": "She used a gentle makeup remover to take off her eye makeup.",
+     "zh": "她用了温和的卸妆液来卸眼妆。"
+    },
+    {
+     "en": "I always keep makeup remover wipes in my gym bag.",
+     "zh": "我总是在健身包里放卸妆湿巾。"
+    }
+   ],
+   "tags": [
+    "美容健身"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "makeup remover",
+   "pair": "en-zh",
+   "slug": "makeup-remover",
+   "lang": "en",
+   "translation": "卸妆",
+   "shortAnswer": "Makeup remover 的中文意思是「卸妆」，指卸除彩妆的产品。与 cleanser 不同，它专门针对彩妆，尤其是防水化妆品。",
+   "definition": "makeup remover 是名词，指卸妆产品，常见搭配：use makeup remover、apply makeup remover。动词形式是 remove makeup。口语中也可说 take off makeup。注意不要与 cleanser（洗面奶）混淆。",
+   "examples": [
+    {
+     "en": "She used a gentle makeup remover to take off her eye makeup.",
+     "zh": "她用了温和的卸妆液来卸眼妆。"
+    },
+    {
+     "en": "I always keep makeup remover wipes in my gym bag.",
+     "zh": "我总是在健身包里放卸妆湿巾。"
+    }
+   ],
+   "tags": [
+    "美容健身"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "理发",
+   "pair": "zh-en",
+   "slug": "li-fa",
+   "lang": "zh",
+   "translation": "haircut",
+   "shortAnswer": "「理发」的英文是 haircut，既指剪发行为也指发型。注意：haircut 是可数名词，get a haircut 才是「去理发」；haircut 不是动词，不能直接说 I haircut。",
+   "definition": "表示「理发」常用 get/have a haircut，如 I need to get a haircut。haircut 指剪发行为或剪后的发型，不可数用法错误；动词「剪头发」用 cut one's hair 或 have one's hair cut。",
+   "examples": [
+    {
+     "en": "I need to get a haircut before the job interview next week.",
+     "zh": "下周面试前我需要去理个发。"
+    },
+    {
+     "en": "She got a new haircut and everyone said it made her look younger.",
+     "zh": "她换了个新发型，大家都说她看起来更年轻了。"
+    }
+   ],
+   "tags": [
+    "美容健身"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "haircut",
+   "pair": "en-zh",
+   "slug": "haircut",
+   "lang": "en",
+   "translation": "理发",
+   "shortAnswer": "Haircut 中文意思是「理发」，指剪头发的行为或剪后的发型。它和 hairstyle 不同：haircut 强调剪这个动作或结果，hairstyle 更强调日常造型风格。",
+   "definition": "Haircut 是可数名词，常见搭配 get/have a haircut，意为去理发；也可指剪后的发型，如 a short haircut。口语中 haircut 不表示「发型设计」，发型设计多用 hairstyle 或 hairdo。",
+   "examples": [
+    {
+     "en": "I need to get a haircut before the job interview next week.",
+     "zh": "下周面试前我需要去理个发。"
+    },
+    {
+     "en": "She got a new haircut and everyone said it made her look younger.",
+     "zh": "她换了个新发型，大家都说她看起来更年轻了。"
+    }
+   ],
+   "tags": [
+    "美容健身"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "面膜",
+   "pair": "zh-en",
+   "slug": "mian-mo",
+   "lang": "zh",
+   "translation": "face mask",
+   "shortAnswer": "面膜的英文是 face mask。日常护肤说 apply a face mask 很自然，注意 sheet mask 指片状面膜，而泥膜等 wash-off mask 用法不同。",
+   "definition": "face mask 可作名词，搭配 apply/use/wear a face mask；片状面膜常说 sheet mask。做面膜的行为用 apply a face mask 或 put on a face mask，避免只动词 mask 造成歧义。",
+   "examples": [
+    {
+     "en": "After a long week, I like to apply a hydrating face mask and relax at home.",
+     "zh": "忙了一周后，我喜欢敷一张补水面膜，在家放松一下。"
+    },
+    {
+     "en": "She uses a clay face mask twice a week to control excess oil.",
+     "zh": "她每周用两次泥膜来控制多余油脂。"
+    }
+   ],
+   "tags": [
+    "美容健身"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "face mask",
+   "pair": "en-zh",
+   "slug": "face-mask",
+   "lang": "en",
+   "translation": "面膜",
+   "shortAnswer": "face mask 的中文意思是面膜，指敷在脸上的护肤产品。与 sheet mask（片状面膜）相比，face mask 是更宽泛的上位词，可包括泥膜、涂抹式面膜。",
+   "definition": "face mask 是常见护肤名词，口语和书面均可。搭配 apply/wear/use a face mask；注意不要与 medical mask（医用口罩）混淆，后者更常指防护口罩。",
+   "examples": [
+    {
+     "en": "After a long week, I like to apply a hydrating face mask and relax at home.",
+     "zh": "忙了一周后，我喜欢敷一张补水面膜，在家放松一下。"
+    },
+    {
+     "en": "She uses a clay face mask twice a week to control excess oil.",
+     "zh": "她每周用两次泥膜来控制多余油脂。"
+    }
+   ],
+   "tags": [
+    "美容健身"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "染发",
+   "pair": "zh-en",
+   "slug": "ran-fa",
+   "lang": "zh",
+   "translation": "hair dyeing",
+   "shortAnswer": "染发就是 hair dyeing，指用染发剂把头发染成另一种颜色，不是指染发剂本身。",
+   "definition": "hair dyeing 指改变头发颜色的过程，染发剂叫 hair dye。常见搭配 salon hair dyeing、at-home hair dyeing，与漂发不同。",
+   "examples": [
+    {
+     "en": "She spends hours on hair dyeing every few months to keep her red color.",
+     "zh": "她每隔几个月就要花好几个小时染发，以保持红色。"
+    },
+    {
+     "en": "At-home hair dyeing can save money but often gives uneven results.",
+     "zh": "在家染发能省钱，但常常导致颜色不均匀。"
+    }
+   ],
+   "tags": [
+    "美容健身"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "hair dyeing",
+   "pair": "en-zh",
+   "slug": "hair-dyeing",
+   "lang": "en",
+   "translation": "染发",
+   "shortAnswer": "Hair dyeing means 染发: coloring hair with dye, not the product itself.",
+   "definition": "Hair dyeing is the act of coloring hair with dye; the product is hair dye. Common in salon and at-home use, unlike bleaching.",
+   "examples": [
+    {
+     "en": "She spends hours on hair dyeing every few months to keep her red color.",
+     "zh": "她每隔几个月就要花好几个小时染发，以保持红色。"
+    },
+    {
+     "en": "At-home hair dyeing can save money but often gives uneven results.",
+     "zh": "在家染发能省钱，但常常导致颜色不均匀。"
+    }
+   ],
+   "tags": [
+    "美容健身"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "减肥餐",
+   "pair": "zh-en",
+   "slug": "jian-fei-can",
+   "lang": "zh",
+   "translation": "diet meal",
+   "shortAnswer": "「减肥餐」的英文是 diet meal，指为控制体重而设计的低热量餐食。注意 diet meal 强调一餐，不是长期节食 diet 本身。",
+   "definition": "diet meal 是可数名词，常搭配 eat/have/prepare a diet meal。它指一顿具体的减肥餐，如低卡沙拉或鸡胸肉餐；若泛指减肥饮食计划，英语更常说 diet 或 weight-loss diet。",
+   "examples": [
+    {
+     "en": "For lunch, she packed a simple diet meal with grilled chicken and steamed broccoli.",
+     "zh": "午餐时，她带了一份简单的减肥餐，里面有烤鸡胸和蒸西兰花。"
+    },
+    {
+     "en": "He often skips dessert and orders a diet meal when eating out with friends.",
+     "zh": "和朋友外出吃饭时，他常跳过甜点，点一份减肥餐。"
+    }
+   ],
+   "tags": [
+    "美容健身"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "diet meal",
+   "pair": "en-zh",
+   "slug": "diet-meal",
+   "lang": "en",
+   "translation": "减肥餐",
+   "shortAnswer": "diet meal 的中文意思是「减肥餐」，指为减重而控制热量的一餐。它与 diet 不同：diet meal 是具体的一顿饭，diet 可指整套饮食方案。",
+   "definition": "diet meal 是可数名词，常见搭配有 eat a diet meal、prepare diet meals。多用于日常口语和健康类文章，指低热量、低脂的一餐；若说「我在节食」通常用 I'm on a diet，而不是 I eat a diet meal。",
+   "examples": [
+    {
+     "en": "For lunch, she packed a simple diet meal with grilled chicken and steamed broccoli.",
+     "zh": "午餐时，她带了一份简单的减肥餐，里面有烤鸡胸和蒸西兰花。"
+    },
+    {
+     "en": "He often skips dessert and orders a diet meal when eating out with friends.",
+     "zh": "和朋友外出吃饭时，他常跳过甜点，点一份减肥餐。"
+    }
+   ],
+   "tags": [
+    "美容健身"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "腰围",
+   "pair": "zh-en",
+   "slug": "yao-wei",
+   "lang": "zh",
+   "translation": "waistline",
+   "shortAnswer": "「腰围」的英文是 waistline；它指腰部最细处的围度，不是皮带位置，注意别和 waist（腰部区域）混用。",
+   "definition": "waistline 指天然腰线或衣物腰位，测腰围常说 measure your waistline、a slim waistline；美容健身语境谈身材线条，比 waist 更强调围度。",
+   "examples": [
+    {
+     "en": "Regular aerobic exercise and core work like crunches can help you trim your waistline.",
+     "zh": "规律的有氧运动和卷腹等核心训练有助于缩小腰围。"
+    },
+    {
+     "en": "She measured her waistline before starting the stretching and warm-up routine.",
+     "zh": "在开始拉伸和热身训练前，她量了自己的腰围。"
+    }
+   ],
+   "tags": [
+    "美容健身"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "waistline",
+   "pair": "en-zh",
+   "slug": "waistline",
+   "lang": "en",
+   "translation": "腰围",
+   "shortAnswer": "waistline 的中文意思是「腰围」，也可指腰线；它强调腰部围度或衣物腰位，与泛指腰部的 waist 不同。",
+   "definition": "waistline 指腰部最细处的围度或衣物腰线，常见搭配 slim waistline、measure your waistline；健身谈身材时更常用，注意与 waist（腰部区域）区分。",
+   "examples": [
+    {
+     "en": "Regular aerobic exercise and core work like crunches can help you trim your waistline.",
+     "zh": "规律的有氧运动和卷腹等核心训练有助于缩小腰围。"
+    },
+    {
+     "en": "She measured her waistline before starting the stretching and warm-up routine.",
+     "zh": "在开始拉伸和热身训练前，她量了自己的腰围。"
+    }
+   ],
+   "tags": [
+    "美容健身"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "深蹲",
+   "pair": "zh-en",
+   "slug": "shen-dun",
+   "lang": "zh",
+   "translation": "squat",
+   "shortAnswer": "「深蹲」的英文是 squat，既是名词也是动词。做力量训练说 do squats，口语中也可说 hit some squats，别和「拉伸」stretching 混用。",
+   "definition": "squat 指屈膝下蹲的健身动作，常搭配 do squats、bodyweight squat（徒手深蹲）、back squat（杠铃背蹲）。注意区分 squat 与 stretch：前者是力量动作，后者是拉伸热身，训练后肌肉酸痛称 DOMS。",
+   "examples": [
+    {
+     "en": "My trainer told me to do three sets of squats before moving on to push-ups.",
+     "zh": "教练让我先做三组深蹲，然后再做俯卧撑。"
+    },
+    {
+     "en": "After leg day, my thighs were so sore that even a light squat hurt.",
+     "zh": "练腿日之后，我的大腿酸得连轻轻蹲一下都疼。"
+    }
+   ],
+   "tags": [
+    "美容健身"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "squat",
+   "pair": "en-zh",
+   "slug": "squat",
+   "lang": "en",
+   "translation": "深蹲",
+   "shortAnswer": "Squat 的中文意思是「深蹲」，指屈膝下蹲再起身的健身动作。它和 push-up（俯卧撑）、crunch（卷腹）并列，属于常见力量训练，不是拉伸。",
+   "definition": "squat 作名词指深蹲这一动作，作动词指做深蹲，如 do squats、squat down。日常口语也可表示「蹲坐、擅自占用空屋」。健身语境常与 warm-up、muscle soreness、DOMS 同现，注意与 stretching 区分。",
+   "examples": [
+    {
+     "en": "My trainer told me to do three sets of squats before moving on to push-ups.",
+     "zh": "教练让我先做三组深蹲，然后再做俯卧撑。"
+    },
+    {
+     "en": "After leg day, my thighs were so sore that even a light squat hurt.",
+     "zh": "练腿日之后，我的大腿酸得连轻轻蹲一下都疼。"
+    }
+   ],
+   "tags": [
+    "美容健身"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "卡路里",
+   "pair": "zh-en",
+   "slug": "ka-lu-li",
+   "lang": "zh",
+   "translation": "calorie",
+   "shortAnswer": "「卡路里」的英文是 calorie，是食物能量与运动消耗的常用单位，日常多指大卡。",
+   "definition": "count calories 指计算卡路里、控制热量摄入；burn calories 指运动消耗热量；low-calorie 指低热量的。",
+   "examples": [
+    {
+     "en": "If you want to lose weight, you need to burn more calories than you take in.",
+     "zh": "如果你想减肥，你需要消耗的卡路里比摄入的多。"
+    },
+    {
+     "en": "This sports drink claims to have only 50 calories per bottle, so it's a good choice after a workout.",
+     "zh": "这款运动饮料声称每瓶只有50卡路里，所以是锻炼后的好选择。"
+    }
+   ],
+   "tags": [
+    "美容健身"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "calorie",
+   "pair": "en-zh",
+   "slug": "calorie",
+   "lang": "en",
+   "translation": "卡路里",
+   "shortAnswer": "Calorie 的中文意思是「卡路里」，指食物能量或运动消耗的单位，日常多等于千卡。",
+   "definition": "常用搭配有 count calories、burn calories、low-calorie diet；营养标签和健身语境里 calorie 多指大卡。",
+   "examples": [
+    {
+     "en": "If you want to lose weight, you need to burn more calories than you take in.",
+     "zh": "如果你想减肥，你需要消耗的卡路里比摄入的多。"
+    },
+    {
+     "en": "This sports drink claims to have only 50 calories per bottle, so it's a good choice after a workout.",
+     "zh": "这款运动饮料声称每瓶只有50卡路里，所以是锻炼后的好选择。"
+    }
+   ],
+   "tags": [
+    "美容健身"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "俯卧撑",
+   "pair": "zh-en",
+   "slug": "fu-wo-cheng",
+   "lang": "zh",
+   "translation": "push-up",
+   "shortAnswer": "俯卧撑的英文是 push-up，指俯身撑起身体的徒手力量训练。注意它是无氧力量动作，别与热身的 warm-up 或拉伸 stretching 混为一谈。",
+   "definition": "push-up 是可数名词，复数 push-ups，常用搭配 do push-ups（做俯卧撑）、do 20 push-ups。它属无氧力量训练，练胸、肩、三头肌；注意与热身 warm-up 拼写和词义都不同，练后隔天酸痛多为 DOMS 迟发性肌肉酸痛。",
+   "examples": [
+    {
+     "en": "My trainer told me to do three sets of push-ups before moving on to squats.",
+     "zh": "教练让我先做三组俯卧撑，再接着做深蹲。"
+    },
+    {
+     "en": "If regular push-ups are too hard, start on your knees and build up your strength.",
+     "zh": "如果标准俯卧撑太难，可以先从跪姿做起，慢慢增强力量。"
+    }
+   ],
+   "tags": [
+    "美容健身"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "push-up",
+   "pair": "en-zh",
+   "slug": "push-up",
+   "lang": "en",
+   "translation": "俯卧撑",
+   "shortAnswer": "push-up 的中文意思是俯卧撑，一种俯身撑起身体的徒手力量训练动作。它是无氧力量练习，与热身 warm-up、拉伸 stretching 在拼写和含义上都不同。",
+   "definition": "push-up 为可数名词，常用 do push-ups 表示做俯卧撑，是练胸肌、肩部与三头肌的无氧力量动作，日常健身口语中极常见。易错点：不要与 warm-up（热身）混淆，训练后次日的肌肉酸痛称 DOMS 迟发性肌肉酸痛。",
+   "examples": [
+    {
+     "en": "My trainer told me to do three sets of push-ups before moving on to squats.",
+     "zh": "教练让我先做三组俯卧撑，再接着做深蹲。"
+    },
+    {
+     "en": "If regular push-ups are too hard, start on your knees and build up your strength.",
+     "zh": "如果标准俯卧撑太难，可以先从跪姿做起，慢慢增强力量。"
+    }
+   ],
+   "tags": [
+    "美容健身"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "体重秤",
+   "pair": "zh-en",
+   "slug": "ti-zhong-cheng",
+   "lang": "zh",
+   "translation": "bathroom scale",
+   "shortAnswer": "「体重秤」的英文是 bathroom scale。bathroom scale 特指家用人体秤，不是称食材的 kitchen scale。",
+   "definition": "bathroom scale 是名词，指放在浴室或卧室、用来称体重的小型秤。常见搭配：step on the bathroom scale（站上体重秤）、a digital bathroom scale（电子体重秤）。注意不要和 kitchen scale（厨房秤）混用。",
+   "examples": [
+    {
+     "en": "I weigh myself on the bathroom scale every morning before breakfast.",
+     "zh": "我每天早晨早饭前都用体重秤称体重。"
+    },
+    {
+     "en": "This digital bathroom scale is more accurate than the old analog one.",
+     "zh": "这台电子体重秤比旧的机械秤更准确。"
+    }
+   ],
+   "tags": [
+    "美容健身"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "bathroom scale",
+   "pair": "en-zh",
+   "slug": "bathroom-scale",
+   "lang": "en",
+   "translation": "体重秤",
+   "shortAnswer": "bathroom scale 的中文意思是体重秤，特指家用称体重的秤。它和 kitchen scale（厨房秤）不同，后者用于称食材。",
+   "definition": "bathroom scale 指家用体重秤，常与 step on、digital、analog 等搭配。口语中也可简称 scale，但在需要区分时仍说 bathroom scale，以免与 kitchen scale 或 lab scale 混淆。",
+   "examples": [
+    {
+     "en": "I weigh myself on the bathroom scale every morning before breakfast.",
+     "zh": "我每天早晨早饭前都用体重秤称体重。"
+    },
+    {
+     "en": "This digital bathroom scale is more accurate than the old analog one.",
+     "zh": "这台电子体重秤比旧的机械秤更准确。"
+    }
+   ],
+   "tags": [
+    "美容健身"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "有氧运动",
+   "pair": "zh-en",
+   "slug": "you-yang-yun-dong",
+   "lang": "zh",
+   "translation": "aerobic exercise",
+   "shortAnswer": "有氧运动就是 aerobic exercise，比如跑步、游泳，能提升心率和耐力。",
+   "definition": "aerobic exercise 指有氧运动，靠氧气供能、持续时间长。常见搭配 do aerobic exercise。易混：与 anaerobic exercise 无氧运动相对。",
+   "examples": [
+    {
+     "en": "Doctors recommend at least 150 minutes of moderate aerobic exercise per week to improve heart health.",
+     "zh": "医生建议每周至少进行150分钟中等强度的有氧运动，以改善心脏健康。"
+    },
+    {
+     "en": "She does aerobic exercise every morning, but she also includes stretching to prevent muscle soreness.",
+     "zh": "她每天早上做有氧运动，但也会加入拉伸来预防肌肉酸痛。"
+    }
+   ],
+   "tags": [
+    "美容健身"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "aerobic exercise",
+   "pair": "en-zh",
+   "slug": "aerobic-exercise",
+   "lang": "en",
+   "translation": "有氧运动",
+   "shortAnswer": "aerobic exercise 就是“有氧运动”，如跑步、游泳，能提升心肺耐力。",
+   "definition": "aerobic exercise 指有氧运动，靠氧气持续供能，如慢跑、游泳。常用 do aerobic exercise，对比 anaerobic exercise。",
+   "examples": [
+    {
+     "en": "Doctors recommend at least 150 minutes of moderate aerobic exercise per week to improve heart health.",
+     "zh": "医生建议每周至少进行150分钟中等强度的有氧运动，以改善心脏健康。"
+    },
+    {
+     "en": "She does aerobic exercise every morning, but she also includes stretching to prevent muscle soreness.",
+     "zh": "她每天早上做有氧运动，但也会加入拉伸来预防肌肉酸痛。"
+    }
+   ],
+   "tags": [
+    "美容健身"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "增肌",
+   "pair": "zh-en",
+   "slug": "zeng-ji",
+   "lang": "zh",
+   "translation": "build muscle",
+   "shortAnswer": "「增肌」的英文是 build muscle，指通过力量训练与合理营养来增加肌肉量。",
+   "definition": "build muscle 指通过抗阻力训练增加肌肉围度与力量，名词形式为 muscle building 或 muscle gain，口语也可说 put on muscle。",
+   "examples": [
+    {
+     "en": "To build muscle, you need to combine resistance training with enough protein and rest.",
+     "zh": "要增肌，你需要将抗阻力训练与充足的蛋白质和休息结合起来。"
+    },
+    {
+     "en": "He lifted weights for a year to build muscle and tracked his progress closely.",
+     "zh": "他举重一年来增肌，并密切记录自己的进展。"
+    }
+   ],
+   "tags": [
+    "美容健身"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "build muscle",
+   "pair": "en-zh",
+   "slug": "build-muscle",
+   "lang": "en",
+   "translation": "增肌",
+   "shortAnswer": "「build muscle」的中文意思是「增肌」，即通过力量训练与合理饮食来增加肌肉量。",
+   "definition": "build muscle 指通过抗阻力训练刺激肌肉生长，常见搭配有 build muscle mass、build muscle fast，正式说法为 muscle hypertrophy。",
+   "examples": [
+    {
+     "en": "To build muscle, you need to combine resistance training with enough protein and rest.",
+     "zh": "要增肌，你需要将抗阻力训练与充足的蛋白质和休息结合起来。"
+    },
+    {
+     "en": "He lifted weights for a year to build muscle and tracked his progress closely.",
+     "zh": "他举重一年来增肌，并密切记录自己的进展。"
+    }
+   ],
+   "tags": [
+    "美容健身"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "无氧运动",
+   "pair": "zh-en",
+   "slug": "wu-yang-yun-dong",
+   "lang": "zh",
+   "translation": "anaerobic exercise",
+   "shortAnswer": "「无氧运动」的英文是 anaerobic exercise，指短时高强度的运动，如举重、短跑。",
+   "definition": "anaerobic exercise 指无氧运动，供氧不足下的短时高强度训练，如深蹲、短跑。常与有氧运动 aerobic exercise 相对。",
+   "examples": [
+    {
+     "en": "Sprinting and heavy weightlifting are classic examples of anaerobic exercise.",
+     "zh": "短跑和大重量举重是无氧运动的典型例子。"
+    },
+    {
+     "en": "If you want to build muscle, add anaerobic exercise like squats and push-ups to your routine.",
+     "zh": "如果你想增肌，可以在日常训练中加入深蹲和俯卧撑等无氧运动。"
+    }
+   ],
+   "tags": [
+    "美容健身"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "anaerobic exercise",
+   "pair": "en-zh",
+   "slug": "anaerobic-exercise",
+   "lang": "en",
+   "translation": "无氧运动",
+   "shortAnswer": "Anaerobic exercise means 无氧运动 in Chinese: short, intense activity like sprinting or weightlifting.",
+   "definition": "Anaerobic exercise is 无氧运动: brief, high-intensity training without enough oxygen, such as sprinting or lifting.",
+   "examples": [
+    {
+     "en": "Sprinting and heavy weightlifting are classic examples of anaerobic exercise.",
+     "zh": "短跑和大重量举重是无氧运动的典型例子。"
+    },
+    {
+     "en": "If you want to build muscle, add anaerobic exercise like squats and push-ups to your routine.",
+     "zh": "如果你想增肌，可以在日常训练中加入深蹲和俯卧撑等无氧运动。"
+    }
+   ],
+   "tags": [
+    "美容健身"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "养猫",
+   "pair": "zh-en",
+   "slug": "yang-mao",
+   "lang": "zh",
+   "translation": "keep a cat",
+   "shortAnswer": "「养猫」的英文是 keep a cat，强调长期饲养并照料。注意口语中更常说 have a cat 表示家里有猫；追问日常照顾时才用 keep a cat 突出照顾责任。",
+   "definition": "keep a cat 指把猫作为宠物长期饲养、负责其饮食健康，比 have a cat 更强调照料责任。常见搭配：keep a cat indoors（室内养猫）、keep a cat as a pet。若指短暂收留应说 foster a cat（寄养/代养），不要用 keep。",
+   "examples": [
+    {
+     "en": "My landlord doesn't allow tenants to keep a cat, so I'm looking for a pet-friendly apartment.",
+     "zh": "我的房东不允许租客养猫，所以我正在找可以养宠物的公寓。"
+    },
+    {
+     "en": "If you decide to keep a cat, remember to budget for cat litter, deworming, and regular vet visits.",
+     "zh": "如果你决定养猫，记得把猫砂、驱虫和定期看兽医的费用算进预算。"
+    }
+   ],
+   "tags": [
+    "宠物"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "keep a cat",
+   "pair": "en-zh",
+   "slug": "keep-a-cat",
+   "lang": "en",
+   "translation": "养猫",
+   "shortAnswer": "keep a cat 的中文意思是「养猫」，指长期饲养并照顾一只猫。它比 have a cat 更强调照料责任；have a cat 只是说家里有猫。",
+   "definition": "keep a cat 意为把猫当宠物长期饲养并负责其生活，中性偏正式，常见于书面或认真讨论养宠责任的场合。注意 keep 后接动物时强调饲养照料，接物品则常指保存；短暂收留用 foster a cat 而非 keep。",
+   "examples": [
+    {
+     "en": "My landlord doesn't allow tenants to keep a cat, so I'm looking for a pet-friendly apartment.",
+     "zh": "我的房东不允许租客养猫，所以我正在找可以养宠物的公寓。"
+    },
+    {
+     "en": "If you decide to keep a cat, remember to budget for cat litter, deworming, and regular vet visits.",
+     "zh": "如果你决定养猫，记得把猫砂、驱虫和定期看兽医的费用算进预算。"
+    }
+   ],
+   "tags": [
+    "宠物"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "卷腹",
+   "pair": "zh-en",
+   "slug": "juan-fu",
+   "lang": "zh",
+   "translation": "crunch",
+   "shortAnswer": "卷腹的英文是 crunch，指仰卧屈膝、靠腹肌收缩抬起上背的核心训练动作，注意与 sit-up 区分。",
+   "definition": "crunch 常用复数 crunches，如 do crunches、bicycle crunch。它主要练腹直肌，与 squat、push-up 常同组训练；练后酸胀多为 DOMS。",
+   "examples": [
+    {
+     "en": "I do three sets of crunches after my warm-up, then move on to squats and push-ups.",
+     "zh": "热身之后我做三组卷腹，然后接着做深蹲和俯卧撑。"
+    },
+    {
+     "en": "If your lower back hurts during crunches, you're probably pulling with your hip flexors instead of your abs.",
+     "zh": "如果做卷腹时下背疼，你很可能是在用髋屈肌发力，而不是腹肌。"
+    }
+   ],
+   "tags": [
+    "美容健身"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "crunch",
+   "pair": "en-zh",
+   "slug": "crunch",
+   "lang": "en",
+   "translation": "卷腹",
+   "shortAnswer": "Crunch 的中文是卷腹，即仰卧屈膝、用腹肌把上背卷离地面的核心动作，与 sit-up 不同。",
+   "definition": "crunch 指卷腹动作，常用复数 crunches，搭配 do crunches、bicycle crunch；属腹肌孤立训练，常与 squat、push-up 并列。",
+   "examples": [
+    {
+     "en": "I do three sets of crunches after my warm-up, then move on to squats and push-ups.",
+     "zh": "热身之后我做三组卷腹，然后接着做深蹲和俯卧撑。"
+    },
+    {
+     "en": "If your lower back hurts during crunches, you're probably pulling with your hip flexors instead of your abs.",
+     "zh": "如果做卷腹时下背疼，你很可能是在用髋屈肌发力，而不是腹肌。"
+    }
+   ],
+   "tags": [
+    "美容健身"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "养狗",
+   "pair": "zh-en",
+   "slug": "yang-gou",
+   "lang": "zh",
+   "translation": "keep a dog",
+   "shortAnswer": "「养狗」的英文是 keep a dog，强调长期饲养、照料一只狗。注意 keep a dog 侧重饲养状态，若要表达把狗带回家这件事，常说 get a dog 或 adopt a dog（领养）。",
+   "definition": "keep a dog 是英式、较传统的说法，美式口语更常直接说 have a dog。养狗涉及日常遛狗 walk the dog、定期驱虫 deworming、掉毛 shedding，以及公犬 neuter、母犬 spay 的绝育处理。",
+   "examples": [
+    {
+     "en": "My grandparents keep a dog and walk it in the park every morning.",
+     "zh": "我祖父母养了一只狗，每天早上都带它去公园遛。"
+    },
+    {
+     "en": "It takes time and money to keep a dog, so think carefully before you adopt one.",
+     "zh": "养狗需要时间和金钱，所以在领养之前要仔细考虑。"
+    }
+   ],
+   "tags": [
+    "宠物"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "keep a dog",
+   "pair": "en-zh",
+   "slug": "keep-a-dog",
+   "lang": "en",
+   "translation": "养狗",
+   "shortAnswer": "“keep a dog”的中文意思是「养狗」，指长期饲养并照料一只狗。“keep”强调持续的饲养状态，比“buy a dog”更侧重日常照料，而不是购买这个动作。",
+   "definition": "keep a dog 意为饲养、照料一只狗，常见于英式英语；美式口语多用 have a dog。注意区分：养狗是 keep/have a dog，领养是 adopt a dog，把狗带回家是 get a dog，不要一律用 buy。",
+   "examples": [
+    {
+     "en": "My grandparents keep a dog and walk it in the park every morning.",
+     "zh": "我祖父母养了一只狗，每天早上都带它去公园遛。"
+    },
+    {
+     "en": "It takes time and money to keep a dog, so think carefully before you adopt one.",
+     "zh": "养狗需要时间和金钱，所以在领养之前要仔细考虑。"
+    }
+   ],
+   "tags": [
+    "宠物"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "体脂率",
+   "pair": "zh-en",
+   "slug": "ti-zhi-lv",
+   "lang": "zh",
+   "translation": "body fat percentage",
+   "shortAnswer": "体脂率的英文是 body fat percentage，指脂肪占体重的百分比，健身中常说要降低体脂率。",
+   "definition": "常见搭配：measure/calculate body fat percentage、healthy body fat percentage。易错点：别与BMI混为一谈。",
+   "examples": [
+    {
+     "en": "My personal trainer told me to measure my body fat percentage every month to track my progress.",
+     "zh": "我的私人教练让我每个月测量一次体脂率，以跟踪我的进展。"
+    },
+    {
+     "en": "Doing both aerobic exercise and strength training can help lower your body fat percentage more effectively.",
+     "zh": "同时进行有氧运动和力量训练可以更有效地降低你的体脂率。"
+    }
+   ],
+   "tags": [
+    "美容健身"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "body fat percentage",
+   "pair": "en-zh",
+   "slug": "body-fat-percentage",
+   "lang": "en",
+   "translation": "体脂率",
+   "shortAnswer": "Body fat percentage 的中文是体脂率，即脂肪占体重的比例，健身中常用它衡量胖瘦。",
+   "definition": "核心词义：脂肪占体重的百分比。常见搭配：measure/calculate/track body fat percentage。易错点：注意区分BMI。",
+   "examples": [
+    {
+     "en": "My personal trainer told me to measure my body fat percentage every month to track my progress.",
+     "zh": "我的私人教练让我每个月测量一次体脂率，以跟踪我的进展。"
+    },
+    {
+     "en": "Doing both aerobic exercise and strength training can help lower your body fat percentage more effectively.",
+     "zh": "同时进行有氧运动和力量训练可以更有效地降低你的体脂率。"
+    }
+   ],
+   "tags": [
+    "美容健身"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "狗粮",
+   "pair": "zh-en",
+   "slug": "gou-liang",
+   "lang": "zh",
+   "translation": "dog food",
+   "shortAnswer": "狗粮的英文是 dog food，泛指供犬类食用的成品饲料。注意 dog food 是犬用食品，猫粮是 cat food，别在宠物店把两者混用。",
+   "definition": "dog food 指商业犬粮或犬类日常食物，搭配如 dry dog food（干粮）、wet dog food（湿粮）。口语里也可说 dog chow，但较随意；给狗喂食用 feed the dog。",
+   "examples": [
+    {
+     "en": "We buy grain-free dog food because our dog has sensitive skin.",
+     "zh": "我们买无谷狗粮，因为我们的狗皮肤敏感。"
+    },
+    {
+     "en": "Remember to store the dog food in an airtight container to keep it fresh.",
+     "zh": "记得把狗粮存放在密封容器里以保持新鲜。"
+    }
+   ],
+   "tags": [
+    "宠物"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "dog food",
+   "pair": "en-zh",
+   "slug": "dog-food",
+   "lang": "en",
+   "translation": "狗粮",
+   "shortAnswer": "Dog food 中文意思是“狗粮”，即专门给狗吃的商业饲料。它与 people food、table scraps 不同，特指犬类配方食品。",
+   "definition": "dog food 为不可数名词，常见搭配 dry/wet/canned dog food、premium dog food。口语可用 dog chow，但略随意；正式场合或兽医语境用 dog food。",
+   "examples": [
+    {
+     "en": "We buy grain-free dog food because our dog has sensitive skin.",
+     "zh": "我们买无谷狗粮，因为我们的狗皮肤敏感。"
+    },
+    {
+     "en": "Remember to store the dog food in an airtight container to keep it fresh.",
+     "zh": "记得把狗粮存放在密封容器里以保持新鲜。"
+    }
+   ],
+   "tags": [
+    "宠物"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "遛狗",
+   "pair": "zh-en",
+   "slug": "liu-gou",
+   "lang": "zh",
+   "translation": "walk the dog",
+   "shortAnswer": "「遛狗」的英文是 walk the dog，指带狗出门散步。注意 walk the dog 是固定搭配，不能只说 walk dog，且遛狗通常隐含让狗排泄、活动，不同于单纯带狗出门。",
+   "definition": "walk the dog 是日常口语常用表达，强调带狗出去散步并让它排泄。也可说 take the dog for a walk，但 walk the dog 更简洁。注意区分 walk dog（错误）和 walk a dog（泛指遛一只狗）。",
+   "examples": [
+    {
+     "en": "I need to walk the dog before it gets dark.",
+     "zh": "我得在天黑前遛狗。"
+    },
+    {
+     "en": "She walks the dog every morning in the park.",
+     "zh": "她每天早上在公园遛狗。"
+    }
+   ],
+   "tags": [
+    "宠物"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "walk the dog",
+   "pair": "en-zh",
+   "slug": "walk-the-dog",
+   "lang": "en",
+   "translation": "遛狗",
+   "shortAnswer": "「walk the dog」的中文意思是「遛狗」，即带狗出门散步。它强调日常遛狗活动，通常包含让狗排泄；与 take the dog for a walk 同义，但更口语化。",
+   "definition": "walk the dog 是固定短语，意为带狗出去散步，常见于日常对话。注意不能说 walk dog，必须加冠词或限定词。与 walk a dog 相比，walk the dog 特指遛自家或特定的狗。",
+   "examples": [
+    {
+     "en": "I need to walk the dog before it gets dark.",
+     "zh": "我得在天黑前遛狗。"
+    },
+    {
+     "en": "She walks the dog every morning in the park.",
+     "zh": "她每天早上在公园遛狗。"
+    }
+   ],
+   "tags": [
+    "宠物"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "猫粮",
+   "pair": "zh-en",
+   "slug": "mao-liang",
+   "lang": "zh",
+   "translation": "cat food",
+   "shortAnswer": "「猫粮」英文说 cat food，指专门给猫吃的市售干粮或湿粮，也可泛指喂猫的食物。",
+   "definition": "cat food 多作不可数名词，如 a bag of cat food。常见搭配：dry cat food（干粮）、wet cat food（湿粮）。",
+   "examples": [
+    {
+     "en": "I need to buy cat food on the way home because we ran out this morning.",
+     "zh": "我下班路上得买猫粮，今天早上就吃完了。"
+    },
+    {
+     "en": "She mixes a little warm water into the dry cat food for her old cat.",
+     "zh": "她会往干猫粮里兑一点温水，给她那只老猫吃。"
+    }
+   ],
+   "tags": [
+    "宠物"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "cat food",
+   "pair": "en-zh",
+   "slug": "cat-food",
+   "lang": "en",
+   "translation": "猫粮",
+   "shortAnswer": "Cat food is 「猫粮」 in Chinese: commercially made dry or wet food for cats, or food fed to cats.",
+   "definition": "Cat food is uncountable: a bag of cat food. Types include dry cat food and wet cat food; kitten food is for young cats.",
+   "examples": [
+    {
+     "en": "I need to buy cat food on the way home because we ran out this morning.",
+     "zh": "我下班路上得买猫粮，今天早上就吃完了。"
+    },
+    {
+     "en": "She mixes a little warm water into the dry cat food for her old cat.",
+     "zh": "她会往干猫粮里兑一点温水，给她那只老猫吃。"
+    }
+   ],
+   "tags": [
+    "宠物"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "驱虫",
+   "pair": "zh-en",
+   "slug": "qu-chong",
+   "lang": "zh",
+   "translation": "deworming",
+   "shortAnswer": "「驱虫」英文是 deworming，常指给宠物清除体内寄生虫，别和体外驱虫混淆。",
+   "definition": "deworming 是名词/动名词，如 do deworming、regular deworming；动词用 deworm，如 deworm the dog。",
+   "examples": [
+    {
+     "en": "The vet said we should bring the puppy in for deworming every month until it's six months old.",
+     "zh": "兽医说我们应该每月带小狗去做驱虫，直到它六个月大。"
+    },
+    {
+     "en": "Regular deworming is just as important as walking the dog and keeping up with its vaccinations.",
+     "zh": "定期驱虫和遛狗、按时接种疫苗一样重要。"
+    }
+   ],
+   "tags": [
+    "宠物"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "deworming",
+   "pair": "en-zh",
+   "slug": "deworming",
+   "lang": "en",
+   "translation": "驱虫",
+   "shortAnswer": "Deworming means 「驱虫」 in Chinese: giving pets medicine to clear internal parasites.",
+   "definition": "Deworming: giving pets medicine to kill intestinal worms. Say routine deworming or deworming schedule; for fleas use flea treatment.",
+   "examples": [
+    {
+     "en": "The vet said we should bring the puppy in for deworming every month until it's six months old.",
+     "zh": "兽医说我们应该每月带小狗去做驱虫，直到它六个月大。"
+    },
+    {
+     "en": "Regular deworming is just as important as walking the dog and keeping up with its vaccinations.",
+     "zh": "定期驱虫和遛狗、按时接种疫苗一样重要。"
+    }
+   ],
+   "tags": [
+    "宠物"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "宠物医院",
+   "pair": "zh-en",
+   "slug": "chong-wu-yi-yuan",
+   "lang": "zh",
+   "translation": "vet clinic",
+   "shortAnswer": "宠物医院的英文是 vet clinic，指给猫狗等宠物看病的诊所。口语里也常说 vet 或 animal clinic，日常更常用 vet。",
+   "definition": "vet clinic 是通用说法，英式英语中也写 veterinary clinic。想去给宠物看病可说 take the pet to the vet clinic；注意 vet 在口语里也可直接指兽医本人，如 go to the vet 常省略 clinic。",
+   "examples": [
+    {
+     "en": "I need to take my cat to the vet clinic because she has been sneezing all week.",
+     "zh": "我得带我的猫去宠物医院，因为它已经打了一周喷嚏了。"
+    },
+    {
+     "en": "The vet clinic near our apartment also offers pet boarding and deworming services.",
+     "zh": "我们公寓附近的宠物医院还提供寄养和驱虫服务。"
+    }
+   ],
+   "tags": [
+    "宠物"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "vet clinic",
+   "pair": "en-zh",
+   "slug": "vet-clinic",
+   "lang": "en",
+   "translation": "宠物医院",
+   "shortAnswer": "vet clinic 的中文意思是宠物医院，即给猫狗等宠物诊疗的诊所。它侧重诊疗机构本身，口语中常简称为 the vet。",
+   "definition": "vet clinic 指诊治宠物的诊所，常见搭配有 take the dog to the vet clinic、at the vet clinic。口语里 the vet 既可指诊所也可指兽医本人，动物收容所用的 animal clinic 偏机构化，不强调宠物主人视角。",
+   "examples": [
+    {
+     "en": "I need to take my cat to the vet clinic because she has been sneezing all week.",
+     "zh": "我得带我的猫去宠物医院，因为它已经打了一周喷嚏了。"
+    },
+    {
+     "en": "The vet clinic near our apartment also offers pet boarding and deworming services.",
+     "zh": "我们公寓附近的宠物医院还提供寄养和驱虫服务。"
+    }
+   ],
+   "tags": [
+    "宠物"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "铲屎",
+   "pair": "zh-en",
+   "slug": "chan-shi",
+   "lang": "zh",
+   "translation": "scoop the litter",
+   "shortAnswer": "「铲屎」英文说 scoop the litter，就是清理猫砂盆里的猫砂，是养猫的日常。",
+   "definition": "铲屎指用铲子清理猫砂盆，英文说 scoop the litter 或 scoop the litter box。litter 在此指猫砂，不是垃圾。",
+   "examples": [
+    {
+     "en": "I scoop the litter every morning before work.",
+     "zh": "我每天早上上班前都得铲屎。"
+    },
+    {
+     "en": "She jokes that she is a litter scoop officer, but she just loves scooping the litter for her three cats.",
+     "zh": "她开玩笑说自己是铲屎官，其实只是喜欢给三只猫铲屎。"
+    }
+   ],
+   "tags": [
+    "宠物"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "scoop the litter",
+   "pair": "en-zh",
+   "slug": "scoop-the-litter",
+   "lang": "en",
+   "translation": "铲屎",
+   "shortAnswer": "Scoop the litter is 铲屎 in Chinese: cleaning a cat's litter box, a daily cat-care task.",
+   "definition": "Scoop the litter means to clean a cat's litter box with a scoop. In Chinese, 铲屎 is the everyday term for this cat-care task.",
+   "examples": [
+    {
+     "en": "I scoop the litter every morning before work.",
+     "zh": "我每天早上上班前都得铲屎。"
+    },
+    {
+     "en": "She jokes that she is a litter scoop officer, but she just loves scooping the litter for her three cats.",
+     "zh": "她开玩笑说自己是铲屎官，其实只是喜欢给三只猫铲屎。"
+    }
+   ],
+   "tags": [
+    "宠物"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "绝育",
+   "pair": "zh-en",
+   "slug": "jue-yu",
+   "lang": "zh",
+   "translation": "pet neutering",
+   "shortAnswer": "绝育在英文中常说 pet neutering，公畜用 neuter，母畜用 spay。",
+   "definition": "pet neutering 指为宠物做绝育手术的正式说法；日常也说 get the dog neutered 或 get the cat spayed。",
+   "examples": [
+    {
+     "en": "The vet recommended pet neutering before the dog reaches sexual maturity.",
+     "zh": "兽医建议在狗狗达到性成熟之前进行绝育。"
+    },
+    {
+     "en": "Many animal shelters require pet neutering as part of the adoption process.",
+     "zh": "许多动物收容所要求把绝育作为领养流程的一部分。"
+    }
+   ],
+   "tags": [
+    "宠物"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "pet neutering",
+   "pair": "en-zh",
+   "slug": "pet-neutering",
+   "lang": "en",
+   "translation": "绝育",
+   "shortAnswer": "Pet neutering means 绝育, the general term for sterilizing pets; neuter males, spay females.",
+   "definition": "Pet neutering is the medical term for sterilizing a pet; use neuter for males and spay for females.",
+   "examples": [
+    {
+     "en": "The vet recommended pet neutering before the dog reaches sexual maturity.",
+     "zh": "兽医建议在狗狗达到性成熟之前进行绝育。"
+    },
+    {
+     "en": "Many animal shelters require pet neutering as part of the adoption process.",
+     "zh": "许多动物收容所要求把绝育作为领养流程的一部分。"
+    }
+   ],
+   "tags": [
+    "宠物"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "挠沙发",
+   "pair": "zh-en",
+   "slug": "nao-sha-fa",
+   "lang": "zh",
+   "translation": "scratch the sofa",
+   "shortAnswer": "「挠沙发」的英文是 scratch the sofa，指宠物用爪子抓沙发。注意搭配是 scratch the sofa，不要说成 scratch on the sofa。",
+   "definition": "scratch 作及物动词，后面直接接被挠的东西：scratch the sofa、scratch the door、scratch the furniture。多用来描述猫磨爪、狗刨抓家具的破坏行为，常和 stop、prevent 连用。",
+   "examples": [
+    {
+     "en": "My cat loves to scratch the sofa, so I bought her a scratching post.",
+     "zh": "我家猫特别爱挠沙发，所以我给它买了个猫抓板。"
+    },
+    {
+     "en": "If your dog starts to scratch the sofa, redirect it to a chew toy right away.",
+     "zh": "如果你的狗开始挠沙发，要立刻把它引到咬胶玩具上。"
+    }
+   ],
+   "tags": [
+    "宠物"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "scratch the sofa",
+   "pair": "en-zh",
+   "slug": "scratch-the-sofa",
+   "lang": "en",
+   "translation": "挠沙发",
+   "shortAnswer": "scratch the sofa 的中文意思是「挠沙发」，指猫狗用爪子抓挠沙发。和 claw at the sofa 强调反复抓扒不同，scratch the sofa 更强调留下抓痕。",
+   "definition": "scratch the sofa 为及物动词搭配，scratch 后直接跟名词，不接 on。多用于宠物话题，描述猫磨爪或狗刨抓家具的行为，常与 stop、keep the cat from 搭配。",
+   "examples": [
+    {
+     "en": "My cat loves to scratch the sofa, so I bought her a scratching post.",
+     "zh": "我家猫特别爱挠沙发，所以我给它买了个猫抓板。"
+    },
+    {
+     "en": "If your dog starts to scratch the sofa, redirect it to a chew toy right away.",
+     "zh": "如果你的狗开始挠沙发，要立刻把它引到咬胶玩具上。"
+    }
+   ],
+   "tags": [
+    "宠物"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "宠物美容",
+   "pair": "zh-en",
+   "slug": "chong-wu-mei-rong",
+   "lang": "zh",
+   "translation": "pet grooming",
+   "shortAnswer": "宠物美容的英文是 pet grooming，指给猫狗洗澡、修剪毛发和指甲等日常护理。",
+   "definition": "pet grooming 是名词短语，指宠物清洁与外观护理，包括洗澡、剪毛、剪指甲、清耳道等，动词用 groom a pet。",
+   "examples": [
+    {
+     "en": "I take my dog for pet grooming every two months to keep his coat clean and mat-free.",
+     "zh": "我每两个月带我的狗去做一次宠物美容，保持毛发干净不打结。"
+    },
+    {
+     "en": "Pet grooming usually includes bathing, brushing, nail clipping, and ear cleaning.",
+     "zh": "宠物美容通常包括洗澡、梳毛、剪指甲和清洁耳朵。"
+    }
+   ],
+   "tags": [
+    "宠物"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "pet grooming",
+   "pair": "en-zh",
+   "slug": "pet-grooming",
+   "lang": "en",
+   "translation": "宠物美容",
+   "shortAnswer": "宠物美容的英文是 pet grooming，指给宠物洗澡、修剪毛发和指甲等护理。",
+   "definition": "pet grooming 指宠物美容护理，常见搭配有 dog grooming、grooming salon，动词形式是 groom a dog。",
+   "examples": [
+    {
+     "en": "I take my dog for pet grooming every two months to keep his coat clean and mat-free.",
+     "zh": "我每两个月带我的狗去做一次宠物美容，保持毛发干净不打结。"
+    },
+    {
+     "en": "Pet grooming usually includes bathing, brushing, nail clipping, and ear cleaning.",
+     "zh": "宠物美容通常包括洗澡、梳毛、剪指甲和清洁耳朵。"
+    }
+   ],
+   "tags": [
+    "宠物"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "拴狗绳",
+   "pair": "zh-en",
+   "slug": "shuan-gou-sheng",
+   "lang": "zh",
+   "translation": "dog leash",
+   "shortAnswer": "「拴狗绳」的英文是 dog leash。在美式英语中常用 leash，英式英语更常说 lead，如 walk the dog on a leash（用狗绳遛狗），别把它误说成 dog rope。",
+   "definition": "dog leash 是可数名词，常搭配 put on / take off the leash、keep the dog on a leash；公共场合需 leash your dog（给狗拴绳）。英式英语常用 lead 替代 leash，而 rope 不指牵狗绳。",
+   "examples": [
+    {
+     "en": "Always keep your dog on a dog leash when walking in the park.",
+     "zh": "在公园遛狗时，务必用拴狗绳牵好你的狗。"
+    },
+    {
+     "en": "She bought a new dog leash and collar before adopting the puppy.",
+     "zh": "她在领养那只小狗之前，买了一条新拴狗绳和项圈。"
+    }
+   ],
+   "tags": [
+    "宠物"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "dog leash",
+   "pair": "en-zh",
+   "slug": "dog-leash",
+   "lang": "en",
+   "translation": "拴狗绳",
+   "shortAnswer": "dog leash 的中文意思是「拴狗绳」。它专指遛狗时系在项圈上的牵绳，与 dog collar（项圈）不同，前者是牵绳，后者戴在脖子上。",
+   "definition": "dog leash 在美式英语中很常见，指遛狗用的牵绳；英式英语常用 lead。常见搭配：on a leash、keep the dog on a leash、leash laws（牵绳法规）。注意不要与 collar（项圈）混淆。",
+   "examples": [
+    {
+     "en": "Always keep your dog on a dog leash when walking in the park.",
+     "zh": "在公园遛狗时，务必用拴狗绳牵好你的狗。"
+    },
+    {
+     "en": "She bought a new dog leash and collar before adopting the puppy.",
+     "zh": "她在领养那只小狗之前，买了一条新拴狗绳和项圈。"
+    }
+   ],
+   "tags": [
+    "宠物"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "流浪猫",
+   "pair": "zh-en",
+   "slug": "liu-lang-mao",
+   "lang": "zh",
+   "translation": "stray cat",
+   "shortAnswer": "「流浪猫」的英文是 stray cat。它指在街头无人饲养的猫，和野性更强的 feral cat 不同，stray 更接近走失或被遗弃的家猫。",
+   "definition": "stray cat 是名词短语，泛指在社区、街头活动的无主猫；stray 强调曾被人养过、可能亲近人，feral cat 则指野化、远离人类的猫。相关说法还有 community cat（社区猫），领养时常用 adopt a stray cat，而不是 buy。",
+   "examples": [
+    {
+     "en": "She adopted a stray cat from the shelter and named it Momo.",
+     "zh": "她从收容所领养了一只流浪猫，给它取名默默。"
+    },
+    {
+     "en": "We feed a few stray cats near the office every evening after walking the dog.",
+     "zh": "我们每天傍晚遛完狗后，都会去喂办公楼附近的几只流浪猫。"
+    }
+   ],
+   "tags": [
+    "宠物"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "stray cat",
+   "pair": "en-zh",
+   "slug": "stray-cat",
+   "lang": "en",
+   "translation": "流浪猫",
+   "shortAnswer": "A stray cat in Chinese means 流浪猫，即无家可归、在街头活动的猫。和 feral cat 不同，stray 通常指走失或被遗弃、仍可能亲近人的家猫。",
+   "definition": "Stray cat 是可数名词短语，指离开主人、在街头或社区流浪的猫；常搭配 feed a stray cat、take in a stray cat、rescue a stray cat。它偏日常口语，正式语境也常用；注意不要说 wild cat，那多指野生的猫科动物。",
+   "examples": [
+    {
+     "en": "She adopted a stray cat from the shelter and named it Momo.",
+     "zh": "她从收容所领养了一只流浪猫，给它取名默默。"
+    },
+    {
+     "en": "We feed a few stray cats near the office every evening after walking the dog.",
+     "zh": "我们每天傍晚遛完狗后，都会去喂办公楼附近的几只流浪猫。"
+    }
+   ],
+   "tags": [
+    "宠物"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "掉毛",
+   "pair": "zh-en",
+   "slug": "diao-mao",
+   "lang": "zh",
+   "translation": "shedding",
+   "shortAnswer": "「掉毛」的英文是 shedding，指宠物正常换毛或异常脱毛；动词用 shed，别说 lose hair。",
+   "definition": "shedding 指猫狗等动物自然脱落毛发或换毛过程。常见搭配：excessive shedding、reduce shedding，口语也说 shed a lot。正常换毛用 shedding，皮肤病局部脱毛多用 hair loss。",
+   "examples": [
+    {
+     "en": "My dog's shedding gets much worse in spring, so I brush him every day.",
+     "zh": "我的狗春天掉毛严重得多，所以我每天给它梳毛。"
+    },
+    {
+     "en": "Regular grooming can help reduce shedding and keep your cat's coat healthy.",
+     "zh": "定期梳理有助于减少掉毛，并让猫咪的毛发保持健康。"
+    }
+   ],
+   "tags": [
+    "宠物"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "shedding",
+   "pair": "en-zh",
+   "slug": "shedding",
+   "lang": "en",
+   "translation": "掉毛",
+   "shortAnswer": "Shedding 的中文意思是「掉毛」，指猫狗自然掉毛或换毛；多属正常生理现象，异常脱毛常用 hair loss。",
+   "definition": "shedding 是名词，指动物周期性脱落毛发；动词为 shed，如 Dogs shed in spring。常见搭配：excessive shedding、shedding season。描述人脱发一般用 hair loss，不用 shedding。",
+   "examples": [
+    {
+     "en": "My dog's shedding gets much worse in spring, so I brush him every day.",
+     "zh": "我的狗春天掉毛严重得多，所以我每天给它梳毛。"
+    },
+    {
+     "en": "Regular grooming can help reduce shedding and keep your cat's coat healthy.",
+     "zh": "定期梳理有助于减少掉毛，并让猫咪的毛发保持健康。"
+    }
+   ],
+   "tags": [
+    "宠物"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "领养",
+   "pair": "zh-en",
+   "slug": "ling-yang",
+   "lang": "zh",
+   "translation": "adopt a pet",
+   "shortAnswer": "「领养」的英文是 adopt a pet，强调从收容所或救助机构把动物带回家；如果是领养小孩，直接用 adopt，不加 a pet。",
+   "definition": "adopt a pet 指从收容所、救助站领养宠物，而不是花钱购买（buy）。口语也可说 adopt a dog/cat。注意 adopt 后接人时是「收养」，接宠物才是「领养」，两者含义不同。",
+   "examples": [
+    {
+     "en": "We decided to adopt a pet from the local shelter instead of buying one from a breeder.",
+     "zh": "我们决定从当地收容所领养一只宠物，而不是从繁殖者那里购买。"
+    },
+    {
+     "en": "Before you adopt a pet, make sure you can afford food, vet visits, and deworming.",
+     "zh": "在领养宠物之前，要确保你负担得起食物、看兽医和驱虫的费用。"
+    }
+   ],
+   "tags": [
+    "宠物"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "adopt a pet",
+   "pair": "en-zh",
+   "slug": "adopt-a-pet",
+   "lang": "en",
+   "translation": "领养",
+   "shortAnswer": "adopt a pet 的中文意思是「领养」，指从收容所或救助机构把动物带回家饲养，而不是购买；只用于动物，收养小孩则说 adopt a child。",
+   "definition": "adopt a pet 指通过正规机构领养宠物，常与 from a shelter 连用。名称为 adoption。与 buy a pet 相对，强调救助而非买卖，多用于公益、动保语境，也可口语泛指养宠物。",
+   "examples": [
+    {
+     "en": "We decided to adopt a pet from the local shelter instead of buying one from a breeder.",
+     "zh": "我们决定从当地收容所领养一只宠物，而不是从繁殖者那里购买。"
+    },
+    {
+     "en": "Before you adopt a pet, make sure you can afford food, vet visits, and deworming.",
+     "zh": "在领养宠物之前，要确保你负担得起食物、看兽医和驱虫的费用。"
+    }
+   ],
+   "tags": [
+    "宠物"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "狗叫",
+   "pair": "zh-en",
+   "slug": "gou-jiao",
+   "lang": "zh",
+   "translation": "dog barking",
+   "shortAnswer": "「狗叫」的英文是 dog barking，指狗发出的吠叫声，也可说 the dog is barking。",
+   "definition": "dog barking 指狗的吠叫声，如 the dog barking next door；单数 a bark 指一声犬吠。表示动作时常用动词 bark：The dog barks at strangers。",
+   "examples": [
+    {
+     "en": "The dog barking next door kept me awake all night.",
+     "zh": "隔壁的狗叫声让我整夜没睡着。"
+    },
+    {
+     "en": "Our neighbor complained about the dog barking while we were away.",
+     "zh": "我们外出时，邻居抱怨狗一直叫。"
+    }
+   ],
+   "tags": [
+    "宠物"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "dog barking",
+   "pair": "en-zh",
+   "slug": "dog-barking",
+   "lang": "en",
+   "translation": "狗叫",
+   "shortAnswer": "Dog barking 的中文意思是「狗叫」，即狗发出的吠叫声；单数 a bark 指一声短促的犬吠。",
+   "definition": "dog barking 指狗叫的声音或行为，如 Dog barking can be annoying at night；表示具体动作时常用动词 bark：The dog barks at the mailman。",
+   "examples": [
+    {
+     "en": "The dog barking next door kept me awake all night.",
+     "zh": "隔壁的狗叫声让我整夜没睡着。"
+    },
+    {
+     "en": "Our neighbor complained about the dog barking while we were away.",
+     "zh": "我们外出时，邻居抱怨狗一直叫。"
+    }
+   ],
+   "tags": [
+    "宠物"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "撸猫",
+   "pair": "zh-en",
+   "slug": "lu-mao",
+   "lang": "zh",
+   "translation": "petting a cat",
+   "shortAnswer": "「撸猫」的英文是 petting a cat，指用手轻抚逗弄猫咪，常带治愈解压的意味。",
+   "definition": "petting a cat 指用手抚摸猫的动作，口语也说 petting my cat。中文撸猫语义更宽，常带吸猫、解压意味。",
+   "examples": [
+    {
+     "en": "After a long day at work, I love petting a cat on the sofa to relax.",
+     "zh": "工作一整天后，我喜欢在沙发上撸猫放松。"
+    },
+    {
+     "en": "She spends every evening petting a cat while watching videos to unwind.",
+     "zh": "她每天晚上都一边撸猫一边看视频来放松。"
+    }
+   ],
+   "tags": [
+    "宠物"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "petting a cat",
+   "pair": "en-zh",
+   "slug": "petting-a-cat",
+   "lang": "en",
+   "translation": "撸猫",
+   "shortAnswer": "Petting a cat means 撸猫 in Chinese: stroking and gently playing with a cat for comfort.",
+   "definition": "Petting a cat is the everyday phrase for stroking a cat by hand. It can also suggest relaxing with cats, like 撸猫 in Chinese.",
+   "examples": [
+    {
+     "en": "After a long day at work, I love petting a cat on the sofa to relax.",
+     "zh": "工作一整天后，我喜欢在沙发上撸猫放松。"
+    },
+    {
+     "en": "She spends every evening petting a cat while watching videos to unwind.",
+     "zh": "她每天晚上都一边撸猫一边看视频来放松。"
+    }
+   ],
+   "tags": [
+    "宠物"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "流浪狗",
+   "pair": "zh-en",
+   "slug": "liu-lang-gou",
+   "lang": "zh",
+   "translation": "stray dog",
+   "shortAnswer": "「流浪狗」的英文是 stray dog，指无主流落街头的狗。注意 stray 强调“走失、无主”，家养走失的宠物狗也可说 lost dog。",
+   "definition": "stray dog 是通用说法，中性偏书面；口语常说 a dog with no home。流浪狗常被收容所 rescue 后供人 adopt 领养，而非 buy 购买。",
+   "examples": [
+    {
+     "en": "She adopted a stray dog from the shelter last month.",
+     "zh": "她上个月从收容所领养了一只流浪狗。"
+    },
+    {
+     "en": "Every evening he feeds the stray dogs near his apartment.",
+     "zh": "他每天傍晚都在公寓附近喂那些流浪狗。"
+    }
+   ],
+   "tags": [
+    "宠物"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "stray dog",
+   "pair": "en-zh",
+   "slug": "stray-dog",
+   "lang": "en",
+   "translation": "流浪狗",
+   "shortAnswer": "stray dog 的中文意思是「流浪狗」，指无主流浪街头的狗。它强调无主状态，而 lost dog 侧重走失、可能仍有主人寻找。",
+   "definition": "stray dog 为通用表达，可指野犬或走失犬。常见搭配：adopt a stray dog（领养）、feed a stray dog（投喂）。正式语境用 homeless dog，口语说 a dog on the street。",
+   "examples": [
+    {
+     "en": "She adopted a stray dog from the shelter last month.",
+     "zh": "她上个月从收容所领养了一只流浪狗。"
+    },
+    {
+     "en": "Every evening he feeds the stray dogs near his apartment.",
+     "zh": "他每天傍晚都在公寓附近喂那些流浪狗。"
+    }
+   ],
+   "tags": [
+    "宠物"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "寄养",
+   "pair": "zh-en",
+   "slug": "ji-yang",
+   "lang": "zh",
+   "translation": "pet boarding",
+   "shortAnswer": "寄养在英语中常说 pet boarding，指主人外出时把宠物送到机构或他人家中短期照料。",
+   "definition": "pet boarding 是名词，指宠物短期寄养服务，如 boarding kennel、boarding fee。注意与 permanent adoption 区分。",
+   "examples": [
+    {
+     "en": "We use pet boarding whenever we travel abroad, because our cat hates staying alone.",
+     "zh": "我们每次出国旅行都把猫送去寄养，因为它不喜欢独自待着。"
+    },
+    {
+     "en": "Good pet boarding facilities require proof of vaccination before accepting your dog.",
+     "zh": "好的寄养机构在接受你的狗之前会要求提供疫苗接种证明。"
+    }
+   ],
+   "tags": [
+    "宠物"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "pet boarding",
+   "pair": "en-zh",
+   "slug": "pet-boarding",
+   "lang": "en",
+   "translation": "寄养",
+   "shortAnswer": "Pet boarding is 寄养 in Chinese: temporary paid care for pets while owners are away.",
+   "definition": "Pet boarding is a noun for short-term paid pet care away from home, as in boarding kennel or boarding fee. It differs from adoption.",
+   "examples": [
+    {
+     "en": "We use pet boarding whenever we travel abroad, because our cat hates staying alone.",
+     "zh": "我们每次出国旅行都把猫送去寄养，因为它不喜欢独自待着。"
+    },
+    {
+     "en": "Good pet boarding facilities require proof of vaccination before accepting your dog.",
+     "zh": "好的寄养机构在接受你的狗之前会要求提供疫苗接种证明。"
+    }
+   ],
+   "tags": [
+    "宠物"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "逗猫棒",
+   "pair": "zh-en",
+   "slug": "dou-mao-bang",
+   "lang": "zh",
+   "translation": "cat teaser",
+   "shortAnswer": "「逗猫棒」的英文是 cat teaser，口语也说 cat wand 或 feather wand。",
+   "definition": "cat teaser 指带羽毛或小玩具的杆子，用来逗猫扑咬，常搭配 play with a cat teaser。",
+   "examples": [
+    {
+     "en": "My cat goes crazy whenever I pick up the cat teaser.",
+     "zh": "我一拿起逗猫棒，我家猫就疯了。"
+    },
+    {
+     "en": "She waved the cat teaser slowly to let the kitten catch it.",
+     "zh": "她慢慢挥动逗猫棒，让小猫能抓住它。"
+    }
+   ],
+   "tags": [
+    "宠物"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "cat teaser",
+   "pair": "en-zh",
+   "slug": "cat-teaser",
+   "lang": "en",
+   "translation": "逗猫棒",
+   "shortAnswer": "The Chinese word 逗猫棒 means cat teaser, a wand used to play with cats.",
+   "definition": "A cat teaser is a wand with feathers or a toy, used to play with cats. Not the same as cat toy.",
+   "examples": [
+    {
+     "en": "My cat goes crazy whenever I pick up the cat teaser.",
+     "zh": "我一拿起逗猫棒，我家猫就疯了。"
+    },
+    {
+     "en": "She waved the cat teaser slowly to let the kitten catch it.",
+     "zh": "她慢慢挥动逗猫棒，让小猫能抓住它。"
+    }
+   ],
+   "tags": [
+    "宠物"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "狗窝",
+   "pair": "zh-en",
+   "slug": "gou-wo",
+   "lang": "zh",
+   "translation": "dog kennel",
+   "shortAnswer": "「狗窝」的英文是 dog kennel。日常口语也常说 dog house，但 dog kennel 更常指专门建造或商业寄养的犬舍，dog house 多指院子里的小木屋。",
+   "definition": "dog kennel 指狗睡觉或临时关养的小屋，也可指宠物寄养机构。家里给狗买的室内软窝一般说 dog bed，而户外木制狗屋、繁殖或寄养犬舍才用 dog kennel。",
+   "examples": [
+    {
+     "en": "We built a wooden dog kennel in the backyard so our dog can rest outside during the day.",
+     "zh": "我们在后院建了一个木制狗窝，这样白天狗可以在外面休息。"
+    },
+    {
+     "en": "When we travel, we leave our dog at a boarding kennel that provides daily walks and feeding.",
+     "zh": "我们旅行时，会把狗送到提供每日遛狗和喂食的寄养狗舍。"
+    }
+   ],
+   "tags": [
+    "宠物"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "dog kennel",
+   "pair": "en-zh",
+   "slug": "dog-kennel",
+   "lang": "en",
+   "translation": "狗窝",
+   "shortAnswer": "dog kennel 的中文意思是「狗窝」，指狗睡觉或暂住的小屋。它和 dog house 都可指狗屋，但 kennel 更常指专业繁殖或寄养犬舍，dog house 多指院子里的小木屋。",
+   "definition": "dog kennel 作名词指狗舍、狗窝，也可指寄养或繁殖狗的场所。家庭场景常与 dog bed 区分：kennel 偏户外或商业。常见搭配有 boarding kennel（寄养犬舍）和 kennel cough（犬窝咳）。",
+   "examples": [
+    {
+     "en": "We built a wooden dog kennel in the backyard so our dog can rest outside during the day.",
+     "zh": "我们在后院建了一个木制狗窝，这样白天狗可以在外面休息。"
+    },
+    {
+     "en": "When we travel, we leave our dog at a boarding kennel that provides daily walks and feeding.",
+     "zh": "我们旅行时，会把狗送到提供每日遛狗和喂食的寄养狗舍。"
+    }
+   ],
+   "tags": [
+    "宠物"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "宠物保险",
+   "pair": "zh-en",
+   "slug": "chong-wu-bao-xian",
+   "lang": "zh",
+   "translation": "pet insurance",
+   "shortAnswer": "「宠物保险」的英文是 pet insurance，指为猫狗等宠物支付医疗或意外费用的保障。",
+   "definition": "pet insurance 是固定名词搭配，不可数，常说 buy pet insurance、pet insurance policy。口语也可说 insurance for pets。",
+   "examples": [
+    {
+     "en": "Before adopting a dog, you should look into pet insurance to cover unexpected vet bills.",
+     "zh": "在领养狗之前，你应该了解宠物保险，以应对意外的兽医费用。"
+    },
+    {
+     "en": "Her cat needed surgery, but pet insurance covered most of the cost.",
+     "zh": "她的猫需要手术，但宠物保险报销了大部分费用。"
+    }
+   ],
+   "tags": [
+    "宠物"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "pet insurance",
+   "pair": "en-zh",
+   "slug": "pet-insurance",
+   "lang": "en",
+   "translation": "宠物保险",
+   "shortAnswer": "pet insurance 的中文意思是「宠物保险」，为宠物医疗、意外或手术费用提供保障。",
+   "definition": "pet insurance 是常用名词短语，常见搭配有 buy pet insurance、pet insurance policy。insurance 不可数，不能说 a pet insurance。",
+   "examples": [
+    {
+     "en": "Before adopting a dog, you should look into pet insurance to cover unexpected vet bills.",
+     "zh": "在领养狗之前，你应该了解宠物保险，以应对意外的兽医费用。"
+    },
+    {
+     "en": "Her cat needed surgery, but pet insurance covered most of the cost.",
+     "zh": "她的猫需要手术，但宠物保险报销了大部分费用。"
+    }
+   ],
+   "tags": [
+    "宠物"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "猫砂",
+   "pair": "zh-en",
+   "slug": "mao-sha",
+   "lang": "zh",
+   "translation": "cat litter",
+   "shortAnswer": "「猫砂」的英文是 cat litter，指放在猫砂盆里供猫咪排泄用的颗粒状垫料。",
+   "definition": "cat litter 是宠物用品术语，口语中常省略 cat 直接说 litter，常见搭配有 clean the litter box、clumping cat litter。",
+   "examples": [
+    {
+     "en": "I need to buy more cat litter before the weekend, or my cat will make a mess.",
+     "zh": "周末前我得再买些猫砂，不然我的猫会把家里弄得一团糟。"
+    },
+    {
+     "en": "She forgot to clean the cat litter, so the whole room smelled bad.",
+     "zh": "她忘了清理猫砂，结果整个房间都很难闻。"
+    }
+   ],
+   "tags": [
+    "宠物"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "cat litter",
+   "pair": "en-zh",
+   "slug": "cat-litter",
+   "lang": "en",
+   "translation": "猫砂",
+   "shortAnswer": "Cat litter is 猫砂 in Chinese, the granular material placed in a litter box for cats to use.",
+   "definition": "Cat litter means 猫砂 in Chinese, absorbent pellets or clumping clay sold for use in a cat's litter box.",
+   "examples": [
+    {
+     "en": "I need to buy more cat litter before the weekend, or my cat will make a mess.",
+     "zh": "周末前我得再买些猫砂，不然我的猫会把家里弄得一团糟。"
+    },
+    {
+     "en": "She forgot to clean the cat litter, so the whole room smelled bad.",
+     "zh": "她忘了清理猫砂，结果整个房间都很难闻。"
+    }
+   ],
+   "tags": [
+    "宠物"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "仓鼠",
+   "pair": "zh-en",
+   "slug": "cang-shu",
+   "lang": "zh",
+   "translation": "hamster",
+   "shortAnswer": "仓鼠的英文是 hamster，指这种小型啮齿类宠物。注意别与 guinea pig（豚鼠）混用，hamster 更小、有颊囊。",
+   "definition": "hamster 是可数名词，指仓鼠。常见搭配：pet hamster（宠物仓鼠）、hamster cage（仓鼠笼）、hamster wheel（跑轮）。",
+   "examples": [
+    {
+     "en": "My daughter keeps a hamster in her bedroom and cleans its cage every weekend.",
+     "zh": "我女儿在卧室里养了一只仓鼠，每个周末都清理它的笼子。"
+    },
+    {
+     "en": "The hamster runs on its wheel all night, so it is always sleeping during the day.",
+     "zh": "仓鼠整晚都在跑轮上跑，所以白天总是在睡觉。"
+    }
+   ],
+   "tags": [
+    "宠物"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "hamster",
+   "pair": "en-zh",
+   "slug": "hamster",
+   "lang": "en",
+   "translation": "仓鼠",
+   "shortAnswer": "Hamster 的中文意思是仓鼠，一种常被当宠物养的小型啮齿动物。hamster 比 guinea pig（豚鼠）更小，爱跑跑轮。",
+   "definition": "Hamster 是可数名词，指仓鼠。常见搭配：pet hamster（宠物仓鼠）、hamster cage（仓鼠笼）、hamster wheel（跑轮）。",
+   "examples": [
+    {
+     "en": "My daughter keeps a hamster in her bedroom and cleans its cage every weekend.",
+     "zh": "我女儿在卧室里养了一只仓鼠，每个周末都清理它的笼子。"
+    },
+    {
+     "en": "The hamster runs on its wheel all night, so it is always sleeping during the day.",
+     "zh": "仓鼠整晚都在跑轮上跑，所以白天总是在睡觉。"
+    }
+   ],
+   "tags": [
+    "宠物"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "快递单号",
+   "pair": "zh-en",
+   "slug": "kuai-di-dan-hao",
+   "lang": "zh",
+   "translation": "tracking number",
+   "shortAnswer": "「快递单号」英文是 tracking number，也常说 tracking code，查物流最常用 tracking number。",
+   "definition": "tracking number 指包裹的唯一查询编号，可用于在快递官网追踪物流。常见搭配：enter/provide/check a tracking number。",
+   "examples": [
+    {
+     "en": "Could you please send me the tracking number so I can check where my parcel is?",
+     "zh": "你能把快递单号发给我吗？这样我好查一下包裹到哪儿了。"
+    },
+    {
+     "en": "I entered the tracking number on the courier's website, but it says the parcel is still at customs clearance.",
+     "zh": "我在快递公司网站上输入了快递单号，但显示包裹还在清关。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "tracking number",
+   "pair": "en-zh",
+   "slug": "tracking-number",
+   "lang": "en",
+   "translation": "快递单号",
+   "shortAnswer": "「快递单号」in English is tracking number, the unique code for tracking a parcel.",
+   "definition": "A tracking number is a unique code from a carrier to trace a parcel. Common collocations: provide, enter, or check a tracking number.",
+   "examples": [
+    {
+     "en": "Could you please send me the tracking number so I can check where my parcel is?",
+     "zh": "你能把快递单号发给我吗？这样我好查一下包裹到哪儿了。"
+    },
+    {
+     "en": "I entered the tracking number on the courier's website, but it says the parcel is still at customs clearance.",
+     "zh": "我在快递公司网站上输入了快递单号，但显示包裹还在清关。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "驿站",
+   "pair": "zh-en",
+   "slug": "yi-zhan",
+   "lang": "zh",
+   "translation": "pickup station",
+   "shortAnswer": "驿站英文是 pickup station，指快递代收点，如菜鸟驿站。注意易错：欧美通常送货上门，没有中国这种先入站再凭码自提的普遍模式。",
+   "definition": "常见搭配：菜鸟驿站 Cainiao pickup station、取件码 pickup code、凭码自提。易错点：pickup station 多指快递代收点，不是物流中转站或快递柜，后者叫 parcel locker。",
+   "examples": [
+    {
+     "en": "Your parcel has arrived at the pickup station; please collect it with your pickup code.",
+     "zh": "您的快递已到驿站，请凭取件码领取。"
+    },
+    {
+     "en": "In China, many packages are delivered to a pickup station instead of your doorstep, so you need to pick them up yourself.",
+     "zh": "在中国，很多包裹会被送到驿站而不是家门口，所以你需要自己去取。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "pickup station",
+   "pair": "en-zh",
+   "slug": "pickup-station",
+   "lang": "en",
+   "translation": "驿站",
+   "shortAnswer": "Pickup station 中文意思是驿站，即快递代收点。关键区别：欧美快递多直投家门口，而中国快递常先放驿站再凭码自提，解决最后一百米。",
+   "definition": "核心词义：快递代收点，如菜鸟驿站。搭配：pickup code、collect a parcel。场合：日常口语和快递通知。易错点：与 parcel locker 快递柜、物流中转站不同。",
+   "examples": [
+    {
+     "en": "Your parcel has arrived at the pickup station; please collect it with your pickup code.",
+     "zh": "您的快递已到驿站，请凭取件码领取。"
+    },
+    {
+     "en": "In China, many packages are delivered to a pickup station instead of your doorstep, so you need to pick them up yourself.",
+     "zh": "在中国，很多包裹会被送到驿站而不是家门口，所以你需要自己去取。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "取快递",
+   "pair": "zh-en",
+   "slug": "qu-kuai-di",
+   "lang": "zh",
+   "translation": "pick up a package",
+   "shortAnswer": "「取快递」的英文是 pick up a package，指去快递点、快递柜或门卫处把包裹取走，别用 take 或 fetch。",
+   "definition": "pick up a package 最常用；英式也说 collect a parcel。到快递柜取件可说 pick it up from a parcel locker，代取用 pick up a package for someone。",
+   "examples": [
+    {
+     "en": "I need to pick up a package at the parcel locker before it closes.",
+     "zh": "我得在快递柜关门前去取快递。"
+    },
+    {
+     "en": "Could you pick up a package for me at the delivery station? I'm still at work.",
+     "zh": "你能帮我去快递驿站取个快递吗？我还在上班。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "pick up a package",
+   "pair": "en-zh",
+   "slug": "pick-up-a-package",
+   "lang": "en",
+   "translation": "取快递",
+   "shortAnswer": "pick up a package 的意思是「取快递」，指本人去快递点、快递柜或前台把包裹拿走。",
+   "definition": "pick up a package 为日常口语，英式对应 collect a parcel。常见搭配：pick up a package from the parcel locker、pick up a package for a friend。",
+   "examples": [
+    {
+     "en": "I need to pick up a package at the parcel locker before it closes.",
+     "zh": "我得在快递柜关门前去取快递。"
+    },
+    {
+     "en": "Could you pick up a package for me at the delivery station? I'm still at work.",
+     "zh": "你能帮我去快递驿站取个快递吗？我还在上班。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "快递柜",
+   "pair": "zh-en",
+   "slug": "kuai-di-gui",
+   "lang": "zh",
+   "translation": "parcel locker",
+   "shortAnswer": "「快递柜」的英文是 parcel locker，指快递员存放包裹、收件人凭取件码自取的智能柜。",
+   "definition": "parcel locker 是名词，指快递员暂存包裹、收件人凭取件码自取的智能柜。常搭配：pick up a parcel from a parcel locker（从快递柜取件）。",
+   "examples": [
+    {
+     "en": "The courier left my package in the parcel locker because I wasn't home.",
+     "zh": "快递员因为我没在家，把包裹放进了快递柜。"
+    },
+    {
+     "en": "Enter the pickup code to open the parcel locker and get your parcel.",
+     "zh": "输入取件码即可打开快递柜取走包裹。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "parcel locker",
+   "pair": "en-zh",
+   "slug": "parcel-locker",
+   "lang": "en",
+   "translation": "快递柜",
+   "shortAnswer": "A parcel locker, known in Chinese as 快递柜, is an automated self-service cabinet for package pickup.",
+   "definition": "A parcel locker is a secure self-service cabinet where couriers deposit parcels for recipients to collect using a pickup code or key.",
+   "examples": [
+    {
+     "en": "The courier left my package in the parcel locker because I wasn't home.",
+     "zh": "快递员因为我没在家，把包裹放进了快递柜。"
+    },
+    {
+     "en": "Enter the pickup code to open the parcel locker and get your parcel.",
+     "zh": "输入取件码即可打开快递柜取走包裹。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "发货",
+   "pair": "zh-en",
+   "slug": "fa-huo",
+   "lang": "zh",
+   "translation": "ship goods",
+   "shortAnswer": "「发货」的英文是 ship goods，指把货物交给快递或物流方寄出，ship 不限于海运。",
+   "definition": "ship goods 偏商务和跨境电商语境，也可说 send the package；相关词有 tracking number、shipping fee。",
+   "examples": [
+    {
+     "en": "We will ship goods within 24 hours after your payment is confirmed.",
+     "zh": "确认付款后，我们会在二十四小时内发货。"
+    },
+    {
+     "en": "The seller forgot to ship goods and did not upload the tracking number.",
+     "zh": "卖家忘了发货，也没有上传快递单号。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "ship goods",
+   "pair": "en-zh",
+   "slug": "ship-goods",
+   "lang": "en",
+   "translation": "发货",
+   "shortAnswer": "ship goods 的中文意思是「发货」，指把货物交给快递或物流公司寄出，偏商务语境。",
+   "definition": "ship goods 强调货物已交承运方发出，常用于外贸和电商；注意 deliver 指送达买方，ship 指发货。",
+   "examples": [
+    {
+     "en": "We will ship goods within 24 hours after your payment is confirmed.",
+     "zh": "确认付款后，我们会在二十四小时内发货。"
+    },
+    {
+     "en": "The seller forgot to ship goods and did not upload the tracking number.",
+     "zh": "卖家忘了发货，也没有上传快递单号。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "拒收",
+   "pair": "zh-en",
+   "slug": "ju-shou",
+   "lang": "zh",
+   "translation": "reject a delivery",
+   "shortAnswer": "「拒收」英文是 reject a delivery，指收货人拒绝签收包裹，强调明确拒绝。",
+   "definition": "reject a delivery 用于快递场景，指收货人主动拒收包裹。也可说 refuse a delivery，但 reject 更正式。",
+   "examples": [
+    {
+     "en": "The customer decided to reject a delivery because the package was damaged.",
+     "zh": "客户因为包裹破损决定拒收。"
+    },
+    {
+     "en": "If you reject a delivery, the courier will return it to the sender.",
+     "zh": "如果你拒收，快递员会把包裹退回给寄件人。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "reject a delivery",
+   "pair": "en-zh",
+   "slug": "reject-a-delivery",
+   "lang": "en",
+   "translation": "拒收",
+   "shortAnswer": "“reject a delivery” means 拒收, refusing to accept a package upon delivery.",
+   "definition": "reject a delivery means refusing to accept a package when it arrives. It is more formal than refuse a delivery.",
+   "examples": [
+    {
+     "en": "The customer decided to reject a delivery because the package was damaged.",
+     "zh": "客户因为包裹破损决定拒收。"
+    },
+    {
+     "en": "If you reject a delivery, the courier will return it to the sender.",
+     "zh": "如果你拒收，快递员会把包裹退回给寄件人。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "催单",
+   "pair": "zh-en",
+   "slug": "cui-dan",
+   "lang": "zh",
+   "translation": "urge delivery",
+   "shortAnswer": "「催单」的英文是 urge delivery，指催促快递或订单尽快发出或送达。它偏正式，口语里也常说 chase up the order 或 ask for faster delivery。",
+   "definition": "urge delivery 多用于催促卖家、客服或物流方加快发货或派送，常见搭配有 urge delivery of an order、urge the courier to deliver。注意它强调催「送达」，若只是催发货更常说 urge shipment。",
+   "examples": [
+    {
+     "en": "I called the seller to urge delivery because my parcel had been stuck at the sorting center for three days.",
+     "zh": "我打电话给卖家催单，因为我的包裹在分拣中心滞留了三天。"
+    },
+    {
+     "en": "She emailed the courier company to urge delivery of the package before the weekend.",
+     "zh": "她给快递公司发邮件催单，希望在周末前把包裹送到。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "urge delivery",
+   "pair": "en-zh",
+   "slug": "urge-delivery",
+   "lang": "en",
+   "translation": "催单",
+   "shortAnswer": "urge delivery 的中文意思是「催单」，即催促订单尽快发货或送达。它比 push the order 更正式，重点在催促物流环节而非单纯询问进度。",
+   "definition": "urge delivery 是动词短语，用于向卖家、客服或快递公司施压要求更快送货，常见搭配为 urge delivery of a parcel、urge the courier to deliver。多用于客服邮件等正式场合，口语中常用 chase up。",
+   "examples": [
+    {
+     "en": "I called the seller to urge delivery because my parcel had been stuck at the sorting center for three days.",
+     "zh": "我打电话给卖家催单，因为我的包裹在分拣中心滞留了三天。"
+    },
+    {
+     "en": "She emailed the courier company to urge delivery of the package before the weekend.",
+     "zh": "她给快递公司发邮件催单，希望在周末前把包裹送到。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "运单",
+   "pair": "zh-en",
+   "slug": "yun-dan",
+   "lang": "zh",
+   "translation": "waybill",
+   "shortAnswer": "「运单」的英文是 waybill，指承运人签发的货物运输单据。注意与快递单号 tracking number 区分：waybill 是单据本身，单号只是其编号。",
+   "definition": "waybill 常用于空运、海运、快递等物流场景，如 air waybill（空运单）、express waybill（快递运单）。它记录发货人、收货人、货物明细与运费，是清关和丢件索赔的关键凭证；口语中人们更常说 tracking number 来指单号。",
+   "examples": [
+    {
+     "en": "Please keep the waybill in a safe place; you'll need it to claim compensation if the parcel is lost.",
+     "zh": "请妥善保管运单，如果包裹丢失，你需要用它来申请赔偿。"
+    },
+    {
+     "en": "The courier asked me to sign the waybill before handing over the package.",
+     "zh": "快递员让我在运单上签字后才把包裹交给我。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "waybill",
+   "pair": "en-zh",
+   "slug": "waybill",
+   "lang": "en",
+   "translation": "运单",
+   "shortAnswer": "waybill 的中文意思是「运单」，是承运人签发的货物运输单据。它与 bill of lading 不同：waybill 通常不可转让，多见于空运和快递。",
+   "definition": "waybill 指随货运输单据，列明发货人、收货人、货物及运费，用于清关和追踪。常见搭配有 air waybill、express waybill。正式场合用 waybill，日常查件时人们更常说 tracking number 或 shipping label。",
+   "examples": [
+    {
+     "en": "Please keep the waybill in a safe place; you'll need it to claim compensation if the parcel is lost.",
+     "zh": "请妥善保管运单，如果包裹丢失，你需要用它来申请赔偿。"
+    },
+    {
+     "en": "The courier asked me to sign the waybill before handing over the package.",
+     "zh": "快递员让我在运单上签字后才把包裹交给我。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "丢件",
+   "pair": "zh-en",
+   "slug": "diu-jian",
+   "lang": "zh",
+   "translation": "lost parcel",
+   "shortAnswer": "「丢件」英文说 lost parcel，指包裹在运输途中丢失。注意它是名词短语，不能说 My parcel lost。",
+   "definition": "常见搭配：report a lost parcel（报丢件）、a lost parcel claim（丢件索赔）、track a lost parcel（查丢件）。英式多用 lost parcel，美式常作 lost package。",
+   "examples": [
+    {
+     "en": "I contacted the courier because my lost parcel still hasn't been found after two weeks.",
+     "zh": "我联系了快递公司，因为我的丢件已经两周了还没找到。"
+    },
+    {
+     "en": "To file a claim for a lost parcel, you need the tracking number and the shipping receipt.",
+     "zh": "申请丢件索赔时，你需要提供快递单号和运费收据。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "lost parcel",
+   "pair": "en-zh",
+   "slug": "lost-parcel",
+   "lang": "en",
+   "translation": "丢件",
+   "shortAnswer": "lost parcel 中文是「丢件」，指快递包裹在运输途中遗失，强调包裹整件丢失。",
+   "definition": "快递物流常用说法，英式更常见，美式多用 lost package。搭配：report a lost parcel、file a lost parcel claim。",
+   "examples": [
+    {
+     "en": "I contacted the courier because my lost parcel still hasn't been found after two weeks.",
+     "zh": "我联系了快递公司，因为我的丢件已经两周了还没找到。"
+    },
+    {
+     "en": "To file a claim for a lost parcel, you need the tracking number and the shipping receipt.",
+     "zh": "申请丢件索赔时，你需要提供快递单号和运费收据。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "运费",
+   "pair": "zh-en",
+   "slug": "yun-fei",
+   "lang": "zh",
+   "translation": "shipping fee",
+   "shortAnswer": "运费在英语中常说 shipping fee，指物流配送费。注意 shipping fee 多指卖家收取的配送费。",
+   "definition": "shipping fee 指物流配送费用，常见搭配 pay the shipping fee、free shipping fee。与 postage 不同，postage 侧重邮资，shipping fee 更泛指尖端电商或快递运费。",
+   "examples": [
+    {
+     "en": "The online store offers free shipping fee for orders over fifty dollars.",
+     "zh": "这家网店对超过五十美元的订单免收运费。"
+    },
+    {
+     "en": "If you reject the delivery, the shipping fee may not be refunded.",
+     "zh": "如果你拒收快递，运费可能不会退还。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "shipping fee",
+   "pair": "en-zh",
+   "slug": "shipping-fee",
+   "lang": "en",
+   "translation": "运费",
+   "shortAnswer": "shipping fee 的中文意思是运费，指物流配送费。与 delivery fee 相比，shipping fee 更侧重运输环节。",
+   "definition": "shipping fee 指寄送或配送商品时收取的运费，常见搭配 charge a shipping fee、waive the shipping fee。口语中也可说 shipping cost，正式场合多用 shipping fee。",
+   "examples": [
+    {
+     "en": "The online store offers free shipping fee for orders over fifty dollars.",
+     "zh": "这家网店对超过五十美元的订单免收运费。"
+    },
+    {
+     "en": "If you reject the delivery, the shipping fee may not be refunded.",
+     "zh": "如果你拒收快递，运费可能不会退还。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "破损件",
+   "pair": "zh-en",
+   "slug": "po-sun-jian",
+   "lang": "zh",
+   "translation": "damaged parcel",
+   "shortAnswer": "「破损件」英文是 damaged parcel，指运输中外包装或内件受损的包裹，常用于理赔与客服沟通。",
+   "definition": "damaged parcel 指运输中受损的包裹，常见于理赔与客服场景，如 report a damaged parcel。",
+   "examples": [
+    {
+     "en": "I need to report a damaged parcel because the box was crushed and the contents were broken.",
+     "zh": "我要申报一个破损件，因为箱子被压扁了，里面的东西也碎了。"
+    },
+    {
+     "en": "Please take photos of the damaged parcel and keep the tracking number for your claim.",
+     "zh": "请给这个破损件拍照，并保留快递单号以便申请理赔。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "damaged parcel",
+   "pair": "en-zh",
+   "slug": "damaged-parcel",
+   "lang": "en",
+   "translation": "破损件",
+   "shortAnswer": "Damaged parcel 中文叫「破损件」，指运输中受损的包裹，与丢件不同，常用于理赔场景。",
+   "definition": "Damaged parcel 指运输中受损的包裹，多用于理赔与客服，常见搭配 report a damaged parcel。",
+   "examples": [
+    {
+     "en": "I need to report a damaged parcel because the box was crushed and the contents were broken.",
+     "zh": "我要申报一个破损件，因为箱子被压扁了，里面的东西也碎了。"
+    },
+    {
+     "en": "Please take photos of the damaged parcel and keep the tracking number for your claim.",
+     "zh": "请给这个破损件拍照，并保留快递单号以便申请理赔。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "纸箱",
+   "pair": "zh-en",
+   "slug": "zhi-xiang",
+   "lang": "zh",
+   "translation": "cardboard box",
+   "shortAnswer": "「纸箱」英文是 cardboard box，寄快递常用，口语也说 shipping box。",
+   "definition": "cardboard box 指硬纸板箱；快递搭配 pack in a cardboard box、a cardboard box arrives。",
+   "examples": [
+    {
+     "en": "Please put the books in a cardboard box and write the tracking number on the top.",
+     "zh": "请把书放进纸箱，并在顶部写上快递单号。"
+    },
+    {
+     "en": "The courier left my cardboard box at the parcel locker because I was not at home.",
+     "zh": "快递员把我的纸箱放在了快递柜，因为我不在家。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "cardboard box",
+   "pair": "en-zh",
+   "slug": "cardboard-box",
+   "lang": "en",
+   "translation": "纸箱",
+   "shortAnswer": "纸箱 in English is cardboard box, the usual term for a shipping box.",
+   "definition": "cardboard box 是快递物流常用词，指纸板箱；搭配 pack in a cardboard box、a cardboard box arrives。",
+   "examples": [
+    {
+     "en": "Please put the books in a cardboard box and write the tracking number on the top.",
+     "zh": "请把书放进纸箱，并在顶部写上快递单号。"
+    },
+    {
+     "en": "The courier left my cardboard box at the parcel locker because I was not at home.",
+     "zh": "快递员把我的纸箱放在了快递柜，因为我不在家。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "包装",
+   "pair": "zh-en",
+   "slug": "bao-zhuang",
+   "lang": "zh",
+   "translation": "packaging",
+   "shortAnswer": "「包装」的英文是 packaging，指包裹或商品的外包装材料与外观，在快递物流中常见，强调保护与美观。",
+   "definition": "packaging 多指商品或包裹的包装材料与外观，不可数。搭配有 packaging materials、eco-friendly packaging。注意：动词“打包”用 pack。",
+   "examples": [
+    {
+     "en": "The courier said the packaging was damaged, so I refused the delivery.",
+     "zh": "快递员说包装破损了，所以我拒收了。"
+    },
+    {
+     "en": "Please keep the original packaging in case you need to return the item.",
+     "zh": "请保留原包装，以备退货时需要。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "packaging",
+   "pair": "en-zh",
+   "slug": "packaging",
+   "lang": "en",
+   "translation": "包装",
+   "shortAnswer": "packaging 的中文意思是「包装」，主要指包裹或商品的包装材料与外观，在快递物流中常见。",
+   "definition": "packaging 为不可数名词，指包装材料或方式，搭配有 shipping packaging、sustainable packaging。不要与 pack（打包动作）混淆。",
+   "examples": [
+    {
+     "en": "The courier said the packaging was damaged, so I refused the delivery.",
+     "zh": "快递员说包装破损了，所以我拒收了。"
+    },
+    {
+     "en": "Please keep the original packaging in case you need to return the item.",
+     "zh": "请保留原包装，以备退货时需要。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "到付",
+   "pair": "zh-en",
+   "slug": "dao-fu",
+   "lang": "zh",
+   "translation": "pay on delivery",
+   "shortAnswer": "「到付」的英文是 pay on delivery，即收件人收货时付款。注意 COD 多指货到付货款，到付运费更常说 freight collect。",
+   "definition": "到付指运费或货款由收件人在签收时支付，中国电商和快递常见选项。英文 pay on delivery 通用；COD（cash on delivery）偏指货到付款的货款，freight collect 专指运费到付。",
+   "examples": [
+    {
+     "en": "The courier asked me to pay on delivery before handing over the parcel.",
+     "zh": "快递员让我到付后才把包裹交给我。"
+    },
+    {
+     "en": "You can choose pay on delivery at checkout, but then you pay the shipping fee yourself.",
+     "zh": "结算时你可以选择到付，但那样运费就得自己付。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "pay on delivery",
+   "pair": "en-zh",
+   "slug": "pay-on-delivery",
+   "lang": "en",
+   "translation": "到付",
+   "shortAnswer": "Pay on delivery 的中文意思是「到付」，即收货时付款。它可指付货款或运费，但 COD 更偏货款，freight collect 专指运费到付。",
+   "definition": "pay on delivery 表示收货时付款，常见于电商结账和快递单。正式物流单据中，运费到付常用 freight collect；COD（cash on delivery）侧重货到付货款，口语中有时混用。",
+   "examples": [
+    {
+     "en": "The courier asked me to pay on delivery before handing over the parcel.",
+     "zh": "快递员让我到付后才把包裹交给我。"
+    },
+    {
+     "en": "You can choose pay on delivery at checkout, but then you pay the shipping fee yourself.",
+     "zh": "结算时你可以选择到付，但那样运费就得自己付。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "搬家",
+   "pair": "zh-en",
+   "slug": "ban-jia",
+   "lang": "zh",
+   "translation": "moving house",
+   "shortAnswer": "在快递物流中，「搬家」常用 moving house 表示；若仅寄包裹则说 shipping，不用 moving house。",
+   "definition": "moving house 指个人或家庭更换住所并搬运物品，英式常用，美式多说 moving。快递物流中涉及预约取件、打包、运费和保价。",
+   "examples": [
+    {
+     "en": "We're moving house next month, so I need to book a courier to transport all our boxes.",
+     "zh": "我们下个月要搬家，所以我需要预约快递员来运送所有箱子。"
+    },
+    {
+     "en": "Moving house can be stressful, especially when you have to track multiple parcels and pay extra shipping fees.",
+     "zh": "搬家可能压力很大，尤其是当你不得不跟踪多个包裹并支付额外运费的时候。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "moving house",
+   "pair": "en-zh",
+   "slug": "moving-house",
+   "lang": "en",
+   "translation": "搬家",
+   "shortAnswer": "「moving house」中文即「搬家」，强调家庭整体迁移；寄单个包裹用 shipping，而非 moving house。",
+   "definition": "moving house 是英式表达，美式常用 moving，中文译为「搬家」。快递物流中涉及预约取件、打包、运输、运费和保价。",
+   "examples": [
+    {
+     "en": "We're moving house next month, so I need to book a courier to transport all our boxes.",
+     "zh": "我们下个月要搬家，所以我需要预约快递员来运送所有箱子。"
+    },
+    {
+     "en": "Moving house can be stressful, especially when you have to track multiple parcels and pay extra shipping fees.",
+     "zh": "搬家可能压力很大，尤其是当你不得不跟踪多个包裹并支付额外运费的时候。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "配送时间",
+   "pair": "zh-en",
+   "slug": "pei-song-shi-jian",
+   "lang": "zh",
+   "translation": "delivery time",
+   "shortAnswer": "「配送时间」的英文是 delivery time，指快递从发货到送达的时长，注意与 delivery date（送达日期）区分。",
+   "definition": "常用搭配：estimated delivery time（预计配送时间）、shorten the delivery time（缩短配送时间）。delivery time 指时长，delivery date 指具体日期。",
+   "examples": [
+    {
+     "en": "The estimated delivery time for this parcel is three to five business days.",
+     "zh": "这个包裹的预计配送时间是三到五个工作日。"
+    },
+    {
+     "en": "If you want to shorten the delivery time, choose express shipping at checkout.",
+     "zh": "如果你想缩短配送时间，结账时请选择快递配送。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "delivery time",
+   "pair": "en-zh",
+   "slug": "delivery-time",
+   "lang": "en",
+   "translation": "配送时间",
+   "shortAnswer": "delivery time 的中文意思是「配送时间」，指快递从发出到送达所需的时间，强调时长而非日期。",
+   "definition": "核心义为配送所需时长，常见搭配：estimated delivery time、shorten the delivery time。口语也说 shipping time，但更侧重运输环节。",
+   "examples": [
+    {
+     "en": "The estimated delivery time for this parcel is three to five business days.",
+     "zh": "这个包裹的预计配送时间是三到五个工作日。"
+    },
+    {
+     "en": "If you want to shorten the delivery time, choose express shipping at checkout.",
+     "zh": "如果你想缩短配送时间，结账时请选择快递配送。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "搬家师傅",
+   "pair": "zh-en",
+   "slug": "ban-jia-shi-fu",
+   "lang": "zh",
+   "translation": "mover",
+   "shortAnswer": "「搬家师傅」的英文是 mover，指搬家时负责搬运家具和重物的人，也可说 professional mover。",
+   "definition": "mover 指搬家时搬运家具、电器等重物的人，常搭配 professional mover、hire a mover；英式英语中也用 removal man。",
+   "examples": [
+    {
+     "en": "The movers arrived at eight in the morning and carefully carried the sofa down three flights of stairs.",
+     "zh": "搬家师傅早上八点就到了，小心翼翼地把沙发从三楼搬下来。"
+    },
+    {
+     "en": "We hired two movers to help us move the piano and other heavy furniture.",
+     "zh": "我们雇了两个搬家师傅帮忙搬钢琴和其他重家具。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "mover",
+   "pair": "en-zh",
+   "slug": "mover",
+   "lang": "en",
+   "translation": "搬家师傅",
+   "shortAnswer": "Mover 的中文意思是「搬家师傅」，即搬家时帮人搬运家具和重物的人，常说 professional mover。",
+   "definition": "A mover is a person hired to carry furniture and heavy items when moving home; common collocations are professional mover and hire a mover.",
+   "examples": [
+    {
+     "en": "The movers arrived at eight in the morning and carefully carried the sofa down three flights of stairs.",
+     "zh": "搬家师傅早上八点就到了，小心翼翼地把沙发从三楼搬下来。"
+    },
+    {
+     "en": "We hired two movers to help us move the piano and other heavy furniture.",
+     "zh": "我们雇了两个搬家师傅帮忙搬钢琴和其他重家具。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "国际快递",
+   "pair": "zh-en",
+   "slug": "guo-ji-kuai-di",
+   "lang": "zh",
+   "translation": "international courier",
+   "shortAnswer": "「国际快递」的英文是 international courier，指跨国门到门递送服务。",
+   "definition": "international courier 强调专人上门收派，与侧重速度的 express 不同；常涉及清关和运费。",
+   "examples": [
+    {
+     "en": "I sent the documents to Tokyo by international courier and got a tracking number.",
+     "zh": "我用国际快递把文件寄到东京，并拿到了快递单号。"
+    },
+    {
+     "en": "When the international courier arrived, I paid extra for customs clearance.",
+     "zh": "国际快递员到达时，我额外支付了清关费用。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "international courier",
+   "pair": "en-zh",
+   "slug": "international-courier",
+   "lang": "en",
+   "translation": "国际快递",
+   "shortAnswer": "international courier 的中文是「国际快递」，指跨境专人递送服务。",
+   "definition": "international courier 指跨国包裹速递或快递员；常见搭配 send a parcel by international courier，注意与 carrier 区分。",
+   "examples": [
+    {
+     "en": "I sent the documents to Tokyo by international courier and got a tracking number.",
+     "zh": "我用国际快递把文件寄到东京，并拿到了快递单号。"
+    },
+    {
+     "en": "When the international courier arrived, I paid extra for customs clearance.",
+     "zh": "国际快递员到达时，我额外支付了清关费用。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "同城闪送",
+   "pair": "zh-en",
+   "slug": "tong-cheng-shan-song",
+   "lang": "zh",
+   "translation": "same-city courier",
+   "shortAnswer": "同城闪送的英文是 same-city courier，指同城即时专人配送，强调分钟级送达。",
+   "definition": "同城闪送常用搭配：call a same-city courier、same-city courier service。别直译成 city flash delivery。",
+   "examples": [
+    {
+     "en": "I forgot my passport, so I called a same-city courier to bring it to the airport.",
+     "zh": "我把护照忘了，于是叫了同城闪送送到机场。"
+    },
+    {
+     "en": "Same-city courier services are popular in China because they promise delivery in minutes.",
+     "zh": "同城闪送服务在中国很流行，因为承诺几分钟送达。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "same-city courier",
+   "pair": "en-zh",
+   "slug": "same-city-courier",
+   "lang": "en",
+   "translation": "同城闪送",
+   "shortAnswer": "Same-city courier is 同城闪送 in Chinese: fast intra-city delivery by a personal courier.",
+   "definition": "Same-city courier means an on-demand courier within one city, used for urgent items. In the US/UK, think bike messengers or DoorDash Drive.",
+   "examples": [
+    {
+     "en": "I forgot my passport, so I called a same-city courier to bring it to the airport.",
+     "zh": "我把护照忘了，于是叫了同城闪送送到机场。"
+    },
+    {
+     "en": "Same-city courier services are popular in China because they promise delivery in minutes.",
+     "zh": "同城闪送服务在中国很流行，因为承诺几分钟送达。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "物流信息",
+   "pair": "zh-en",
+   "slug": "wu-liu-xin-xi",
+   "lang": "zh",
+   "translation": "logistics status",
+   "shortAnswer": "物流信息的常用英文是 logistics status，但更泛指“物流信息”时用 logistics information，强调物流状态时用 logistics status。",
+   "definition": "查询快递时，“物流信息”可指物流状态节点，也可指具体详情；logistics status 侧重运输进度，logistics information 侧重内容信息。",
+   "examples": [
+    {
+     "en": "I entered my tracking number to check the logistics status of my parcel.",
+     "zh": "我输入快递单号来查询包裹的物流信息。"
+    },
+    {
+     "en": "The logistics status shows that my package is out for delivery and will arrive today.",
+     "zh": "物流信息显示我的包裹正在派送中，今天会送到。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "logistics status",
+   "pair": "en-zh",
+   "slug": "logistics-status",
+   "lang": "en",
+   "translation": "物流信息",
+   "shortAnswer": "logistics status 的中文常译为“物流信息”或“物流状态”，但泛指物流信息时更常用 logistics information，强调状态时用 logistics status。",
+   "definition": "logistics status 指包裹运输中的状态更新，常搭配 check/track/update；logistics information 则指具体物流信息内容。",
+   "examples": [
+    {
+     "en": "I entered my tracking number to check the logistics status of my parcel.",
+     "zh": "我输入快递单号来查询包裹的物流信息。"
+    },
+    {
+     "en": "The logistics status shows that my package is out for delivery and will arrive today.",
+     "zh": "物流信息显示我的包裹正在派送中，今天会送到。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "发货地",
+   "pair": "zh-en",
+   "slug": "fa-huo-di",
+   "lang": "zh",
+   "translation": "shipping origin",
+   "shortAnswer": "「发货地」的英文是 shipping origin，常用于快递物流；别直译为 send goods place。",
+   "definition": "shipping origin 指包裹始发的地点，如仓库或商家地址；与收货地 shipping destination 相对。",
+   "examples": [
+    {
+     "en": "Please check the shipping origin on the label before you return the parcel.",
+     "zh": "在退回包裹之前，请查看标签上的发货地。"
+    },
+    {
+     "en": "If the shipping origin is overseas, customs clearance may take a few extra days.",
+     "zh": "如果发货地在海外，清关可能会多花几天时间。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "shipping origin",
+   "pair": "en-zh",
+   "slug": "shipping-origin",
+   "lang": "en",
+   "translation": "发货地",
+   "shortAnswer": "shipping origin 的中文意思是「发货地」，即包裹或货物的发出地点，别与收货地混淆。",
+   "definition": "shipping origin 指物流中包裹的始发地点，常见于快递单、清关和退换货；与收货地相对。",
+   "examples": [
+    {
+     "en": "Please check the shipping origin on the label before you return the parcel.",
+     "zh": "在退回包裹之前，请查看标签上的发货地。"
+    },
+    {
+     "en": "If the shipping origin is overseas, customs clearance may take a few extra days.",
+     "zh": "如果发货地在海外，清关可能会多花几天时间。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "快递员",
+   "pair": "zh-en",
+   "slug": "kuai-di-yuan",
+   "lang": "zh",
+   "translation": "delivery courier",
+   "shortAnswer": "「快递员」的英文是 delivery courier，日常口语中也常说 delivery driver。delivery courier 更强调负责投递包裹或快件的人，常用于正式或书面表达。",
+   "definition": "delivery courier 指专门递送包裹、快件的配送人员。常见搭配有 act as a delivery courier、contact the delivery courier，注意与 courier company（快递公司）区分。",
+   "examples": [
+    {
+     "en": "The delivery courier dropped the parcel at my door and sent me a tracking number.",
+     "zh": "快递员把包裹放在我家门口，并给我发了一个快递单号。"
+    },
+    {
+     "en": "If you miss the delivery courier, you can ask them to leave the package in a parcel locker.",
+     "zh": "如果你错过了快递员，可以让他们把包裹放在快递柜里。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "delivery courier",
+   "pair": "en-zh",
+   "slug": "delivery-courier",
+   "lang": "en",
+   "translation": "快递员",
+   "shortAnswer": "delivery courier 的中文意思是「快递员」。它比 delivery driver 更强调递送包裹/快件，偏正式；日常口语中 delivery driver 更常用。",
+   "definition": "delivery courier 指负责投递包裹或快件的快递员，常见于物流、电商语境。搭配如 contact the delivery courier、a delivery courier arrives。注意与 courier service（快递服务）区分。",
+   "examples": [
+    {
+     "en": "The delivery courier dropped the parcel at my door and sent me a tracking number.",
+     "zh": "快递员把包裹放在我家门口，并给我发了一个快递单号。"
+    },
+    {
+     "en": "If you miss the delivery courier, you can ask them to leave the package in a parcel locker.",
+     "zh": "如果你错过了快递员，可以让他们把包裹放在快递柜里。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "清关",
+   "pair": "zh-en",
+   "slug": "qing-guan",
+   "lang": "zh",
+   "translation": "customs clearance",
+   "shortAnswer": "「清关」的英文是 customs clearance，指货物通过海关检查并办结手续。",
+   "definition": "清关是快递物流的关键环节，指货物进出境时向海关申报并接受检查，办结手续后方可放行。常用搭配有 customs clearance process、complete customs clearance。",
+   "examples": [
+    {
+     "en": "Your parcel is still waiting for customs clearance, so the tracking number won't update until it's released.",
+     "zh": "你的包裹仍在等待清关，所以快递单号在放行前不会更新。"
+    },
+    {
+     "en": "The delivery courier said the customs clearance fee must be paid before the parcel locker can release the item.",
+     "zh": "快递员说必须先支付清关费，快递柜才能放行这件物品。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "customs clearance",
+   "pair": "en-zh",
+   "slug": "customs-clearance",
+   "lang": "en",
+   "translation": "清关",
+   "shortAnswer": "Customs clearance 的中文意思是「清关」，即货物进出境时向海关申报并接受检查的过程。",
+   "definition": "Customs clearance 指办结海关手续，常见搭配有 customs clearance agent、customs clearance fee、await customs clearance。口语也说 clear customs。",
+   "examples": [
+    {
+     "en": "Your parcel is still waiting for customs clearance, so the tracking number won't update until it's released.",
+     "zh": "你的包裹仍在等待清关，所以快递单号在放行前不会更新。"
+    },
+    {
+     "en": "The delivery courier said the customs clearance fee must be paid before the parcel locker can release the item.",
+     "zh": "快递员说必须先支付清关费，快递柜才能放行这件物品。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "滞留件",
+   "pair": "zh-en",
+   "slug": "zhi-liu-jian",
+   "lang": "zh",
+   "translation": "stranded parcel",
+   "shortAnswer": "「滞留件」英文常说 stranded parcel，指卡在物流环节、暂时无法继续派送的包裹。",
+   "definition": "stranded parcel 指因海关、地址或未取等原因卡在物流环节的包裹，仍可追踪，不等于丢件。",
+   "examples": [
+    {
+     "en": "My stranded parcel has been at the customs center for a week.",
+     "zh": "我的滞留件已经在清关中心停了一周。"
+    },
+    {
+     "en": "Pick up your stranded parcel soon, or it will be returned.",
+     "zh": "尽快取走你的滞留件，否则会被退回。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "stranded parcel",
+   "pair": "en-zh",
+   "slug": "stranded-parcel",
+   "lang": "en",
+   "translation": "滞留件",
+   "shortAnswer": "A stranded parcel is 滞留件, a package stuck in transit and not moving forward.",
+   "definition": "A stranded parcel is 滞留件, a shipment stuck in transit and still traceable.",
+   "examples": [
+    {
+     "en": "My stranded parcel has been at the customs center for a week.",
+     "zh": "我的滞留件已经在清关中心停了一周。"
+    },
+    {
+     "en": "Pick up your stranded parcel soon, or it will be returned.",
+     "zh": "尽快取走你的滞留件，否则会被退回。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "meaning"
+  }
+ ]
+}

@@ -1,0 +1,30 @@
+{
+  "SPECIAL": {
+    "麻": "文化辨析（本词高危误译点）：中文「麻」不是 spicy（辣），而是花椒产生的刺痛麻木感，英文用 numbing / numbing spice / mala（麻辣已作为借词进入英文，mala spice/numbing and spicy）。shortAnswer 必须讲清「麻≠辣」，这是学习者最容易踩的坑。",
+    "锅气": "文化辨析：锅气 = wok hei（粤语源英文借词， Cantonese wok 镬 + hei 气），指猛火爆炒带来的镬气香与「锅味」，西方厨师与美食圈已直接借用这个说法；不要直译成 pot air / pan gas。",
+    "大排档": "文化辨析：大排档 = open-air food stall（路边露天夜市排档），可说 dai pai dong（港式借词）；讲清街头夜宵文化：热闹、便宜、烟火气，与正式餐馆的区别。",
+    "苍蝇馆子": "文化辨析：苍蝇馆子 = hole-in-the-wall eatery（英语地道对应说法，指不起眼但往往极好吃的小店），字面千万别译成 fly restaurant；中国语境还强调「苍蝇馆子才是隐藏的美味」。",
+    "拼桌": "文化辨析：拼桌 = share a table（与陌生人同桌吃饭），中国网红店/茶餐厅高峰期常态，欧美餐厅极少有拼桌文化（各有桌位）——讲清这种就餐文化差异。",
+    "发物": "文化辨析：发物是中医食忌概念（生病/伤口恢复期要避开的食物，如海鲜、羊肉、香菜），英文无完全对应词，可解释为 food to avoid when sick（per traditional Chinese medicine）；shortAnswer 必须点明「中医概念，西医无此分类」。",
+    "抢着买单": "文化辨析：抢着买单 = fighting over the bill（朋友聚餐争先付钱），中式餐桌礼仪：抢着付钱是表达情义；与西方 AA 制/go Dutch 文化对照，这是高频文化差异点。",
+    "凑单": "文化辨析：凑单 = add items to reach a discount（为凑满减门槛/包邮线再买点东西），中国电商满减文化特有场景；英文口语可说 top up the cart（凑够免邮门槛）。",
+    "假一赔十": "文化辨析：假一赔十 = tenfold compensation for fakes（卖假货十倍赔偿），中国消费者保护承诺/电商标语，欧美无同款承诺（多为一赔一 refund+small compensation）——讲清承诺含义与语境。",
+    "好评返现": "文化辨析：好评返现 = cashback for good reviews（给好评返现金），中国电商灰色生态现象，平台明令禁止但屡禁不止；讲解时点出其争议性与英文中 incentive for positive reviews 的说法。",
+    "刷单": "文化辨析：刷单 = fake orders / order farming（伪造销量与评价），中国电商生态特有黑产词，英文媒体也用 brushify/click farming 类表述；强调这是违规行为即可，不做操作描述。",
+    "黄牛": "文化辨析：黄牛 = ticket scalper（倒票黄牛，scalper/scalping），中文黄牛也涵盖医院挂号、景区门票等场景（ ticket scalper 偏演出票，可补 professional reseller/scalper 泛指）；不要直译成 yellow cow。",
+    "宰客": "文化辨析：宰客 = rip off customers（宰客=对游客漫天要价），tourist trap（游客陷阱）是地道关联说法；讲清场景：景区餐厅、出租车绕路抬价。",
+    "按斤称": "文化辨析：按斤称 = sold by weight（散装称重售卖），中国菜市场/散装零食常态；欧美超市多为固定包装定价（pre-packaged）——讲清零售文化差异。斤是 500g，英文别说 jin，可用 500g per jin 说明。",
+    "铲屎": "文化辨析：铲屎 = scoop the litter（清理猫砂盆），中文网络梗自称「铲屎官」（cat servant / litter scoop officer，自嘲为猫服务）；英文铲屎官可说 cat parent / servant of the cat，幽默自嘲语气是精髓。",
+    "撸猫": "文化辨析：撸猫 = petting a cat（撸=用手轻抚逗弄），网络流行语义更宽：吸猫/撸猫=从猫获得治愈；英文 petting the cat 即可，网络语境也可说 getting my cat fix（过猫瘾）。",
+    "驿站": "文化辨析：驿站 = pickup station（快递代收点，如菜鸟驿站），中国快递生态特有：快递先入站再凭码自提，与欧美 doorstep 直投家门形成对照——讲清这种「最后一百米」差异。",
+    "到付": "文化辨析：到付 = pay on delivery（收件人付运费/货款），中国电商常见选项；英文 COD（cash on delivery）/ freight collect 对应，注意 COD 偏指货到付款货款、到付运费也可说 freight collect。",
+    "同城闪送": "文化辨析：同城闪送 = same-city courier（同城急送跑腿，一小时达级），中国特有即时配送生态（闪送/达达）；欧美对应 couriers/on-demand delivery（如 bike messenger、DoorDash drive）——讲清时效文化（中国闪送以「分钟级」为卖点）。"
+  },
+  "CAT_HINT": {
+    "餐饮口味": "重点写五味词的口语表达（sweet/sour/bitter/salty + greasy 油腻、light flavor 清淡）、口味偏好 flavor preference、饱 full 与撑 stuffed 之别、解辣 relieve spiciness、下饭菜 goes well with rice；麻/锅气/发物词条必须讲文化辨析。",
+    "购物消费": "重点写冲动消费 impulse buying、清仓 clearance sale、尾货 overstock goods、以旧换新 trade-in、开箱 unboxing、免税 duty-free、均码 one size fits all、黄牛 scalper；电商生态词（假一赔十/好评返现/刷单/凑单）讲文化语境。",
+    "美容健身": "重点写拉伸 stretching 与热身 warm-up 之别、肌肉酸痛 muscle soreness（DOMS 迟发性酸痛可提）、深蹲 squat、俯卧撑 push-up、卷腹 crunch、有氧/无氧 aerobic/anaerobic exercise、美白 skin whitening（西方语境敏感度提示：更常说 brightening）。",
+    "宠物": "重点写遛狗 walk the dog、驱虫 deworming、绝育 neuter/spay（公犬 neuter、母犬 spay 之分）、掉毛 shedding、领养 adopt（别用 buy 语境）、猫砂 cat litter、寄养 pet boarding；铲屎/撸猫词条写网络梗语境。",
+    "快递物流": "重点写快递单号 tracking number、快递柜 parcel locker、催单 urge/track an order、丢件 lost parcel、拒收 reject the delivery、运费 shipping fee、清关 customs clearance、快递员 delivery courier；驿站/到付/同城闪送讲中国快递生态与欧美差异。"
+  }
+}
