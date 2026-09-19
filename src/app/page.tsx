@@ -1,5 +1,4 @@
 import TranslatorBox from '@/components/TranslatorBox';
-import AskAifanyi from '@/components/AskAifanyi';
 import { prisma } from '@/lib/db';
 import { getTrendingMemes } from '@/lib/metrics/trending';
 
@@ -60,8 +59,6 @@ export default async function HomePage({ searchParams }: { searchParams?: Promis
         <h1>爱翻译 · AI翻译</h1>
         <p>上传即译，多模型对比，选更地道的一版。让 AI 帮你把话说得像当地人。Let AI help you speak like a local.</p>
       </section>
-
-      <AskAifanyi />
 
       <TranslatorBox initialText={initialText} />
 
