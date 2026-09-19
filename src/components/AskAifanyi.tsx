@@ -84,10 +84,11 @@ export default function AskAifanyi() {
 
   return (
     <div className="ask-aifanyi">
-      <form className="filter-bar ask-bar" onSubmit={go}>
+      <form className="filter-bar ask-bar" action="/understand/meaning" method="get" onSubmit={go}>
         <input
           type="search"
-          value={q}
+          name="q"
+          defaultValue={q}
           onChange={(e) => setQ(e.target.value)}
           // __p0ask-brand__
           placeholder="Ask AIFANYI：cringe 是什么意思？/ 帮我把这句话翻得像美国人"

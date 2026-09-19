@@ -126,7 +126,17 @@ export default function TranslatorBox({
   const [readState, setReadState] = useState<'idle' | 'playing' | 'paused'>('idle'); // 输入朗读状态
 
   // 挂载时探测登录态
+    // __p0autorun__ no-match page "translate this" link lands with autorun=1: auto-translate once
   useEffect(() => {
+    try {
+      if (!new URLSearchParams(window.location.search).get('autorun')) return;
+      const u = new URL(window.location.href); u.searchParams.delete('autorun');
+      window.history.replaceState(null, '', u.toString());
+      if (text.trim()) doTranslate();
+    } catch {}
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+useEffect(() => {
     fetch('/api/auth/me').then(r => r.json()).then((d: any) => { if (d && d.user) setLoggedIn(true); }).catch(() => {});
     return () => { if (estTimer.current) clearTimeout(estTimer.current); };
   }, []);

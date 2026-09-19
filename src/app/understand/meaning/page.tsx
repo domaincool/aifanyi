@@ -4,6 +4,7 @@ import { buildMetadata, SITE_URL } from '@/lib/seo';
 import { prisma } from '@/lib/db';
 import { recordSearchQuery, recordLanguageIntent } from '@/lib/metrics/server';
 import { normalizeQuery } from '@/lib/text/normalize-query';
+import AiAnswerCard from '@/components/AiAnswerCard';
 
 export const dynamic = 'force-dynamic';
 
@@ -217,14 +218,15 @@ export default async function MeaningSearchPage({ searchParams }: { searchParams
           )}
         </>
       ) : (
-        <div className="cta-box">
-          <p>没有找到完全匹配的内容。AI 可以帮你：</p>
-          <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', justifyContent: 'center' }}>
-            <a className="btn primary" href={`/?ai_meaning=${encodeURIComponent(q)}`}>解释这个词</a>
-            <a className="btn" href={`/?q=${encodeURIComponent(q)}`}>翻译这句话</a>
-            <a className="btn" href={`/?polish=${encodeURIComponent(q)}`}>生成自然表达</a>
+        <>
+        <AiAnswerCard q={q} />
+        <div className="cta-box" style={{ marginTop: 12 }}>
+                    <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', justifyContent: 'center' }}>
+            <a className="btn primary" href={`/?q=${encodeURIComponent(q)}&autorun=1`}>翻译这句话 →</a>
+            <a className="btn" href="/tools/ai-polish">AI 润色</a>
           </div>
         </div>
+        </>
       )}
 
       <div style={{ marginTop: 24 }}>
