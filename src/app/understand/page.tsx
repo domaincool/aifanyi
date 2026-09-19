@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { buildMetadata } from '@/lib/seo';
 import { prisma } from '@/lib/db';
+import AskAifanyi from '@/components/AskAifanyi';
 
 export const dynamic = 'force-dynamic';
 
@@ -39,6 +40,11 @@ export default async function UnderstandHub() {
         <h1>看懂语言</h1>
         <p>不只是翻译——理解每个词背后的语境、文化与情绪。{counts.expression}+ 词条持续更新。</p>
       </section>
+      <AskAifanyi
+        hints={['cringe 是什么意思？', 'yyds 是什么意思？', 'wabi-sabi 是什么意思？']}
+        placeholder="Ask AIFANYI：这个词是什么意思？"
+      />
+
       <div className="entry-grid">
         {lines.map((l) => (
           <Link key={l.href} className="entry-card" href={l.href}>

@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 // 6 个栏目聚合页生成（Mega Menu 落地页，消除 404 死链）
 import { prisma } from '@/lib/db';
 import Link from 'next/link';
+import AskAifanyi from '@/components/AskAifanyi';
 
 export const dynamic = 'force-dynamic';
 
@@ -31,6 +32,11 @@ export default async function ExpressionsIndexPage() {
         <h1>词汇与表达</h1>
         <p>一句中文，一句地道外语——网络梗、成语谚语、难翻译词全收录</p>
       </section>
+      <AskAifanyi
+        hints={['内卷用英语怎么说？', '躺平用英语怎么说？', '画大饼用英语怎么说？']}
+        placeholder="Ask AIFANYI：这个表达用英语怎么说？"
+      />
+
       <div className="entry-grid">
         {sections.map((s) => (
           <Link key={s.href} className="entry-card" href={s.href}>
