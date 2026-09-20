@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { buildMetadata, SITE_URL } from '@/lib/seo';
 import { prisma } from '@/lib/db';
 import { recordSearchQuery, recordLanguageIntent } from '@/lib/metrics/server';
-import { normalizeQuery } from '@/lib/text/normalize-query';
+import { normalizeQuery, queryTokens } from '@/lib/text/normalize-query';
 import AiAnswerCard from '@/components/AiAnswerCard';
 
 export const dynamic = 'force-dynamic';
@@ -40,6 +40,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
 
 export default async function MeaningSearchPage({ searchParams }: { searchParams: Promise<{ q?: string }> }) {
   const sp = await searchParams;
+  const rawQ = (sp.q ?? '').trim().slice(0, 128);
   const q = normalizeQuery((sp.q ?? '').slice(0, 128));
 
   // 无查询：渲染热门词条榜（可索引入口）
@@ -126,6 +127,28 @@ export default async function MeaningSearchPage({ searchParams }: { searchParams
     }).catch(() => []),
   ] as const);
 
+  // P1 token fallback（2026-09-19）：全 query 零命中时按词元重试（skibidi toilet → skibidi）
+  if (resultCount === 0) {
+    const tokens = queryTokens(q).filter((t) => t !== q);
+    for (const tk of tokens.slice(0, 3)) {
+      const likeTk = { contains: tk, mode: 'insensitive' as const };
+      const [m2, e2] = await Promise.all([
+        prisma.memeEntry.findMany({
+          where: { status: 'published', OR: [{ term: likeTk }, { meaning: likeTk }, { translation: likeTk }] },
+          orderBy: { popularity: 'desc' },
+          take: 10,
+          select: { slug: true, term: true, meaning: true, translation: true, shortAnswer: true, lang: true },
+        }).catch(() => []),
+        prisma.expressionEntry.findMany({
+          where: { status: 'published', OR: [{ term: likeTk }, { meaning: likeTk }, { translation: likeTk }] },
+          orderBy: { popularity: 'desc' },
+          take: 10,
+          select: { slug: true, type: true, term: true, meaning: true, translation: true, shortAnswer: true },
+        }).catch(() => []),
+      ]);
+      if (m2.length > 0 || e2.length > 0) { memes.push(...m2.filter((x) => !memes.some((y) => y.slug === x.slug))); exprs.push(...e2.filter((x) => !exprs.some((y) => y.slug === x.slug))); break; }
+    }
+  }
   const resultCount = memes.length + exprs.length + scenes.length + menus.length + recipes.length;
 
   // 精确命中单条：term === q 优先展示快答卡
@@ -140,7 +163,7 @@ export default async function MeaningSearchPage({ searchParams }: { searchParams
       : null;
 
   // P2 四字段日志（search_query / search_count / zero_result / ai_answer_used 占位 false）
-  recordSearchQuery(q, resultCount, false).catch(() => {});
+  recordSearchQuery(rawQ || q, resultCount, false).catch(() => {});
   // V1.1 P1：语言意图埋点（与 recordSearchQuery 并列；埋点失败不影响渲染）
   const contentMatch: 'exact' | 'partial' | 'zero' = exact ? 'exact' : resultCount > 0 ? 'partial' : 'zero';
   try {
