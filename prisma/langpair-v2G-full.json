@@ -1,0 +1,5535 @@
+{
+ "meta": {
+  "version": "v2-C-full",
+  "date": "2026-09-17",
+  "model": "deepseek-chat",
+  "source": "langpair-v2-batchC-20260917.json",
+  "pairCounts": {
+   "zh-en": 120,
+   "en-zh": 120
+  },
+  "slugStrategy": "zh=pinyin-pro (toneless, v), en=slugify"
+ },
+ "entries": [
+  {
+   "term": "电子红包",
+   "pair": "zh-en",
+   "slug": "dian-zi-hong-bao",
+   "lang": "zh",
+   "translation": "digital red envelope",
+   "shortAnswer": "「电子红包」的英文是 digital red envelope，指通过微信、支付宝等平台发送的线上现金红包。",
+   "definition": "digital red envelope 指线上发放的现金红包；常见搭配：send / snatch a digital red envelope（发/抢电子红包）。",
+   "examples": [
+    {
+     "en": "During the Spring Festival, I sent my parents a digital red envelope through WeChat.",
+     "zh": "春节期间，我通过微信给父母发了一个电子红包。"
+    },
+    {
+     "en": "She snatched a digital red envelope in the group chat and immediately used the money to scan to pay at the supermarket.",
+     "zh": "她在群聊里抢到了一个电子红包，随后立刻用这笔钱在超市扫码支付。"
+    }
+   ],
+   "tags": [
+    "移动支付"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "digital red envelope",
+   "pair": "en-zh",
+   "slug": "digital-red-envelope",
+   "lang": "en",
+   "translation": "电子红包",
+   "shortAnswer": "“digital red envelope”的中文意思是「电子红包」，指通过微信、支付宝等平台发送的线上现金红包，常用于春节。",
+   "definition": "digital red envelope 指线上发放的现金红包，常见搭配：send / receive / snatch a digital red envelope。",
+   "examples": [
+    {
+     "en": "During the Spring Festival, I sent my parents a digital red envelope through WeChat.",
+     "zh": "春节期间，我通过微信给父母发了一个电子红包。"
+    },
+    {
+     "en": "She snatched a digital red envelope in the group chat and immediately used the money to scan to pay at the supermarket.",
+     "zh": "她在群聊里抢到了一个电子红包，随后立刻用这笔钱在超市扫码支付。"
+    }
+   ],
+   "tags": [
+    "移动支付"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "提现",
+   "pair": "zh-en",
+   "slug": "ti-xian",
+   "lang": "zh",
+   "translation": "withdraw cash",
+   "shortAnswer": "「提现」的英文是 withdraw cash，指把账户余额取出为现金或转到银行卡，常用于移动支付和银行场景。注意与「转账 transfer」和「付款 pay」区分，提现是取钱而非付钱。",
+   "definition": "withdraw cash 强调提取现金。在移动支付中，提现常指把钱包余额转到银行卡，英文可说 withdraw cash to a bank card 或 cash out。名词形式是 withdrawal，如 make a withdrawal。",
+   "examples": [
+    {
+     "en": "You can withdraw cash from the app to your bank card, usually within one business day.",
+     "zh": "你可以把应用里的钱提现到银行卡，通常一个工作日内到账。"
+    },
+    {
+     "en": "If you need cash, withdraw cash at an ATM instead of using a payment QR code.",
+     "zh": "如果你需要现金，就在自动取款机提现，而不是用付款码支付。"
+    }
+   ],
+   "tags": [
+    "移动支付"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "withdraw cash",
+   "pair": "en-zh",
+   "slug": "withdraw-cash",
+   "lang": "en",
+   "translation": "提现",
+   "shortAnswer": "「withdraw cash」的中文意思是「提现」，即把账户里的钱取出为现金或转到银行卡。它强调取钱，与「转账 transfer」不同，也与「付款 pay」方向相反。",
+   "definition": "withdraw cash 核心是提取现金，常见搭配 withdraw cash from an ATM/bank account。在移动支付里，也常指把电子钱包余额提现到银行卡，可译作 cash out。名词是 withdrawal。",
+   "examples": [
+    {
+     "en": "You can withdraw cash from the app to your bank card, usually within one business day.",
+     "zh": "你可以把应用里的钱提现到银行卡，通常一个工作日内到账。"
+    },
+    {
+     "en": "If you need cash, withdraw cash at an ATM instead of using a payment QR code.",
+     "zh": "如果你需要现金，就在自动取款机提现，而不是用付款码支付。"
+    }
+   ],
+   "tags": [
+    "移动支付"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "付款码",
+   "pair": "zh-en",
+   "slug": "fu-kuan-ma",
+   "lang": "zh",
+   "translation": "payment QR code",
+   "shortAnswer": "「付款码」的英文是 payment QR code，指用户在手机上生成、向商家出示以供扫码扣款的二维码。",
+   "definition": "payment QR code 即「付款码」，用户出示给商家扫描扣款，方向与商家展示的收款码相反。",
+   "examples": [
+    {
+     "en": "At the checkout, just open the app and show your payment QR code to the cashier.",
+     "zh": "结账时，打开应用，把付款码出示给收银员看即可。"
+    },
+    {
+     "en": "The store's scanner beeped after I held up my payment QR code, and the money was deducted instantly.",
+     "zh": "我把付款码举起来后，店里的扫码器响了一声，钱立刻就被扣掉了。"
+    }
+   ],
+   "tags": [
+    "移动支付"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "payment QR code",
+   "pair": "en-zh",
+   "slug": "payment-qr-code",
+   "lang": "en",
+   "translation": "付款码",
+   "shortAnswer": "Payment QR code is 付款码 in Chinese: a code on your phone shown to a merchant to scan and charge you.",
+   "definition": "A payment QR code is 付款码: a code customers show at checkout so the merchant can scan and charge the linked account.",
+   "examples": [
+    {
+     "en": "At the checkout, just open the app and show your payment QR code to the cashier.",
+     "zh": "结账时，打开应用，把付款码出示给收银员看即可。"
+    },
+    {
+     "en": "The store's scanner beeped after I held up my payment QR code, and the money was deducted instantly.",
+     "zh": "我把付款码举起来后，店里的扫码器响了一声，钱立刻就被扣掉了。"
+    }
+   ],
+   "tags": [
+    "移动支付"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "余额",
+   "pair": "zh-en",
+   "slug": "yu-e",
+   "lang": "zh",
+   "translation": "account balance",
+   "shortAnswer": "「余额」的英文是 account balance，指账户里剩余可用的钱，常用于银行与移动支付场景。",
+   "definition": "account balance 多指账户余额，口语中可省略 account。常见搭配：check、top up、remaining balance。",
+   "examples": [
+    {
+     "en": "I checked my account balance before scanning the QR code to pay.",
+     "zh": "扫码付款前，我先查了一下账户余额。"
+    },
+    {
+     "en": "After the refund was returned to my original payment method, my account balance went up.",
+     "zh": "退款原路退回后，我的账户余额增加了。"
+    }
+   ],
+   "tags": [
+    "移动支付"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "account balance",
+   "pair": "en-zh",
+   "slug": "account-balance",
+   "lang": "en",
+   "translation": "余额",
+   "shortAnswer": "「account balance」的中文意思是「余额」，即账户中剩余可用的金额，常见于银行与移动支付场景。",
+   "definition": "account balance 指银行或支付账户的可用余额，常见搭配有 check、top up、remaining balance。",
+   "examples": [
+    {
+     "en": "I checked my account balance before scanning the QR code to pay.",
+     "zh": "扫码付款前，我先查了一下账户余额。"
+    },
+    {
+     "en": "After the refund was returned to my original payment method, my account balance went up.",
+     "zh": "退款原路退回后，我的账户余额增加了。"
+    }
+   ],
+   "tags": [
+    "移动支付"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "微信支付",
+   "pair": "zh-en",
+   "slug": "wei-xin-zhi-fu",
+   "lang": "zh",
+   "translation": "WeChat Pay",
+   "shortAnswer": "微信支付的英文是 WeChat Pay；付款时请说 pay with WeChat Pay，别写成 Weixin Pay。",
+   "definition": "微信支付指微信内的扫码付款、付款码、转账与自动续费，如 scan to pay、refund 原路退回。",
+   "examples": [
+    {
+     "en": "At the checkout, I just scanned the QR code and paid with WeChat Pay.",
+     "zh": "结账时，我扫了一下二维码，用微信支付付了款。"
+    },
+    {
+     "en": "If the item is out of stock, the refund will go back to your WeChat Pay account in a few days.",
+     "zh": "如果商品缺货，退款会在几天内原路退回到你的微信支付账户。"
+    }
+   ],
+   "tags": [
+    "移动支付"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "WeChat Pay",
+   "pair": "en-zh",
+   "slug": "wechat-pay",
+   "lang": "en",
+   "translation": "微信支付",
+   "shortAnswer": "「微信支付」in English is WeChat Pay, Tencent's mobile payment service inside WeChat.",
+   "definition": "WeChat Pay is used for scan-to-pay, payment QR codes, transfers, and auto-renewal; say pay with WeChat Pay, not Weixin Pay.",
+   "examples": [
+    {
+     "en": "At the checkout, I just scanned the QR code and paid with WeChat Pay.",
+     "zh": "结账时，我扫了一下二维码，用微信支付付了款。"
+    },
+    {
+     "en": "If the item is out of stock, the refund will go back to your WeChat Pay account in a few days.",
+     "zh": "如果商品缺货，退款会在几天内原路退回到你的微信支付账户。"
+    }
+   ],
+   "tags": [
+    "移动支付"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "扫码支付",
+   "pair": "zh-en",
+   "slug": "sao-ma-zhi-fu",
+   "lang": "zh",
+   "translation": "scan to pay",
+   "shortAnswer": "「扫码支付」的英文是 scan to pay，指用手机扫二维码付款；作定语时常用 scan-to-pay。",
+   "definition": "scan to pay 是动词短语，用于移动支付，如 customers can scan to pay here。名词形式可用 QR code payment。注意：向商家出示付款码是 show a payment QR code，方向相反。",
+   "examples": [
+    {
+     "en": "You can scan to pay at the counter, or just show your payment QR code to the cashier.",
+     "zh": "你可以在柜台扫码支付，或者直接向收银员出示付款码。"
+    },
+    {
+     "en": "After the refund, the money goes back to your account by the original payment method, so the scan to pay record still shows the order.",
+     "zh": "退款后，钱会按原路退回到你的账户，所以那笔扫码支付记录仍会显示该订单。"
+    }
+   ],
+   "tags": [
+    "移动支付"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "scan to pay",
+   "pair": "en-zh",
+   "slug": "scan-to-pay",
+   "lang": "en",
+   "translation": "扫码支付",
+   "shortAnswer": "scan to pay 的中文意思是「扫码支付」，即用手机扫二维码完成付款，强调扫码动作，与泛指的 mobile payment 不同。",
+   "definition": "scan to pay 多用于口语和商业提示，如 scan to pay here；正式文本可用 QR code payment。注意：向商家出示付款码应说 show a payment QR code，而非 scan to pay。",
+   "examples": [
+    {
+     "en": "You can scan to pay at the counter, or just show your payment QR code to the cashier.",
+     "zh": "你可以在柜台扫码支付，或者直接向收银员出示付款码。"
+    },
+    {
+     "en": "After the refund, the money goes back to your account by the original payment method, so the scan to pay record still shows the order.",
+     "zh": "退款后，钱会按原路退回到你的账户，所以那笔扫码支付记录仍会显示该订单。"
+    }
+   ],
+   "tags": [
+    "移动支付"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "花呗",
+   "pair": "zh-en",
+   "slug": "hua-bai",
+   "lang": "zh",
+   "translation": "Huabei credit",
+   "shortAnswer": "「花呗」的英文是 Huabei credit。它不是花，是支付宝的“先消费后还款”信用服务，类似 BNPL。",
+   "definition": "Huabei credit 是蚂蚁集团旗下消费信贷产品，本质为虚拟信用额度，支持先消费后还款，常用于线上购物和扫码支付。不要译成 flower shell。",
+   "examples": [
+    {
+     "en": "When paying with Alipay, you can choose Huabei credit to buy now and pay later.",
+     "zh": "用支付宝付款时，你可以选择花呗，先消费后还款。"
+    },
+    {
+     "en": "If you use Huabei credit for your purchase, the refund will go back to your Huabei credit account.",
+     "zh": "如果你用花呗付款，退款将原路退回你的花呗账户。"
+    }
+   ],
+   "tags": [
+    "移动支付"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "Huabei credit",
+   "pair": "en-zh",
+   "slug": "huabei-credit",
+   "lang": "en",
+   "translation": "花呗",
+   "shortAnswer": "“Huabei credit”的中文意思是「花呗」。它是支付宝的消费信贷服务，不是普通信用卡，类似 BNPL。",
+   "definition": "Huabei credit 指蚂蚁集团提供的“先消费后还款”信用支付服务，常用于支付宝扫码支付和线上购物，可分期或延期还款，与普通信用卡不同。",
+   "examples": [
+    {
+     "en": "When paying with Alipay, you can choose Huabei credit to buy now and pay later.",
+     "zh": "用支付宝付款时，你可以选择花呗，先消费后还款。"
+    },
+    {
+     "en": "If you use Huabei credit for your purchase, the refund will go back to your Huabei credit account.",
+     "zh": "如果你用花呗付款，退款将原路退回你的花呗账户。"
+    }
+   ],
+   "tags": [
+    "移动支付"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "绑定银行卡",
+   "pair": "zh-en",
+   "slug": "bang-ding-yin-hang-ka",
+   "lang": "zh",
+   "translation": "link a bank card",
+   "shortAnswer": "「绑定银行卡」的英文是 link a bank card，用于支付应用添加支付方式。",
+   "definition": "link a bank card 指将银行卡与支付账户关联，用于扣款或退款。常见搭配：link a card to WeChat Pay。注意不用 bind。",
+   "examples": [
+    {
+     "en": "To use scan to pay, you first need to link a bank card in the app.",
+     "zh": "要使用扫码支付，你需要先在应用里绑定银行卡。"
+    },
+    {
+     "en": "If you link a bank card, refunds will go back to the original payment method automatically.",
+     "zh": "如果你绑定了银行卡，退款会自动原路退回。"
+    }
+   ],
+   "tags": [
+    "移动支付"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "link a bank card",
+   "pair": "en-zh",
+   "slug": "link-a-bank-card",
+   "lang": "en",
+   "translation": "绑定银行卡",
+   "shortAnswer": "「link a bank card」的中文意思是绑定银行卡，即把银行卡添加到支付账户。",
+   "definition": "link a bank card 指将银行卡与支付账户关联以便扣款。常见搭配：link a bank card to Alipay。注意 link 后接 to，不用 bind。",
+   "examples": [
+    {
+     "en": "To use scan to pay, you first need to link a bank card in the app.",
+     "zh": "要使用扫码支付，你需要先在应用里绑定银行卡。"
+    },
+    {
+     "en": "If you link a bank card, refunds will go back to the original payment method automatically.",
+     "zh": "如果你绑定了银行卡，退款会自动原路退回。"
+    }
+   ],
+   "tags": [
+    "移动支付"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "免密支付",
+   "pair": "zh-en",
+   "slug": "mian-mi-zhi-fu",
+   "lang": "zh",
+   "translation": "password-free payment",
+   "shortAnswer": "「免密支付」的英文是 password-free payment，指小额交易无需密码即可扣款。",
+   "definition": "免密支付 = password-free payment，核心是小额免验证扣款，常配自动续费、代扣协议。",
+   "examples": [
+    {
+     "en": "I enabled password-free payment for my transit card so I can tap and ride the subway without entering a PIN.",
+     "zh": "我为公交卡开通了免密支付，这样坐地铁时刷卡即可，无需输入密码。"
+    },
+    {
+     "en": "Many bike-sharing apps use password-free payment to automatically deduct the fare after each ride.",
+     "zh": "许多共享单车应用使用免密支付，在每次骑行后自动扣费。"
+    }
+   ],
+   "tags": [
+    "移动支付"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "password-free payment",
+   "pair": "en-zh",
+   "slug": "password-free-payment",
+   "lang": "en",
+   "translation": "免密支付",
+   "shortAnswer": "「password-free payment」的中文意思是「免密支付」，即小额支付无需输入密码。",
+   "definition": "password-free payment 指免密支付，常见搭配 set up / enable password-free payment。",
+   "examples": [
+    {
+     "en": "I enabled password-free payment for my transit card so I can tap and ride the subway without entering a PIN.",
+     "zh": "我为公交卡开通了免密支付，这样坐地铁时刷卡即可，无需输入密码。"
+    },
+    {
+     "en": "Many bike-sharing apps use password-free payment to automatically deduct the fare after each ride.",
+     "zh": "许多共享单车应用使用免密支付，在每次骑行后自动扣费。"
+    }
+   ],
+   "tags": [
+    "移动支付"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "二维码收款",
+   "pair": "zh-en",
+   "slug": "er-wei-ma-shou-kuan",
+   "lang": "zh",
+   "translation": "QR code payment",
+   "shortAnswer": "「二维码收款」的英文是 QR code payment，指用扫码方式完成收付款。",
+   "definition": "QR code payment 是移动支付的总称，涵盖扫码付款与扫码收款。常见搭配：accept QR code payment 接受二维码收款。",
+   "examples": [
+    {
+     "en": "This small shop now accepts QR code payment, so you do not need to carry cash.",
+     "zh": "这家小店现在支持二维码收款，所以你不用带现金了。"
+    },
+    {
+     "en": "If the QR code payment fails, the refund will go back to your original payment method.",
+     "zh": "如果二维码收款失败，退款会原路退回到你的原支付方式。"
+    }
+   ],
+   "tags": [
+    "移动支付"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "QR code payment",
+   "pair": "en-zh",
+   "slug": "qr-code-payment",
+   "lang": "en",
+   "translation": "二维码收款",
+   "shortAnswer": "QR code payment 的中文意思是「二维码收款」，即通过扫码完成交易。",
+   "definition": "QR code payment 指用二维码完成的收付款，商家收款和顾客付款都算。常说 accept QR code payments、pay by QR code。",
+   "examples": [
+    {
+     "en": "This small shop now accepts QR code payment, so you do not need to carry cash.",
+     "zh": "这家小店现在支持二维码收款，所以你不用带现金了。"
+    },
+    {
+     "en": "If the QR code payment fails, the refund will go back to your original payment method.",
+     "zh": "如果二维码收款失败，退款会原路退回到你的原支付方式。"
+    }
+   ],
+   "tags": [
+    "移动支付"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "拼手气红包",
+   "pair": "zh-en",
+   "slug": "pin-shou-qi-hong-bao",
+   "lang": "zh",
+   "translation": "lucky red envelope",
+   "shortAnswer": "「拼手气红包」的英文是 lucky red envelope。它专指微信群里金额随机分配的抢红包玩法，抢到最多的人常被称为「手气王」。",
+   "definition": "拼手气红包指微信群内金额随机分配的互动红包。常见搭配：发拼手气红包 send a lucky red envelope、手气最佳 get the luckiest draw。注意它重在社交娱乐，金额通常不大。",
+   "examples": [
+    {
+     "en": "The group chat went crazy when the manager sent a lucky red envelope during the break.",
+     "zh": "休息时经理在群里发了一个拼手气红包，群里一下子热闹起来。"
+    },
+    {
+     "en": "I only got a few cents from the lucky red envelope, but the fun was in the competition.",
+     "zh": "这个拼手气红包我只抢到几分钱，但乐趣就在于大家比拼手气。"
+    }
+   ],
+   "tags": [
+    "移动支付"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "lucky red envelope",
+   "pair": "en-zh",
+   "slug": "lucky-red-envelope",
+   "lang": "en",
+   "translation": "拼手气红包",
+   "shortAnswer": "Lucky red envelope 的中文意思是「拼手气红包」。它特指微信群中金额随机分配的抢红包玩法，不是所有红包都叫这个。",
+   "definition": "Lucky red envelope 指微信群里随机分金额的娱乐红包，口语常说 grab a lucky red envelope。与普通 red envelope 不同，它强调随机分配和社交互动，金额一般不大。",
+   "examples": [
+    {
+     "en": "The group chat went crazy when the manager sent a lucky red envelope during the break.",
+     "zh": "休息时经理在群里发了一个拼手气红包，群里一下子热闹起来。"
+    },
+    {
+     "en": "I only got a few cents from the lucky red envelope, but the fun was in the competition.",
+     "zh": "这个拼手气红包我只抢到几分钱，但乐趣就在于大家比拼手气。"
+    }
+   ],
+   "tags": [
+    "移动支付"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "转账到账",
+   "pair": "zh-en",
+   "slug": "zhuan-zhang-dao-zhang",
+   "lang": "zh",
+   "translation": "transfer arrival",
+   "shortAnswer": "“转账到账”的英文是 transfer arrival，指款项已成功进入收款账户，常在移动支付状态提示中出现。",
+   "definition": "transfer arrival 指转账完成并入账，常见于银行 App 和支付状态提示，强调款项已到达收款账户并可用。",
+   "examples": [
+    {
+     "en": "You will get a notification once the transfer arrival is confirmed by the bank.",
+     "zh": "银行确认转账到账后，你会收到通知。"
+    },
+    {
+     "en": "The transfer arrival usually takes a few minutes for mobile payments.",
+     "zh": "移动支付通常几分钟即可转账到账。"
+    }
+   ],
+   "tags": [
+    "移动支付"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "transfer arrival",
+   "pair": "en-zh",
+   "slug": "transfer-arrival",
+   "lang": "en",
+   "translation": "转账到账",
+   "shortAnswer": "“transfer arrival”的中文意思是“转账到账”，指款项已进入收款账户，常用于移动支付状态提示。",
+   "definition": "transfer arrival means the money has reached the recipient account, common in banking and payment status notices.",
+   "examples": [
+    {
+     "en": "You will get a notification once the transfer arrival is confirmed by the bank.",
+     "zh": "银行确认转账到账后，你会收到通知。"
+    },
+    {
+     "en": "The transfer arrival usually takes a few minutes for mobile payments.",
+     "zh": "移动支付通常几分钟即可转账到账。"
+    }
+   ],
+   "tags": [
+    "移动支付"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "收款码",
+   "pair": "zh-en",
+   "slug": "shou-kuan-ma",
+   "lang": "zh",
+   "translation": "payment code sign",
+   "shortAnswer": "「收款码」的英文是 payment code sign，指商家展示给顾客扫描的二维码。它和顾客出示的付款码（payment QR code）方向相反，别搞混。",
+   "definition": "payment code sign 多用于移动支付场景，指商家张贴或展示、供顾客扫码付款的二维码。易错点：向商家出示的是付款码，英文常说 payment QR code；收款码是商家收钱用的。",
+   "examples": [
+    {
+     "en": "The vendor pointed at the payment code sign on the counter and asked me to scan it.",
+     "zh": "摊主指了指柜台上的收款码，让我扫一下。"
+    },
+    {
+     "en": "Please display your payment code sign near the cashier so customers can pay more quickly.",
+     "zh": "请把收款码摆放在收银台附近，方便顾客更快付款。"
+    }
+   ],
+   "tags": [
+    "移动支付"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "payment code sign",
+   "pair": "en-zh",
+   "slug": "payment-code-sign",
+   "lang": "en",
+   "translation": "收款码",
+   "shortAnswer": "payment code sign 的中文意思是「收款码」，是商家向顾客展示、用于收款的二维码。它和顾客向商家出示的付款码方向相反。",
+   "definition": "payment code sign 指商家展示的收款二维码，常见搭配 display a payment code sign、scan the payment code sign。多用于扫码支付 scan to pay 场景，口语中也可说 merchant QR code。",
+   "examples": [
+    {
+     "en": "The vendor pointed at the payment code sign on the counter and asked me to scan it.",
+     "zh": "摊主指了指柜台上的收款码，让我扫一下。"
+    },
+    {
+     "en": "Please display your payment code sign near the cashier so customers can pay more quickly.",
+     "zh": "请把收款码摆放在收银台附近，方便顾客更快付款。"
+    }
+   ],
+   "tags": [
+    "移动支付"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "自动续费",
+   "pair": "zh-en",
+   "slug": "zi-dong-xu-fei",
+   "lang": "zh",
+   "translation": "auto-renewal subscription",
+   "shortAnswer": "「自动续费」的英文是 auto-renewal subscription，指订阅到期后系统自动扣款续期。注意不要直译成 automatic continue fee。",
+   "definition": "核心义为按周期自动扣款的订阅，常见搭配 set up / cancel / turn off auto-renewal subscription。多用于 App Store、流媒体、会员制等场景。易错点：不能简单理解为一次性付款。",
+   "examples": [
+    {
+     "en": "I forgot to cancel my auto-renewal subscription, so the app charged me again this month.",
+     "zh": "我忘了取消自动续费，所以这个月这个应用又扣了我一次钱。"
+    },
+    {
+     "en": "You can turn off the auto-renewal subscription in your payment settings before the free trial ends.",
+     "zh": "你可以在免费试用结束前，在支付设置里关闭自动续费。"
+    }
+   ],
+   "tags": [
+    "移动支付"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "auto-renewal subscription",
+   "pair": "en-zh",
+   "slug": "auto-renewal-subscription",
+   "lang": "en",
+   "translation": "自动续费",
+   "shortAnswer": "auto-renewal subscription 的中文意思是「自动续费」，指订阅服务到期后自动扣款并延长使用期限。它强调续期扣款，不同于泛指定期扣款的 recurring payment。",
+   "definition": "核心义为按周期自动扣款的订阅，常见搭配 set up / cancel / turn off auto-renewal subscription。多用于 App Store、流媒体、会员制等场景。易错点：不能简单理解为一次性付款。",
+   "examples": [
+    {
+     "en": "I forgot to cancel my auto-renewal subscription, so the app charged me again this month.",
+     "zh": "我忘了取消自动续费，所以这个月这个应用又扣了我一次钱。"
+    },
+    {
+     "en": "You can turn off the auto-renewal subscription in your payment settings before the free trial ends.",
+     "zh": "你可以在免费试用结束前，在支付设置里关闭自动续费。"
+    }
+   ],
+   "tags": [
+    "移动支付"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "记账",
+   "pair": "zh-en",
+   "slug": "ji-zhang",
+   "lang": "zh",
+   "translation": "track expenses",
+   "shortAnswer": "「记账」的英文是 track expenses，指持续记录每笔收支与花费，不只是数钱。",
+   "definition": "track expenses 意为持续记录花费，常用搭配 track daily expenses、track expenses in an app；区别于 count money。",
+   "examples": [
+    {
+     "en": "I use an app to track expenses, especially scan-to-pay and auto-renewal charges.",
+     "zh": "我用应用记账，尤其是扫码支付和自动续费扣款。"
+    },
+    {
+     "en": "If you track expenses carefully, you can spot refunds that don't return to your payment method.",
+     "zh": "如果认真记账，就能发现没有原路退回的退款。"
+    }
+   ],
+   "tags": [
+    "移动支付"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "track expenses",
+   "pair": "en-zh",
+   "slug": "track-expenses",
+   "lang": "en",
+   "translation": "记账",
+   "shortAnswer": "Track expenses means 记账 in Chinese: recording spending over time, not just counting cash.",
+   "definition": "Track expenses means to keep a record of spending. Say track expenses monthly, track expenses in an app. Not the same as count money.",
+   "examples": [
+    {
+     "en": "I use an app to track expenses, especially scan-to-pay and auto-renewal charges.",
+     "zh": "我用应用记账，尤其是扫码支付和自动续费扣款。"
+    },
+    {
+     "en": "If you track expenses carefully, you can spot refunds that don't return to your payment method.",
+     "zh": "如果认真记账，就能发现没有原路退回的退款。"
+    }
+   ],
+   "tags": [
+    "移动支付"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "AA收款",
+   "pair": "zh-en",
+   "slug": "aa-shou-kuan",
+   "lang": "zh",
+   "translation": "split the bill request",
+   "shortAnswer": "AA收款英文是 split the bill request，指在群里发起让大家按人均摊付款的请求。",
+   "definition": "向多人发起、每人分摊金额的收款请求，类似 Venmo request；注意与商家收款码区分。",
+   "examples": [
+    {
+     "en": "I sent a split the bill request to the group chat after dinner so everyone could pay their share.",
+     "zh": "吃完饭后我在群里发起了AA收款，这样每个人都能付自己那一份。"
+    },
+    {
+     "en": "If you use the app, you can create a split the bill request and each friend gets a notification to pay.",
+     "zh": "如果你用这个应用，可以创建一笔AA收款，每位朋友都会收到一条付款通知。"
+    }
+   ],
+   "tags": [
+    "移动支付"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "split the bill request",
+   "pair": "en-zh",
+   "slug": "split-the-bill-request",
+   "lang": "en",
+   "translation": "AA收款",
+   "shortAnswer": "AA收款 in Chinese is a split the bill request, asking a group to each pay a share.",
+   "definition": "A payment app request sent to several people so each pays an equal share, as on Venmo.",
+   "examples": [
+    {
+     "en": "I sent a split the bill request to the group chat after dinner so everyone could pay their share.",
+     "zh": "吃完饭后我在群里发起了AA收款，这样每个人都能付自己那一份。"
+    },
+    {
+     "en": "If you use the app, you can create a split the bill request and each friend gets a notification to pay.",
+     "zh": "如果你用这个应用，可以创建一笔AA收款，每位朋友都会收到一条付款通知。"
+    }
+   ],
+   "tags": [
+    "移动支付"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "资金冻结",
+   "pair": "zh-en",
+   "slug": "zi-jin-dong-jie",
+   "lang": "zh",
+   "translation": "payment hold",
+   "shortAnswer": "资金冻结的英文是payment hold，指支付平台或银行暂时扣留款项。注意：常与chargeback不同，chargeback是持卡人发起拒付，而payment hold多为平台风控或待清算。",
+   "definition": "payment hold常见于移动支付：提现、退款、收款码进账都可能被hold。搭配：place/put a hold on funds。注意资金冻结≠账户封禁，hold解除后资金可原路退回。",
+   "examples": [
+    {
+     "en": "The payment platform placed a payment hold on my withdrawal because of a risk review.",
+     "zh": "支付平台因风控审核对我的提现做了资金冻结。"
+    },
+    {
+     "en": "If you request a refund, the seller may release the payment hold within three to five business days.",
+     "zh": "如果你申请退款，卖家可能在三到五个工作日内解除资金冻结。"
+    }
+   ],
+   "tags": [
+    "移动支付"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "payment hold",
+   "pair": "en-zh",
+   "slug": "payment-hold",
+   "lang": "en",
+   "translation": "资金冻结",
+   "shortAnswer": "payment hold的中文意思是资金冻结，指支付平台暂时不释放款项。语义要点：hold强调暂时性冻结，区别于永久性forfeiture或chargeback。",
+   "definition": "payment hold指平台或银行暂时扣留资金，常见搭配：place a hold on, release the hold。口语中说my money is on hold。易错：hold≠扣款，解除后可原路退回。",
+   "examples": [
+    {
+     "en": "The payment platform placed a payment hold on my withdrawal because of a risk review.",
+     "zh": "支付平台因风控审核对我的提现做了资金冻结。"
+    },
+    {
+     "en": "If you request a refund, the seller may release the payment hold within three to five business days.",
+     "zh": "如果你申请退款，卖家可能在三到五个工作日内解除资金冻结。"
+    }
+   ],
+   "tags": [
+    "移动支付"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "支付失败",
+   "pair": "zh-en",
+   "slug": "zhi-fu-shi-bai",
+   "lang": "zh",
+   "translation": "payment failed",
+   "shortAnswer": "「支付失败」的英文是 payment failed，常见于扫码或付款码支付后页面提示，整句说 The payment failed。",
+   "definition": "payment failed 指交易未完成，常见搭配：The payment failed, please try again。余额不足或网络异常都可能触发该提示。",
+   "examples": [
+    {
+     "en": "The payment failed, so please scan the payment QR code again to retry.",
+     "zh": "支付失败了，请重新扫描付款码再试一次。"
+    },
+    {
+     "en": "If the payment failed because of insufficient balance, you can switch to BNPL and pay next month.",
+     "zh": "如果支付失败是因为余额不足，你可以改用花呗，下个月再还款。"
+    }
+   ],
+   "tags": [
+    "移动支付"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "payment failed",
+   "pair": "en-zh",
+   "slug": "payment-failed",
+   "lang": "en",
+   "translation": "支付失败",
+   "shortAnswer": "payment failed 的中文意思是「支付失败」，即付款未成功。它强调交易结果，不等于 payment declined。",
+   "definition": "payment failed 用于扫码或付款码支付后提示失败，常见搭配：payment failed, please try again。口语也说 didn't go through。",
+   "examples": [
+    {
+     "en": "The payment failed, so please scan the payment QR code again to retry.",
+     "zh": "支付失败了，请重新扫描付款码再试一次。"
+    },
+    {
+     "en": "If the payment failed because of insufficient balance, you can switch to BNPL and pay next month.",
+     "zh": "如果支付失败是因为余额不足，你可以改用花呗，下个月再还款。"
+    }
+   ],
+   "tags": [
+    "移动支付"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "退款原路退回",
+   "pair": "zh-en",
+   "slug": "tui-kuan-yuan-lu-tui-hui",
+   "lang": "zh",
+   "translation": "refund to original payment",
+   "shortAnswer": "「退款原路退回」英文说 refund to original payment，指钱款返回原付款渠道，不是转余额。",
+   "definition": "移动支付常用说法，强调退回原渠道，常见搭配 issue a refund to original payment。",
+   "examples": [
+    {
+     "en": "If you cancel the subscription within seven days, we will issue a refund to original payment.",
+     "zh": "如果你在七天内取消订阅，我们会按退款原路退回处理。"
+    },
+    {
+     "en": "She chose a refund to original payment instead of store credit.",
+     "zh": "她选择退款原路退回，而不是退成店铺余额。"
+    }
+   ],
+   "tags": [
+    "移动支付"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "refund to original payment",
+   "pair": "en-zh",
+   "slug": "refund-to-original-payment",
+   "lang": "en",
+   "translation": "退款原路退回",
+   "shortAnswer": "refund to original payment 就是「退款原路退回」，指钱沿原付款渠道返回，而非转成余额。",
+   "definition": "Common in mobile payments and e-commerce: issue/request a refund to original payment method.",
+   "examples": [
+    {
+     "en": "If you cancel the subscription within seven days, we will issue a refund to original payment.",
+     "zh": "如果你在七天内取消订阅，我们会按退款原路退回处理。"
+    },
+    {
+     "en": "She chose a refund to original payment instead of store credit.",
+     "zh": "她选择退款原路退回，而不是退成店铺余额。"
+    }
+   ],
+   "tags": [
+    "移动支付"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "支付密码",
+   "pair": "zh-en",
+   "slug": "zhi-fu-mi-ma",
+   "lang": "zh",
+   "translation": "payment password",
+   "shortAnswer": "「支付密码」的英文是 payment password；在移动支付中，它常指确认付款或提现时输入的密码，和登录密码不是一回事。",
+   "definition": "payment password 多指扫码付款、提现或修改支付设置时验证身份用的密码，通常区别于登录密码。常见搭配：enter your payment password（输入支付密码）、reset payment password（重置支付密码）。",
+   "examples": [
+    {
+     "en": "Please enter your payment password to complete the scan-to-pay transaction.",
+     "zh": "请输入支付密码以完成扫码支付交易。"
+    },
+    {
+     "en": "If you forget your payment password, you can reset it through the app before withdrawing cash.",
+     "zh": "如果你忘记支付密码，可以在提现前通过应用重置。"
+    }
+   ],
+   "tags": [
+    "移动支付"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "payment password",
+   "pair": "en-zh",
+   "slug": "payment-password",
+   "lang": "en",
+   "translation": "支付密码",
+   "shortAnswer": "“payment password”的中文意思是「支付密码」，常用于扫码付款、提现或确认支付时验证身份；它和 login password（登录密码）不同。",
+   "definition": "payment password 指移动支付中用于确认交易、提现或安全验证的密码，比登录密码更偏向资金操作。常见搭配：enter your payment password、forgot payment password、set a payment password。",
+   "examples": [
+    {
+     "en": "Please enter your payment password to complete the scan-to-pay transaction.",
+     "zh": "请输入支付密码以完成扫码支付交易。"
+    },
+    {
+     "en": "If you forget your payment password, you can reset it through the app before withdrawing cash.",
+     "zh": "如果你忘记支付密码，可以在提现前通过应用重置。"
+    }
+   ],
+   "tags": [
+    "移动支付"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "账单",
+   "pair": "zh-en",
+   "slug": "zhang-dan",
+   "lang": "zh",
+   "translation": "billing statement",
+   "shortAnswer": "「账单」在英语里说 billing statement，常用于信用卡、话费或移动支付的消费明细；日常口语也直接说 bill。",
+   "definition": "billing statement 偏正式，指按月或按周期结算的消费明细，如信用卡账单、话费账单；单次消费的账单口语常用 bill，不要混用。",
+   "examples": [
+    {
+     "en": "I checked my billing statement and found an auto-renewal charge I forgot to cancel.",
+     "zh": "我查看了账单，发现一笔忘记取消的自动续费扣款。"
+    },
+    {
+     "en": "The refund will go back to your original payment method, but it may take a few days to show up on your billing statement.",
+     "zh": "退款会原路退回到你的原支付方式，但可能要几天才会显示在账单上。"
+    }
+   ],
+   "tags": [
+    "移动支付"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "billing statement",
+   "pair": "en-zh",
+   "slug": "billing-statement",
+   "lang": "en",
+   "translation": "账单",
+   "shortAnswer": "billing statement 的中文意思是「账单」，指一段时间的消费或应付款明细；它强调周期结算，日常口语的 bill 更泛指一次消费的单据。",
+   "definition": "billing statement 为正式用语，常见搭配 receive a monthly billing statement、check your billing statement；移动支付里指账户消费与待还款明细，与单笔 receipt 不同。",
+   "examples": [
+    {
+     "en": "I checked my billing statement and found an auto-renewal charge I forgot to cancel.",
+     "zh": "我查看了账单，发现一笔忘记取消的自动续费扣款。"
+    },
+    {
+     "en": "The refund will go back to your original payment method, but it may take a few days to show up on your billing statement.",
+     "zh": "退款会原路退回到你的原支付方式，但可能要几天才会显示在账单上。"
+    }
+   ],
+   "tags": [
+    "移动支付"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "复试",
+   "pair": "zh-en",
+   "slug": "fu-shi",
+   "lang": "zh",
+   "translation": "second-round interview",
+   "shortAnswer": "「复试」的英文是 second-round interview，指通过初筛后的第二轮面试。注意与 final interview 区分，复试后可能还有终面。",
+   "definition": "second-round interview 常用于求职面试流程，尤其是秋招和社招中。通过初面后进入复试，可能涉及群面、谈薪或部门主管面。比 group interview 更强调轮次，不是指面试形式。",
+   "examples": [
+    {
+     "en": "After sending out resumes and passing the group interview, I was invited to a second-round interview with the department manager.",
+     "zh": "投完简历并通过群面后，我收到了部门经理的复试邀请。"
+    },
+    {
+     "en": "During the second-round interview, we discussed salary negotiation and the non-compete agreement.",
+     "zh": "在复试中，我们讨论了谈薪和竞业协议的事宜。"
+    }
+   ],
+   "tags": [
+    "求职面试"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "second-round interview",
+   "pair": "en-zh",
+   "slug": "second-round-interview",
+   "lang": "en",
+   "translation": "复试",
+   "shortAnswer": "second-round interview 的中文意思是「复试」，指第一轮面试通过后的再次面试。与 final interview 不同，复试后可能还有终面或谈薪环节。",
+   "definition": "second-round interview 指求职中的第二轮面试，常见于秋招、社招流程。正式场合常用，口语也可说 second interview。注意不要与 group interview 混淆，后者指群面。",
+   "examples": [
+    {
+     "en": "After sending out resumes and passing the group interview, I was invited to a second-round interview with the department manager.",
+     "zh": "投完简历并通过群面后，我收到了部门经理的复试邀请。"
+    },
+    {
+     "en": "During the second-round interview, we discussed salary negotiation and the non-compete agreement.",
+     "zh": "在复试中，我们讨论了谈薪和竞业协议的事宜。"
+    }
+   ],
+   "tags": [
+    "求职面试"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "笔试",
+   "pair": "zh-en",
+   "slug": "bi-shi",
+   "lang": "zh",
+   "translation": "written test",
+   "shortAnswer": "「笔试」的英文是 written test，指求职或升学中书面作答的考核环节。它不同于面试 interview，通常用于筛选候选人，常与网申、简历筛选连用。",
+   "definition": "求职场景中常说 take a written test（参加笔试）、pass the written test（通过笔试）。校招里笔试多在网申之后、面试之前进行；技术岗还常分 online written test（在线笔试）和现场笔试。",
+   "examples": [
+    {
+     "en": "After sending out resumes, I received an email inviting me to take an online written test next week.",
+     "zh": "投完简历后，我收到一封邮件，邀请我下周参加在线笔试。"
+    },
+    {
+     "en": "The company uses the written test to screen candidates before the group interview and final salary negotiation.",
+     "zh": "这家公司用笔试在群面和最终谈薪之前筛选候选人。"
+    }
+   ],
+   "tags": [
+    "求职面试"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "written test",
+   "pair": "en-zh",
+   "slug": "written-test",
+   "lang": "en",
+   "translation": "笔试",
+   "shortAnswer": "Written test 的中文意思是「笔试」，即用书面形式作答的考试或考核。它强调动笔答题，区别于口头面试 interview 和实操测试 practical test。",
+   "definition": "Written test 在招聘中常指淘汰性筛选环节，搭配有 take/pass/fail a written test、online written test。语气中性，正式与口语均可用；注意它不等于面试，别与 oral test 混用。",
+   "examples": [
+    {
+     "en": "After sending out resumes, I received an email inviting me to take an online written test next week.",
+     "zh": "投完简历后，我收到一封邮件，邀请我下周参加在线笔试。"
+    },
+    {
+     "en": "The company uses the written test to screen candidates before the group interview and final salary negotiation.",
+     "zh": "这家公司用笔试在群面和最终谈薪之前筛选候选人。"
+    }
+   ],
+   "tags": [
+    "求职面试"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "投简历",
+   "pair": "zh-en",
+   "slug": "tou-jian-li",
+   "lang": "zh",
+   "translation": "send out resumes",
+   "shortAnswer": "「投简历」的英文是 send out resumes，指批量把简历发给多家公司。",
+   "definition": "send out resumes 指主动把简历发给多家公司，多用于海投。可说 send out resumes online 或 send out resumes to companies；单数为 send out a resume。",
+   "examples": [
+    {
+     "en": "During autumn recruitment, I sent out resumes to more than twenty companies in one week.",
+     "zh": "秋招期间，我一周内向二十多家公司投了简历。"
+    },
+    {
+     "en": "She asked her senior schoolmate for a referral instead of just sending out resumes online.",
+     "zh": "她没有只是在线投简历，而是找学长要了内推。"
+    }
+   ],
+   "tags": [
+    "求职面试"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "send out resumes",
+   "pair": "en-zh",
+   "slug": "send-out-resumes",
+   "lang": "en",
+   "translation": "投简历",
+   "shortAnswer": "send out resumes 的中文意思是「投简历」，即把简历批量发给多家公司。",
+   "definition": "send out resumes 强调广投、批量发简历。可说 send out resumes online 或 send out resumes to recruiters；单数用 send out a resume。",
+   "examples": [
+    {
+     "en": "During autumn recruitment, I sent out resumes to more than twenty companies in one week.",
+     "zh": "秋招期间，我一周内向二十多家公司投了简历。"
+    },
+    {
+     "en": "She asked her senior schoolmate for a referral instead of just sending out resumes online.",
+     "zh": "她没有只是在线投简历，而是找学长要了内推。"
+    }
+   ],
+   "tags": [
+    "求职面试"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "实名认证",
+   "pair": "zh-en",
+   "slug": "shi-ming-ren-zheng",
+   "lang": "zh",
+   "translation": "real-name verification",
+   "shortAnswer": "「实名认证」即 real-name verification，指平台核验用户真实身份信息。",
+   "definition": "常见搭配有 complete real-name verification、require real-name verification。作定语时常加连字符，也可说 real-name authentication。",
+   "examples": [
+    {
+     "en": "You cannot withdraw cash from your mobile wallet until you complete real-name verification.",
+     "zh": "在完成实名认证之前，你无法从移动钱包中提现。"
+    },
+    {
+     "en": "The app requires real-name verification before you can use scan to pay or set up auto-renewal.",
+     "zh": "这款应用要求你先完成实名认证，之后才能使用扫码支付或开通自动续费。"
+    }
+   ],
+   "tags": [
+    "移动支付"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "real-name verification",
+   "pair": "en-zh",
+   "slug": "real-name-verification",
+   "lang": "en",
+   "translation": "实名认证",
+   "shortAnswer": "real-name verification means「实名认证」: the platform checks a user's legal name and ID.",
+   "definition": "Used in mobile payments, bank accounts, and SIM registration. Common patterns: complete, pass, or require real-name verification.",
+   "examples": [
+    {
+     "en": "You cannot withdraw cash from your mobile wallet until you complete real-name verification.",
+     "zh": "在完成实名认证之前，你无法从移动钱包中提现。"
+    },
+    {
+     "en": "The app requires real-name verification before you can use scan to pay or set up auto-renewal.",
+     "zh": "这款应用要求你先完成实名认证，之后才能使用扫码支付或开通自动续费。"
+    }
+   ],
+   "tags": [
+    "移动支付"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "代付",
+   "pair": "zh-en",
+   "slug": "dai-fu",
+   "lang": "zh",
+   "translation": "pay for someone",
+   "shortAnswer": "「代付」的英文是 pay for someone，指替别人付款。移动支付中用自己的账户为对方扫码或下单付款，就是代付。",
+   "definition": "pay for someone 强调替他人承担费用，常用于朋友垫付、家人代买或请客。注意方向：若指对方自己付款，应用 pay by someone 或 pay for oneself。",
+   "examples": [
+    {
+     "en": "I can pay for someone with my phone if they forgot their wallet, but they'll have to transfer the money back to me later.",
+     "zh": "如果对方忘带钱包，我可以用手机替他代付，不过之后他得把钱转回给我。"
+    },
+    {
+     "en": "In many shopping apps you can choose to pay for someone else, and the refund will go back to your original payment method.",
+     "zh": "在很多购物应用里，你可以选择替别人代付，退款会原路退回到你的付款方式。"
+    }
+   ],
+   "tags": [
+    "移动支付"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "pay for someone",
+   "pair": "en-zh",
+   "slug": "pay-for-someone",
+   "lang": "en",
+   "translation": "代付",
+   "shortAnswer": "pay for someone 的中文意思是「代付」，即替别人付款。它强调由你出钱、对方受益，移动支付中常用自己的账户为对方扫码付款。",
+   "definition": "pay for someone 指替他人支付费用，口语中也说 cover someone 或 pay on someone's behalf。注意 for 后接被代付的人，若接付款方式则用 pay by。",
+   "examples": [
+    {
+     "en": "I can pay for someone with my phone if they forgot their wallet, but they'll have to transfer the money back to me later.",
+     "zh": "如果对方忘带钱包，我可以用手机替他代付，不过之后他得把钱转回给我。"
+    },
+    {
+     "en": "In many shopping apps you can choose to pay for someone else, and the refund will go back to your original payment method.",
+     "zh": "在很多购物应用里，你可以选择替别人代付，退款会原路退回到你的付款方式。"
+    }
+   ],
+   "tags": [
+    "移动支付"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "额度",
+   "pair": "zh-en",
+   "slug": "e-du",
+   "lang": "zh",
+   "translation": "credit limit",
+   "shortAnswer": "在移动支付场景里，额度常译作 credit limit，指花呗、信用卡等可消费或透支的最高金额。",
+   "definition": "额度指移动支付中花呗、信用卡等可用的最高消费或透支金额，常见搭配有提高额度、超出额度、额度不足。",
+   "examples": [
+    {
+     "en": "My credit limit on the mobile payment app is 5,000 yuan, so I can't scan to pay for this item.",
+     "zh": "我在移动支付应用上的额度是五千元，所以无法扫码支付这件商品。"
+    },
+    {
+     "en": "If you exceed your credit limit, the payment may be declined, but any refund still goes back to your original method.",
+     "zh": "如果你超出额度，付款可能被拒绝，但退款仍会原路退回。"
+    }
+   ],
+   "tags": [
+    "移动支付"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "credit limit",
+   "pair": "en-zh",
+   "slug": "credit-limit",
+   "lang": "en",
+   "translation": "额度",
+   "shortAnswer": "In mobile payment, 额度 is credit limit: the maximum amount you can spend or borrow on a card or app.",
+   "definition": "In mobile payment, credit limit means the cap on spending or borrowing for cards, BNPL, and apps; you can raise, exceed, or run out of it.",
+   "examples": [
+    {
+     "en": "My credit limit on the mobile payment app is 5,000 yuan, so I can't scan to pay for this item.",
+     "zh": "我在移动支付应用上的额度是五千元，所以无法扫码支付这件商品。"
+    },
+    {
+     "en": "If you exceed your credit limit, the payment may be declined, but any refund still goes back to your original method.",
+     "zh": "如果你超出额度，付款可能被拒绝，但退款仍会原路退回。"
+    }
+   ],
+   "tags": [
+    "移动支付"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "薪资面议",
+   "pair": "zh-en",
+   "slug": "xin-zi-mian-yi",
+   "lang": "zh",
+   "translation": "salary negotiable",
+   "shortAnswer": "「薪资面议」的英文是 salary negotiable，常见于招聘启事。注意它表示薪水可谈，不是薪水保密，保密应说 salary confidential。",
+   "definition": "Salary negotiable 多用于招聘广告或面试邀约，暗示最终待遇取决于经验与谈判。若写 negotiable salary 虽可懂，但招聘惯用 salary negotiable。",
+   "examples": [
+    {
+     "en": "The job posting says salary negotiable, so I'll prepare for a salary negotiation during the interview.",
+     "zh": "招聘启事上写着薪资面议，所以我会在面试时准备好谈薪。"
+    },
+    {
+     "en": "During the group interview, the HR manager mentioned that the salary is negotiable based on experience and benefits.",
+     "zh": "群面时，HR经理提到薪资可根据经验和五险一金面议。"
+    }
+   ],
+   "tags": [
+    "求职面试"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "salary negotiable",
+   "pair": "en-zh",
+   "slug": "salary-negotiable",
+   "lang": "en",
+   "translation": "薪资面议",
+   "shortAnswer": "Salary negotiable 的中文意思是薪资面议，即薪水可以商量。它和 salary confidential（薪资保密）不同，前者可谈，后者不公开。",
+   "definition": "Salary negotiable 属于招聘正式用语，常见于职位描述或面试通知，表示具体薪酬待面谈确定。口语中也可说 pay is negotiable，但招聘文案更常用 salary negotiable。",
+   "examples": [
+    {
+     "en": "The job posting says salary negotiable, so I'll prepare for a salary negotiation during the interview.",
+     "zh": "招聘启事上写着薪资面议，所以我会在面试时准备好谈薪。"
+    },
+    {
+     "en": "During the group interview, the HR manager mentioned that the salary is negotiable based on experience and benefits.",
+     "zh": "群面时，HR经理提到薪资可根据经验和五险一金面议。"
+    }
+   ],
+   "tags": [
+    "求职面试"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "录用通知",
+   "pair": "zh-en",
+   "slug": "lu-yong-tong-zhi",
+   "lang": "zh",
+   "translation": "job offer",
+   "shortAnswer": "「录用通知」的英文正式说法是 job offer，不是 offer letter（录用函）。口语也说 get an offer。",
+   "definition": "job offer 指用人单位正式发出的录用意向，可口头或书面。常见搭配：receive/accept/decline a job offer。注意与 offer letter（录用函）的区别。",
+   "examples": [
+    {
+     "en": "After three rounds of interviews, she finally got a job offer from the company.",
+     "zh": "经过三轮面试，她终于收到了这家公司的录用通知。"
+    },
+    {
+     "en": "He decided to decline the job offer because the salary was too low.",
+     "zh": "他决定拒绝这份录用通知，因为薪资太低。"
+    }
+   ],
+   "tags": [
+    "求职面试"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "job offer",
+   "pair": "en-zh",
+   "slug": "job-offer",
+   "lang": "en",
+   "translation": "录用通知",
+   "shortAnswer": "「job offer」的中文意思是「录用通知」，指用人单位正式提出录用。它与 employment contract（劳动合同）不同。",
+   "definition": "job offer 是招聘方发出的正式录用意向，可口头或书面。常见搭配：accept/turn down a job offer。offer letter 是书面文件，job offer 是工作机会本身。",
+   "examples": [
+    {
+     "en": "After three rounds of interviews, she finally got a job offer from the company.",
+     "zh": "经过三轮面试，她终于收到了这家公司的录用通知。"
+    },
+    {
+     "en": "He decided to decline the job offer because the salary was too low.",
+     "zh": "他决定拒绝这份录用通知，因为薪资太低。"
+    }
+   ],
+   "tags": [
+    "求职面试"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "实习",
+   "pair": "zh-en",
+   "slug": "shi-xi",
+   "lang": "zh",
+   "translation": "internship",
+   "shortAnswer": "实习的英文是 internship，指学生或应届生为积累经验而做的短期工作，别与试用期混淆。",
+   "definition": "用法：可数名词，如 do an internship、land an internship。常见搭配：summer internship（暑期实习）、internship program（实习项目）。",
+   "examples": [
+    {
+     "en": "I completed a summer internship at a tech company, which helped me land a full-time offer during autumn recruitment.",
+     "zh": "我在一家科技公司完成了暑期实习，这帮助我在秋招期间拿到了全职工作录用通知。"
+    },
+    {
+     "en": "She sent out resumes for several internships, hoping to gain experience before graduation.",
+     "zh": "她投递了几份实习简历，希望在毕业前积累经验。"
+    }
+   ],
+   "tags": [
+    "求职面试"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "internship",
+   "pair": "en-zh",
+   "slug": "internship",
+   "lang": "en",
+   "translation": "实习",
+   "shortAnswer": "Internship 的中文意思是实习，指学生为获取经验而做的短期工作，通常与学业相关。",
+   "definition": "核心词义：一段临时工作经历，旨在培训或积累经验。常见搭配：paid internship、summer internship、internship program。",
+   "examples": [
+    {
+     "en": "I completed a summer internship at a tech company, which helped me land a full-time offer during autumn recruitment.",
+     "zh": "我在一家科技公司完成了暑期实习，这帮助我在秋招期间拿到了全职工作录用通知。"
+    },
+    {
+     "en": "She sent out resumes for several internships, hoping to gain experience before graduation.",
+     "zh": "她投递了几份实习简历，希望在毕业前积累经验。"
+    }
+   ],
+   "tags": [
+    "求职面试"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "背景调查",
+   "pair": "zh-en",
+   "slug": "bei-jing-diao-cha",
+   "lang": "zh",
+   "translation": "background check",
+   "shortAnswer": "背景调查的英文是 background check，求职面试中常见于发 offer 前的核实环节，别和 background research 混淆。",
+   "definition": "background check 指雇主在录用前核实候选人的学历、工作经历、犯罪记录等，常搭配 run/conduct a background check、pass a background check，内推 referral 也不能免除背调。",
+   "examples": [
+    {
+     "en": "The company will run a background check before sending you the formal offer.",
+     "zh": "公司在给你发正式录用通知前会做背景调查。"
+    },
+    {
+     "en": "Even with an internal referral, you still have to pass a background check.",
+     "zh": "即使有内推，你仍然需要通过背景调查。"
+    }
+   ],
+   "tags": [
+    "求职面试"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "background check",
+   "pair": "en-zh",
+   "slug": "background-check",
+   "lang": "en",
+   "translation": "背景调查",
+   "shortAnswer": "background check 的中文意思是背景调查，指录用前对候选人履历与记录的核实，与只联系证明人的 reference check 不同。",
+   "definition": "background check 指雇主核实学历、工作经历、信用与犯罪记录等，常见搭配 run/conduct/pass a background check，多用于正式书面与求职语境，别误译为“背景检查”。",
+   "examples": [
+    {
+     "en": "The company will run a background check before sending you the formal offer.",
+     "zh": "公司在给你发正式录用通知前会做背景调查。"
+    },
+    {
+     "en": "Even with an internal referral, you still have to pass a background check.",
+     "zh": "即使有内推，你仍然需要通过背景调查。"
+    }
+   ],
+   "tags": [
+    "求职面试"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "五险一金",
+   "pair": "zh-en",
+   "slug": "wu-xian-yi-jin",
+   "lang": "zh",
+   "translation": "social insurance and housing fund",
+   "shortAnswer": "五险一金的英文是 social insurance and housing fund，含五类社保和住房公积金，谈薪必问缴纳基数。",
+   "definition": "五险一金指中国用人单位依法为员工缴纳的五类社会保险和住房公积金，常与社保基数、福利待遇一起讨论。",
+   "examples": [
+    {
+     "en": "Before accepting the offer, I asked how the company calculates social insurance and housing fund contributions.",
+     "zh": "接受录用通知前，我问了公司如何计算五险一金的缴纳基数。"
+    },
+    {
+     "en": "The job posting mentions a competitive benefits package, which includes social insurance and housing fund.",
+     "zh": "招聘信息提到有竞争力的福利待遇，其中包括五险一金。"
+    }
+   ],
+   "tags": [
+    "求职面试"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "social insurance and housing fund",
+   "pair": "en-zh",
+   "slug": "social-insurance-and-housing-fund",
+   "lang": "en",
+   "translation": "五险一金",
+   "shortAnswer": "Social insurance and housing fund is 五险一金: five statutory insurances plus the housing fund in China.",
+   "definition": "Social insurance and housing fund means 五险一金, China's five statutory insurances plus the housing fund, paid by employer and employee.",
+   "examples": [
+    {
+     "en": "Before accepting the offer, I asked how the company calculates social insurance and housing fund contributions.",
+     "zh": "接受录用通知前，我问了公司如何计算五险一金的缴纳基数。"
+    },
+    {
+     "en": "The job posting mentions a competitive benefits package, which includes social insurance and housing fund.",
+     "zh": "招聘信息提到有竞争力的福利待遇，其中包括五险一金。"
+    }
+   ],
+   "tags": [
+    "求职面试"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "猎头",
+   "pair": "zh-en",
+   "slug": "lie-tou",
+   "lang": "zh",
+   "translation": "headhunter",
+   "shortAnswer": "「猎头」的英文是 headhunter，指受企业委托、主动物色中高端人才的招聘顾问。",
+   "definition": "猎头的英文是 headhunter，指受企业委托主动寻找中高端人才并收取佣金的顾问，也可作动词 headhunt（挖角）。",
+   "examples": [
+    {
+     "en": "A headhunter contacted me on LinkedIn about a senior product manager role.",
+     "zh": "一位猎头在领英上联系我，说有一个高级产品经理的职位。"
+    },
+    {
+     "en": "She was headhunted by a rival firm and used the offer to negotiate a higher salary.",
+     "zh": "她被一家竞争对手公司猎头挖角，并利用这个录用通知谈更高的薪资。"
+    }
+   ],
+   "tags": [
+    "求职面试"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "headhunter",
+   "pair": "en-zh",
+   "slug": "headhunter",
+   "lang": "en",
+   "translation": "猎头",
+   "shortAnswer": "Headhunter means 猎头 in Chinese: a recruiter who finds and persuades candidates for companies.",
+   "definition": "A headhunter is a specialist recruiter who sources senior or hard-to-fill roles for companies and may handle salary talks.",
+   "examples": [
+    {
+     "en": "A headhunter contacted me on LinkedIn about a senior product manager role.",
+     "zh": "一位猎头在领英上联系我，说有一个高级产品经理的职位。"
+    },
+    {
+     "en": "She was headhunted by a rival firm and used the offer to negotiate a higher salary.",
+     "zh": "她被一家竞争对手公司猎头挖角，并利用这个录用通知谈更高的薪资。"
+    }
+   ],
+   "tags": [
+    "求职面试"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "校招",
+   "pair": "zh-en",
+   "slug": "xiao-zhao",
+   "lang": "zh",
+   "translation": "campus recruitment",
+   "shortAnswer": "校招的英文是 campus recruitment，指企业面向应届生的校园招聘，通常分秋招和春招。",
+   "definition": "校招即校园招聘，常见搭配有 campus recruitment season（校招季）、campus recruitment talk（宣讲会），注意与社招区分。",
+   "examples": [
+    {
+     "en": "I sent out my resume during campus recruitment and got a group interview invitation.",
+     "zh": "我在校招期间投了简历，收到了群面邀请。"
+    },
+    {
+     "en": "Many companies offer referral bonuses during campus recruitment to encourage employees to recommend fresh graduates.",
+     "zh": "许多公司在秋招期间提供内推奖金，鼓励员工推荐应届毕业生。"
+    }
+   ],
+   "tags": [
+    "求职面试"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "campus recruitment",
+   "pair": "en-zh",
+   "slug": "campus-recruitment",
+   "lang": "en",
+   "translation": "校招",
+   "shortAnswer": "Campus recruitment means 校招, the campus hiring of fresh graduates, usually in autumn and spring.",
+   "definition": "Campus recruitment refers to companies hiring fresh graduates on campus, as in campus recruitment season or drive.",
+   "examples": [
+    {
+     "en": "I sent out my resume during campus recruitment and got a group interview invitation.",
+     "zh": "我在校招期间投了简历，收到了群面邀请。"
+    },
+    {
+     "en": "Many companies offer referral bonuses during campus recruitment to encourage employees to recommend fresh graduates.",
+     "zh": "许多公司在秋招期间提供内推奖金，鼓励员工推荐应届毕业生。"
+    }
+   ],
+   "tags": [
+    "求职面试"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "社招",
+   "pair": "zh-en",
+   "slug": "she-zhao",
+   "lang": "zh",
+   "translation": "experienced hiring",
+   "shortAnswer": "社招指面向有工作经验者的招聘，英文常说 experienced hiring，区别于校招。",
+   "definition": "指招聘有工作经验的人，英语常用 experienced hiring，而非 social recruitment。",
+   "examples": [
+    {
+     "en": "Many companies rely on experienced hiring to fill senior roles instead of training fresh graduates.",
+     "zh": "许多公司依靠社招来填补高级职位，而不是培训应届毕业生。"
+    },
+    {
+     "en": "She sent out resumes through a referral and landed the job in the experienced hiring round.",
+     "zh": "她通过内推投递简历，在社招环节拿到了这份工作。"
+    }
+   ],
+   "tags": [
+    "求职面试"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "experienced hiring",
+   "pair": "en-zh",
+   "slug": "experienced-hiring",
+   "lang": "en",
+   "translation": "社招",
+   "shortAnswer": "experienced hiring 指社招，即面向有工作经验者的招聘，区别于校园招聘。",
+   "definition": "experienced hiring means 社招, hiring people with work experience, not fresh graduates.",
+   "examples": [
+    {
+     "en": "Many companies rely on experienced hiring to fill senior roles instead of training fresh graduates.",
+     "zh": "许多公司依靠社招来填补高级职位，而不是培训应届毕业生。"
+    },
+    {
+     "en": "She sent out resumes through a referral and landed the job in the experienced hiring round.",
+     "zh": "她通过内推投递简历，在社招环节拿到了这份工作。"
+    }
+   ],
+   "tags": [
+    "求职面试"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "双休",
+   "pair": "zh-en",
+   "slug": "shuang-xiu",
+   "lang": "zh",
+   "translation": "two-day weekend",
+   "shortAnswer": "「双休」的英文是 two-day weekend，指每周休息两天，强调休息日天数，与五天工作制不同。",
+   "definition": "求职时常见搭配：offer a two-day weekend、guarantee a two-day weekend。面试可问 Do you offer a two-day weekend? 中文「双休」侧重每周休两天。",
+   "examples": [
+    {
+     "en": "During the interview, I asked whether the company offers a two-day weekend.",
+     "zh": "面试时我问了公司是否提供双休。"
+    },
+    {
+     "en": "Many candidates turn down offers without a two-day weekend, even if the salary is higher.",
+     "zh": "许多求职者会拒绝没有双休的录用通知，即使薪资更高。"
+    }
+   ],
+   "tags": [
+    "求职面试"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "two-day weekend",
+   "pair": "en-zh",
+   "slug": "two-day-weekend",
+   "lang": "en",
+   "translation": "双休",
+   "shortAnswer": "two-day weekend 的中文意思是「双休」，即每周休息两天，它强调休息天数，与五天工作制不同。",
+   "definition": "two-day weekend 指每周连续休息两天，常见于招聘广告和面试谈条件。口语也说 two days off a week；注意它不必然指周六日。",
+   "examples": [
+    {
+     "en": "During the interview, I asked whether the company offers a two-day weekend.",
+     "zh": "面试时我问了公司是否提供双休。"
+    },
+    {
+     "en": "Many candidates turn down offers without a two-day weekend, even if the salary is higher.",
+     "zh": "许多求职者会拒绝没有双休的录用通知，即使薪资更高。"
+    }
+   ],
+   "tags": [
+    "求职面试"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "离职证明",
+   "pair": "zh-en",
+   "slug": "li-zhi-zheng-ming",
+   "lang": "zh",
+   "translation": "proof of resignation",
+   "shortAnswer": "「离职证明」英文是 proof of resignation，指上一份工作结束的书面凭证，背调或入职新公司常需提交。",
+   "definition": "proof of resignation 是中性正式说法，由原单位开具，证明劳动关系已解除；不要与员工自己递交的 resignation letter（辞职信）混用。",
+   "examples": [
+    {
+     "en": "The HR department asked me to submit a proof of resignation before signing the new contract.",
+     "zh": "人力资源部要求我在签新合同前提交离职证明。"
+    },
+    {
+     "en": "Without a proof of resignation, the background check may delay your onboarding.",
+     "zh": "如果没有离职证明，背景调查可能会推迟你的入职。"
+    }
+   ],
+   "tags": [
+    "求职面试"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "proof of resignation",
+   "pair": "en-zh",
+   "slug": "proof-of-resignation",
+   "lang": "en",
+   "translation": "离职证明",
+   "shortAnswer": "Proof of resignation 即中文「离职证明」，指证明员工已与上一家公司解除劳动关系的正式文件，由公司开具。",
+   "definition": "Proof of resignation 为正式用语，常见搭配 provide/submit a proof of resignation，多用于入职背调或社保转移；注意与 resignation letter 区分。",
+   "examples": [
+    {
+     "en": "The HR department asked me to submit a proof of resignation before signing the new contract.",
+     "zh": "人力资源部要求我在签新合同前提交离职证明。"
+    },
+    {
+     "en": "Without a proof of resignation, the background check may delay your onboarding.",
+     "zh": "如果没有离职证明，背景调查可能会推迟你的入职。"
+    }
+   ],
+   "tags": [
+    "求职面试"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "内推",
+   "pair": "zh-en",
+   "slug": "nei-tui",
+   "lang": "zh",
+   "translation": "internal referral",
+   "shortAnswer": "内推就是 internal referral，由在职员工推荐求职者，帮助简历直达招聘方。",
+   "definition": "internal referral 即内推，由目标公司在职员工推荐，成功后推荐人常有奖金。常见搭配：get an internal referral。",
+   "examples": [
+    {
+     "en": "I got an internal referral from a friend at the company, so my resume went straight to the hiring manager.",
+     "zh": "我从公司里的一位朋友那里拿到了内推，所以我的简历直接到了招聘经理手上。"
+    },
+    {
+     "en": "Many Chinese tech companies treat internal referrals as a main hiring channel during autumn recruitment.",
+     "zh": "许多中国科技公司在秋招期间把内推作为主要招聘渠道。"
+    }
+   ],
+   "tags": [
+    "求职面试"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "internal referral",
+   "pair": "en-zh",
+   "slug": "internal-referral",
+   "lang": "en",
+   "translation": "内推",
+   "shortAnswer": "内推 means internal referral: an employee recommends a candidate, often skipping screening.",
+   "definition": "An internal referral means a current employee recommends a candidate, often with a bonus. Common collocation: get an internal referral.",
+   "examples": [
+    {
+     "en": "I got an internal referral from a friend at the company, so my resume went straight to the hiring manager.",
+     "zh": "我从公司里的一位朋友那里拿到了内推，所以我的简历直接到了招聘经理手上。"
+    },
+    {
+     "en": "Many Chinese tech companies treat internal referrals as a main hiring channel during autumn recruitment.",
+     "zh": "许多中国科技公司在秋招期间把内推作为主要招聘渠道。"
+    }
+   ],
+   "tags": [
+    "求职面试"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "远程面试",
+   "pair": "zh-en",
+   "slug": "yuan-cheng-mian-shi",
+   "lang": "zh",
+   "translation": "remote interview",
+   "shortAnswer": "远程面试的英文是 remote interview。注意不要直译为 long-distance interview，后者侧重物理距离，而 remote interview 强调通过视频或电话进行。",
+   "definition": "远程面试常用搭配有 conduct a remote interview、schedule a remote interview。在求职场景中，它区别于线下面试（in-person interview），常见于秋招、外企招聘或异地求职。",
+   "examples": [
+    {
+     "en": "Due to the pandemic, many companies have shifted to remote interviews for the autumn recruitment season.",
+     "zh": "受疫情影响，许多公司在秋招季转为远程面试。"
+    },
+    {
+     "en": "She prepared extensively for the remote interview, testing her camera and microphone beforehand.",
+     "zh": "她为远程面试做了充分准备，提前测试了摄像头和麦克风。"
+    }
+   ],
+   "tags": [
+    "求职面试"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "remote interview",
+   "pair": "en-zh",
+   "slug": "remote-interview",
+   "lang": "en",
+   "translation": "远程面试",
+   "shortAnswer": "remote interview 的中文意思是远程面试。它特指通过视频或电话进行的面试，与虚拟面试（virtual interview）近义，但更强调面试官与候选人不在同一地点。",
+   "definition": "remote interview 指通过视频会议软件或电话进行的面试，常见搭配有 do a remote interview、remote interview process。正式场合常用，比 phone screen 更正式，比 in-person interview 更灵活。",
+   "examples": [
+    {
+     "en": "Due to the pandemic, many companies have shifted to remote interviews for the autumn recruitment season.",
+     "zh": "受疫情影响，许多公司在秋招季转为远程面试。"
+    },
+    {
+     "en": "She prepared extensively for the remote interview, testing her camera and microphone beforehand.",
+     "zh": "她为远程面试做了充分准备，提前测试了摄像头和麦克风。"
+    }
+   ],
+   "tags": [
+    "求职面试"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "竞业协议",
+   "pair": "zh-en",
+   "slug": "jing-ye-xie-yi",
+   "lang": "zh",
+   "translation": "non-compete agreement",
+   "shortAnswer": "竞业协议即 non-compete agreement，离职后限制加入竞争对手，与保密协议 NDA 不同。",
+   "definition": "non-compete agreement 常简写为 non-compete，指离职后一定期限内不得进入竞争公司或自营同类业务，公司通常需支付补偿。",
+   "examples": [
+    {
+     "en": "Before accepting the offer, she asked HR how long the non-compete agreement would last.",
+     "zh": "在接受录用通知前，她问人力资源部这份竞业协议会持续多久。"
+    },
+    {
+     "en": "The company threatened to enforce the non-compete agreement when he joined a rival firm.",
+     "zh": "他加入一家竞争对手公司时，公司威胁要执行竞业协议。"
+    }
+   ],
+   "tags": [
+    "求职面试"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "non-compete agreement",
+   "pair": "en-zh",
+   "slug": "non-compete-agreement",
+   "lang": "en",
+   "translation": "竞业协议",
+   "shortAnswer": "Non-compete agreement is 竞业协议: it limits joining a rival after leaving, unlike an NDA.",
+   "definition": "A non-compete agreement limits working for rivals for a set period, commonly with sign, breach and enforce as collocations.",
+   "examples": [
+    {
+     "en": "Before accepting the offer, she asked HR how long the non-compete agreement would last.",
+     "zh": "在接受录用通知前，她问人力资源部这份竞业协议会持续多久。"
+    },
+    {
+     "en": "The company threatened to enforce the non-compete agreement when he joined a rival firm.",
+     "zh": "他加入一家竞争对手公司时，公司威胁要执行竞业协议。"
+    }
+   ],
+   "tags": [
+    "求职面试"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "职业规划",
+   "pair": "zh-en",
+   "slug": "zhi-ye-gui-hua",
+   "lang": "zh",
+   "translation": "career plan",
+   "shortAnswer": "「职业规划」的英文是 career plan，注意不要直译成 job plan 或 career planning，后者指规划的过程。",
+   "definition": "career plan 指个人对职业发展路径的长期安排，常见搭配有 a clear career plan、make a career plan、discuss your career plan，面试时被问 career plan 要结合岗位和公司发展来答。",
+   "examples": [
+    {
+     "en": "During the interview, the HR manager asked me to describe my career plan for the next five years.",
+     "zh": "面试时，人力资源经理让我描述一下自己未来五年的职业规划。"
+    },
+    {
+     "en": "Autumn recruitment is the best time for graduates to turn their career plan into reality by sending out resumes and preparing for group interviews.",
+     "zh": "秋招是毕业生把职业规划变成现实的最佳时机，他们可以投简历并准备群面。"
+    }
+   ],
+   "tags": [
+    "求职面试"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "career plan",
+   "pair": "en-zh",
+   "slug": "career-plan",
+   "lang": "en",
+   "translation": "职业规划",
+   "shortAnswer": "career plan 的中文意思是「职业规划」，指对职业发展路径的长期安排，与侧重过程的 career planning 不同。",
+   "definition": "career plan 是可数名词，常见搭配有 have a career plan、discuss your career plan、a five-year career plan，求职面试中常用来询问候选人的长期目标，口语里也常说 career goals。",
+   "examples": [
+    {
+     "en": "During the interview, the HR manager asked me to describe my career plan for the next five years.",
+     "zh": "面试时，人力资源经理让我描述一下自己未来五年的职业规划。"
+    },
+    {
+     "en": "Autumn recruitment is the best time for graduates to turn their career plan into reality by sending out resumes and preparing for group interviews.",
+     "zh": "秋招是毕业生把职业规划变成现实的最佳时机，他们可以投简历并准备群面。"
+    }
+   ],
+   "tags": [
+    "求职面试"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "弹性工作",
+   "pair": "zh-en",
+   "slug": "tan-xing-gong-zuo",
+   "lang": "zh",
+   "translation": "flexible work hours",
+   "shortAnswer": "弹性工作的英文是 flexible work hours，指可自主调整上下班时间，常被列为求职福利。",
+   "definition": "求职简历和面试中常用 flexible work hours 表示灵活上下班，而非完全自由安排。可搭配 offer flexible work hours、request flexible work hours，注意与 remote work 区分。",
+   "examples": [
+    {
+     "en": "During the interview, the HR manager mentioned that the company offers flexible work hours, which is a big plus for me.",
+     "zh": "面试时，人力资源经理提到公司提供弹性工作，这对我来说是一个很大的加分项。"
+    },
+    {
+     "en": "Many job postings list flexible work hours as a benefit to attract candidates who need to balance family and career.",
+     "zh": "许多招聘信息把弹性工作列为福利，以吸引需要平衡家庭和事业的求职者。"
+    }
+   ],
+   "tags": [
+    "求职面试"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "flexible work hours",
+   "pair": "en-zh",
+   "slug": "flexible-work-hours",
+   "lang": "en",
+   "translation": "弹性工作",
+   "shortAnswer": "Flexible work hours is 弹性工作 in Chinese, meaning adjustable start and end times, often a job benefit.",
+   "definition": "Flexible work hours 指弹性工作制，常见搭配 offer/allow flexible work hours。多用于正式招聘和面试，口语也可说 flexi hours。易错点：不等于 unlimited time off 或完全远程。",
+   "examples": [
+    {
+     "en": "During the interview, the HR manager mentioned that the company offers flexible work hours, which is a big plus for me.",
+     "zh": "面试时，人力资源经理提到公司提供弹性工作，这对我来说是一个很大的加分项。"
+    },
+    {
+     "en": "Many job postings list flexible work hours as a benefit to attract candidates who need to balance family and career.",
+     "zh": "许多招聘信息把弹性工作列为福利，以吸引需要平衡家庭和事业的求职者。"
+    }
+   ],
+   "tags": [
+    "求职面试"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "期望薪资",
+   "pair": "zh-en",
+   "slug": "qi-wang-xin-zi",
+   "lang": "zh",
+   "translation": "expected salary",
+   "shortAnswer": "「期望薪资」英文是 expected salary，求职面试常用，注意别说 hope salary。",
+   "definition": "expected salary 指求职时期望的薪资，常见问法：What is your expected salary?",
+   "examples": [
+    {
+     "en": "The interviewer asked about my expected salary, so I gave a range.",
+     "zh": "面试官问了我的期望薪资，所以我给了一个范围。"
+    },
+    {
+     "en": "You can say your expected salary is negotiable in the cover letter.",
+     "zh": "你可以在求职信中说期望薪资面议。"
+    }
+   ],
+   "tags": [
+    "求职面试"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "expected salary",
+   "pair": "en-zh",
+   "slug": "expected-salary",
+   "lang": "en",
+   "translation": "期望薪资",
+   "shortAnswer": "「期望薪资」 in English is expected salary, the pay you hope to get in a job.",
+   "definition": "Expected salary means the pay you want for a job, asked in interviews.",
+   "examples": [
+    {
+     "en": "The interviewer asked about my expected salary, so I gave a range.",
+     "zh": "面试官问了我的期望薪资，所以我给了一个范围。"
+    },
+    {
+     "en": "You can say your expected salary is negotiable in the cover letter.",
+     "zh": "你可以在求职信中说期望薪资面议。"
+    }
+   ],
+   "tags": [
+    "求职面试"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "自我介绍",
+   "pair": "zh-en",
+   "slug": "zi-wo-jie-shao",
+   "lang": "zh",
+   "translation": "self introduction",
+   "shortAnswer": "「自我介绍」的英文是 self introduction，求职面试中常说 give a self introduction。",
+   "definition": "self introduction 指介绍自己姓名、背景与经历的陈述，面试中常用 give a brief self introduction。",
+   "examples": [
+    {
+     "en": "During the interview, she gave a clear self introduction covering her education and internship experience.",
+     "zh": "面试中，她做了一个清晰的自我介绍，涵盖教育背景和实习经历。"
+    },
+    {
+     "en": "A strong self introduction can help you stand out in autumn recruitment.",
+     "zh": "一段出色的自我介绍能帮你在秋招中脱颖而出。"
+    }
+   ],
+   "tags": [
+    "求职面试"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "self introduction",
+   "pair": "en-zh",
+   "slug": "self-introduction",
+   "lang": "en",
+   "translation": "自我介绍",
+   "shortAnswer": "Self introduction 的中文意思是「自我介绍」，指面试中介绍自身背景的陈述。",
+   "definition": "self introduction 指一段介绍自己姓名、教育、经历与技能的陈述，常见搭配 give a self introduction。",
+   "examples": [
+    {
+     "en": "During the interview, she gave a clear self introduction covering her education and internship experience.",
+     "zh": "面试中，她做了一个清晰的自我介绍，涵盖教育背景和实习经历。"
+    },
+    {
+     "en": "A strong self introduction can help you stand out in autumn recruitment.",
+     "zh": "一段出色的自我介绍能帮你在秋招中脱颖而出。"
+    }
+   ],
+   "tags": [
+    "求职面试"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "离职原因",
+   "pair": "zh-en",
+   "slug": "li-zhi-yuan-yin",
+   "lang": "zh",
+   "translation": "reason for leaving",
+   "shortAnswer": "「离职原因」的英文是 reason for leaving，求职面试常用，解释上一份工作为何结束，比 quit reason 正式。",
+   "definition": "面试官问 What is your reason for leaving? 是了解你离开上家公司的动机。常见搭配：state a reason for leaving。",
+   "examples": [
+    {
+     "en": "When the interviewer asked about my reason for leaving, I said I wanted to move into a role with more responsibility.",
+     "zh": "面试官问我离职原因时，我说我想转向一个职责更多的岗位。"
+    },
+    {
+     "en": "A vague reason for leaving can raise doubts, so keep it honest but positive.",
+     "zh": "含糊的离职原因会引起怀疑，所以回答要诚实但积极。"
+    }
+   ],
+   "tags": [
+    "求职面试"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "reason for leaving",
+   "pair": "en-zh",
+   "slug": "reason-for-leaving",
+   "lang": "en",
+   "translation": "离职原因",
+   "shortAnswer": "reason for leaving 的中文意思是「离职原因」，是求职面试常见问法，比 quit reason 正式，指你为何离开上一份工作。",
+   "definition": "reason for leaving 多用于面试和招聘表格，询问候选人离开前雇主的动机。常见搭配：ask about your reason for leaving。",
+   "examples": [
+    {
+     "en": "When the interviewer asked about my reason for leaving, I said I wanted to move into a role with more responsibility.",
+     "zh": "面试官问我离职原因时，我说我想转向一个职责更多的岗位。"
+    },
+    {
+     "en": "A vague reason for leaving can raise doubts, so keep it honest but positive.",
+     "zh": "含糊的离职原因会引起怀疑，所以回答要诚实但积极。"
+    }
+   ],
+   "tags": [
+    "求职面试"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "谈薪",
+   "pair": "zh-en",
+   "slug": "tan-xin",
+   "lang": "zh",
+   "translation": "salary negotiation",
+   "shortAnswer": "「谈薪」的英文是 salary negotiation，指求职者与雇主就薪资待遇进行的协商，动词形式常说 negotiate a salary。",
+   "definition": "salary negotiation 常用于招聘后期或收到 offer 后，双方就基本工资、奖金、股票、福利等展开协商。正式场合用 negotiate the salary 或 salary negotiation 更地道。",
+   "examples": [
+    {
+     "en": "After receiving the offer, she spent a week preparing for the salary negotiation.",
+     "zh": "收到录用通知后，她花了一周时间为谈薪做准备。"
+    },
+    {
+     "en": "Good research can give you more leverage during salary negotiation.",
+     "zh": "充分的调研能让你在谈薪时拥有更多筹码。"
+    }
+   ],
+   "tags": [
+    "求职面试"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "salary negotiation",
+   "pair": "en-zh",
+   "slug": "salary-negotiation",
+   "lang": "en",
+   "translation": "谈薪",
+   "shortAnswer": "salary negotiation 的中文意思是「谈薪」，即求职者与雇主就薪酬待遇进行的正式协商，强调对等谈判。",
+   "definition": "salary negotiation 指 offer 阶段就 base salary、bonus、equity、benefits 等进行的正式协商，常见搭配有 enter into salary negotiations。",
+   "examples": [
+    {
+     "en": "After receiving the offer, she spent a week preparing for the salary negotiation.",
+     "zh": "收到录用通知后，她花了一周时间为谈薪做准备。"
+    },
+    {
+     "en": "Good research can give you more leverage during salary negotiation.",
+     "zh": "充分的调研能让你在谈薪时拥有更多筹码。"
+    }
+   ],
+   "tags": [
+    "求职面试"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "租房",
+   "pair": "zh-en",
+   "slug": "zu-fang",
+   "lang": "zh",
+   "translation": "rent an apartment",
+   "shortAnswer": "「租房」的英文是 rent an apartment，指租下一整套公寓自住。若只是租一个房间或与人合租，更常说 rent a room 或 flatshare。",
+   "definition": "rent an apartment 强调租下整套公寓，租房前通常要交 security deposit（押金），签约时留意押一付三和 utilities（水电费）是否包含。合租用 flatshare，转租用 sublet，退租是 move out。",
+   "examples": [
+    {
+     "en": "We decided to rent an apartment near the subway to cut down on commuting time.",
+     "zh": "我们决定在地铁附近租房，以减少通勤时间。"
+    },
+    {
+     "en": "Before you rent an apartment, check whether the utilities and property management fee are included in the rent.",
+     "zh": "租房前要问清楚房租里是否包含水电费和物业费。"
+    }
+   ],
+   "tags": [
+    "租房生活"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "rent an apartment",
+   "pair": "en-zh",
+   "slug": "rent-an-apartment",
+   "lang": "en",
+   "translation": "租房",
+   "shortAnswer": "Rent an apartment 的中文意思是「租房」，通常指租下一整套公寓。它与 rent a room 的区别在于前者租整套房，后者只租一个房间。",
+   "definition": "rent an apartment 是中性表达，正式租房广告和日常口语都常用。常见搭配：rent an apartment near the subway、rent a furnished apartment。注意英式英语中公寓更多说 flat，合租常说 flatshare。",
+   "examples": [
+    {
+     "en": "We decided to rent an apartment near the subway to cut down on commuting time.",
+     "zh": "我们决定在地铁附近租房，以减少通勤时间。"
+    },
+    {
+     "en": "Before you rent an apartment, check whether the utilities and property management fee are included in the rent.",
+     "zh": "租房前要问清楚房租里是否包含水电费和物业费。"
+    }
+   ],
+   "tags": [
+    "租房生活"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "房东",
+   "pair": "zh-en",
+   "slug": "fang-dong",
+   "lang": "zh",
+   "translation": "landlord",
+   "shortAnswer": "房东的英文是 landlord，指拥有房屋并出租的人。注意 landlord 通常指男性房东，女房东可用 landlady，性别不明时用 landlord 更通用。",
+   "definition": "租房场景中，向房东支付租金、押金和可能的水电费；房东负责维修和物业费。二房东是 sublandlord。英式英语中也常用 landlord 指酒吧老板。",
+   "examples": [
+    {
+     "en": "I paid the landlord the first month's rent and a security deposit before moving in.",
+     "zh": "搬进去之前，我向房东支付了第一个月的租金和押金。"
+    },
+    {
+     "en": "The landlord promised to fix the leaking pipe, but he hasn't shown up yet.",
+     "zh": "房东答应修理漏水的水管，但他还没露面。"
+    }
+   ],
+   "tags": [
+    "租房生活"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "landlord",
+   "pair": "en-zh",
+   "slug": "landlord",
+   "lang": "en",
+   "translation": "房东",
+   "shortAnswer": "Landlord 的中文意思是房东，即出租房屋并收取租金的人。它与 tenant（房客）相对，女房东可称 landlady，但 landlord 更通用。",
+   "definition": "Landlord 是租赁关系中的出租方，常与 tenant、rent、lease、security deposit 搭配。口语中也可指酒吧老板。注意不要与 homeowner（自住房主）混淆。",
+   "examples": [
+    {
+     "en": "I paid the landlord the first month's rent and a security deposit before moving in.",
+     "zh": "搬进去之前，我向房东支付了第一个月的租金和押金。"
+    },
+    {
+     "en": "The landlord promised to fix the leaking pipe, but he hasn't shown up yet.",
+     "zh": "房东答应修理漏水的水管，但他还没露面。"
+    }
+   ],
+   "tags": [
+    "租房生活"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "秋招",
+   "pair": "zh-en",
+   "slug": "qiu-zhao",
+   "lang": "zh",
+   "translation": "autumn recruitment",
+   "shortAnswer": "秋招的英文是 autumn recruitment，指中国每年秋季的校园招聘。注意美式英语常说 fall recruitment，英国和澳大利亚更常用 autumn recruitment。",
+   "definition": "秋招即秋季校园招聘，常涉及投简历、笔试、群面、内推。搭配：autumn recruitment season（秋招季）。",
+   "examples": [
+    {
+     "en": "I need to send out my resumes before the autumn recruitment season starts.",
+     "zh": "我需要在秋招季开始前投递简历。"
+    },
+    {
+     "en": "She got a referral for the autumn recruitment and skipped the group interview.",
+     "zh": "她通过秋招内推获得了面试机会，跳过了群面。"
+    }
+   ],
+   "tags": [
+    "求职面试"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "autumn recruitment",
+   "pair": "en-zh",
+   "slug": "autumn-recruitment",
+   "lang": "en",
+   "translation": "秋招",
+   "shortAnswer": "Autumn recruitment 的中文意思是秋招，即中国每年秋季的校园招聘。它与 spring recruitment（春招）相对，是应届生求职的重要窗口。",
+   "definition": "Autumn recruitment 指秋季校园招聘，公司集中招聘应届毕业生。搭配：participate in autumn recruitment（参加秋招）。",
+   "examples": [
+    {
+     "en": "I need to send out my resumes before the autumn recruitment season starts.",
+     "zh": "我需要在秋招季开始前投递简历。"
+    },
+    {
+     "en": "She got a referral for the autumn recruitment and skipped the group interview.",
+     "zh": "她通过秋招内推获得了面试机会，跳过了群面。"
+    }
+   ],
+   "tags": [
+    "求职面试"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "群面",
+   "pair": "zh-en",
+   "slug": "qun-mian",
+   "lang": "zh",
+   "translation": "group interview",
+   "shortAnswer": "「群面」的英文是 group interview，指多名求职者被安排在同一场面试中同时接受考察。",
+   "definition": "group interview 即「群面」，多名候选人同场面试，常见于校招。易混词 panel interview 指多对一面试。",
+   "examples": [
+    {
+     "en": "I passed the group interview last week and moved on to the final one-on-one round.",
+     "zh": "我上周通过了群面，进入了最后一轮一对一面试。"
+    },
+    {
+     "en": "During the group interview, we were asked to discuss a business case and present our solution.",
+     "zh": "群面时，我们被要求讨论一个商业案例并展示解决方案。"
+    }
+   ],
+   "tags": [
+    "求职面试"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "group interview",
+   "pair": "en-zh",
+   "slug": "group-interview",
+   "lang": "en",
+   "translation": "群面",
+   "shortAnswer": "Group interview 的中文意思是「群面」，即多名候选人被安排在同一场面试中同时接受考察。",
+   "definition": "group interview 指多位求职者同场面试，常见于校招。常见搭配：attend a group interview。",
+   "examples": [
+    {
+     "en": "I passed the group interview last week and moved on to the final one-on-one round.",
+     "zh": "我上周通过了群面，进入了最后一轮一对一面试。"
+    },
+    {
+     "en": "During the group interview, we were asked to discuss a business case and present our solution.",
+     "zh": "群面时，我们被要求讨论一个商业案例并展示解决方案。"
+    }
+   ],
+   "tags": [
+    "求职面试"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "押金",
+   "pair": "zh-en",
+   "slug": "ya-jin",
+   "lang": "zh",
+   "translation": "security deposit",
+   "shortAnswer": "「押金」的英文是 security deposit，常见于美国租房合同；英国更常说 deposit，口语里也直接说 deposit。",
+   "definition": "security deposit 指租房时交给房东的押金，退租时若无损坏或欠费应全额退还。注意它和 rent（租金）不同，也不能写成 deposit security 这种倒装。",
+   "examples": [
+    {
+     "en": "The landlord asked for one month's rent as a security deposit.",
+     "zh": "房东要求交一个月租金作为押金。"
+    },
+    {
+     "en": "If nothing is damaged, you should get your security deposit back after you move out.",
+     "zh": "如果没有东西损坏，退租后你应该能拿回押金。"
+    }
+   ],
+   "tags": [
+    "租房生活"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "security deposit",
+   "pair": "en-zh",
+   "slug": "security-deposit",
+   "lang": "en",
+   "translation": "押金",
+   "shortAnswer": "security deposit 的中文意思是「押金」，是租房时预先支付给房东的一笔保证金。它和 rent（租金）不同，通常会在退租 move out 时退还。",
+   "definition": "security deposit 指租房押金，房东用来抵扣可能的损坏、欠租或清洁费用。常见搭配有 pay a security deposit、get the security deposit back；英国租房更多用 deposit。",
+   "examples": [
+    {
+     "en": "The landlord asked for one month's rent as a security deposit.",
+     "zh": "房东要求交一个月租金作为押金。"
+    },
+    {
+     "en": "If nothing is damaged, you should get your security deposit back after you move out.",
+     "zh": "如果没有东西损坏，退租后你应该能拿回押金。"
+    }
+   ],
+   "tags": [
+    "租房生活"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "中介费",
+   "pair": "zh-en",
+   "slug": "zhong-jie-fei",
+   "lang": "zh",
+   "translation": "agency fee",
+   "shortAnswer": "中介费的英文是 agency fee，指租房或买房时付给中介机构的服务费，通常不可退。",
+   "definition": "agency fee 指通过中介租房或买房时支付的服务佣金，通常为一个月租金，签约时支付。",
+   "examples": [
+    {
+     "en": "The agency fee is usually one month's rent, and it is paid when you sign the lease.",
+     "zh": "中介费通常是一个月租金，在签租约时支付。"
+    },
+    {
+     "en": "Before you pay the agency fee, ask whether it is refundable if you decide not to move in.",
+     "zh": "在支付中介费之前，先问清楚如果你决定不入住，这笔费用是否可退。"
+    }
+   ],
+   "tags": [
+    "租房生活"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "agency fee",
+   "pair": "en-zh",
+   "slug": "agency-fee",
+   "lang": "en",
+   "translation": "中介费",
+   "shortAnswer": "agency fee 的中文意思是中介费，即租客或买家付给中介机构的服务佣金，一般不退。",
+   "definition": "agency fee 指租房或买房时付给中介机构的服务费，常见搭配 pay an agency fee、charge an agency fee。",
+   "examples": [
+    {
+     "en": "The agency fee is usually one month's rent, and it is paid when you sign the lease.",
+     "zh": "中介费通常是一个月租金，在签租约时支付。"
+    },
+    {
+     "en": "Before you pay the agency fee, ask whether it is refundable if you decide not to move in.",
+     "zh": "在支付中介费之前，先问清楚如果你决定不入住，这笔费用是否可退。"
+    }
+   ],
+   "tags": [
+    "租房生活"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "合租",
+   "pair": "zh-en",
+   "slug": "he-zu",
+   "lang": "zh",
+   "translation": "flat sharing",
+   "shortAnswer": "合租的英文是 flat sharing，英式常用 flatshare。注意美式英语更常说 roommate 或 shared apartment。",
+   "definition": "flat sharing 指多人分摊房租合住一套公寓，常涉及分摊水电费（utilities）和押金（security deposit）。英式口语常用 flatshare 或 house share；美式则说 roommates 或 shared housing。",
+   "examples": [
+    {
+     "en": "Flat sharing is a popular way to save money on rent in big cities like London.",
+     "zh": "在大城市如伦敦，合租是节省租金的一种流行方式。"
+    },
+    {
+     "en": "Before you start flat sharing, make sure you understand the rules about the security deposit and utilities.",
+     "zh": "在开始合租之前，确保你了解关于押金和水电费的规则。"
+    }
+   ],
+   "tags": [
+    "租房生活"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "flat sharing",
+   "pair": "en-zh",
+   "slug": "flat-sharing",
+   "lang": "en",
+   "translation": "合租",
+   "shortAnswer": "flat sharing 的中文意思是合租，指多人合住一套公寓并分摊费用。它强调共享居住空间，与整租（whole apartment rental）相对。",
+   "definition": "flat sharing 是英式英语，指合租公寓，常搭配 go flat sharing、flat sharing agreement。美式英语多用 roommate 或 shared apartment。注意与 sublet（转租）不同，后者是转租他人租约。",
+   "examples": [
+    {
+     "en": "Flat sharing is a popular way to save money on rent in big cities like London.",
+     "zh": "在大城市如伦敦，合租是节省租金的一种流行方式。"
+    },
+    {
+     "en": "Before you start flat sharing, make sure you understand the rules about the security deposit and utilities.",
+     "zh": "在开始合租之前，确保你了解关于押金和水电费的规则。"
+    }
+   ],
+   "tags": [
+    "租房生活"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "租客",
+   "pair": "zh-en",
+   "slug": "zu-ke",
+   "lang": "zh",
+   "translation": "tenant",
+   "shortAnswer": "「租客」的英文是 tenant，指付租金租房居住的人，比 renter 更正式，常见于合同。",
+   "definition": "tenant 是正式用词，常见于租房合同和法规，如 tenant rights；与房主 landlord 相对，强调合法居住权。",
+   "examples": [
+    {
+     "en": "The tenant must pay the rent before the first day of each month.",
+     "zh": "租客必须在每月第一天之前交房租。"
+    },
+    {
+     "en": "The landlord asked the tenant to keep the noise down at night.",
+     "zh": "房东要求租客晚上别太吵。"
+    }
+   ],
+   "tags": [
+    "租房生活"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "tenant",
+   "pair": "en-zh",
+   "slug": "tenant",
+   "lang": "en",
+   "translation": "租客",
+   "shortAnswer": "Tenant means 租客 in Chinese, a person who pays rent to live in a place, more formal than renter.",
+   "definition": "Tenant refers to someone who rents a home. It is formal, used in leases and tenant rights, unlike renter or lodger.",
+   "examples": [
+    {
+     "en": "The tenant must pay the rent before the first day of each month.",
+     "zh": "租客必须在每月第一天之前交房租。"
+    },
+    {
+     "en": "The landlord asked the tenant to keep the noise down at night.",
+     "zh": "房东要求租客晚上别太吵。"
+    }
+   ],
+   "tags": [
+    "租房生活"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "整租",
+   "pair": "zh-en",
+   "slug": "zheng-zu",
+   "lang": "zh",
+   "translation": "whole apartment rental",
+   "shortAnswer": "「整租」的英文是 whole apartment rental，指租下整套公寓独自使用，不与房东或他人合住。",
+   "definition": "整租指独立租用整套房，含厨房、卫生间等设施；常见搭配有 look for a whole apartment rental。与合租相对，需自付全部租金。",
+   "examples": [
+    {
+     "en": "After saving for a year, she finally signed a whole apartment rental lease in the city center.",
+     "zh": "攒了一年钱后，她终于在市中心签了一套整租的租约。"
+    },
+    {
+     "en": "A whole apartment rental usually costs more than flat sharing, but you get more privacy and space.",
+     "zh": "整租通常比合租贵，但你能获得更多隐私和空间。"
+    }
+   ],
+   "tags": [
+    "租房生活"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "whole apartment rental",
+   "pair": "en-zh",
+   "slug": "whole-apartment-rental",
+   "lang": "en",
+   "translation": "整租",
+   "shortAnswer": "Whole apartment rental 的中文意思是「整租」，即租下整套公寓独自使用，强调空间独立，区别于合租。",
+   "definition": "Whole apartment rental 指租整套公寓，通常含卧室、厨房、卫生间等独立设施，常见于租房广告。口语可说 rent the whole apartment。",
+   "examples": [
+    {
+     "en": "After saving for a year, she finally signed a whole apartment rental lease in the city center.",
+     "zh": "攒了一年钱后，她终于在市中心签了一套整租的租约。"
+    },
+    {
+     "en": "A whole apartment rental usually costs more than flat sharing, but you get more privacy and space.",
+     "zh": "整租通常比合租贵，但你能获得更多隐私和空间。"
+    }
+   ],
+   "tags": [
+    "租房生活"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "房租",
+   "pair": "zh-en",
+   "slug": "fang-zu",
+   "lang": "zh",
+   "translation": "monthly rent",
+   "shortAnswer": "「房租」的英文是 monthly rent，指租房时按月支付给房东的住房租金，常与水电费分开计算。",
+   "definition": "常用搭配有 pay the monthly rent（交房租）、monthly rent is due（房租到期）；通常还需另付水电费和物业费。",
+   "examples": [
+    {
+     "en": "Our monthly rent is 4,000 yuan, plus utilities and a property management fee.",
+     "zh": "我们的房租是每月四千元，另外还要付水电费和物业费。"
+    },
+    {
+     "en": "Before you move out, make sure the monthly rent for the last month is paid.",
+     "zh": "退租前，请确认最后一个月的房租已经付清。"
+    }
+   ],
+   "tags": [
+    "租房生活"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "monthly rent",
+   "pair": "en-zh",
+   "slug": "monthly-rent",
+   "lang": "en",
+   "translation": "房租",
+   "shortAnswer": "\"Monthly rent\" 的中文意思是「房租」，即租客每月支付给房东的住房租金，通常不含水电费。",
+   "definition": "monthly rent 指每月应付的住房租金，常见搭配 pay the monthly rent、rent plus utilities，常与水电费分开计算。",
+   "examples": [
+    {
+     "en": "Our monthly rent is 4,000 yuan, plus utilities and a property management fee.",
+     "zh": "我们的房租是每月四千元，另外还要付水电费和物业费。"
+    },
+    {
+     "en": "Before you move out, make sure the monthly rent for the last month is paid.",
+     "zh": "退租前，请确认最后一个月的房租已经付清。"
+    }
+   ],
+   "tags": [
+    "租房生活"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "拎包入住",
+   "pair": "zh-en",
+   "slug": "lin-bao-ru-zhu",
+   "lang": "zh",
+   "translation": "move-in ready",
+   "shortAnswer": "拎包入住英文是 move-in ready，指带全套家具家电、提包就能住的出租房。注意英文 move-in ready 偏指装修完毕，家电全配要另加 fully furnished。",
+   "definition": "中国租房平台高频卖点词，强调家具、家电、网络全配，租客只需带个人物品。英文 move-in ready 原指房屋装修完好可直接入住，不一定含家具，若想表达全配，可说 fully furnished and move-in ready，租房时务必和房东确认清楚。",
+   "examples": [
+    {
+     "en": "The apartment is move-in ready, so we just need to bring our suitcases and pay the security deposit.",
+     "zh": "这套公寓拎包入住，我们只需带上行李箱并支付押金。"
+    },
+    {
+     "en": "Many Chinese rental listings advertise move-in ready, but you should check whether it is fully furnished before signing the lease.",
+     "zh": "中国很多租房广告都写拎包入住，但签租约前你应该确认是否全配家具家电。"
+    }
+   ],
+   "tags": [
+    "租房生活"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "move-in ready",
+   "pair": "en-zh",
+   "slug": "move-in-ready",
+   "lang": "en",
+   "translation": "拎包入住",
+   "shortAnswer": "move-in ready 中文意思是拎包入住，指房子装修完好、可立即入住。它偏重房屋状态，不一定包含家具家电，全配需说 fully furnished。",
+   "definition": "英文常用租房广告词，强调无需装修或大修，可马上搬入。与 fully furnished 不同，后者专指配备家具家电。口语和书面均用，看房时若要求家电全配，应明确问 Is it fully furnished? 避免误会。",
+   "examples": [
+    {
+     "en": "The apartment is move-in ready, so we just need to bring our suitcases and pay the security deposit.",
+     "zh": "这套公寓拎包入住，我们只需带上行李箱并支付押金。"
+    },
+    {
+     "en": "Many Chinese rental listings advertise move-in ready, but you should check whether it is fully furnished before signing the lease.",
+     "zh": "中国很多租房广告都写拎包入住，但签租约前你应该确认是否全配家具家电。"
+    }
+   ],
+   "tags": [
+    "租房生活"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "室友",
+   "pair": "zh-en",
+   "slug": "shi-you",
+   "lang": "zh",
+   "translation": "roommate",
+   "shortAnswer": "「室友」的英文是 roommate，指合租或同住一室的人；美式常用 roommate，英式常用 flatmate。",
+   "definition": "roommate 多用于美式英语，指共享公寓或房间的人；英式更常用 flatmate。常见搭配：my roommate、college roommate。",
+   "examples": [
+    {
+     "en": "My roommate and I split the rent and utilities evenly every month.",
+     "zh": "我和室友每月平摊房租和水电费。"
+    },
+    {
+     "en": "She found a new roommate to take over her lease before moving out.",
+     "zh": "她在搬走前找到了一个新室友来接手她的租约。"
+    }
+   ],
+   "tags": [
+    "租房生活"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "roommate",
+   "pair": "en-zh",
+   "slug": "roommate",
+   "lang": "en",
+   "translation": "室友",
+   "shortAnswer": "Roommate 的中文意思是「室友」，指合租公寓或同住一室的人；美式英语更常用 roommate，英式常用 flatmate。",
+   "definition": "Roommate 指与你共享住所的人，可合租公寓或同住一室。常见搭配：college roommate、find a roommate、roommate agreement。",
+   "examples": [
+    {
+     "en": "My roommate and I split the rent and utilities evenly every month.",
+     "zh": "我和室友每月平摊房租和水电费。"
+    },
+    {
+     "en": "She found a new roommate to take over her lease before moving out.",
+     "zh": "她在搬走前找到了一个新室友来接手她的租约。"
+    }
+   ],
+   "tags": [
+    "租房生活"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "水电费",
+   "pair": "zh-en",
+   "slug": "shui-dian-fei",
+   "lang": "zh",
+   "translation": "utilities",
+   "shortAnswer": "「水电费」的英文是 utilities，指水、电、燃气等公共事业费用，租房时常用。",
+   "definition": "utilities 指水、电、燃气等公共事业费用，租房时常指需另付的杂费，如 pay utilities、utilities included。",
+   "examples": [
+    {
+     "en": "The rent is $1,200 a month, but utilities are not included, so we split the water and electricity bills.",
+     "zh": "月租是1200美元，但不包水电费，所以我们分摊水费和电费。"
+    },
+    {
+     "en": "When you move out, make sure to cancel or transfer the utilities to avoid extra charges.",
+     "zh": "搬走时，一定要取消或过户水电费账户，以免产生额外费用。"
+    }
+   ],
+   "tags": [
+    "租房生活"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "utilities",
+   "pair": "en-zh",
+   "slug": "utilities",
+   "lang": "en",
+   "translation": "水电费",
+   "shortAnswer": "Utilities 的中文意思是水电费，指租房时需另付的水、电、燃气等公共事业费用。",
+   "definition": "utilities 作复数名词，指水、电、燃气等公共事业费用，常见于租房语境，如 utilities included。",
+   "examples": [
+    {
+     "en": "The rent is $1,200 a month, but utilities are not included, so we split the water and electricity bills.",
+     "zh": "月租是1200美元，但不包水电费，所以我们分摊水费和电费。"
+    },
+    {
+     "en": "When you move out, make sure to cancel or transfer the utilities to avoid extra charges.",
+     "zh": "搬走时，一定要取消或过户水电费账户，以免产生额外费用。"
+    }
+   ],
+   "tags": [
+    "租房生活"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "物业费",
+   "pair": "zh-en",
+   "slug": "wu-ye-fei",
+   "lang": "zh",
+   "translation": "property management fee",
+   "shortAnswer": "“物业费”英文是 property management fee，指业主或住户缴纳的物业管理服务费，租房时需确认由谁支付。",
+   "definition": "“物业费”常搭配 pay the property management fee，英美租房多由房东承担，中国租房可能由租客付，签约前务必确认。",
+   "examples": [
+    {
+     "en": "The rent is 3,000 yuan a month, and the property management fee is paid by the landlord.",
+     "zh": "月租三千元，物业费由房东支付。"
+    },
+    {
+     "en": "Before you sign the lease, ask whether the property management fee is included in the rent or paid separately.",
+     "zh": "签租约前，问清楚物业费是包含在租金里还是单独支付。"
+    }
+   ],
+   "tags": [
+    "租房生活"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "property management fee",
+   "pair": "en-zh",
+   "slug": "property-management-fee",
+   "lang": "en",
+   "translation": "物业费",
+   "shortAnswer": "“property management fee”即“物业费”，指公寓或小区收取的管理服务费，通常与租金分开，租房前应问清由谁支付。",
+   "definition": "property management fee 指物业管理费，常搭配 pay a monthly property management fee，英美多由房东付，中国可能租客付。",
+   "examples": [
+    {
+     "en": "The rent is 3,000 yuan a month, and the property management fee is paid by the landlord.",
+     "zh": "月租三千元，物业费由房东支付。"
+    },
+    {
+     "en": "Before you sign the lease, ask whether the property management fee is included in the rent or paid separately.",
+     "zh": "签租约前，问清楚物业费是包含在租金里还是单独支付。"
+    }
+   ],
+   "tags": [
+    "租房生活"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "押一付三",
+   "pair": "zh-en",
+   "slug": "ya-yi-fu-san",
+   "lang": "zh",
+   "translation": "one-month deposit three-month rent",
+   "shortAnswer": "「押一付三」英文是 one-month deposit three-month rent，指押一个月房租、一次付三个月房租，常见于中国整租。",
+   "definition": "押一付三指押金为一个月租金，房租一次预付三个月，常见于整租，合租或转租也可能采用这种付款方式。",
+   "examples": [
+    {
+     "en": "The landlord requires a one-month deposit three-month rent, so I must pay four months' rent before moving in.",
+     "zh": "房东要求押一付三，所以我搬进去前要一次付四个月房租。"
+    },
+    {
+     "en": "Compared with monthly rent in the UK, a one-month deposit three-month rent is a heavy cash burden for young renters.",
+     "zh": "与英国按月付租相比，押一付三对年轻租客是沉重的现金负担。"
+    }
+   ],
+   "tags": [
+    "租房生活"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "one-month deposit three-month rent",
+   "pair": "en-zh",
+   "slug": "one-month-deposit-three-month-rent",
+   "lang": "en",
+   "translation": "押一付三",
+   "shortAnswer": "one-month deposit three-month rent is「押一付三」: one month's rent as deposit plus three months upfront.",
+   "definition": "one-month deposit three-month rent describes paying one month's rent as a deposit and three months' rent upfront, common in Chinese整租.",
+   "examples": [
+    {
+     "en": "The landlord requires a one-month deposit three-month rent, so I must pay four months' rent before moving in.",
+     "zh": "房东要求押一付三，所以我搬进去前要一次付四个月房租。"
+    },
+    {
+     "en": "Compared with monthly rent in the UK, a one-month deposit three-month rent is a heavy cash burden for young renters.",
+     "zh": "与英国按月付租相比，押一付三对年轻租客是沉重的现金负担。"
+    }
+   ],
+   "tags": [
+    "租房生活"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "退租",
+   "pair": "zh-en",
+   "slug": "tui-zu",
+   "lang": "zh",
+   "translation": "move out and end lease",
+   "shortAnswer": "退租的英文是 move out and end lease，指租约未到期或到期后正式搬走并终止租赁合同；日常口语中也常说 move out，但强调解约时需补上 end lease。",
+   "definition": "退租常用于整租或合租场景，核心是提前通知房东、结清水电费 utilities、拿回押金 security deposit。注意与转租 sublet 不同：退租是彻底终止合同，转租是把租约转给他人。",
+   "examples": [
+    {
+     "en": "I need to move out and end lease before the end of next month because I'm relocating for work.",
+     "zh": "我下个月底前需要退租，因为我要因工作搬迁。"
+    },
+    {
+     "en": "If you move out and end lease early, the landlord may deduct the remaining rent from your security deposit.",
+     "zh": "如果你提前退租，房东可能会从你的押金里扣除剩余租金。"
+    }
+   ],
+   "tags": [
+    "租房生活"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "move out and end lease",
+   "pair": "en-zh",
+   "slug": "move-out-and-end-lease",
+   "lang": "en",
+   "translation": "退租",
+   "shortAnswer": "move out and end lease 的中文意思是退租，即搬离租住房屋并正式终止租赁合同；它比单纯 move out 多出解约的法律含义，强调合同关系结束。",
+   "definition": "move out and end lease 多用于正式或书面语境，指租客按约定搬走并解除租约；口语中常简化成 move out，但涉及押金 security deposit 或违约责任时，需明确 end lease。",
+   "examples": [
+    {
+     "en": "I need to move out and end lease before the end of next month because I'm relocating for work.",
+     "zh": "我下个月底前需要退租，因为我要因工作搬迁。"
+    },
+    {
+     "en": "If you move out and end lease early, the landlord may deduct the remaining rent from your security deposit.",
+     "zh": "如果你提前退租，房东可能会从你的押金里扣除剩余租金。"
+    }
+   ],
+   "tags": [
+    "租房生活"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "装修",
+   "pair": "zh-en",
+   "slug": "zhuang-xiu",
+   "lang": "zh",
+   "translation": "renovation",
+   "shortAnswer": "装修的英文是 renovation，指对房屋进行翻新或改造。注意 renovation 侧重翻新和翻修，不是简单的装饰或家具布置。",
+   "definition": "Renovation 常指房屋翻新、整修，如 home renovation、kitchen renovation。装修还可说 remodeling（美式）或 refurbishment。装饰（贴墙纸、摆家具）用 decoration，别混用。",
+   "examples": [
+    {
+     "en": "The landlord agreed to a renovation of the kitchen before we moved in.",
+     "zh": "房东同意在我们搬进去之前翻新厨房。"
+    },
+    {
+     "en": "We spent the whole summer doing a renovation of the rented flat.",
+     "zh": "我们花了整个夏天翻新那套租来的公寓。"
+    }
+   ],
+   "tags": [
+    "租房生活"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "renovation",
+   "pair": "en-zh",
+   "slug": "renovation",
+   "lang": "en",
+   "translation": "装修",
+   "shortAnswer": "Renovation 的中文意思是装修，多指对房屋进行翻新或改造。它侧重翻新和翻修，与 decoration 装饰不同，后者指刷墙、贴墙纸等表面美化。",
+   "definition": "Renovation 指房屋翻新、整修，常见搭配 kitchen renovation、home renovation。美式英语也常用 remodeling。装饰、表面美化用 decoration，别混淆。",
+   "examples": [
+    {
+     "en": "The landlord agreed to a renovation of the kitchen before we moved in.",
+     "zh": "房东同意在我们搬进去之前翻新厨房。"
+    },
+    {
+     "en": "We spent the whole summer doing a renovation of the rented flat.",
+     "zh": "我们花了整个夏天翻新那套租来的公寓。"
+    }
+   ],
+   "tags": [
+    "租房生活"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "邻居",
+   "pair": "zh-en",
+   "slug": "lin-ju",
+   "lang": "zh",
+   "translation": "neighbor",
+   "shortAnswer": "「邻居」的英文是 neighbor，指住在你旁边或附近的人。注意：英式拼写为 neighbour，且 neighbor 不用于指“室友”（roommate）。",
+   "definition": "在租房生活中，neighbor 常用来描述隔壁或同楼的住户，比如“my next-door neighbor”（隔壁邻居）或“a noisy neighbor”（吵闹的邻居）。与 roommate（合租室友）不同，neighbor 不一定同住一套房。",
+   "examples": [
+    {
+     "en": "My neighbor helped me carry my luggage when I moved into the new apartment.",
+     "zh": "我搬进新公寓时，邻居帮我搬了行李。"
+    },
+    {
+     "en": "We invited our neighbors over for dinner to get to know them better.",
+     "zh": "我们邀请邻居过来吃晚饭，以便更好地了解他们。"
+    }
+   ],
+   "tags": [
+    "租房生活"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "neighbor",
+   "pair": "en-zh",
+   "slug": "neighbor",
+   "lang": "en",
+   "translation": "邻居",
+   "shortAnswer": "“Neighbor”的中文意思是“邻居”，指住在附近或隔壁的人。它和“roommate”（室友）不同，邻居通常不与你共享同一套房子。",
+   "definition": "Neighbor 是通用词，可指隔壁、同楼或同社区的住户。常见搭配有 next-door neighbor（隔壁邻居）、neighborly（友好的）。在合租场景中，注意与 flatmate/roommate 区分。",
+   "examples": [
+    {
+     "en": "My neighbor helped me carry my luggage when I moved into the new apartment.",
+     "zh": "我搬进新公寓时，邻居帮我搬了行李。"
+    },
+    {
+     "en": "We invited our neighbors over for dinner to get to know them better.",
+     "zh": "我们邀请邻居过来吃晚饭，以便更好地了解他们。"
+    }
+   ],
+   "tags": [
+    "租房生活"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "居委会",
+   "pair": "zh-en",
+   "slug": "ju-wei-hui",
+   "lang": "zh",
+   "translation": "neighborhood committee",
+   "shortAnswer": "「居委会」的英文是 neighborhood committee。在租房场景中，它常负责居住证明、纠纷调解和社区事务，不是物业物业公司。",
+   "definition": "neighborhood committee 指中国城市的基层群众自治组织，负责社区管理，如开居住证明、调解邻里纠纷、组织社区活动。与物业公司不同，它不负责维修和安保。",
+   "examples": [
+    {
+     "en": "When I moved into my new apartment, the landlord asked me to register with the neighborhood committee.",
+     "zh": "我搬进新公寓时，房东让我去居委会登记。"
+    },
+    {
+     "en": "If you have a dispute with your roommate, you can ask the neighborhood committee to help mediate.",
+     "zh": "如果你和室友有纠纷，可以请居委会帮忙调解。"
+    }
+   ],
+   "tags": [
+    "租房生活"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "neighborhood committee",
+   "pair": "en-zh",
+   "slug": "neighborhood-committee",
+   "lang": "en",
+   "translation": "居委会",
+   "shortAnswer": "Neighborhood committee 的中文意思是「居委会」。它是中国城市基层的居民自治组织，负责社区事务，区别于商业物业公司。",
+   "definition": "指中国城市社区的居民委员会，官方译法为 neighborhood committee 或 residents' committee。常见搭配：neighborhood committee office（居委会办公室）。口语中也可说 residents' committee。",
+   "examples": [
+    {
+     "en": "When I moved into my new apartment, the landlord asked me to register with the neighborhood committee.",
+     "zh": "我搬进新公寓时，房东让我去居委会登记。"
+    },
+    {
+     "en": "If you have a dispute with your roommate, you can ask the neighborhood committee to help mediate.",
+     "zh": "如果你和室友有纠纷，可以请居委会帮忙调解。"
+    }
+   ],
+   "tags": [
+    "租房生活"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "转租",
+   "pair": "zh-en",
+   "slug": "zhuan-zu",
+   "lang": "zh",
+   "translation": "sublet",
+   "shortAnswer": "转租的英文是 sublet，指租客将租赁的房屋部分或全部再租给第三人。关键区别：sublet 通常指留下部分自住或保留原租约，而转租整个房子则常用 sublease 或 assign。",
+   "definition": "sublet 主要作动词，也可作名词。常见搭配：sublet a room/apartment to sb。与 sublease 常可互换，但 sublet 更口语化。注意：转租前通常需房东同意，否则可能违约。",
+   "examples": [
+    {
+     "en": "I need to sublet my apartment for the summer while I'm away.",
+     "zh": "我夏天不在的时候需要把公寓转租出去。"
+    },
+    {
+     "en": "She sublet a room to a student to help cover the rent.",
+     "zh": "她把一个房间转租给一个学生来帮忙分担租金。"
+    }
+   ],
+   "tags": [
+    "租房生活"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "sublet",
+   "pair": "en-zh",
+   "slug": "sublet",
+   "lang": "en",
+   "translation": "转租",
+   "shortAnswer": "Sublet 的中文意思是转租，即租客将租来的房子再租给别人。关键区别：sublet 时原租客仍对房东负责，而转让租约（assign）则完全退出。",
+   "definition": "Sublet 可作动词或名词，常见搭配：sublet a room to someone。比 sublease 更口语。注意：许多租约要求房东书面同意才能转租，否则可能被收回房子。",
+   "examples": [
+    {
+     "en": "I need to sublet my apartment for the summer while I'm away.",
+     "zh": "我夏天不在的时候需要把公寓转租出去。"
+    },
+    {
+     "en": "She sublet a room to a student to help cover the rent.",
+     "zh": "她把一个房间转租给一个学生来帮忙分担租金。"
+    }
+   ],
+   "tags": [
+    "租房生活"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "到期续租",
+   "pair": "zh-en",
+   "slug": "dao-qi-xu-zu",
+   "lang": "zh",
+   "translation": "lease renewal",
+   "shortAnswer": "到期续租的英文是 lease renewal，指租约期满时重新签约或延长租期，注意与转租 sublet 区分。",
+   "definition": "lease renewal 用于正式租房场景，常搭配 sign a lease renewal、offer a lease renewal；口语也可说 renew the lease。易错点：到期续租是原租客与房东续约，转租 sublet 是把房转给第三方。",
+   "examples": [
+    {
+     "en": "The landlord sent me a lease renewal offer two months before my current lease expires.",
+     "zh": "房东在当前租约到期前两个月给我发来了续租要约。"
+    },
+    {
+     "en": "If you want to stay in the same flat, you need to discuss a lease renewal with the property management company.",
+     "zh": "如果你想继续住同一套公寓，需要和物业公司谈到期续租。"
+    }
+   ],
+   "tags": [
+    "租房生活"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "lease renewal",
+   "pair": "en-zh",
+   "slug": "lease-renewal",
+   "lang": "en",
+   "translation": "到期续租",
+   "shortAnswer": "lease renewal 的中文是到期续租，指租约期满时续签或延长租期，区别于转租 sublet。",
+   "definition": "lease renewal 指到期续租，即租约期满时重新签约或延长租期，常见搭配 sign a lease renewal、offer a lease renewal；正式多用该词，口语常说 renew the lease。",
+   "examples": [
+    {
+     "en": "The landlord sent me a lease renewal offer two months before my current lease expires.",
+     "zh": "房东在当前租约到期前两个月给我发来了续租要约。"
+    },
+    {
+     "en": "If you want to stay in the same flat, you need to discuss a lease renewal with the property management company.",
+     "zh": "如果你想继续住同一套公寓，需要和物业公司谈到期续租。"
+    }
+   ],
+   "tags": [
+    "租房生活"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "租期",
+   "pair": "zh-en",
+   "slug": "zu-qi",
+   "lang": "zh",
+   "translation": "lease term",
+   "shortAnswer": "租期的英语是 lease term，指租赁合同的有效期限。注意不要和 rental period 混淆，lease term 更强调合同法律条款中的期间。",
+   "definition": "lease term 常用于正式租房合同，指双方约定的租用时长，如一年或两年。常见搭配：a one-year lease term、renew the lease term。口语中也可用 rental period，但 lease term 更具法律意味。",
+   "examples": [
+    {
+     "en": "The lease term is twelve months, starting from June 1st.",
+     "zh": "租期是十二个月，从六月一日起算。"
+    },
+    {
+     "en": "You can renew the lease term for another year if you want to stay.",
+     "zh": "如果你想继续住，可以续签一年租期。"
+    }
+   ],
+   "tags": [
+    "租房生活"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "lease term",
+   "pair": "en-zh",
+   "slug": "lease-term",
+   "lang": "en",
+   "translation": "租期",
+   "shortAnswer": "lease term 的中文是租期，即租赁合同的有效期限。它比 rental period 更正式，常见于书面合同，强调法律约束的时长。",
+   "definition": "lease term 指租约中约定的租用时间长度。常见搭配：a fixed lease term、the initial lease term。多用于正式书面合同；口语中常说 rental period。注意 lease term 不指具体租金或押金。",
+   "examples": [
+    {
+     "en": "The lease term is twelve months, starting from June 1st.",
+     "zh": "租期是十二个月，从六月一日起算。"
+    },
+    {
+     "en": "You can renew the lease term for another year if you want to stay.",
+     "zh": "如果你想继续住，可以续签一年租期。"
+    }
+   ],
+   "tags": [
+    "租房生活"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "物业",
+   "pair": "zh-en",
+   "slug": "wu-ye",
+   "lang": "zh",
+   "translation": "property management",
+   "shortAnswer": "物业即 property management，指房屋及配套设施的日常管理服务。",
+   "definition": "物业指小区或写字楼的日常管理服务，英文为 property management，如物业费、物业公司。",
+   "examples": [
+    {
+     "en": "The property management company handles all maintenance requests for the apartment building.",
+     "zh": "这家物业公司负责处理公寓楼的所有维修申请。"
+    },
+    {
+     "en": "When renting a flat, ask whether the property management fee is included in the monthly rent.",
+     "zh": "租房时，要问清楚物业费是否包含在月租里。"
+    }
+   ],
+   "tags": [
+    "租房生活"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "property management",
+   "pair": "en-zh",
+   "slug": "property-management",
+   "lang": "en",
+   "translation": "物业",
+   "shortAnswer": "Property management means 物业, the daily care of buildings and facilities.",
+   "definition": "Property management is the daily administration of buildings and facilities, called 物业 in Chinese.",
+   "examples": [
+    {
+     "en": "The property management company handles all maintenance requests for the apartment building.",
+     "zh": "这家物业公司负责处理公寓楼的所有维修申请。"
+    },
+    {
+     "en": "When renting a flat, ask whether the property management fee is included in the monthly rent.",
+     "zh": "租房时，要问清楚物业费是否包含在月租里。"
+    }
+   ],
+   "tags": [
+    "租房生活"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "家具家电",
+   "pair": "zh-en",
+   "slug": "jia-ju-jia-dian",
+   "lang": "zh",
+   "translation": "furniture and appliances",
+   "shortAnswer": "「家具家电」的英文是 furniture and appliances。租房时常用，指房屋内配备的家具和电器，与「拎包入住」概念相关。",
+   "definition": "furniture and appliances 泛指家具和家电，常见于租房广告：带家具家电（furnished with furniture and appliances）。注意 furniture 不可数，appliances 含冰箱、洗衣机等。",
+   "examples": [
+    {
+     "en": "The apartment comes with furniture and appliances, so you can move in right away.",
+     "zh": "这间公寓带家具家电，所以你可以直接拎包入住。"
+    },
+    {
+     "en": "Before you sign the lease, check the condition of all furniture and appliances to avoid deposit deductions.",
+     "zh": "签租约前检查所有家具家电的状况，以免退租时押金被扣。"
+    }
+   ],
+   "tags": [
+    "租房生活"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "furniture and appliances",
+   "pair": "en-zh",
+   "slug": "furniture-and-appliances",
+   "lang": "en",
+   "translation": "家具家电",
+   "shortAnswer": "furniture and appliances 的中文意思是「家具家电」。它指家具和家用电器，常用于租房语境，与「拎包入住」对应。",
+   "definition": "furniture and appliances 是固定搭配，指家具和电器。英式英语中常用 white goods 指大型家电，但租房广告多用本词。注意 furniture 不可数，无复数形式。",
+   "examples": [
+    {
+     "en": "The apartment comes with furniture and appliances, so you can move in right away.",
+     "zh": "这间公寓带家具家电，所以你可以直接拎包入住。"
+    },
+    {
+     "en": "Before you sign the lease, check the condition of all furniture and appliances to avoid deposit deductions.",
+     "zh": "签租约前检查所有家具家电的状况，以免退租时押金被扣。"
+    }
+   ],
+   "tags": [
+    "租房生活"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "二房东",
+   "pair": "zh-en",
+   "slug": "er-fang-dong",
+   "lang": "zh",
+   "translation": "subletting middleman",
+   "shortAnswer": "「二房东」的英文是 subletting middleman，指整租后再分租赚差价的人。",
+   "definition": "subletting middleman 指从原房东整租后分租赚差价的人。常见搭配：找到、绕过二房东。风险：未经原房东同意转租易引发押金纠纷。",
+   "examples": [
+    {
+     "en": "Before signing the lease, ask whether the person is the landlord or just a subletting middleman.",
+     "zh": "签合同前先问清楚对方是原房东还是二房东。"
+    },
+    {
+     "en": "Living with a subletting middleman can be cheaper, but your deposit may be at risk if the landlord never approved the sublet.",
+     "zh": "跟二房东合租可能更便宜，但如果原房东没同意转租，你的押金可能有风险。"
+    }
+   ],
+   "tags": [
+    "租房生活"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "subletting middleman",
+   "pair": "en-zh",
+   "slug": "subletting-middleman",
+   "lang": "en",
+   "translation": "二房东",
+   "shortAnswer": "\"Subletting middleman\" is the English for 「二房东」: one who sublets rented rooms for profit.",
+   "definition": "A subletting middleman rents a flat then sublets rooms for profit, stressing the middleman role; unauthorized sublets risk deposit disputes.",
+   "examples": [
+    {
+     "en": "Before signing the lease, ask whether the person is the landlord or just a subletting middleman.",
+     "zh": "签合同前先问清楚对方是原房东还是二房东。"
+    },
+    {
+     "en": "Living with a subletting middleman can be cheaper, but your deposit may be at risk if the landlord never approved the sublet.",
+     "zh": "跟二房东合租可能更便宜，但如果原房东没同意转租，你的押金可能有风险。"
+    }
+   ],
+   "tags": [
+    "租房生活"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "做东",
+   "pair": "zh-en",
+   "slug": "zuo-dong",
+   "lang": "zh",
+   "translation": "play the host",
+   "shortAnswer": "「做东」的英文就是 play the host，指自己出钱当主人请客。注意它强调掏钱待客，不是单纯到场陪客。",
+   "definition": "做东指由自己付账、以东道主身份招待客人，常见搭配：play the host at dinner（做东请吃饭）。与 treat（请客）近义，但 play the host 更突出主人身份与全程张罗。",
+   "examples": [
+    {
+     "en": "Don't worry about the bill tonight—I'll play the host since it's my turn.",
+     "zh": "今晚的账单不用管，轮到我做东了。"
+    },
+    {
+     "en": "He always likes to play the host when old classmates get together, which makes everyone feel at ease.",
+     "zh": "老同学聚会他总是喜欢做东，让大家都很自在。"
+    }
+   ],
+   "tags": [
+    "人情往来"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "play the host",
+   "pair": "en-zh",
+   "slug": "play-the-host",
+   "lang": "en",
+   "translation": "做东",
+   "shortAnswer": "play the host 的中文意思就是「做东」，即自己出钱当主人招待客人。它与 treat 侧重付钱不同，更强调以东道主身份张罗全场。",
+   "definition": "play the host 意为做东、当东道主，多用于饭局、宴会等社交场合，语气中性偏口语。常见搭配：play the host at a dinner/party。易错点：它不表示「做客」，做客是 be a guest。",
+   "examples": [
+    {
+     "en": "Don't worry about the bill tonight—I'll play the host since it's my turn.",
+     "zh": "今晚的账单不用管，轮到我做东了。"
+    },
+    {
+     "en": "He always likes to play the host when old classmates get together, which makes everyone feel at ease.",
+     "zh": "老同学聚会他总是喜欢做东，让大家都很自在。"
+    }
+   ],
+   "tags": [
+    "人情往来"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "网签合同",
+   "pair": "zh-en",
+   "slug": "wang-qian-he-tong",
+   "lang": "zh",
+   "translation": "online lease contract",
+   "shortAnswer": "网签合同的英文是 online lease contract，指通过政府租赁平台在线签署并备案的正式租房合同。",
+   "definition": "网签合同强调线上签约与政府备案，区别于私下纸质合同。常见搭配：sign an online lease contract、file an online lease contract。注意押金、水电费结算。",
+   "examples": [
+    {
+     "en": "Before moving in, we signed an online lease contract through the local housing platform, so our security deposit is officially protected.",
+     "zh": "搬进去之前，我们通过当地住房平台签了网签合同，所以押金受到官方保护。"
+    },
+    {
+     "en": "The landlord refused to sublet the apartment because the online lease contract explicitly prohibits it without written consent.",
+     "zh": "房东拒绝转租这套公寓，因为网签合同明确禁止未经书面同意的转租行为。"
+    }
+   ],
+   "tags": [
+    "租房生活"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "online lease contract",
+   "pair": "en-zh",
+   "slug": "online-lease-contract",
+   "lang": "en",
+   "translation": "网签合同",
+   "shortAnswer": "online lease contract 的中文意思是网签合同，指通过官方租赁平台在线签署并备案的租房合同。",
+   "definition": "online lease contract 是正式用语，指在政府住房租赁平台或中介系统上签署的电子合同，具有法律效力。常见搭配：sign/file an online lease contract。",
+   "examples": [
+    {
+     "en": "Before moving in, we signed an online lease contract through the local housing platform, so our security deposit is officially protected.",
+     "zh": "搬进去之前，我们通过当地住房平台签了网签合同，所以押金受到官方保护。"
+    },
+    {
+     "en": "The landlord refused to sublet the apartment because the online lease contract explicitly prohibits it without written consent.",
+     "zh": "房东拒绝转租这套公寓，因为网签合同明确禁止未经书面同意的转租行为。"
+    }
+   ],
+   "tags": [
+    "租房生活"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "随礼",
+   "pair": "zh-en",
+   "slug": "sui-li",
+   "lang": "zh",
+   "translation": "cash gift at ceremonies",
+   "shortAnswer": "「随礼」的英文是 cash gift at ceremonies，指在婚丧嫁娶等场合按当地行情和交情送出的现金红包。",
+   "definition": "随礼指在红白喜事等场合送现金红包，金额随行情与交情浮动。常见搭配：随份子、随礼金、随了五百。",
+   "examples": [
+    {
+     "en": "At my cousin's wedding, I gave a cash gift at ceremonies according to the local custom.",
+     "zh": "在我表弟的婚礼上，我按当地行情随了礼。"
+    },
+    {
+     "en": "In many Chinese families, giving a cash gift at ceremonies is a way to maintain social ties.",
+     "zh": "在许多中国家庭，随礼是维系人情往来的一种方式。"
+    }
+   ],
+   "tags": [
+    "人情往来"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "cash gift at ceremonies",
+   "pair": "en-zh",
+   "slug": "cash-gift-at-ceremonies",
+   "lang": "en",
+   "translation": "随礼",
+   "shortAnswer": "cash gift at ceremonies 的中文意思是「随礼」，即在婚丧嫁娶等场合按惯例送出的礼金，金额随行情和关系定档。",
+   "definition": "cash gift at ceremonies 指中国红白喜事等场合的现金礼金。口语常说 cash gift 或 red envelope，特指仪式性场合，非普通礼物。",
+   "examples": [
+    {
+     "en": "At my cousin's wedding, I gave a cash gift at ceremonies according to the local custom.",
+     "zh": "在我表弟的婚礼上，我按当地行情随了礼。"
+    },
+    {
+     "en": "In many Chinese families, giving a cash gift at ceremonies is a way to maintain social ties.",
+     "zh": "在许多中国家庭，随礼是维系人情往来的一种方式。"
+    }
+   ],
+   "tags": [
+    "人情往来"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "份子钱",
+   "pair": "zh-en",
+   "slug": "fen-zi-qian",
+   "lang": "zh",
+   "translation": "gift money at weddings",
+   "shortAnswer": "份子钱英文常说 gift money at weddings，指参加婚礼时给的现金礼金，是人情往来中需记账回礼的支出。",
+   "definition": "搭配：give/pay gift money at weddings（随份子）。易错点：别直译成 wedding fee；强调现金时可用 cash gift。",
+   "examples": [
+    {
+     "en": "In China, guests usually give gift money at weddings instead of buying a present from a registry.",
+     "zh": "在中国，宾客参加婚礼通常随份子钱，而不是从礼品清单上买礼物。"
+    },
+    {
+     "en": "My mother keeps a notebook to record how much gift money at weddings each relative gave, so she can return the favor later.",
+     "zh": "我妈妈用本子记下每位亲戚随了多少份子钱，以便日后还礼。"
+    }
+   ],
+   "tags": [
+    "人情往来"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "gift money at weddings",
+   "pair": "en-zh",
+   "slug": "gift-money-at-weddings",
+   "lang": "en",
+   "translation": "份子钱",
+   "shortAnswer": "Gift money at weddings 就是中文的份子钱，指参加婚礼时送的现金礼金，属人情往来，需记账日后回礼。",
+   "definition": "解释性说法，指中国婚礼习俗中的现金礼金；口语也说 cash gift、red envelope。搭配：give/receive gift money at weddings。",
+   "examples": [
+    {
+     "en": "In China, guests usually give gift money at weddings instead of buying a present from a registry.",
+     "zh": "在中国，宾客参加婚礼通常随份子钱，而不是从礼品清单上买礼物。"
+    },
+    {
+     "en": "My mother keeps a notebook to record how much gift money at weddings each relative gave, so she can return the favor later.",
+     "zh": "我妈妈用本子记下每位亲戚随了多少份子钱，以便日后还礼。"
+    }
+   ],
+   "tags": [
+    "人情往来"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "伴手礼",
+   "pair": "zh-en",
+   "slug": "ban-shou-li",
+   "lang": "zh",
+   "translation": "souvenir gift",
+   "shortAnswer": "「伴手礼」的英文是 souvenir gift，特指旅行或做客后带回来送人的小礼物。注意它是可数名词，常搭配 bring back / give as a souvenir gift。",
+   "definition": "souvenir gift 强调「纪念性小礼物」，与普通 present 不同：它通常承载旅行地特色或心意，常用于探亲访友、商务往来。常见搭配：a local souvenir gift、bring a souvenir gift back。",
+   "examples": [
+    {
+     "en": "I brought a local souvenir gift back for my colleagues after the business trip.",
+     "zh": "出差回来后，我给同事们带了当地伴手礼。"
+    },
+    {
+     "en": "When visiting a friend's home, it's polite to bring a small souvenir gift.",
+     "zh": "去朋友家做客时，带一份小伴手礼是礼貌的做法。"
+    }
+   ],
+   "tags": [
+    "人情往来"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "souvenir gift",
+   "pair": "en-zh",
+   "slug": "souvenir-gift",
+   "lang": "en",
+   "translation": "伴手礼",
+   "shortAnswer": "souvenir gift 的中文意思是「伴手礼」，指旅行或访问后带回送人的小纪念品。它比普通 gift 更强调地域特色和「随手带回来」的意味。",
+   "definition": "souvenir gift 指带有当地特色、用于送人的小礼物，口语和书面均常用。搭配：buy a souvenir gift、bring a souvenir gift for sb。注意与 souvenir 区别：souvenir 可自留，souvenir gift 强调送人。",
+   "examples": [
+    {
+     "en": "I brought a local souvenir gift back for my colleagues after the business trip.",
+     "zh": "出差回来后，我给同事们带了当地伴手礼。"
+    },
+    {
+     "en": "When visiting a friend's home, it's polite to bring a small souvenir gift.",
+     "zh": "去朋友家做客时，带一份小伴手礼是礼貌的做法。"
+    }
+   ],
+   "tags": [
+    "人情往来"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "走亲戚",
+   "pair": "zh-en",
+   "slug": "zou-qin-qi",
+   "lang": "zh",
+   "translation": "visiting relatives",
+   "shortAnswer": "「走亲戚」的英文是 visiting relatives，指逢年过节到亲戚家拜访。它不是 visiting，单说 visiting 只是「探望」，没有中文里节日串门的人情意味。",
+   "definition": "常用复数 relatives，动词可用 visit relatives 或 go visiting relatives。春节等节庆语境里，走亲戚往往伴随送礼金、做东、敬酒、寒暄等礼数，如 go to visit relatives during Spring Festival。",
+   "examples": [
+    {
+     "en": "During the Spring Festival, we spend the first few days visiting relatives and exchanging red envelopes.",
+     "zh": "春节期间，我们头几天都在走亲戚、互送红包。"
+    },
+    {
+     "en": "My parents are busy visiting relatives this week, so I'm staying home to look after the house.",
+     "zh": "我爸妈这周忙着走亲戚，所以我留在家里看家。"
+    }
+   ],
+   "tags": [
+    "人情往来"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "visiting relatives",
+   "pair": "en-zh",
+   "slug": "visiting-relatives",
+   "lang": "en",
+   "translation": "走亲戚",
+   "shortAnswer": "visiting relatives 的中文意思是「走亲戚」，即逢年过节到亲戚家串门拜访。它强调节日间的礼尚往来，比单纯 visiting 多了份人情往来的味道。",
+   "definition": "visiting relatives 指到亲戚家探望串门，多用于春节等节庆场合，常与 during the Spring Festival 连用。口语也可说 seeing relatives，但 visiting 更突出专程登门、带上礼物的意味。",
+   "examples": [
+    {
+     "en": "During the Spring Festival, we spend the first few days visiting relatives and exchanging red envelopes.",
+     "zh": "春节期间，我们头几天都在走亲戚、互送红包。"
+    },
+    {
+     "en": "My parents are busy visiting relatives this week, so I'm staying home to look after the house.",
+     "zh": "我爸妈这周忙着走亲戚，所以我留在家里看家。"
+    }
+   ],
+   "tags": [
+    "人情往来"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "客套",
+   "pair": "zh-en",
+   "slug": "ke-tao",
+   "lang": "zh",
+   "translation": "polite formula",
+   "shortAnswer": "「客套」的英文是 polite formula。用时要记住：客套多是礼节性说法，像「改天请你吃饭」往往不是真约，别当真。",
+   "definition": "polite formula 指社交中为维持和气、表达礼貌的固定话术，如寒暄、谦让、道谢。常见搭配 make polite formulas、exchange polite formulas。注意：客套有言外之意，不等于真心承诺。",
+   "examples": [
+    {
+     "en": "He said he would treat me to dinner sometime, but it was just a polite formula.",
+     "zh": "他说改天请我吃饭，但那只是客套话。"
+    },
+    {
+     "en": "Chinese people often exchange polite formulas like \"come over for tea when you're free\" without meaning a real invitation.",
+     "zh": "中国人常互说「有空来喝茶」这类客套话，并不一定是真邀请。"
+    }
+   ],
+   "tags": [
+    "人情往来"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "polite formula",
+   "pair": "en-zh",
+   "slug": "polite-formula",
+   "lang": "en",
+   "translation": "客套",
+   "shortAnswer": "polite formula 的中文意思是「客套」，即礼节性的客套话。它重在维持社交面子，和单纯闲聊的 small talk 不同，常含未必当真的言外之意。",
+   "definition": "polite formula 指礼节场合的客套话，可搭配 use/exchange polite formulas。口语中常说「那只是客套话」。易错：它是社交润滑剂，听者不必把每句都当承诺。",
+   "examples": [
+    {
+     "en": "He said he would treat me to dinner sometime, but it was just a polite formula.",
+     "zh": "他说改天请我吃饭，但那只是客套话。"
+    },
+    {
+     "en": "Chinese people often exchange polite formulas like \"come over for tea when you're free\" without meaning a real invitation.",
+     "zh": "中国人常互说「有空来喝茶」这类客套话，并不一定是真邀请。"
+    }
+   ],
+   "tags": [
+    "人情往来"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "回礼",
+   "pair": "zh-en",
+   "slug": "hui-li",
+   "lang": "zh",
+   "translation": "return gift",
+   "shortAnswer": "回礼英文是 return gift，指收到礼物或礼金后回赠对方的礼物或行为，强调礼尚往来的传统习俗。",
+   "definition": "回礼常用于婚礼、满月等场合，可指实物或礼金。搭配：give a return gift。注意 return gift 不是退货。",
+   "examples": [
+    {
+     "en": "In Chinese weddings, guests give cash gifts and the couple often gives a return gift such as candy or a small keepsake.",
+     "zh": "在中国婚礼上，宾客送份子钱，新人通常会回礼，比如喜糖或小纪念品。"
+    },
+    {
+     "en": "When my neighbor brought over a housewarming present, I baked cookies as a return gift to keep the favor cycle going.",
+     "zh": "邻居送来乔迁礼物后，我烤了饼干作为回礼，以维持礼尚往来的情分。"
+    }
+   ],
+   "tags": [
+    "人情往来"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "return gift",
+   "pair": "en-zh",
+   "slug": "return-gift",
+   "lang": "en",
+   "translation": "回礼",
+   "shortAnswer": "Return gift 中文意思是「回礼」，即收到礼物后回赠对方的礼物，强调礼尚往来的传统习俗。",
+   "definition": "Return gift 指对收到的礼物或礼金做出回赠。搭配：give a return gift。口语也可说 gift in return。",
+   "examples": [
+    {
+     "en": "In Chinese weddings, guests give cash gifts and the couple often gives a return gift such as candy or a small keepsake.",
+     "zh": "在中国婚礼上，宾客送份子钱，新人通常会回礼，比如喜糖或小纪念品。"
+    },
+    {
+     "en": "When my neighbor brought over a housewarming present, I baked cookies as a return gift to keep the favor cycle going.",
+     "zh": "邻居送来乔迁礼物后，我烤了饼干作为回礼，以维持礼尚往来的情分。"
+    }
+   ],
+   "tags": [
+    "人情往来"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "面子",
+   "pair": "zh-en",
+   "slug": "mian-zi",
+   "lang": "zh",
+   "translation": "face and social standing",
+   "shortAnswer": "「面子」的英文常用 face and social standing 来表达。日常口语里说 face 已足够，如 lose face 丢面子、save face 挽回面子。",
+   "definition": "面子指个人尊严与社会地位，常与动词搭配：给面子、丢面子、留面子。社交场合用 face and social standing 更完整正式。",
+   "examples": [
+    {
+     "en": "In many Asian cultures, losing face and social standing can be more painful than losing money.",
+     "zh": "在许多亚洲文化中，丢面子和失去社会地位比丢钱更难受。"
+    },
+    {
+     "en": "He offered a sincere apology to save her face and social standing in front of the whole team.",
+     "zh": "他真诚道歉，以在全体团队面前挽回她的面子和尊严。"
+    }
+   ],
+   "tags": [
+    "人情往来"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "face and social standing",
+   "pair": "en-zh",
+   "slug": "face-and-social-standing",
+   "lang": "en",
+   "translation": "面子",
+   "shortAnswer": "Face and social standing 的中文意思是「面子」，即个人尊严与社会地位，更依赖他人评价与社交互动。",
+   "definition": "Face and social standing 常出现在跨文化沟通、职场与人情往来语境，搭配有 lose face、save face、give face 等。",
+   "examples": [
+    {
+     "en": "In many Asian cultures, losing face and social standing can be more painful than losing money.",
+     "zh": "在许多亚洲文化中，丢面子和失去社会地位比丢钱更难受。"
+    },
+    {
+     "en": "He offered a sincere apology to save her face and social standing in front of the whole team.",
+     "zh": "他真诚道歉，以在全体团队面前挽回她的面子和尊严。"
+    }
+   ],
+   "tags": [
+    "人情往来"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "礼尚往来",
+   "pair": "zh-en",
+   "slug": "li-shang-wang-lai",
+   "lang": "zh",
+   "translation": "courtesy demands reciprocity",
+   "shortAnswer": "「礼尚往来」英文说 courtesy demands reciprocity，指礼节要有来有往、对等回报，正式书面语。",
+   "definition": "「礼尚往来」指人情礼节必须双向对等，收了好处要回报。英文 courtesy demands reciprocity 偏正式格言；口语多说 return the favor。",
+   "examples": [
+    {
+     "en": "When his colleague sent a wedding gift, he knew courtesy demands reciprocity and returned the kindness at her ceremony.",
+     "zh": "同事给他送了结婚礼金，他深知礼尚往来，便在她办婚礼时回了礼。"
+    },
+    {
+     "en": "In many cultures, courtesy demands reciprocity, so refusing a toast without offering one back can seem impolite.",
+     "zh": "在许多文化里讲究礼尚往来，所以敬酒时只受不回会显得不礼貌。"
+    }
+   ],
+   "tags": [
+    "人情往来"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "courtesy demands reciprocity",
+   "pair": "en-zh",
+   "slug": "courtesy-demands-reciprocity",
+   "lang": "en",
+   "translation": "礼尚往来",
+   "shortAnswer": "Courtesy demands reciprocity 意为「礼尚往来」，指礼节要求有来有往、对等回报，语气正式。",
+   "definition": "Courtesy demands reciprocity 是正式格言，指人际礼数必须双向对等。口语常说 return the favor，更侧重具体回报行为。",
+   "examples": [
+    {
+     "en": "When his colleague sent a wedding gift, he knew courtesy demands reciprocity and returned the kindness at her ceremony.",
+     "zh": "同事给他送了结婚礼金，他深知礼尚往来，便在她办婚礼时回了礼。"
+    },
+    {
+     "en": "In many cultures, courtesy demands reciprocity, so refusing a toast without offering one back can seem impolite.",
+     "zh": "在许多文化里讲究礼尚往来，所以敬酒时只受不回会显得不礼貌。"
+    }
+   ],
+   "tags": [
+    "人情往来"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "串门",
+   "pair": "zh-en",
+   "slug": "chuan-men",
+   "lang": "zh",
+   "translation": "drop by for a visit",
+   "shortAnswer": "「串门」的英文是 drop by for a visit。它强调临时、非正式地到邻里或亲友家短坐聊天，不是正式拜访。",
+   "definition": "drop by for a visit 指没有预约、顺路到别人家坐坐，常与邻居、亲戚、朋友之间的人情往来搭配。注意它不同于正式拜访 pay a formal visit，也不等于 drop in on someone（后者可能略带打扰感）。",
+   "examples": [
+    {
+     "en": "My aunt often drops by for a visit on Sunday afternoons, bringing homemade snacks and chatting about family news.",
+     "zh": "我姑姑经常在周日下午来串门，带些自制点心，聊聊家里的事。"
+    },
+    {
+     "en": "Since we live in the same neighborhood, we drop by for a visit whenever we have free time, sharing tea and small talk.",
+     "zh": "因为我们住同一个小区，有空就会去串门，喝喝茶、寒暄几句。"
+    }
+   ],
+   "tags": [
+    "人情往来"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "drop by for a visit",
+   "pair": "en-zh",
+   "slug": "drop-by-for-a-visit",
+   "lang": "en",
+   "translation": "串门",
+   "shortAnswer": "drop by for a visit 的中文意思是「串门」。它指临时、非正式地去亲友或邻居家短坐聊天，不是正式拜访。",
+   "definition": "drop by for a visit 是口语化表达，强调顺路、不预约的短访；与 pay a visit 相比更随意，与 drop in on someone 相比更中性。常用于邻里、亲戚、朋友之间的人情走动。",
+   "examples": [
+    {
+     "en": "My aunt often drops by for a visit on Sunday afternoons, bringing homemade snacks and chatting about family news.",
+     "zh": "我姑姑经常在周日下午来串门，带些自制点心，聊聊家里的事。"
+    },
+    {
+     "en": "Since we live in the same neighborhood, we drop by for a visit whenever we have free time, sharing tea and small talk.",
+     "zh": "因为我们住同一个小区，有空就会去串门，喝喝茶、寒暄几句。"
+    }
+   ],
+   "tags": [
+    "人情往来"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "敬酒",
+   "pair": "zh-en",
+   "slug": "jing-jiu",
+   "lang": "zh",
+   "translation": "toast with liquor",
+   "shortAnswer": "「敬酒」的英文是 toast with liquor，指宴席上向长辈、领导或宾客举杯表敬意。英文 toast 本身只是举杯祝词，不含中式敬酒的等级与顺序感。",
+   "definition": "常用搭配：toast with liquor to sb（向某人敬酒）。中式敬酒讲究杯沿低于对方、按尊卑长幼顺序进行，体现人情往来中的尊重；英文 toast 侧重举杯说祝词，无此等级含义。",
+   "examples": [
+    {
+     "en": "At the company dinner, the new employee stood up to toast with liquor to his boss, carefully keeping his glass lower than hers.",
+     "zh": "公司晚宴上，新员工起身向老板敬酒，特意把杯沿放得比对方低。"
+    },
+    {
+     "en": "During the wedding banquet, the groom and bride went from table to table to toast with liquor to every guest as a gesture of gratitude.",
+     "zh": "婚宴上，新郎新娘逐桌向每位宾客敬酒，以表感谢。"
+    }
+   ],
+   "tags": [
+    "人情往来"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "toast with liquor",
+   "pair": "en-zh",
+   "slug": "toast-with-liquor",
+   "lang": "en",
+   "translation": "敬酒",
+   "shortAnswer": "「toast with liquor」的中文意思是「敬酒」，指宴席上向长辈、领导或宾客举杯表敬意。它比普通 toast 多了中式酒桌的等级秩序与礼仪色彩。",
+   "definition": "toast with liquor 对应中文「敬酒」，用于正式或人情往来的宴席场合，常搭配 to sb（向某人敬酒）。注意与普通 toast（举杯祝词）区别：后者无杯沿高低、敬酒顺序等中式礼仪。",
+   "examples": [
+    {
+     "en": "At the company dinner, the new employee stood up to toast with liquor to his boss, carefully keeping his glass lower than hers.",
+     "zh": "公司晚宴上，新员工起身向老板敬酒，特意把杯沿放得比对方低。"
+    },
+    {
+     "en": "During the wedding banquet, the groom and bride went from table to table to toast with liquor to every guest as a gesture of gratitude.",
+     "zh": "婚宴上，新郎新娘逐桌向每位宾客敬酒，以表感谢。"
+    }
+   ],
+   "tags": [
+    "人情往来"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "寒暄",
+   "pair": "zh-en",
+   "slug": "han-xuan",
+   "lang": "zh",
+   "translation": "small talk greetings",
+   "shortAnswer": "寒暄的英文是 small talk greetings，指见面时说的客套话，多用于打招呼、暖场，不涉及实质内容。",
+   "definition": "寒暄指见面时互相说客套话，如问好、聊天气。常用搭配：exchange small talk greetings（互相寒暄）。区别于 greetings 只指问候语，寒暄更强调你来我往的短暂交谈。",
+   "examples": [
+    {
+     "en": "Before the meeting started, we exchanged small talk greetings about the weather.",
+     "zh": "会议开始前，我们聊了聊天气，寒暄了几句。"
+    },
+    {
+     "en": "He is good at making small talk greetings with clients at the dinner table.",
+     "zh": "他很擅长在饭桌上与客户寒暄。"
+    }
+   ],
+   "tags": [
+    "人情往来"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "small talk greetings",
+   "pair": "en-zh",
+   "slug": "small-talk-greetings",
+   "lang": "en",
+   "translation": "寒暄",
+   "shortAnswer": "small talk greetings 的中文意思是寒暄，即见面时的客套问候，侧重轻松、非正式的简短交谈。",
+   "definition": "small talk greetings 指见面时非正式的客套寒暄，常见于社交、职场暖场。搭配：exchange small talk greetings（互相寒暄）。口语常用，正式场合可用 polite greetings。",
+   "examples": [
+    {
+     "en": "Before the meeting started, we exchanged small talk greetings about the weather.",
+     "zh": "会议开始前，我们聊了聊天气，寒暄了几句。"
+    },
+    {
+     "en": "He is good at making small talk greetings with clients at the dinner table.",
+     "zh": "他很擅长在饭桌上与客户寒暄。"
+    }
+   ],
+   "tags": [
+    "人情往来"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "托人带话",
+   "pair": "zh-en",
+   "slug": "tuo-ren-dai-hua",
+   "lang": "zh",
+   "translation": "pass on a message",
+   "shortAnswer": "「托人带话」英文是 pass on a message，指请第三方转达口信。注意别直译成 let someone bring words，那不合英语习惯。",
+   "definition": "常用搭配：pass on a message to sb。强调通过中间人传达，不是当面说；比 tell 更间接，比 relay 更口语。托人带话常含人情意味，对方帮你是给面子。",
+   "examples": [
+    {
+     "en": "Could you pass on a message to Lily for me? I have to leave early today.",
+     "zh": "你能帮我给莉莉托人带个话吗？我今天得早走。"
+    },
+    {
+     "en": "He asked his assistant to pass on a message to the client about the meeting change.",
+     "zh": "他让助理向客户托人带话，通知会议改期。"
+    }
+   ],
+   "tags": [
+    "人情往来"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "pass on a message",
+   "pair": "en-zh",
+   "slug": "pass-on-a-message",
+   "lang": "en",
+   "translation": "托人带话",
+   "shortAnswer": "pass on a message 中文是「托人带话」，指请人代为转达口信。它与 relay information 近义，但更口语、更强调中间人帮忙。",
+   "definition": "to pass on a message 核心义为转达消息，常用于请第三方捎话。搭配：pass on a message to sb。比 forward 更生活化，比 tell 更间接，隐含欠下小人情。",
+   "examples": [
+    {
+     "en": "Could you pass on a message to Lily for me? I have to leave early today.",
+     "zh": "你能帮我给莉莉托人带个话吗？我今天得早走。"
+    },
+    {
+     "en": "He asked his assistant to pass on a message to the client about the meeting change.",
+     "zh": "他让助理向客户托人带话，通知会议改期。"
+    }
+   ],
+   "tags": [
+    "人情往来"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "占便宜",
+   "pair": "zh-en",
+   "slug": "zhan-pian-yi",
+   "lang": "zh",
+   "translation": "take advantage",
+   "shortAnswer": "「占便宜」的英文是 take advantage，常指利用他人或机会为自己谋利。注意 take advantage of 后接人或机会，别和 take advantage 单独用混淆。",
+   "definition": "take advantage of sb 指占某人便宜、利用某人；take advantage of sth 指利用机会或资源。口语也常说 get the better of sb，但后者偏在竞争中占上风。",
+   "examples": [
+    {
+     "en": "Don't let him take advantage of your kindness; he's just trying to get a free ride.",
+     "zh": "别让他占你善良的便宜，他不过是想白吃白拿。"
+    },
+    {
+     "en": "She took advantage of the sale to buy gifts for the whole family.",
+     "zh": "她趁打折占便宜，给全家人都买了礼物。"
+    }
+   ],
+   "tags": [
+    "人情往来"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "take advantage",
+   "pair": "en-zh",
+   "slug": "take-advantage",
+   "lang": "en",
+   "translation": "占便宜",
+   "shortAnswer": "Take advantage 的中文意思是「占便宜」，指利用他人、机会或弱点为自己谋利。它和 take advantage of 搭配使用，后接人或事物。",
+   "definition": "take advantage 常构成 take advantage of sb/sth：占某人便宜、利用机会。正式语境可指不当利用职权或信任，日常口语也指趁打折等占实惠。",
+   "examples": [
+    {
+     "en": "Don't let him take advantage of your kindness; he's just trying to get a free ride.",
+     "zh": "别让他占你善良的便宜，他不过是想白吃白拿。"
+    },
+    {
+     "en": "She took advantage of the sale to buy gifts for the whole family.",
+     "zh": "她趁打折占便宜，给全家人都买了礼物。"
+    }
+   ],
+   "tags": [
+    "人情往来"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "欠人情",
+   "pair": "zh-en",
+   "slug": "qian-ren-qing",
+   "lang": "zh",
+   "translation": "owe a favor",
+   "shortAnswer": "「欠人情」的英语常用表达是 owe a favor，指受了别人的恩惠还没回报。但中文的欠人情有更重的心理负担，常暗含人情债，而英文 owe a favor 语气相对轻，更像欠一个具体帮助。",
+   "definition": "owe a favor 是动词短语，常用结构 owe sb a favor 或 owe a favor to sb。注意 favor 英式拼 favour。中文欠人情强调关系中的亏欠感，英语则常指具体帮忙。还人情可说 return a favor。",
+   "examples": [
+    {
+     "en": "I still owe him a favor for helping me move last month.",
+     "zh": "上个月他帮我搬家，我还欠他一个人情。"
+    },
+    {
+     "en": "She doesn't like to owe a favor to anyone, so she always insists on paying people back.",
+     "zh": "她不喜欢欠任何人的人情，所以总是坚持回报别人。"
+    }
+   ],
+   "tags": [
+    "人情往来"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "owe a favor",
+   "pair": "en-zh",
+   "slug": "owe-a-favor",
+   "lang": "en",
+   "translation": "欠人情",
+   "shortAnswer": "owe a favor 的中文意思是「欠人情」，即受了别人的帮助而觉得应该回报。但英文里更偏向欠一个具体的人情，中文「欠人情」还可以指熟人社会里长期的人情债。",
+   "definition": "owe a favor 表示欠某人一个人情，常用于日常和职场语境，结构为 owe sb a favor 或 owe a favor to sb。与 be in debt 相比，它更轻、更具体，不强调金钱债务。",
+   "examples": [
+    {
+     "en": "I still owe him a favor for helping me move last month.",
+     "zh": "上个月他帮我搬家，我还欠他一个人情。"
+    },
+    {
+     "en": "She doesn't like to owe a favor to anyone, so she always insists on paying people back.",
+     "zh": "她不喜欢欠任何人的人情，所以总是坚持回报别人。"
+    }
+   ],
+   "tags": [
+    "人情往来"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "客气",
+   "pair": "zh-en",
+   "slug": "ke-qi",
+   "lang": "zh",
+   "translation": "courteous refusal",
+   "shortAnswer": "「客气」在表示婉拒时，英文常说 courteous refusal，指含蓄得体地回绝；口语更常用 politely decline。",
+   "definition": "客气有两层：待人讲客套，以及委婉推辞邀请或馈赠。表示婉拒时用 courteous refusal，强调拒绝仍顾对方面子。",
+   "examples": [
+    {
+     "en": "She offered a courteous refusal to his repeated help, not wanting to owe him a favor.",
+     "zh": "她客气地婉拒了他一再的帮忙，不想欠他人情。"
+    },
+    {
+     "en": "A courteous refusal at the dinner table is better than accepting a gift you cannot return.",
+     "zh": "饭桌上客气地推辞，好过收下一份你还不起的礼。"
+    }
+   ],
+   "tags": [
+    "人情往来"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "courteous refusal",
+   "pair": "en-zh",
+   "slug": "courteous-refusal",
+   "lang": "en",
+   "translation": "客气",
+   "shortAnswer": "courteous refusal 的中文意思是「客气」，特指委婉得体的拒绝，即婉拒，常用于回绝邀请与馈赠。",
+   "definition": "courteous refusal 指礼貌地谢绝，强调拒绝时不失礼、给对方留面子，多用于正式或半正式场合。",
+   "examples": [
+    {
+     "en": "She offered a courteous refusal to his repeated help, not wanting to owe him a favor.",
+     "zh": "她客气地婉拒了他一再的帮忙，不想欠他人情。"
+    },
+    {
+     "en": "A courteous refusal at the dinner table is better than accepting a gift you cannot return.",
+     "zh": "饭桌上客气地推辞，好过收下一份你还不起的礼。"
+    }
+   ],
+   "tags": [
+    "人情往来"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "推辞",
+   "pair": "zh-en",
+   "slug": "tui-ci",
+   "lang": "zh",
+   "translation": "politely decline",
+   "shortAnswer": "「推辞」的英文是 politely decline，但推辞是礼节性假意推让，politely decline 只表礼貌拒绝，少了仪式感。",
+   "definition": "推辞指礼节性假意拒绝，常见于收礼、敬酒等场合：先推两下再接受，是给对方面子的流程。英文 politely decline 只强调礼貌拒绝，无推让仪式含义。",
+   "examples": [
+    {
+     "en": "When my colleague offered me a gift, I politely declined at first, but then accepted it after she insisted.",
+     "zh": "同事送我礼物时，我起初推辞了一下，但在她坚持后还是收下了。"
+    },
+    {
+     "en": "He politely declined the toast at the banquet, but everyone knew it was just a ritual before he finally drank.",
+     "zh": "宴会上他推辞了敬酒，但大家都知道这只是仪式，最终他还是喝了。"
+    }
+   ],
+   "tags": [
+    "人情往来"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "politely decline",
+   "pair": "en-zh",
+   "slug": "politely-decline",
+   "lang": "en",
+   "translation": "推辞",
+   "shortAnswer": "politely decline 的中文意思是「推辞」，但推辞是礼节性假意推让，politely decline 只表礼貌拒绝，缺少这层仪式感。",
+   "definition": "politely decline 意为礼貌拒绝，中文常译「推辞」。但推辞带有仪式性推让，常见于收礼、敬酒等场合；politely decline 往往是直接拒绝，推辞则可能最终接受。",
+   "examples": [
+    {
+     "en": "When my colleague offered me a gift, I politely declined at first, but then accepted it after she insisted.",
+     "zh": "同事送我礼物时，我起初推辞了一下，但在她坚持后还是收下了。"
+    },
+    {
+     "en": "He politely declined the toast at the banquet, but everyone knew it was just a ritual before he finally drank.",
+     "zh": "宴会上他推辞了敬酒，但大家都知道这只是仪式，最终他还是喝了。"
+    }
+   ],
+   "tags": [
+    "人情往来"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "捎东西",
+   "pair": "zh-en",
+   "slug": "shao-dong-xi",
+   "lang": "zh",
+   "translation": "bring something along for someone",
+   "shortAnswer": "「捎东西」可译 bring something along for someone，指顺路替人带物。",
+   "definition": "因自己也要去某地，顺路替别人把东西带过去；口语常用，正式可用 take something for sb。",
+   "examples": [
+    {
+     "en": "Could you bring something along for me when you come to the party? I left my gift at home.",
+     "zh": "你来参加聚会时能帮我捎东西吗？我把礼物落家里了。"
+    },
+    {
+     "en": "She asked her neighbor to bring something along for someone, since he was already going to the post office.",
+     "zh": "她请邻居帮人捎东西，因为他正好要去邮局。"
+    }
+   ],
+   "tags": [
+    "人情往来"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "bring something along for someone",
+   "pair": "en-zh",
+   "slug": "bring-something-along-for-someone",
+   "lang": "en",
+   "translation": "捎东西",
+   "shortAnswer": "bring something along for someone means 捎东西, to carry something for someone on the way.",
+   "definition": "To take something with you for someone because you are already going there; it stresses doing it on the way, not specially.",
+   "examples": [
+    {
+     "en": "Could you bring something along for me when you come to the party? I left my gift at home.",
+     "zh": "你来参加聚会时能帮我捎东西吗？我把礼物落家里了。"
+    },
+    {
+     "en": "She asked her neighbor to bring something along for someone, since he was already going to the post office.",
+     "zh": "她请邻居帮人捎东西，因为他正好要去邮局。"
+    }
+   ],
+   "tags": [
+    "人情往来"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "还人情",
+   "pair": "zh-en",
+   "slug": "hai-ren-qing",
+   "lang": "zh",
+   "translation": "return a favor",
+   "shortAnswer": "「还人情」英文是 return a favor，指用等量或加码的方式偿还别人给过的帮助。注意它强调人情往来的闭环，不是单纯说谢谢，而是要有实际回报。",
+   "definition": "常见说法有 return a favor、return the favor、repay a favor。人情讲究礼尚往来：今天你帮我、明天我帮你，欠了人情就要找机会还上，回报往往略大于所受的帮助。",
+   "examples": [
+    {
+     "en": "She helped me move last month, so I returned a favor by cooking dinner for her family.",
+     "zh": "她上个月帮我搬家，所以我做了一顿饭请她家人，算是还了人情。"
+    },
+    {
+     "en": "In Chinese culture, people often return a favor with something a little more generous to keep the relationship going.",
+     "zh": "在中国文化里，人们还人情时往往会稍微加码，以维持彼此的往来。"
+    }
+   ],
+   "tags": [
+    "人情往来"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "return a favor",
+   "pair": "en-zh",
+   "slug": "return-a-favor",
+   "lang": "en",
+   "translation": "还人情",
+   "shortAnswer": "\"Return a favor\" 中文意思是「还人情」，指用等量或加码的方式回报别人曾经的帮助。它强调人情往来的循环，与单纯道谢不同，通常需要实际行动。",
+   "definition": "to return a favor 意为回报他人的恩惠，常见搭配 return the favor、repay a favor。口语和正式场合都可用；注意它侧重礼尚往来的对等回报，而非空口致谢。",
+   "examples": [
+    {
+     "en": "She helped me move last month, so I returned a favor by cooking dinner for her family.",
+     "zh": "她上个月帮我搬家，所以我做了一顿饭请她家人，算是还了人情。"
+    },
+    {
+     "en": "In Chinese culture, people often return a favor with something a little more generous to keep the relationship going.",
+     "zh": "在中国文化里，人们还人情时往往会稍微加码，以维持彼此的往来。"
+    }
+   ],
+   "tags": [
+    "人情往来"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "求人办事",
+   "pair": "zh-en",
+   "slug": "qiu-ren-ban-shi",
+   "lang": "zh",
+   "translation": "ask for help through connections",
+   "shortAnswer": "「求人办事」的英文是 ask for help through connections，指托熟人、找关系把事情办成。它常含一丝灰色意味，暗示不走正常流程而靠人情。",
+   "definition": "贬义色彩取决于语境：中性时指正常求助熟人，负面时暗含走后门、破坏公平。近义表达 pull strings 更强调幕后操纵，go through connections 偏口语。",
+   "examples": [
+    {
+     "en": "He had to ask for help through connections to get his son into that school.",
+     "zh": "为了让儿子进那所学校，他不得不求人办事。"
+    },
+    {
+     "en": "Rather than ask for help through connections, she followed the official procedure step by step.",
+     "zh": "她没有求人办事，而是一步步走正式流程。"
+    }
+   ],
+   "tags": [
+    "人情往来"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "ask for help through connections",
+   "pair": "en-zh",
+   "slug": "ask-for-help-through-connections",
+   "lang": "en",
+   "translation": "求人办事",
+   "shortAnswer": "ask for help through connections 的中文意思是「求人办事」，即托熟人、找关系把事办成。它与 pull strings 的关键区别是后者更强调幕后操纵、语感更灰。",
+   "definition": "指借助私人关系而非正式渠道获取帮助，多用于办事、求职、就医等场景。语感中性偏灰，正式场合可用 go through connections 委婉表达，避免直译 ask someone to do things。",
+   "examples": [
+    {
+     "en": "He had to ask for help through connections to get his son into that school.",
+     "zh": "为了让儿子进那所学校，他不得不求人办事。"
+    },
+    {
+     "en": "Rather than ask for help through connections, she followed the official procedure step by step.",
+     "zh": "她没有求人办事，而是一步步走正式流程。"
+    }
+   ],
+   "tags": [
+    "人情往来"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "随份子",
+   "pair": "zh-en",
+   "slug": "sui-fen-zi",
+   "lang": "zh",
+   "translation": "chip in a cash gift",
+   "shortAnswer": "「随份子」的英文是 chip in a cash gift，指亲友办婚丧喜事时凑份子钱，强调出钱这个动作。",
+   "definition": "婚丧喜庆场合凑现金礼金，常说 chip in a cash gift for someone's wedding。易错点：chip in 泛指凑钱，加 a cash gift 才落到份子钱。",
+   "examples": [
+    {
+     "en": "My colleagues and I chipped in a cash gift for the manager's wedding.",
+     "zh": "我和同事们一起随了份子，给经理的婚礼凑了礼金。"
+    },
+    {
+     "en": "In China, guests usually chip in a cash gift instead of bringing a wrapped present.",
+     "zh": "在中国，宾客通常是随份子给礼金，而不是带包装好的礼物。"
+    }
+   ],
+   "tags": [
+    "人情往来"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "chip in a cash gift",
+   "pair": "en-zh",
+   "slug": "chip-in-a-cash-gift",
+   "lang": "en",
+   "translation": "随份子",
+   "shortAnswer": "chip in a cash gift 中文意思是「随份子」，即亲友办事时出一份礼金，强调凑钱的动作。",
+   "definition": "口语常用，指在婚礼、满月等场合凑一笔现金礼金。常说 chip in a cash gift for the newlyweds。易错点：chip in 单独用是凑钱，加 a cash gift 才明确是随份子。",
+   "examples": [
+    {
+     "en": "My colleagues and I chipped in a cash gift for the manager's wedding.",
+     "zh": "我和同事们一起随了份子，给经理的婚礼凑了礼金。"
+    },
+    {
+     "en": "In China, guests usually chip in a cash gift instead of bringing a wrapped present.",
+     "zh": "在中国，宾客通常是随份子给礼金，而不是带包装好的礼物。"
+    }
+   ],
+   "tags": [
+    "人情往来"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "随大流",
+   "pair": "zh-en",
+   "slug": "sui-da-liu",
+   "lang": "zh",
+   "translation": "follow the crowd",
+   "shortAnswer": "随大流用英语说是 follow the crowd，指不假思索地跟着多数人走，常含贬义，暗示缺乏主见。",
+   "definition": "follow the crowd 指因从众心理而跟随大众，可用于消费、穿搭、观点或人情往来。注意 crowd 前必须加 the；它比 follow the trend 更强调盲从、没主见，口语常用。",
+   "examples": [
+    {
+     "en": "At the wedding, I didn't want to follow the crowd and give a huge red envelope, but in the end I did it anyway to avoid losing face.",
+     "zh": "婚礼上我不想随大流包个大红包，但最后还是照做了，免得丢面子。"
+    },
+    {
+     "en": "When everyone at the dinner table stood up to toast, he followed the crowd even though he barely knew the host.",
+     "zh": "饭桌上大家都起身敬酒时，他也随大流站了起来，尽管他跟主人并不熟。"
+    }
+   ],
+   "tags": [
+    "人情往来"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "follow the crowd",
+   "pair": "en-zh",
+   "slug": "follow-the-crowd",
+   "lang": "en",
+   "translation": "随大流",
+   "shortAnswer": "follow the crowd 的中文意思是随大流，指跟着大多数人的做法走，常含贬义，暗示没有自己的判断。",
+   "definition": "follow the crowd 是动词短语，意为从众、随大流，多用于口语。注意不能说 follow crowd，必须加 the；它侧重人的盲从，而 follow the trend 更中性。",
+   "examples": [
+    {
+     "en": "At the wedding, I didn't want to follow the crowd and give a huge red envelope, but in the end I did it anyway to avoid losing face.",
+     "zh": "婚礼上我不想随大流包个大红包，但最后还是照做了，免得丢面子。"
+    },
+    {
+     "en": "When everyone at the dinner table stood up to toast, he followed the crowd even though he barely knew the host.",
+     "zh": "饭桌上大家都起身敬酒时，他也随大流站了起来，尽管他跟主人并不熟。"
+    }
+   ],
+   "tags": [
+    "人情往来"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "捧场",
+   "pair": "zh-en",
+   "slug": "peng-chang",
+   "lang": "zh",
+   "translation": "show up to support",
+   "shortAnswer": "「捧场」用英语说就是 show up to support，指亲自到场支持某人或某活动，带人情意味。",
+   "definition": "捧场指出于人情或支持亲自到场，给活动凑人气、给主人面子，英语常用 show up to support。",
+   "examples": [
+    {
+     "en": "My friend is opening a small restaurant this weekend, so I promised to show up to support him.",
+     "zh": "我朋友这周末开一家小餐馆，所以我答应去给他捧场。"
+    },
+    {
+     "en": "Even though she was tired, she still showed up to support her sister at the piano recital.",
+     "zh": "虽然她很累，还是去给妹妹的钢琴演奏会捧场了。"
+    }
+   ],
+   "tags": [
+    "人情往来"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "show up to support",
+   "pair": "en-zh",
+   "slug": "show-up-to-support",
+   "lang": "en",
+   "translation": "捧场",
+   "shortAnswer": "show up to support 的中文意思是「捧场」，指亲自到场支持，带人情意味，不是单纯表态。",
+   "definition": "show up to support 多用于口语，强调人到现场为某人或活动捧场，常见搭配 a friend/event。",
+   "examples": [
+    {
+     "en": "My friend is opening a small restaurant this weekend, so I promised to show up to support him.",
+     "zh": "我朋友这周末开一家小餐馆，所以我答应去给他捧场。"
+    },
+    {
+     "en": "Even though she was tired, she still showed up to support her sister at the piano recital.",
+     "zh": "虽然她很累，还是去给妹妹的钢琴演奏会捧场了。"
+    }
+   ],
+   "tags": [
+    "人情往来"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "打圆场",
+   "pair": "zh-en",
+   "slug": "da-yuan-chang",
+   "lang": "zh",
+   "translation": "smooth things over",
+   "shortAnswer": "打圆场用英语说是 smooth things over，指在尴尬或争吵中出面调和、化解矛盾，不等于正式道歉。",
+   "definition": "smooth things over 常与 try to、help 连用，用于人际摩擦、饭局冷场等场合；侧重缓和局面，而非替人认错或撒谎掩饰。",
+   "examples": [
+    {
+     "en": "When the two colleagues started arguing at dinner, the manager tried to smooth things over with a joke.",
+     "zh": "两位同事在饭桌上吵起来时，经理用一句玩笑打了圆场。"
+    },
+    {
+     "en": "She invited both families to lunch to smooth things over after the misunderstanding about the wedding gift.",
+     "zh": "关于婚礼礼金的误会之后，她请两家人吃午饭，想缓和一下关系。"
+    }
+   ],
+   "tags": [
+    "人情往来"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "smooth things over",
+   "pair": "en-zh",
+   "slug": "smooth-things-over",
+   "lang": "en",
+   "translation": "打圆场",
+   "shortAnswer": "smooth things over 的中文意思是打圆场，即为争吵或尴尬的双方调和、把局面缓和下来，但不等于正式道歉。",
+   "definition": "smooth things over 指用言语或行动缓解冲突与尴尬，常见搭配 smooth things over with sb；偏口语，多用于亲友同事之间。",
+   "examples": [
+    {
+     "en": "When the two colleagues started arguing at dinner, the manager tried to smooth things over with a joke.",
+     "zh": "两位同事在饭桌上吵起来时，经理用一句玩笑打了圆场。"
+    },
+    {
+     "en": "She invited both families to lunch to smooth things over after the misunderstanding about the wedding gift.",
+     "zh": "关于婚礼礼金的误会之后，她请两家人吃午饭，想缓和一下关系。"
+    }
+   ],
+   "tags": [
+    "人情往来"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "网约车",
+   "pair": "zh-en",
+   "slug": "wang-yue-che",
+   "lang": "zh",
+   "translation": "ride-hailing car",
+   "shortAnswer": "「网约车」英文是 ride-hailing car，指用手机应用在线预约的载客汽车。",
+   "definition": "ride-hailing car 指通过滴滴、Uber 等平台在线预约的车。常见搭配：call a ride-hailing car。注意顺风车、拼车说法不同。",
+   "examples": [
+    {
+     "en": "I usually call a ride-hailing car instead of taking a taxi because it's cheaper off-peak.",
+     "zh": "我通常叫网约车而不是打出租车，因为非高峰时段网约车更便宜。"
+    },
+    {
+     "en": "The ride-hailing car arrived in three minutes, but surge pricing doubled the fare.",
+     "zh": "网约车三分钟就到了，但动态加价让车费翻了一倍。"
+    }
+   ],
+   "tags": [
+    "打车自驾"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "ride-hailing car",
+   "pair": "en-zh",
+   "slug": "ride-hailing-car",
+   "lang": "en",
+   "translation": "网约车",
+   "shortAnswer": "A ride-hailing car is 网约车 in Chinese: a car booked through an app, not hailed on the street.",
+   "definition": "A ride-hailing car is booked via apps like Didi or Uber. Common collocations: call a ride-hailing car, ride-hailing service.",
+   "examples": [
+    {
+     "en": "I usually call a ride-hailing car instead of taking a taxi because it's cheaper off-peak.",
+     "zh": "我通常叫网约车而不是打出租车，因为非高峰时段网约车更便宜。"
+    },
+    {
+     "en": "The ride-hailing car arrived in three minutes, but surge pricing doubled the fare.",
+     "zh": "网约车三分钟就到了，但动态加价让车费翻了一倍。"
+    }
+   ],
+   "tags": [
+    "打车自驾"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "顺风车",
+   "pair": "zh-en",
+   "slug": "shun-feng-che",
+   "lang": "zh",
+   "translation": "carpool ride",
+   "shortAnswer": "「顺风车」英文说 carpool ride，指分摊油费过路费的非营利合乘出行方式。",
+   "definition": "carpool ride 指非营利性合乘出行，乘客分摊油费和过路费，与以盈利为目的的网约车 ride-hailing 不同。",
+   "examples": [
+    {
+     "en": "I took a carpool ride to the airport to save money on gas and tolls.",
+     "zh": "为了省油费和过路费，我搭顺风车去了机场。"
+    },
+    {
+     "en": "She offers a carpool ride to work every morning, and her neighbors split the cost.",
+     "zh": "她每天早上提供上班顺风车，邻居们分摊费用。"
+    }
+   ],
+   "tags": [
+    "打车自驾"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "carpool ride",
+   "pair": "en-zh",
+   "slug": "carpool-ride",
+   "lang": "en",
+   "translation": "顺风车",
+   "shortAnswer": "A carpool ride, or 顺风车 in Chinese, is a shared trip splitting fuel and toll costs.",
+   "definition": "A carpool ride is a shared, non-profit car trip where riders split fuel and tolls, unlike for-profit ride-hailing.",
+   "examples": [
+    {
+     "en": "I took a carpool ride to the airport to save money on gas and tolls.",
+     "zh": "为了省油费和过路费，我搭顺风车去了机场。"
+    },
+    {
+     "en": "She offers a carpool ride to work every morning, and her neighbors split the cost.",
+     "zh": "她每天早上提供上班顺风车，邻居们分摊费用。"
+    }
+   ],
+   "tags": [
+    "打车自驾"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "上车点",
+   "pair": "zh-en",
+   "slug": "shang-che-dian",
+   "lang": "zh",
+   "translation": "pickup point",
+   "shortAnswer": "「上车点」的英文是 pickup point，指司机与乘客约定碰头上车的位置，和 drop-off point（下车点）相对。",
+   "definition": "pickup point 多用于网约车、顺风车、机场接人场景，如 set/change the pickup point。请注意它与泛指上客区的 pickup area 略有不同。",
+   "examples": [
+    {
+     "en": "Please set the pickup point at the north exit of the mall so the driver can find you easily.",
+     "zh": "请把上车点设在商场北出口，这样司机更容易找到你。"
+    },
+    {
+     "en": "During rush hour, the driver asked me to walk to a nearby pickup point because the original one was too congested.",
+     "zh": "高峰时段，司机让我走到附近的上车点，因为原来的上车点太堵了。"
+    }
+   ],
+   "tags": [
+    "打车自驾"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "pickup point",
+   "pair": "en-zh",
+   "slug": "pickup-point",
+   "lang": "en",
+   "translation": "上车点",
+   "shortAnswer": "pickup point 的中文意思是「上车点」，即司机与乘客约好碰头上车的地点，与 drop-off point（下车点）相对。",
+   "definition": "pickup point 指约定的上车汇合位置，常见于打车、顺风车、机场接人场景，搭配 set/choose/change the pickup point，口语也可说 pickup spot。",
+   "examples": [
+    {
+     "en": "Please set the pickup point at the north exit of the mall so the driver can find you easily.",
+     "zh": "请把上车点设在商场北出口，这样司机更容易找到你。"
+    },
+    {
+     "en": "During rush hour, the driver asked me to walk to a nearby pickup point because the original one was too congested.",
+     "zh": "高峰时段，司机让我走到附近的上车点，因为原来的上车点太堵了。"
+    }
+   ],
+   "tags": [
+    "打车自驾"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "摇号",
+   "pair": "zh-en",
+   "slug": "yao-hao",
+   "lang": "zh",
+   "translation": "license plate lottery",
+   "shortAnswer": "「摇号」英文是 license plate lottery，指抽签获取购车指标；上海用拍牌 auction。",
+   "definition": "摇号指政府用随机抽签分配购车指标。搭配：win the license plate lottery、enter the lottery。",
+   "examples": [
+    {
+     "en": "I entered the license plate lottery three years ago but still haven't won a quota.",
+     "zh": "我三年前就参加了摇号，但到现在还没摇中指标。"
+    },
+    {
+     "en": "Winning the license plate lottery is like winning the actual lottery, given how low the odds are.",
+     "zh": "考虑到中签率极低，摇中车牌简直跟中彩票一样。"
+    }
+   ],
+   "tags": [
+    "打车自驾"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "license plate lottery",
+   "pair": "en-zh",
+   "slug": "license-plate-lottery",
+   "lang": "en",
+   "translation": "摇号",
+   "shortAnswer": "License plate lottery is 摇号, a random draw for car purchase quotas, unlike an auction.",
+   "definition": "License plate lottery means 摇号: a government random draw for car plates. Collocations: win/enter the lottery.",
+   "examples": [
+    {
+     "en": "I entered the license plate lottery three years ago but still haven't won a quota.",
+     "zh": "我三年前就参加了摇号，但到现在还没摇中指标。"
+    },
+    {
+     "en": "Winning the license plate lottery is like winning the actual lottery, given how low the odds are.",
+     "zh": "考虑到中签率极低，摇中车牌简直跟中彩票一样。"
+    }
+   ],
+   "tags": [
+    "打车自驾"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "限号",
+   "pair": "zh-en",
+   "slug": "xian-hao",
+   "lang": "zh",
+   "translation": "license plate restriction",
+   "shortAnswer": "「限号」英文是 license plate restriction，指工作日按车牌尾号限制部分车辆上路。",
+   "definition": "常见搭配：implement license plate restriction（实施限号）、lift the restriction（解除限号）。注意与 odd-even rationing（单双号限行）区分。",
+   "examples": [
+    {
+     "en": "Beijing's license plate restriction means I can't drive my car on Mondays because the last digit is 1.",
+     "zh": "北京的限号规定意味着我周一不能开车，因为我的车牌尾号是1。"
+    },
+    {
+     "en": "During the license plate restriction, many commuters turn to ride-hailing apps like Didi or carpool rides to get to work.",
+     "zh": "限号期间，许多通勤者转而使用滴滴等网约车或拼车出行。"
+    }
+   ],
+   "tags": [
+    "打车自驾"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "license plate restriction",
+   "pair": "en-zh",
+   "slug": "license-plate-restriction",
+   "lang": "en",
+   "translation": "限号",
+   "shortAnswer": "License plate restriction is 限号, banning cars on workdays by plate's last digit.",
+   "definition": "Key meaning: a policy that bans certain vehicles from roads based on the last digit of their license plate. Also called plate restriction.",
+   "examples": [
+    {
+     "en": "Beijing's license plate restriction means I can't drive my car on Mondays because the last digit is 1.",
+     "zh": "北京的限号规定意味着我周一不能开车，因为我的车牌尾号是1。"
+    },
+    {
+     "en": "During the license plate restriction, many commuters turn to ride-hailing apps like Didi or carpool rides to get to work.",
+     "zh": "限号期间，许多通勤者转而使用滴滴等网约车或拼车出行。"
+    }
+   ],
+   "tags": [
+    "打车自驾"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "动态加价",
+   "pair": "zh-en",
+   "slug": "dong-tai-jia-jia",
+   "lang": "zh",
+   "translation": "surge pricing",
+   "shortAnswer": "「动态加价」的英文是 surge pricing，常用于网约车在高峰或需求大时上调价格。注意它指平台临时调价，不是普通涨价，也不用于实体店长期提价。",
+   "definition": "surge pricing 多指 Uber、滴滴等网约车平台在高峰期临时上调价格，如 during surge pricing。不要与 price gouging（哄抬物价）混用，后者含贬义。",
+   "examples": [
+    {
+     "en": "During rush hour, the ride-hailing app uses surge pricing, so the fare can be twice the normal price.",
+     "zh": "在高峰期，网约车应用会采用动态加价，所以车费可能是正常价格的两倍。"
+    },
+    {
+     "en": "If you don't want to pay surge pricing, you can wait a few minutes or choose a carpool ride instead.",
+     "zh": "如果你不想支付动态加价，可以等几分钟或选择拼车。"
+    }
+   ],
+   "tags": [
+    "打车自驾"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "surge pricing",
+   "pair": "en-zh",
+   "slug": "surge-pricing",
+   "lang": "en",
+   "translation": "动态加价",
+   "shortAnswer": "「surge pricing」的中文意思是「动态加价」，指网约车在需求高峰时临时提高价格。它强调平台算法临时调价，与普通长期涨价不同。",
+   "definition": "surge pricing 是网约车行业术语，常见搭配有 during surge pricing、surge pricing kicks in。口语中也可说 surge。注意它不同于固定涨价，通常只持续高峰时段。",
+   "examples": [
+    {
+     "en": "During rush hour, the ride-hailing app uses surge pricing, so the fare can be twice the normal price.",
+     "zh": "在高峰期，网约车应用会采用动态加价，所以车费可能是正常价格的两倍。"
+    },
+    {
+     "en": "If you don't want to pay surge pricing, you can wait a few minutes or choose a carpool ride instead.",
+     "zh": "如果你不想支付动态加价，可以等几分钟或选择拼车。"
+    }
+   ],
+   "tags": [
+    "打车自驾"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "拼车",
+   "pair": "zh-en",
+   "slug": "pin-che",
+   "lang": "zh",
+   "translation": "ride sharing",
+   "shortAnswer": "「拼车」的英文是 ride sharing，指多人共乘分摊费用，侧重平台撮合、临时短途。",
+   "definition": "ride sharing 指通过平台或熟人共用车辆、分摊费用，常见搭配 a ride sharing app、ride sharing service，强调临时分摊，与 carpool 的固定通勤不同。",
+   "examples": [
+    {
+     "en": "Ride sharing is much cheaper than taking a taxi alone, so I use a ride sharing app almost every day.",
+     "zh": "拼车比独自打车便宜多了，所以我几乎每天都用一个拼车软件。"
+    },
+    {
+     "en": "During rush hour, ride sharing can save you both time and money compared with driving solo.",
+     "zh": "高峰时段，拼车和独自开车相比既能省时间又能省钱。"
+    }
+   ],
+   "tags": [
+    "打车自驾"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "ride sharing",
+   "pair": "en-zh",
+   "slug": "ride-sharing",
+   "lang": "en",
+   "translation": "拼车",
+   "shortAnswer": "ride sharing 的中文意思是「拼车」，即多人共乘分摊车费，强调平台撮合、临时短途。",
+   "definition": "ride sharing 指乘客共享车辆、分摊车费的出行方式，常见于网约车语境，如 a ride sharing app；它与 carpool 的日常轮流开车不同。",
+   "examples": [
+    {
+     "en": "Ride sharing is much cheaper than taking a taxi alone, so I use a ride sharing app almost every day.",
+     "zh": "拼车比独自打车便宜多了，所以我几乎每天都用一个拼车软件。"
+    },
+    {
+     "en": "During rush hour, ride sharing can save you both time and money compared with driving solo.",
+     "zh": "高峰时段，拼车和独自开车相比既能省时间又能省钱。"
+    }
+   ],
+   "tags": [
+    "打车自驾"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "驾照",
+   "pair": "zh-en",
+   "slug": "jia-zhao",
+   "lang": "zh",
+   "translation": "driver license",
+   "shortAnswer": "「驾照」的英文是 driver license（美式），英式常写作 driving licence，用于证明驾驶资格。",
+   "definition": "美式拼写 driver license 或 driver's license，英式拼写 driving licence，指驾驶机动车的法定许可。",
+   "examples": [
+    {
+     "en": "You need to show your driver license when you pick up a rental car.",
+     "zh": "租车取车时你需要出示驾照。"
+    },
+    {
+     "en": "He got a traffic violation and points were deducted from his driver license.",
+     "zh": "他违章了，驾照被扣了分。"
+    }
+   ],
+   "tags": [
+    "打车自驾"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "driver license",
+   "pair": "en-zh",
+   "slug": "driver-license",
+   "lang": "en",
+   "translation": "驾照",
+   "shortAnswer": "Driver license 的中文意思是「驾照」，即允许持有人驾驶机动车的官方证件。",
+   "definition": "美式拼写 driver license 或 driver's license，英式拼写 driving licence，指官方颁发的驾驶执照。",
+   "examples": [
+    {
+     "en": "You need to show your driver license when you pick up a rental car.",
+     "zh": "租车取车时你需要出示驾照。"
+    },
+    {
+     "en": "He got a traffic violation and points were deducted from his driver license.",
+     "zh": "他违章了，驾照被扣了分。"
+    }
+   ],
+   "tags": [
+    "打车自驾"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "扣分",
+   "pair": "zh-en",
+   "slug": "kou-fen",
+   "lang": "zh",
+   "translation": "license points deduction",
+   "shortAnswer": "「扣分」的英文是 license points deduction，指交通违章后驾照被记分。注意口语里常说 get points on my license，而不是直接说 deduct points。",
+   "definition": "license points deduction 多用于正式说明或政策描述，如驾照记分制度。日常口语更常说 get points、receive a points deduction，搭配违章类型：speeding、running a red light 等。",
+   "examples": [
+    {
+     "en": "Driving without a seatbelt can lead to a license points deduction in many places.",
+     "zh": "在很多地方，不系安全带驾驶会导致驾照扣分。"
+    },
+    {
+     "en": "After his second speeding ticket, he faced a license points deduction and higher insurance rates.",
+     "zh": "在第二次超速罚单之后，他面临驾照扣分和更高的保险费率。"
+    }
+   ],
+   "tags": [
+    "打车自驾"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "license points deduction",
+   "pair": "en-zh",
+   "slug": "license-points-deduction",
+   "lang": "en",
+   "translation": "扣分",
+   "shortAnswer": "License points deduction 的中文意思是「扣分」，指交通违章后驾照被记分的处罚。它强调记分制度本身，而不同于单纯的罚款 fine。",
+   "definition": "license points deduction 是正式说法，指驾照因违章被记分。常见于保险、交规说明；口语常说 get points on one's license。注意它不等于吊销驾照 suspension。",
+   "examples": [
+    {
+     "en": "Driving without a seatbelt can lead to a license points deduction in many places.",
+     "zh": "在很多地方，不系安全带驾驶会导致驾照扣分。"
+    },
+    {
+     "en": "After his second speeding ticket, he faced a license points deduction and higher insurance rates.",
+     "zh": "在第二次超速罚单之后，他面临驾照扣分和更高的保险费率。"
+    }
+   ],
+   "tags": [
+    "打车自驾"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "科目二",
+   "pair": "zh-en",
+   "slug": "ke-mu-er",
+   "lang": "zh",
+   "translation": "driving test course two",
+   "shortAnswer": "「科目二」英文是 driving test course two，指中国驾照考试的场地驾驶技能考试。",
+   "definition": "driving test course two 即科目二，中国驾照考试第二部分，考倒车入库、侧方停车等场地驾驶技能。",
+   "examples": [
+    {
+     "en": "My cousin failed driving test course two twice because of the reverse parking section, which is notoriously difficult.",
+     "zh": "我表弟因为倒车入库这个特别难的部分，科目二挂了两次。"
+    },
+    {
+     "en": "Before you can book driving test course two, you need to pass the theory test and complete enough practice hours.",
+     "zh": "在预约科目二之前，你需要通过理论考试并完成足够的练车学时。"
+    }
+   ],
+   "tags": [
+    "打车自驾"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "driving test course two",
+   "pair": "en-zh",
+   "slug": "driving-test-course-two",
+   "lang": "en",
+   "translation": "科目二",
+   "shortAnswer": "driving test course two 就是「科目二」，指中国驾照考试中的第二部分场地驾驶技能考试。",
+   "definition": "driving test course two means 科目二, the second part of China's driving test, covering reverse parking and other closed-course skills.",
+   "examples": [
+    {
+     "en": "My cousin failed driving test course two twice because of the reverse parking section, which is notoriously difficult.",
+     "zh": "我表弟因为倒车入库这个特别难的部分，科目二挂了两次。"
+    },
+    {
+     "en": "Before you can book driving test course two, you need to pass the theory test and complete enough practice hours.",
+     "zh": "在预约科目二之前，你需要通过理论考试并完成足够的练车学时。"
+    }
+   ],
+   "tags": [
+    "打车自驾"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "违章",
+   "pair": "zh-en",
+   "slug": "wei-zhang",
+   "lang": "zh",
+   "translation": "traffic violation",
+   "shortAnswer": "「违章」的英文是 traffic violation，指违反交通法规的行为，比如闯红灯、超速或违停。",
+   "definition": "traffic violation 指违反交通法规，如闯红灯、超速、违停；常搭配 commit a traffic violation，收到罚单可用 get a ticket。",
+   "examples": [
+    {
+     "en": "The driver was fined for a traffic violation after running a red light.",
+     "zh": "那名司机因闯红灯违章被罚款。"
+    },
+    {
+     "en": "Too many traffic violations will lead to points deduction on your license.",
+     "zh": "违章太多会导致驾照被扣分。"
+    }
+   ],
+   "tags": [
+    "打车自驾"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "traffic violation",
+   "pair": "en-zh",
+   "slug": "traffic-violation",
+   "lang": "en",
+   "translation": "违章",
+   "shortAnswer": "traffic violation 的中文意思是「违章」，即违反交通规则的行为，如闯红灯、超速或违停。",
+   "definition": "traffic violation 是较正式说法，指闯红灯、超速、违停等违反交通规则的行为；口语常说 ticket，常见搭配 commit a traffic violation。",
+   "examples": [
+    {
+     "en": "The driver was fined for a traffic violation after running a red light.",
+     "zh": "那名司机因闯红灯违章被罚款。"
+    },
+    {
+     "en": "Too many traffic violations will lead to points deduction on your license.",
+     "zh": "违章太多会导致驾照被扣分。"
+    }
+   ],
+   "tags": [
+    "打车自驾"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "充电桩",
+   "pair": "zh-en",
+   "slug": "chong-dian-zhuang",
+   "lang": "zh",
+   "translation": "EV charging station",
+   "shortAnswer": "充电桩的英文是 EV charging station，也常说 charging station，指给电动汽车补充电量的固定设施。",
+   "definition": "EV charging station 是充电桩最通用的英文说法，日常也常说 charging station。常见搭配有 find an EV charging station、public charging station。",
+   "examples": [
+    {
+     "en": "We need to find an EV charging station before the battery runs out.",
+     "zh": "我们得在电池耗尽前找到一个充电桩。"
+    },
+    {
+     "en": "This EV charging station supports fast charging, so a short stop is enough.",
+     "zh": "这个充电桩支持快充，所以短暂停一下就够了。"
+    }
+   ],
+   "tags": [
+    "打车自驾"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "EV charging station",
+   "pair": "en-zh",
+   "slug": "ev-charging-station",
+   "lang": "en",
+   "translation": "充电桩",
+   "shortAnswer": "EV charging station 的中文意思是充电桩，指为电动汽车提供充电服务的设施。",
+   "definition": "EV charging station 指给电动汽车充电的固定设施，中文常说充电桩。常见搭配有 public EV charging station、fast charging station。",
+   "examples": [
+    {
+     "en": "We need to find an EV charging station before the battery runs out.",
+     "zh": "我们得在电池耗尽前找到一个充电桩。"
+    },
+    {
+     "en": "This EV charging station supports fast charging, so a short stop is enough.",
+     "zh": "这个充电桩支持快充，所以短暂停一下就够了。"
+    }
+   ],
+   "tags": [
+    "打车自驾"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "罚单",
+   "pair": "zh-en",
+   "slug": "fa-dan",
+   "lang": "zh",
+   "translation": "traffic ticket",
+   "shortAnswer": "「罚单」英文是 traffic ticket，指交通违章后收到的处罚通知，通常需要缴纳罚款。",
+   "definition": "traffic ticket 指因超速、闯红灯等违章被开出的交通罚单，需缴纳罚款。常见搭配：get a traffic ticket、pay a traffic ticket。",
+   "examples": [
+    {
+     "en": "I got a traffic ticket for speeding while driving to the airport.",
+     "zh": "我开车去机场时因超速吃了一张罚单。"
+    },
+    {
+     "en": "If you don't pay the traffic ticket on time, the fine may increase.",
+     "zh": "如果你不按时缴纳罚单，罚款可能会增加。"
+    }
+   ],
+   "tags": [
+    "打车自驾"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "traffic ticket",
+   "pair": "en-zh",
+   "slug": "traffic-ticket",
+   "lang": "en",
+   "translation": "罚单",
+   "shortAnswer": "Traffic ticket means 罚单 in Chinese: a notice you pay for breaking traffic rules while driving.",
+   "definition": "A traffic ticket is a fine for a driving offense like speeding. Common: get/pay a traffic ticket. Not just a parking ticket.",
+   "examples": [
+    {
+     "en": "I got a traffic ticket for speeding while driving to the airport.",
+     "zh": "我开车去机场时因超速吃了一张罚单。"
+    },
+    {
+     "en": "If you don't pay the traffic ticket on time, the fine may increase.",
+     "zh": "如果你不按时缴纳罚单，罚款可能会增加。"
+    }
+   ],
+   "tags": [
+    "打车自驾"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "代驾",
+   "pair": "zh-en",
+   "slug": "dai-jia",
+   "lang": "zh",
+   "translation": "designated driver service",
+   "shortAnswer": "「代驾」的英文是 designated driver service，指酒后由专业司机替你开自己的车。",
+   "definition": "designated driver service 指专业司机代客户驾驶其本人车辆的付费服务，常见搭配 call a designated driver service。",
+   "examples": [
+    {
+     "en": "After the company party, I booked a designated driver service to take me and my car home safely.",
+     "zh": "公司聚会后，我叫了代驾，把我和我的车安全送回家。"
+    },
+    {
+     "en": "Many ride-hailing apps like Didi now also offer a designated driver service with surge pricing during holidays.",
+     "zh": "滴滴等许多网约车应用现在也提供代驾服务，节假日常有动态加价。"
+    }
+   ],
+   "tags": [
+    "打车自驾"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "designated driver service",
+   "pair": "en-zh",
+   "slug": "designated-driver-service",
+   "lang": "en",
+   "translation": "代驾",
+   "shortAnswer": "A designated driver service means 代驾: a paid driver who drives your own car home for you.",
+   "definition": "A designated driver service sends a professional to drive your own car, often after drinking; contrast it with a taxi or ride-hailing.",
+   "examples": [
+    {
+     "en": "After the company party, I booked a designated driver service to take me and my car home safely.",
+     "zh": "公司聚会后，我叫了代驾，把我和我的车安全送回家。"
+    },
+    {
+     "en": "Many ride-hailing apps like Didi now also offer a designated driver service with surge pricing during holidays.",
+     "zh": "滴滴等许多网约车应用现在也提供代驾服务，节假日常有动态加价。"
+    }
+   ],
+   "tags": [
+    "打车自驾"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "高速免费",
+   "pair": "zh-en",
+   "slug": "gao-su-mian-fei",
+   "lang": "zh",
+   "translation": "toll-free highway days",
+   "shortAnswer": "「高速免费」英文说 toll-free highway days，指节假日免收高速通行费，别与免电话费混淆。",
+   "definition": "中国法定节假日期间，7 座及以下小客车免收高速公路通行费的政策，打车自驾常会提到，能省一笔路费。",
+   "examples": [
+    {
+     "en": "During toll-free highway days, many ride-hailing drivers avoid the expressway because of heavy traffic.",
+     "zh": "高速免费期间，很多网约车司机因为堵车而避免走高速。"
+    },
+    {
+     "en": "If your carpool falls on toll-free highway days, the driver may lower the shared cost since the toll is waived.",
+     "zh": "如果你的顺风车赶上高速免费，司机可能会因为免过路费而降低分摊费用。"
+    }
+   ],
+   "tags": [
+    "打车自驾"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "toll-free highway days",
+   "pair": "en-zh",
+   "slug": "toll-free-highway-days",
+   "lang": "en",
+   "translation": "高速免费",
+   "shortAnswer": "Toll-free highway days means 「高速免费」: holidays when China waives highway tolls for small cars.",
+   "definition": "In China, statutory holidays when highway tolls are waived for small passenger cars, often mentioned by drivers and ride-hailing users.",
+   "examples": [
+    {
+     "en": "During toll-free highway days, many ride-hailing drivers avoid the expressway because of heavy traffic.",
+     "zh": "高速免费期间，很多网约车司机因为堵车而避免走高速。"
+    },
+    {
+     "en": "If your carpool falls on toll-free highway days, the driver may lower the shared cost since the toll is waived.",
+     "zh": "如果你的顺风车赶上高速免费，司机可能会因为免过路费而降低分摊费用。"
+    }
+   ],
+   "tags": [
+    "打车自驾"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "起步价",
+   "pair": "zh-en",
+   "slug": "qi-bu-jia",
+   "lang": "zh",
+   "translation": "base fare",
+   "shortAnswer": "起步价在英语中通常说 base fare，指上车后计价器开始计费的固定最低金额。",
+   "definition": "base fare 指打车或网约车中，乘客上车后开始计费的最低固定金额，不含里程费、时长费和动态加价。中文常说“起步价”，英文也偶用 minimum fare，但 base fare 更强调计价结构中的基础部分。",
+   "examples": [
+    {
+     "en": "The base fare for this ride-hailing app is five yuan, and then it adds mileage and time fees.",
+     "zh": "这个网约车应用的起步价是五元，然后再加上里程费和时长费。"
+    },
+    {
+     "en": "During surge pricing, the base fare stays the same, but the multiplier applies to the whole fare.",
+     "zh": "在动态加价期间，起步价保持不变，但加价倍数会作用于整个车费。"
+    }
+   ],
+   "tags": [
+    "打车自驾"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "base fare",
+   "pair": "en-zh",
+   "slug": "base-fare",
+   "lang": "en",
+   "translation": "起步价",
+   "shortAnswer": "base fare 的中文意思是起步价，即出租车或网约车开始计费时的固定最低费用。",
+   "definition": "base fare 指乘客上车后计价器开始计费的最低固定费用，不含里程费、时长费和动态加价。常见搭配有 pay the base fare、base fare plus mileage，注意别和 total fare 混淆。",
+   "examples": [
+    {
+     "en": "The base fare for this ride-hailing app is five yuan, and then it adds mileage and time fees.",
+     "zh": "这个网约车应用的起步价是五元，然后再加上里程费和时长费。"
+    },
+    {
+     "en": "During surge pricing, the base fare stays the same, but the multiplier applies to the whole fare.",
+     "zh": "在动态加价期间，起步价保持不变，但加价倍数会作用于整个车费。"
+    }
+   ],
+   "tags": [
+    "打车自驾"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "司机接单",
+   "pair": "zh-en",
+   "slug": "si-ji-jie-dan",
+   "lang": "zh",
+   "translation": "driver accepts the ride",
+   "shortAnswer": "司机接单英文是 driver accepts the ride，用于网约车场景，指司机在平台接受乘客订单，接单后通常会联系乘客。",
+   "definition": "司机接单即 driver accepts the ride，指网约车司机在平台接受乘客订单。注意与 pick up the passenger（接到乘客）不同，接单只是接单，接到人才是上车。",
+   "examples": [
+    {
+     "en": "After the driver accepts the ride, you can see the car's location and estimated arrival time on the app.",
+     "zh": "司机接单后，你可以在应用上看到车辆位置和预计到达时间。"
+    },
+    {
+     "en": "If the driver accepts the ride but then cancels, the platform may charge a cancellation fee.",
+     "zh": "如果司机接单后又取消，平台可能会收取取消费用。"
+    }
+   ],
+   "tags": [
+    "打车自驾"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "driver accepts the ride",
+   "pair": "en-zh",
+   "slug": "driver-accepts-the-ride",
+   "lang": "en",
+   "translation": "司机接单",
+   "shortAnswer": "driver accepts the ride 中文意思是司机接单，指网约车司机在应用上接受订单，与 pick up the passenger 不同。",
+   "definition": "driver accepts the ride 指司机接单，常见于滴滴、Uber 等网约车场景。接单后司机可联系乘客或前往上车点，注意不是接到乘客。",
+   "examples": [
+    {
+     "en": "After the driver accepts the ride, you can see the car's location and estimated arrival time on the app.",
+     "zh": "司机接单后，你可以在应用上看到车辆位置和预计到达时间。"
+    },
+    {
+     "en": "If the driver accepts the ride but then cancels, the platform may charge a cancellation fee.",
+     "zh": "如果司机接单后又取消，平台可能会收取取消费用。"
+    }
+   ],
+   "tags": [
+    "打车自驾"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "等红灯",
+   "pair": "zh-en",
+   "slug": "deng-hong-deng",
+   "lang": "zh",
+   "translation": "wait at the red light",
+   "shortAnswer": "「等红灯」的英文是 wait at the red light，指在路口红灯亮起时停车等待，强调停在红灯前等待。",
+   "definition": "wait at the red light 常用于打车自驾场景，司机说 I'm waiting at the red light 表示正停在路口等灯。注意 light 前用 the 或 a 均可。",
+   "examples": [
+    {
+     "en": "The driver said he was waiting at the red light and would be there in two minutes.",
+     "zh": "司机说他在等红灯，两分钟后到。"
+    },
+    {
+     "en": "We waited at the red light for almost a minute before it turned green.",
+     "zh": "我们在红灯前等了将近一分钟才变绿。"
+    }
+   ],
+   "tags": [
+    "打车自驾"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "wait at the red light",
+   "pair": "en-zh",
+   "slug": "wait-at-the-red-light",
+   "lang": "en",
+   "translation": "等红灯",
+   "shortAnswer": "wait at the red light 的中文意思是「等红灯」，即在路口遇红灯时停车等待，强调停在红灯前。",
+   "definition": "wait at the red light 是打车自驾常用表达，指车辆在红灯前停住等待。口语中也可说 wait at a red light 或 sit at the red light。",
+   "examples": [
+    {
+     "en": "The driver said he was waiting at the red light and would be there in two minutes.",
+     "zh": "司机说他在等红灯，两分钟后到。"
+    },
+    {
+     "en": "We waited at the red light for almost a minute before it turned green.",
+     "zh": "我们在红灯前等了将近一分钟才变绿。"
+    }
+   ],
+   "tags": [
+    "打车自驾"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "行车记录仪",
+   "pair": "zh-en",
+   "slug": "xing-che-ji-lu-yi",
+   "lang": "zh",
+   "translation": "dash cam",
+   "shortAnswer": "行车记录仪的英文是 dash cam，正式说法也可用 dash camera。dash cam 是口语和网购搜索里的高频词，别直译成 driving recorder。",
+   "definition": "dash cam 指装在挡风玻璃下、持续录制前方路况的车载摄像头。常见搭配：install a dash cam（安装行车记录仪）、dash cam footage（行车记录仪画面）。网约车司机常靠它应对碰瓷和违章争议。",
+   "examples": [
+    {
+     "en": "The ride-hailing driver installed a dash cam to protect himself from traffic violation disputes.",
+     "zh": "那位网约车司机装了行车记录仪，以防违章纠纷说不清。"
+    },
+    {
+     "en": "The dash cam footage proved the carpool driver was not at fault in the accident.",
+     "zh": "行车记录仪画面证明，那位顺风车司机在这起事故中没有责任。"
+    }
+   ],
+   "tags": [
+    "打车自驾"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "dash cam",
+   "pair": "en-zh",
+   "slug": "dash-cam",
+   "lang": "en",
+   "translation": "行车记录仪",
+   "shortAnswer": "dash cam 的中文意思是行车记录仪，指装在车内持续拍摄前方路况的摄像头。它不等于监控摄像头，强调车载、随车行驶录制，而非固定安防监控。",
+   "definition": "dash cam 由 dashboard camera 缩略而来，口语常用，正式写作可说 dash camera。常见搭配：a dash cam video、caught on dash cam。注意别与 security camera、body cam 混用。",
+   "examples": [
+    {
+     "en": "The ride-hailing driver installed a dash cam to protect himself from traffic violation disputes.",
+     "zh": "那位网约车司机装了行车记录仪，以防违章纠纷说不清。"
+    },
+    {
+     "en": "The dash cam footage proved the carpool driver was not at fault in the accident.",
+     "zh": "行车记录仪画面证明，那位顺风车司机在这起事故中没有责任。"
+    }
+   ],
+   "tags": [
+    "打车自驾"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "挪车",
+   "pair": "zh-en",
+   "slug": "nuo-che",
+   "lang": "zh",
+   "translation": "move a parked car",
+   "shortAnswer": "「挪车」的英文是 move a parked car，指请人把停着的车移开，不是 drive a car。",
+   "definition": "move a parked car 指把已停好的车移到别处，常用于车挡路或占车位时请人挪车。",
+   "examples": [
+    {
+     "en": "Excuse me, could you move a parked car? It's blocking my driveway.",
+     "zh": "打扰一下，您能挪一下车吗？它挡住我的车道了。"
+    },
+    {
+     "en": "The driver had to move a parked car before the passenger could get in.",
+     "zh": "乘客上车前，司机不得不先挪开一辆停着的车。"
+    }
+   ],
+   "tags": [
+    "打车自驾"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "move a parked car",
+   "pair": "en-zh",
+   "slug": "move-a-parked-car",
+   "lang": "en",
+   "translation": "挪车",
+   "shortAnswer": "「move a parked car」的中文是「挪车」，指把停着的车移开，车原本停着，不是行驶。",
+   "definition": "move a parked car 意为挪车，即把已停放的车移到别处，多因挡路或占位，不等于 drive away。",
+   "examples": [
+    {
+     "en": "Excuse me, could you move a parked car? It's blocking my driveway.",
+     "zh": "打扰一下，您能挪一下车吗？它挡住我的车道了。"
+    },
+    {
+     "en": "The driver had to move a parked car before the passenger could get in.",
+     "zh": "乘客上车前，司机不得不先挪开一辆停着的车。"
+    }
+   ],
+   "tags": [
+    "打车自驾"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "倒车入库",
+   "pair": "zh-en",
+   "slug": "dao-che-ru-ku",
+   "lang": "zh",
+   "translation": "reverse parking",
+   "shortAnswer": "倒车入库的英文是 reverse parking，指把车向后倒入车位。在驾考中是科目二必考项，日常停车也常说 back into a parking spot。",
+   "definition": "reverse parking 强调倒车进入车位这一动作，多用于驾考和驾驶教学；日常口语也可说 back into a parking space。注意别与 parallel parking（侧方停车）混淆，后者指沿路边平行停靠。",
+   "examples": [
+    {
+     "en": "The examiner failed me because I didn't finish reverse parking within the time limit.",
+     "zh": "考官判我不及格，因为我没在规定时间内完成倒车入库。"
+    },
+    {
+     "en": "Learning reverse parking is the hardest part of the driving test for many learners.",
+     "zh": "对很多学员来说，倒车入库是驾照考试中最难的部分。"
+    }
+   ],
+   "tags": [
+    "打车自驾"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "reverse parking",
+   "pair": "en-zh",
+   "slug": "reverse-parking",
+   "lang": "en",
+   "translation": "倒车入库",
+   "shortAnswer": "reverse parking 的中文意思是倒车入库，指将车倒退驶入停车位。它侧重倒入动作本身，与 parallel parking（侧方停车）不同，后者是沿路沿平行停靠。",
+   "definition": "reverse parking 常用于驾考和驾驶教学语境，指倒退进入车位；日常口语也说 back into a parking spot。英式英语中 reverse 指倒车，美式英语多用 back up，注意与 parallel parking 区分。",
+   "examples": [
+    {
+     "en": "The examiner failed me because I didn't finish reverse parking within the time limit.",
+     "zh": "考官判我不及格，因为我没在规定时间内完成倒车入库。"
+    },
+    {
+     "en": "Learning reverse parking is the hardest part of the driving test for many learners.",
+     "zh": "对很多学员来说，倒车入库是驾照考试中最难的部分。"
+    }
+   ],
+   "tags": [
+    "打车自驾"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "私了",
+   "pair": "zh-en",
+   "slug": "si-liao",
+   "lang": "zh",
+   "translation": "settle privately",
+   "shortAnswer": "私了用英语说是 settle privately，指小事故双方私下协商解决，不报警也不走保险。",
+   "definition": "私了即 settle privately，常见于轻微交通事故，双方自行协商赔偿，避免报警和保险理赔。",
+   "examples": [
+    {
+     "en": "The two drivers decided to settle privately after the minor scratch, avoiding a call to the traffic police.",
+     "zh": "小刮蹭后，两位司机决定私了，免得叫交警。"
+    },
+    {
+     "en": "If you settle privately, your insurance company won't cover the repair costs later.",
+     "zh": "如果你私了，保险公司之后就不会赔维修费了。"
+    }
+   ],
+   "tags": [
+    "打车自驾"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "settle privately",
+   "pair": "en-zh",
+   "slug": "settle-privately",
+   "lang": "en",
+   "translation": "私了",
+   "shortAnswer": "Settle privately 的中文意思是“私了”，即双方私下协商解决小事故或纠纷，不报警也不报保险。",
+   "definition": "Settle privately 指小事故中双方自行协商赔偿，不报警、不报保险。注意：正式法律语境多用 settle out of court。",
+   "examples": [
+    {
+     "en": "The two drivers decided to settle privately after the minor scratch, avoiding a call to the traffic police.",
+     "zh": "小刮蹭后，两位司机决定私了，免得叫交警。"
+    },
+    {
+     "en": "If you settle privately, your insurance company won't cover the repair costs later.",
+     "zh": "如果你私了，保险公司之后就不会赔维修费了。"
+    }
+   ],
+   "tags": [
+    "打车自驾"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "剐蹭",
+   "pair": "zh-en",
+   "slug": "gua-ceng",
+   "lang": "zh",
+   "translation": "minor scrape",
+   "shortAnswer": "「剐蹭」的英文是 minor scrape，指车身轻微擦伤，损伤很浅，一般只伤漆面表层。",
+   "definition": "minor scrape 多用于网约车、顺风车场景，指停车或低速行驶时车身被蹭出的浅痕，常见搭配 a minor scrape on the bumper。",
+   "examples": [
+    {
+     "en": "I got a minor scrape on the rear bumper while parking in a tight spot.",
+     "zh": "我在窄位停车时，后保险杠被剐蹭了一下。"
+    },
+    {
+     "en": "The Didi driver said it was just a minor scrape and offered to settle it privately.",
+     "zh": "滴滴司机说只是剐蹭，提出私了。"
+    }
+   ],
+   "tags": [
+    "打车自驾"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "minor scrape",
+   "pair": "en-zh",
+   "slug": "minor-scrape",
+   "lang": "en",
+   "translation": "剐蹭",
+   "shortAnswer": "minor scrape 的中文意思是「剐蹭」，指车身轻微擦伤，比 scratch 更轻，通常只伤漆面。",
+   "definition": "minor scrape 指车辆表面的浅层擦伤，常见于停车、窄路会车或网约车接单途中，常搭配 get a minor scrape。",
+   "examples": [
+    {
+     "en": "I got a minor scrape on the rear bumper while parking in a tight spot.",
+     "zh": "我在窄位停车时，后保险杠被剐蹭了一下。"
+    },
+    {
+     "en": "The Didi driver said it was just a minor scrape and offered to settle it privately.",
+     "zh": "滴滴司机说只是剐蹭，提出私了。"
+    }
+   ],
+   "tags": [
+    "打车自驾"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "远光狗",
+   "pair": "zh-en",
+   "slug": "yuan-guang-gou",
+   "lang": "zh",
+   "translation": "high-beam abuser",
+   "shortAnswer": "「远光狗」的英文是 high-beam abuser，指滥用远光灯、晃得对向司机睁不开眼的人，语气很冲。",
+   "definition": "high-beam abuser 是名词短语，high-beam 指远光灯，abuser 指滥用者；中文「狗」是网络贬义后缀。",
+   "examples": [
+    {
+     "en": "I flashed my lights at the high-beam abuser coming the other way, but he never switched to low beams.",
+     "zh": "我对迎面开来的远光狗闪了几下灯，可他一直没换近光。"
+    },
+    {
+     "en": "Late at night, high-beam abusers on the highway can blind oncoming drivers and cause real danger.",
+     "zh": "深夜高速上的远光狗会让对向司机瞬间致盲，真的很容易出危险。"
+    }
+   ],
+   "tags": [
+    "打车自驾"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "high-beam abuser",
+   "pair": "en-zh",
+   "slug": "high-beam-abuser",
+   "lang": "en",
+   "translation": "远光狗",
+   "shortAnswer": "high-beam abuser 的中文意思是「远光狗」，指滥用远光灯、让对向司机炫目的司机，贬义吐槽。",
+   "definition": "high-beam abuser 是口语吐槽用语，常见搭配有 a high-beam abuser on the road；正式写作宜用 drivers who misuse high beams。",
+   "examples": [
+    {
+     "en": "I flashed my lights at the high-beam abuser coming the other way, but he never switched to low beams.",
+     "zh": "我对迎面开来的远光狗闪了几下灯，可他一直没换近光。"
+    },
+    {
+     "en": "Late at night, high-beam abusers on the highway can blind oncoming drivers and cause real danger.",
+     "zh": "深夜高速上的远光狗会让对向司机瞬间致盲，真的很容易出危险。"
+    }
+   ],
+   "tags": [
+    "打车自驾"
+   ],
+   "searchIntentType": "meaning"
+  }
+ ]
+}

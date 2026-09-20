@@ -1,0 +1,36 @@
+{
+  "SPECIAL": {
+    "花呗": "文化辨析：花呗 = Huabei credit（蚂蚁集团消费信贷产品，本质是「先消费后还款」的虚拟信用额度），英文无对应产品名，保留拼音 Huabei 并解释为 Alipay's credit service / buy-now-pay-later（BNPL）概念；不要译成 flower shell。",
+    "拼手气红包": "文化辨析：拼手气红包 = lucky red envelope（金额随机分配的微信群红包玩法），抢红包运气最佳者常被称为「手气王」（luckiest draw）；讲清社交娱乐属性：金额不大、重在互动氛围。",
+    "免密支付": "文化辨析：免密支付 = password-free payment（小额免验证扣款），中国场景多用于公交地铁、共享单车自动扣费；讲清便利与安全的权衡（国外 Apple Pay 也有类似免密小额机制）。",
+    "AA收款": "文化辨析：AA收款 = split the bill request（微信群收款按人均摊发起），与 AA制 一脉相承：发起人建群收款、每人自动分摊；英文场景对应 Splitwise 类工具或 Venmo request。",
+    "五险一金": "文化辨析（求职必谈项）：五险一金 = social insurance and housing fund（养老/医疗/失业/工伤/生育保险 + 住房公积金），中国雇佣关系的标配福利，薪资谈判必问「五险一金按什么基数缴」；英文面试语境可说 benefits package 但必须解释组成。",
+    "内推": "文化辨析：内推 = internal referral（内部员工推荐求职者，跳过部分筛选、成功后推荐人常有奖金），中国互联网大厂招聘主渠道之一；英文 referral 完全对应，可提 LinkedIn 内推文化差异。",
+    "画饼": "文化辨析：画饼 = empty promises at work（老板口头许诺升职加薪期权但从不兑现，「画饼充饥」梗），职场吐槽高频词；英文对应 empty promises / lip service，面试语境问「公司会不会画饼」是常见吐槽。",
+    "押一付三": "文化辨析：押一付三 = one-month deposit three-month rent（押金一个月+房租一次付三个月），中国租房特有付款节奏（对租客现金流压力大），与欧美月付+少量押金差异明显——shortAnswer 必须点出这个差异。",
+    "二房东": "文化辨析：二房东 = subletting middleman（从原房东整租后再分租转租赚差价的人），中国大城市租房灰色地带（需原房东同意否则有风险）；英文 subletter 偏指转租行为本身，二房东的「中间商」意味要讲清。",
+    "拎包入住": "文化辨析：拎包入住 = move-in ready（带全套家具家电、提包即住），中国租房平台高频卖点词；英文 move-in ready 偏指装修完毕，家电全配可补 fully furnished。",
+    "群租": "文化辨析：群租 = overcrowded group renting（一套房打隔断住多户/多人），大城市高房价产物、多地政策限制；英文可说 overcrowded flat sharing，讲清其灰色属性。",
+    "份子钱": "文化辨析（人情类核心词）：份子钱 = gift money at weddings（参加婚礼随的现金礼金），中国熟人社会刚性人情支出：金额逐年水涨船高、关系亲疏定数额、有「礼金账簿」记账回礼闭环；英文无对应制度，解释为 cash gift for weddings（Chinese custom）。",
+    "随礼": "文化辨析：随礼 = cash gift at ceremonies（婚丧嫁娶/满月/升学等场合随的礼金），份子钱的泛化形式；讲清「随」的随大流属性：按当地行情和关系远近定档。",
+    "面子": "文化辨析（高频文化词）：面子 = face and social standing（社会地位与尊严的具象化），英文直接借用 face（lose face 丢面子/save face 挽回面子已进英文词典）；讲清「给面子/丢面子/要面子」的行为逻辑。",
+    "敬酒": "文化辨析：敬酒 = toast with liquor（宴席上向长辈/领导/宾客敬酒表敬意），中式酒桌礼仪：杯沿低于对方表尊敬、顺序有讲究；英文 toast 只是举杯祝词，中国敬酒的等级秩序感是文化差异点。",
+    "客套": "文化辨析：客套 = polite formula（礼节性客套话，如「改天请你吃饭」多半不是真约），中国社交润滑剂；英文 small talk 只是闲聊，客套的「言外之意」要讲清——别把客套当真。",
+    "推辞": "文化辨析：推辞 = politely decline（礼节性推让：收礼前推几下、敬酒时假意推辞），推辞≠拒绝，是给双方留面子的流程；英文 politely decline / turn down 缺少这层「仪式性」。",
+    "欠人情": "文化辨析：欠人情 = owe a favor（受人大恩惠未还），中国熟人社会的隐形债务观：人情债难还、欠着心里不安；英文 owe a favor 对应，但中国语境的分量与「人情账本」心态要讲清。",
+    "还人情": "文化辨析：还人情 = return a favor（用等量或加码的方式偿还人情），人情往来闭环：今天你帮我、明天我帮你；讲清「礼尚往来」的循环结构。",
+    "求人办事": "文化辨析：求人办事 = ask for help through connections（托关系找人帮忙办成事），中国关系社会的现实逻辑（找熟人比走流程快）；英文 pull strings / go through connections 对应，讲清其中性偏灰的语感。",
+    "限号": "文化辨析：限号 = license plate restriction（按车牌尾号限行，大城市治堵政策），北京等地工作日限两个尾号；英文 driving restriction / plate-number based rationing，欧美极少有同款制度。",
+    "摇号": "文化辨析：摇号 = license plate lottery（购车指标摇号抽签），北京上海控制车牌总量的政策（上海是拍牌 auction）；英文 lottery 完全对应但制度背景要讲清。",
+    "科目二": "文化辨析：科目二 = driving test course two（中国驾照考试第二关：场地驾驶技能，倒车入库/侧方停车等），中国驾照 notoriously 难考的环节；英文无对应制度（各国路考为主），解释为 the second of China's four-part driving test。",
+    "私了": "文化辨析：私了 = settle privately（小事故不经交警保险、双方私下协商解决），中文语境中性偏实用（省时省事）但也可能规避责任；英文 settle privately / settle out of court（后者偏法律），小刮蹭场景常用。",
+    "远光狗": "文化辨析：远光狗 = high-beam abuser（滥用远光灯的司机，网络骂词「狗」后缀），traffic 生态吐槽词；英文可说 high-beam abuser / someone who blinds oncoming drivers，讲清骂词语气与交通文明背景。"
+  },
+  "CAT_HINT": {
+    "移动支付": "重点写扫码支付 scan to pay、付款码 payment QR code（向商家出示）与收款码（商家向用户展示）方向之别、提现 withdraw cash、自动续费 auto-renewal、花呗 BNPL 概念、退款原路退回 refund to original payment method。",
+    "求职面试": "重点写投简历 send out resumes、群面 group interview、内推 referral、五险一金 benefits、竞业协议 non-compete agreement、薪资面议 salary negotiable、谈薪 salary negotiation、秋招 autumn recruitment（中国校招时间线）。",
+    "租房生活": "重点写押金 security deposit、合租 flat sharing（英美 flatshare）、整租 whole apartment rental、水电费 utilities、物业费 property management fee、退租 move out、转租 sublet；押一付三/拎包入住/二房东词条讲中国租房生态。",
+    "人情往来": "重点写份子钱/随礼（礼金制度）、做东 play the host（做东=请客当主人）、礼尚往来 courtesy demands reciprocity、寒暄 small talk、敬酒 toast、欠人情/还人情 favor 循环、打圆场 smooth things over（解围）；本类是文化密度最高类目，辨析优先。",
+    "打车自驾": "重点写网约车 ride-hailing（滴滴 Didi 可提）、顺风车 carpool ride、拼车 ride sharing、动态加价 surge pricing（Uber 惯例）、起步价 base fare、违章 traffic violation、扣分 points deduction、充电桩 EV charging station、代驾 designated driver service。"
+  }
+}
