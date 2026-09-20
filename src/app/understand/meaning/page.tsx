@@ -126,6 +126,11 @@ export default async function MeaningSearchPage({ searchParams }: { searchParams
       select: { slug: true, dish: true, zhName: true, enName: true, shortAnswer: true, intro: true },
     }).catch(() => []),
   ] as const);
+  // P1: explicit element types so the token fallback can push without never-inference issues
+  const memesTyped = memes as Array<{ slug: string; term: string; meaning: string; translation: string; shortAnswer: string | null; lang: string | null }>;
+  const exprsTyped = exprs as Array<{ slug: string; type: string; term: string; meaning: string; translation: string; shortAnswer: string | null }>;
+
+  const resultCount = memes.length + exprs.length + scenes.length + menus.length + recipes.length;
 
   // P1 token fallback（2026-09-19）：全 query 零命中时按词元重试（skibidi toilet → skibidi）
   if (resultCount === 0) {
@@ -146,10 +151,9 @@ export default async function MeaningSearchPage({ searchParams }: { searchParams
           select: { slug: true, type: true, term: true, meaning: true, translation: true, shortAnswer: true },
         }).catch(() => []),
       ]);
-      if (m2.length > 0 || e2.length > 0) { memes.push(...m2.filter((x) => !memes.some((y) => y.slug === x.slug))); exprs.push(...e2.filter((x) => !exprs.some((y) => y.slug === x.slug))); break; }
+      if (m2.length > 0 || e2.length > 0) { memesTyped.push(...m2.filter((x) => !memesTyped.some((y) => y.slug === x.slug))); exprsTyped.push(...e2.filter((x) => !exprsTyped.some((y) => y.slug === x.slug))); break; }
     }
   }
-  const resultCount = memes.length + exprs.length + scenes.length + menus.length + recipes.length;
 
   // 精确命中单条：term === q 优先展示快答卡
   const memeExact = memes.find((m) => m.term.toLowerCase() === q.toLowerCase());
