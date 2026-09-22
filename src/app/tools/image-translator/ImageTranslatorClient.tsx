@@ -32,16 +32,54 @@ export default function ImageTranslatorClient() {
   const [dragOver, setDragOver] = useState(false);
   const [toast, setToast] = useState('');
   const inputRef = useRef<HTMLInputElement>(null);
+  const cameraRef = useRef<HTMLInputElement>(null);
 
   function showToast(msg: string) {
     setToast(msg);
     setTimeout(() => setToast(''), 1600);
   }
 
-  async function upload(file: File) {
-    if (!/\.(png|jpe?g|webp|gif)$/i.test(file.name)) {
-      setError('仅支持 PNG / JPG / WebP / GIF 图片。'); setPhase('error'); return;
+  // compressImage: canvas re-encode to JPEG, longest edge ~2000px / q0.85.
+  // Handles 6MB+ phone shots and HEIC (Safari decodes HEIC via createImageBitmap/Image, then we re-encode to JPEG).
+  async function compressImage(file: File): Promise<File> {
+    if (typeof document === "undefined") return file;
+    const img = new Image();
+    const url = URL.createObjectURL(file);
+    try {
+      await new Promise<void>((resolve, reject) => {
+        img.onload = () => resolve();
+        img.onerror = () => reject(new Error("decode failed"));
+        img.src = url;
+      });
+      let w = img.naturalWidth, h = img.naturalHeight;
+      if (!w || !h) return file;
+      const MAX = 2000;
+      if (w <= MAX && h <= MAX && file.size <= 4 * 1024 * 1024 && /image\/(jpeg|png)/.test(file.type)) return file; // small enough, keep original
+      const scale = Math.min(1, MAX / Math.max(w, h));
+      w = Math.round(w * scale); h = Math.round(h * scale);
+      const canvas = document.createElement("canvas");
+      canvas.width = w; canvas.height = h;
+      const ctx = canvas.getContext("2d");
+      if (!ctx) return file;
+      ctx.fillStyle = "#fff"; ctx.fillRect(0, 0, w, h); // flatten transparency onto white for JPEG
+      ctx.drawImage(img, 0, 0, w, h);
+      const blob = await new Promise<Blob | null>((resolve) => canvas.toBlob((b) => resolve(b), "image/jpeg", 0.85));
+      if (!blob || blob.size >= file.size) return file; // compression did not help, keep original
+      const base = file.name.replace(/\.[^.]+\$/, "") || "photo";
+      return new File([blob], base + ".jpg", { type: "image/jpeg" });
+    } catch {
+      return file; // decode failure (e.g. unsupported): let the server respond with its own error
+    } finally {
+      URL.revokeObjectURL(url);
     }
+  }
+
+  async function upload(rawFile: File) {
+    let file = rawFile;
+    if (!(file.type || '').startsWith('image/') && !/\.(png|jpe?g|webp|gif|heic|heif)$/i.test(file.name)) {
+      setError('\u4ec5\u652f\u6301\u56fe\u7247\u6587\u4ef6\u3002'); setPhase('error'); return;
+    }
+    try { file = await compressImage(file); } catch {}
     if (file.size > 5 * 1024 * 1024) {
       setError('图片过大（限 5MB）。'); setPhase('error'); return;
     }
@@ -108,7 +146,13 @@ export default function ImageTranslatorClient() {
           {/* A8：图片翻译需登录 */}
           <p style={{ fontSize: 13, color: 'var(--accent)', margin: '0 0 6px' }}>需登录使用</p>
           <p style={{ fontSize: 13, color: 'var(--muted)', margin: 0 }}>支持 PNG / JPG / WebP / GIF · 最大 5MB · 截图、海报、菜单、聊天记录均可</p>
-          <input ref={inputRef} type="file" accept=".png,.jpg,.jpeg,.webp,.gif" hidden onChange={e => { const f = e.target.files?.[0]; if (f) upload(f); }} />
+          <input ref={inputRef} type="file" accept="image/*" hidden onChange={e => { const f = e.target.files?.[0]; if (f) upload(f); }} />
+          <input ref={cameraRef} type="file" accept="image/*" capture="environment" hidden onChange={e => { const f = e.target.files?.[0]; if (f) upload(f); }} />
+          <div className="cam-row" style={{ marginTop: 14, display: "flex", gap: 10, justifyContent: "center" }}>
+            <button type="button" className="btn-primary" style={{ padding: "10px 22px", display: "none" }} data-cam-btn onClick={() => cameraRef.current?.click()}>馃摳 拍照翻译</button>
+            <button type="button" style={{ padding: "10px 22px" }} onClick={() => inputRef.current?.click()}>相册选图</button>
+          </div>
+          <style dangerouslySetInnerHTML={{ __html: "@media (pointer: coarse){ [data-cam-btn]{ display: inline-flex !important; } }" }} />
         </div>
       )}
 
