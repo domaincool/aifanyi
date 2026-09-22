@@ -1,0 +1,5535 @@
+{
+ "meta": {
+  "version": "v2-C-full",
+  "date": "2026-09-17",
+  "model": "deepseek-chat",
+  "source": "langpair-v2-batchC-20260917.json",
+  "pairCounts": {
+   "zh-en": 120,
+   "en-zh": 120
+  },
+  "slugStrategy": "zh=pinyin (v2b slugger), en=slugify"
+ },
+ "entries": [
+  {
+   "term": "组队开黑",
+   "pair": "zh-en",
+   "slug": "zu-dui-kai-hei",
+   "lang": "zh",
+   "translation": "team up in a game",
+   "shortAnswer": "组队开黑用英语说是 team up in a game，指和朋友一起组队语音打游戏。注意它强调和朋友联机，不是泛指随便匹配路人。",
+   "definition": "team up in a game 用于口语，表示和朋友约好一起进同一局游戏并语音配合；搭配有 team up with friends、team up for a match。若只是系统匹配路人，别用这个词。",
+   "examples": [
+    {
+     "en": "Let's team up in a game tonight and climb the rank together.",
+     "zh": "今晚咱们组队开黑一起上分吧。"
+    },
+    {
+     "en": "He always teams up in a game with his old classmates on weekends.",
+     "zh": "他周末总和老同学组队开黑。"
+    }
+   ],
+   "tags": [
+    "游戏电竞"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "team up in a game",
+   "pair": "en-zh",
+   "slug": "team-up-in-a-game",
+   "lang": "en",
+   "translation": "组队开黑",
+   "shortAnswer": "team up in a game 的中文意思是组队开黑，指和朋友一起联机打游戏并语音配合。它侧重熟人组队，比单纯 play together 更强调同队协作。",
+   "definition": "team up in a game 属口语表达，指和朋友进入同一局游戏做队友，常搭配 team up with sb、team up for a match；与 play together 相比更强调同队配合，非正式匹配路人不宜用。",
+   "examples": [
+    {
+     "en": "Let's team up in a game tonight and climb the rank together.",
+     "zh": "今晚咱们组队开黑一起上分吧。"
+    },
+    {
+     "en": "He always teams up in a game with his old classmates on weekends.",
+     "zh": "他周末总和老同学组队开黑。"
+    }
+   ],
+   "tags": [
+    "游戏电竞"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "排位",
+   "pair": "zh-en",
+   "slug": "pai-wei",
+   "lang": "zh",
+   "translation": "ranked match",
+   "shortAnswer": "「排位」的英文是 ranked match，指游戏中的竞技排名模式，如排位赛。注意不要把排位说成 rank game，那是中式英语。",
+   "definition": "ranked match 是游戏电竞常用语，特指基于ELO或MMR计算分数的竞技对局。常见搭配：打排位 play ranked matches，上分 climb the ranked ladder。与普通匹配 normal match 相对。",
+   "examples": [
+    {
+     "en": "Let's team up and play some ranked matches tonight—I need to climb the rank.",
+     "zh": "我们今晚组队开黑打几把排位吧，我需要上分。"
+    },
+    {
+     "en": "We lost the ranked match because our teammate went AFK and another one was a bad teammate.",
+     "zh": "我们输了那场排位，因为有个队友挂机，另一个坑队友。"
+    }
+   ],
+   "tags": [
+    "游戏电竞"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "ranked match",
+   "pair": "en-zh",
+   "slug": "ranked-match",
+   "lang": "en",
+   "translation": "排位",
+   "shortAnswer": "ranked match 中文意思是「排位」，特指游戏里影响排位分数的竞技对局。它不同于 casual match 或 normal game，结果直接关系段位升降。",
+   "definition": "ranked match 是电竞术语，指有排名积分的对战。常见搭配：play ranked matches（打排位）、win a ranked match（赢排位）。口语中可简称为 ranked。注意不要与 rank boosting（代练）混淆。",
+   "examples": [
+    {
+     "en": "Let's team up and play some ranked matches tonight—I need to climb the rank.",
+     "zh": "我们今晚组队开黑打几把排位吧，我需要上分。"
+    },
+    {
+     "en": "We lost the ranked match because our teammate went AFK and another one was a bad teammate.",
+     "zh": "我们输了那场排位，因为有个队友挂机，另一个坑队友。"
+    }
+   ],
+   "tags": [
+    "游戏电竞"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "坑队友",
+   "pair": "zh-en",
+   "slug": "keng-dui-you",
+   "lang": "zh",
+   "translation": "bad teammate",
+   "shortAnswer": "「坑队友」英文常说 bad teammate，指因操作差、挂机或乱送人头而拖累队友的人；注意它多作名词，强调“坑人的那类队友”。",
+   "definition": "作名词用，例：He is such a bad teammate. 也可说 a bad teammate who goes AFK（挂机的坑队友）。易错点：bad teammate 侧重“人坑”，若强调“坑”这个行为常用 throw the game（送掉比赛）。",
+   "examples": [
+    {
+     "en": "Stop feeding the enemy—you're being a bad teammate.",
+     "zh": "别一直送人头了，你这是在坑队友。"
+    },
+    {
+     "en": "We lost because our jungler went AFK and turned into a bad teammate.",
+     "zh": "我们输了，因为打野挂机，成了坑队友。"
+    }
+   ],
+   "tags": [
+    "游戏电竞"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "bad teammate",
+   "pair": "en-zh",
+   "slug": "bad-teammate",
+   "lang": "en",
+   "translation": "坑队友",
+   "shortAnswer": "bad teammate 中文是「坑队友」，指拖累队伍、技术差或消极游戏的队友；它与 thrower（送人头者）不同，bad teammate 更泛，可指挂机、乱选英雄等。",
+   "definition": "名词短语，口语与游戏社区常用。搭配：be a bad teammate、such a bad teammate。注意：teammate 不能写成 team mate 连写更常见；若说“他坑了队友”宜用 He threw the game for his team。",
+   "examples": [
+    {
+     "en": "Stop feeding the enemy—you're being a bad teammate.",
+     "zh": "别一直送人头了，你这是在坑队友。"
+    },
+    {
+     "en": "We lost because our jungler went AFK and turned into a bad teammate.",
+     "zh": "我们输了，因为打野挂机，成了坑队友。"
+    }
+   ],
+   "tags": [
+    "游戏电竞"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "躺赢",
+   "pair": "zh-en",
+   "slug": "tang-ying",
+   "lang": "zh",
+   "translation": "win by riding along",
+   "shortAnswer": "「躺赢」的英文是 win by riding along，常用于游戏或团队中，指自己贡献不大，靠队友带飞而获胜。",
+   "definition": "win by riding along 强调因他人带飞而轻松取胜，自己表现平平甚至拖后腿。反义为 carry the team。口语中也可说 get carried。",
+   "examples": [
+    {
+     "en": "In the last ranked match, I got zero kills but still won by riding along with my teammates.",
+     "zh": "在上一场排位赛中，我零击杀，但还是靠队友躺赢了。"
+    },
+    {
+     "en": "He likes to play support and win by riding along, letting his team carry the game.",
+     "zh": "他喜欢玩辅助，靠队友带飞来躺赢。"
+    }
+   ],
+   "tags": [
+    "游戏电竞"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "win by riding along",
+   "pair": "en-zh",
+   "slug": "win-by-riding-along",
+   "lang": "en",
+   "translation": "躺赢",
+   "shortAnswer": "win by riding along 的中文意思是「躺赢」。指在团队游戏中，自己发挥一般，靠队友带飞而获胜。",
+   "definition": "win by riding along 是游戏和日常口语表达，指因队友或同伴表现优异而轻松获胜，自己不用太出力。与 carry 相对，也可说 get carried。",
+   "examples": [
+    {
+     "en": "In the last ranked match, I got zero kills but still won by riding along with my teammates.",
+     "zh": "在上一场排位赛中，我零击杀，但还是靠队友躺赢了。"
+    },
+    {
+     "en": "He likes to play support and win by riding along, letting his team carry the game.",
+     "zh": "他喜欢玩辅助，靠队友带飞来躺赢。"
+    }
+   ],
+   "tags": [
+    "游戏电竞"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "带飞",
+   "pair": "zh-en",
+   "slug": "dai-fei",
+   "lang": "zh",
+   "translation": "carry the team",
+   "shortAnswer": "「带飞」的英文是 carry the team，指组队开黑时凭个人实力带全队赢。注意用 carry the team，别直译成 take fly。",
+   "definition": "游戏电竞常用语，多见于 MOBA 和 FPS 组队开黑。常见搭配：carry the team to victory（带飞取胜）、carry the game。与「躺赢」相反：带飞是主动出力，躺赢是队友出力自己受益。",
+   "examples": [
+    {
+     "en": "Our jungler carried the team in the late game and we climbed the rank.",
+     "zh": "我们的打野在后期带飞了全队，我们成功上分。"
+    },
+    {
+     "en": "If you keep going AFK, nobody can carry the team to victory.",
+     "zh": "如果你一直挂机，没人能带飞全队走向胜利。"
+    }
+   ],
+   "tags": [
+    "游戏电竞"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "carry the team",
+   "pair": "en-zh",
+   "slug": "carry-the-team",
+   "lang": "en",
+   "translation": "带飞",
+   "shortAnswer": "carry the team 的中文是「带飞」，指凭个人出色表现带领全队获胜，语义侧重主动扛起全队。",
+   "definition": "游戏电竞常用表达，口语非正式。核心义：组队开黑或排位中靠个人实力带队友赢。易错点：carry 多为及物，应说 carry the team，正式语境可用 lead the team。",
+   "examples": [
+    {
+     "en": "Our jungler carried the team in the late game and we climbed the rank.",
+     "zh": "我们的打野在后期带飞了全队，我们成功上分。"
+    },
+    {
+     "en": "If you keep going AFK, nobody can carry the team to victory.",
+     "zh": "如果你一直挂机，没人能带飞全队走向胜利。"
+    }
+   ],
+   "tags": [
+    "游戏电竞"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "顺风局",
+   "pair": "zh-en",
+   "slug": "shun-feng-ju",
+   "lang": "zh",
+   "translation": "winning game",
+   "shortAnswer": "「顺风局」的英文常说是 winning game，指己方占优、胜券在握的局面。注意它强调比赛进行中的优势状态，不等于已经赢下的 a won game。",
+   "definition": "winning game 在电竞口语里指顺风、优势局，常搭配 be in a winning game、throw a winning game（顺风被翻盘）。它侧重局势领先，与结果已定的 won game、a sure win 有区别；劣势局则说 losing game。",
+   "examples": [
+    {
+     "en": "We were in a winning game until our jungler went AFK and we lost the teamfight.",
+     "zh": "我们本来在打顺风局，结果打野挂机，团战直接输了。"
+    },
+    {
+     "en": "Don't get cocky in a winning game; one bad call can throw it and hand the enemy a comeback.",
+     "zh": "顺风局别浪，一次失误就可能被翻盘，让对面完成逆转。"
+    }
+   ],
+   "tags": [
+    "游戏电竞"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "winning game",
+   "pair": "en-zh",
+   "slug": "winning-game",
+   "lang": "en",
+   "translation": "顺风局",
+   "shortAnswer": "A winning game 中文意思是「顺风局」，指己方领先、胜算很大的对局。它描述进行中的优势局面，不等于胜负已定的「赢局」。",
+   "definition": "winning game 在游戏语境指顺风、占优的对局，常用 be in a winning game、throw a winning game。它强调过程中领先，与已分胜负的 won game 不同；相反词是 losing game，口语也可说 stomp。",
+   "examples": [
+    {
+     "en": "We were in a winning game until our jungler went AFK and we lost the teamfight.",
+     "zh": "我们本来在打顺风局，结果打野挂机，团战直接输了。"
+    },
+    {
+     "en": "Don't get cocky in a winning game; one bad call can throw it and hand the enemy a comeback.",
+     "zh": "顺风局别浪，一次失误就可能被翻盘，让对面完成逆转。"
+    }
+   ],
+   "tags": [
+    "游戏电竞"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "上分",
+   "pair": "zh-en",
+   "slug": "shang-fen",
+   "lang": "zh",
+   "translation": "climb the rank",
+   "shortAnswer": "「上分」的英文是 climb the rank，指在排位天梯中不断取胜、把段位分数往上打。",
+   "definition": "上分常用 climb the rank、rank up 等表达，多用于排位赛；「一起上分」可说 climb the rank together。它强调段位分数提升，娱乐局别误用。",
+   "examples": [
+    {
+     "en": "We duo queue every night to climb the rank together.",
+     "zh": "我们每晚双排，一起上分。"
+    },
+    {
+     "en": "He spent the whole weekend climbing the rank and finally hit Diamond.",
+     "zh": "他整个周末都在上分，终于打到了钻石段位。"
+    }
+   ],
+   "tags": [
+    "游戏电竞"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "climb the rank",
+   "pair": "en-zh",
+   "slug": "climb-the-rank",
+   "lang": "en",
+   "translation": "上分",
+   "shortAnswer": "Climb the rank means「上分」, to win ranked games and push your rank score higher.",
+   "definition": "climb the rank 用于排位语境，指把段位分数往上打，如 climb the rank together、help someone climb the rank；也说 rank up。注意它强调段位提升。",
+   "examples": [
+    {
+     "en": "We duo queue every night to climb the rank together.",
+     "zh": "我们每晚双排，一起上分。"
+    },
+    {
+     "en": "He spent the whole weekend climbing the rank and finally hit Diamond.",
+     "zh": "他整个周末都在上分，终于打到了钻石段位。"
+    }
+   ],
+   "tags": [
+    "游戏电竞"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "翻盘",
+   "pair": "zh-en",
+   "slug": "fan-pan",
+   "lang": "zh",
+   "translation": "comeback win",
+   "shortAnswer": "「翻盘」在游戏电竞里常说 comeback win，指劣势中反超取胜，多作名词搭配使用。",
+   "definition": "comeback win 常见于游戏电竞和体育，指从大比分落后到最终反超获胜，常与 pull off、secure 等动词搭配。",
+   "examples": [
+    {
+     "en": "Our team was down two towers but pulled off an amazing comeback win in the final minutes.",
+     "zh": "我们队被推掉两座塔，却在最后几分钟完成了一场精彩的翻盘。"
+    },
+    {
+     "en": "She kept her cool and secured a comeback win after losing the first three rounds.",
+     "zh": "她在先输三局后稳住心态，拿下了一场翻盘胜利。"
+    }
+   ],
+   "tags": [
+    "游戏电竞"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "comeback win",
+   "pair": "en-zh",
+   "slug": "comeback-win",
+   "lang": "en",
+   "translation": "翻盘",
+   "shortAnswer": "A comeback win means 翻盘 in esports: winning after being far behind, and it usually works as a noun.",
+   "definition": "Comeback win is common in esports and sports for a victory after a big deficit, often used with pull off or secure in a sentence.",
+   "examples": [
+    {
+     "en": "Our team was down two towers but pulled off an amazing comeback win in the final minutes.",
+     "zh": "我们队被推掉两座塔，却在最后几分钟完成了一场精彩的翻盘。"
+    },
+    {
+     "en": "She kept her cool and secured a comeback win after losing the first three rounds.",
+     "zh": "她在先输三局后稳住心态，拿下了一场翻盘胜利。"
+    }
+   ],
+   "tags": [
+    "游戏电竞"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "逆风局",
+   "pair": "zh-en",
+   "slug": "ni-feng-ju",
+   "lang": "zh",
+   "translation": "losing game",
+   "shortAnswer": "「逆风局」的英文是 losing game，指局面落后、翻盘很难的一局。注意它强调“输面大”，不是普通的一场失败。",
+   "definition": "losing game 多用于排位、开黑语境，如 be in a losing game、turn a losing game around（翻盘）。比 just losing 更强调“开局或中期就处于劣势”。",
+   "examples": [
+    {
+     "en": "We were in a losing game after the enemy team took all three lanes, but we kept communicating and slowly turned it around.",
+     "zh": "敌方推掉三路后我们陷入逆风局，但大家一直沟通，慢慢把局面翻了回来。"
+    },
+    {
+     "en": "Don't go AFK just because it's a losing game; climb the rank by playing safe and waiting for the enemy's mistakes.",
+     "zh": "别因为这是逆风局就挂机；稳着打、等对面失误，才能上分。"
+    }
+   ],
+   "tags": [
+    "游戏电竞"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "losing game",
+   "pair": "en-zh",
+   "slug": "losing-game",
+   "lang": "en",
+   "translation": "逆风局",
+   "shortAnswer": "losing game 中文意思是「逆风局」，指队伍在经济或局势上落后、翻盘难度很大的一局。它不等于 defeat，而是强调正在走向失败的过程。",
+   "definition": "losing game 常用于电竞与开黑语境，搭配有 be in a losing game、turn a losing game around（逆转劣势）。口语中也可泛指注定失败的事，注意与 a lost game（已输掉）区分。",
+   "examples": [
+    {
+     "en": "We were in a losing game after the enemy team took all three lanes, but we kept communicating and slowly turned it around.",
+     "zh": "敌方推掉三路后我们陷入逆风局，但大家一直沟通，慢慢把局面翻了回来。"
+    },
+    {
+     "en": "Don't go AFK just because it's a losing game; climb the rank by playing safe and waiting for the enemy's mistakes.",
+     "zh": "别因为这是逆风局就挂机；稳着打、等对面失误，才能上分。"
+    }
+   ],
+   "tags": [
+    "游戏电竞"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "代练",
+   "pair": "zh-en",
+   "slug": "dai-lian",
+   "lang": "zh",
+   "translation": "rank boosting service",
+   "shortAnswer": "「代练」的英文是 rank boosting service，指他人登录你的账号帮你上分。注意它是灰色服务，口语里也常说 boosting。",
+   "definition": "rank boosting service 是可数名词，常搭配 buy/hire/offer a rank boosting service。指请高段位玩家代打账号以提升排位，属违反游戏规则的灰色服务，不要与 game hack（外挂）混用。",
+   "examples": [
+    {
+     "en": "He paid for a rank boosting service to reach Diamond before the season ended.",
+     "zh": "赛季结束前他买了代练服务，冲上了钻石段位。"
+    },
+    {
+     "en": "Most games ban players who use a rank boosting service, so it is a risky choice.",
+     "zh": "大多数游戏会封禁使用代练服务的玩家，所以这是有风险的选择。"
+    }
+   ],
+   "tags": [
+    "游戏电竞"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "rank boosting service",
+   "pair": "en-zh",
+   "slug": "rank-boosting-service",
+   "lang": "en",
+   "translation": "代练",
+   "shortAnswer": "rank boosting service 的中文意思是「代练」，即雇高手登录你的账号帮你上分。它强调代打上分，不同于单纯的 coaching（教学指导）。",
+   "definition": "rank boosting service 指付费让高段位玩家代打账号提升段位，多用于手游和端游排位。常见搭配 buy/offer a rank boosting service，属违反游戏规则的灰色服务，正式写作中常带贬义。",
+   "examples": [
+    {
+     "en": "He paid for a rank boosting service to reach Diamond before the season ended.",
+     "zh": "赛季结束前他买了代练服务，冲上了钻石段位。"
+    },
+    {
+     "en": "Most games ban players who use a rank boosting service, so it is a risky choice.",
+     "zh": "大多数游戏会封禁使用代练服务的玩家，所以这是有风险的选择。"
+    }
+   ],
+   "tags": [
+    "游戏电竞"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "皮肤",
+   "pair": "zh-en",
+   "slug": "pi-fu",
+   "lang": "zh",
+   "translation": "game skin",
+   "shortAnswer": "「皮肤」在游戏电竞语境下的英文是 game skin，指角色或武器外观装饰，不影响属性。注意它专指游戏内虚拟外观，不是医学上的皮肤。",
+   "definition": "game skin 常与 buy、wear、equip、unlock、trade 搭配，如 buy a game skin、rare game skin。它比拼的是外观收集，不是战力数值，别和 game hack（外挂）混用。",
+   "examples": [
+    {
+     "en": "He spent all his coins to unlock a rare game skin for his main character.",
+     "zh": "他花光了所有金币，为主角解锁了一款稀有皮肤。"
+    },
+    {
+     "en": "We stayed up late to team up and show off our new game skins online.",
+     "zh": "我们熬夜组队开黑，在线炫耀新皮肤。"
+    }
+   ],
+   "tags": [
+    "游戏电竞"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "game skin",
+   "pair": "en-zh",
+   "slug": "game-skin",
+   "lang": "en",
+   "translation": "皮肤",
+   "shortAnswer": "Game skin 的中文意思就是「皮肤」，特指游戏里角色或武器的外观装扮，只改外观不改属性。它不同于 real skin（真实皮肤），也不同于 game cheat（外挂）。",
+   "definition": "game skin 是游戏圈常用词，可数名词，常说 unlock a game skin、a rare game skin、trade game skins。它指虚拟外观道具，不是医学或日常说的皮肤；口语里也常省略 game，直接说 skin。",
+   "examples": [
+    {
+     "en": "He spent all his coins to unlock a rare game skin for his main character.",
+     "zh": "他花光了所有金币，为主角解锁了一款稀有皮肤。"
+    },
+    {
+     "en": "We stayed up late to team up and show off our new game skins online.",
+     "zh": "我们熬夜组队开黑，在线炫耀新皮肤。"
+    }
+   ],
+   "tags": [
+    "游戏电竞"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "氪金",
+   "pair": "zh-en",
+   "slug": "ke-jin",
+   "lang": "zh",
+   "translation": "pay to win",
+   "shortAnswer": "氪金的英文是 pay to win，指在网络游戏中花钱充值来获取优势。日常聊天说 pay to win 多带贬义，常用来吐槽那些花钱就能变强的游戏设计。",
+   "definition": "用法：作动词短语，如 this game is pay to win；也可作形容词 pay-to-win 修饰游戏或道具。易错点：pay to win 不等于单纯充值，它强调「花钱换强度」的不公平感，而 microtransactions 只指小额内购，本身不含褒贬。",
+   "examples": [
+    {
+     "en": "Many players quit because the new update made the game completely pay to win.",
+     "zh": "很多玩家退游，因为这次更新让游戏彻底变成氪金游戏了。"
+    },
+    {
+     "en": "He refuses to play pay-to-win titles and only sticks to games where skill matters.",
+     "zh": "他拒绝玩氪金游戏，只玩那种靠技术说话的游戏。"
+    }
+   ],
+   "tags": [
+    "游戏电竞"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "pay to win",
+   "pair": "en-zh",
+   "slug": "pay-to-win",
+   "lang": "en",
+   "translation": "氪金",
+   "shortAnswer": "pay to win 的中文意思是氪金，指靠花钱充值在网络游戏里取得优势。它比 microtransactions 语气更重，专指花钱就能变强、破坏平衡的设计。",
+   "definition": "语义：描述游戏机制时多含贬义，指付费玩家比免费玩家强。搭配：a pay-to-win game、this game is too pay to win。口语中也可说 PTW。易错点：它指付费换优势，不是泛指所有内购，microtransactions 才是中性说法。",
+   "examples": [
+    {
+     "en": "Many players quit because the new update made the game completely pay to win.",
+     "zh": "很多玩家退游，因为这次更新让游戏彻底变成氪金游戏了。"
+    },
+    {
+     "en": "He refuses to play pay-to-win titles and only sticks to games where skill matters.",
+     "zh": "他拒绝玩氪金游戏，只玩那种靠技术说话的游戏。"
+    }
+   ],
+   "tags": [
+    "游戏电竞"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "挂机",
+   "pair": "zh-en",
+   "slug": "gua-ji",
+   "lang": "zh",
+   "translation": "go AFK",
+   "shortAnswer": "「挂机」的英文是 go AFK，意为暂时离开游戏角色不操作。注意它指人离开而非断线掉线，多用于组队开黑时向队友说明。",
+   "definition": "go AFK 是「挂机」最常用的说法，AFK 即 away from keyboard。常搭配 be/go AFK，如队友挂机导致团战失败。它强调主动离开，与被动掉线 disconnect 不同；手游端游皆可用，正式比赛中挂机可能被举报。",
+   "examples": [
+    {
+     "en": "Sorry, I have to go AFK for a few minutes to answer the door.",
+     "zh": "抱歉，我得挂机几分钟去开门。"
+    },
+    {
+     "en": "Our jungler went AFK mid-game, so we basically lost the team fight.",
+     "zh": "我们的打野在游戏中途挂机了，所以团战基本输了。"
+    }
+   ],
+   "tags": [
+    "游戏电竞"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "go AFK",
+   "pair": "en-zh",
+   "slug": "go-afk",
+   "lang": "en",
+   "translation": "挂机",
+   "shortAnswer": "Go AFK 的中文意思是「挂机」，即玩家暂时离开键盘不操作游戏。它强调主动离开，与被动掉线的 disconnect 不同，常出现在组队开黑场景。",
+   "definition": "go AFK 是游戏口语，AFK 即 away from keyboard，指玩家暂时离开不操作角色。常见搭配 go AFK for a bit，多用于组队开黑时告知队友。正式场合可用 step away；若指断网掉线，应用 disconnect 而非 go AFK。",
+   "examples": [
+    {
+     "en": "Sorry, I have to go AFK for a few minutes to answer the door.",
+     "zh": "抱歉，我得挂机几分钟去开门。"
+    },
+    {
+     "en": "Our jungler went AFK mid-game, so we basically lost the team fight.",
+     "zh": "我们的打野在游戏中途挂机了，所以团战基本输了。"
+    }
+   ],
+   "tags": [
+    "游戏电竞"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "大神",
+   "pair": "zh-en",
+   "slug": "da-shen",
+   "lang": "zh",
+   "translation": "gaming god",
+   "shortAnswer": "「大神」在游戏电竞语境中常说 gaming god，指技术顶尖的高手；日常夸人厉害也可用 pro、GOAT，但 gaming god 更强调近乎神级的统治力。",
+   "definition": "gaming god 多用于口语和弹幕、直播评论，夸某玩家操作封神，如 a gaming god at MOBA；注意它偏游戏圈，泛指各领域大神可用 legend 或 GOAT。",
+   "examples": [
+    {
+     "en": "He carried the whole team and went 20-0, everyone in chat called him a gaming god.",
+     "zh": "他带飞全队打出二十比零，聊天室里所有人都喊他大神。"
+    },
+    {
+     "en": "If you want to climb the rank, team up with that gaming god instead of going AFK.",
+     "zh": "想上分就找那位大神组队开黑，别挂机坑队友。"
+    }
+   ],
+   "tags": [
+    "游戏电竞"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "gaming god",
+   "pair": "en-zh",
+   "slug": "gaming-god",
+   "lang": "en",
+   "translation": "大神",
+   "shortAnswer": "gaming god 的中文意思是「大神」，特指游戏技术顶尖、近乎封神的玩家；与 pro 相比，它更夸张、更口语化，强调崇拜感。",
+   "definition": "gaming god 是游戏圈口语，称赞操作顶尖的玩家，常见搭配 be a gaming god at something；正式场合可说 top-tier player，别与 rank boosting（代练）混淆。",
+   "examples": [
+    {
+     "en": "He carried the whole team and went 20-0, everyone in chat called him a gaming god.",
+     "zh": "他带飞全队打出二十比零，聊天室里所有人都喊他大神。"
+    },
+    {
+     "en": "If you want to climb the rank, team up with that gaming god instead of going AFK.",
+     "zh": "想上分就找那位大神组队开黑，别挂机坑队友。"
+    }
+   ],
+   "tags": [
+    "游戏电竞"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "零充党",
+   "pair": "zh-en",
+   "slug": "ling-chong-dang",
+   "lang": "zh",
+   "translation": "free-to-play player",
+   "shortAnswer": "零充党的英文是 free-to-play player，指不花钱、靠免费内容和操作上分的玩家。",
+   "definition": "free-to-play player 指不买内购、不氪金，仅靠免费内容游玩的玩家；也可自称，与 pay-to-win 相对。",
+   "examples": [
+    {
+     "en": "As a free-to-play player, I refuse to buy any skins and just climb the rank with my main.",
+     "zh": "作为零充党，我拒绝买任何皮肤，只用本命英雄上分。"
+    },
+    {
+     "en": "Our squad is full of free-to-play players, so we rely on team communication to beat pay-to-win teams.",
+     "zh": "我们开黑小队全是零充党，所以靠队伍沟通来打败氪金队。"
+    }
+   ],
+   "tags": [
+    "游戏电竞"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "free-to-play player",
+   "pair": "en-zh",
+   "slug": "free-to-play-player",
+   "lang": "en",
+   "translation": "零充党",
+   "shortAnswer": "free-to-play player 中文叫零充党，指不氪金、只用免费内容游玩的玩家，和氪金玩家相对。",
+   "definition": "A free-to-play player never buys in-game items and relies only on free content, opposed to pay-to-win.",
+   "examples": [
+    {
+     "en": "As a free-to-play player, I refuse to buy any skins and just climb the rank with my main.",
+     "zh": "作为零充党，我拒绝买任何皮肤，只用本命英雄上分。"
+    },
+    {
+     "en": "Our squad is full of free-to-play players, so we rely on team communication to beat pay-to-win teams.",
+     "zh": "我们开黑小队全是零充党，所以靠队伍沟通来打败氪金队。"
+    }
+   ],
+   "tags": [
+    "游戏电竞"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "主播",
+   "pair": "zh-en",
+   "slug": "zhu-bo",
+   "lang": "zh",
+   "translation": "live streamer",
+   "shortAnswer": "「主播」最常译作 live streamer，指在直播平台实时开播的人；游戏区里常与 streamer、caster 混用，但 caster 多指赛事解说。",
+   "definition": "live streamer 强调个人在平台上实时直播，游戏电竞语境可搭配 game streamer、Twitch streamer。注意不要与 host（节目主持）或 caster（赛事解说员）混用。",
+   "examples": [
+    {
+     "en": "He became a full-time live streamer after his team-up videos with friends went viral.",
+     "zh": "他和朋友组队开黑的视频走红后，成了全职主播。"
+    },
+    {
+     "en": "The live streamer warned viewers that using a game hack would get their accounts banned, unlike simply climbing the rank with skill.",
+     "zh": "这位主播提醒观众，用外挂会被封号，靠实力上分才是正道。"
+    }
+   ],
+   "tags": [
+    "游戏电竞"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "live streamer",
+   "pair": "en-zh",
+   "slug": "live-streamer",
+   "lang": "en",
+   "translation": "主播",
+   "shortAnswer": "live streamer 中文意思是「主播」，指在直播平台实时开播、与观众互动的人；与 commentator/caster 不同，后者专指赛事解说。",
+   "definition": "live streamer 指以直播为内容形式的个人主播，常见搭配 a popular live streamer、game live streamer。口语中也可只说 streamer；正式场合强调平台时可说 a live streamer on Twitch。",
+   "examples": [
+    {
+     "en": "He became a full-time live streamer after his team-up videos with friends went viral.",
+     "zh": "他和朋友组队开黑的视频走红后，成了全职主播。"
+    },
+    {
+     "en": "The live streamer warned viewers that using a game hack would get their accounts banned, unlike simply climbing the rank with skill.",
+     "zh": "这位主播提醒观众，用外挂会被封号，靠实力上分才是正道。"
+    }
+   ],
+   "tags": [
+    "游戏电竞"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "段位",
+   "pair": "zh-en",
+   "slug": "duan-wei",
+   "lang": "zh",
+   "translation": "rank tier",
+   "shortAnswer": "「段位」在英语中常说 rank tier，尤其用于游戏电竞的排位系统。注意 rank tier 比单独用 rank 更强调等级区间，适合描述具体层级。",
+   "definition": "rank tier 指排位赛中的等级段位，如青铜、白银、黄金。常见搭配：climb the rank tier（上分）、reach a higher rank tier（升段）。易错点：rank 可泛指排名，rank tier 更侧重分段。",
+   "examples": [
+    {
+     "en": "After weeks of grinding, I finally climbed to a higher rank tier.",
+     "zh": "经过几周的苦练，我终于升到了更高的段位。"
+    },
+    {
+     "en": "If you keep going AFK, you'll drop a rank tier quickly.",
+     "zh": "如果你一直挂机，段位会很快掉下去。"
+    }
+   ],
+   "tags": [
+    "游戏电竞"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "rank tier",
+   "pair": "en-zh",
+   "slug": "rank-tier",
+   "lang": "en",
+   "translation": "段位",
+   "shortAnswer": "「rank tier」的中文意思是「段位」，特指游戏排位赛中的等级分段。与泛指排名的 rank 不同，rank tier 强调具体的层级区间。",
+   "definition": "rank tier 指游戏排位系统中的段位层级，如青铜、白银。常见搭配：climb the rank tier（上分）、drop a rank tier（掉段）。正式与口语均可用，注意与 rank 区分：rank 可指任何排名。",
+   "examples": [
+    {
+     "en": "After weeks of grinding, I finally climbed to a higher rank tier.",
+     "zh": "经过几周的苦练，我终于升到了更高的段位。"
+    },
+    {
+     "en": "If you keep going AFK, you'll drop a rank tier quickly.",
+     "zh": "如果你一直挂机，段位会很快掉下去。"
+    }
+   ],
+   "tags": [
+    "游戏电竞"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "电竞",
+   "pair": "zh-en",
+   "slug": "dian-jing",
+   "lang": "zh",
+   "translation": "esports",
+   "shortAnswer": "「电竞」的英文是 esports，指电子竞技运动。注意不是 electronic sports 的逐字直译，口语中也常说 competitive gaming。",
+   "definition": "esports 通常作不可数名词，如 play esports、esports industry；职业选手称 esports player 或 pro gamer。不要与 video games（泛指电子游戏）混用，esports 强调竞技对抗。",
+   "examples": [
+    {
+     "en": "He practices esports for six hours a day to climb the rank.",
+     "zh": "他每天练习电竞六小时来上分。"
+    },
+    {
+     "en": "Many universities now offer esports scholarships to talented players.",
+     "zh": "许多大学现在为有天赋的选手提供电竞奖学金。"
+    }
+   ],
+   "tags": [
+    "游戏电竞"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "esports",
+   "pair": "en-zh",
+   "slug": "esports",
+   "lang": "en",
+   "translation": "电竞",
+   "shortAnswer": "esports 的中文意思是「电竞」，即电子竞技。它指有组织的电子游戏比赛，不同于普通玩游戏。",
+   "definition": "esports 多作不可数名词，常见搭配有 esports team、esports tournament、esports player。正式场合用 esports，口语中也可说 competitive gaming；注意别与 video gaming 混用。",
+   "examples": [
+    {
+     "en": "He practices esports for six hours a day to climb the rank.",
+     "zh": "他每天练习电竞六小时来上分。"
+    },
+    {
+     "en": "Many universities now offer esports scholarships to talented players.",
+     "zh": "许多大学现在为有天赋的选手提供电竞奖学金。"
+    }
+   ],
+   "tags": [
+    "游戏电竞"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "手残",
+   "pair": "zh-en",
+   "slug": "shou-can",
+   "lang": "zh",
+   "translation": "clumsy at gaming",
+   "shortAnswer": "「手残」的英文口语说法是 clumsy at gaming，指打游戏操作跟不上、关键时刻掉链子。",
+   "definition": "clumsy at gaming 指打游戏时操作笨拙、失误多，常与 be、feel 连用，偏口语自嘲，也可吐槽队友。",
+   "examples": [
+    {
+     "en": "I'm so clumsy at gaming that I keep missing easy shots and letting my team down.",
+     "zh": "我打游戏太手残了，老是打空简单的枪，坑队友。"
+    },
+    {
+     "en": "He says he's clumsy at gaming, but he still climbs the rank every season with his friends.",
+     "zh": "他嘴上说自己手残，但每赛季还是和朋友一起上分。"
+    }
+   ],
+   "tags": [
+    "游戏电竞"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "clumsy at gaming",
+   "pair": "en-zh",
+   "slug": "clumsy-at-gaming",
+   "lang": "en",
+   "translation": "手残",
+   "shortAnswer": "clumsy at gaming 的中文意思是「手残」，指打游戏操作笨拙、错失关键操作。",
+   "definition": "clumsy at gaming 为口语表达，be/feel clumsy at gaming 最常见，描述手眼协调差、操作失误多。",
+   "examples": [
+    {
+     "en": "I'm so clumsy at gaming that I keep missing easy shots and letting my team down.",
+     "zh": "我打游戏太手残了，老是打空简单的枪，坑队友。"
+    },
+    {
+     "en": "He says he's clumsy at gaming, but he still climbs the rank every season with his friends.",
+     "zh": "他嘴上说自己手残，但每赛季还是和朋友一起上分。"
+    }
+   ],
+   "tags": [
+    "游戏电竞"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "演员",
+   "pair": "zh-en",
+   "slug": "yan-yuan",
+   "lang": "zh",
+   "translation": "player throwing the game",
+   "shortAnswer": "「演员」在游戏里指故意演输的人，英文常说 player throwing the game。",
+   "definition": "「演员」指为私利故意表现糟糕、输掉比赛的人，常见于排位或赌博局。与「影帝」不同。",
+   "examples": [
+    {
+     "en": "Our Jungler was a player throwing the game, diving under tower repeatedly and then blaming the team.",
+     "zh": "我们打野是个演员，反复越塔送人头，然后还甩锅给队友。"
+    },
+    {
+     "en": "In high-elo ranked, a player throwing the game can ruin the match for everyone, especially if they are a paid actor for gambling.",
+     "zh": "在高分段排位中，一个演员能毁掉整场比赛，尤其是当他是赌博局请来的演员时。"
+    }
+   ],
+   "tags": [
+    "游戏电竞"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "player throwing the game",
+   "pair": "en-zh",
+   "slug": "player-throwing-the-game",
+   "lang": "en",
+   "translation": "演员",
+   "shortAnswer": "A 「演员」 is someone who loses on purpose, called player throwing the game in English.",
+   "definition": "A player throwing the game intentionally plays badly to lose, often for money in ranked or gambling matches.",
+   "examples": [
+    {
+     "en": "Our Jungler was a player throwing the game, diving under tower repeatedly and then blaming the team.",
+     "zh": "我们打野是个演员，反复越塔送人头，然后还甩锅给队友。"
+    },
+    {
+     "en": "In high-elo ranked, a player throwing the game can ruin the match for everyone, especially if they are a paid actor for gambling.",
+     "zh": "在高分段排位中，一个演员能毁掉整场比赛，尤其是当他是赌博局请来的演员时。"
+    }
+   ],
+   "tags": [
+    "游戏电竞"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "端游",
+   "pair": "zh-en",
+   "slug": "duan-you",
+   "lang": "zh",
+   "translation": "PC game",
+   "shortAnswer": "端游的英文是 PC game，特指在个人电脑上运行的游戏，与手游（mobile game）相对。注意 PC game 通常不包含主机游戏（console game）。",
+   "definition": "端游指客户端游戏，需下载安装或通过浏览器在电脑上玩。常见搭配：玩端游 play PC games、端游和手游 PC games and mobile games。易错点：PC game 不包括主机游戏，主机游戏叫 console game。",
+   "examples": [
+    {
+     "en": "Many hardcore players prefer PC games for their better graphics and precise controls.",
+     "zh": "许多硬核玩家更喜欢端游，因为画质更好、操作更精准。"
+    },
+    {
+     "en": "He spends most evenings playing PC games with his friends online.",
+     "zh": "他大多数晚上都和朋友们在线玩端游。"
+    }
+   ],
+   "tags": [
+    "游戏电竞"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "PC game",
+   "pair": "en-zh",
+   "slug": "pc-game",
+   "lang": "en",
+   "translation": "端游",
+   "shortAnswer": "PC game 中文意思是端游，即个人电脑上玩的游戏，区别于手游（mobile game）和主机游戏（console game）。该词强调游戏平台而非游戏类型。",
+   "definition": "PC game 指为个人电脑设计的电子游戏。常见搭配：play PC games、PC gaming。口语中常说 computer game 或 PC game。注意不要与 console game（主机游戏）和 mobile game（手游）混淆。",
+   "examples": [
+    {
+     "en": "Many hardcore players prefer PC games for their better graphics and precise controls.",
+     "zh": "许多硬核玩家更喜欢端游，因为画质更好、操作更精准。"
+    },
+    {
+     "en": "He spends most evenings playing PC games with his friends online.",
+     "zh": "他大多数晚上都和朋友们在线玩端游。"
+    }
+   ],
+   "tags": [
+    "游戏电竞"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "手游",
+   "pair": "zh-en",
+   "slug": "shou-you",
+   "lang": "zh",
+   "translation": "mobile game",
+   "shortAnswer": "手游的英文是 mobile game，指在手机或平板等移动设备上玩的游戏，与端游 PC game 相对。",
+   "definition": "mobile game 是可数名词，常与 play、download、develop 等动词搭配。注意不要写成 phone game，更地道的说法是 mobile game，端游是 PC game。",
+   "examples": [
+    {
+     "en": "I usually play a mobile game with my friends to team up and climb the rank.",
+     "zh": "我通常和朋友一起玩手游来组队开黑和上分。"
+    },
+    {
+     "en": "He got banned for using a game hack in that popular mobile game.",
+     "zh": "他因为在那款热门手游中使用外挂而被封号。"
+    }
+   ],
+   "tags": [
+    "游戏电竞"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "mobile game",
+   "pair": "en-zh",
+   "slug": "mobile-game",
+   "lang": "en",
+   "translation": "手游",
+   "shortAnswer": "mobile game 的中文意思是手游，即运行在手机或平板等移动设备上的游戏，与 PC game 端游相对。",
+   "definition": "mobile game 可数，常见搭配有 play a mobile game、mobile game industry、mobile game developer，口语中也可说 phone game，但 mobile game 更正式通用。",
+   "examples": [
+    {
+     "en": "I usually play a mobile game with my friends to team up and climb the rank.",
+     "zh": "我通常和朋友一起玩手游来组队开黑和上分。"
+    },
+    {
+     "en": "He got banned for using a game hack in that popular mobile game.",
+     "zh": "他因为在那款热门手游中使用外挂而被封号。"
+    }
+   ],
+   "tags": [
+    "游戏电竞"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "外挂",
+   "pair": "zh-en",
+   "slug": "wai-gua",
+   "lang": "zh",
+   "translation": "game hack",
+   "shortAnswer": "外挂的英文常称 game hack，指通过修改游戏程序获取优势，注意与 cheat 行为有区别。",
+   "definition": "外挂指修改游戏程序或数据的作弊软件，常见搭配有 use a game hack、detect game hacks。与 cheat 相比，hack 强调技术性篡改。",
+   "examples": [
+    {
+     "en": "Using a game hack in online matches can get your account permanently banned.",
+     "zh": "在在线比赛里使用外挂会导致账号被永久封禁。"
+    },
+    {
+     "en": "The anti-cheat system was updated to detect the latest game hacks.",
+     "zh": "反作弊系统已更新，以检测最新的外挂。"
+    }
+   ],
+   "tags": [
+    "游戏电竞"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "game hack",
+   "pair": "en-zh",
+   "slug": "game-hack",
+   "lang": "en",
+   "translation": "外挂",
+   "shortAnswer": "game hack 的中文是外挂，指技术性篡改游戏程序来作弊，与 cheat 有重叠但更强调代码修改。",
+   "definition": "game hack 常指修改游戏代码或内存的作弊工具，搭配如 install a game hack。游戏公司正式称其为 cheat 或 unauthorized modification。",
+   "examples": [
+    {
+     "en": "Using a game hack in online matches can get your account permanently banned.",
+     "zh": "在在线比赛里使用外挂会导致账号被永久封禁。"
+    },
+    {
+     "en": "The anti-cheat system was updated to detect the latest game hacks.",
+     "zh": "反作弊系统已更新，以检测最新的外挂。"
+    }
+   ],
+   "tags": [
+    "游戏电竞"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "网吧",
+   "pair": "zh-en",
+   "slug": "wang-ba",
+   "lang": "zh",
+   "translation": "internet cafe",
+   "shortAnswer": "网吧常译 internet cafe，电竞网吧多说 gaming cafe 或 PC bang。",
+   "definition": "internet cafe 指提供电脑上网的营业场所，常兼售饮品小食；电竞网吧可称 gaming cafe、PC bang。",
+   "examples": [
+    {
+     "en": "We met at an internet cafe to play ranked matches together all night.",
+     "zh": "我们约在网吧通宵组队打排位。"
+    },
+    {
+     "en": "He stayed at the internet cafe after his friends left, farming gold alone.",
+     "zh": "朋友走后他还留在网吧，一个人刷金币。"
+    }
+   ],
+   "tags": [
+    "游戏电竞"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "internet cafe",
+   "pair": "en-zh",
+   "slug": "internet-cafe",
+   "lang": "en",
+   "translation": "网吧",
+   "shortAnswer": "Internet cafe is the usual English for 网吧, a public place with computers for gaming and browsing.",
+   "definition": "An internet cafe is a shop where people pay to use computers, often for gaming or web access, sometimes with drinks.",
+   "examples": [
+    {
+     "en": "We met at an internet cafe to play ranked matches together all night.",
+     "zh": "我们约在网吧通宵组队打排位。"
+    },
+    {
+     "en": "He stayed at the internet cafe after his friends left, farming gold alone.",
+     "zh": "朋友走后他还留在网吧，一个人刷金币。"
+    }
+   ],
+   "tags": [
+    "游戏电竞"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "猫抓板",
+   "pair": "zh-en",
+   "slug": "mao-zhua-ban",
+   "lang": "zh",
+   "translation": "cat scratching post",
+   "shortAnswer": "「猫抓板」的英文是 cat scratching post，是给猫磨爪、保护家具的必备用品。口语里常省略 post 直接说 scratcher。",
+   "definition": "cat scratching post 指立式或剑麻绳缠绕的猫抓板；平铺地面的瓦楞纸板多说 cat scratcher，注意别与 scratching pad 混用。",
+   "examples": [
+    {
+     "en": "My cat ignores the expensive cat scratching post and claws the sofa instead.",
+     "zh": "我家猫对昂贵的猫抓板视而不见，偏偏去抓沙发。"
+    },
+    {
+     "en": "Put the cat scratching post near the window so your cat can stretch and sharpen its claws.",
+     "zh": "把猫抓板放在窗边，这样猫咪可以伸展身体、磨磨爪子。"
+    }
+   ],
+   "tags": [
+    "宠物养宠"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "cat scratching post",
+   "pair": "en-zh",
+   "slug": "cat-scratching-post",
+   "lang": "en",
+   "translation": "猫抓板",
+   "shortAnswer": "\"cat scratching post\" 的中文意思是「猫抓板」，指供猫磨爪的立柱或板状用品。与泛指磨爪行为的 scratcher 不同，它强调带立柱的实体家具。",
+   "definition": "cat scratching post 是养猫家庭常见名词，多指剑麻绳缠绕的立式抓柱；平放地上的瓦楞纸抓板常叫 cat scratcher 或 scratching pad，口语中可简称为 post。",
+   "examples": [
+    {
+     "en": "My cat ignores the expensive cat scratching post and claws the sofa instead.",
+     "zh": "我家猫对昂贵的猫抓板视而不见，偏偏去抓沙发。"
+    },
+    {
+     "en": "Put the cat scratching post near the window so your cat can stretch and sharpen its claws.",
+     "zh": "把猫抓板放在窗边，这样猫咪可以伸展身体、磨磨爪子。"
+    }
+   ],
+   "tags": [
+    "宠物养宠"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "牵引绳",
+   "pair": "zh-en",
+   "slug": "qian-yin-sheng",
+   "lang": "zh",
+   "translation": "pet leash",
+   "shortAnswer": "「牵引绳」的英文是 pet leash，也可以说 leash。日常遛狗时最常用 leash，pet leash 更强调是宠物专用的那根绳。",
+   "definition": "leash 是可数名词，常见搭配有 on a leash（拴着绳）、walk the dog on a leash（拴绳遛狗）。注意 leash 多指手持的牵引绳，若指可伸缩的那种也叫 retractable leash。",
+   "examples": [
+    {
+     "en": "Don't forget to bring a pet leash when you take the dog to the park.",
+     "zh": "带狗去公园时别忘了带上牵引绳。"
+    },
+    {
+     "en": "My cat hates the pet leash, but I still walk her with it every evening.",
+     "zh": "我家猫很讨厌牵引绳，但我每天晚上还是用它遛猫。"
+    }
+   ],
+   "tags": [
+    "宠物养宠"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "pet leash",
+   "pair": "en-zh",
+   "slug": "pet-leash",
+   "lang": "en",
+   "translation": "牵引绳",
+   "shortAnswer": "pet leash 的中文意思是「牵引绳」，专指遛狗遛猫时拴在宠物项圈上的那根绳。它和 leash 基本同义，加 pet 只是强调是宠物用的。",
+   "definition": "leash 是可数名词，英式英语中也可能听到 lead。常见搭配：on a leash、walk the dog on a leash、retractable leash。作动词时 leash 表示用绳拴住。",
+   "examples": [
+    {
+     "en": "Don't forget to bring a pet leash when you take the dog to the park.",
+     "zh": "带狗去公园时别忘了带上牵引绳。"
+    },
+    {
+     "en": "My cat hates the pet leash, but I still walk her with it every evening.",
+     "zh": "我家猫很讨厌牵引绳，但我每天晚上还是用它遛猫。"
+    }
+   ],
+   "tags": [
+    "宠物养宠"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "铲屎官",
+   "pair": "zh-en",
+   "slug": "chan-shi-guan",
+   "lang": "zh",
+   "translation": "cat servant",
+   "shortAnswer": "「铲屎官」的英文是 cat servant，带自嘲和溺爱，适合社交媒体或朋友聊天。",
+   "definition": "cat servant 直译「猫的仆人」，强调心甘情愿为猫服务、被猫支配的自嘲语气。",
+   "examples": [
+    {
+     "en": "I used to think I owned a cat, but now I realize I'm just a cat servant.",
+     "zh": "我以前以为我养了一只猫，现在才明白我只是个铲屎官。"
+    },
+    {
+     "en": "Every morning at 5 a.m., my cat wakes me up for food. I am a proud cat servant.",
+     "zh": "每天早上五点，我的猫就叫醒我要吃的。我是一名骄傲的铲屎官。"
+    }
+   ],
+   "tags": [
+    "宠物养宠"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "cat servant",
+   "pair": "en-zh",
+   "slug": "cat-servant",
+   "lang": "en",
+   "translation": "铲屎官",
+   "shortAnswer": "Cat servant means 铲屎官 in Chinese, a self-mocking term for a doting cat owner.",
+   "definition": "Cat servant is an informal, self-deprecating term for a cat owner who humorously claims to serve their cat.",
+   "examples": [
+    {
+     "en": "I used to think I owned a cat, but now I realize I'm just a cat servant.",
+     "zh": "我以前以为我养了一只猫，现在才明白我只是个铲屎官。"
+    },
+    {
+     "en": "Every morning at 5 a.m., my cat wakes me up for food. I am a proud cat servant.",
+     "zh": "每天早上五点，我的猫就叫醒我要吃的。我是一名骄傲的铲屎官。"
+    }
+   ],
+   "tags": [
+    "宠物养宠"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "撸狗",
+   "pair": "zh-en",
+   "slug": "lu-gou",
+   "lang": "zh",
+   "translation": "petting dogs",
+   "shortAnswer": "「撸狗」的英文是 petting dogs，指用手轻柔抚摸、安抚狗的互动过程，常见于日常养宠与收容所志愿活动。",
+   "definition": "petting dogs 是动名词短语，强调抚摸狗的互动行为，常作主语或宾语，语气轻松亲切，突出人与狗之间的陪伴与放松。",
+   "examples": [
+    {
+     "en": "Spending an afternoon petting dogs at the shelter always lifts my mood.",
+     "zh": "在收容所撸一下午狗总能让我心情变好。"
+    },
+    {
+     "en": "She sat on the couch petting dogs while watching TV.",
+     "zh": "她坐在沙发上一边撸狗一边看电视。"
+    }
+   ],
+   "tags": [
+    "宠物养宠"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "petting dogs",
+   "pair": "en-zh",
+   "slug": "petting-dogs",
+   "lang": "en",
+   "translation": "撸狗",
+   "shortAnswer": "Petting dogs means 撸狗, gently stroking dogs with your hands for bonding, comfort, or fun.",
+   "definition": "Petting dogs is a phrase for affectionately stroking dogs, often as a relaxing, bonding activity between people and their pets.",
+   "examples": [
+    {
+     "en": "Spending an afternoon petting dogs at the shelter always lifts my mood.",
+     "zh": "在收容所撸一下午狗总能让我心情变好。"
+    },
+    {
+     "en": "She sat on the couch petting dogs while watching TV.",
+     "zh": "她坐在沙发上一边撸狗一边看电视。"
+    }
+   ],
+   "tags": [
+    "宠物养宠"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "吸猫",
+   "pair": "zh-en",
+   "slug": "xi-mao",
+   "lang": "zh",
+   "translation": "getting a cat fix",
+   "shortAnswer": "「吸猫」英文常说 getting a cat fix，用「来一剂猫」的成瘾比喻指从猫咪身上获得精神慰藉。",
+   "definition": "getting a cat fix 中 fix 指一剂，引申为迫切需要的慰藉，指撸猫、看猫来解压过瘾。",
+   "examples": [
+    {
+     "en": "After a rough week, I went to the cat café just for getting a cat fix.",
+     "zh": "辛苦了一周后，我去猫咖就是为了吸猫解压。"
+    },
+    {
+     "en": "She watches cute cat videos every night—she really needs getting a cat fix.",
+     "zh": "她每晚都看可爱的猫咪视频——她真的很需要吸猫。"
+    }
+   ],
+   "tags": [
+    "宠物养宠"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "getting a cat fix",
+   "pair": "en-zh",
+   "slug": "getting-a-cat-fix",
+   "lang": "en",
+   "translation": "吸猫",
+   "shortAnswer": "「吸猫」 is getting a cat fix, an addiction metaphor for the emotional comfort people get from cats.",
+   "definition": "getting a cat fix means getting an emotional lift or comfort from cats, as if they were a needed dose.",
+   "examples": [
+    {
+     "en": "After a rough week, I went to the cat café just for getting a cat fix.",
+     "zh": "辛苦了一周后，我去猫咖就是为了吸猫解压。"
+    },
+    {
+     "en": "She watches cute cat videos every night—she really needs getting a cat fix.",
+     "zh": "她每晚都看可爱的猫咪视频——她真的很需要吸猫。"
+    }
+   ],
+   "tags": [
+    "宠物养宠"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "喵星人",
+   "pair": "zh-en",
+   "slug": "miao-xing-ren",
+   "lang": "zh",
+   "translation": "cat from planet Meow",
+   "shortAnswer": "「喵星人」的英文是 cat from planet Meow，是中文网络对猫的拟人化称呼。这个词带科幻调侃色彩，正式场合或兽医语境下应直接用 cat。",
+   "definition": "多用于自嘲式吸猫、铲屎官话语，把猫说成来自喵星的外星来客，强调猫高冷、拆家、难伺候。常见搭配：a cat from planet Meow、the cat from planet Meow。注意它不是生物学或兽医术语，写病历、办宠物殡葬时应写 domestic cat。",
+   "examples": [
+    {
+     "en": "My cat from planet Meow knocked over the scratching post again and shredded the curtains.",
+     "zh": "我家喵星人又把猫抓板撞倒了，还抓烂了窗帘。"
+    },
+    {
+     "en": "She spoils her cat from planet Meow with catnip toys and an in-home cat sitting service whenever she travels.",
+     "zh": "她特别宠她的喵星人，买猫薄荷玩具，出门还预约上门喂猫服务。"
+    }
+   ],
+   "tags": [
+    "宠物养宠"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "cat from planet Meow",
+   "pair": "en-zh",
+   "slug": "cat-from-planet-meow",
+   "lang": "en",
+   "translation": "喵星人",
+   "shortAnswer": "\"cat from planet Meow\" 的中文意思是「喵星人」，是中文网络对猫的拟人化戏称，把猫说成来自喵星的外星生物。它不等于普通 cat，语气更调侃、更宠溺。",
+   "definition": "核心义指猫，属网络口语和宠物圈自嘲话语，常出现在晒猫、吸猫、吐槽拆家或橘猫的语境中。正式写作、兽医病历、宠物殡葬手续里应改用 cat 或 domestic cat。不要按字面理解为真的外星猫。",
+   "examples": [
+    {
+     "en": "My cat from planet Meow knocked over the scratching post again and shredded the curtains.",
+     "zh": "我家喵星人又把猫抓板撞倒了，还抓烂了窗帘。"
+    },
+    {
+     "en": "She spoils her cat from planet Meow with catnip toys and an in-home cat sitting service whenever she travels.",
+     "zh": "她特别宠她的喵星人，买猫薄荷玩具，出门还预约上门喂猫服务。"
+    }
+   ],
+   "tags": [
+    "宠物养宠"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "狗哨",
+   "pair": "zh-en",
+   "slug": "gou-shao",
+   "lang": "zh",
+   "translation": "dog whistle",
+   "shortAnswer": "「狗哨」的英文是 dog whistle，指训练犬只用的高频哨子。注意它还有政治隐语用法，指表面无害、实则向特定人群传递暗号的言论。",
+   "definition": "宠物语境下 dog whistle 指训犬用的超声波哨，人耳多数听不到，常用于召回或行为训练。政治语境中引申为「狗哨政治」，此时与养宠无关，翻译时需按上下文区分。",
+   "examples": [
+    {
+     "en": "She blew the dog whistle twice, and her puppy came running back across the park.",
+     "zh": "她吹了两下狗哨，小狗就穿过公园跑了回来。"
+    },
+    {
+     "en": "The phrase sounded harmless, but critics called it a dog whistle aimed at a narrow audience.",
+     "zh": "这个说法听起来无害，但批评者称它是只说给特定人群听的狗哨。"
+    }
+   ],
+   "tags": [
+    "宠物养宠"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "dog whistle",
+   "pair": "en-zh",
+   "slug": "dog-whistle",
+   "lang": "en",
+   "translation": "狗哨",
+   "shortAnswer": "Dog whistle 的中文意思是「狗哨」，即训犬用的高频哨子，人耳常常听不见。它另有一个政治引申义，指说给特定人群听的暗号式言论，与养宠本义要分清。",
+   "definition": "本义指 training whistle，靠高频声波唤回犬只，常与 recall training、clicker 等一同出现；引申义指表面中立、实则向特定群体递暗号的话语，正式与口语皆用。",
+   "examples": [
+    {
+     "en": "She blew the dog whistle twice, and her puppy came running back across the park.",
+     "zh": "她吹了两下狗哨，小狗就穿过公园跑了回来。"
+    },
+    {
+     "en": "The phrase sounded harmless, but critics called it a dog whistle aimed at a narrow audience.",
+     "zh": "这个说法听起来无害，但批评者称它是只说给特定人群听的狗哨。"
+    }
+   ],
+   "tags": [
+    "宠物养宠"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "捡屎",
+   "pair": "zh-en",
+   "slug": "jian-shi",
+   "lang": "zh",
+   "translation": "pick up dog poop",
+   "shortAnswer": "「捡屎」的英文是 pick up dog poop，专指遛狗时清理狗粪便，是养宠日常必备短语。",
+   "definition": "pick up dog poop 意为遛狗时清理狗屎，口语常用，比 scoop the poop 更泛指捡屎动作。",
+   "examples": [
+    {
+     "en": "Don't forget to bring bags so you can pick up dog poop during the walk.",
+     "zh": "别忘了带袋子，这样遛狗时才能捡屎。"
+    },
+    {
+     "en": "She was tired of picking up dog poop every morning before work.",
+     "zh": "她厌倦了每天早上上班前都要捡屎。"
+    }
+   ],
+   "tags": [
+    "宠物养宠"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "pick up dog poop",
+   "pair": "en-zh",
+   "slug": "pick-up-dog-poop",
+   "lang": "en",
+   "translation": "捡屎",
+   "shortAnswer": "pick up dog poop 的中文意思是「捡屎」，特指遛狗时清理狗粪便的日常行为。",
+   "definition": "pick up dog poop 是清理狗屎的常用说法，多用于日常对话；正式场合可换 remove dog waste。",
+   "examples": [
+    {
+     "en": "Don't forget to bring bags so you can pick up dog poop during the walk.",
+     "zh": "别忘了带袋子，这样遛狗时才能捡屎。"
+    },
+    {
+     "en": "She was tired of picking up dog poop every morning before work.",
+     "zh": "她厌倦了每天早上上班前都要捡屎。"
+    }
+   ],
+   "tags": [
+    "宠物养宠"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "拆家",
+   "pair": "zh-en",
+   "slug": "chai-jia",
+   "lang": "zh",
+   "translation": "wrecking the home",
+   "shortAnswer": "「拆家」英文说 wrecking the home，指狗狗独自在家咬坏家具、搞破坏的幽默说法。",
+   "definition": "wrecking the home 多用于养宠自嘲。搭配：be good at wrecking the home、come back to a wrecked home。别误译成 destroying the family。",
+   "examples": [
+    {
+     "en": "My husky is an expert at wrecking the home whenever I leave him alone for an hour.",
+     "zh": "我的哈士奇只要被我单独留在家一小时，就是拆家专业户。"
+    },
+    {
+     "en": "After adopting a rescue dog, I learned that wrecking the home is often separation anxiety, not naughtiness.",
+     "zh": "收养救助犬后我才明白，拆家往往源于分离焦虑，而非调皮。"
+    }
+   ],
+   "tags": [
+    "宠物养宠"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "wrecking the home",
+   "pair": "en-zh",
+   "slug": "wrecking-the-home",
+   "lang": "en",
+   "translation": "拆家",
+   "shortAnswer": "Wrecking the home means 拆家 in Chinese: a dog trashing furniture while left alone, said jokingly.",
+   "definition": "Wrecking the home is pet-owner slang. Collocations: be good at wrecking the home, come home to a wrecked home. Not destroying a family.",
+   "examples": [
+    {
+     "en": "My husky is an expert at wrecking the home whenever I leave him alone for an hour.",
+     "zh": "我的哈士奇只要被我单独留在家一小时，就是拆家专业户。"
+    },
+    {
+     "en": "After adopting a rescue dog, I learned that wrecking the home is often separation anxiety, not naughtiness.",
+     "zh": "收养救助犬后我才明白，拆家往往源于分离焦虑，而非调皮。"
+    }
+   ],
+   "tags": [
+    "宠物养宠"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "狂犬疫苗",
+   "pair": "zh-en",
+   "slug": "kuang-quan-yi-miao",
+   "lang": "zh",
+   "translation": "rabies shot",
+   "shortAnswer": "「狂犬疫苗」的英文口语说法是 rabies shot，正式用 rabies vaccine。",
+   "definition": "rabies shot 指打一针狂犬疫苗，强调接种动作；常见搭配 get a rabies shot。",
+   "examples": [
+    {
+     "en": "My dog needs a rabies shot every year.",
+     "zh": "我的狗每年都要打狂犬疫苗。"
+    },
+    {
+     "en": "After the bite, he got a rabies shot right away.",
+     "zh": "被咬后，他立刻去打了狂犬疫苗。"
+    }
+   ],
+   "tags": [
+    "宠物养宠"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "rabies shot",
+   "pair": "en-zh",
+   "slug": "rabies-shot",
+   "lang": "en",
+   "translation": "狂犬疫苗",
+   "shortAnswer": "A rabies shot is the informal English term for 狂犬疫苗, a vaccine injection.",
+   "definition": "A rabies shot is an injection that prevents rabies, given to pets and exposed people.",
+   "examples": [
+    {
+     "en": "My dog needs a rabies shot every year.",
+     "zh": "我的狗每年都要打狂犬疫苗。"
+    },
+    {
+     "en": "After the bite, he got a rabies shot right away.",
+     "zh": "被咬后，他立刻去打了狂犬疫苗。"
+    }
+   ],
+   "tags": [
+    "宠物养宠"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "宠物友好",
+   "pair": "zh-en",
+   "slug": "chong-wu-you-hao",
+   "lang": "zh",
+   "translation": "pet-friendly",
+   "shortAnswer": "「宠物友好」的英文是 pet-friendly，多作定语，如 a pet-friendly hotel，指允许宠物进入或对宠物友好。",
+   "definition": "pet-friendly 常搭配 hotel、restaurant、café、policy 等，表示允许带宠物或有宠物设施；反义是 pet-free 或 no pets allowed。",
+   "examples": [
+    {
+     "en": "This pet-friendly café even offers a free puppuccino for every dog that comes in.",
+     "zh": "这家宠物友好咖啡馆甚至会给每只进店的狗免费提供一杯狗狗奶油杯。"
+    },
+    {
+     "en": "Before booking, check whether the apartment is pet-friendly and how much the pet deposit costs.",
+     "zh": "预订前先确认这套公寓是否宠物友好，以及宠物押金要多少钱。"
+    }
+   ],
+   "tags": [
+    "宠物养宠"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "pet-friendly",
+   "pair": "en-zh",
+   "slug": "pet-friendly",
+   "lang": "en",
+   "translation": "宠物友好",
+   "shortAnswer": "Pet-friendly means 宠物友好：allowing pets or making things easy for them, as in a pet-friendly café.",
+   "definition": "Use pet-friendly before nouns: a pet-friendly hotel, pet-friendly policy. It describes places or rules, not pets themselves.",
+   "examples": [
+    {
+     "en": "This pet-friendly café even offers a free puppuccino for every dog that comes in.",
+     "zh": "这家宠物友好咖啡馆甚至会给每只进店的狗免费提供一杯狗狗奶油杯。"
+    },
+    {
+     "en": "Before booking, check whether the apartment is pet-friendly and how much the pet deposit costs.",
+     "zh": "预订前先确认这套公寓是否宠物友好，以及宠物押金要多少钱。"
+    }
+   ],
+   "tags": [
+    "宠物养宠"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "品种猫",
+   "pair": "zh-en",
+   "slug": "pin-zhong-mao",
+   "lang": "zh",
+   "translation": "pedigree cat",
+   "shortAnswer": "品种猫的英文是 pedigree cat，指血统证书可查、系谱登记的猫，口语也说 purebred cat。",
+   "definition": "品种猫对应 pedigree cat，指有注册血统证书的猫。搭配：register a pedigree cat、a pedigree cat breeder。注意与 moggy（普通家猫）区分。",
+   "examples": [
+    {
+     "en": "She spent months researching before buying a pedigree cat from a reputable breeder.",
+     "zh": "她花了几个月做功课，才从正规繁育人那里买了一只品种猫。"
+    },
+    {
+     "en": "Unlike a pedigree cat, a moggy can be just as healthy and affectionate.",
+     "zh": "和品种猫不同，普通家猫也可以一样健康、亲人。"
+    }
+   ],
+   "tags": [
+    "宠物养宠"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "pedigree cat",
+   "pair": "en-zh",
+   "slug": "pedigree-cat",
+   "lang": "en",
+   "translation": "品种猫",
+   "shortAnswer": "pedigree cat 中文意思是「品种猫」，即有血统证书的猫，与 purebred cat 近义但更强调系谱记录。",
+   "definition": "A pedigree cat has ancestry documented by a breed registry. Everyday speech often says purebred cat; not to be confused with moggy.",
+   "examples": [
+    {
+     "en": "She spent months researching before buying a pedigree cat from a reputable breeder.",
+     "zh": "她花了几个月做功课，才从正规繁育人那里买了一只品种猫。"
+    },
+    {
+     "en": "Unlike a pedigree cat, a moggy can be just as healthy and affectionate.",
+     "zh": "和品种猫不同，普通家猫也可以一样健康、亲人。"
+    }
+   ],
+   "tags": [
+    "宠物养宠"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "上门喂猫",
+   "pair": "zh-en",
+   "slug": "shang-men-wei-mao",
+   "lang": "zh",
+   "translation": "in-home cat feeding",
+   "shortAnswer": "「上门喂猫」英文是 in-home cat feeding，指保姆到猫自己家里喂食换水。",
+   "definition": "上门喂猫指保姆到猫家中添粮换水，常按次计费；若含铲屎陪玩，多说 in-home cat sitting。",
+   "examples": [
+    {
+     "en": "While I was on a business trip, I booked an in-home cat feeding service so my cat wouldn't tear the house apart alone.",
+     "zh": "出差那几天我订了上门喂猫服务，免得我家猫独自在家拆家。"
+    },
+    {
+     "en": "Her in-home cat feeding includes refilling the bowl, changing the water and sending a quick photo.",
+     "zh": "她的上门喂猫包括添粮、换水，还会发一张照片。"
+    }
+   ],
+   "tags": [
+    "宠物养宠"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "in-home cat feeding",
+   "pair": "en-zh",
+   "slug": "in-home-cat-feeding",
+   "lang": "en",
+   "translation": "上门喂猫",
+   "shortAnswer": "in-home cat feeding 就是「上门喂猫」：a sitter visits your home to feed your cat.",
+   "definition": "In-home cat feeding means a sitter comes to your cat's own home to refill food and water; with litter and play, say in-home cat sitting.",
+   "examples": [
+    {
+     "en": "While I was on a business trip, I booked an in-home cat feeding service so my cat wouldn't tear the house apart alone.",
+     "zh": "出差那几天我订了上门喂猫服务，免得我家猫独自在家拆家。"
+    },
+    {
+     "en": "Her in-home cat feeding includes refilling the bowl, changing the water and sending a quick photo.",
+     "zh": "她的上门喂猫包括添粮、换水，还会发一张照片。"
+    }
+   ],
+   "tags": [
+    "宠物养宠"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "布偶猫",
+   "pair": "zh-en",
+   "slug": "bu-ou-mao",
+   "lang": "zh",
+   "translation": "Ragdoll cat",
+   "shortAnswer": "布偶猫的英文是 Ragdoll cat，也可简称为 Ragdoll，因被抱起时全身放松像布娃娃而得名。",
+   "definition": "布偶猫指这种大型半长毛猫；口语常简称 Ragdoll，如 a Ragdoll kitten。别自造词如 cloth cat。",
+   "examples": [
+    {
+     "en": "My Ragdoll cat follows me to the kitchen every morning and waits by the catnip plant.",
+     "zh": "我家布偶猫每天早上都跟着我去厨房，然后在猫薄荷旁边等着。"
+    },
+    {
+     "en": "If you travel a lot, in-home cat sitting is often better for a Ragdoll cat than a crowded cattery.",
+     "zh": "如果你经常出门，对布偶猫来说上门喂猫往往比拥挤的猫舍更合适。"
+    }
+   ],
+   "tags": [
+    "宠物养宠"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "Ragdoll cat",
+   "pair": "en-zh",
+   "slug": "ragdoll-cat",
+   "lang": "en",
+   "translation": "布偶猫",
+   "shortAnswer": "Ragdoll cat is 布偶猫 in Chinese, a large semi-longhaired breed that goes limp when picked up.",
+   "definition": "Ragdoll cat refers to the breed; owners often just say Ragdoll, as in my Ragdoll loves the scratching post. Not a toy.",
+   "examples": [
+    {
+     "en": "My Ragdoll cat follows me to the kitchen every morning and waits by the catnip plant.",
+     "zh": "我家布偶猫每天早上都跟着我去厨房，然后在猫薄荷旁边等着。"
+    },
+    {
+     "en": "If you travel a lot, in-home cat sitting is often better for a Ragdoll cat than a crowded cattery.",
+     "zh": "如果你经常出门，对布偶猫来说上门喂猫往往比拥挤的猫舍更合适。"
+    }
+   ],
+   "tags": [
+    "宠物养宠"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "宠物殡葬",
+   "pair": "zh-en",
+   "slug": "chong-wu-bin-zang",
+   "lang": "zh",
+   "translation": "pet funeral",
+   "shortAnswer": "「宠物殡葬」的英文是 pet funeral，指为离世宠物举办的告别、火化或安葬服务，别直译成 pet burial。",
+   "definition": "pet funeral 是新兴行业词，常搭配 pet cremation（火化）、pet cemetery（墓地）、pet memorial（纪念）。hold a pet funeral for one's dog 即「给狗办葬礼」。burial 仅指埋葬，不含告别仪式。",
+   "examples": [
+    {
+     "en": "More and more pet owners are choosing a pet funeral instead of simply burying their cats and dogs in the backyard.",
+     "zh": "越来越多的宠物主选择宠物殡葬，而不是简单地把猫狗埋在后院。"
+    },
+    {
+     "en": "She held a small pet funeral for her hamster, with flowers and a few of his favorite treats.",
+     "zh": "她为仓鼠办了一场小型宠物殡葬，摆上鲜花和它最爱吃的零食。"
+    }
+   ],
+   "tags": [
+    "宠物养宠"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "pet funeral",
+   "pair": "en-zh",
+   "slug": "pet-funeral",
+   "lang": "en",
+   "translation": "宠物殡葬",
+   "shortAnswer": "pet funeral 的中文意思是「宠物殡葬」，指为去世宠物举办的告别、火化或安葬仪式，与仅指土葬的 pet burial 不同。",
+   "definition": "pet funeral 用于宠物离世后的殡葬服务，常见搭配有 pet cremation（火化）、pet cemetery（墓地）、pet memorial（纪念）。口语也可说 funeral for a pet。",
+   "examples": [
+    {
+     "en": "More and more pet owners are choosing a pet funeral instead of simply burying their cats and dogs in the backyard.",
+     "zh": "越来越多的宠物主选择宠物殡葬，而不是简单地把猫狗埋在后院。"
+    },
+    {
+     "en": "She held a small pet funeral for her hamster, with flowers and a few of his favorite treats.",
+     "zh": "她为仓鼠办了一场小型宠物殡葬，摆上鲜花和它最爱吃的零食。"
+    }
+   ],
+   "tags": [
+    "宠物养宠"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "撒狗粮",
+   "pair": "zh-en",
+   "slug": "sa-gou-liang",
+   "lang": "zh",
+   "translation": "flaunting affection",
+   "shortAnswer": "「撒狗粮」的英文是 flaunting affection，指公开炫耀恩爱、调侃单身者。",
+   "definition": "flaunting affection 指高调展示亲密关系，常带玩笑或轻微贬义，区别于中性的 showing affection。",
+   "examples": [
+    {
+     "en": "Those two are always flaunting affection on WeChat Moments, feeding dog food to every single friend.",
+     "zh": "那俩人总在朋友圈撒狗粮，简直是在给每个单身朋友喂狗粮。"
+    },
+    {
+     "en": "Stop flaunting affection in front of me; I just went through a breakup.",
+     "zh": "别在我面前撒狗粮了，我刚失恋。"
+    }
+   ],
+   "tags": [
+    "宠物养宠"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "flaunting affection",
+   "pair": "en-zh",
+   "slug": "flaunting-affection",
+   "lang": "en",
+   "translation": "撒狗粮",
+   "shortAnswer": "\"Flaunting affection\" means 撒狗粮, teasingly showing off love in public.",
+   "definition": "\"Flaunting affection\" means openly showing off romantic love, often annoying singles. Slightly teasing, not neutral.",
+   "examples": [
+    {
+     "en": "Those two are always flaunting affection on WeChat Moments, feeding dog food to every single friend.",
+     "zh": "那俩人总在朋友圈撒狗粮，简直是在给每个单身朋友喂狗粮。"
+    },
+    {
+     "en": "Stop flaunting affection in front of me; I just went through a breakup.",
+     "zh": "别在我面前撒狗粮了，我刚失恋。"
+    }
+   ],
+   "tags": [
+    "宠物养宠"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "柯基",
+   "pair": "zh-en",
+   "slug": "ke-ji",
+   "lang": "zh",
+   "translation": "corgi",
+   "shortAnswer": "「柯基」的英文是 corgi，指原产威尔士的短腿牧牛犬，复数是 corgis，单数前要加 a。",
+   "definition": "corgi 特指 Welsh corgi，分 Pembroke 和 Cardigan 两种，日常多指人气更高的 Pembroke。遛狗说 walk the corgi，别用 dog 泛指，也不能拼成 corgy。",
+   "examples": [
+    {
+     "en": "My corgi loves chasing the laser pointer and then flopping down for a nap.",
+     "zh": "我的柯基喜欢追激光笔，追完就瘫倒睡午觉。"
+    },
+    {
+     "en": "She walks her corgi twice a day and always carries a leash and some treats.",
+     "zh": "她每天遛柯基两次，总是带着牵引绳和零食。"
+    }
+   ],
+   "tags": [
+    "宠物养宠"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "corgi",
+   "pair": "en-zh",
+   "slug": "corgi",
+   "lang": "en",
+   "translation": "柯基",
+   "shortAnswer": "corgi 的中文意思是「柯基」，一种来自威尔士的短腿长身犬，专指这个犬种，复数是 corgis。",
+   "definition": "corgi 是可数名词，指威尔士柯基犬，分 Pembroke 与 Cardigan 两类。常见搭配有 Pembroke Welsh corgi、a corgi puppy，注意拼写不是 corgy。",
+   "examples": [
+    {
+     "en": "My corgi loves chasing the laser pointer and then flopping down for a nap.",
+     "zh": "我的柯基喜欢追激光笔，追完就瘫倒睡午觉。"
+    },
+    {
+     "en": "She walks her corgi twice a day and always carries a leash and some treats.",
+     "zh": "她每天遛柯基两次，总是带着牵引绳和零食。"
+    }
+   ],
+   "tags": [
+    "宠物养宠"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "遛弯",
+   "pair": "zh-en",
+   "slug": "liu-wan",
+   "lang": "zh",
+   "translation": "take a stroll",
+   "shortAnswer": "「遛弯」的英文是 take a stroll，指牵着狗或猫慢慢散步。注意：遛宠物常用 walk the dog，而 take a stroll 更强调悠闲、无明确目的地。",
+   "definition": "take a stroll 常与 with sb、in the park、after dinner 搭配；口语可换成 go for a stroll。养宠语境里，leash（牵引绳）一挂就能出门，比 walk 更放松。",
+   "examples": [
+    {
+     "en": "After dinner, I take a stroll around the neighborhood with my corgi on a leash.",
+     "zh": "晚饭后，我牵着柯基在小区里遛弯。"
+    },
+    {
+     "en": "On sunny mornings, she likes to take a stroll in the park and let her cat sniff the catnip.",
+     "zh": "晴朗的早晨，她喜欢去公园遛弯，让她的猫闻闻猫薄荷。"
+    }
+   ],
+   "tags": [
+    "宠物养宠"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "take a stroll",
+   "pair": "en-zh",
+   "slug": "take-a-stroll",
+   "lang": "en",
+   "translation": "遛弯",
+   "shortAnswer": "“take a stroll”的中文意思是「遛弯」，指悠闲地散步，尤其牵着宠物慢慢走。它比 walk 更强调放松、无目的地，不等于遛狗式的 walk the dog。",
+   "definition": "take a stroll 是口语化搭配，常见 take a stroll with sb、take a stroll in the park。养宠场景可指带狗或猫出门放风，但正式写作常用 go for a walk。",
+   "examples": [
+    {
+     "en": "After dinner, I take a stroll around the neighborhood with my corgi on a leash.",
+     "zh": "晚饭后，我牵着柯基在小区里遛弯。"
+    },
+    {
+     "en": "On sunny mornings, she likes to take a stroll in the park and let her cat sniff the catnip.",
+     "zh": "晴朗的早晨，她喜欢去公园遛弯，让她的猫闻闻猫薄荷。"
+    }
+   ],
+   "tags": [
+    "宠物养宠"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "鹦鹉",
+   "pair": "zh-en",
+   "slug": "ying-wu",
+   "lang": "zh",
+   "translation": "parrot",
+   "shortAnswer": "鹦鹉的英文是 parrot，指会学人说话的鸟类。注意 parrot 作动词时表示机械模仿，养宠语境中通常用名词。",
+   "definition": "parrot 是可数名词，常见搭配有 keep a parrot（养鹦鹉）、talk like a parrot（像鹦鹉学舌）。宠物场景中泛指各类鹦鹉，如非洲灰鹦鹉 African grey parrot。",
+   "examples": [
+    {
+     "en": "My parrot learned to say my name after just a few weeks.",
+     "zh": "我的鹦鹉只用了几个星期就学会叫我的名字。"
+    },
+    {
+     "en": "She keeps a parrot in a large cage near the window.",
+     "zh": "她在窗边的大笼子里养了一只鹦鹉。"
+    }
+   ],
+   "tags": [
+    "宠物养宠"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "parrot",
+   "pair": "en-zh",
+   "slug": "parrot",
+   "lang": "en",
+   "translation": "鹦鹉",
+   "shortAnswer": "Parrot 的中文是鹦鹉，一种能模仿人说话的宠物鸟。与泛指鸟类的 bird 不同，parrot 特指鹦鹉科鸟类。",
+   "definition": "Parrot 作名词指鹦鹉，作动词贬义指机械模仿。养宠语境常说 pet parrot、teach the parrot to talk。注意不要与 parakeet（长尾鹦鹉）混淆。",
+   "examples": [
+    {
+     "en": "My parrot learned to say my name after just a few weeks.",
+     "zh": "我的鹦鹉只用了几个星期就学会叫我的名字。"
+    },
+    {
+     "en": "She keeps a parrot in a large cage near the window.",
+     "zh": "她在窗边的大笼子里养了一只鹦鹉。"
+    }
+   ],
+   "tags": [
+    "宠物养宠"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "乌龟",
+   "pair": "zh-en",
+   "slug": "wu-gui",
+   "lang": "zh",
+   "translation": "pet turtle",
+   "shortAnswer": "「乌龟」的英文是 pet turtle，特指作为宠物饲养的龟类。日常口语里 turtle 常泛指各种龟，别和陆龟 tortoise 混用。",
+   "definition": "pet turtle 是宠物语境下的说法，强调家养而非野生。搭配有 keep a pet turtle、a pet turtle tank。注意 turtle 多指水龟或海龟，tortoise 指陆龟，中文「乌龟」在宠物语境大致对应前者。",
+   "examples": [
+    {
+     "en": "My pet turtle likes to bask on the rock under the heat lamp.",
+     "zh": "我的宠物龟喜欢在加热灯下的石头上晒背。"
+    },
+    {
+     "en": "She bought a small tank and a filter before bringing her pet turtle home.",
+     "zh": "她把宠物龟带回家之前，先买了一个小鱼缸和过滤器。"
+    }
+   ],
+   "tags": [
+    "宠物养宠"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "pet turtle",
+   "pair": "en-zh",
+   "slug": "pet-turtle",
+   "lang": "en",
+   "translation": "乌龟",
+   "shortAnswer": "「pet turtle」的中文意思是「乌龟」，指作为宠物饲养的龟。它和泛指龟类的 turtle 不同，强调家养属性，也不等同于陆龟 tortoise。",
+   "definition": "pet turtle 指家养的宠物龟，常见搭配有 keep a pet turtle、a pet turtle tank、feed a pet turtle。口语中可简称为 turtle，但正式说明饲养身份时保留 pet 更准确。注意别与 tortoise（陆龟）混用。",
+   "examples": [
+    {
+     "en": "My pet turtle likes to bask on the rock under the heat lamp.",
+     "zh": "我的宠物龟喜欢在加热灯下的石头上晒背。"
+    },
+    {
+     "en": "She bought a small tank and a filter before bringing her pet turtle home.",
+     "zh": "她把宠物龟带回家之前，先买了一个小鱼缸和过滤器。"
+    }
+   ],
+   "tags": [
+    "宠物养宠"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "猫薄荷",
+   "pair": "zh-en",
+   "slug": "mao-bo-he",
+   "lang": "zh",
+   "translation": "catnip",
+   "shortAnswer": "猫薄荷的英文是 catnip，学名 Nepeta cataria，常让猫打滚、蹭脸。",
+   "definition": "catnip 指猫薄荷，猫咪闻到后常打滚、蹭脸。常见搭配：catnip toy、catnip spray。",
+   "examples": [
+    {
+     "en": "I stuffed some catnip into the new toy, and my cat went absolutely crazy.",
+     "zh": "我把一些猫薄荷塞进新玩具里，我家猫彻底疯了。"
+    },
+    {
+     "en": "Not every cat responds to catnip; some just sniff it and walk away.",
+     "zh": "不是每只猫都对猫薄荷有反应，有的闻一下就走了。"
+    }
+   ],
+   "tags": [
+    "宠物养宠"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "catnip",
+   "pair": "en-zh",
+   "slug": "catnip",
+   "lang": "en",
+   "translation": "猫薄荷",
+   "shortAnswer": "Catnip is 猫薄荷 in Chinese, the plant that makes many cats roll and rub.",
+   "definition": "Catnip is the common name for 猫薄荷, a mint-family plant; about half of cats react to its scent. Collocations: catnip toy, catnip spray.",
+   "examples": [
+    {
+     "en": "I stuffed some catnip into the new toy, and my cat went absolutely crazy.",
+     "zh": "我把一些猫薄荷塞进新玩具里，我家猫彻底疯了。"
+    },
+    {
+     "en": "Not every cat responds to catnip; some just sniff it and walk away.",
+     "zh": "不是每只猫都对猫薄荷有反应，有的闻一下就走了。"
+    }
+   ],
+   "tags": [
+    "宠物养宠"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "相亲",
+   "pair": "zh-en",
+   "slug": "xiang-qin",
+   "lang": "zh",
+   "translation": "blind date",
+   "shortAnswer": "「相亲」的英文常用说法是 blind date，指双方经人介绍、此前不认识的约会。注意中式相亲往往有家长参与、目的性强，和西方 blind date 的随机性不同。",
+   "definition": "blind date 可作名词，也可说 go on a blind date。中式相亲常由父母、媒人安排，双方带着结婚目的见面，英文里也可说 arranged date 或 matchmaking。",
+   "examples": [
+    {
+     "en": "My aunt set me up on a blind date last weekend, and it actually went really well.",
+     "zh": "我姑妈上周末安排我去相亲，结果还挺顺利的。"
+    },
+    {
+     "en": "Going on a blind date can be awkward, but it's a common way to meet someone in China.",
+     "zh": "去相亲可能会有点尴尬，但在中国这是认识对象的一种常见方式。"
+    }
+   ],
+   "tags": [
+    "婚礼婚恋"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "blind date",
+   "pair": "en-zh",
+   "slug": "blind-date",
+   "lang": "en",
+   "translation": "相亲",
+   "shortAnswer": "blind date 的中文意思是「相亲」，指两个互不认识的人由他人安排见面约会。它强调此前从未见过面，而非强调以结婚为目的。",
+   "definition": "blind date 指由朋友或介绍人安排的初次约会，双方之前没见过。常见搭配：go on a blind date、set sb up on a blind date。口语常用，正式场合可换用 arranged meeting。",
+   "examples": [
+    {
+     "en": "My aunt set me up on a blind date last weekend, and it actually went really well.",
+     "zh": "我姑妈上周末安排我去相亲，结果还挺顺利的。"
+    },
+    {
+     "en": "Going on a blind date can be awkward, but it's a common way to meet someone in China.",
+     "zh": "去相亲可能会有点尴尬，但在中国这是认识对象的一种常见方式。"
+    }
+   ],
+   "tags": [
+    "婚礼婚恋"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "猫咪咖啡馆",
+   "pair": "zh-en",
+   "slug": "mao-mi-ka-fei-guan",
+   "lang": "zh",
+   "translation": "cat cafe",
+   "shortAnswer": "「猫咪咖啡馆」的英文是 cat cafe，指可以边喝饮品边与猫互动的店铺。注意 cat cafe 是两个分开的词，不要写成 catcafe 或 coffee cat。",
+   "definition": "cat cafe 在英语中已是通用说法，英式拼写有时写作 cat café。常见搭配：visit a cat cafe、a cat cafe in Tokyo。它不同于普通 pet store，核心卖点是撸猫体验，进门通常需换鞋、洗手并遵守不强行抱猫的规则。",
+   "examples": [
+    {
+     "en": "My friend and I spent the whole afternoon at a cat cafe, sipping latte while a lazy orange cat slept on my lap.",
+     "zh": "我和朋友在猫咪咖啡馆待了一下午，一边喝拿铁，一边看一只懒洋洋的橘猫睡在我腿上。"
+    },
+    {
+     "en": "Before entering the cat cafe, you have to take off your shoes and wash your hands, and you are not supposed to pick up the cats.",
+     "zh": "进猫咪咖啡馆之前要脱鞋洗手，而且不能随便把猫抱起来。"
+    }
+   ],
+   "tags": [
+    "宠物养宠"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "cat cafe",
+   "pair": "en-zh",
+   "slug": "cat-cafe",
+   "lang": "en",
+   "translation": "猫咪咖啡馆",
+   "shortAnswer": "“cat cafe”的中文意思是「猫咪咖啡馆」，即顾客可以一边喝饮料一边和店里的猫互动的场所。它不等于 pet shop，重点在体验而非买卖宠物。",
+   "definition": "cat cafe 为可数名词，复数 cat cafes，英式亦作 cat café。常见搭配：go to a cat cafe、open a cat cafe、a cat cafe chain。口语中常与 animal cafe 混用，但后者还包括猫头鹰、兔子等其他动物主题店。",
+   "examples": [
+    {
+     "en": "My friend and I spent the whole afternoon at a cat cafe, sipping latte while a lazy orange cat slept on my lap.",
+     "zh": "我和朋友在猫咪咖啡馆待了一下午，一边喝拿铁，一边看一只懒洋洋的橘猫睡在我腿上。"
+    },
+    {
+     "en": "Before entering the cat cafe, you have to take off your shoes and wash your hands, and you are not supposed to pick up the cats.",
+     "zh": "进猫咪咖啡馆之前要脱鞋洗手，而且不能随便把猫抱起来。"
+    }
+   ],
+   "tags": [
+    "宠物养宠"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "求婚",
+   "pair": "zh-en",
+   "slug": "qiu-hun",
+   "lang": "zh",
+   "translation": "propose marriage",
+   "shortAnswer": "「求婚」的英文是 propose marriage，也可说 propose。注意 propose 单独用时多指求婚，但 propose to someone 才是向某人求婚，别漏掉 to。",
+   "definition": "propose marriage 强调正式提出结婚请求，常用搭配：propose to sb（向某人求婚）、a marriage proposal（求婚）。口语里常省略 marriage，只说 He proposed to her。中式「提亲」由家长出面，与个人求婚不同。",
+   "examples": [
+    {
+     "en": "He planned to propose marriage to his girlfriend on the beach at sunset.",
+     "zh": "他打算日落时在海滩上向女友求婚。"
+    },
+    {
+     "en": "After three years together, she was the one who proposed marriage to him.",
+     "zh": "在一起三年后，是她向他求的婚。"
+    }
+   ],
+   "tags": [
+    "婚礼婚恋"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "propose marriage",
+   "pair": "en-zh",
+   "slug": "propose-marriage",
+   "lang": "en",
+   "translation": "求婚",
+   "shortAnswer": "propose marriage 的中文意思是「求婚」，即一方正式向另一方请求结婚。与泛指「提议」的 propose 不同，它特指婚姻请求，口语常省略 marriage。",
+   "definition": "propose marriage 指正式提出结婚请求，搭配 propose to someone、a marriage proposal。口语中常简作 propose。中式提亲多由家长参与，与个人求婚的用法有别。",
+   "examples": [
+    {
+     "en": "He planned to propose marriage to his girlfriend on the beach at sunset.",
+     "zh": "他打算日落时在海滩上向女友求婚。"
+    },
+    {
+     "en": "After three years together, she was the one who proposed marriage to him.",
+     "zh": "在一起三年后，是她向他求的婚。"
+    }
+   ],
+   "tags": [
+    "婚礼婚恋"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "无毛猫",
+   "pair": "zh-en",
+   "slug": "wu-mao-mao",
+   "lang": "zh",
+   "translation": "Sphynx cat",
+   "shortAnswer": "无毛猫的英文是 Sphynx cat，源自埃及斯芬克斯，拼写常被误作 Sphinx。",
+   "definition": "无毛猫指全身无毛的猫品种，皮肤多皱、体温高，需定期洗澡保暖。常见搭配：Sphynx cat breed。",
+   "examples": [
+    {
+     "en": "My Sphynx cat loves to burrow under blankets because it gets cold easily without fur.",
+     "zh": "我的无毛猫喜欢钻到毯子下面，因为它没有毛容易觉得冷。"
+    },
+    {
+     "en": "Unlike most cats, a Sphynx cat needs a weekly bath to remove oily buildup on its skin.",
+     "zh": "与大多数猫不同，无毛猫需要每周洗澡以去除皮肤上积聚的油脂。"
+    }
+   ],
+   "tags": [
+    "宠物养宠"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "Sphynx cat",
+   "pair": "en-zh",
+   "slug": "sphynx-cat",
+   "lang": "en",
+   "translation": "无毛猫",
+   "shortAnswer": "Sphynx cat means 无毛猫; this hairless breed is often misspelled as Sphinx.",
+   "definition": "Sphynx cat: a hairless breed with wrinkled skin and a warm body. Common collocations: Sphynx cat breeder, Sphynx cat rescue.",
+   "examples": [
+    {
+     "en": "My Sphynx cat loves to burrow under blankets because it gets cold easily without fur.",
+     "zh": "我的无毛猫喜欢钻到毯子下面，因为它没有毛容易觉得冷。"
+    },
+    {
+     "en": "Unlike most cats, a Sphynx cat needs a weekly bath to remove oily buildup on its skin.",
+     "zh": "与大多数猫不同，无毛猫需要每周洗澡以去除皮肤上积聚的油脂。"
+    }
+   ],
+   "tags": [
+    "宠物养宠"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "橘猫",
+   "pair": "zh-en",
+   "slug": "ju-mao",
+   "lang": "zh",
+   "translation": "orange tabby cat",
+   "shortAnswer": "「橘猫」的英文是 orange tabby cat，指橘色虎斑纹的猫，并不是一个独立品种。",
+   "definition": "orange tabby cat 指橘色虎斑猫，不是独立品种；口语中也说 ginger cat，但别把无纹的纯橘猫叫成 orange tabby cat。",
+   "examples": [
+    {
+     "en": "My orange tabby cat is so food-driven that he learned to open the treat jar.",
+     "zh": "我的橘猫太贪吃了，居然学会了自己打开零食罐。"
+    },
+    {
+     "en": "The vet said our orange tabby cat needs to lose weight, but he just looks big-boned to me.",
+     "zh": "兽医说我们的橘猫得减肥了，但在我看来他只是骨架大而已。"
+    }
+   ],
+   "tags": [
+    "宠物养宠"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "orange tabby cat",
+   "pair": "en-zh",
+   "slug": "orange-tabby-cat",
+   "lang": "en",
+   "translation": "橘猫",
+   "shortAnswer": "Orange tabby cat means 橘猫, an orange cat with tabby markings; it is not a breed of its own.",
+   "definition": "Orange tabby cat means 橘猫: an orange cat with tabby markings, not a breed. British English often says ginger cat instead.",
+   "examples": [
+    {
+     "en": "My orange tabby cat is so food-driven that he learned to open the treat jar.",
+     "zh": "我的橘猫太贪吃了，居然学会了自己打开零食罐。"
+    },
+    {
+     "en": "The vet said our orange tabby cat needs to lose weight, but he just looks big-boned to me.",
+     "zh": "兽医说我们的橘猫得减肥了，但在我看来他只是骨架大而已。"
+    }
+   ],
+   "tags": [
+    "宠物养宠"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "相亲角",
+   "pair": "zh-en",
+   "slug": "xiang-qin-jiao",
+   "lang": "zh",
+   "translation": "marriage market corner",
+   "shortAnswer": "「相亲角」英文常说 marriage market corner，指公园里父母替子女张贴征婚信息的角落。",
+   "definition": "相亲角是父母代子女征婚的公园角落，常见简历式招贴列年龄、身高、收入与房产，家长主导、目的性强。",
+   "examples": [
+    {
+     "en": "Every weekend, parents gather at the marriage market corner in People's Park, holding résumés of their unmarried children.",
+     "zh": "每个周末，父母们聚在人民公园的相亲角，手里拿着未婚子女的简历。"
+    },
+    {
+     "en": "She refused to let her mother post her profile at the marriage market corner, calling it too old-fashioned.",
+     "zh": "她拒绝让母亲把她的资料贴到相亲角，说这太老土了。"
+    }
+   ],
+   "tags": [
+    "婚礼婚恋"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "marriage market corner",
+   "pair": "en-zh",
+   "slug": "marriage-market-corner",
+   "lang": "en",
+   "translation": "相亲角",
+   "shortAnswer": "Marriage market corner is English for 相亲角, a park spot where parents advertise their kids.",
+   "definition": "A marriage market corner is a Chinese park area where parents post résumé-style ads to find spouses for their children.",
+   "examples": [
+    {
+     "en": "Every weekend, parents gather at the marriage market corner in People's Park, holding résumés of their unmarried children.",
+     "zh": "每个周末，父母们聚在人民公园的相亲角，手里拿着未婚子女的简历。"
+    },
+    {
+     "en": "She refused to let her mother post her profile at the marriage market corner, calling it too old-fashioned.",
+     "zh": "她拒绝让母亲把她的资料贴到相亲角，说这太老土了。"
+    }
+   ],
+   "tags": [
+    "婚礼婚恋"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "彩礼",
+   "pair": "zh-en",
+   "slug": "cai-li",
+   "lang": "zh",
+   "translation": "bride price",
+   "shortAnswer": "「彩礼」的英文是 bride price，指男方给女方的礼金。注意与 dowry 方向相反：dowry 是女方陪嫁嫁妆，千万别混用。",
+   "definition": "常见搭配：pay/offer a bride price。中国婚俗中男方给女方家彩礼，而西方传统 dowry 是女方出嫁妆，两者方向完全相反，翻译时易错。",
+   "examples": [
+    {
+     "en": "In many rural areas of China, the groom's family is still expected to pay a bride price before the wedding.",
+     "zh": "在中国许多农村地区，男方家庭在婚礼前仍要支付彩礼。"
+    },
+    {
+     "en": "The couple argued about the bride price, but eventually agreed on a reasonable sum.",
+     "zh": "这对情侣为彩礼争论过，但最终商定了一个合理的金额。"
+    }
+   ],
+   "tags": [
+    "婚礼婚恋"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "bride price",
+   "pair": "en-zh",
+   "slug": "bride-price",
+   "lang": "en",
+   "translation": "彩礼",
+   "shortAnswer": "「bride price」的中文意思是「彩礼」，即男方给女方的礼金。注意与 dowry 区分：dowry 是女方陪嫁嫁妆，方向相反。",
+   "definition": "bride price 指男方婚前付给女方家庭的财物，常见搭配 pay a bride price。正式场合可用 bridewealth。易错点：勿与 dowry（女方嫁妆）混淆。",
+   "examples": [
+    {
+     "en": "In many rural areas of China, the groom's family is still expected to pay a bride price before the wedding.",
+     "zh": "在中国许多农村地区，男方家庭在婚礼前仍要支付彩礼。"
+    },
+    {
+     "en": "The couple argued about the bride price, but eventually agreed on a reasonable sum.",
+     "zh": "这对情侣为彩礼争论过，但最终商定了一个合理的金额。"
+    }
+   ],
+   "tags": [
+    "婚礼婚恋"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "订婚",
+   "pair": "zh-en",
+   "slug": "ding-hun",
+   "lang": "zh",
+   "translation": "get engaged",
+   "shortAnswer": "「订婚」的英文是 get engaged，指双方约定结婚。注意它是动作而非状态，表示\"已订婚\"常用 be engaged 或 get engaged 的完成式。",
+   "definition": "get engaged 强调从单身到订婚的变化过程，常用搭配：get engaged to sb（与某人订婚）、newly engaged（刚订婚）。若说两人已订婚，用 They are engaged，而非 They get engaged。",
+   "examples": [
+    {
+     "en": "They got engaged last month and plan to hold the wedding next spring.",
+     "zh": "他们上个月订婚了，打算明年春天办婚礼。"
+    },
+    {
+     "en": "He got engaged to his college girlfriend after dating for five years.",
+     "zh": "他和大学时的女友交往五年后订婚了。"
+    }
+   ],
+   "tags": [
+    "婚礼婚恋"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "get engaged",
+   "pair": "en-zh",
+   "slug": "get-engaged",
+   "lang": "en",
+   "translation": "订婚",
+   "shortAnswer": "get engaged 的中文意思是「订婚」，指双方正式约定将来结婚。它强调订婚这一动作，与表示已婚的 get married 不同，订婚之后仍是未婚状态。",
+   "definition": "get engaged 为口语和书面通用表达，后接 to 引出对象：get engaged to someone。名词形式是 engagement（订婚、婚约）。注意它不等于领证或办婚礼，只是承诺结婚。",
+   "examples": [
+    {
+     "en": "They got engaged last month and plan to hold the wedding next spring.",
+     "zh": "他们上个月订婚了，打算明年春天办婚礼。"
+    },
+    {
+     "en": "He got engaged to his college girlfriend after dating for five years.",
+     "zh": "他和大学时的女友交往五年后订婚了。"
+    }
+   ],
+   "tags": [
+    "婚礼婚恋"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "嫁妆",
+   "pair": "zh-en",
+   "slug": "jia-zhuang",
+   "lang": "zh",
+   "translation": "dowry",
+   "shortAnswer": "「嫁妆」的英文是 dowry，指女方家庭在结婚时给予新娘或新郎家庭的财物。注意：dowry 强调女方陪嫁，不要与男方给女方的彩礼 bride price 混用。",
+   "definition": "dowry 是可数名词，常见搭配为 give/bring a dowry、pay a dowry。在西方历史语境中多指女方家庭给女儿的财产；现代英语中也泛指嫁妆。与彩礼（bride price）方向相反，易错辨析：dowry 是女方出，bride price 是男方出。",
+   "examples": [
+    {
+     "en": "In many traditional societies, the bride's family provides a dowry to the groom's family.",
+     "zh": "在许多传统社会中，新娘的家庭会向新郎的家庭提供嫁妆。"
+    },
+    {
+     "en": "She refused to accept a dowry because she believed marriage should not involve financial transactions.",
+     "zh": "她拒绝接受嫁妆，因为她认为婚姻不应涉及金钱交易。"
+    }
+   ],
+   "tags": [
+    "婚礼婚恋"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "dowry",
+   "pair": "en-zh",
+   "slug": "dowry",
+   "lang": "en",
+   "translation": "嫁妆",
+   "shortAnswer": "dowry 的中文意思是「嫁妆」，即新娘家庭在结婚时给予新娘或新郎家庭的财物。它不同于 bride price（彩礼），后者的财物流动方向是从新郎家到新娘家。",
+   "definition": "dowry 指女方家庭为女儿出嫁准备的财物或金钱，常见搭配有 give/bring a dowry、dowry payment。多用于历史、法律或跨文化讨论的正式语境。注意：不要把 dowry 误用于男方给女方的彩礼，那应说 bride price 或 bride wealth。",
+   "examples": [
+    {
+     "en": "In many traditional societies, the bride's family provides a dowry to the groom's family.",
+     "zh": "在许多传统社会中，新娘的家庭会向新郎的家庭提供嫁妆。"
+    },
+    {
+     "en": "She refused to accept a dowry because she believed marriage should not involve financial transactions.",
+     "zh": "她拒绝接受嫁妆，因为她认为婚姻不应涉及金钱交易。"
+    }
+   ],
+   "tags": [
+    "婚礼婚恋"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "提亲",
+   "pair": "zh-en",
+   "slug": "ti-qin",
+   "lang": "zh",
+   "translation": "formal proposal visit",
+   "shortAnswer": "「提亲」用英语说是 formal proposal visit，指男方家庭正式上门向女方家提亲。",
+   "definition": "formal proposal visit 指男方及家人正式登门向女方家提亲的礼节性拜访，双方家长参与，目的明确。",
+   "examples": [
+    {
+     "en": "In many Chinese families, a formal proposal visit is arranged before the engagement party.",
+     "zh": "在许多中国家庭中，订婚宴之前会先安排一次正式提亲。"
+    },
+    {
+     "en": "He brought gifts for a formal proposal visit to show respect to her parents.",
+     "zh": "他带着礼物进行正式提亲，以表示对她父母的尊重。"
+    }
+   ],
+   "tags": [
+    "婚礼婚恋"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "formal proposal visit",
+   "pair": "en-zh",
+   "slug": "formal-proposal-visit",
+   "lang": "en",
+   "translation": "提亲",
+   "shortAnswer": "A formal proposal visit means「提亲」in Chinese, a formal family visit to ask for a woman's hand.",
+   "definition": "A formal proposal visit is a formal family visit to ask for a woman's hand, often involving both families in Chinese contexts.",
+   "examples": [
+    {
+     "en": "In many Chinese families, a formal proposal visit is arranged before the engagement party.",
+     "zh": "在许多中国家庭中，订婚宴之前会先安排一次正式提亲。"
+    },
+    {
+     "en": "He brought gifts for a formal proposal visit to show respect to her parents.",
+     "zh": "他带着礼物进行正式提亲，以表示对她父母的尊重。"
+    }
+   ],
+   "tags": [
+    "婚礼婚恋"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "领证",
+   "pair": "zh-en",
+   "slug": "ling-zheng",
+   "lang": "zh",
+   "translation": "register the marriage",
+   "shortAnswer": "「领证」的英文是 register the marriage，指去民政局办结婚登记，确立法律婚姻。",
+   "definition": "领证强调法律登记的结婚，英文常用 register the marriage 或 get a marriage certificate；它不同于摆酒办婚礼。",
+   "examples": [
+    {
+     "en": "They decided to register the marriage quietly at the local civil affairs bureau before the big wedding banquet.",
+     "zh": "他们决定先悄悄去当地民政局领证，之后再办那场盛大的婚宴。"
+    },
+    {
+     "en": "In many Chinese cities, couples register the marriage months before the actual wedding ceremony takes place.",
+     "zh": "在中国许多城市，情侣会先领证，几个月后才真正举办婚礼仪式。"
+    }
+   ],
+   "tags": [
+    "婚礼婚恋"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "register the marriage",
+   "pair": "en-zh",
+   "slug": "register-the-marriage",
+   "lang": "en",
+   "translation": "领证",
+   "shortAnswer": "Register the marriage means 「领证」: making the union legal at the civil affairs bureau.",
+   "definition": "register the marriage 指正式办理结婚登记，较书面；口语常说 get married 或 tie the knot，侧重法律手续而非婚礼。",
+   "examples": [
+    {
+     "en": "They decided to register the marriage quietly at the local civil affairs bureau before the big wedding banquet.",
+     "zh": "他们决定先悄悄去当地民政局领证，之后再办那场盛大的婚宴。"
+    },
+    {
+     "en": "In many Chinese cities, couples register the marriage months before the actual wedding ceremony takes place.",
+     "zh": "在中国许多城市，情侣会先领证，几个月后才真正举办婚礼仪式。"
+    }
+   ],
+   "tags": [
+    "婚礼婚恋"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "接亲",
+   "pair": "zh-en",
+   "slug": "jie-qin",
+   "lang": "zh",
+   "translation": "fetching the bride",
+   "shortAnswer": "接亲的英文常说 fetching the bride，指新郎带队到女方家迎娶新娘的环节。",
+   "definition": "接亲=fetching the bride，搭配：go fetching the bride。堵门叫 door games，别译成 pick up the bride。",
+   "examples": [
+    {
+     "en": "The groom and his groomsmen set off early for fetching the bride, only to be stopped at the door by a series of door games.",
+     "zh": "新郎和伴郎团一早出发去接亲，结果被伴娘们的一系列堵门游戏挡在了门外。"
+    },
+    {
+     "en": "In many Chinese weddings, fetching the bride is the noisiest and most joyful part of the day.",
+     "zh": "在很多中式婚礼中，接亲是当天最热闹、最欢乐的环节。"
+    }
+   ],
+   "tags": [
+    "婚礼婚恋"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "fetching the bride",
+   "pair": "en-zh",
+   "slug": "fetching-the-bride",
+   "lang": "en",
+   "translation": "接亲",
+   "shortAnswer": "fetching the bride 的中文意思是接亲，即新郎带伴郎团到女方家迎娶新娘。",
+   "definition": "fetching the bride 指中式婚礼的接亲，常见搭配 the fetching the bride ceremony、door games during fetching the bride。",
+   "examples": [
+    {
+     "en": "The groom and his groomsmen set off early for fetching the bride, only to be stopped at the door by a series of door games.",
+     "zh": "新郎和伴郎团一早出发去接亲，结果被伴娘们的一系列堵门游戏挡在了门外。"
+    },
+    {
+     "en": "In many Chinese weddings, fetching the bride is the noisiest and most joyful part of the day.",
+     "zh": "在很多中式婚礼中，接亲是当天最热闹、最欢乐的环节。"
+    }
+   ],
+   "tags": [
+    "婚礼婚恋"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "敬茶",
+   "pair": "zh-en",
+   "slug": "jing-cha",
+   "lang": "zh",
+   "translation": "serving tea to parents",
+   "shortAnswer": "「敬茶」的英文是 serving tea to parents，指婚礼上新郎新娘向双方父母奉茶、改口并收红包的仪式。",
+   "definition": "敬茶是中式婚礼核心环节，新人向双方父母奉茶、改口称爸妈，父母饮茶后给红包。英文常说 serving tea to parents 或 the tea ceremony。",
+   "examples": [
+    {
+     "en": "Serving tea to parents is the moment when the bride and groom officially call each other's parents Mom and Dad.",
+     "zh": "敬茶是新郎新娘正式改口叫对方父母爸妈的时刻。"
+    },
+    {
+     "en": "After serving tea to parents, the couple received red envelopes from both families.",
+     "zh": "敬茶之后，这对新人收到了双方家长给的红包。"
+    }
+   ],
+   "tags": [
+    "婚礼婚恋"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "serving tea to parents",
+   "pair": "en-zh",
+   "slug": "serving-tea-to-parents",
+   "lang": "en",
+   "translation": "敬茶",
+   "shortAnswer": "Serving tea to parents 就是「敬茶」，是中式婚礼上新人对双方父母奉茶、改口并收红包的环节，与日本茶道无关。",
+   "definition": "serving tea to parents 指中式婚礼的敬茶环节，搭配为 serve tea to one's parents，正式场合也简称 the tea ceremony。",
+   "examples": [
+    {
+     "en": "Serving tea to parents is the moment when the bride and groom officially call each other's parents Mom and Dad.",
+     "zh": "敬茶是新郎新娘正式改口叫对方父母爸妈的时刻。"
+    },
+    {
+     "en": "After serving tea to parents, the couple received red envelopes from both families.",
+     "zh": "敬茶之后，这对新人收到了双方家长给的红包。"
+    }
+   ],
+   "tags": [
+    "婚礼婚恋"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "闹洞房",
+   "pair": "zh-en",
+   "slug": "nao-dong-fang",
+   "lang": "zh",
+   "translation": "teasing the newlyweds",
+   "shortAnswer": "闹洞房英文常说 teasing the newlyweds，指婚礼当晚亲友在新房嬉闹新人的传统习俗。",
+   "definition": "闹洞房指婚礼当晚亲友到新房嬉闹新人，英文常说 teasing the newlyweds，含游戏、恶作剧和讨红包意味。",
+   "examples": [
+    {
+     "en": "In many parts of China, friends and relatives gather in the bridal chamber for teasing the newlyweds on their wedding night.",
+     "zh": "在中国许多地方，亲友们会在婚礼当晚聚在新房闹洞房。"
+    },
+    {
+     "en": "The couple had to set some boundaries because teasing the newlyweds went a bit too far.",
+     "zh": "这对新人不得不设定一些界限，因为闹洞房闹得有点过火了。"
+    }
+   ],
+   "tags": [
+    "婚礼婚恋"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "teasing the newlyweds",
+   "pair": "en-zh",
+   "slug": "teasing-the-newlyweds",
+   "lang": "en",
+   "translation": "闹洞房",
+   "shortAnswer": "Teasing the newlyweds 的意思是闹洞房，指婚礼当晚亲友在新房嬉闹新人的传统婚俗。",
+   "definition": "Teasing the newlyweds 指中国婚俗中亲友在新婚夜到新房嬉闹新人，含游戏、恶作剧和讨红包。",
+   "examples": [
+    {
+     "en": "In many parts of China, friends and relatives gather in the bridal chamber for teasing the newlyweds on their wedding night.",
+     "zh": "在中国许多地方，亲友们会在婚礼当晚聚在新房闹洞房。"
+    },
+    {
+     "en": "The couple had to set some boundaries because teasing the newlyweds went a bit too far.",
+     "zh": "这对新人不得不设定一些界限，因为闹洞房闹得有点过火了。"
+    }
+   ],
+   "tags": [
+    "婚礼婚恋"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "回门",
+   "pair": "zh-en",
+   "slug": "hui-men",
+   "lang": "zh",
+   "translation": "bride first visit home",
+   "shortAnswer": "回门的英文是 bride first visit home，指新娘婚后首次带新郎回娘家拜访。",
+   "definition": "回门是中国婚礼习俗，新娘婚后首次回娘家，常与新郎同去，娘家设宴款待。英文可用 bride first visit home，不宜简单译成 go home，因其有特定婚俗含义。",
+   "examples": [
+    {
+     "en": "According to tradition, the bride first visit home takes place three days after the wedding.",
+     "zh": "按照传统，回门在婚礼后第三天进行。"
+    },
+    {
+     "en": "Her parents prepared a big dinner for the bride first visit home.",
+     "zh": "她父母为回门准备了一桌丰盛的宴席。"
+    }
+   ],
+   "tags": [
+    "婚礼婚恋"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "bride first visit home",
+   "pair": "en-zh",
+   "slug": "bride-first-visit-home",
+   "lang": "en",
+   "translation": "回门",
+   "shortAnswer": "bride first visit home 的中文意思是回门，指新娘婚后第一次回娘家。",
+   "definition": "bride first visit home 指中国婚俗中新婚妻子婚后首次回娘家，通常新郎陪同。也可说 the bride's first visit to her parents' home after the wedding。",
+   "examples": [
+    {
+     "en": "According to tradition, the bride first visit home takes place three days after the wedding.",
+     "zh": "按照传统，回门在婚礼后第三天进行。"
+    },
+    {
+     "en": "Her parents prepared a big dinner for the bride first visit home.",
+     "zh": "她父母为回门准备了一桌丰盛的宴席。"
+    }
+   ],
+   "tags": [
+    "婚礼婚恋"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "请柬",
+   "pair": "zh-en",
+   "slug": "qing-jian",
+   "lang": "zh",
+   "translation": "wedding invitation",
+   "shortAnswer": "「请柬」的英文是 wedding invitation，专指婚礼请帖；日常通称 invitation。注意：请柬≠invitation card 印刷品本身，强调邀请行为。",
+   "definition": "wedding invitation 是婚礼请柬的标准说法，通常为正式书面语，常见搭配 send out / receive a wedding invitation。区别于广义 invitation，它特指婚礼场合。",
+   "examples": [
+    {
+     "en": "We sent out the wedding invitations three months before the ceremony.",
+     "zh": "我们在婚礼前三个月就发出了请柬。"
+    },
+    {
+     "en": "She was thrilled to receive a wedding invitation from her best friend.",
+     "zh": "收到最好朋友的婚礼请柬，她非常激动。"
+    }
+   ],
+   "tags": [
+    "婚礼婚恋"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "wedding invitation",
+   "pair": "en-zh",
+   "slug": "wedding-invitation",
+   "lang": "en",
+   "translation": "请柬",
+   "shortAnswer": "「wedding invitation」的中文意思是「请柬」，特指婚礼请帖。它比一般 invitation 更具体，专用于结婚仪式和婚宴的邀请场合。",
+   "definition": "wedding invitation 指婚礼请柬，正式书面语，常见搭配 send out / receive / accept a wedding invitation。口语中也可只说 invitation，但需靠语境判断是婚礼。",
+   "examples": [
+    {
+     "en": "We sent out the wedding invitations three months before the ceremony.",
+     "zh": "我们在婚礼前三个月就发出了请柬。"
+    },
+    {
+     "en": "She was thrilled to receive a wedding invitation from her best friend.",
+     "zh": "收到最好朋友的婚礼请柬，她非常激动。"
+    }
+   ],
+   "tags": [
+    "婚礼婚恋"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "喜糖",
+   "pair": "zh-en",
+   "slug": "xi-tang",
+   "lang": "zh",
+   "translation": "wedding candy",
+   "shortAnswer": "「喜糖」的英文是 wedding candy，指婚礼上分发给宾客的糖果。注意它不等于 candy 单用，婚礼语境下最好说 wedding candy 或 wedding sweets。",
+   "definition": "wedding candy 是中式婚礼中新人向亲友、同事分发的糖果，常与请柬、喜烟搭配。英语里没有完全对应的固定习俗词，泛指时也可说 wedding sweets（英式）或 candy favors；若指装在盒里的伴手礼，则常称 wedding favors。",
+   "examples": [
+    {
+     "en": "We handed out wedding candy to our colleagues after the ceremony.",
+     "zh": "仪式结束后，我们给同事分发了喜糖。"
+    },
+    {
+     "en": "The wedding candy was packed in small red boxes with the couple's names on them.",
+     "zh": "喜糖装在小红盒子里，上面印着新人的名字。"
+    }
+   ],
+   "tags": [
+    "婚礼婚恋"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "wedding candy",
+   "pair": "en-zh",
+   "slug": "wedding-candy",
+   "lang": "en",
+   "translation": "喜糖",
+   "shortAnswer": "\"wedding candy\" 的中文意思是「喜糖」，即婚礼上分发给宾客的糖果。它与普通 candy 不同，专指中式婚礼习俗中随请柬或婚宴送出的喜糖，不是泛指所有婚礼糖果。",
+   "definition": "wedding candy 指中式婚礼中新人分发或回礼用的糖果，常装在喜糖盒里，与请柬、喜烟一起送人。英文里这是描述性说法而非固定习语，英式英语更常说 wedding sweets，作为回礼小物则称 wedding favors。",
+   "examples": [
+    {
+     "en": "We handed out wedding candy to our colleagues after the ceremony.",
+     "zh": "仪式结束后，我们给同事分发了喜糖。"
+    },
+    {
+     "en": "The wedding candy was packed in small red boxes with the couple's names on them.",
+     "zh": "喜糖装在小红盒子里，上面印着新人的名字。"
+    }
+   ],
+   "tags": [
+    "婚礼婚恋"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "伴郎",
+   "pair": "zh-en",
+   "slug": "ban-lang",
+   "lang": "zh",
+   "translation": "best man",
+   "shortAnswer": "「伴郎」的英文是 best man，指婚礼当天全程协助新郎的男性挚友。注意伴郎团整体叫 groomsmen，只有首席那一位才是 best man。",
+   "definition": "best man 通常只有一位，负责保管戒指、致辞、组织单身派对；伴郎团其余成员则称 groomsmen。中文里常把一群伴郎都叫 best man，这是最常见的误用。",
+   "examples": [
+    {
+     "en": "My brother asked me to be his best man at his wedding next spring.",
+     "zh": "我哥哥请我在他明年春天的婚礼上做伴郎。"
+    },
+    {
+     "en": "The best man kept the rings safe and gave a funny speech at the reception.",
+     "zh": "伴郎保管好戒指，并在婚宴上讲了一段有趣的致辞。"
+    }
+   ],
+   "tags": [
+    "婚礼婚恋"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "best man",
+   "pair": "en-zh",
+   "slug": "best-man",
+   "lang": "en",
+   "translation": "伴郎",
+   "shortAnswer": "Best man 的中文意思是「伴郎」，即新郎身边最得力的那位男性挚友。它与 groomsmen（伴郎团成员）不同，通常只指首席伴郎一人。",
+   "definition": "best man 是可数名词，常见搭配有 be someone's best man、the best man's speech；致辞环节英式说 speech，美式常说 toast。口语里也可直接用 best man 称呼这个人。",
+   "examples": [
+    {
+     "en": "My brother asked me to be his best man at his wedding next spring.",
+     "zh": "我哥哥请我在他明年春天的婚礼上做伴郎。"
+    },
+    {
+     "en": "The best man kept the rings safe and gave a funny speech at the reception.",
+     "zh": "伴郎保管好戒指，并在婚宴上讲了一段有趣的致辞。"
+    }
+   ],
+   "tags": [
+    "婚礼婚恋"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "婚纱照",
+   "pair": "zh-en",
+   "slug": "hun-sha-zhao",
+   "lang": "zh",
+   "translation": "wedding photos",
+   "shortAnswer": "「婚纱照」的英文是 wedding photos，指新人穿婚纱礼服拍摄的正式照片。注意 wedding photos 也泛指婚礼当天跟拍的照片，拍摄结婚照可说 take wedding photos。",
+   "definition": "通常用复数 wedding photos 或 wedding pictures；专指影楼婚前拍摄可加 pre-wedding，如 pre-wedding photo shoot（婚纱照拍摄）。婚礼当天的照片则是 wedding day photos，不要混用。",
+   "examples": [
+    {
+     "en": "We spent the whole afternoon taking wedding photos by the lake.",
+     "zh": "我们在湖边拍了一下午婚纱照。"
+    },
+    {
+     "en": "She posted a few wedding photos online and everyone rushed to congratulate her.",
+     "zh": "她在网上晒了几张婚纱照，大家纷纷来道喜。"
+    }
+   ],
+   "tags": [
+    "婚礼婚恋"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "wedding photos",
+   "pair": "en-zh",
+   "slug": "wedding-photos",
+   "lang": "en",
+   "translation": "婚纱照",
+   "shortAnswer": "wedding photos 的中文意思是「婚纱照」，也泛指婚礼照片；拍摄可搭配 take wedding photos。它与 bridal portraits 不同，后者多指新娘单人婚纱写真。",
+   "definition": "wedding photos 指婚礼相关照片，可为婚纱照或婚礼当天照片；婚前的影楼拍摄常说 pre-wedding photos 或 wedding photo shoot，日常口语也常用 wedding pictures。",
+   "examples": [
+    {
+     "en": "We spent the whole afternoon taking wedding photos by the lake.",
+     "zh": "我们在湖边拍了一下午婚纱照。"
+    },
+    {
+     "en": "She posted a few wedding photos online and everyone rushed to congratulate her.",
+     "zh": "她在网上晒了几张婚纱照，大家纷纷来道喜。"
+    }
+   ],
+   "tags": [
+    "婚礼婚恋"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "婚宴",
+   "pair": "zh-en",
+   "slug": "hun-yan",
+   "lang": "zh",
+   "translation": "wedding banquet",
+   "shortAnswer": "「婚宴」的英文是 wedding banquet，指婚礼后设宴款待宾客的正式酒席，口语也常说 wedding reception。",
+   "definition": "wedding banquet 指婚礼当天摆酒宴客的正式场面，常搭配 hold、attend、invite sb to，如 hold a wedding banquet。中式婚宴多指摆酒，西式则常用 wedding reception。",
+   "examples": [
+    {
+     "en": "My parents insisted on holding a wedding banquet for over three hundred guests.",
+     "zh": "我父母坚持要办一场婚宴，宴请三百多位宾客。"
+    },
+    {
+     "en": "She changed into a red dress before the wedding banquet began.",
+     "zh": "婚宴开始前，她换上了一袭红裙。"
+    }
+   ],
+   "tags": [
+    "婚礼婚恋"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "wedding banquet",
+   "pair": "en-zh",
+   "slug": "wedding-banquet",
+   "lang": "en",
+   "translation": "婚宴",
+   "shortAnswer": "wedding banquet 的中文是「婚宴」，即婚礼后宴请宾客的正式酒席，场面隆重，比 wedding reception 更偏中式。",
+   "definition": "wedding banquet 指婚礼后为宾客举办的正式宴席，常搭配 hold/attend a wedding banquet。它比 wedding reception 更强调吃酒席的排场。",
+   "examples": [
+    {
+     "en": "My parents insisted on holding a wedding banquet for over three hundred guests.",
+     "zh": "我父母坚持要办一场婚宴，宴请三百多位宾客。"
+    },
+    {
+     "en": "She changed into a red dress before the wedding banquet began.",
+     "zh": "婚宴开始前，她换上了一袭红裙。"
+    }
+   ],
+   "tags": [
+    "婚礼婚恋"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "伴娘",
+   "pair": "zh-en",
+   "slug": "ban-niang",
+   "lang": "zh",
+   "translation": "bridesmaid",
+   "shortAnswer": "「伴娘」的英文是 bridesmaid，指婚礼上陪伴新娘的女性，通常为未婚，可协助新娘处理婚礼事务。",
+   "definition": "bridesmaid 指婚礼中新娘的女性伴护，通常为未婚。常见搭配：be a bridesmaid、bridesmaid dress。",
+   "examples": [
+    {
+     "en": "She asked her sister to be her bridesmaid at the wedding.",
+     "zh": "她请妹妹在婚礼上做她的伴娘。"
+    },
+    {
+     "en": "The bridesmaids wore matching pink dresses and helped the bride prepare.",
+     "zh": "伴娘们穿着相配的粉色裙子，帮助新娘做准备。"
+    }
+   ],
+   "tags": [
+    "婚礼婚恋"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "bridesmaid",
+   "pair": "en-zh",
+   "slug": "bridesmaid",
+   "lang": "en",
+   "translation": "伴娘",
+   "shortAnswer": "Bridesmaid 中文意思是「伴娘」，指婚礼上陪伴新娘的女性，通常为未婚，协助新娘准备婚礼。",
+   "definition": "A bridesmaid is a woman who attends the bride at a wedding. Note: 'maid of honor' is the chief bridesmaid.",
+   "examples": [
+    {
+     "en": "She asked her sister to be her bridesmaid at the wedding.",
+     "zh": "她请妹妹在婚礼上做她的伴娘。"
+    },
+    {
+     "en": "The bridesmaids wore matching pink dresses and helped the bride prepare.",
+     "zh": "伴娘们穿着相配的粉色裙子，帮助新娘做准备。"
+    }
+   ],
+   "tags": [
+    "婚礼婚恋"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "民政局",
+   "pair": "zh-en",
+   "slug": "min-zheng-ju",
+   "lang": "zh",
+   "translation": "civil affairs bureau",
+   "shortAnswer": "民政局（civil affairs bureau）是办理结婚登记的政府机构，不是婚礼场地。",
+   "definition": "民政局（civil affairs bureau）负责结婚登记等事务，领证需去户籍所在地办理。",
+   "examples": [
+    {
+     "en": "We decided to skip the big wedding and just go to the civil affairs bureau to get our marriage certificate.",
+     "zh": "我们决定不办大型婚礼，直接去民政局领结婚证。"
+    },
+    {
+     "en": "In China, you must go to the civil affairs bureau in your registered hometown to officially register your marriage.",
+     "zh": "在中国，你必须去户籍所在地的民政局才能正式登记结婚。"
+    }
+   ],
+   "tags": [
+    "婚礼婚恋"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "civil affairs bureau",
+   "pair": "en-zh",
+   "slug": "civil-affairs-bureau",
+   "lang": "en",
+   "translation": "民政局",
+   "shortAnswer": "A civil affairs bureau is 民政局, the government office for marriage registration in China.",
+   "definition": "民政局 (civil affairs bureau) handles marriage registration; you register at the one in your hometown.",
+   "examples": [
+    {
+     "en": "We decided to skip the big wedding and just go to the civil affairs bureau to get our marriage certificate.",
+     "zh": "我们决定不办大型婚礼，直接去民政局领结婚证。"
+    },
+    {
+     "en": "In China, you must go to the civil affairs bureau in your registered hometown to officially register your marriage.",
+     "zh": "在中国，你必须去户籍所在地的民政局才能正式登记结婚。"
+    }
+   ],
+   "tags": [
+    "婚礼婚恋"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "证婚人",
+   "pair": "zh-en",
+   "slug": "zheng-hun-ren",
+   "lang": "zh",
+   "translation": "wedding witness",
+   "shortAnswer": "「证婚人」英文是 wedding witness，指在婚礼上见证新人结婚并签字的人。",
+   "definition": "证婚人（wedding witness）是婚礼上见证新人交换誓言并在结婚证书上签字的人，法律上通常需一至两名。",
+   "examples": [
+    {
+     "en": "They asked their college professor to act as a wedding witness and sign the marriage certificate.",
+     "zh": "他们请大学时的教授担任证婚人，签署结婚证书。"
+    },
+    {
+     "en": "In many countries, you need at least one wedding witness to make the marriage legally valid.",
+     "zh": "在许多国家，至少需要一位证婚人才能使婚姻具有法律效力。"
+    }
+   ],
+   "tags": [
+    "婚礼婚恋"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "wedding witness",
+   "pair": "en-zh",
+   "slug": "wedding-witness",
+   "lang": "en",
+   "translation": "证婚人",
+   "shortAnswer": "wedding witness 的中文意思是「证婚人」，指婚礼上见证并签署结婚证书的人。",
+   "definition": "A wedding witness signs the marriage certificate to confirm the union is legal, usually a friend or relative chosen by the couple.",
+   "examples": [
+    {
+     "en": "They asked their college professor to act as a wedding witness and sign the marriage certificate.",
+     "zh": "他们请大学时的教授担任证婚人，签署结婚证书。"
+    },
+    {
+     "en": "In many countries, you need at least one wedding witness to make the marriage legally valid.",
+     "zh": "在许多国家，至少需要一位证婚人才能使婚姻具有法律效力。"
+    }
+   ],
+   "tags": [
+    "婚礼婚恋"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "蜜月",
+   "pair": "zh-en",
+   "slug": "mi-yue",
+   "lang": "zh",
+   "translation": "honeymoon",
+   "shortAnswer": "「蜜月」的英文是 honeymoon，指新婚夫妻婚后共度的假期。注意 honeymoon 既可作名词也可作动词，如 They are honeymooning in Bali。",
+   "definition": "honeymoon 常与 go on、take、spend 等动词搭配，如 go on a honeymoon。它也可引申指事业或关系的「蜜月期」，如 a honeymoon period，此时不指旅行。",
+   "examples": [
+    {
+     "en": "They went to Hawaii for their honeymoon and stayed in a beachfront resort.",
+     "zh": "他们去夏威夷度蜜月，住在一家海滨度假村。"
+    },
+    {
+     "en": "The new manager enjoyed a brief honeymoon period before facing serious criticism.",
+     "zh": "新经理经历了一段短暂的蜜月期，随后便面临严厉的批评。"
+    }
+   ],
+   "tags": [
+    "婚礼婚恋"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "honeymoon",
+   "pair": "en-zh",
+   "slug": "honeymoon",
+   "lang": "en",
+   "translation": "蜜月",
+   "shortAnswer": "「honeymoon」的中文意思是「蜜月」，即新婚夫妇婚后的度假旅行。它还可引申指一段关系或活动的「蜜月期」，强调初期和谐阶段。",
+   "definition": "honeymoon 作名词指婚后假期，常搭配 go on/take a honeymoon；作动词指度蜜月。引申义 a honeymoon period 指新关系或新职位的初期和谐阶段，不指实际旅行。",
+   "examples": [
+    {
+     "en": "They went to Hawaii for their honeymoon and stayed in a beachfront resort.",
+     "zh": "他们去夏威夷度蜜月，住在一家海滨度假村。"
+    },
+    {
+     "en": "The new manager enjoyed a brief honeymoon period before facing serious criticism.",
+     "zh": "新经理经历了一段短暂的蜜月期，随后便面临严厉的批评。"
+    }
+   ],
+   "tags": [
+    "婚礼婚恋"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "异地恋",
+   "pair": "zh-en",
+   "slug": "yi-di-lian",
+   "lang": "zh",
+   "translation": "long-distance relationship",
+   "shortAnswer": "「异地恋」的英文是 long-distance relationship，指两人分居两地仍维持恋爱关系，不等于跨国恋。",
+   "definition": "常用搭配：be in / maintain a long-distance relationship，口语缩写 LDR，正式写作建议用全称，切勿直译成 different-place love。",
+   "examples": [
+    {
+     "en": "After graduation, they decided to keep their long-distance relationship going until both found jobs in the same city.",
+     "zh": "毕业后，他们决定继续维持异地恋，直到两人都在同一座城市找到工作。"
+    },
+    {
+     "en": "Many couples say a long-distance relationship works only with clear plans and regular video calls.",
+     "zh": "很多情侣说，异地恋只有靠明确的计划和经常视频通话才能维持下去。"
+    }
+   ],
+   "tags": [
+    "婚礼婚恋"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "long-distance relationship",
+   "pair": "en-zh",
+   "slug": "long-distance-relationship",
+   "lang": "en",
+   "translation": "异地恋",
+   "shortAnswer": "Long-distance relationship 就是「异地恋」，指情侣因求学或工作分居两地，强调地理距离，不一定是跨国。",
+   "definition": "可数名词，常说 be in / start / maintain a long-distance relationship，口语缩写 LDR；与异地恋对应，但中文的异国恋需另加 international。",
+   "examples": [
+    {
+     "en": "After graduation, they decided to keep their long-distance relationship going until both found jobs in the same city.",
+     "zh": "毕业后，他们决定继续维持异地恋，直到两人都在同一座城市找到工作。"
+    },
+    {
+     "en": "Many couples say a long-distance relationship works only with clear plans and regular video calls.",
+     "zh": "很多情侣说，异地恋只有靠明确的计划和经常视频通话才能维持下去。"
+    }
+   ],
+   "tags": [
+    "婚礼婚恋"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "怀孕",
+   "pair": "zh-en",
+   "slug": "huai-yun",
+   "lang": "zh",
+   "translation": "getting pregnant",
+   "shortAnswer": "「怀孕」的英文可说 getting pregnant，强调受孕过程；表示怀孕状态常用 be pregnant。",
+   "definition": "getting pregnant 指受孕、进入怀孕状态，常见于备孕语境，如 trying to get pregnant。不同于名词 pregnancy 或状态 be pregnant。",
+   "examples": [
+    {
+     "en": "They have been trying to get pregnant for almost a year and finally decided to see a doctor.",
+     "zh": "他们备孕快一年了，最后决定去看医生。"
+    },
+    {
+     "en": "Getting pregnant is just the first step; you also need to arrange prenatal checkups and plan for maternity leave.",
+     "zh": "怀孕只是第一步，你还需要安排产检，并计划好产假。"
+    }
+   ],
+   "tags": [
+    "育儿养娃"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "getting pregnant",
+   "pair": "en-zh",
+   "slug": "getting-pregnant",
+   "lang": "en",
+   "translation": "怀孕",
+   "shortAnswer": "「getting pregnant」的中文意思是「怀孕」，指受孕过程，区别于状态 pregnant。",
+   "definition": "getting pregnant 意为怀孕、受孕，常见搭配 trying to get pregnant、chances of getting pregnant，正式语境可用 conception。",
+   "examples": [
+    {
+     "en": "They have been trying to get pregnant for almost a year and finally decided to see a doctor.",
+     "zh": "他们备孕快一年了，最后决定去看医生。"
+    },
+    {
+     "en": "Getting pregnant is just the first step; you also need to arrange prenatal checkups and plan for maternity leave.",
+     "zh": "怀孕只是第一步，你还需要安排产检，并计划好产假。"
+    }
+   ],
+   "tags": [
+    "育儿养娃"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "预产期",
+   "pair": "zh-en",
+   "slug": "yu-chan-qi",
+   "lang": "zh",
+   "translation": "due date",
+   "shortAnswer": "预产期的英文是 due date，医院产检也称 EDD。注意 due date 也指账单到期日，育儿语境下需明确是 baby due date。",
+   "definition": "due date 指医生根据末次月经或 B 超推算的预计分娩日，常见搭配有 my due date is...、pass one's due date。口语常说 the baby is due。",
+   "examples": [
+    {
+     "en": "My due date is in early October, so we're already preparing the nursery.",
+     "zh": "我的预产期在十月初，所以我们已经在准备婴儿房了。"
+    },
+    {
+     "en": "She went past her due date by a week, so the doctor scheduled an induction.",
+     "zh": "她过了预产期一周，所以医生安排了引产。"
+    }
+   ],
+   "tags": [
+    "育儿养娃"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "due date",
+   "pair": "en-zh",
+   "slug": "due-date",
+   "lang": "en",
+   "translation": "预产期",
+   "shortAnswer": "Due date 中文是预产期，即医生推算的预计分娩日期。但它也常指账单或作业的截止日期，需靠语境区分。",
+   "definition": "due date 在孕期指预产期，正式场合也说 estimated date of delivery（EDD）。口语更常说 the baby is due，也常见 pass one's due date。",
+   "examples": [
+    {
+     "en": "My due date is in early October, so we're already preparing the nursery.",
+     "zh": "我的预产期在十月初，所以我们已经在准备婴儿房了。"
+    },
+    {
+     "en": "She went past her due date by a week, so the doctor scheduled an induction.",
+     "zh": "她过了预产期一周，所以医生安排了引产。"
+    }
+   ],
+   "tags": [
+    "育儿养娃"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "官宣",
+   "pair": "zh-en",
+   "slug": "guan-xuan",
+   "lang": "zh",
+   "translation": "going official",
+   "shortAnswer": "中文「官宣」对应英文 going official，指公开确认恋情或婚讯，强调在社交媒体正式宣布关系。",
+   "definition": "官宣指正式公开恋情、订婚或结婚，英文常用 going official 表达，强调在社交媒体或公开场合确认关系，而非法律登记。",
+   "examples": [
+    {
+     "en": "After months of rumors, the couple is finally going official on Instagram.",
+     "zh": "经过数月传闻，这对情侣终于在 Instagram 上官宣了。"
+    },
+    {
+     "en": "They went official at a family dinner by posting their first photo together.",
+     "zh": "他们在家庭聚餐时官宣，首次发布了合照。"
+    }
+   ],
+   "tags": [
+    "婚礼婚恋"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "going official",
+   "pair": "en-zh",
+   "slug": "going-official",
+   "lang": "en",
+   "translation": "官宣",
+   "shortAnswer": "Going official means 官宣, publicly confirming a romance or marriage, especially on social media.",
+   "definition": "Going official means publicly confirming a romantic relationship or engagement, often on social media, rather than legally marrying.",
+   "examples": [
+    {
+     "en": "After months of rumors, the couple is finally going official on Instagram.",
+     "zh": "经过数月传闻，这对情侣终于在 Instagram 上官宣了。"
+    },
+    {
+     "en": "They went official at a family dinner by posting their first photo together.",
+     "zh": "他们在家庭聚餐时官宣，首次发布了合照。"
+    }
+   ],
+   "tags": [
+    "婚礼婚恋"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "奔现",
+   "pair": "zh-en",
+   "slug": "ben-xian",
+   "lang": "zh",
+   "translation": "meeting online friend in person",
+   "shortAnswer": "「奔现」的英文是 meeting online friend in person，指网友从线上聊天转为线下真实见面。",
+   "definition": "「奔现」指网友或网恋对象从线上关系转为线下见面，核心是把虚拟互动变成现实接触，常用于婚恋与社交语境。",
+   "examples": [
+    {
+     "en": "After months of chatting, they are finally meeting online friend in person at a café.",
+     "zh": "聊了几个月后，他们终于要在咖啡馆奔现了。"
+    },
+    {
+     "en": "Meeting online friend in person can be exciting, so choose a public place and tell someone you trust.",
+     "zh": "奔现可能很令人心动，所以要选公共场所，并告诉信任的人。"
+    }
+   ],
+   "tags": [
+    "婚礼婚恋"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "meeting online friend in person",
+   "pair": "en-zh",
+   "slug": "meeting-online-friend-in-person",
+   "lang": "en",
+   "translation": "奔现",
+   "shortAnswer": "Meeting online friend in person 译作「奔现」，指把网上认识的人约到现实中见面，检验真实关系。",
+   "definition": "Meeting online friend in person means turning an online bond into a real-life meeting, often to test chemistry, safety and long-term potential.",
+   "examples": [
+    {
+     "en": "After months of chatting, they are finally meeting online friend in person at a café.",
+     "zh": "聊了几个月后，他们终于要在咖啡馆奔现了。"
+    },
+    {
+     "en": "Meeting online friend in person can be exciting, so choose a public place and tell someone you trust.",
+     "zh": "奔现可能很令人心动，所以要选公共场所，并告诉信任的人。"
+    }
+   ],
+   "tags": [
+    "婚礼婚恋"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "产检",
+   "pair": "zh-en",
+   "slug": "chan-jian",
+   "lang": "zh",
+   "translation": "prenatal checkup",
+   "shortAnswer": "「产检」的英文是 prenatal checkup，也可说 prenatal visit 或 prenatal appointment，但 checkup 更强调常规检查。",
+   "definition": "prenatal 意为「产前的」，checkup 指「体格检查」，合起来指孕期定期进行的产前检查。常见搭配：go for a prenatal checkup（去做产检）、routine prenatal checkup（常规产检）。",
+   "examples": [
+    {
+     "en": "She has a prenatal checkup scheduled for next Tuesday.",
+     "zh": "她预约了下周二做产检。"
+    },
+    {
+     "en": "Regular prenatal checkups help ensure the health of both mother and baby.",
+     "zh": "定期产检有助于确保母婴健康。"
+    }
+   ],
+   "tags": [
+    "育儿养娃"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "prenatal checkup",
+   "pair": "en-zh",
+   "slug": "prenatal-checkup",
+   "lang": "en",
+   "translation": "产检",
+   "shortAnswer": "prenatal checkup 的中文意思是「产检」，即孕期定期做的产前检查，强调常规医疗检查，而 prenatal visit 更侧重就诊行为。",
+   "definition": "prenatal checkup 指孕妇在分娩前接受的定期医疗检查，用于监测母婴健康。常见搭配：schedule a prenatal checkup、regular prenatal checkups。",
+   "examples": [
+    {
+     "en": "She has a prenatal checkup scheduled for next Tuesday.",
+     "zh": "她预约了下周二做产检。"
+    },
+    {
+     "en": "Regular prenatal checkups help ensure the health of both mother and baby.",
+     "zh": "定期产检有助于确保母婴健康。"
+    }
+   ],
+   "tags": [
+    "育儿养娃"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "百日宴",
+   "pair": "zh-en",
+   "slug": "bai-ri-yan",
+   "lang": "zh",
+   "translation": "hundred-day banquet",
+   "shortAnswer": "「百日宴」的英文是 hundred-day banquet，指宝宝出生满一百天举办的庆祝宴席。注意它和满月酒（full-month party）不同，通常在产后约三个月举行。",
+   "definition": "hundred-day banquet 是中式育儿习俗的直译，常用于请柬、家庭聚会或跨文化介绍。搭配动词 hold/throw a hundred-day banquet；口语中也可说 100-day celebration。",
+   "examples": [
+    {
+     "en": "My sister is planning a hundred-day banquet for her baby next month, and she has already booked a restaurant.",
+     "zh": "我姐姐下个月要给宝宝办百日宴，已经订好餐厅了。"
+    },
+    {
+     "en": "In many Chinese families, the hundred-day banquet is the first big gathering after the baby is born.",
+     "zh": "在许多中国家庭里，百日宴是宝宝出生后第一次大型聚会。"
+    }
+   ],
+   "tags": [
+    "育儿养娃"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "hundred-day banquet",
+   "pair": "en-zh",
+   "slug": "hundred-day-banquet",
+   "lang": "en",
+   "translation": "百日宴",
+   "shortAnswer": "A hundred-day banquet 的中文意思是「百日宴」，指婴儿出生满一百天时举办的庆祝宴席。它不同于满月酒，焦点是宝宝满百日、妈妈基本度过产褥期。",
+   "definition": "hundred-day banquet 是文化特定词，多用于中式家庭聚会、请柬或跨文化说明；常见搭配 hold/attend a hundred-day banquet，口语可简称 100-day party。",
+   "examples": [
+    {
+     "en": "My sister is planning a hundred-day banquet for her baby next month, and she has already booked a restaurant.",
+     "zh": "我姐姐下个月要给宝宝办百日宴，已经订好餐厅了。"
+    },
+    {
+     "en": "In many Chinese families, the hundred-day banquet is the first big gathering after the baby is born.",
+     "zh": "在许多中国家庭里，百日宴是宝宝出生后第一次大型聚会。"
+    }
+   ],
+   "tags": [
+    "育儿养娃"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "满月",
+   "pair": "zh-en",
+   "slug": "man-yue",
+   "lang": "zh",
+   "translation": "full-month celebration",
+   "shortAnswer": "「满月」常译作 full-month celebration，指婴儿出生满一个月的庆祝。",
+   "definition": "full-month celebration 是中式育儿文化词，指婴儿满月时办的宴席或庆祝仪式。",
+   "examples": [
+    {
+     "en": "We are holding a full-month celebration for our baby this weekend and have invited all our relatives.",
+     "zh": "这个周末我们要给宝宝办满月酒，邀请了所有亲戚。"
+    },
+    {
+     "en": "In many Chinese families, the full-month celebration is the first big event after a baby is born.",
+     "zh": "在很多中国家庭，满月宴是宝宝出生后的第一件大事。"
+    }
+   ],
+   "tags": [
+    "育儿养娃"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "full-month celebration",
+   "pair": "en-zh",
+   "slug": "full-month-celebration",
+   "lang": "en",
+   "translation": "满月",
+   "shortAnswer": "full-month celebration 的中文意思是「满月」，即婴儿出生满一个月时的庆祝。",
+   "definition": "A full-month celebration is a Chinese tradition marking a baby's first month.",
+   "examples": [
+    {
+     "en": "We are holding a full-month celebration for our baby this weekend and have invited all our relatives.",
+     "zh": "这个周末我们要给宝宝办满月酒，邀请了所有亲戚。"
+    },
+    {
+     "en": "In many Chinese families, the full-month celebration is the first big event after a baby is born.",
+     "zh": "在很多中国家庭，满月宴是宝宝出生后的第一件大事。"
+    }
+   ],
+   "tags": [
+    "育儿养娃"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "辅食",
+   "pair": "zh-en",
+   "slug": "food-weaning",
+   "lang": "zh",
+   "translation": "baby food supplements",
+   "shortAnswer": "辅食的英文是 baby food supplements，指婴儿在母乳或配方奶之外添加的辅助食品。",
+   "definition": "baby food supplements 指婴儿约六个月起添加的辅助食品，强调补充而非替代奶类。",
+   "examples": [
+    {
+     "en": "Pediatricians often recommend starting baby food supplements at around six months.",
+     "zh": "儿科医生通常建议在婴儿六个月左右开始添加辅食。"
+    },
+    {
+     "en": "She made her own baby food supplements by steaming and pureeing vegetables.",
+     "zh": "她通过蒸煮蔬菜并打成泥来自制辅食。"
+    }
+   ],
+   "tags": [
+    "育儿养娃"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "baby food supplements",
+   "pair": "en-zh",
+   "slug": "baby-food-supplements",
+   "lang": "en",
+   "translation": "辅食",
+   "shortAnswer": "Baby food supplements means 辅食 in Chinese: foods given to infants alongside milk.",
+   "definition": "Baby food supplements are complementary foods started around six months to supplement milk.",
+   "examples": [
+    {
+     "en": "Pediatricians often recommend starting baby food supplements at around six months.",
+     "zh": "儿科医生通常建议在婴儿六个月左右开始添加辅食。"
+    },
+    {
+     "en": "She made her own baby food supplements by steaming and pureeing vegetables.",
+     "zh": "她通过蒸煮蔬菜并打成泥来自制辅食。"
+    }
+   ],
+   "tags": [
+    "育儿养娃"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "坐月子",
+   "pair": "zh-en",
+   "slug": "zuo-yue-zi",
+   "lang": "zh",
+   "translation": "postpartum confinement",
+   "shortAnswer": "「坐月子」的英文是 postpartum confinement，指产后约一个月按传统休养、避风避寒的习俗，不是医学诊断。",
+   "definition": "postpartum confinement 指产后约一个月的传统休养与禁忌，也常说 doing the month。常见搭配有 traditional、practice、observe。",
+   "examples": [
+    {
+     "en": "In many Chinese families, the new mother observes postpartum confinement for a month, following strict rules about not washing her hair or going outside.",
+     "zh": "在许多中国家庭，新妈妈会坐月子一个月，严格遵守不洗头、不外出的禁忌。"
+    },
+    {
+     "en": "Western doctors are often unfamiliar with postpartum confinement, but they can still support the mother's rest and nutrition needs after childbirth.",
+     "zh": "西方医生通常不熟悉坐月子，但仍能支持母亲产后的休息和营养需求。"
+    }
+   ],
+   "tags": [
+    "育儿养娃"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "postpartum confinement",
+   "pair": "en-zh",
+   "slug": "postpartum-confinement",
+   "lang": "en",
+   "translation": "坐月子",
+   "shortAnswer": "Postpartum confinement 就是中文「坐月子」，指产后一个月按传统休养避寒的习俗，不是医学诊断。",
+   "definition": "postpartum confinement 指东亚社会产后约一个月的传统休养与禁忌，常搭配 traditional、practice、observe，也写作 doing the month。",
+   "examples": [
+    {
+     "en": "In many Chinese families, the new mother observes postpartum confinement for a month, following strict rules about not washing her hair or going outside.",
+     "zh": "在许多中国家庭，新妈妈会坐月子一个月，严格遵守不洗头、不外出的禁忌。"
+    },
+    {
+     "en": "Western doctors are often unfamiliar with postpartum confinement, but they can still support the mother's rest and nutrition needs after childbirth.",
+     "zh": "西方医生通常不熟悉坐月子，但仍能支持母亲产后的休息和营养需求。"
+    }
+   ],
+   "tags": [
+    "育儿养娃"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "月嫂",
+   "pair": "zh-en",
+   "slug": "yue-sao",
+   "lang": "zh",
+   "translation": "postpartum nanny",
+   "shortAnswer": "「月嫂」英文是postpartum nanny，指产后第一个月住家照顾产妇和新生儿的专职护理人员。",
+   "definition": "postpartum nanny指产后护理与新生儿照料的住家看护，常与hire、live-in等词连用。",
+   "examples": [
+    {
+     "en": "They hired a postpartum nanny to help with the baby and the mother's recovery after delivery.",
+     "zh": "他们请了一位月嫂来帮忙照顾宝宝和产妇产后的恢复。"
+    },
+    {
+     "en": "A good postpartum nanny not only feeds the newborn but also prepares confinement meals for the mother.",
+     "zh": "一位好的月嫂不仅喂养新生儿，还会为产妇准备月子餐。"
+    }
+   ],
+   "tags": [
+    "育儿养娃"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "postpartum nanny",
+   "pair": "en-zh",
+   "slug": "postpartum-nanny",
+   "lang": "en",
+   "translation": "月嫂",
+   "shortAnswer": "A postpartum nanny is a 月嫂, a live-in caregiver for mother and newborn in the first month.",
+   "definition": "A 月嫂, or postpartum nanny, provides newborn care, maternal recovery support, and household help during zuo yuezi.",
+   "examples": [
+    {
+     "en": "They hired a postpartum nanny to help with the baby and the mother's recovery after delivery.",
+     "zh": "他们请了一位月嫂来帮忙照顾宝宝和产妇产后的恢复。"
+    },
+    {
+     "en": "A good postpartum nanny not only feeds the newborn but also prepares confinement meals for the mother.",
+     "zh": "一位好的月嫂不仅喂养新生儿，还会为产妇准备月子餐。"
+    }
+   ],
+   "tags": [
+    "育儿养娃"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "尿不湿",
+   "pair": "zh-en",
+   "slug": "niao-bu-shi",
+   "lang": "zh",
+   "translation": "disposable diapers",
+   "shortAnswer": "「尿不湿」的英文是 disposable diapers，指一次性纸尿裤，日常也可说 diapers。注意它通常用复数，单说 a disposable diaper 指一片。",
+   "definition": "常用搭配：change a diaper（换尿不湿）、disposable diapers（一次性纸尿裤）。英式英语多说 nappies，美式多用 diapers；与可洗的 cloth diapers（布尿布）相对。作定语时用 diaper rash 表示尿布疹。",
+   "examples": [
+    {
+     "en": "We packed plenty of disposable diapers in the diaper bag before the flight.",
+     "zh": "上飞机前，我们在尿布包里装了很多尿不湿。"
+    },
+    {
+     "en": "New parents often compare the cost of disposable diapers with that of cloth diapers.",
+     "zh": "新手父母常会比较尿不湿和布尿布的花费。"
+    }
+   ],
+   "tags": [
+    "育儿养娃"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "disposable diapers",
+   "pair": "en-zh",
+   "slug": "disposable-diapers",
+   "lang": "en",
+   "translation": "尿不湿",
+   "shortAnswer": "Disposable diapers 的中文意思是「尿不湿」，即一次性纸尿裤，口语中也简称 diapers。它强调用完即弃，与可清洗的 cloth diapers（布尿布）相对。",
+   "definition": "核心词义：一次性纸尿裤，通常用复数。常见搭配：change a diaper（换尿不湿）、diaper rash（尿布疹）。美式英语说 diapers，英式英语常用 nappies；正式场合可加 branded 或 eco-friendly 等修饰。",
+   "examples": [
+    {
+     "en": "We packed plenty of disposable diapers in the diaper bag before the flight.",
+     "zh": "上飞机前，我们在尿布包里装了很多尿不湿。"
+    },
+    {
+     "en": "New parents often compare the cost of disposable diapers with that of cloth diapers.",
+     "zh": "新手父母常会比较尿不湿和布尿布的花费。"
+    }
+   ],
+   "tags": [
+    "育儿养娃"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "奶粉",
+   "pair": "zh-en",
+   "slug": "nai-fen",
+   "lang": "zh",
+   "translation": "baby formula",
+   "shortAnswer": "「奶粉」的英文是 baby formula，指婴儿配方奶粉；口语也常说 formula，但别直译成 milk powder。",
+   "definition": "baby formula 指按配方模拟母乳的婴儿奶粉，日常可简说 formula。常见搭配：feed the baby formula、on formula。",
+   "examples": [
+    {
+     "en": "She couldn't breastfeed, so she started feeding her daughter baby formula.",
+     "zh": "她无法母乳喂养，所以开始给女儿喂奶粉。"
+    },
+    {
+     "en": "Before the trip, we packed enough baby formula and disposable diapers for a week.",
+     "zh": "出发前，我们备足了一周用的奶粉和尿不湿。"
+    }
+   ],
+   "tags": [
+    "育儿养娃"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "baby formula",
+   "pair": "en-zh",
+   "slug": "baby-formula",
+   "lang": "en",
+   "translation": "奶粉",
+   "shortAnswer": "Baby formula 的中文意思是「奶粉」，即婴儿配方奶粉；口语可简称 formula，与成人饮用的 milk powder 不同。",
+   "definition": "baby formula 指替代或补充母乳的婴儿奶粉，常见搭配有 feed with baby formula、be on baby formula。",
+   "examples": [
+    {
+     "en": "She couldn't breastfeed, so she started feeding her daughter baby formula.",
+     "zh": "她无法母乳喂养，所以开始给女儿喂奶粉。"
+    },
+    {
+     "en": "Before the trip, we packed enough baby formula and disposable diapers for a week.",
+     "zh": "出发前，我们备足了一周用的奶粉和尿不湿。"
+    }
+   ],
+   "tags": [
+    "育儿养娃"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "早教",
+   "pair": "zh-en",
+   "slug": "zao-jiao",
+   "lang": "zh",
+   "translation": "early education",
+   "shortAnswer": "早教的英文是 early education，指学龄前儿童的教育启蒙，别直译成 morning education。",
+   "definition": "early education 指对 0-6 岁婴幼儿的早期教育，常见搭配有 early education center（早教中心）、early education programs（早教课程），口语中也可说 early learning。",
+   "examples": [
+    {
+     "en": "Many parents in China send their children to an early education center before they turn three.",
+     "zh": "中国许多家长在孩子三岁前就送他们去早教中心。"
+    },
+    {
+     "en": "Research shows that quality early education can have a lasting impact on a child's development.",
+     "zh": "研究表明，优质的早教对儿童的发展有深远影响。"
+    }
+   ],
+   "tags": [
+    "育儿养娃"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "early education",
+   "pair": "en-zh",
+   "slug": "early-education",
+   "lang": "en",
+   "translation": "早教",
+   "shortAnswer": "early education 的中文意思是早教，指针对学龄前儿童的教育启蒙，与 preschool education 相近。",
+   "definition": "early education 指对婴幼儿及学龄前儿童的系统性教育，常见搭配有 early education center、invest in early education，勿与 elementary education 混淆。",
+   "examples": [
+    {
+     "en": "Many parents in China send their children to an early education center before they turn three.",
+     "zh": "中国许多家长在孩子三岁前就送他们去早教中心。"
+    },
+    {
+     "en": "Research shows that quality early education can have a lasting impact on a child's development.",
+     "zh": "研究表明，优质的早教对儿童的发展有深远影响。"
+    }
+   ],
+   "tags": [
+    "育儿养娃"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "兴趣班",
+   "pair": "zh-en",
+   "slug": "xing-qu-ban",
+   "lang": "zh",
+   "translation": "hobby classes",
+   "shortAnswer": "兴趣班的英文是 hobby classes，指儿童课外参加的非学科类兴趣培养课程。",
+   "definition": "常用复数 hobby classes，英式也说 hobby class。搭配 take/attend hobby classes。注意：它侧重兴趣启蒙，不是补习班。",
+   "examples": [
+    {
+     "en": "My daughter takes hobby classes on weekends, including painting and ballet.",
+     "zh": "我女儿周末上兴趣班，包括绘画和芭蕾。"
+    },
+    {
+     "en": "Many parents enroll their kids in hobby classes to help them discover new interests.",
+     "zh": "许多家长给孩子报兴趣班，帮他们发现新的兴趣。"
+    }
+   ],
+   "tags": [
+    "育儿养娃"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "hobby classes",
+   "pair": "en-zh",
+   "slug": "hobby-classes",
+   "lang": "en",
+   "translation": "兴趣班",
+   "shortAnswer": "hobby classes 的中文意思是兴趣班，指孩子课外以培养兴趣和特长为主的课程。",
+   "definition": "复数名词，指儿童或成人参加的课外兴趣课程，如绘画、舞蹈等。搭配 take hobby classes、sign up for hobby classes。不是补习班。",
+   "examples": [
+    {
+     "en": "My daughter takes hobby classes on weekends, including painting and ballet.",
+     "zh": "我女儿周末上兴趣班，包括绘画和芭蕾。"
+    },
+    {
+     "en": "Many parents enroll their kids in hobby classes to help them discover new interests.",
+     "zh": "许多家长给孩子报兴趣班，帮他们发现新的兴趣。"
+    }
+   ],
+   "tags": [
+    "育儿养娃"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "学区房",
+   "pair": "zh-en",
+   "slug": "xue-qu-fang",
+   "lang": "zh",
+   "translation": "school district housing",
+   "shortAnswer": "学区房指为按片入学而买的住房，英文常说 school district housing。",
+   "definition": "school district housing 指为获得优质公立学校入学资格而购置的房产。它不是普通「学区内的房子」，而是带入学溢价的投资品。",
+   "examples": [
+    {
+     "en": "Many parents in big cities are willing to pay a huge premium for school district housing to get their child into a top primary school.",
+     "zh": "大城市里许多家长为了让孩子进入顶尖小学，愿意为学区房支付高昂溢价。"
+    },
+    {
+     "en": "The couple sold their spacious apartment and bought a tiny school district housing unit just for the enrollment slot.",
+     "zh": "那对夫妇卖掉了宽敞的公寓，只为获得入学名额而买了一套狭小的学区房。"
+    }
+   ],
+   "tags": [
+    "育儿养娃"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "school district housing",
+   "pair": "en-zh",
+   "slug": "school-district-housing",
+   "lang": "en",
+   "translation": "学区房",
+   "shortAnswer": "School district housing means 学区房: a home bought for its school admission rights.",
+   "definition": "School district housing is property bought to secure a place at a top public school, often at a steep premium.",
+   "examples": [
+    {
+     "en": "Many parents in big cities are willing to pay a huge premium for school district housing to get their child into a top primary school.",
+     "zh": "大城市里许多家长为了让孩子进入顶尖小学，愿意为学区房支付高昂溢价。"
+    },
+    {
+     "en": "The couple sold their spacious apartment and bought a tiny school district housing unit just for the enrollment slot.",
+     "zh": "那对夫妇卖掉了宽敞的公寓，只为获得入学名额而买了一套狭小的学区房。"
+    }
+   ],
+   "tags": [
+    "育儿养娃"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "幼儿园",
+   "pair": "zh-en",
+   "slug": "you-er-yuan",
+   "lang": "zh",
+   "translation": "kindergarten",
+   "shortAnswer": "幼儿园的英文是 kindergarten，指3-6岁儿童接受学前教育的机构，注意与 nursery 托儿所区分。",
+   "definition": "Kindergarten 源于德语，指儿童通过游戏和活动学习社交与基础技能的场所，常见搭配有 go to kindergarten。",
+   "examples": [
+    {
+     "en": "My daughter started kindergarten this year and loves her teacher.",
+     "zh": "我女儿今年上幼儿园了，她很喜欢她的老师。"
+    },
+    {
+     "en": "In the US, children usually attend kindergarten at age five before first grade.",
+     "zh": "在美国，孩子们通常在五岁时上幼儿园，然后才上一年级。"
+    }
+   ],
+   "tags": [
+    "育儿养娃"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "kindergarten",
+   "pair": "en-zh",
+   "slug": "kindergarten",
+   "lang": "en",
+   "translation": "幼儿园",
+   "shortAnswer": "Kindergarten 的中文意思是幼儿园，通常指3-6岁儿童接受学前教育的机构，与 nursery 不同。",
+   "definition": "Kindergarten 指儿童在进入小学前接受教育的场所或阶段，常见搭配有 attend kindergarten。",
+   "examples": [
+    {
+     "en": "My daughter started kindergarten this year and loves her teacher.",
+     "zh": "我女儿今年上幼儿园了，她很喜欢她的老师。"
+    },
+    {
+     "en": "In the US, children usually attend kindergarten at age five before first grade.",
+     "zh": "在美国，孩子们通常在五岁时上幼儿园，然后才上一年级。"
+    }
+   ],
+   "tags": [
+    "育儿养娃"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "家长群",
+   "pair": "zh-en",
+   "slug": "jia-zhang-qun",
+   "lang": "zh",
+   "translation": "parents chat group",
+   "shortAnswer": "家长群的英文是 parents chat group，指老师和家长在微信上的家校沟通群，类似英文里的 parents' WhatsApp group，别直译成 parents group。",
+   "definition": "家长群常指老师与家长在微信上建的班级群，用于通知作业、接龙回复和活动报名，最典型的是满屏「收到」。英国多用 WhatsApp 家长群。",
+   "examples": [
+    {
+     "en": "Every evening, the parents chat group floods with \"received\" messages after the teacher posts homework.",
+     "zh": "每天晚上老师一发作业，家长群里就刷屏式地回复「收到」。"
+    },
+    {
+     "en": "I muted the parents chat group because it kept buzzing during meetings.",
+     "zh": "我把家长群设成免打扰了，因为开会时它一直响。"
+    }
+   ],
+   "tags": [
+    "育儿养娃"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "parents chat group",
+   "pair": "en-zh",
+   "slug": "parents-chat-group",
+   "lang": "en",
+   "translation": "家长群",
+   "shortAnswer": "Parents chat group 的中文意思是家长群，指中国老师和家长在微信上建的家校沟通群，功能类似 parents' WhatsApp group，但平台不同。",
+   "definition": "parents chat group 指家长与老师组成的线上群聊，常见搭配有 set up a parents chat group、be in the parents chat group，正式语境可用 parent-teacher communication channel。",
+   "examples": [
+    {
+     "en": "Every evening, the parents chat group floods with \"received\" messages after the teacher posts homework.",
+     "zh": "每天晚上老师一发作业，家长群里就刷屏式地回复「收到」。"
+    },
+    {
+     "en": "I muted the parents chat group because it kept buzzing during meetings.",
+     "zh": "我把家长群设成免打扰了，因为开会时它一直响。"
+    }
+   ],
+   "tags": [
+    "育儿养娃"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "陪写作业",
+   "pair": "zh-en",
+   "slug": "pei-xie-zuo-ye",
+   "lang": "zh",
+   "translation": "supervising homework",
+   "shortAnswer": "「陪写作业」英文说 supervising homework，指家长在孩子做功课时在旁督促辅导。",
+   "definition": "supervising homework 指家长在孩子做功课时从旁督促检查并辅导，强调监督陪伴，不是代写。",
+   "examples": [
+    {
+     "en": "Every evening she spends an hour supervising homework at the kitchen table.",
+     "zh": "每天晚饭后，她都会在餐桌旁花一个小时陪写作业。"
+    },
+    {
+     "en": "Many working parents find supervising homework more tiring than their own jobs.",
+     "zh": "许多在职父母觉得陪写作业比上班还累。"
+    }
+   ],
+   "tags": [
+    "育儿养娃"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "supervising homework",
+   "pair": "en-zh",
+   "slug": "supervising-homework",
+   "lang": "en",
+   "translation": "陪写作业",
+   "shortAnswer": "Supervising homework means 陪写作业: a parent watches and helps a child do schoolwork.",
+   "definition": "Supervising homework means a parent stays with a child during homework, checking and helping, not doing it.",
+   "examples": [
+    {
+     "en": "Every evening she spends an hour supervising homework at the kitchen table.",
+     "zh": "每天晚饭后，她都会在餐桌旁花一个小时陪写作业。"
+    },
+    {
+     "en": "Many working parents find supervising homework more tiring than their own jobs.",
+     "zh": "许多在职父母觉得陪写作业比上班还累。"
+    }
+   ],
+   "tags": [
+    "育儿养娃"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "小升初",
+   "pair": "zh-en",
+   "slug": "xiao-sheng-chu",
+   "lang": "zh",
+   "translation": "primary to middle school",
+   "shortAnswer": "「小升初」英文常说 primary to middle school，指小学升初中的过渡阶段。",
+   "definition": "primary to middle school 是描述性短语，非官方考试名称，强调从小学到初中的升学阶段。常见搭配：the primary to middle school transition。",
+   "examples": [
+    {
+     "en": "Many parents start preparing their children for the primary to middle school transition a year in advance.",
+     "zh": "许多家长提前一年就开始为孩子的小升初过渡做准备。"
+    },
+    {
+     "en": "The primary to middle school years can be stressful for both children and their families.",
+     "zh": "小升初阶段对孩子和家庭来说都可能压力很大。"
+    }
+   ],
+   "tags": [
+    "育儿养娃"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "primary to middle school",
+   "pair": "en-zh",
+   "slug": "primary-to-middle-school",
+   "lang": "en",
+   "translation": "小升初",
+   "shortAnswer": "Primary to middle school 的中文意思是「小升初」，指孩子从小学升入初中的阶段。",
+   "definition": "该短语多用于教育、育儿语境，指小学到初中的过渡期，可搭配 transition、admission、preparation 等词使用。",
+   "examples": [
+    {
+     "en": "Many parents start preparing their children for the primary to middle school transition a year in advance.",
+     "zh": "许多家长提前一年就开始为孩子的小升初过渡做准备。"
+    },
+    {
+     "en": "The primary to middle school years can be stressful for both children and their families.",
+     "zh": "小升初阶段对孩子和家庭来说都可能压力很大。"
+    }
+   ],
+   "tags": [
+    "育儿养娃"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "虎妈",
+   "pair": "zh-en",
+   "slug": "hu-ma",
+   "lang": "zh",
+   "translation": "tiger mom",
+   "shortAnswer": "「虎妈」的英文是 tiger mom，指用严格高压方式督促孩子学业与才艺的母亲。",
+   "definition": "tiger mom 源自蔡美儿《虎妈战歌》，指严格高压的育儿方式，常与 strict、demanding 搭配。",
+   "examples": [
+    {
+     "en": "Amy Chua made the term \"tiger mom\" famous around the world.",
+     "zh": "蔡美儿让「虎妈」一词闻名世界。"
+    },
+    {
+     "en": "Some parents admire the tiger mom's discipline, but others say it pressures kids too much.",
+     "zh": "有些家长欣赏虎妈式的严格，另一些人则认为这给孩子压力太大。"
+    }
+   ],
+   "tags": [
+    "育儿养娃"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "tiger mom",
+   "pair": "en-zh",
+   "slug": "tiger-mom",
+   "lang": "en",
+   "translation": "虎妈",
+   "shortAnswer": "Tiger mom is the English term for 「虎妈」, a mother who pushes her kids hard to excel.",
+   "definition": "A tiger mom is a strict, demanding mother who pushes her children hard in school and music, a term from Amy Chua.",
+   "examples": [
+    {
+     "en": "Amy Chua made the term \"tiger mom\" famous around the world.",
+     "zh": "蔡美儿让「虎妈」一词闻名世界。"
+    },
+    {
+     "en": "Some parents admire the tiger mom's discipline, but others say it pressures kids too much.",
+     "zh": "有些家长欣赏虎妈式的严格，另一些人则认为这给孩子压力太大。"
+    }
+   ],
+   "tags": [
+    "育儿养娃"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "隔代养育",
+   "pair": "zh-en",
+   "slug": "ge-dai-yang-yu",
+   "lang": "zh",
+   "translation": "grandparent childcare",
+   "shortAnswer": "「隔代养育」的英文是 grandparent childcare，指祖辈分担日常带娃。",
+   "definition": "grandparent childcare 是中性偏正式说法，常搭 rely on、provide。注意：它不等于祖辈完全取代父母抚养。",
+   "examples": [
+    {
+     "en": "In many Chinese dual-income families, grandparent childcare is the default arrangement rather than a backup plan.",
+     "zh": "在中国许多双职工家庭里，隔代养育是默认安排，而不是备用方案。"
+    },
+    {
+     "en": "Western families also use grandparent childcare, but usually for shorter hours and with fewer daily caregiving expectations.",
+     "zh": "西方家庭也会让祖辈帮忙带娃，但通常时间更短，日常照料的期待也更少。"
+    }
+   ],
+   "tags": [
+    "育儿养娃"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "grandparent childcare",
+   "pair": "en-zh",
+   "slug": "grandparent-childcare",
+   "lang": "en",
+   "translation": "隔代养育",
+   "shortAnswer": "Grandparent childcare 的中文是「隔代养育」，指祖父母日常帮忙照看孙辈。",
+   "definition": "grandparent childcare 多用于社会学与育儿政策语境，指祖辈作为托育资源，常与 rely on 连用。",
+   "examples": [
+    {
+     "en": "In many Chinese dual-income families, grandparent childcare is the default arrangement rather than a backup plan.",
+     "zh": "在中国许多双职工家庭里，隔代养育是默认安排，而不是备用方案。"
+    },
+    {
+     "en": "Western families also use grandparent childcare, but usually for shorter hours and with fewer daily caregiving expectations.",
+     "zh": "西方家庭也会让祖辈帮忙带娃，但通常时间更短，日常照料的期待也更少。"
+    }
+   ],
+   "tags": [
+    "育儿养娃"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "胎教",
+   "pair": "zh-en",
+   "slug": "tai-jiao",
+   "lang": "zh",
+   "translation": "prenatal education",
+   "shortAnswer": "「胎教」英文是 prenatal education，指孕期通过音乐、语言等刺激促进胎儿发育。",
+   "definition": "prenatal education 指胎教，即孕期给胎儿提供文化、音乐等良性刺激，区别于产检 prenatal care。",
+   "examples": [
+    {
+     "en": "Many parents believe prenatal education helps a baby's brain develop.",
+     "zh": "许多父母认为胎教有助于宝宝大脑发育。"
+    },
+    {
+     "en": "She played classical music daily as part of her prenatal education.",
+     "zh": "她每天播放古典音乐，作为胎教的一部分。"
+    }
+   ],
+   "tags": [
+    "育儿养娃"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "prenatal education",
+   "pair": "en-zh",
+   "slug": "prenatal-education",
+   "lang": "en",
+   "translation": "胎教",
+   "shortAnswer": "Prenatal education is 胎教 in Chinese: stimulating a fetus with music, talk, and touch before birth.",
+   "definition": "Prenatal education means 胎教: enriching a fetus with music, speech, and touch, not medical prenatal care.",
+   "examples": [
+    {
+     "en": "Many parents believe prenatal education helps a baby's brain develop.",
+     "zh": "许多父母认为胎教有助于宝宝大脑发育。"
+    },
+    {
+     "en": "She played classical music daily as part of her prenatal education.",
+     "zh": "她每天播放古典音乐，作为胎教的一部分。"
+    }
+   ],
+   "tags": [
+    "育儿养娃"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "鸡娃",
+   "pair": "zh-en",
+   "slug": "ji-wa",
+   "lang": "zh",
+   "translation": "intensive parenting",
+   "shortAnswer": "「鸡娃」常译 intensive parenting，指父母高强度投入资源推孩子抢跑竞争。",
+   "definition": "鸡娃是网络热词，指给孩子打鸡血式教育，英文常译 intensive parenting，媒体也用 jiwa。",
+   "examples": [
+    {
+     "en": "Many Chinese families practice intensive parenting, enrolling kids in math, English and piano before primary school.",
+     "zh": "许多中国家庭践行鸡娃式教育，孩子还没上小学就报了数学、英语和钢琴班。"
+    },
+    {
+     "en": "Intensive parenting captures the anxiety of parents competing to give their children an edge.",
+     "zh": "鸡娃式教育捕捉了父母争相让孩子抢跑的那种焦虑。"
+    }
+   ],
+   "tags": [
+    "育儿养娃"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "intensive parenting",
+   "pair": "en-zh",
+   "slug": "intensive-parenting",
+   "lang": "en",
+   "translation": "鸡娃",
+   "shortAnswer": "Intensive parenting is the English term for 「鸡娃」, a high-pressure, resource-heavy style.",
+   "definition": "Intensive parenting means investing heavily in a child's education and activities, often competitive. In Chinese it is 「鸡娃」.",
+   "examples": [
+    {
+     "en": "Many Chinese families practice intensive parenting, enrolling kids in math, English and piano before primary school.",
+     "zh": "许多中国家庭践行鸡娃式教育，孩子还没上小学就报了数学、英语和钢琴班。"
+    },
+    {
+     "en": "Intensive parenting captures the anxiety of parents competing to give their children an edge.",
+     "zh": "鸡娃式教育捕捉了父母争相让孩子抢跑的那种焦虑。"
+    }
+   ],
+   "tags": [
+    "育儿养娃"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "生育津贴",
+   "pair": "zh-en",
+   "slug": "sheng-yu-jin-tie",
+   "lang": "zh",
+   "translation": "maternity allowance",
+   "shortAnswer": "「生育津贴」英文是 maternity allowance，产假期间发放的现金补助。",
+   "definition": "maternity allowance 指产假期间由政府或雇主发放的现金补助，常与 claim、receive 等词搭配。",
+   "examples": [
+    {
+     "en": "She applied for a maternity allowance after her employer approved her maternity leave.",
+     "zh": "在雇主批准她的产假后，她申请了生育津贴。"
+    },
+    {
+     "en": "Maternity allowance is paid by the maternity insurance fund based on average salary.",
+     "zh": "生育津贴由生育保险基金根据平均工资发放。"
+    }
+   ],
+   "tags": [
+    "育儿养娃"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "maternity allowance",
+   "pair": "en-zh",
+   "slug": "maternity-allowance",
+   "lang": "en",
+   "translation": "生育津贴",
+   "shortAnswer": "maternity allowance 中文是「生育津贴」，即产假期间的现金补助。",
+   "definition": "maternity allowance 指产假期间发放的定期现金补贴，常见搭配 claim、receive、be eligible for。",
+   "examples": [
+    {
+     "en": "She applied for a maternity allowance after her employer approved her maternity leave.",
+     "zh": "在雇主批准她的产假后，她申请了生育津贴。"
+    },
+    {
+     "en": "Maternity allowance is paid by the maternity insurance fund based on average salary.",
+     "zh": "生育津贴由生育保险基金根据平均工资发放。"
+    }
+   ],
+   "tags": [
+    "育儿养娃"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "丰巢",
+   "pair": "zh-en",
+   "slug": "feng-chao",
+   "lang": "zh",
+   "translation": "Hive Box locker",
+   "shortAnswer": "「丰巢」的英文是 Hive Box locker，指小区和写字楼里的智能快递柜，常用于无接触取件。",
+   "definition": "Hive Box locker 指丰巢智能快递柜，用于暂存和自助取件，常见搭配有 drop off a parcel、collect a parcel。",
+   "examples": [
+    {
+     "en": "The courier left my package in a Hive Box locker because I wasn't home to receive it.",
+     "zh": "快递员把包裹放进了丰巢，因为我不在家收件。"
+    },
+    {
+     "en": "You can collect a parcel from the Hive Box locker by scanning the pickup code on your phone.",
+     "zh": "你可以用手机扫描取件码，从丰巢里取走包裹。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "Hive Box locker",
+   "pair": "en-zh",
+   "slug": "hive-box-locker",
+   "lang": "en",
+   "translation": "丰巢",
+   "shortAnswer": "Hive Box locker means 丰巢, a smart parcel locker brand in China, used for contactless parcel pickup.",
+   "definition": "Hive Box locker 即丰巢智能快递柜，常见于小区和写字楼，用于暂存包裹和自助取件，搭配 collect a parcel。",
+   "examples": [
+    {
+     "en": "The courier left my package in a Hive Box locker because I wasn't home to receive it.",
+     "zh": "快递员把包裹放进了丰巢，因为我不在家收件。"
+    },
+    {
+     "en": "You can collect a parcel from the Hive Box locker by scanning the pickup code on your phone.",
+     "zh": "你可以用手机扫描取件码，从丰巢里取走包裹。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "产假",
+   "pair": "zh-en",
+   "slug": "chan-jia",
+   "lang": "zh",
+   "translation": "maternity leave",
+   "shortAnswer": "「产假」的英文是 maternity leave，指职业女性因生育和产后恢复享有的法定休假，父亲对应的是 paternity leave。",
+   "definition": "maternity leave 指女性产前产后依法享有的带薪或不带薪休假，中国基础产假 98 天，各地多有奖励假。常见搭配：on maternity leave、take maternity leave。",
+   "examples": [
+    {
+     "en": "She is on maternity leave until the end of October and will be back at work in November.",
+     "zh": "她正在休产假，一直到十月底，十一月就会回来上班。"
+    },
+    {
+     "en": "Under Chinese law, new mothers are entitled to at least 98 days of maternity leave, plus extra days in many provinces.",
+     "zh": "根据中国法律，新手妈妈至少享有 98 天产假，许多省份还会额外延长。"
+    }
+   ],
+   "tags": [
+    "育儿养娃"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "maternity leave",
+   "pair": "en-zh",
+   "slug": "maternity-leave",
+   "lang": "en",
+   "translation": "产假",
+   "shortAnswer": "maternity leave 的中文意思是「产假」，即职业女性因生育和产后休养获得的法定休假，与父亲的陪产假 paternity leave 相对。",
+   "definition": "maternity leave 指女性员工生育前后依法享有的休假，通常带薪或部分带薪。常见搭配：be on maternity leave、go on maternity leave、maternity leave pay。",
+   "examples": [
+    {
+     "en": "She is on maternity leave until the end of October and will be back at work in November.",
+     "zh": "她正在休产假，一直到十月底，十一月就会回来上班。"
+    },
+    {
+     "en": "Under Chinese law, new mothers are entitled to at least 98 days of maternity leave, plus extra days in many provinces.",
+     "zh": "根据中国法律，新手妈妈至少享有 98 天产假，许多省份还会额外延长。"
+    }
+   ],
+   "tags": [
+    "育儿养娃"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "户口",
+   "pair": "zh-en",
+   "slug": "hu-kou",
+   "lang": "zh",
+   "translation": "household registration",
+   "shortAnswer": "「户口」的英文是 household registration，指中国按家庭登记人口、绑定福利与入学资格的户籍制度。注意别直译成 account 或 hukou 当普通名词用。",
+   "definition": "常用搭配：household registration system（户籍制度）、have/obtain local household registration。口语里也直接音译作 hukou，但正式英文写作仍推荐 household registration。",
+   "examples": [
+    {
+     "en": "Without local household registration, their child may not be able to attend the nearby public school.",
+     "zh": "没有本地户口，他们的孩子可能上不了附近的公立学校。"
+    },
+    {
+     "en": "The couple decided to move back to their hometown so the baby could get household registration there.",
+     "zh": "这对夫妻决定搬回老家，好让宝宝在那里办户口。"
+    }
+   ],
+   "tags": [
+    "育儿养娃"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "household registration",
+   "pair": "en-zh",
+   "slug": "household-registration",
+   "lang": "en",
+   "translation": "户口",
+   "shortAnswer": "Household registration 的中文意思是「户口」，指中国按家庭登记人口、并据此分配教育医疗等权益的户籍制度。它与 census（人口普查）不同，是长期身份登记而非统计。",
+   "definition": "常见搭配：household registration system、apply for household registration。正式场合多用全称，口语和媒体报道中常直接写作 hukou，两者指向同一制度，不可与 residence permit 混用。",
+   "examples": [
+    {
+     "en": "Without local household registration, their child may not be able to attend the nearby public school.",
+     "zh": "没有本地户口，他们的孩子可能上不了附近的公立学校。"
+    },
+    {
+     "en": "The couple decided to move back to their hometown so the baby could get household registration there.",
+     "zh": "这对夫妻决定搬回老家，好让宝宝在那里办户口。"
+    }
+   ],
+   "tags": [
+    "育儿养娃"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "菜鸟驿站",
+   "pair": "zh-en",
+   "slug": "cai-niao-yi-zhan",
+   "lang": "zh",
+   "translation": "parcel pickup station",
+   "shortAnswer": "「菜鸟驿站」的英文是 parcel pickup station，指社区包裹代收点，供收件人自提。",
+   "definition": "parcel pickup station 是「菜鸟驿站」的标准英译，指有人工值守的社区包裹代收点，收件人凭取件码自提。",
+   "examples": [
+    {
+     "en": "The courier left my package at the parcel pickup station, so I need to collect it after work.",
+     "zh": "快递员把我的包裹放在了菜鸟驿站，所以我下班后要去取。"
+    },
+    {
+     "en": "If you are not home, you can redirect the delivery to a nearby parcel pickup station for pickup.",
+     "zh": "如果你不在家，可以把派送改到附近的菜鸟驿站进行取件。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "parcel pickup station",
+   "pair": "en-zh",
+   "slug": "parcel-pickup-station",
+   "lang": "en",
+   "translation": "菜鸟驿站",
+   "shortAnswer": "A parcel pickup station is a「菜鸟驿站」, a staffed community counter for parcel self-pickup.",
+   "definition": "parcel pickup station means「菜鸟驿站」: a staffed community counter where couriers leave parcels for self-pickup, not a locker.",
+   "examples": [
+    {
+     "en": "The courier left my package at the parcel pickup station, so I need to collect it after work.",
+     "zh": "快递员把我的包裹放在了菜鸟驿站，所以我下班后要去取。"
+    },
+    {
+     "en": "If you are not home, you can redirect the delivery to a nearby parcel pickup station for pickup.",
+     "zh": "如果你不在家，可以把派送改到附近的菜鸟驿站进行取件。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "顺丰",
+   "pair": "zh-en",
+   "slug": "shun-feng",
+   "lang": "zh",
+   "translation": "SF Express",
+   "shortAnswer": "「顺丰」的英文是 SF Express。品牌名 SF 保留不译，注意它指顺丰速运这家高端快递公司，不要写成 Shunfeng。",
+   "definition": "SF Express 专指顺丰速运，主打航空件与半日达。常见搭配：ship via SF Express（用顺丰寄）、SF Express collect（顺丰揽收）、SF Express delivers（顺丰派件）。与四通一达的电商件分层，顺丰=贵但快。",
+   "examples": [
+    {
+     "en": "I need to ship this document to Beijing before noon, so I'll use SF Express for half-day delivery.",
+     "zh": "我需要中午前把这份文件寄到北京，所以我会用顺丰寄，走半日达。"
+    },
+    {
+     "en": "The seller sent the package via SF Express collect, and it arrived the next day.",
+     "zh": "卖家通过顺丰揽收寄出了包裹，第二天就到了。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "SF Express",
+   "pair": "en-zh",
+   "slug": "sf-express",
+   "lang": "en",
+   "translation": "顺丰",
+   "shortAnswer": "SF Express 的中文意思是「顺丰」。它特指顺丰速运这家中国高端快递公司，不是普通快递的通称。",
+   "definition": "SF Express 是顺丰速运的英文品牌名，SF 保留不译。常见搭配：send by SF Express、SF Express tracking number。多用于正式或指定快递的场合；易错点：它不等于 generic courier，不要泛指所有快递。",
+   "examples": [
+    {
+     "en": "I need to ship this document to Beijing before noon, so I'll use SF Express for half-day delivery.",
+     "zh": "我需要中午前把这份文件寄到北京，所以我会用顺丰寄，走半日达。"
+    },
+    {
+     "en": "The seller sent the package via SF Express collect, and it arrived the next day.",
+     "zh": "卖家通过顺丰揽收寄出了包裹，第二天就到了。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "平邮",
+   "pair": "zh-en",
+   "slug": "ping-you",
+   "lang": "zh",
+   "translation": "surface mail",
+   "shortAnswer": "「平邮」的英文是 surface mail，走海运或陆运的普通慢速邮件，比 airmail 便宜但慢。",
+   "definition": "surface mail 指走海运或陆路的普通邮件，邮费低、时效慢，通常无追踪，急件应选航空或快递。",
+   "examples": [
+    {
+     "en": "If you want to save money, you can send the books by surface mail; they will take about six weeks to arrive.",
+     "zh": "如果想省钱，你可以用平邮寄这些书，大约六周才能到。"
+    },
+    {
+     "en": "The parcel was shipped by surface mail, so it has no tracking number and cannot be delivered any faster.",
+     "zh": "这个包裹走的是平邮，所以没有追踪单号，也没法更快派送。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "surface mail",
+   "pair": "en-zh",
+   "slug": "surface-mail",
+   "lang": "en",
+   "translation": "平邮",
+   "shortAnswer": "surface mail 的中文意思是「平邮」，即走海运或陆运的慢速邮件，比 airmail 便宜。",
+   "definition": "surface mail 是不可数名词，常见搭配有 by surface mail、surface mail rate，时效按周计，多用于不急的国际包裹。",
+   "examples": [
+    {
+     "en": "If you want to save money, you can send the books by surface mail; they will take about six weeks to arrive.",
+     "zh": "如果想省钱，你可以用平邮寄这些书，大约六周才能到。"
+    },
+    {
+     "en": "The parcel was shipped by surface mail, so it has no tracking number and cannot be delivered any faster.",
+     "zh": "这个包裹走的是平邮，所以没有追踪单号，也没法更快派送。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "派件",
+   "pair": "zh-en",
+   "slug": "pai-jian",
+   "lang": "zh",
+   "translation": "deliver a parcel",
+   "shortAnswer": "「派件」的英文是 deliver a parcel，指快递员把包裹送到收件人手中，注意区分揽收和派件。",
+   "definition": "派件指快递末端配送，常见搭配：deliver a parcel to sb（把包裹派送给某人）、out for delivery（派件中），与揽收相对。",
+   "examples": [
+    {
+     "en": "The courier will deliver a parcel to your doorstep this afternoon.",
+     "zh": "快递员今天下午会把包裹派送到你家门口。"
+    },
+    {
+     "en": "If you miss the delivery, you can reschedule to have them deliver a parcel another day.",
+     "zh": "如果你错过了派件，可以改约让他们另一天再派送包裹。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "deliver a parcel",
+   "pair": "en-zh",
+   "slug": "deliver-a-parcel",
+   "lang": "en",
+   "translation": "派件",
+   "shortAnswer": "Deliver a parcel means 派件 in Chinese, referring to a courier taking a package to the recipient.",
+   "definition": "Deliver a parcel is used when a courier brings a package to the recipient's address, the final leg of shipping.",
+   "examples": [
+    {
+     "en": "The courier will deliver a parcel to your doorstep this afternoon.",
+     "zh": "快递员今天下午会把包裹派送到你家门口。"
+    },
+    {
+     "en": "If you miss the delivery, you can reschedule to have them deliver a parcel another day.",
+     "zh": "如果你错过了派件，可以改约让他们另一天再派送包裹。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "菜鸟裹裹",
+   "pair": "zh-en",
+   "slug": "cai-niao-guo-guo",
+   "lang": "zh",
+   "translation": "parcel tracking app",
+   "shortAnswer": "菜鸟裹裹英文说 parcel tracking app，指菜鸟网络的快递查询与代收应用。",
+   "definition": "菜鸟裹裹是菜鸟网络旗下快递查询与代收平台，英文常说 Cai Niao Guo Guo, a parcel tracking app。查快递、取件码、驿站是常见搭配。",
+   "examples": [
+    {
+     "en": "I use a parcel tracking app to check where my package is, and it even sends a pickup code for the local station.",
+     "zh": "我用菜鸟裹裹查包裹到哪了，它还会发驿站的取件码。"
+    },
+    {
+     "en": "If you ship items to China often, install a parcel tracking app so you can follow consolidated shipping and contactless delivery updates.",
+     "zh": "如果你经常往中国寄东西，装个菜鸟裹裹就能跟进集运和无接触配送的更新。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "parcel tracking app",
+   "pair": "en-zh",
+   "slug": "parcel-tracking-app",
+   "lang": "en",
+   "translation": "菜鸟裹裹",
+   "shortAnswer": "parcel tracking app 对应中文菜鸟裹裹，指菜鸟网络推出的快递查询与代收应用。",
+   "definition": "parcel tracking app 指查询包裹物流轨迹的应用，常见搭配 track a parcel、pickup code、delivery notification，泛指时用 package tracking app。",
+   "examples": [
+    {
+     "en": "I use a parcel tracking app to check where my package is, and it even sends a pickup code for the local station.",
+     "zh": "我用菜鸟裹裹查包裹到哪了，它还会发驿站的取件码。"
+    },
+    {
+     "en": "If you ship items to China often, install a parcel tracking app so you can follow consolidated shipping and contactless delivery updates.",
+     "zh": "如果你经常往中国寄东西，装个菜鸟裹裹就能跟进集运和无接触配送的更新。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "揽收",
+   "pair": "zh-en",
+   "slug": "lan-shou",
+   "lang": "zh",
+   "translation": "collect a parcel",
+   "shortAnswer": "「揽收」的英文是 collect a parcel，指快递员从寄件人处取件并录入系统，注意与派件方向相反。",
+   "definition": "揽收是快递流程的起点，英文常用 collect a parcel 或 pick up a parcel；常见搭配：快递员揽收、上门揽收、已揽收。与派件（deliver a parcel）方向相反，写物流状态时不要混用。",
+   "examples": [
+    {
+     "en": "The courier will collect a parcel from your home tomorrow morning, so please have it packed and the shipping label printed.",
+     "zh": "快递员明天上午会上门揽收，请提前打包好包裹并打印好面单。"
+    },
+    {
+     "en": "Your order has been collected by the courier and is now on the way to the sorting center; you can track it with the tracking number.",
+     "zh": "您的订单已被快递员揽收，正在发往分拣中心，您可以用运单号追踪。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "collect a parcel",
+   "pair": "en-zh",
+   "slug": "collect-a-parcel",
+   "lang": "en",
+   "translation": "揽收",
+   "shortAnswer": "「collect a parcel」的中文意思是「揽收」，即快递员从寄件人处取走包裹。",
+   "definition": "collect a parcel 指快递员上门从寄件人处取件并录入系统，常见于物流追踪状态。英式英语常用 collect，美式口语也说 pick up a parcel；注意它不等于 deliver a parcel（派件）。",
+   "examples": [
+    {
+     "en": "The courier will collect a parcel from your home tomorrow morning, so please have it packed and the shipping label printed.",
+     "zh": "快递员明天上午会上门揽收，请提前打包好包裹并打印好面单。"
+    },
+    {
+     "en": "Your order has been collected by the courier and is now on the way to the sorting center; you can track it with the tracking number.",
+     "zh": "您的订单已被快递员揽收，正在发往分拣中心，您可以用运单号追踪。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "上门取件",
+   "pair": "zh-en",
+   "slug": "shang-men-qu-jian",
+   "lang": "zh",
+   "translation": "door pickup",
+   "shortAnswer": "「上门取件」的英文是 door pickup，指快递员上门揽收包裹，与 drop-off 相反。",
+   "definition": "door pickup 用于寄件场景，常搭配 schedule a door pickup（预约上门取件）、free door pickup。",
+   "examples": [
+    {
+     "en": "I scheduled a door pickup for my return package, so the courier will come to my apartment tomorrow morning.",
+     "zh": "我预约了退货包裹的上门取件，所以快递员明天早上会来我公寓。"
+    },
+    {
+     "en": "Does this store offer free door pickup for heavy items? I don't want to carry them to the courier station.",
+     "zh": "这家店对大件商品提供免费上门取件吗？我不想自己搬到快递驿站。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "door pickup",
+   "pair": "en-zh",
+   "slug": "door-pickup",
+   "lang": "en",
+   "translation": "上门取件",
+   "shortAnswer": "Door pickup means 上门取件, a courier collecting your parcel, the opposite of drop-off.",
+   "definition": "Door pickup is a logistics term for a courier coming to collect your parcel at home or office, common in returns.",
+   "examples": [
+    {
+     "en": "I scheduled a door pickup for my return package, so the courier will come to my apartment tomorrow morning.",
+     "zh": "我预约了退货包裹的上门取件，所以快递员明天早上会来我公寓。"
+    },
+    {
+     "en": "Does this store offer free door pickup for heavy items? I don't want to carry them to the courier station.",
+     "zh": "这家店对大件商品提供免费上门取件吗？我不想自己搬到快递驿站。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "转运",
+   "pair": "zh-en",
+   "slug": "zhuan-yun",
+   "lang": "zh",
+   "translation": "package forwarding",
+   "shortAnswer": "「转运」的英文是 package forwarding，指把包裹转寄到别处，强调转寄而非合并。",
+   "definition": "package forwarding 指把包裹转寄到另一地址，常用于海外购物代收；若合并多包裹发货则说 consolidated shipping。",
+   "examples": [
+    {
+     "en": "I used a package forwarding service to send my online orders from the US to Shanghai.",
+     "zh": "我用转运服务把网购的东西从美国寄到了上海。"
+    },
+    {
+     "en": "Before choosing a package forwarding company, check how they handle declared value and return shipping.",
+     "zh": "选择转运公司之前，先了解他们如何处理保价和退货运费。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "package forwarding",
+   "pair": "en-zh",
+   "slug": "package-forwarding",
+   "lang": "en",
+   "translation": "转运",
+   "shortAnswer": "Package forwarding means 转运: reshipping a parcel to another address.",
+   "definition": "Package forwarding is reshipping a parcel to a different address, often abroad; it differs from consolidated shipping.",
+   "examples": [
+    {
+     "en": "I used a package forwarding service to send my online orders from the US to Shanghai.",
+     "zh": "我用转运服务把网购的东西从美国寄到了上海。"
+    },
+    {
+     "en": "Before choosing a package forwarding company, check how they handle declared value and return shipping.",
+     "zh": "选择转运公司之前，先了解他们如何处理保价和退货运费。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "保价",
+   "pair": "zh-en",
+   "slug": "bao-jia",
+   "lang": "zh",
+   "translation": "declared parcel value",
+   "shortAnswer": "「保价」的英文是 declared parcel value，即寄件时声明包裹价值并付保价费。",
+   "definition": "常见搭配：declare a parcel value（为包裹保价）。注意与保险 insurance、报关申报价值区分。",
+   "examples": [
+    {
+     "en": "Please fill in the declared parcel value on the shipping label before handing the package to the courier.",
+     "zh": "把包裹交给快递员之前，请在面单上填写保价金额。"
+    },
+    {
+     "en": "If you set a declared parcel value, the carrier will compensate you based on that amount when the parcel is lost or damaged.",
+     "zh": "如果你做了保价，包裹丢失或损坏时，快递公司会按声明价值赔偿。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "declared parcel value",
+   "pair": "en-zh",
+   "slug": "declared-parcel-value",
+   "lang": "en",
+   "translation": "保价",
+   "shortAnswer": "declared parcel value means 保价, the parcel value you declare for compensation.",
+   "definition": "The value a sender declares for a parcel, which couriers use to set 保价 fees and pay compensation.",
+   "examples": [
+    {
+     "en": "Please fill in the declared parcel value on the shipping label before handing the package to the courier.",
+     "zh": "把包裹交给快递员之前，请在面单上填写保价金额。"
+    },
+    {
+     "en": "If you set a declared parcel value, the carrier will compensate you based on that amount when the parcel is lost or damaged.",
+     "zh": "如果你做了保价，包裹丢失或损坏时，快递公司会按声明价值赔偿。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "面单",
+   "pair": "zh-en",
+   "slug": "mian-dan",
+   "lang": "zh",
+   "translation": "shipping label",
+   "shortAnswer": "「面单」英文是 shipping label，指贴在包裹上的运单标签，侧重物流运输单据。",
+   "definition": "面单指快递包裹外贴的运单标签，含收发件人、条码和路由信息，英文常说 shipping label。搭配：打印面单、贴面单。",
+   "examples": [
+    {
+     "en": "Please print a shipping label and attach it to the parcel before dropping it off at the courier station.",
+     "zh": "寄件前请打印面单并贴在包裹上，然后放到快递驿站。"
+    },
+    {
+     "en": "The seller provided a prepaid shipping label for the return, so I didn't pay for shipping.",
+     "zh": "卖家提供了预付费退货运单（面单），所以我没有付退货运费。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "shipping label",
+   "pair": "en-zh",
+   "slug": "shipping-label",
+   "lang": "en",
+   "translation": "面单",
+   "shortAnswer": "shipping label 中文意思是「面单」，即贴在包裹上的运单标签，侧重实际标签。",
+   "definition": "shipping label 指快递包裹上的运输标签，含地址、条码、追踪号。搭配：print a shipping label、return shipping label。",
+   "examples": [
+    {
+     "en": "Please print a shipping label and attach it to the parcel before dropping it off at the courier station.",
+     "zh": "寄件前请打印面单并贴在包裹上，然后放到快递驿站。"
+    },
+    {
+     "en": "The seller provided a prepaid shipping label for the return, so I didn't pay for shipping.",
+     "zh": "卖家提供了预付费退货运单（面单），所以我没有付退货运费。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "集运",
+   "pair": "zh-en",
+   "slug": "ji-yun",
+   "lang": "zh",
+   "translation": "consolidated shipping",
+   "shortAnswer": "「集运」的英文是 consolidated shipping，指把多个包裹合并成一批统一发运，常用于跨境网购。",
+   "definition": "consolidated shipping 指将多个包裹合并成一批统一发运的物流方式，可节省运费，常见于跨境网购与代购。",
+   "examples": [
+    {
+     "en": "The shopping agent offers consolidated shipping, so my orders from different sellers arrived in one box.",
+     "zh": "这家代购提供集运服务，所以我从不同卖家买的东西装在一个箱子里寄到了。"
+    },
+    {
+     "en": "If you choose consolidated shipping, the warehouse will hold your parcels and send them together to cut costs.",
+     "zh": "如果你选择集运，仓库会先保管你的包裹，再合并发出以节省运费。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "consolidated shipping",
+   "pair": "en-zh",
+   "slug": "consolidated-shipping",
+   "lang": "en",
+   "translation": "集运",
+   "shortAnswer": "Consolidated shipping means 集运, combining several parcels into one shipment to save on costs.",
+   "definition": "Consolidated shipping is a logistics method that merges multiple parcels into one shipment, often used in cross-border e-commerce.",
+   "examples": [
+    {
+     "en": "The shopping agent offers consolidated shipping, so my orders from different sellers arrived in one box.",
+     "zh": "这家代购提供集运服务，所以我从不同卖家买的东西装在一个箱子里寄到了。"
+    },
+    {
+     "en": "If you choose consolidated shipping, the warehouse will hold your parcels and send them together to cut costs.",
+     "zh": "如果你选择集运，仓库会先保管你的包裹，再合并发出以节省运费。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "外卖骑手",
+   "pair": "zh-en",
+   "slug": "wai-mai-qi-shou",
+   "lang": "zh",
+   "translation": "food delivery rider",
+   "shortAnswer": "「外卖骑手」的英文是 food delivery rider，指骑电动车或摩托车送餐的人。注意 rider 强调骑行送单，若泛指平台送餐员也可说 delivery driver。",
+   "definition": "常见搭配：work as a food delivery rider（当外卖骑手）、a food delivery rider on a scooter（骑电动车的外卖骑手）。rider 侧重骑行，driver 多指开车，送餐语境两者都可，但 rider 更贴切。",
+   "examples": [
+    {
+     "en": "He works as a food delivery rider to pay for his college tuition.",
+     "zh": "他做外卖骑手来赚大学学费。"
+    },
+    {
+     "en": "A food delivery rider on an electric scooter pulled up at the gate and handed me my noodles.",
+     "zh": "一个骑电动车的外卖骑手停在门口，把我的面递给了我。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "food delivery rider",
+   "pair": "en-zh",
+   "slug": "food-delivery-rider",
+   "lang": "en",
+   "translation": "外卖骑手",
+   "shortAnswer": "food delivery rider 的中文意思是「外卖骑手」，即骑车送外卖的人。与 delivery driver 的区别在于 rider 强调骑行送单，后者多指开车配送。",
+   "definition": "核心词义为送餐骑手，常见于 work as a food delivery rider、a food delivery rider on a scooter 等搭配。口语中也说 delivery guy，正式书面语用 rider 更准确。",
+   "examples": [
+    {
+     "en": "He works as a food delivery rider to pay for his college tuition.",
+     "zh": "他做外卖骑手来赚大学学费。"
+    },
+    {
+     "en": "A food delivery rider on an electric scooter pulled up at the gate and handed me my noodles.",
+     "zh": "一个骑电动车的外卖骑手停在门口，把我的面递给了我。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "大件物流",
+   "pair": "zh-en",
+   "slug": "da-jian-wu-liu",
+   "lang": "zh",
+   "translation": "bulky item shipping",
+   "shortAnswer": "大件物流即 bulky item shipping，指家具、家电等超规重货的运输，需预约揽收与特殊搬运。",
+   "definition": "大件物流英文为 bulky item shipping，指体积或重量超常规的货物运输，常需预约上门和专线配送。",
+   "examples": [
+    {
+     "en": "For furniture and appliances, choose bulky item shipping instead of standard parcel delivery.",
+     "zh": "家具和家电应选择大件物流，而非普通快递。"
+    },
+    {
+     "en": "The store offers bulky item shipping with scheduled home delivery and assembly.",
+     "zh": "这家店提供大件物流，可预约送货上门并含安装服务。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "bulky item shipping",
+   "pair": "en-zh",
+   "slug": "bulky-item-shipping",
+   "lang": "en",
+   "translation": "大件物流",
+   "shortAnswer": "Bulky item shipping is 大件物流—moving oversized, heavy goods like furniture, needing special handling.",
+   "definition": "Bulky item shipping means 大件物流: transporting oversized or heavy goods such as furniture and appliances, requiring special handling.",
+   "examples": [
+    {
+     "en": "For furniture and appliances, choose bulky item shipping instead of standard parcel delivery.",
+     "zh": "家具和家电应选择大件物流，而非普通快递。"
+    },
+    {
+     "en": "The store offers bulky item shipping with scheduled home delivery and assembly.",
+     "zh": "这家店提供大件物流，可预约送货上门并含安装服务。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "闪送",
+   "pair": "zh-en",
+   "slug": "shan-song",
+   "lang": "zh",
+   "translation": "instant courier",
+   "shortAnswer": "「闪送」的英文是 instant courier，指同城即时专人直送服务，区别于普通快递 express delivery。",
+   "definition": "instant courier 指同城即时专人直送，不经中转分拣。搭配：order an instant courier（叫闪送）。易与普通快递 express delivery 混用。",
+   "examples": [
+    {
+     "en": "I forgot my passport at home, so I booked an instant courier to bring it to the airport within an hour.",
+     "zh": "我把护照忘在家里了，所以叫了闪送，一小时内送到机场。"
+    },
+    {
+     "en": "For urgent documents, an instant courier is faster than regular express delivery because it goes straight from sender to recipient.",
+     "zh": "对于紧急文件，闪送比普通快递更快，因为它从发件人直接送到收件人。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "instant courier",
+   "pair": "en-zh",
+   "slug": "instant-courier",
+   "lang": "en",
+   "translation": "闪送",
+   "shortAnswer": "instant courier 的中文意思是「闪送」，指同城专人直送、点对点取派的即时配送服务。",
+   "definition": "instant courier: same-city, point-to-point delivery by a dedicated courier, with no sorting hub. Often contrasted with express delivery.",
+   "examples": [
+    {
+     "en": "I forgot my passport at home, so I booked an instant courier to bring it to the airport within an hour.",
+     "zh": "我把护照忘在家里了，所以叫了闪送，一小时内送到机场。"
+    },
+    {
+     "en": "For urgent documents, an instant courier is faster than regular express delivery because it goes straight from sender to recipient.",
+     "zh": "对于紧急文件，闪送比普通快递更快，因为它从发件人直接送到收件人。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "代收点",
+   "pair": "zh-en",
+   "slug": "dai-shou-dian",
+   "lang": "zh",
+   "translation": "parcel collection point",
+   "shortAnswer": "代收点的英文是 parcel collection point，指快递暂存后由收件人自取的站点。",
+   "definition": "常见搭配：pick up a parcel at a collection point（在代收点取件）。易错：不要译为 delivery point 或 drop-off point。",
+   "examples": [
+    {
+     "en": "If you missed the delivery, you can pick up your parcel at the nearest parcel collection point.",
+     "zh": "如果你错过了派件，可以去最近的代收点取包裹。"
+    },
+    {
+     "en": "The courier left a note saying my parcel collection point is open until 9 p.m.",
+     "zh": "快递员留了张字条，说我的代收点晚上九点前都开门。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "parcel collection point",
+   "pair": "en-zh",
+   "slug": "parcel-collection-point",
+   "lang": "en",
+   "translation": "代收点",
+   "shortAnswer": "parcel collection point 的中文意思是“代收点”，即包裹暂存供收件人自取的站点。",
+   "definition": "核心词义：a place where parcels are left for customers to collect。常见搭配：nearest parcel collection point。",
+   "examples": [
+    {
+     "en": "If you missed the delivery, you can pick up your parcel at the nearest parcel collection point.",
+     "zh": "如果你错过了派件，可以去最近的代收点取包裹。"
+    },
+    {
+     "en": "The courier left a note saying my parcel collection point is open until 9 p.m.",
+     "zh": "快递员留了张字条，说我的代收点晚上九点前都开门。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "包邮区",
+   "pair": "zh-en",
+   "slug": "bao-you-qu",
+   "lang": "zh",
+   "translation": "free shipping zone",
+   "shortAnswer": "「包邮区」英文常说 free shipping zone，指江浙沪等电商默认包邮的核心地带。注意它说的是地域，不是「满额免邮」。",
+   "definition": "free shipping zone 专指因物流密度高而整片区域默认包邮，如江浙沪；西方多是满额免邮，属消费门槛而非地域概念，搭配 in the free shipping zone。",
+   "examples": [
+    {
+     "en": "My hometown is in the free shipping zone, so I rarely pay for delivery when shopping online.",
+     "zh": "我老家在包邮区，所以网购时基本不用付运费。"
+    },
+    {
+     "en": "Sellers often advertise that their products ship free to the free shipping zone within a day.",
+     "zh": "卖家常宣传商品发往包邮区可一日送达且免运费。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "free shipping zone",
+   "pair": "en-zh",
+   "slug": "free-shipping-zone",
+   "lang": "en",
+   "translation": "包邮区",
+   "shortAnswer": "free shipping zone 中文叫「包邮区」，指中国电商因物流密集而整片地区默认包邮。它强调地域红利，不是西方那种满额免邮。",
+   "definition": "free shipping zone 指物流基建带来整片区域包邮，如江浙沪；常与 live in、ship to 搭配。西方免邮多按消费门槛，不用此词表示。口语也可说 within the free shipping area。",
+   "examples": [
+    {
+     "en": "My hometown is in the free shipping zone, so I rarely pay for delivery when shopping online.",
+     "zh": "我老家在包邮区，所以网购时基本不用付运费。"
+    },
+    {
+     "en": "Sellers often advertise that their products ship free to the free shipping zone within a day.",
+     "zh": "卖家常宣传商品发往包邮区可一日送达且免运费。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "超区",
+   "pair": "zh-en",
+   "slug": "chao-qu",
+   "lang": "zh",
+   "translation": "out of delivery zone",
+   "shortAnswer": "「超区」的英文是 out of delivery zone，指收件地址不在快递派送范围内。它强调不派送，不是丢件。",
+   "definition": "常见搭配：地址 out of delivery zone、包裹退回或转第三方派件。与 remote area（偏远地区）不同，超区强调需自提或改址。",
+   "examples": [
+    {
+     "en": "Your parcel is out of delivery zone, so please pick it up at the nearest courier station or update your address.",
+     "zh": "您的包裹超区，请到最近的快递驿站自提，或更新收件地址。"
+    },
+    {
+     "en": "We're sorry, but this address is out of delivery zone and the package will be returned to the sender.",
+     "zh": "很抱歉，该地址超区，包裹将被退回给寄件人。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "out of delivery zone",
+   "pair": "en-zh",
+   "slug": "out-of-delivery-zone",
+   "lang": "en",
+   "translation": "超区",
+   "shortAnswer": "「out of delivery zone」的中文意思是「超区」，即地址超出快递派送范围，需自提或改址。",
+   "definition": "快递物流用语，用于客服通知或追踪。搭配：be out of delivery zone、an out-of-delivery-zone address。",
+   "examples": [
+    {
+     "en": "Your parcel is out of delivery zone, so please pick it up at the nearest courier station or update your address.",
+     "zh": "您的包裹超区，请到最近的快递驿站自提，或更新收件地址。"
+    },
+    {
+     "en": "We're sorry, but this address is out of delivery zone and the package will be returned to the sender.",
+     "zh": "很抱歉，该地址超区，包裹将被退回给寄件人。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "补发",
+   "pair": "zh-en",
+   "slug": "bu-fa",
+   "lang": "zh",
+   "translation": "reship the order",
+   "shortAnswer": "「补发」的英文是 reship the order，即重新寄出原订单，多因包裹丢失或损坏，由卖家免费重寄。",
+   "definition": "补发指卖家重新寄出同一订单商品，常见搭配 request a reship（申请补发）、reship the order for free（免费补发）。注意与换货不同。",
+   "examples": [
+    {
+     "en": "The tracking shows the parcel was lost, so we will reship the order for free.",
+     "zh": "物流显示包裹丢失，所以我们将免费补发该订单。"
+    },
+    {
+     "en": "If the item arrives damaged, contact us and we'll reship the order to the same address.",
+     "zh": "如果商品到货时损坏，请联系我们，我们会补发到原地址。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "reship the order",
+   "pair": "en-zh",
+   "slug": "reship-the-order",
+   "lang": "en",
+   "translation": "补发",
+   "shortAnswer": "reship the order 中文意思是「补发」，即重新寄出同一订单，通常在原包裹丢失或损坏后由卖家免费办理。",
+   "definition": "reship the order 指卖家重新发出同一订单商品。搭配：reship the order for free、reship the order to the same address，常见于客服物流邮件。",
+   "examples": [
+    {
+     "en": "The tracking shows the parcel was lost, so we will reship the order for free.",
+     "zh": "物流显示包裹丢失，所以我们将免费补发该订单。"
+    },
+    {
+     "en": "If the item arrives damaged, contact us and we'll reship the order to the same address.",
+     "zh": "如果商品到货时损坏，请联系我们，我们会补发到原地址。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "退货运费险",
+   "pair": "zh-en",
+   "slug": "tui-huo-yun-fei-xian",
+   "lang": "zh",
+   "translation": "return shipping insurance",
+   "shortAnswer": "「退货运费险」就是 return shipping insurance，退货时赔付运费的电商小保险。",
+   "definition": "指电商退货时补贴运费的保险，英文固定说 return shipping insurance，不要说成 freight。",
+   "examples": [
+    {
+     "en": "I always add return shipping insurance when I buy clothes online, because returning the wrong size costs more than the insurance itself.",
+     "zh": "我在网上买衣服时总会加购退货运费险，因为退错尺码的运费比保费还贵。"
+    },
+    {
+     "en": "The seller offered return shipping insurance, so I sent the parcel back through the courier without paying for postage.",
+     "zh": "卖家提供了退货运费险，所以我通过快递把包裹退回时没有自己付运费。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "return shipping insurance",
+   "pair": "en-zh",
+   "slug": "return-shipping-insurance",
+   "lang": "en",
+   "translation": "退货运费险",
+   "shortAnswer": "Return shipping insurance, 退货运费险 in Chinese, covers return postage in e-commerce.",
+   "definition": "A low-cost policy that repays return postage on e-commerce orders; say return shipping insurance, not return freight.",
+   "examples": [
+    {
+     "en": "I always add return shipping insurance when I buy clothes online, because returning the wrong size costs more than the insurance itself.",
+     "zh": "我在网上买衣服时总会加购退货运费险，因为退错尺码的运费比保费还贵。"
+    },
+    {
+     "en": "The seller offered return shipping insurance, so I sent the parcel back through the courier without paying for postage.",
+     "zh": "卖家提供了退货运费险，所以我通过快递把包裹退回时没有自己付运费。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "跑腿",
+   "pair": "zh-en",
+   "slug": "pao-tui",
+   "lang": "zh",
+   "translation": "errand running service",
+   "shortAnswer": "「跑腿」的英文是 errand running service，指替人处理取送、代买等杂事的服务。比 courier service 更广，不只是送包裹，还包括代办事务。",
+   "definition": "常见搭配：run errands for sb、use an errand running service。与 delivery service 不同，跑腿还可代买、代排队、代取件；同城急送可称 local errand service。",
+   "examples": [
+    {
+     "en": "If you are too busy to pick up your parcel, you can use an errand running service to collect it for you.",
+     "zh": "如果你太忙没时间取包裹，可以用跑腿服务帮你代取。"
+    },
+    {
+     "en": "Many students in China rely on an errand running service to buy groceries and deliver packages on campus.",
+     "zh": "中国很多学生依赖跑腿服务在校园里代买日用品和送包裹。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "errand running service",
+   "pair": "en-zh",
+   "slug": "errand-running-service",
+   "lang": "en",
+   "translation": "跑腿",
+   "shortAnswer": "Errand running service 的中文意思是「跑腿」，指替人完成取送、代买等杂事的服务。它比 courier service 范围更广，不只送包裹，还包括代办事务。",
+   "definition": "Errand running service 指代人处理日常杂事的服务，常见搭配有 offer/provide an errand running service。偏生活化，物流语境下常与同城急送、代取快递相关。",
+   "examples": [
+    {
+     "en": "If you are too busy to pick up your parcel, you can use an errand running service to collect it for you.",
+     "zh": "如果你太忙没时间取包裹，可以用跑腿服务帮你代取。"
+    },
+    {
+     "en": "Many students in China rely on an errand running service to buy groceries and deliver packages on campus.",
+     "zh": "中国很多学生依赖跑腿服务在校园里代买日用品和送包裹。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "半日达",
+   "pair": "zh-en",
+   "slug": "ban-ri-da",
+   "lang": "zh",
+   "translation": "half-day delivery",
+   "shortAnswer": "「半日达」的英文是 half-day delivery，指包裹在半日内送达的快递时效服务。",
+   "definition": "作名词，常见搭配有 offer half-day delivery、half-day delivery service。多用于电商物流语境。",
+   "examples": [
+    {
+     "en": "This online store offers half-day delivery for orders placed before 11 a.m. in major cities.",
+     "zh": "这家网店在主要城市为上午十一点前下的订单提供半日达服务。"
+    },
+    {
+     "en": "If you choose half-day delivery at checkout, the courier will deliver your parcel within the same half-day window.",
+     "zh": "如果你在结算时选择半日达，快递员会在同一个半日时段内送达包裹。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "half-day delivery",
+   "pair": "en-zh",
+   "slug": "half-day-delivery",
+   "lang": "en",
+   "translation": "半日达",
+   "shortAnswer": "half-day delivery 的中文意思是「半日达」，指包裹在半日内送达的快递服务。",
+   "definition": "A delivery service completing within half a day. Common with half-day delivery option, fee, or service.",
+   "examples": [
+    {
+     "en": "This online store offers half-day delivery for orders placed before 11 a.m. in major cities.",
+     "zh": "这家网店在主要城市为上午十一点前下的订单提供半日达服务。"
+    },
+    {
+     "en": "If you choose half-day delivery at checkout, the courier will deliver your parcel within the same half-day window.",
+     "zh": "如果你在结算时选择半日达，快递员会在同一个半日时段内送达包裹。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "送货上门",
+   "pair": "zh-en",
+   "slug": "song-huo-shang-men",
+   "lang": "zh",
+   "translation": "home delivery",
+   "shortAnswer": "「送货上门」的英文是 home delivery，指快递把包裹直接送到收件人住宅，而不用去驿站或快递柜自提，省时又省力。",
+   "definition": "home delivery 指快递从网点送到收件人指定地址的派送方式，强调“到家”。常搭配 offer home delivery、free home delivery，与 self-pickup 相对。",
+   "examples": [
+    {
+     "en": "This online store offers free home delivery for orders over a certain amount.",
+     "zh": "这家网店订单满一定金额即可享受免费送货上门。"
+    },
+    {
+     "en": "I chose home delivery instead of self-pickup because I wasn't going to be near the parcel locker.",
+     "zh": "我选择了送货上门而不是驿站自提，因为我不顺路去快递柜。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "home delivery",
+   "pair": "en-zh",
+   "slug": "home-delivery",
+   "lang": "en",
+   "translation": "送货上门",
+   "shortAnswer": "Home delivery 的中文意思是「送货上门」，指包裹被直接送到收件人家中，无需去驿站或快递柜取件，方便快捷。",
+   "definition": "Home delivery 指快递公司把包裹送至家中，对应中文“送货上门”。常搭配 offer home delivery、free home delivery，与自提相对。",
+   "examples": [
+    {
+     "en": "This online store offers free home delivery for orders over a certain amount.",
+     "zh": "这家网店订单满一定金额即可享受免费送货上门。"
+    },
+    {
+     "en": "I chose home delivery instead of self-pickup because I wasn't going to be near the parcel locker.",
+     "zh": "我选择了送货上门而不是驿站自提，因为我不顺路去快递柜。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "无接触配送",
+   "pair": "zh-en",
+   "slug": "wu-jie-chu-pei-song",
+   "lang": "zh",
+   "translation": "contactless delivery",
+   "shortAnswer": "「无接触配送」的英文是 contactless delivery，指快递员与收件人不面对面交接的派件方式；注意它只描述交接方式，不等于「免运费」free shipping。",
+   "definition": "常用于外卖、快递、生鲜场景，强调把包裹放门口、驿站或快递柜，双方不见面；常见搭配有 offer/request contactless delivery、contactless delivery option。",
+   "examples": [
+    {
+     "en": "During the pandemic, many couriers offered contactless delivery and left parcels at the door.",
+     "zh": "疫情期间，许多快递员提供无接触配送，把包裹放在门口。"
+    },
+    {
+     "en": "You can select contactless delivery when placing the order, and the parcel will be put in a locker.",
+     "zh": "下单时你可以选择无接触配送，包裹会被放进快递柜。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "contactless delivery",
+   "pair": "en-zh",
+   "slug": "contactless-delivery",
+   "lang": "en",
+   "translation": "无接触配送",
+   "shortAnswer": "contactless delivery 的中文意思是「无接触配送」，指快递员把包裹放在门口、快递柜或驿站，不与收件人当面交接；它不等于 free shipping（免运费）。",
+   "definition": "正式与日常场合都通用，常见搭配有 offer contactless delivery、choose contactless delivery、contactless delivery option；与 curbside pickup 不同，前者仍由配送方送达指定地点。",
+   "examples": [
+    {
+     "en": "During the pandemic, many couriers offered contactless delivery and left parcels at the door.",
+     "zh": "疫情期间，许多快递员提供无接触配送，把包裹放在门口。"
+    },
+    {
+     "en": "You can select contactless delivery when placing the order, and the parcel will be put in a locker.",
+     "zh": "下单时你可以选择无接触配送，包裹会被放进快递柜。"
+    }
+   ],
+   "tags": [
+    "快递物流"
+   ],
+   "searchIntentType": "meaning"
+  }
+ ]
+}
