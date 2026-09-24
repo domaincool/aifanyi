@@ -1,0 +1,40 @@
+{
+  "SPECIAL": {
+    "硬装": "文化辨析：硬装 = structural/essential renovation（水电、墙面、地面、吊顶等「拆不动的基础工程」），与软装 soft furnishing 相对；中国装修语境硬装/软装二分法很强，英文常说 renovation vs. furnishing/decorating。",
+    "水电改造": "文化辨析：水电改造 = plumbing and rewiring（装修中重新布水管电线），中国毛坯房「清水房」交房惯例催生的大工程；欧美多为基础设施到位、翻新才做 rewiring——讲清毛坯房文化差异。",
+    "全屋定制": "文化辨析：全屋定制 = custom cabinetry（全屋柜体按户型量身定制，中国家居行业支柱业态），欧美多买成品或 semi-custom；讲清「按平方报价+板材环保等级」的中国行情。",
+    "散味": "文化辨析：散味 = air out the smell（装修后通风散甲醛/异味，动辄数月），中国新房入住前仪式性环节；英文 air out the house / let it off-gas（off-gassing 是专业说法）。",
+    "甲醛": "文化辨析：甲醛 = formaldehyde（装修污染头号关键词，中国家居环保焦虑核心），新国标 E0/E1 板材等级、通风除醛产业都围绕它；欧美也有 off-gassing concern 但强度不同。",
+    "把脉": "文化辨析：把脉 = feel the pulse（中医四诊「望闻问切」的切脉，医生三指按腕桡动脉辨证），英文 feel/take the pulse；讲清 TCM 的诊断逻辑与西医测脉搏（测心率）目的不同。",
+    "刮痧": "文化辨析：刮痧 = gua sha scraping（牛角板刮皮肤出痧以「驱邪排湿」），英文媒体已直接借用 gua sha（美容圈 gua sha facial 风行）；讲清出痧（sha marks=皮下淤血）不等于受伤。",
+    "上火": "文化辨析（高频文化词）：上火 = internal heat（中医热性证候：口疮/咽痛/痘），英文无对应生理概念，可说 excessive internal heat per TCM；西方视角常对应 inflammation/infection，辨析「这是中医解释框架」。",
+    "湿气重": "文化辨析：湿气重 = excess dampness（中医六淫「湿」困脾的证候：乏力/苔厚/水肿感），英文 excess dampness (in TCM)；西方无此诊断，潮湿环境说 humid/damp 是另一层意思，别混。",
+    "气血不足": "文化辨析：气血不足 = low qi and blood（中医气血两虚：疲乏/面色差），qi 已进英文词典（Oxford 收录）；讲清 qi 的发音（chee）与 TCM 能量概念。",
+    "经络": "文化辨析：经络 = meridians（中医气血运行通道，针灸取穴的骨架理论），英文 meridian 为 TCM 通用译法；西医解剖学未发现对应结构——讲清理论体系差异，不做真伪判断。",
+    "药膳": "文化辨析：药膳 = medicinal food（中医「药食同源」：当归炖鸡/枸杞粥等食补），英文 medicinal food / TCM cuisine；讲清中国「食疗」传统与西方 functional foods 的异同。",
+    "贴秋膘": "文化辨析：贴秋膘 = autumn fattening up（立秋吃肉补夏亏的民俗，「以肉贴膘」），英文可意译 fattening up in autumn / putting on autumn weight；讲清民俗来源（苦夏掉膘→立秋进补）。",
+    "三伏贴": "文化辨析：三伏贴 = dog-days herbal patch（三伏天穴位贴膏药「冬病夏治」，中医院排队盛况），英文 dog-days herbal patches（per TCM）；讲清「冬病夏治」的反直觉逻辑：夏天阳气最盛时治冬天的病。",
+    "冬病夏治": "文化辨析：冬病夏治 = winter illness treated in summer（三伏贴的理论纲领），直译 winter diseases treated in summer 已被英文 TCM 文献使用；点出这是 TCM 特有的时间医学观。",
+    "彩蛋": "文化辨析：彩蛋 = post-credits scene（影视片尾字幕后的隐藏片段，源自电子游戏 Easter egg 梗），英文 post-credits scene / Easter egg（后者泛指隐藏彩蛋）——讲清两词的范围差别。",
+    "字幕组": "文化辨析：字幕组 = fansub group（爱好者自发翻译配字幕的团体，中国网络文化标志），英文 fansub group / fansubber 已通行；讲清版权灰色地带与「为爱发电」精神。",
+    "腰斩": "文化辨析：腰斩 = cancel a series mid-run（连载中途被砍，「腰」字的本义引申），英文 cancel mid-series / axed；与 cut in half 字面义区分。",
+    "杀青": "文化辨析：杀青 = wrap up filming（拍摄全部完成，源自古代竹简烤青去汗的工序），英文 wrap (filming) / that's a wrap；讲清词源的雅趣。",
+    "水货": "文化辨析：水货 = gray-market phone（无税走私入境的正品行货，非假货但无保修），英文 gray-market goods；与 counterfeit（假货）严格区分——这是学习者最易混的点。",
+    "国行": "文化辨析：国行 = mainland China version（中国大陆行货，带入网许可与国行保修），英文 China version / CN variant；讲清国行/港版/美版的价格与保修差异语境。",
+    "越狱": "文化辨析：越狱 = jailbreak（iOS 破解系统限制装未上架应用），英文 jailbreak 完全对应（Android 侧是 root）；点出合规风险即可。",
+    "备份": "文化辨析：备份 = back up data（数据冗余防丢失），英文 back up（动词）/ backup（名词）；讲清云备份 cloud backup 时代「备份」的行为变化。",
+    "焯水": "文化辨析：焯水 = blanch（食材沸水快煮去血沫/涩味/杂质，中餐前置工序），英文 blanch 完全对应（西餐 blanching green beans 同款技术）；点出中餐焯水常带料酒姜片去腥。",
+    "上浆": "文化辨析：上浆 = coat with starch（肉片裹淀粉浆锁水，中餐嫩肉核心技术），英文 coat with starch / velvet（velveting 是中餐英文文献的专有名词）——velveting 这个词值得讲。",
+    "炝锅": "文化辨析：炝锅 = sizzle aromatics（热油爆香葱姜蒜打底，「炝」的镬气前奏），英文 sizzle the aromatics / sauté aromatics first；讲清「炝」的香味逻辑。",
+    "颠勺": "文化辨析：颠勺 = toss the wok（颠锅让食材抛起均匀受热，专业厨师基本功），英文 toss the wok / wok tossing；与西方用锅铲翻拌的差异。",
+    "生抽": "文化辨析：生抽 = light soy sauce（淡色咸鲜酱油，调味主力），与老抽 dark soy sauce（上色浓稠）是两样东西——shortAnswer 必须讲清生抽调味/老抽上色的分工。",
+    "高汤": "文化辨析：高汤 = stock（骨头/鸡架慢煨的基础汤底，中餐「厨子的汤，唱戏的腔」），英文 stock/broth 对应（stock 偏无盐高汤、broth 偏可直饮）；讲清中餐吊汤（毛汤/高汤/顶汤）的等级感。"
+  },
+  "CAT_HINT": {
+    "装修家居": "重点写承重墙 load-bearing wall、防水 waterproofing、吊顶 suspended ceiling、踢脚线 baseboard、飘窗 bay window、玄关 entryway、智能家居 smart home、收纳 storage and organizing；硬装/水电改造/甲醛/散味词条讲中国装修生态。",
+    "中医养生": "本类目是文化词密度之王：把脉/刮痧/上火/湿气重/气血不足/经络/药膳/三伏贴/冬病夏治全部走 grounded 解释性释义（讲 TCM 理论框架，不硬贴英文对译，注明「per TCM / in traditional Chinese medicine」）；针灸 acupuncture、艾灸 moxibustion、太极 tai chi、气功 qigong、枸杞 goji berries 已是英文通行借词。",
+    "影视追剧": "重点写剧透 spoiler、大结局 series finale、烂尾 botched ending、彩蛋 post-credits scene、续订 renew、弃剧 drop a show、二刷 rewatch、杀青 wrap up filming、客串 cameo、字幕组 fansub group；会员抢先看 early access 讲中国视频平台会员生态。",
+    "手机数码": "重点写贴膜 apply a screen protector、碎屏 cracked screen、续航 battery life、快充 fast charging、双卡 dual SIM、卡顿 laggy、刷机 flash the phone、越狱 jailbreak、水货 gray-market、国行 China version；换机/旧机回收讲中国换机周期。",
+    "烹饪做菜": "重点写焯水 blanch、上浆 coat with starch（velveting）、勾芡 thicken the sauce、炝锅 sizzle aromatics、颠勺 toss the wok、收汁 reduce the sauce、出锅 take off the heat、刀工 knife skills（切丁 dice/切片 slice/切丝 julienne/剁馅 mince）、生抽/老抽分工、高汤 stock；火候词走释义优先路线。"
+  }
+}
