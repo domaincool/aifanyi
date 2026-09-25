@@ -1,0 +1,5397 @@
+{
+ "meta": {
+  "version": "v2-C-full",
+  "date": "2026-09-17",
+  "model": "deepseek-chat",
+  "source": "langpair-v2-batchC-20260917.json",
+  "pairCounts": {
+   "zh-en": 117,
+   "en-zh": 117
+  },
+  "slugStrategy": "zh=pinyin-pro (toneless, v), en=slugify"
+ },
+ "entries": [
+  {
+   "term": "拆台",
+   "pair": "zh-en",
+   "slug": "chai-tai",
+   "lang": "zh",
+   "translation": "undermine someone in public",
+   "shortAnswer": "「拆台」的英文是 undermine someone in public，指当众拆穿或让人下不来台。注意与「拆墙脚」（挖人、破坏根基）区分。",
+   "definition": "undermine someone in public 强调在公开场合削弱对方威信，常与 embarrass、humiliate 连用；口语也可说 call someone out。拆台是社交博弈，拆墙脚是背后挖人。",
+   "examples": [
+    {
+     "en": "He tried to undermine me in public during the meeting, but I stayed calm and answered every question.",
+     "zh": "他在会上想当众拆我的台，但我保持冷静，回答了每个问题。"
+    },
+    {
+     "en": "Don't undermine her in public; if you have a problem, talk to her privately.",
+     "zh": "别当众拆她的台；有问题私下跟她说。"
+    }
+   ],
+   "tags": [
+    "社交关系"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "undermine someone in public",
+   "pair": "en-zh",
+   "slug": "undermine-someone-in-public",
+   "lang": "en",
+   "translation": "拆台",
+   "shortAnswer": "“Undermine someone in public”的中文意思是「拆台」，指当众让人下不来台。它侧重公开削弱威信，而非背后使坏。",
+   "definition": "undermine someone in public 指在公开场合削弱某人权威或面子，常见搭配：undermine authority/credibility。正式场合用，口语可说 call out。易错：不是「拆墙脚」（poach）。",
+   "examples": [
+    {
+     "en": "He tried to undermine me in public during the meeting, but I stayed calm and answered every question.",
+     "zh": "他在会上想当众拆我的台，但我保持冷静，回答了每个问题。"
+    },
+    {
+     "en": "Don't undermine her in public; if you have a problem, talk to her privately.",
+     "zh": "别当众拆她的台；有问题私下跟她说。"
+    }
+   ],
+   "tags": [
+    "社交关系"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "站队",
+   "pair": "zh-en",
+   "slug": "zhan-dui",
+   "lang": "zh",
+   "translation": "take sides",
+   "shortAnswer": "「站队」的英文是 take sides，指在争议或派系中明确选边表态。中文里常含被迫或功利的意味，英文 take sides 则偏中性，是否负面看语境。",
+   "definition": "常用搭配：take sides on an issue、refuse to take sides。注意：中文「站队」常带职场政治、舆论压力色彩，不表态也可能被视为一种表态；英文 take sides 本身只强调选边，褒贬由上下文决定。",
+   "examples": [
+    {
+     "en": "In the office debate, I tried to stay neutral, but refusing to take sides only made both teams distrust me.",
+     "zh": "在办公室的争论中，我试图保持中立，但拒绝站队反而让两边的人都不信任我。"
+    },
+    {
+     "en": "She finally took sides with her best friend, even though it meant going against the rest of the group.",
+     "zh": "她最终站到了最好的朋友那边，即使这意味着与团队其余的人作对。"
+    }
+   ],
+   "tags": [
+    "社交关系"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "take sides",
+   "pair": "en-zh",
+   "slug": "take-sides",
+   "lang": "en",
+   "translation": "站队",
+   "shortAnswer": "Take sides means「站队」，指在争论或派系中支持某一方。它强调明确选边，而 pick a side 更口语，sit on the fence 则指不站队。",
+   "definition": "Take sides 常用于争论、冲突、选举等场景，搭配有 take sides against/with someone。正式和口语皆可。易错点：它不等于「支持」的泛义，而特指在已有对立两方时选边。",
+   "examples": [
+    {
+     "en": "In the office debate, I tried to stay neutral, but refusing to take sides only made both teams distrust me.",
+     "zh": "在办公室的争论中，我试图保持中立，但拒绝站队反而让两边的人都不信任我。"
+    },
+    {
+     "en": "She finally took sides with her best friend, even though it meant going against the rest of the group.",
+     "zh": "她最终站到了最好的朋友那边，即使这意味着与团队其余的人作对。"
+    }
+   ],
+   "tags": [
+    "社交关系"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "和好",
+   "pair": "zh-en",
+   "slug": "he-hao",
+   "lang": "zh",
+   "translation": "make up after a fight",
+   "shortAnswer": "「和好」的英文是 make up after a fight，指吵架或冲突后和解。注意 make up 单独用可表示「化妆」或「编造」，需靠 after a fight 等语境判断。",
+   "definition": "make up after a fight 强调争吵后主动恢复关系，常搭配 argue、quarrel、fall out 等。与 get back together 不同，后者特指分手后复合，而和好不一定曾分手。",
+   "examples": [
+    {
+     "en": "They argued about the project for hours, but finally made up after a fight and went to grab coffee together.",
+     "zh": "他们为那个项目吵了好几个小时，但最终和好了，还一起去喝了咖啡。"
+    },
+    {
+     "en": "It's normal for couples to make up after a fight; what matters is talking it through honestly.",
+     "zh": "情侣吵架后和好很正常，重要的是坦诚沟通、把问题说开。"
+    }
+   ],
+   "tags": [
+    "社交关系"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "make up after a fight",
+   "pair": "en-zh",
+   "slug": "make-up-after-a-fight",
+   "lang": "en",
+   "translation": "和好",
+   "shortAnswer": "make up after a fight 的中文意思是「和好」，指争吵后和解、恢复友好。语义核心是结束冲突，而非像 get back together 那样专指分手后复合。",
+   "definition": "make up after a fight 用于日常口语和书面语，表示吵架后和好。可分开说 make up，但需靠 after a fight 或 with sb 明确。易错：make up 还有「化妆」「编造」义。",
+   "examples": [
+    {
+     "en": "They argued about the project for hours, but finally made up after a fight and went to grab coffee together.",
+     "zh": "他们为那个项目吵了好几个小时，但最终和好了，还一起去喝了咖啡。"
+    },
+    {
+     "en": "It's normal for couples to make up after a fight; what matters is talking it through honestly.",
+     "zh": "情侣吵架后和好很正常，重要的是坦诚沟通、把问题说开。"
+    }
+   ],
+   "tags": [
+    "社交关系"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "抬杠",
+   "pair": "zh-en",
+   "slug": "tai-gang",
+   "lang": "zh",
+   "translation": "argue for the sake of arguing",
+   "shortAnswer": "「抬杠」的英文是 argue for the sake of arguing，指为反驳而反驳、习惯性争论，常含贬义。",
+   "definition": "argue for the sake of arguing 指没有实质目的、只为反驳而争论，带贬义，类似中文“杠精”。口语中可说 stop arguing for the sake of arguing。",
+   "examples": [
+    {
+     "en": "Don't argue for the sake of arguing—tell me what you actually want to change.",
+     "zh": "别抬杠了，告诉我你到底想改什么。"
+    },
+    {
+     "en": "He always argues for the sake of arguing, even when everyone agrees with him.",
+     "zh": "他总爱抬杠，哪怕所有人都同意他的观点。"
+    }
+   ],
+   "tags": [
+    "社交关系"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "argue for the sake of arguing",
+   "pair": "en-zh",
+   "slug": "argue-for-the-sake-of-arguing",
+   "lang": "en",
+   "translation": "抬杠",
+   "shortAnswer": "argue for the sake of arguing 的中文意思是「抬杠」，即为反驳而反驳、习惯性争论，常含贬义。",
+   "definition": "该短语指没有实际目的、只为反驳而争论，类似中文“抬杠/杠精”。常见搭配：just argue for the sake of arguing。多用于口语，带批评语气。",
+   "examples": [
+    {
+     "en": "Don't argue for the sake of arguing—tell me what you actually want to change.",
+     "zh": "别抬杠了，告诉我你到底想改什么。"
+    },
+    {
+     "en": "He always argues for the sake of arguing, even when everyone agrees with him.",
+     "zh": "他总爱抬杠，哪怕所有人都同意他的观点。"
+    }
+   ],
+   "tags": [
+    "社交关系"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "暧昧",
+   "pair": "zh-en",
+   "slug": "ai-mei",
+   "lang": "zh",
+   "translation": "ambiguous romance",
+   "shortAnswer": "「暧昧」可译为 ambiguous romance，指比友情多、比爱情少、没名分的关系。",
+   "definition": "ambiguous romance 指双方亲密却未确认关系的状态，可搭配 be in/have an ambiguous romance。",
+   "examples": [
+    {
+     "en": "They've been in an ambiguous romance for months, holding hands but never calling each other boyfriend or girlfriend.",
+     "zh": "他们暧昧了好几个月，会牵手，却从没称对方为男朋友或女朋友。"
+    },
+    {
+     "en": "She finally asked him to define their ambiguous romance because she was tired of guessing.",
+     "zh": "她终于让他给这段暧昧关系一个说法，因为她厌倦了猜来猜去。"
+    }
+   ],
+   "tags": [
+    "社交关系"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "ambiguous romance",
+   "pair": "en-zh",
+   "slug": "ambiguous-romance",
+   "lang": "en",
+   "translation": "暧昧",
+   "shortAnswer": "Ambiguous romance means 暧昧: more than friends, less than lovers, with no clear label.",
+   "definition": "Ambiguous romance 指亲密却未定名的关系，类似 situationship，可搭配 be in/have an ambiguous romance。",
+   "examples": [
+    {
+     "en": "They've been in an ambiguous romance for months, holding hands but never calling each other boyfriend or girlfriend.",
+     "zh": "他们暧昧了好几个月，会牵手，却从没称对方为男朋友或女朋友。"
+    },
+    {
+     "en": "She finally asked him to define their ambiguous romance because she was tired of guessing.",
+     "zh": "她终于让他给这段暧昧关系一个说法，因为她厌倦了猜来猜去。"
+    }
+   ],
+   "tags": [
+    "社交关系"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "绝交",
+   "pair": "zh-en",
+   "slug": "jue-jiao",
+   "lang": "zh",
+   "translation": "cut off a friendship",
+   "shortAnswer": "「绝交」的英文是 cut off a friendship，指彻底断绝朋友往来，比暂时冷战更决绝。",
+   "definition": "cut off a friendship 指彻底终止朋友关系，语气偏正式，常因背叛或原则冲突。",
+   "examples": [
+    {
+     "en": "After he spread rumors about her, she decided to cut off a friendship with him for good.",
+     "zh": "在他散布关于她的谣言后，她决定与他彻底绝交。"
+    },
+    {
+     "en": "They did not argue; he simply cut off a friendship and never replied again.",
+     "zh": "他们没有争吵，他只是默默绝交，从此再没回复。"
+    }
+   ],
+   "tags": [
+    "社交关系"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "cut off a friendship",
+   "pair": "en-zh",
+   "slug": "cut-off-a-friendship",
+   "lang": "en",
+   "translation": "绝交",
+   "shortAnswer": "\"Cut off a friendship\" means 绝交: to end a friendship fully and on purpose, not just pause it.",
+   "definition": "Use \"cut off a friendship\" for a deliberate, final break with a friend, often over betrayal.",
+   "examples": [
+    {
+     "en": "After he spread rumors about her, she decided to cut off a friendship with him for good.",
+     "zh": "在他散布关于她的谣言后，她决定与他彻底绝交。"
+    },
+    {
+     "en": "They did not argue; he simply cut off a friendship and never replied again.",
+     "zh": "他们没有争吵，他只是默默绝交，从此再没回复。"
+    }
+   ],
+   "tags": [
+    "社交关系"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "表白",
+   "pair": "zh-en",
+   "slug": "biao-bai",
+   "lang": "zh",
+   "translation": "confess feelings",
+   "shortAnswer": "「表白」的英文是 confess feelings，指向喜欢的人坦白爱慕，比 tell someone I like you 更正式。",
+   "definition": "confess feelings 强调坦白对某人的爱意，常搭配 confess feelings for/to someone，日常也可说 tell someone how I feel。",
+   "examples": [
+    {
+     "en": "He finally worked up the courage to confess feelings to her.",
+     "zh": "他终于鼓起勇气向她表白了。"
+    },
+    {
+     "en": "Confessing feelings can be scary, but it's better than staying in an ambiguous relationship forever.",
+     "zh": "表白可能很让人害怕，但总比一直暧昧不清要好。"
+    }
+   ],
+   "tags": [
+    "社交关系"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "confess feelings",
+   "pair": "en-zh",
+   "slug": "confess-feelings",
+   "lang": "en",
+   "translation": "表白",
+   "shortAnswer": "“confess feelings”的意思是「表白」，向喜欢的人坦白爱慕，比 tell someone I like you 更郑重。",
+   "definition": "confess feelings 指主动坦白对某人的爱意，常见搭配 confess feelings for/to someone，多用于恋爱社交语境。",
+   "examples": [
+    {
+     "en": "He finally worked up the courage to confess feelings to her.",
+     "zh": "他终于鼓起勇气向她表白了。"
+    },
+    {
+     "en": "Confessing feelings can be scary, but it's better than staying in an ambiguous relationship forever.",
+     "zh": "表白可能很让人害怕，但总比一直暧昧不清要好。"
+    }
+   ],
+   "tags": [
+    "社交关系"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "复合",
+   "pair": "zh-en",
+   "slug": "fu-he",
+   "lang": "zh",
+   "translation": "get back together",
+   "shortAnswer": "「复合」的英文是 get back together，指分手后的恋人重新在一起，强调恢复恋爱关系。",
+   "definition": "get back together 专指恋人分手后重新交往，主语常用复数或两人。朋友吵架和好用 make up，别混用。",
+   "examples": [
+    {
+     "en": "They broke up last year, but they got back together after realizing they still loved each other.",
+     "zh": "他们去年分手了，但在意识到彼此仍然相爱后复合了。"
+    },
+    {
+     "en": "I don't think it's a good idea to get back together with your ex just because you're lonely.",
+     "zh": "我觉得仅仅因为寂寞就和前任复合不是什么好主意。"
+    }
+   ],
+   "tags": [
+    "社交关系"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "get back together",
+   "pair": "en-zh",
+   "slug": "get-back-together",
+   "lang": "en",
+   "translation": "复合",
+   "shortAnswer": "get back together 的中文意思是「复合」，专指分手后的情侣重新确立恋爱关系。",
+   "definition": "get back together 口语和书面都常用，主语多为两人或复数，如 We got back together last month.",
+   "examples": [
+    {
+     "en": "They broke up last year, but they got back together after realizing they still loved each other.",
+     "zh": "他们去年分手了，但在意识到彼此仍然相爱后复合了。"
+    },
+    {
+     "en": "I don't think it's a good idea to get back together with your ex just because you're lonely.",
+     "zh": "我觉得仅仅因为寂寞就和前任复合不是什么好主意。"
+    }
+   ],
+   "tags": [
+    "社交关系"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "蹭饭",
+   "pair": "zh-en",
+   "slug": "ceng-fan",
+   "lang": "zh",
+   "translation": "tag along for a meal",
+   "shortAnswer": "蹭饭的英文是 tag along for a meal，指跟着别人白吃一顿。蹭自带自嘲和占便宜感，强调非正式、非主动邀请，和搭伙吃饭不同。",
+   "definition": "蹭饭是口语自谦说法，强调没被正式邀请却跟着去白吃。英文常用 tag along for a meal/free meal，也可说 mooch a meal（更贬义）。注意蹭字家族如蹭网、蹭热度都带自嘲式占便宜语感。",
+   "examples": [
+    {
+     "en": "My roommate said he was ordering takeout with friends, so I decided to tag along for a meal.",
+     "zh": "我室友说他要和朋友点外卖，于是我决定跟着蹭一顿饭。"
+    },
+    {
+     "en": "Whenever my sister visits, she always tags along for a meal at my place without asking.",
+     "zh": "每次我姐来，她总是不打招呼就来我这儿蹭饭。"
+    }
+   ],
+   "tags": [
+    "社交关系"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "tag along for a meal",
+   "pair": "en-zh",
+   "slug": "tag-along-for-a-meal",
+   "lang": "en",
+   "translation": "蹭饭",
+   "shortAnswer": "tag along for a meal 的中文意思是蹭饭，即跟着别人去白吃一顿。它比 join for dinner 多出未经邀请、顺带占便宜的自嘲意味。",
+   "definition": "tag along for a meal 多用于口语和非正式社交，指跟着熟人去吃饭而不付钱或未被正式邀请。核心是 tag along（跟随、附着）带消极被动感，常自嘲说 I'll just tag along。与 freeload 不同，它贬义更轻，强调顺带而非刻意占便宜。",
+   "examples": [
+    {
+     "en": "My roommate said he was ordering takeout with friends, so I decided to tag along for a meal.",
+     "zh": "我室友说他要和朋友点外卖，于是我决定跟着蹭一顿饭。"
+    },
+    {
+     "en": "Whenever my sister visits, she always tags along for a meal at my place without asking.",
+     "zh": "每次我姐来，她总是不打招呼就来我这儿蹭饭。"
+    }
+   ],
+   "tags": [
+    "社交关系"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "脱单",
+   "pair": "zh-en",
+   "slug": "tuo-dan",
+   "lang": "zh",
+   "translation": "stop being single",
+   "shortAnswer": "「脱单」的英文是 stop being single，字面即“不再单身”，强调状态改变，口语轻松。",
+   "definition": "stop being single 是中性口语表达，指结束单身状态，不点明对象是谁，也不等于结婚。常见搭配：finally stop being single（终于脱单）。",
+   "examples": [
+    {
+     "en": "My cousin finally stopped being single at thirty-five and his parents were thrilled.",
+     "zh": "我表哥三十五岁终于脱单了，他父母高兴坏了。"
+    },
+    {
+     "en": "She jokes that moving to a new city is the quickest way to stop being single.",
+     "zh": "她开玩笑说，搬到一个新城市是脱单最快的方法。"
+    }
+   ],
+   "tags": [
+    "社交关系"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "stop being single",
+   "pair": "en-zh",
+   "slug": "stop-being-single",
+   "lang": "en",
+   "translation": "脱单",
+   "shortAnswer": "Stop being single 的中文意思是「脱单」，即结束单身状态，强调状态转变，比 get a partner 更口语化。",
+   "definition": "stop being single 用于口语，指不再单身，常带调侃语气，只表示脱离单身，不含结婚承诺。常见搭配：finally stop being single。",
+   "examples": [
+    {
+     "en": "My cousin finally stopped being single at thirty-five and his parents were thrilled.",
+     "zh": "我表哥三十五岁终于脱单了，他父母高兴坏了。"
+    },
+    {
+     "en": "She jokes that moving to a new city is the quickest way to stop being single.",
+     "zh": "她开玩笑说，搬到一个新城市是脱单最快的方法。"
+    }
+   ],
+   "tags": [
+    "社交关系"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "随叫随到",
+   "pair": "zh-en",
+   "slug": "sui-jiao-sui-dao",
+   "lang": "zh",
+   "translation": "on call for friends",
+   "shortAnswer": "「随叫随到」英文说 on call for friends，强调朋友需要时随时出现。注意 on call 本指值班待命，用于朋友间是自嘲式夸张。",
+   "definition": "on call 原指医生等职业待命，加 for friends 后带幽默自嘲：像值班一样对朋友有求必应。常与 always、basically 连用，如 I'm always on call for friends。",
+   "examples": [
+    {
+     "en": "She's basically on call for friends, ready to help at any hour.",
+     "zh": "她基本上对朋友随叫随到，随时准备帮忙。"
+    },
+    {
+     "en": "Being on call for friends can be exhausting, but he never says no.",
+     "zh": "对朋友随叫随到可能很累，但他从不拒绝。"
+    }
+   ],
+   "tags": [
+    "社交关系"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "on call for friends",
+   "pair": "en-zh",
+   "slug": "on-call-for-friends",
+   "lang": "en",
+   "translation": "随叫随到",
+   "shortAnswer": "「on call for friends」中文意思是「随叫随到」，指朋友一叫就出现。与 just be there 不同，它借用值班待命意象，带自嘲夸张色彩。",
+   "definition": "on call 本义是职业待命，for friends 将其延伸到友情，表示对朋友有求必应、随时支援。口语中常自嘲，如 I'm basically on call for friends。",
+   "examples": [
+    {
+     "en": "She's basically on call for friends, ready to help at any hour.",
+     "zh": "她基本上对朋友随叫随到，随时准备帮忙。"
+    },
+    {
+     "en": "Being on call for friends can be exhausting, but he never says no.",
+     "zh": "对朋友随叫随到可能很累，但他从不拒绝。"
+    }
+   ],
+   "tags": [
+    "社交关系"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "见面礼",
+   "pair": "zh-en",
+   "slug": "jian-mian-li",
+   "lang": "zh",
+   "translation": "first-meeting gift",
+   "shortAnswer": "见面礼的英文是 first-meeting gift，指初次见面时赠送的礼物，别与 greeting 混淆。",
+   "definition": "first-meeting gift 多用于正式或礼节性场合，如见家长、拜访客户、拜师。口语也可说 a gift for our first meeting。",
+   "examples": [
+    {
+     "en": "When meeting my girlfriend's parents for the first time, I brought a first-meeting gift to show my respect.",
+     "zh": "第一次见女朋友的父母时，我带了一份见面礼以示尊重。"
+    },
+    {
+     "en": "In Chinese business culture, exchanging first-meeting gifts can help break the ice.",
+     "zh": "在中国商务文化中，互赠见面礼有助于打破僵局。"
+    }
+   ],
+   "tags": [
+    "社交关系"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "first-meeting gift",
+   "pair": "en-zh",
+   "slug": "first-meeting-gift",
+   "lang": "en",
+   "translation": "见面礼",
+   "shortAnswer": "first-meeting gift 的中文意思是见面礼，即初次见面时送的礼物，强调第一次见面。",
+   "definition": "first-meeting gift 指为初次会面准备的礼物，常见于见长辈、相亲、商务拜访，可搭配 give 或 bring。",
+   "examples": [
+    {
+     "en": "When meeting my girlfriend's parents for the first time, I brought a first-meeting gift to show my respect.",
+     "zh": "第一次见女朋友的父母时，我带了一份见面礼以示尊重。"
+    },
+    {
+     "en": "In Chinese business culture, exchanging first-meeting gifts can help break the ice.",
+     "zh": "在中国商务文化中，互赠见面礼有助于打破僵局。"
+    }
+   ],
+   "tags": [
+    "社交关系"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "应酬",
+   "pair": "zh-en",
+   "slug": "ying-chou",
+   "lang": "zh",
+   "translation": "social obligations",
+   "shortAnswer": "应酬的英文是 social obligations，指不得不参加的社交活动，常含义务与压力意味。",
+   "definition": "应酬多用 social obligations，强调因人情或工作需要而必须参与，常搭配 fulfill 或 avoid。",
+   "examples": [
+    {
+     "en": "He often attends business dinners as part of his social obligations, even when he would rather stay home.",
+     "zh": "作为应酬的一部分，他经常参加商务晚宴，即使他更想待在家里。"
+    },
+    {
+     "en": "During the holidays, many people feel overwhelmed by social obligations like family gatherings and company parties.",
+     "zh": "节假日期间，许多人被家庭聚会和公司派对等应酬压得喘不过气。"
+    }
+   ],
+   "tags": [
+    "社交关系"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "social obligations",
+   "pair": "en-zh",
+   "slug": "social-obligations",
+   "lang": "en",
+   "translation": "应酬",
+   "shortAnswer": "Social obligations means 应酬, referring to mandatory social activities one must attend out of duty.",
+   "definition": "Social obligations are duties to attend social events, often work or family related, implying pressure rather than free choice.",
+   "examples": [
+    {
+     "en": "He often attends business dinners as part of his social obligations, even when he would rather stay home.",
+     "zh": "作为应酬的一部分，他经常参加商务晚宴，即使他更想待在家里。"
+    },
+    {
+     "en": "During the holidays, many people feel overwhelmed by social obligations like family gatherings and company parties.",
+     "zh": "节假日期间，许多人被家庭聚会和公司派对等应酬压得喘不过气。"
+    }
+   ],
+   "tags": [
+    "社交关系"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "人情债",
+   "pair": "zh-en",
+   "slug": "ren-qing-zhai",
+   "lang": "zh",
+   "translation": "debt of gratitude",
+   "shortAnswer": "「人情债」英文是 debt of gratitude，指受恩后觉得亏欠、需要回报的心理负担；口语也可说 owe someone one，但语气更轻。",
+   "definition": "debt of gratitude 表示感激与亏欠交织，常搭配 owe a debt of gratitude to someone、repay a debt of gratitude。它指道德或情感亏欠，不是金钱债；欠钱应说 owe someone money。",
+   "examples": [
+    {
+     "en": "After all these years, I still owe him a debt of gratitude for helping me through college.",
+     "zh": "这么多年过去，我仍欠他一份人情债，感谢他帮我读完大学。"
+    },
+    {
+     "en": "She felt a deep debt of gratitude to the neighbors who took her in during the storm.",
+     "zh": "她对暴风雨中收留她的邻居心怀深深的人情债。"
+    }
+   ],
+   "tags": [
+    "社交关系"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "debt of gratitude",
+   "pair": "en-zh",
+   "slug": "debt-of-gratitude",
+   "lang": "en",
+   "translation": "人情债",
+   "shortAnswer": "debt of gratitude 中文是「人情债」，指因受恩而心存亏欠、觉得该回报；比 owe someone one 正式，强调道德情感亏欠，并非欠钱。",
+   "definition": "核心义为因受恩而产生的感激与回报义务，常见搭配 owe a debt of gratitude to someone、repay a debt of gratitude。正式书面和演讲中常见，口语多说 owe someone one。",
+   "examples": [
+    {
+     "en": "After all these years, I still owe him a debt of gratitude for helping me through college.",
+     "zh": "这么多年过去，我仍欠他一份人情债，感谢他帮我读完大学。"
+    },
+    {
+     "en": "She felt a deep debt of gratitude to the neighbors who took her in during the storm.",
+     "zh": "她对暴风雨中收留她的邻居心怀深深的人情债。"
+    }
+   ],
+   "tags": [
+    "社交关系"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "熟人不熟",
+   "pair": "zh-en",
+   "slug": "shu-ren-bu-shu",
+   "lang": "zh",
+   "translation": "frenemy",
+   "shortAnswer": "「熟人不熟」的英文对应词是 frenemy，专指表面亲近、暗地较劲的亦友亦敌关系，词由 friend 和 enemy 拼合。",
+   "definition": "frenemy 由 friend 与 enemy 组合而成，指表面友好、实则暗中竞争或较劲的人，常见于职场与朋友圈。",
+   "examples": [
+    {
+     "en": "She always compliments my outfit and then jokes about my taste—classic frenemy move.",
+     "zh": "她总是先夸我的穿搭，接着又拿我的品味开玩笑，典型的「熟人不熟」操作。"
+    },
+    {
+     "en": "We used to be frenemies in college, competing over grades while still grabbing lunch together.",
+     "zh": "我们大学时就是「熟人不熟」的关系，一边较劲成绩，一边还能一起吃饭。"
+    }
+   ],
+   "tags": [
+    "社交关系"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "frenemy",
+   "pair": "en-zh",
+   "slug": "frenemy",
+   "lang": "en",
+   "translation": "熟人不熟",
+   "shortAnswer": "The English word for 「熟人不熟」 is frenemy—a person who acts friendly but quietly competes with you.",
+   "definition": "A frenemy is someone you socialize with but who subtly competes with or undermines you, common in workplace and social circles.",
+   "examples": [
+    {
+     "en": "She always compliments my outfit and then jokes about my taste—classic frenemy move.",
+     "zh": "她总是先夸我的穿搭，接着又拿我的品味开玩笑，典型的「熟人不熟」操作。"
+    },
+    {
+     "en": "We used to be frenemies in college, competing over grades while still grabbing lunch together.",
+     "zh": "我们大学时就是「熟人不熟」的关系，一边较劲成绩，一边还能一起吃饭。"
+    }
+   ],
+   "tags": [
+    "社交关系"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "捧杀",
+   "pair": "zh-en",
+   "slug": "peng-sha",
+   "lang": "zh",
+   "translation": "praise someone into a trap",
+   "shortAnswer": "「捧杀」的英文是 praise someone into a trap，意思是用吹捧把人夸进坑里。",
+   "definition": "praise someone into a trap 指用过度吹捧让人膨胀招忌、最终自毁，可评价他人手段或自嘲。口语也说 praise someone to death。",
+   "examples": [
+    {
+     "en": "His colleagues praised him into a trap, and he took on a project that destroyed his career.",
+     "zh": "同事们把他捧杀了，结果他接手了一个毁掉自己职业前途的项目。"
+    },
+    {
+     "en": "Don't let strangers online praise you into a trap; they just want to watch you fall.",
+     "zh": "别让网上的陌生人把你捧杀了，他们只是想看你摔下来。"
+    }
+   ],
+   "tags": [
+    "社交关系"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "praise someone into a trap",
+   "pair": "en-zh",
+   "slug": "praise-someone-into-a-trap",
+   "lang": "en",
+   "translation": "捧杀",
+   "shortAnswer": "praise someone into a trap means 捧杀: to flatter someone until it ruins them.",
+   "definition": "Used when flattery is a tactic: rivals or haters puff you up until you overreach. Don't mistake it for a real compliment.",
+   "examples": [
+    {
+     "en": "His colleagues praised him into a trap, and he took on a project that destroyed his career.",
+     "zh": "同事们把他捧杀了，结果他接手了一个毁掉自己职业前途的项目。"
+    },
+    {
+     "en": "Don't let strangers online praise you into a trap; they just want to watch you fall.",
+     "zh": "别让网上的陌生人把你捧杀了，他们只是想看你摔下来。"
+    }
+   ],
+   "tags": [
+    "社交关系"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "捧哏",
+   "pair": "zh-en",
+   "slug": "peng-gen",
+   "lang": "zh",
+   "translation": "straight man in comedy",
+   "shortAnswer": "「捧哏」英文是 straight man in comedy，指相声或喜剧中接话垫话、衬托逗哏的搭档。别译成 flatterer。",
+   "definition": "用法：多指相声或喜剧里与逗哏（funny man）相对的搭档角色。搭配：play the straight man、be the straight man to someone。易错：不是捧场者或马屁精。",
+   "examples": [
+    {
+     "en": "In traditional Chinese crosstalk, the straight man in comedy feeds lines and feigns ignorance so the funny man can deliver the punchline.",
+     "zh": "在传统相声中，捧哏负责垫话和装傻，让逗哏能抖出包袱。"
+    },
+    {
+     "en": "She plays the straight man in comedy perfectly, reacting with deadpan confusion while her partner escalates the joke.",
+     "zh": "她捧哏捧得恰到好处，一脸茫然地接话，而搭档则把笑料越推越高。"
+    }
+   ],
+   "tags": [
+    "社交关系"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "straight man in comedy",
+   "pair": "en-zh",
+   "slug": "straight-man-in-comedy",
+   "lang": "en",
+   "translation": "捧哏",
+   "shortAnswer": "Straight man in comedy 意思是「捧哏」，即喜剧中一本正经接话、衬托逗哏的搭档，别误解为直男。",
+   "definition": "核心义：喜剧或相声里配合 funny man 的严肃搭档。搭配：play the straight man、be someone's straight man。易错：不是异性恋男性或直男。",
+   "examples": [
+    {
+     "en": "In traditional Chinese crosstalk, the straight man in comedy feeds lines and feigns ignorance so the funny man can deliver the punchline.",
+     "zh": "在传统相声中，捧哏负责垫话和装傻，让逗哏能抖出包袱。"
+    },
+    {
+     "en": "She plays the straight man in comedy perfectly, reacting with deadpan confusion while her partner escalates the joke.",
+     "zh": "她捧哏捧得恰到好处，一脸茫然地接话，而搭档则把笑料越推越高。"
+    }
+   ],
+   "tags": [
+    "社交关系"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "怼人",
+   "pair": "zh-en",
+   "slug": "dui-ren",
+   "lang": "zh",
+   "translation": "clap back at someone",
+   "shortAnswer": "「怼人」的英文是 clap back at someone，指被人冒犯后立刻犀利回击，快而狠，句句占上风，不是单纯反驳。",
+   "definition": "clap back at someone 多用于口语和社交媒体，语气可轻可重：朋友互怼是玩笑，陌生人互怼可能升级成争吵。它侧重回击，主动开骂该用 start a fight。",
+   "examples": [
+    {
+     "en": "When a troll insulted her outfit, she clapped back at him with a photo of her award.",
+     "zh": "有个喷子嘲讽她的穿搭，她直接甩出一张获奖照片怼了回去。"
+    },
+    {
+     "en": "He is not afraid to clap back at someone who spreads rumors about him.",
+     "zh": "谁要是散布关于他的谣言，他从不害怕怼回去。"
+    }
+   ],
+   "tags": [
+    "社交关系"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "clap back at someone",
+   "pair": "en-zh",
+   "slug": "clap-back-at-someone",
+   "lang": "en",
+   "translation": "怼人",
+   "shortAnswer": "clap back at someone 的中文意思是「怼人」，即被人冒犯后立刻用犀利话语回击对方，强调迅速反击、句句有力。",
+   "definition": "clap back at someone 属非正式表达，常见于网络评论，搭配有 clap back at a hater/a troll。语气可轻可重；它指回击对方，正式场合宜改用 respond sharply。",
+   "examples": [
+    {
+     "en": "When a troll insulted her outfit, she clapped back at him with a photo of her award.",
+     "zh": "有个喷子嘲讽她的穿搭，她直接甩出一张获奖照片怼了回去。"
+    },
+    {
+     "en": "He is not afraid to clap back at someone who spreads rumors about him.",
+     "zh": "谁要是散布关于他的谣言，他从不害怕怼回去。"
+    }
+   ],
+   "tags": [
+    "社交关系"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "内耗",
+   "pair": "zh-en",
+   "slug": "nei-hao",
+   "lang": "zh",
+   "translation": "internal friction",
+   "shortAnswer": "「内耗」的英文是 internal friction，指自我怀疑与反复纠结造成的精神消耗。",
+   "definition": "internal friction 本为物理术语，指系统内部的摩擦损耗；心理学借用后表示把精力耗在自我怀疑、反复权衡与内心冲突上。常见搭配：mental internal friction。注意它不等于 depression（抑郁）或焦虑症。",
+   "examples": [
+    {
+     "en": "She spent the whole weekend in internal friction, replaying the conversation and blaming herself.",
+     "zh": "她整个周末都在内耗，反复回想那次对话并责怪自己。"
+    },
+    {
+     "en": "Too much internal friction can wear you out faster than any external pressure.",
+     "zh": "过多的内耗比任何外部压力都更快让人精疲力尽。"
+    }
+   ],
+   "tags": [
+    "情绪表达"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "internal friction",
+   "pair": "en-zh",
+   "slug": "internal-friction",
+   "lang": "en",
+   "translation": "内耗",
+   "shortAnswer": "internal friction 的中文意思是「内耗」，指自我纠结与内心冲突带来的精神消耗。",
+   "definition": "internal friction 字面指物体内部的摩擦，心理学借用后表示因自我怀疑、过度思考和内心拉扯而耗尽精力。常见搭配：mental internal friction、experience internal friction。正式与口语均可，但不用作临床诊断术语。",
+   "examples": [
+    {
+     "en": "She spent the whole weekend in internal friction, replaying the conversation and blaming herself.",
+     "zh": "她整个周末都在内耗，反复回想那次对话并责怪自己。"
+    },
+    {
+     "en": "Too much internal friction can wear you out faster than any external pressure.",
+     "zh": "过多的内耗比任何外部压力都更快让人精疲力尽。"
+    }
+   ],
+   "tags": [
+    "情绪表达"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "精神内耗",
+   "pair": "zh-en",
+   "slug": "jing-shen-nei-hao",
+   "lang": "zh",
+   "translation": "mental exhaustion from overthinking",
+   "shortAnswer": "「精神内耗」的英文是 mental exhaustion from overthinking，指自我拉扯、反复纠结导致的内心消耗。它描述一种疲惫状态，不是临床诊断，别和 depression 混用。",
+   "definition": "常用搭配：suffer from mental exhaustion from overthinking、get caught in overthinking。强调因想太多、自我怀疑而心累，属状态描述；clinical depression 才是医学诊断，不可替换。",
+   "examples": [
+    {
+     "en": "After weeks of mental exhaustion from overthinking every decision, she finally asked a friend for advice.",
+     "zh": "在因为对每个决定都过度思虑而精神内耗了几周后，她终于向朋友求助。"
+    },
+    {
+     "en": "He realized his mental exhaustion from overthinking was not depression, just a habit of second-guessing himself.",
+     "zh": "他意识到自己的精神内耗并非抑郁，只是一种反复自我怀疑的习惯。"
+    }
+   ],
+   "tags": [
+    "情绪表达"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "mental exhaustion from overthinking",
+   "pair": "en-zh",
+   "slug": "mental-exhaustion-from-overthinking",
+   "lang": "en",
+   "translation": "精神内耗",
+   "shortAnswer": "mental exhaustion from overthinking 的中文意思是「精神内耗」，指被过度思虑拖垮的心累状态，并非临床抑郁症。它强调自我拉扯与反复纠结，而非情绪低落本身。",
+   "definition": "该短语偏口语与网络语境，常见于 suffer from、deal with 之后；正式写作可用 chronic overthinking 替代。注意它描述主观疲惫状态，不能当作 depression 等临床术语使用。",
+   "examples": [
+    {
+     "en": "After weeks of mental exhaustion from overthinking every decision, she finally asked a friend for advice.",
+     "zh": "在因为对每个决定都过度思虑而精神内耗了几周后，她终于向朋友求助。"
+    },
+    {
+     "en": "He realized his mental exhaustion from overthinking was not depression, just a habit of second-guessing himself.",
+     "zh": "他意识到自己的精神内耗并非抑郁，只是一种反复自我怀疑的习惯。"
+    }
+   ],
+   "tags": [
+    "情绪表达"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "补刀",
+   "pair": "zh-en",
+   "slug": "bu-dao",
+   "lang": "zh",
+   "translation": "finish someone off with words",
+   "shortAnswer": "「补刀」的英文是 finish someone off with words，用言语完成最后一击，也常说 twist the knife，社交中表示在对方受伤时再扎心一句。",
+   "definition": "补刀源自游戏 last hit，指对残血敌人完成最后一击；引申为在别人已受伤或难堪时，再用一句话追加打击。英文 finish someone off with words 保留游戏本义，twist the knife 则更地道，表示伤口上撒盐。",
+   "examples": [
+    {
+     "en": "Everyone was already laughing at his failed presentation, and then she finished him off with words by asking if he had even rehearsed once.",
+     "zh": "大家已经在笑他失败的演讲，然后她补刀问他有没有排练过一次。"
+    },
+    {
+     "en": "He tried to defend his mistake, but his teammate finished him off with words, saying the client had warned them about this exact problem last week.",
+     "zh": "他试图为自己的错误辩解，但队友补刀说客户上周就警告过这个具体问题。"
+    }
+   ],
+   "tags": [
+    "社交关系"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "finish someone off with words",
+   "pair": "en-zh",
+   "slug": "finish-someone-off-with-words",
+   "lang": "en",
+   "translation": "补刀",
+   "shortAnswer": "finish someone off with words 的中文是「补刀」，指用言语给对方最后一击，近义 twist the knife，但更强调终结性的一击。",
+   "definition": "finish someone off with words 字面为用言语完成最后一击，源自游戏 last hit，社交中比喻在对方已处劣势或受伤时再补一句扎心的话，口语常用，正式写作较少。",
+   "examples": [
+    {
+     "en": "Everyone was already laughing at his failed presentation, and then she finished him off with words by asking if he had even rehearsed once.",
+     "zh": "大家已经在笑他失败的演讲，然后她补刀问他有没有排练过一次。"
+    },
+    {
+     "en": "He tried to defend his mistake, but his teammate finished him off with words, saying the client had warned them about this exact problem last week.",
+     "zh": "他试图为自己的错误辩解，但队友补刀说客户上周就警告过这个具体问题。"
+    }
+   ],
+   "tags": [
+    "社交关系"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "独处",
+   "pair": "zh-en",
+   "slug": "du-chu",
+   "lang": "zh",
+   "translation": "time alone",
+   "shortAnswer": "「独处」的英文是 time alone。它强调主动留出时间与自己相处，不等于孤独 lonely 或 solitude 的文学感。",
+   "definition": "time alone 是中性偏积极的表达，指主动独处、给自己留空间，常用 need / want / enjoy / get some time alone；lonely 才带孤独难过的负面感。",
+   "examples": [
+    {
+     "en": "After a long week of meetings, I really need some time alone.",
+     "zh": "开了一整周的会之后，我真的需要一点独处的时间。"
+    },
+    {
+     "en": "She enjoys time alone with a book and a cup of tea.",
+     "zh": "她喜欢捧一本书、泡一杯茶，享受独处。"
+    }
+   ],
+   "tags": [
+    "情绪表达"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "time alone",
+   "pair": "en-zh",
+   "slug": "time-alone",
+   "lang": "en",
+   "translation": "独处",
+   "shortAnswer": "time alone 的中文意思是「独处」，指主动留出时间与自己相处。它强调选择独处，不等于 lonely（孤独难过）。",
+   "definition": "time alone 指有意不与他人相处、恢复精力或思考的时间，口语中常说 need some time alone、enjoy time alone；与 lonely 情绪不同。",
+   "examples": [
+    {
+     "en": "After a long week of meetings, I really need some time alone.",
+     "zh": "开了一整周的会之后，我真的需要一点独处的时间。"
+    },
+    {
+     "en": "She enjoys time alone with a book and a cup of tea.",
+     "zh": "她喜欢捧一本书、泡一杯茶，享受独处。"
+    }
+   ],
+   "tags": [
+    "情绪表达"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "抬轿",
+   "pair": "zh-en",
+   "slug": "hype-up",
+   "lang": "zh",
+   "translation": "hype someone up",
+   "shortAnswer": "「抬轿」的英文是 hype someone up，指帮人吹嘘造势、捧场站台。",
+   "definition": "口语中指用夸张言辞帮某人抬高声势，如互相吹捧、粉丝造势，常带炒作或捧杀意味。",
+   "examples": [
+    {
+     "en": "His friends kept hyping him up before the interview, calling him the best candidate.",
+     "zh": "面试前朋友们一直给他抬轿，说他是最佳人选。"
+    },
+    {
+     "en": "Fans hyped the young singer up online, making her trend overnight.",
+     "zh": "粉丝在网上为这位年轻歌手抬轿，让她一夜走红。"
+    }
+   ],
+   "tags": [
+    "社交关系"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "hype someone up",
+   "pair": "en-zh",
+   "slug": "hype-someone-up",
+   "lang": "en",
+   "translation": "抬轿",
+   "shortAnswer": "「抬轿」 means hype someone up: to build someone up with exaggerated praise.",
+   "definition": "To hype someone up is to promote or encourage them with exaggerated words, often creating buzz and implying overpraise.",
+   "examples": [
+    {
+     "en": "His friends kept hyping him up before the interview, calling him the best candidate.",
+     "zh": "面试前朋友们一直给他抬轿，说他是最佳人选。"
+    },
+    {
+     "en": "Fans hyped the young singer up online, making her trend overnight.",
+     "zh": "粉丝在网上为这位年轻歌手抬轿，让她一夜走红。"
+    }
+   ],
+   "tags": [
+    "社交关系"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "摆烂",
+   "pair": "zh-en",
+   "slug": "bai-lan",
+   "lang": "zh",
+   "translation": "let things rot on purpose",
+   "shortAnswer": "「摆烂」可译作 let things rot on purpose，指有意放任事情变糟。",
+   "definition": "用法：let things rot on purpose 强调主动放弃补救，带自嘲意味，与被动不争的躺平不同。",
+   "examples": [
+    {
+     "en": "After failing twice, he chose to let things rot on purpose and stopped studying.",
+     "zh": "两次不及格后，他选择摆烂，干脆不再学习。"
+    },
+    {
+     "en": "She kept her job but let things rot on purpose by ignoring every email and deadline.",
+     "zh": "她没辞职，却用无视所有邮件和截止日期的方式摆烂。"
+    }
+   ],
+   "tags": [
+    "情绪表达"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "let things rot on purpose",
+   "pair": "en-zh",
+   "slug": "let-things-rot-on-purpose",
+   "lang": "en",
+   "translation": "摆烂",
+   "shortAnswer": "To let things rot on purpose is 摆烂: deliberately letting things worsen, with a self-mocking tone.",
+   "definition": "To let things rot on purpose means 摆烂: intentionally allowing a situation to worsen. It is active, unlike passive 躺平.",
+   "examples": [
+    {
+     "en": "After failing twice, he chose to let things rot on purpose and stopped studying.",
+     "zh": "两次不及格后，他选择摆烂，干脆不再学习。"
+    },
+    {
+     "en": "She kept her job but let things rot on purpose by ignoring every email and deadline.",
+     "zh": "她没辞职，却用无视所有邮件和截止日期的方式摆烂。"
+    }
+   ],
+   "tags": [
+    "情绪表达"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "周日焦虑",
+   "pair": "zh-en",
+   "slug": "zhou-ri-jiao-lv",
+   "lang": "zh",
+   "translation": "Sunday scaries",
+   "shortAnswer": "「周日焦虑」的英文是 Sunday scaries，指周日晚想到周一上班就心慌恐惧。注意它非临床诊断，而是口语化的网络心理热词。",
+   "definition": "Sunday scaries 为复数名词，常搭 get/have the Sunday scaries，表示周末尾声的焦虑感。中国版还叠加「周一例会恐惧」，语境更具体。",
+   "examples": [
+    {
+     "en": "I always get the Sunday scaries when I think about my Monday morning meeting.",
+     "zh": "一想到周一早上的例会，我就犯周日焦虑。"
+    },
+    {
+     "en": "Her Sunday scaries were so bad that she started preparing for work on Saturday night.",
+     "zh": "她的周日焦虑太严重了，周六晚上就开始为工作做准备。"
+    }
+   ],
+   "tags": [
+    "情绪表达"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "Sunday scaries",
+   "pair": "en-zh",
+   "slug": "sunday-scaries",
+   "lang": "en",
+   "translation": "周日焦虑",
+   "shortAnswer": "Sunday scaries 的中文意思是「周日焦虑」，指周日晚因想到周一工作而焦虑不安。它不等于临床焦虑症，而是轻松自嘲的口语热词。",
+   "definition": "Sunday scaries 是复数俚语名词，常作 get/have the Sunday scaries，口语多用于朋友吐槽和社媒。指周末结束前的焦虑，非正式诊断。",
+   "examples": [
+    {
+     "en": "I always get the Sunday scaries when I think about my Monday morning meeting.",
+     "zh": "一想到周一早上的例会，我就犯周日焦虑。"
+    },
+    {
+     "en": "Her Sunday scaries were so bad that she started preparing for work on Saturday night.",
+     "zh": "她的周日焦虑太严重了，周六晚上就开始为工作做准备。"
+    }
+   ],
+   "tags": [
+    "情绪表达"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "松弛感",
+   "pair": "zh-en",
+   "slug": "song-chi-gan",
+   "lang": "zh",
+   "translation": "effortless ease",
+   "shortAnswer": "「松弛感」的英文是 effortless ease，指不费力的从容状态，情绪稳定而不紧绷。",
+   "definition": "常用搭配：with effortless ease、a sense of effortless ease。强调情绪稳定、不紧绷；与消极怠工不同。",
+   "examples": [
+    {
+     "en": "She handled the tough questions with effortless ease, as if she had all the time in the world.",
+     "zh": "她从容不迫地应对了那些刁钻问题，仿佛拥有世间所有的余裕。"
+    },
+    {
+     "en": "His effortless ease in social situations makes people feel comfortable around him.",
+     "zh": "他在社交场合中那种不费力的松弛感，让周围的人都感到舒服。"
+    }
+   ],
+   "tags": [
+    "情绪表达"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "effortless ease",
+   "pair": "en-zh",
+   "slug": "effortless-ease",
+   "lang": "en",
+   "translation": "松弛感",
+   "shortAnswer": "The English for 「松弛感」 is effortless ease: a calm, unforced state of being.",
+   "definition": "Effortless ease means being calm and natural, not tense. Common collocations: with effortless ease, a sense of effortless ease.",
+   "examples": [
+    {
+     "en": "She handled the tough questions with effortless ease, as if she had all the time in the world.",
+     "zh": "她从容不迫地应对了那些刁钻问题，仿佛拥有世间所有的余裕。"
+    },
+    {
+     "en": "His effortless ease in social situations makes people feel comfortable around him.",
+     "zh": "他在社交场合中那种不费力的松弛感，让周围的人都感到舒服。"
+    }
+   ],
+   "tags": [
+    "情绪表达"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "起床气",
+   "pair": "zh-en",
+   "slug": "qi-chuang-qi",
+   "lang": "zh",
+   "translation": "waking up on the wrong side",
+   "shortAnswer": "「起床气」的英文是 waking up on the wrong side，指醒来后莫名烦躁易怒。",
+   "definition": "中文「起床气」把情绪说成名词化的「气」，英文用方位隐喻，指从床的错误一侧醒来，暗指一天不顺。",
+   "examples": [
+    {
+     "en": "Don't take it personally—he is just waking up on the wrong side this morning.",
+     "zh": "别往心里去，他今天早上只是有起床气。"
+    },
+    {
+     "en": "I think I'm waking up on the wrong side today; everything is getting on my nerves.",
+     "zh": "我觉得我今天有起床气，什么事都让我心烦。"
+    }
+   ],
+   "tags": [
+    "情绪表达"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "waking up on the wrong side",
+   "pair": "en-zh",
+   "slug": "waking-up-on-the-wrong-side",
+   "lang": "en",
+   "translation": "起床气",
+   "shortAnswer": "waking up on the wrong side means 起床气—grumpy right after getting up.",
+   "definition": "waking up on the wrong side means being irritable after waking for no clear reason. Use it for a passing mood.",
+   "examples": [
+    {
+     "en": "Don't take it personally—he is just waking up on the wrong side this morning.",
+     "zh": "别往心里去，他今天早上只是有起床气。"
+    },
+    {
+     "en": "I think I'm waking up on the wrong side today; everything is getting on my nerves.",
+     "zh": "我觉得我今天有起床气，什么事都让我心烦。"
+    }
+   ],
+   "tags": [
+    "情绪表达"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "假期综合征",
+   "pair": "zh-en",
+   "slug": "jia-qi-zong-he-zheng",
+   "lang": "zh",
+   "translation": "post-holiday blues",
+   "shortAnswer": "「假期综合征」用英语说是 post-holiday blues，指假期后回归工作或学习时出现的疲惫低落。",
+   "definition": "常搭配 get/have/suffer from post-holiday blues，指长假或周末后几天提不起劲；持续数周并影响生活就不宜再这样说了。",
+   "examples": [
+    {
+     "en": "I always get the post-holiday blues on the first Monday back at work.",
+     "zh": "每次假期结束回去上班的第一个周一，我总会犯假期综合征。"
+    },
+    {
+     "en": "She tried to beat the post-holiday blues by planning a small weekend trip.",
+     "zh": "她试着安排一次周末小旅行，来缓解假期综合征。"
+    }
+   ],
+   "tags": [
+    "情绪表达"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "post-holiday blues",
+   "pair": "en-zh",
+   "slug": "post-holiday-blues",
+   "lang": "en",
+   "translation": "假期综合征",
+   "shortAnswer": "post-holiday blues 的中文意思是「假期综合征」，指假期结束后重返日常时感到低落疲惫、不在状态。",
+   "definition": "口语和非正式说法，搭配 get/have/suffer from post-holiday blues，多指节后几天到一周的情绪低谷，强调短暂可恢复。",
+   "examples": [
+    {
+     "en": "I always get the post-holiday blues on the first Monday back at work.",
+     "zh": "每次假期结束回去上班的第一个周一，我总会犯假期综合征。"
+    },
+    {
+     "en": "She tried to beat the post-holiday blues by planning a small weekend trip.",
+     "zh": "她试着安排一次周末小旅行，来缓解假期综合征。"
+    }
+   ],
+   "tags": [
+    "情绪表达"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "佛系",
+   "pair": "zh-en",
+   "slug": "fo-xi",
+   "lang": "zh",
+   "translation": "zen-like detachment",
+   "shortAnswer": "「佛系」英文说 zen-like detachment，指不争不抢、怎么都行的态度。",
+   "definition": "zen-like detachment 指对得失淡然、不主动争取也不焦虑。非宗教术语，是网络自嘲表达。",
+   "examples": [
+    {
+     "en": "After years of chasing promotions, he adopted a zen-like detachment and let things happen.",
+     "zh": "在多年追求升职后，他变得佛系，顺其自然。"
+    },
+    {
+     "en": "Her zen-like detachment from social media drama makes her seem older than her age.",
+     "zh": "她对社交媒体上的闹剧保持佛系，这让她显得比实际年龄成熟。"
+    }
+   ],
+   "tags": [
+    "情绪表达"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "zen-like detachment",
+   "pair": "en-zh",
+   "slug": "zen-like-detachment",
+   "lang": "en",
+   "translation": "佛系",
+   "shortAnswer": "Zen-like detachment means 「佛系」: a calm, non-striving, whatever attitude.",
+   "definition": "A laid-back, unbothered attitude towards competition or outcomes; a pop-culture label, not religious.",
+   "examples": [
+    {
+     "en": "After years of chasing promotions, he adopted a zen-like detachment and let things happen.",
+     "zh": "在多年追求升职后，他变得佛系，顺其自然。"
+    },
+    {
+     "en": "Her zen-like detachment from social media drama makes her seem older than her age.",
+     "zh": "她对社交媒体上的闹剧保持佛系，这让她显得比实际年龄成熟。"
+    }
+   ],
+   "tags": [
+    "情绪表达"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "选择困难症",
+   "pair": "zh-en",
+   "slug": "xuan-ze-kun-nan-zheng",
+   "lang": "zh",
+   "translation": "decision paralysis",
+   "shortAnswer": "「选择困难症」的英文是 decision paralysis，日常也常说 analysis paralysis；这是网络自嘲式说法，并非临床诊断。",
+   "definition": "指面对多个选项难以取舍、拖延决策的状态，像「强迫症」「拖延症」一样属于「XX症」自嘲句式。英文常用搭配：suffer from decision paralysis、be paralyzed by choice。",
+   "examples": [
+    {
+     "en": "I spent twenty minutes staring at the menu and still couldn't order—classic decision paralysis.",
+     "zh": "我盯着菜单看了二十分钟还是没点单——典型的「选择困难症」。"
+    },
+    {
+     "en": "Too many similar options online can trigger decision paralysis and make you buy nothing at all.",
+     "zh": "网上太多相似的选项会引发选择困难症，结果你什么都没买成。"
+    }
+   ],
+   "tags": [
+    "情绪表达"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "decision paralysis",
+   "pair": "en-zh",
+   "slug": "decision-paralysis",
+   "lang": "en",
+   "translation": "选择困难症",
+   "shortAnswer": "Decision paralysis 的中文意思是「选择困难症」，指面对太多选项时无法做出决定。与 analysis paralysis 相比，它更强调「选项过多」而非「分析过度」。",
+   "definition": "指因选项过多或害怕选错而陷入决策停滞，日常和职场都常用；口语也常说 analysis paralysis。注意它不是正式临床诊断，多用于自嘲或描述状态。",
+   "examples": [
+    {
+     "en": "I spent twenty minutes staring at the menu and still couldn't order—classic decision paralysis.",
+     "zh": "我盯着菜单看了二十分钟还是没点单——典型的「选择困难症」。"
+    },
+    {
+     "en": "Too many similar options online can trigger decision paralysis and make you buy nothing at all.",
+     "zh": "网上太多相似的选项会引发选择困难症，结果你什么都没买成。"
+    }
+   ],
+   "tags": [
+    "情绪表达"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "社交恐惧",
+   "pair": "zh-en",
+   "slug": "she-jiao-kong-ju",
+   "lang": "zh",
+   "translation": "social anxiety",
+   "shortAnswer": "「社交恐惧」的英文是 social anxiety，指在社交场合中紧张、害怕被负面评价的情绪。",
+   "definition": "social anxiety 是名词短语，常搭配 have、experience；也可说 social anxiety disorder。它与 shy 不同：shy 偏性格，social anxiety 强调焦虑，未必是临床诊断。",
+   "examples": [
+    {
+     "en": "She experiences social anxiety when she has to speak in front of a large group.",
+     "zh": "当她必须在一大群人面前讲话时，她会感到社交恐惧。"
+    },
+    {
+     "en": "His social anxiety often makes him avoid parties and other social events.",
+     "zh": "他的社交恐惧常常让他回避聚会和其他社交活动。"
+    }
+   ],
+   "tags": [
+    "情绪表达"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "social anxiety",
+   "pair": "en-zh",
+   "slug": "social-anxiety",
+   "lang": "en",
+   "translation": "社交恐惧",
+   "shortAnswer": "「social anxiety」的中文意思是「社交恐惧」，指在社交或表现场合中紧张、害怕被负面评价的情绪。",
+   "definition": "social anxiety 是名词短语，常见搭配有 have social anxiety、social anxiety disorder。口语中可泛指社交紧张，正式语境可指临床诊断，不宜与 shyness 完全等同。",
+   "examples": [
+    {
+     "en": "She experiences social anxiety when she has to speak in front of a large group.",
+     "zh": "当她必须在一大群人面前讲话时，她会感到社交恐惧。"
+    },
+    {
+     "en": "His social anxiety often makes him avoid parties and other social events.",
+     "zh": "他的社交恐惧常常让他回避聚会和其他社交活动。"
+    }
+   ],
+   "tags": [
+    "情绪表达"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "强迫症",
+   "pair": "zh-en",
+   "slug": "qiang-po-zheng",
+   "lang": "zh",
+   "translation": "OCD-like tendencies",
+   "shortAnswer": "「强迫症」的英文可表达为 OCD-like tendencies，指有类似强迫倾向但未必达到临床诊断标准。日常自嘲常用，注意与正式诊断 OCD 区分。",
+   "definition": "OCD-like tendencies 多用于口语和网络语境，表示爱整齐、反复检查等强迫倾向。不是临床诊断术语，正式诊断用 OCD（强迫症）。",
+   "examples": [
+    {
+     "en": "I keep rearranging my desk until everything is perfectly aligned—my friends say I have OCD-like tendencies.",
+     "zh": "我总要把桌子摆到完全对齐才安心，朋友们说我有强迫症倾向。"
+    },
+    {
+     "en": "She checks the door lock three times before leaving, which she jokes are just her OCD-like tendencies.",
+     "zh": "她出门前要检查三次门锁，她自嘲说这只是她的强迫症倾向。"
+    }
+   ],
+   "tags": [
+    "情绪表达"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "OCD-like tendencies",
+   "pair": "en-zh",
+   "slug": "ocd-like-tendencies",
+   "lang": "en",
+   "translation": "强迫症",
+   "shortAnswer": "OCD-like tendencies 的中文意思是「强迫症」，但更准确说是「类强迫症倾向」，指有强迫倾向却未必符合临床诊断。它比正式诊断 OCD 更轻、更口语。",
+   "definition": "OCD-like tendencies 指类似强迫症的行为或思维倾向，常见搭配有 have/show OCD-like tendencies。多用于日常自嘲或非正式描述，正式医学语境应说 OCD。",
+   "examples": [
+    {
+     "en": "I keep rearranging my desk until everything is perfectly aligned—my friends say I have OCD-like tendencies.",
+     "zh": "我总要把桌子摆到完全对齐才安心，朋友们说我有强迫症倾向。"
+    },
+    {
+     "en": "She checks the door lock three times before leaving, which she jokes are just her OCD-like tendencies.",
+     "zh": "她出门前要检查三次门锁，她自嘲说这只是她的强迫症倾向。"
+    }
+   ],
+   "tags": [
+    "情绪表达"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "密集恐惧症",
+   "pair": "zh-en",
+   "slug": "mi-ji-kong-ju-zheng",
+   "lang": "zh",
+   "translation": "fear of clustered holes",
+   "shortAnswer": "密集恐惧症英文常写作 fear of clustered holes，口语也说 trypophobia；注意它不是正式诊断，多指看到密集孔洞时的恶心、发麻等不适感。",
+   "definition": "fear of clustered holes 是描述性说法，trypophobia 更学术。常用于网络自嘲，如「我密集恐惧症犯了」；不等于临床恐惧症，别用于正式诊断。",
+   "examples": [
+    {
+     "en": "I have a fear of clustered holes, so that lotus seed pod picture really makes my skin crawl.",
+     "zh": "我有密集恐惧症，所以那张莲蓬图片真的让我起鸡皮疙瘩。"
+    },
+    {
+     "en": "Her fear of clustered holes is mostly a joke online, but she still avoids looking at honeycomb patterns.",
+     "zh": "她的密集恐惧症在网上多半是自嘲，但她还是不敢看蜂窝图案。"
+    }
+   ],
+   "tags": [
+    "情绪表达"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "fear of clustered holes",
+   "pair": "en-zh",
+   "slug": "fear-of-clustered-holes",
+   "lang": "en",
+   "translation": "密集恐惧症",
+   "shortAnswer": "Fear of clustered holes 的中文意思是密集恐惧症，也叫 trypophobia；它多指对密集孔洞图案的厌恶或发麻感，并非严格临床诊断。",
+   "definition": "fear of clustered holes 是口语/描述性表达，trypophobia 更正式。常搭配 have/trigger a fear of clustered holes，用于网络自嘲或科普语境。",
+   "examples": [
+    {
+     "en": "I have a fear of clustered holes, so that lotus seed pod picture really makes my skin crawl.",
+     "zh": "我有密集恐惧症，所以那张莲蓬图片真的让我起鸡皮疙瘩。"
+    },
+    {
+     "en": "Her fear of clustered holes is mostly a joke online, but she still avoids looking at honeycomb patterns.",
+     "zh": "她的密集恐惧症在网上多半是自嘲，但她还是不敢看蜂窝图案。"
+    }
+   ],
+   "tags": [
+    "情绪表达"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "认生",
+   "pair": "zh-en",
+   "slug": "ren-sheng",
+   "lang": "zh",
+   "translation": "shy with strangers",
+   "shortAnswer": "「认生」的英文是 shy with strangers，指小孩怕见生人、只认熟人。注意别和 shy（泛指害羞）混用，认生特指对陌生人的警惕，常出现在婴幼儿发育话题里。",
+   "definition": "认生形容婴儿或幼儿见到陌生人就哭闹、躲避，只肯让熟人抱。英文常用 shy with strangers，也可说 slow to warm up。与 shy 不同：shy 是性格害羞，认生是阶段性的陌生人焦虑。",
+   "examples": [
+    {
+     "en": "Don't worry, she's just shy with strangers and needs a few minutes to warm up.",
+     "zh": "别担心，她只是认生，需要几分钟才能熟络起来。"
+    },
+    {
+     "en": "Our baby used to be shy with strangers, but now she smiles at everyone.",
+     "zh": "我们家宝宝以前很认生，现在见谁都笑。"
+    }
+   ],
+   "tags": [
+    "情绪表达"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "shy with strangers",
+   "pair": "en-zh",
+   "slug": "shy-with-strangers",
+   "lang": "en",
+   "translation": "认生",
+   "shortAnswer": "shy with strangers 的中文意思是「认生」，即小孩见到生人就害怕、只认熟人。它比 shy 更具体，特指对陌生人的警惕，是婴幼儿发育中的常见阶段。",
+   "definition": "shy with strangers 形容幼儿见生人哭闹躲避，只认熟人，中文叫认生。口语常用，也可说 slow to warm up。注意它不等于 shy（泛指害羞），不用于成人社交恐惧。",
+   "examples": [
+    {
+     "en": "Don't worry, she's just shy with strangers and needs a few minutes to warm up.",
+     "zh": "别担心，她只是认生，需要几分钟才能熟络起来。"
+    },
+    {
+     "en": "Our baby used to be shy with strangers, but now she smiles at everyone.",
+     "zh": "我们家宝宝以前很认生，现在见谁都笑。"
+    }
+   ],
+   "tags": [
+    "情绪表达"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "脸盲",
+   "pair": "zh-en",
+   "slug": "lian-mang",
+   "lang": "zh",
+   "translation": "face blindness",
+   "shortAnswer": "「脸盲」用英语说是 face blindness。日常多为自嘲式表达，指记不住或认不出人脸，不等于医学上的“面容失认症”。",
+   "definition": "常见搭配：have face blindness、suffer from face blindness。日常口语里常自嘲“我脸盲”，并非临床诊断；医学正式术语为 prosopagnosia。",
+   "examples": [
+    {
+     "en": "I have face blindness, so I often fail to recognize my classmates outside of class.",
+     "zh": "我脸盲，所以课后常常认不出同学。"
+    },
+    {
+     "en": "Her face blindness makes it hard for her to follow shows with large casts.",
+     "zh": "她脸盲，所以很难看懂演员多的剧。"
+    }
+   ],
+   "tags": [
+    "情绪表达"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "face blindness",
+   "pair": "en-zh",
+   "slug": "face-blindness",
+   "lang": "en",
+   "translation": "脸盲",
+   "shortAnswer": "Face blindness 的中文意思是「脸盲」，指认不出或记不住人脸。日常多是自嘲说法，医学正式病名为 prosopagnosia。",
+   "definition": "不可数名词，常见搭配 have/suffer from face blindness。非正式场合可轻松自嘲；医学语境指面容失认症，需与 prosopagnosia 区分。",
+   "examples": [
+    {
+     "en": "I have face blindness, so I often fail to recognize my classmates outside of class.",
+     "zh": "我脸盲，所以课后常常认不出同学。"
+    },
+    {
+     "en": "Her face blindness makes it hard for her to follow shows with large casts.",
+     "zh": "她脸盲，所以很难看懂演员多的剧。"
+    }
+   ],
+   "tags": [
+    "情绪表达"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "认床",
+   "pair": "zh-en",
+   "slug": "ren-chuang",
+   "lang": "zh",
+   "translation": "trouble sleeping in new beds",
+   "shortAnswer": "「认床」英文是 trouble sleeping in new beds，指换床就睡不好，只认自己的床。",
+   "definition": "认床指睡眠环境依赖：换床、住酒店就容易失眠。口语常说 I have trouble sleeping in new beds，别直译 recognize bed。",
+   "examples": [
+    {
+     "en": "I always have trouble sleeping in new beds, so I bring my own pillow when I travel.",
+     "zh": "我认床，所以旅行时都自带枕头。"
+    },
+    {
+     "en": "She had trouble sleeping in new beds at first, but after a few nights in the hotel she felt fine.",
+     "zh": "她起初认床，但在酒店住了几晚后就适应了。"
+    }
+   ],
+   "tags": [
+    "情绪表达"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "trouble sleeping in new beds",
+   "pair": "en-zh",
+   "slug": "trouble-sleeping-in-new-beds",
+   "lang": "en",
+   "translation": "认床",
+   "shortAnswer": "trouble sleeping in new beds 意思是「认床」，即换了陌生的床就睡不好。",
+   "definition": "trouble sleeping in new beds 描述因睡眠环境改变而入睡困难，程度可轻可重，非临床诊断，回到自己床上通常就好。",
+   "examples": [
+    {
+     "en": "I always have trouble sleeping in new beds, so I bring my own pillow when I travel.",
+     "zh": "我认床，所以旅行时都自带枕头。"
+    },
+    {
+     "en": "She had trouble sleeping in new beds at first, but after a few nights in the hotel she felt fine.",
+     "zh": "她起初认床，但在酒店住了几晚后就适应了。"
+    }
+   ],
+   "tags": [
+    "情绪表达"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "下头",
+   "pair": "zh-en",
+   "slug": "xia-tou",
+   "lang": "zh",
+   "translation": "turn-off moment",
+   "shortAnswer": "「下头」的英文是 turn-off moment，指瞬间失去兴趣或好感。注意「下头」是瞬间反应，不是长期讨厌；反义词是「上头」，即上头式的迷恋。",
+   "definition": "「下头」是「上头」的反义：上头指因某细节突然极度喜欢、像上瘾一样；下头指因对方一句话或一个动作瞬间好感清零，常用于追星、暧昧、恋爱场景。英文常用 turn-off 或 turn-off moment。",
+   "examples": [
+    {
+     "en": "He kept checking his phone during our date, and that was a total turn-off moment for me.",
+     "zh": "他约会时一直看手机，那一刻我彻底下头了。"
+    },
+    {
+     "en": "Her constant bragging about her ex turned into a turn-off moment that killed my crush instantly.",
+     "zh": "她不停炫耀前任，那个瞬间让我下头，好感全无。"
+    }
+   ],
+   "tags": [
+    "情绪表达"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "turn-off moment",
+   "pair": "en-zh",
+   "slug": "turn-off-moment",
+   "lang": "en",
+   "translation": "下头",
+   "shortAnswer": "Turn-off moment 的中文是「下头」，指某个瞬间突然失去兴趣或好感。它强调瞬间的倒胃口，不是长期讨厌；反义是「上头」，即上瘾式喜欢。",
+   "definition": "Turn-off moment 指某个具体言行让人瞬间兴致全无，口语常用。turn-off 可作名词，如 That's a turn-off；moment 强调瞬间性。与 disgust 不同，它多指吸引力骤降而非道德厌恶。",
+   "examples": [
+    {
+     "en": "He kept checking his phone during our date, and that was a total turn-off moment for me.",
+     "zh": "他约会时一直看手机，那一刻我彻底下头了。"
+    },
+    {
+     "en": "Her constant bragging about her ex turned into a turn-off moment that killed my crush instantly.",
+     "zh": "她不停炫耀前任，那个瞬间让我下头，好感全无。"
+    }
+   ],
+   "tags": [
+    "情绪表达"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "路痴",
+   "pair": "zh-en",
+   "slug": "lu-chi",
+   "lang": "zh",
+   "translation": "terrible sense of direction",
+   "shortAnswer": "「路痴」的英文是 terrible sense of direction，形容方向感极差、容易迷路。",
+   "definition": "「路痴」指方向感差、常迷路的人。英文说 have a terrible sense of direction，也可说 no sense of direction，语气更重。",
+   "examples": [
+    {
+     "en": "I have a terrible sense of direction, so I use maps even for short walks.",
+     "zh": "我是个路痴，所以哪怕走很短的路也要用地图。"
+    },
+    {
+     "en": "She joked that her terrible sense of direction made her late again.",
+     "zh": "她开玩笑说，自己的路痴又让她迟到了。"
+    }
+   ],
+   "tags": [
+    "情绪表达"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "terrible sense of direction",
+   "pair": "en-zh",
+   "slug": "terrible-sense-of-direction",
+   "lang": "en",
+   "translation": "路痴",
+   "shortAnswer": "terrible sense of direction 就是中文说的「路痴」，指方向感差、容易迷路。",
+   "definition": "指方向感很差、常迷路。常用 have a terrible sense of direction，语气中性偏自嘲，口语书面皆可。",
+   "examples": [
+    {
+     "en": "I have a terrible sense of direction, so I use maps even for short walks.",
+     "zh": "我是个路痴，所以哪怕走很短的路也要用地图。"
+    },
+    {
+     "en": "She joked that her terrible sense of direction made her late again.",
+     "zh": "她开玩笑说，自己的路痴又让她迟到了。"
+    }
+   ],
+   "tags": [
+    "情绪表达"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "晕血",
+   "pair": "zh-en",
+   "slug": "yun-xue",
+   "lang": "zh",
+   "translation": "faint at the sight of blood",
+   "shortAnswer": "「晕血」的英文是 faint at the sight of blood，指见血就头晕甚至昏厥。",
+   "definition": "「晕血」英文常说 faint at the sight of blood，指见血后出现生理性昏厥，而非单纯怕血。",
+   "examples": [
+    {
+     "en": "I can't watch medical dramas because I faint at the sight of blood.",
+     "zh": "我没法看医疗剧，因为我晕血。"
+    },
+    {
+     "en": "She warned the nurse that she might faint at the sight of blood during the injection.",
+     "zh": "她提前告诉护士，打针时她可能会晕血。"
+    }
+   ],
+   "tags": [
+    "情绪表达"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "faint at the sight of blood",
+   "pair": "en-zh",
+   "slug": "faint-at-the-sight-of-blood",
+   "lang": "en",
+   "translation": "晕血",
+   "shortAnswer": "faint at the sight of blood 的中文意思是「晕血」，即看到血就头晕甚至昏倒。",
+   "definition": "faint at the sight of blood 意为「晕血」，指见到血液、伤口或打针时出现血管迷走性昏厥。",
+   "examples": [
+    {
+     "en": "I can't watch medical dramas because I faint at the sight of blood.",
+     "zh": "我没法看医疗剧，因为我晕血。"
+    },
+    {
+     "en": "She warned the nurse that she might faint at the sight of blood during the injection.",
+     "zh": "她提前告诉护士，打针时她可能会晕血。"
+    }
+   ],
+   "tags": [
+    "情绪表达"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "意难平",
+   "pair": "zh-en",
+   "slug": "yi-nan-ping",
+   "lang": "zh",
+   "translation": "lingering regret",
+   "shortAnswer": "「意难平」的英文是 lingering regret，指事已过去却仍心绪难平、余情未了。",
+   "definition": "lingering regret 指挥之不去的遗憾，常搭配 leave sb with a lingering regret，语气偏文学化，不同于怨恨。",
+   "examples": [
+    {
+     "en": "Watching the finale, I was left with a lingering regret for the couple who never got their happy ending.",
+     "zh": "看完大结局，那对没能迎来圆满结局的恋人让我意难平。"
+    },
+    {
+     "en": "Years later, he still had a lingering regret about the words he never said to his father.",
+     "zh": "多年以后，他仍对没来得及对父亲说出口的话意难平。"
+    }
+   ],
+   "tags": [
+    "情绪表达"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "lingering regret",
+   "pair": "en-zh",
+   "slug": "lingering-regret",
+   "lang": "en",
+   "translation": "意难平",
+   "shortAnswer": "Lingering regret is the English for 「意难平」: a regret that will not fade after the event.",
+   "definition": "A lingering regret is a sad feeling about the past that stays with you long after. Not a clinical term; for real resentment say bitterness.",
+   "examples": [
+    {
+     "en": "Watching the finale, I was left with a lingering regret for the couple who never got their happy ending.",
+     "zh": "看完大结局，那对没能迎来圆满结局的恋人让我意难平。"
+    },
+    {
+     "en": "Years later, he still had a lingering regret about the words he never said to his father.",
+     "zh": "多年以后，他仍对没来得及对父亲说出口的话意难平。"
+    }
+   ],
+   "tags": [
+    "情绪表达"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "公积金",
+   "pair": "zh-en",
+   "slug": "gong-ji-jin",
+   "lang": "zh",
+   "translation": "housing provident fund",
+   "shortAnswer": "公积金 的英文是 housing provident fund。它指中国强制性的住房公积金制度，常用于工资条和劳动合同中，注意与 401k 或普通养老金区分。",
+   "definition": "公积金即住房公积金，由单位和个人按同比例缴存，用于购房、租房等住房消费，可申请低息贷款。英文固定说法为 housing provident fund，不要译成 pension 或 401k，后者是养老制度。",
+   "examples": [
+    {
+     "en": "My new employer matches my housing provident fund contribution every month, which helps me save for an apartment.",
+     "zh": "我的新公司每个月按同等比例为我缴存公积金，这帮我攒钱买房。"
+    },
+    {
+     "en": "Before signing the contract, she asked HR whether the housing provident fund was included in the salary package.",
+     "zh": "签合同前，她问人力资源公积金是否包含在薪酬方案里。"
+    }
+   ],
+   "tags": [
+    "职场黑话与规则"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "housing provident fund",
+   "pair": "en-zh",
+   "slug": "housing-provident-fund",
+   "lang": "en",
+   "translation": "公积金",
+   "shortAnswer": "Housing provident fund 的中文是 公积金。它是中国特有的强制住房储蓄制度，不是养老金，常出现在工资单和录用通知里。",
+   "definition": "Housing provident fund 指中国住房公积金，由雇主和雇员等比例缴存，可用于买房、还贷或租房。正式场合用全称，口语可说 provident fund，但不要与 pension 或 401k 混用。",
+   "examples": [
+    {
+     "en": "My new employer matches my housing provident fund contribution every month, which helps me save for an apartment.",
+     "zh": "我的新公司每个月按同等比例为我缴存公积金，这帮我攒钱买房。"
+    },
+    {
+     "en": "Before signing the contract, she asked HR whether the housing provident fund was included in the salary package.",
+     "zh": "签合同前，她问人力资源公积金是否包含在薪酬方案里。"
+    }
+   ],
+   "tags": [
+    "职场黑话与规则"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "如释重负",
+   "pair": "zh-en",
+   "slug": "ru-shi-zhong-fu",
+   "lang": "zh",
+   "translation": "weight lifted off the chest",
+   "shortAnswer": "「如释重负」的英文是 a weight lifted off the chest，像卸下心头大石，常与 feel 搭配。",
+   "definition": "如释重负强调紧张、焦虑或担忧消除后的轻松感。常见搭配：feel a weight lifted off the chest、a huge weight lifted off my chest。非临床焦虑症诊断用语。",
+   "examples": [
+    {
+     "en": "When the exam results came out and I had passed, I felt a huge weight lifted off the chest.",
+     "zh": "考试成绩出来、我通过的那一刻，我感到如释重负。"
+    },
+    {
+     "en": "Telling her the truth was hard, but afterwards it was like a weight lifted off the chest.",
+     "zh": "告诉她真相很难，但说完之后我如释重负。"
+    }
+   ],
+   "tags": [
+    "情绪表达"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "weight lifted off the chest",
+   "pair": "en-zh",
+   "slug": "weight-lifted-off-the-chest",
+   "lang": "en",
+   "translation": "如释重负",
+   "shortAnswer": "A weight lifted off the chest 意为「如释重负」，指担忧或压力消失后的放松感。",
+   "definition": "a weight lifted off the chest 表示心头重担卸下，强调情绪瞬间的轻松。口语常说 a huge weight lifted off my chest；正式书面也可用，但不是临床诊断术语。",
+   "examples": [
+    {
+     "en": "When the exam results came out and I had passed, I felt a huge weight lifted off the chest.",
+     "zh": "考试成绩出来、我通过的那一刻，我感到如释重负。"
+    },
+    {
+     "en": "Telling her the truth was hard, but afterwards it was like a weight lifted off the chest.",
+     "zh": "告诉她真相很难，但说完之后我如释重负。"
+    }
+   ],
+   "tags": [
+    "情绪表达"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "转正",
+   "pair": "zh-en",
+   "slug": "zhuan-zheng",
+   "lang": "zh",
+   "translation": "pass probation",
+   "shortAnswer": "「转正」的英文是 pass probation，常用于通过试用期后正式入职。别直译成 become regular，正式职场用 pass probation 更地道。",
+   "definition": "pass probation 指试用期考核合格、转为正式员工。搭配有 pass one's probation、be on probation。注意：probation 也用于缓刑、观察期，职场语境靠上下文判断。",
+   "examples": [
+    {
+     "en": "After three months, she finally passed probation and got her full benefits.",
+     "zh": "三个月后，她终于转正了，开始享受完整福利。"
+    },
+    {
+     "en": "If you pass probation, the company will sign a formal labor contract with you.",
+     "zh": "如果你转正，公司会和你签正式劳动合同。"
+    }
+   ],
+   "tags": [
+    "职场黑话与规则"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "pass probation",
+   "pair": "en-zh",
+   "slug": "pass-probation",
+   "lang": "en",
+   "translation": "转正",
+   "shortAnswer": "pass probation 的中文意思是「转正」，即顺利通过试用期成为正式员工。与 be hired 不同，它强调试用期满且考核通过。",
+   "definition": "pass probation 指顺利完成试用期并转为正式职位。常见搭配 pass one's probation、be on probation。正式书面和日常口语都可用；易错点是误用为 get regular，后者不地道。",
+   "examples": [
+    {
+     "en": "After three months, she finally passed probation and got her full benefits.",
+     "zh": "三个月后，她终于转正了，开始享受完整福利。"
+    },
+    {
+     "en": "If you pass probation, the company will sign a formal labor contract with you.",
+     "zh": "如果你转正，公司会和你签正式劳动合同。"
+    }
+   ],
+   "tags": [
+    "职场黑话与规则"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "被优化",
+   "pair": "zh-en",
+   "slug": "bei-you-hua",
+   "lang": "zh",
+   "translation": "euphemism for getting laid off",
+   "shortAnswer": "「被优化」的英文是 euphemism for getting laid off，即用「优化」来委婉表达被裁员。",
+   "definition": "「被优化」是中国职场中「裁员」的委婉说法，字面意思是「被改进得更好」，实指因公司调整而失去职位。英文对应委婉语有 let go、downsized。",
+   "examples": [
+    {
+     "en": "The company announced a new round of restructuring, but everyone knew it was a euphemism for getting laid off.",
+     "zh": "公司宣布了新一轮架构调整，但大家都知道这是「被优化」的委婉说法。"
+    },
+    {
+     "en": "When HR says your position has been eliminated, it's just a euphemism for getting laid off.",
+     "zh": "当人力资源说你的岗位被取消时，那只是「被优化」的委婉表达。"
+    }
+   ],
+   "tags": [
+    "职场黑话与规则"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "euphemism for getting laid off",
+   "pair": "en-zh",
+   "slug": "euphemism-for-getting-laid-off",
+   "lang": "en",
+   "translation": "被优化",
+   "shortAnswer": "“euphemism for getting laid off”的中文是「被优化」，即用「优化」来委婉表达被裁员。",
+   "definition": "euphemism for getting laid off 指用「被优化」等委婉语代替直接说「被裁员」。英文中类似说法有 let go、downsized、made redundant。",
+   "examples": [
+    {
+     "en": "The company announced a new round of restructuring, but everyone knew it was a euphemism for getting laid off.",
+     "zh": "公司宣布了新一轮架构调整，但大家都知道这是「被优化」的委婉说法。"
+    },
+    {
+     "en": "When HR says your position has been eliminated, it's just a euphemism for getting laid off.",
+     "zh": "当人力资源说你的岗位被取消时，那只是「被优化」的委婉表达。"
+    }
+   ],
+   "tags": [
+    "职场黑话与规则"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "骑驴找马",
+   "pair": "zh-en",
+   "slug": "qi-lv-zhao-ma",
+   "lang": "zh",
+   "translation": "job-hunt while employed",
+   "shortAnswer": "「骑驴找马」的英文是 job-hunt while employed，指在职期间找新工作，不裸辞先找好下家。",
+   "definition": "用法：多作动词短语，如 be job-hunting while employed。搭配：secretly job-hunt while employed（暗地骑驴找马）。易错点：别直译 ride donkey find horse。",
+   "examples": [
+    {
+     "en": "She decided to job-hunt while employed so she wouldn't have a gap in her income.",
+     "zh": "她决定骑驴找马，这样收入就不会断档。"
+    },
+    {
+     "en": "Many professionals job-hunt while employed, quietly attending interviews after work.",
+     "zh": "许多职场人骑驴找马，下班后悄悄去面试。"
+    }
+   ],
+   "tags": [
+    "职场黑话与规则"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "job-hunt while employed",
+   "pair": "en-zh",
+   "slug": "job-hunt-while-employed",
+   "lang": "en",
+   "translation": "骑驴找马",
+   "shortAnswer": "“job-hunt while employed”的中文意思是「骑驴找马」，即不辞职就找下一份工作。",
+   "definition": "核心义：在职求职，先保住现有收入再找下家。常见搭配：be job-hunting while employed；正式可用 pursue opportunities while employed。",
+   "examples": [
+    {
+     "en": "She decided to job-hunt while employed so she wouldn't have a gap in her income.",
+     "zh": "她决定骑驴找马，这样收入就不会断档。"
+    },
+    {
+     "en": "Many professionals job-hunt while employed, quietly attending interviews after work.",
+     "zh": "许多职场人骑驴找马，下班后悄悄去面试。"
+    }
+   ],
+   "tags": [
+    "职场黑话与规则"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "调薪",
+   "pair": "zh-en",
+   "slug": "tiao-xin",
+   "lang": "zh",
+   "translation": "salary adjustment",
+   "shortAnswer": "「调薪」最常用的英文是 salary adjustment，正式指公司对薪资的调整，可涨可降，口语 pay raise 多只指加薪。",
+   "definition": "salary adjustment 是职场正式说法，指对薪资的调整，常见于年度调薪、绩效调薪等，可能加薪也可能降薪或平调，不等于升职。",
+   "examples": [
+    {
+     "en": "After the performance review, the company announced a salary adjustment for all employees.",
+     "zh": "绩效评估之后，公司宣布对全体员工进行调薪。"
+    },
+    {
+     "en": "She requested a salary adjustment because her duties had grown a lot.",
+     "zh": "她申请调薪，因为她的职责增加了不少。"
+    }
+   ],
+   "tags": [
+    "职场黑话与规则"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "salary adjustment",
+   "pair": "en-zh",
+   "slug": "salary-adjustment",
+   "lang": "en",
+   "translation": "调薪",
+   "shortAnswer": "salary adjustment 的中文就是「调薪」，指公司对员工薪资的正式调整，可加薪、降薪或平调，比 pay raise 更中性。",
+   "definition": "salary adjustment 是正式职场用语，指对基本工资的调整，常见搭配有年度调薪、绩效调薪，可涵盖加薪、降薪或薪酬体系改革。",
+   "examples": [
+    {
+     "en": "After the performance review, the company announced a salary adjustment for all employees.",
+     "zh": "绩效评估之后，公司宣布对全体员工进行调薪。"
+    },
+    {
+     "en": "She requested a salary adjustment because her duties had grown a lot.",
+     "zh": "她申请调薪，因为她的职责增加了不少。"
+    }
+   ],
+   "tags": [
+    "职场黑话与规则"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "隐形加班",
+   "pair": "zh-en",
+   "slug": "yin-xing-jia-ban",
+   "lang": "zh",
+   "translation": "invisible overtime",
+   "shortAnswer": "「隐形加班」英文是 invisible overtime，指下班后在线干活却不计工时、不给钱。",
+   "definition": "invisible overtime 指未记录、不被承认的加班，常搭配 do/put in invisible overtime。",
+   "examples": [
+    {
+     "en": "Replying to WeChat messages after 10 p.m. is invisible overtime—your boss sees it, but your timesheet doesn't.",
+     "zh": "晚上十点后回复微信消息就是隐形加班——老板看得见，但考勤表上看不见。"
+    },
+    {
+     "en": "The 2024 Two Sessions discussed whether invisible overtime should be paid like regular overtime.",
+     "zh": "2024年两会讨论了隐形加班是否应像正常加班一样获得报酬。"
+    }
+   ],
+   "tags": [
+    "职场黑话与规则"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "invisible overtime",
+   "pair": "en-zh",
+   "slug": "invisible-overtime",
+   "lang": "en",
+   "translation": "隐形加班",
+   "shortAnswer": "Invisible overtime means 隐形加班: unpaid after-hours work done online, not counted or paid.",
+   "definition": "Invisible overtime is off-the-clock work. Collocations: do/put in invisible overtime; contrast visible overtime.",
+   "examples": [
+    {
+     "en": "Replying to WeChat messages after 10 p.m. is invisible overtime—your boss sees it, but your timesheet doesn't.",
+     "zh": "晚上十点后回复微信消息就是隐形加班——老板看得见，但考勤表上看不见。"
+    },
+    {
+     "en": "The 2024 Two Sessions discussed whether invisible overtime should be paid like regular overtime.",
+     "zh": "2024年两会讨论了隐形加班是否应像正常加班一样获得报酬。"
+    }
+   ],
+   "tags": [
+    "职场黑话与规则"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "汇报线",
+   "pair": "zh-en",
+   "slug": "hui-bao-xian",
+   "lang": "zh",
+   "translation": "reporting line",
+   "shortAnswer": "汇报线用英语说是 reporting line，指你在组织架构里向谁汇报、归谁管的层级关系。注意它是一条上下级的线，不是平级协作关系。",
+   "definition": "固定搭配为 someone's reporting line，常见说法有 change/alter the reporting line。隐含层级隐喻：你在这条线上向上汇报，线不断则隶属关系不断；虚线（dotted line）则指间接或项目性汇报。",
+   "examples": [
+    {
+     "en": "After the merger, my reporting line changed, and I now report directly to the regional director.",
+     "zh": "合并之后，我的汇报线变了，现在直接向区域总监汇报。"
+    },
+    {
+     "en": "The org chart shows a clear reporting line from the new hires up to the department head.",
+     "zh": "组织架构图清晰地标出了新员工向部门负责人汇报的层级关系。"
+    }
+   ],
+   "tags": [
+    "职场黑话与规则"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "reporting line",
+   "pair": "en-zh",
+   "slug": "reporting-line",
+   "lang": "en",
+   "translation": "汇报线",
+   "shortAnswer": "reporting line 的中文意思是汇报线，指员工在组织中向上汇报的层级关系。它强调的是正式上下级的隶属链条，而非日常协作或沟通关系。",
+   "definition": "a reporting line 是名词短语，多用于 HR、组织架构和职场正式场合，如 someone's reporting line to someone。易错点：不要与 dotted line（虚线汇报）混用，后者指非正式的间接汇报关系。",
+   "examples": [
+    {
+     "en": "After the merger, my reporting line changed, and I now report directly to the regional director.",
+     "zh": "合并之后，我的汇报线变了，现在直接向区域总监汇报。"
+    },
+    {
+     "en": "The org chart shows a clear reporting line from the new hires up to the department head.",
+     "zh": "组织架构图清晰地标出了新员工向部门负责人汇报的层级关系。"
+    }
+   ],
+   "tags": [
+    "职场黑话与规则"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "日报周报",
+   "pair": "zh-en",
+   "slug": "ri-bao-zhou-bao",
+   "lang": "zh",
+   "translation": "daily and weekly reports",
+   "shortAnswer": "「日报周报」英文是 daily and weekly reports，指按日、周提交的工作汇报，职场常说 daily/weekly report。",
+   "definition": "常用搭配：write/submit/send daily and weekly reports。日报给直属领导，周报汇总进度、问题与下周计划，口语可省略 reports。",
+   "examples": [
+    {
+     "en": "My manager expects daily and weekly reports to track progress, so I usually spend Friday afternoon summarizing what I have done.",
+     "zh": "我的主管要求提交日报周报来跟踪进度，所以我通常周五下午总结已完成的工作。"
+    },
+    {
+     "en": "Writing daily and weekly reports may feel repetitive, but they help the team align on priorities and spot roadblocks early.",
+     "zh": "写日报周报可能显得重复，但它们能帮助团队对齐优先级并及早发现阻碍。"
+    }
+   ],
+   "tags": [
+    "职场黑话与规则"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "daily and weekly reports",
+   "pair": "en-zh",
+   "slug": "daily-and-weekly-reports",
+   "lang": "en",
+   "translation": "日报周报",
+   "shortAnswer": "Daily and weekly reports 意思是「日报周报」，即每天和每周提交的例行工作汇报，常见于职场考核。",
+   "definition": "核心词义：按日、周提交的例行工作汇报，常与 write/submit/send 搭配。易错点：daily 和 weekly 分别指日报与周报，不可互换。",
+   "examples": [
+    {
+     "en": "My manager expects daily and weekly reports to track progress, so I usually spend Friday afternoon summarizing what I have done.",
+     "zh": "我的主管要求提交日报周报来跟踪进度，所以我通常周五下午总结已完成的工作。"
+    },
+    {
+     "en": "Writing daily and weekly reports may feel repetitive, but they help the team align on priorities and spot roadblocks early.",
+     "zh": "写日报周报可能显得重复，但它们能帮助团队对齐优先级并及早发现阻碍。"
+    }
+   ],
+   "tags": [
+    "职场黑话与规则"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "N+1赔偿",
+   "pair": "zh-en",
+   "slug": "n1-pei-chang",
+   "lang": "zh",
+   "translation": "N+1 severance pay",
+   "shortAnswer": "N+1赔偿英文写作 N+1 severance pay，中国裁员常见补偿方式，N 为工龄补偿月数，1 为代通知金。",
+   "definition": "N+1赔偿即 N+1 severance pay，N 按工龄折算补偿月数，1 为代通知金，是中国劳动法下常见的裁员补偿方案。",
+   "examples": [
+    {
+     "en": "After the layoff, she received N+1 severance pay under Chinese labor law.",
+     "zh": "裁员之后，她按中国劳动法拿到了 N+1 赔偿。"
+    },
+    {
+     "en": "He asked HR whether the package was N+1 severance pay before signing.",
+     "zh": "签字之前，他问人事，方案是不是 N+1 赔偿。"
+    }
+   ],
+   "tags": [
+    "职场黑话与规则"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "N+1 severance pay",
+   "pair": "en-zh",
+   "slug": "n-1-severance-pay",
+   "lang": "en",
+   "translation": "N+1赔偿",
+   "shortAnswer": "N+1 severance pay 中文叫 N+1赔偿，指中国劳动法下裁员常见补偿，含工龄补偿与代通知金。",
+   "definition": "N+1 severance pay 中文即 N+1赔偿：N 为按工龄折算的补偿月数，1 为代通知金，常见搭配 get N+1 severance pay。",
+   "examples": [
+    {
+     "en": "After the layoff, she received N+1 severance pay under Chinese labor law.",
+     "zh": "裁员之后，她按中国劳动法拿到了 N+1 赔偿。"
+    },
+    {
+     "en": "He asked HR whether the package was N+1 severance pay before signing.",
+     "zh": "签字之前，他问人事，方案是不是 N+1 赔偿。"
+    }
+   ],
+   "tags": [
+    "职场黑话与规则"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "拉通对齐",
+   "pair": "zh-en",
+   "slug": "la-tong-dui-qi",
+   "lang": "zh",
+   "translation": "align across teams",
+   "shortAnswer": "「拉通对齐」的英文是 align across teams。它源自互联网黑话：拉通指跨部门打通信息，对齐指达成共识，常出现在会议与项目排期语境。",
+   "definition": "align across teams 强调跨团队同步信息并形成一致结论，比简单的 agree 更侧重流程与协作。常见搭配：align with stakeholders、get everyone on the same page。批评视角下，它常被用来包装冗长无效的会议。",
+   "examples": [
+    {
+     "en": "Before we start development, we need to align across teams on the scope and timeline.",
+     "zh": "在开始开发之前，我们需要就范围和时间线拉通对齐。"
+    },
+    {
+     "en": "The meeting was supposed to align across teams, but it ended without any clear decision.",
+     "zh": "这场会议本意是拉通对齐，但开完也没得出明确结论。"
+    }
+   ],
+   "tags": [
+    "职场黑话与规则"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "align across teams",
+   "pair": "en-zh",
+   "slug": "align-across-teams",
+   "lang": "en",
+   "translation": "拉通对齐",
+   "shortAnswer": "align across teams 的中文意思是「拉通对齐」。它指跨部门打通信息、让各方达成共识，语义重点在协同与同步，而非单纯的同意或说服。",
+   "definition": "align across teams 指让不同团队在目标、信息与节奏上保持一致；常见的口语说法是 get everyone on the same page。多用于职场与项目管理，偏正式，语气中性，但过度使用会被视为空话。",
+   "examples": [
+    {
+     "en": "Before we start development, we need to align across teams on the scope and timeline.",
+     "zh": "在开始开发之前，我们需要就范围和时间线拉通对齐。"
+    },
+    {
+     "en": "The meeting was supposed to align across teams, but it ended without any clear decision.",
+     "zh": "这场会议本意是拉通对齐，但开完也没得出明确结论。"
+    }
+   ],
+   "tags": [
+    "职场黑话与规则"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "颗粒度",
+   "pair": "zh-en",
+   "slug": "ke-li-du",
+   "lang": "zh",
+   "translation": "granularity",
+   "shortAnswer": "颗粒度的英文是 granularity，原指图像或材料的精细程度。职场黑话中常借它表示把问题拆解到多细，如“提高颗粒度”即更细致地分析。",
+   "definition": "颗粒度在互联网职场中常指分析或管理的细致程度，搭配如“细化颗粒度”“颗粒度太粗”。注意它借自图像学术语 granularity，并非中文固有词汇，但英文完全对应。",
+   "examples": [
+    {
+     "en": "Let's increase the granularity of our user feedback analysis to identify specific pain points.",
+     "zh": "让我们提高用户反馈分析的颗粒度，以便找出具体的痛点。"
+    },
+    {
+     "en": "The data granularity in this report is too coarse for making strategic decisions.",
+     "zh": "这份报告的数据颗粒度太粗，无法用于制定战略决策。"
+    }
+   ],
+   "tags": [
+    "职场黑话与规则"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "granularity",
+   "pair": "en-zh",
+   "slug": "granularity",
+   "lang": "en",
+   "translation": "颗粒度",
+   "shortAnswer": "granularity 的中文意思是颗粒度，原为图像或材料学术语。在职场语境中，它指把问题拆解到多细，如“提高颗粒度”即更细致地分析。",
+   "definition": "granularity 指细节的精细程度，正式场合用于图像、数据等领域；职场黑话中常与 increase、improve 等动词搭配，表示细化分析。注意其与 detail 不同，强调拆解层级。",
+   "examples": [
+    {
+     "en": "Let's increase the granularity of our user feedback analysis to identify specific pain points.",
+     "zh": "让我们提高用户反馈分析的颗粒度，以便找出具体的痛点。"
+    },
+    {
+     "en": "The data granularity in this report is too coarse for making strategic decisions.",
+     "zh": "这份报告的数据颗粒度太粗，无法用于制定战略决策。"
+    }
+   ],
+   "tags": [
+    "职场黑话与规则"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "抓手",
+   "pair": "zh-en",
+   "slug": "zhua-shou",
+   "lang": "zh",
+   "translation": "lever point",
+   "shortAnswer": "「抓手」常译为 lever point，指工作的切入点和着力点。它是互联网黑话，源自“执物之手”，英文中 handle 更形象，但 lever point 更常指战略支点。",
+   "definition": "“抓手”在职场中虚化为可操作的具体措施或着力点，常搭配“找抓手”“工作抓手”。英文 lever point 强调杠杆支点，entry point 指切入点，handle 指把手。注意：不要直译为 hand grab。",
+   "examples": [
+    {
+     "en": "We need to identify a clear lever point to drive this project forward.",
+     "zh": "我们需要找到一个明确的抓手来推动这个项目。"
+    },
+    {
+     "en": "The new policy serves as a lever point for improving cross-department collaboration.",
+     "zh": "新政策是改善跨部门协作的一个抓手。"
+    }
+   ],
+   "tags": [
+    "职场黑话与规则"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "lever point",
+   "pair": "en-zh",
+   "slug": "lever-point",
+   "lang": "en",
+   "translation": "抓手",
+   "shortAnswer": "lever point 中文常译作「抓手」，指工作的切入点和着力点。它源自物理杠杆的支点，但在职场黑话中常虚化为可操作的具体措施，与 handle（把手）不同。",
+   "definition": "lever point 在商务语境中指战略或行动的支点，常见搭配 find a lever point, key lever point。较正式，口语中可用 handle 替代。易错点：它不是“杠杆点”的字面物理义，而是比喻义。",
+   "examples": [
+    {
+     "en": "We need to identify a clear lever point to drive this project forward.",
+     "zh": "我们需要找到一个明确的抓手来推动这个项目。"
+    },
+    {
+     "en": "The new policy serves as a lever point for improving cross-department collaboration.",
+     "zh": "新政策是改善跨部门协作的一个抓手。"
+    }
+   ],
+   "tags": [
+    "职场黑话与规则"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "跨部门协作",
+   "pair": "zh-en",
+   "slug": "kua-bu-men-xie-zuo",
+   "lang": "zh",
+   "translation": "cross-team collaboration",
+   "shortAnswer": "「跨部门协作」的英文是 cross-team collaboration，指不同团队为共同目标一起工作。",
+   "definition": "cross-team collaboration 指多个团队打破壁垒、共同决策与执行；常见搭配 promote cross-team collaboration。",
+   "examples": [
+    {
+     "en": "The new project requires cross-team collaboration between marketing, engineering, and sales to meet the tight deadline.",
+     "zh": "这个新项目需要市场、工程和销售部门跨部门协作，才能赶上紧迫的截止日期。"
+    },
+    {
+     "en": "Our manager often emphasizes that cross-team collaboration is key to breaking down silos and driving innovation.",
+     "zh": "我们的经理经常强调，跨部门协作是打破部门壁垒、推动创新的关键。"
+    }
+   ],
+   "tags": [
+    "职场黑话与规则"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "cross-team collaboration",
+   "pair": "en-zh",
+   "slug": "cross-team-collaboration",
+   "lang": "en",
+   "translation": "跨部门协作",
+   "shortAnswer": "cross-team collaboration 就是「跨部门协作」，指不同团队为共同目标合作。",
+   "definition": "cross-team collaboration means different teams working together toward shared goals; common in business contexts.",
+   "examples": [
+    {
+     "en": "The new project requires cross-team collaboration between marketing, engineering, and sales to meet the tight deadline.",
+     "zh": "这个新项目需要市场、工程和销售部门跨部门协作，才能赶上紧迫的截止日期。"
+    },
+    {
+     "en": "Our manager often emphasizes that cross-team collaboration is key to breaking down silos and driving innovation.",
+     "zh": "我们的经理经常强调，跨部门协作是打破部门壁垒、推动创新的关键。"
+    }
+   ],
+   "tags": [
+    "职场黑话与规则"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "赋能",
+   "pair": "zh-en",
+   "slug": "fu-neng",
+   "lang": "zh",
+   "translation": "empower",
+   "shortAnswer": "「赋能」的英文是 empower，名词形式为 empowerment，是互联网黑话里最常被滥用的词之一。",
+   "definition": "empower 本义为「授权、使有能力」，中文「赋能」直接对译，但互联网语境常把它夸大成万能动词。",
+   "examples": [
+    {
+     "en": "The new platform is designed to empower small businesses to sell online without technical barriers.",
+     "zh": "这个新平台旨在为小微企业赋能，让它们无需技术门槛就能在线销售。"
+    },
+    {
+     "en": "Good managers empower their teams instead of micromanaging every task.",
+     "zh": "好的管理者会为团队赋能，而不是对每项任务都微观管理。"
+    }
+   ],
+   "tags": [
+    "职场黑话与规则"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "empower",
+   "pair": "en-zh",
+   "slug": "empower",
+   "lang": "en",
+   "translation": "赋能",
+   "shortAnswer": "empower 的中文意思是「赋能」，也可译作「授权、使有能力」，比 enable 更强调把权力或能力真正交给对方。",
+   "definition": "empower 指 give someone power or authority，或 make someone more confident and capable，商务与社科语境高频。",
+   "examples": [
+    {
+     "en": "The new platform is designed to empower small businesses to sell online without technical barriers.",
+     "zh": "这个新平台旨在为小微企业赋能，让它们无需技术门槛就能在线销售。"
+    },
+    {
+     "en": "Good managers empower their teams instead of micromanaging every task.",
+     "zh": "好的管理者会为团队赋能，而不是对每项任务都微观管理。"
+    }
+   ],
+   "tags": [
+    "职场黑话与规则"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "占坑",
+   "pair": "zh-en",
+   "slug": "zhan-keng",
+   "lang": "zh",
+   "translation": "hold a position",
+   "shortAnswer": "「占坑」英文是 hold a position，指占住职位或名额不挪窝，职场与论坛预约都常用。",
+   "definition": "职场指新人占岗防替换，或老人不离职不放权；论坛指抢先锁定楼层。搭配：hold a position for someone。注意与「踩坑」「填坑」区分。",
+   "examples": [
+    {
+     "en": "He's been holding a position in the department for years without any real output, just occupying the headcount.",
+     "zh": "他在部门里占坑多年，没有实际产出，只是占着编制。"
+    },
+    {
+     "en": "She quickly held a position in the forum thread to save a spot for her detailed reply later.",
+     "zh": "她在论坛帖子里迅速占坑，为之后的长篇回复留个位置。"
+    }
+   ],
+   "tags": [
+    "职场黑话与规则"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "hold a position",
+   "pair": "en-zh",
+   "slug": "hold-a-position",
+   "lang": "en",
+   "translation": "占坑",
+   "shortAnswer": "Hold a position 的中文是「占坑」，即占住职位或名额不放手，常带占位不干活的贬义。",
+   "definition": "1) 保留职位或名额：She holds a position on the board. 2) 排队占位：hold a spot。职场暗指占坑不拉屎；论坛占坑也用它。hold the position 则指坚守阵地。",
+   "examples": [
+    {
+     "en": "He's been holding a position in the department for years without any real output, just occupying the headcount.",
+     "zh": "他在部门里占坑多年，没有实际产出，只是占着编制。"
+    },
+    {
+     "en": "She quickly held a position in the forum thread to save a spot for her detailed reply later.",
+     "zh": "她在论坛帖子里迅速占坑，为之后的长篇回复留个位置。"
+    }
+   ],
+   "tags": [
+    "职场黑话与规则"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "顶班",
+   "pair": "zh-en",
+   "slug": "ding-ban",
+   "lang": "zh",
+   "translation": "cover someone's shift",
+   "shortAnswer": "「顶班」英文是 cover someone's shift，指临时替别人上他那一次班，只替一次，不等于长期顶岗。",
+   "definition": "「顶班」指临时替别人上一次班，常用 cover a shift、cover for someone，名词 shift cover 较少见；它只替一次，不等于长期顶岗。",
+   "examples": [
+    {
+     "en": "I have a doctor's appointment tomorrow, so could you cover my shift?",
+     "zh": "我明天要去看医生，你能帮我顶班吗？"
+    },
+    {
+     "en": "She covered someone's shift last night and didn't get home until midnight.",
+     "zh": "她昨晚替人顶班，直到半夜才回家。"
+    }
+   ],
+   "tags": [
+    "职场黑话与规则"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "cover someone's shift",
+   "pair": "en-zh",
+   "slug": "cover-someone-s-shift",
+   "lang": "en",
+   "translation": "顶班",
+   "shortAnswer": "cover someone's shift 的中文是「顶班」，即临时替别人上他那一班，只替一次，不等于长期顶岗。",
+   "definition": "cover someone's shift means to take over another person's work shift temporarily, usually just once, not to fill a permanent post long-term.",
+   "examples": [
+    {
+     "en": "I have a doctor's appointment tomorrow, so could you cover my shift?",
+     "zh": "我明天要去看医生，你能帮我顶班吗？"
+    },
+    {
+     "en": "She covered someone's shift last night and didn't get home until midnight.",
+     "zh": "她昨晚替人顶班，直到半夜才回家。"
+    }
+   ],
+   "tags": [
+    "职场黑话与规则"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "倒排工期",
+   "pair": "zh-en",
+   "slug": "dao-pai-gong-qi",
+   "lang": "zh",
+   "translation": "work backward from deadline",
+   "shortAnswer": "倒排工期的英文是 work backward from deadline，指从截止日反推排期。",
+   "definition": "倒排工期指先定最终交付日，再从截止日反推各阶段起止时间。注意它是逆向规划，并非正向推进或单纯倒计时。",
+   "examples": [
+    {
+     "en": "The manager chose to work backward from deadline to set clear milestones.",
+     "zh": "经理选择倒排工期，以便设定清晰的里程碑。"
+    },
+    {
+     "en": "If we work backward from deadline, testing must start next week.",
+     "zh": "如果我们倒排工期，下周就必须开始测试。"
+    }
+   ],
+   "tags": [
+    "职场黑话与规则"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "work backward from deadline",
+   "pair": "en-zh",
+   "slug": "work-backward-from-deadline",
+   "lang": "en",
+   "translation": "倒排工期",
+   "shortAnswer": "倒排工期 in English is work backward from deadline, scheduling in reverse from the due date.",
+   "definition": "倒排工期 means work backward from deadline: set the final due date first, then plan each step backward. It is reverse planning, not a countdown.",
+   "examples": [
+    {
+     "en": "The manager chose to work backward from deadline to set clear milestones.",
+     "zh": "经理选择倒排工期，以便设定清晰的里程碑。"
+    },
+    {
+     "en": "If we work backward from deadline, testing must start next week.",
+     "zh": "如果我们倒排工期，下周就必须开始测试。"
+    }
+   ],
+   "tags": [
+    "职场黑话与规则"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "沉淀",
+   "pair": "zh-en",
+   "slug": "chen-dian",
+   "lang": "zh",
+   "translation": "distill and document",
+   "shortAnswer": "职场黑话「沉淀」对应英文 distill and document，指把经验方法系统留存。",
+   "definition": "职场借用「沉淀」的析出精华义，指把隐性经验提炼成可复用方法并文档化，如沉淀方法论与标准流程，便于传承。",
+   "examples": [
+    {
+     "en": "After the project wrapped up, the team held a retrospective to distill and document what worked and what didn't.",
+     "zh": "项目结束后，团队开了复盘会，把哪些做得好、哪些没做好沉淀下来。"
+    },
+    {
+     "en": "We need to distill and document our growth playbook so new hires can ramp up faster.",
+     "zh": "我们需要把增长方法论沉淀成文档，让新人能更快上手。"
+    }
+   ],
+   "tags": [
+    "职场黑话与规则"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "distill and document",
+   "pair": "en-zh",
+   "slug": "distill-and-document",
+   "lang": "en",
+   "translation": "沉淀",
+   "shortAnswer": "In workplace slang, 沉淀 means distill and document: preserving know-how systematically.",
+   "definition": "Distill and document is corporate jargon for turning tacit know-how into reusable, documented assets like playbooks and SOPs.",
+   "examples": [
+    {
+     "en": "After the project wrapped up, the team held a retrospective to distill and document what worked and what didn't.",
+     "zh": "项目结束后，团队开了复盘会，把哪些做得好、哪些没做好沉淀下来。"
+    },
+    {
+     "en": "We need to distill and document our growth playbook so new hires can ramp up faster.",
+     "zh": "我们需要把增长方法论沉淀成文档，让新人能更快上手。"
+    }
+   ],
+   "tags": [
+    "职场黑话与规则"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "员工福利",
+   "pair": "zh-en",
+   "slug": "yuan-gong-fu-li",
+   "lang": "zh",
+   "translation": "employee benefits",
+   "shortAnswer": "「员工福利」的英文是 employee benefits，指工资之外的公司待遇。",
+   "definition": "employee benefits 常用复数，含健康保险、退休计划、带薪假期等。口语常简称 benefits。",
+   "examples": [
+    {
+     "en": "The company offers competitive employee benefits, including health insurance and a retirement plan.",
+     "zh": "该公司提供有竞争力的员工福利，包括健康保险和退休计划。"
+    },
+    {
+     "en": "When comparing job offers, don't just look at salary; employee benefits like paid time off and housing fund matter too.",
+     "zh": "比较工作机会时，不要只看薪资；带薪休假和公积金等员工福利也很重要。"
+    }
+   ],
+   "tags": [
+    "职场黑话与规则"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "employee benefits",
+   "pair": "en-zh",
+   "slug": "employee-benefits",
+   "lang": "en",
+   "translation": "员工福利",
+   "shortAnswer": "employee benefits 的中文是「员工福利」，指雇主在工资外给的待遇。",
+   "definition": "employee benefits 是正式商务用语，常搭配 competitive employee benefits 或 benefits package。",
+   "examples": [
+    {
+     "en": "The company offers competitive employee benefits, including health insurance and a retirement plan.",
+     "zh": "该公司提供有竞争力的员工福利，包括健康保险和退休计划。"
+    },
+    {
+     "en": "When comparing job offers, don't just look at salary; employee benefits like paid time off and housing fund matter too.",
+     "zh": "比较工作机会时，不要只看薪资；带薪休假和公积金等员工福利也很重要。"
+    }
+   ],
+   "tags": [
+    "职场黑话与规则"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "种草",
+   "pair": "zh-en",
+   "slug": "zhong-cao",
+   "lang": "zh",
+   "translation": "get sold on something",
+   "shortAnswer": "「种草」的英语是 get sold on something。它指被内容打动、忍不住想买，强调“被说服”的过程，而非单纯喜欢。",
+   "definition": "种草本义是栽种草本，网络义指被推荐激发购买欲。不能直译为 plant grass，常用 get sold on something 或 be influenced to buy。",
+   "examples": [
+    {
+     "en": "I wasn't planning to buy anything, but after watching that review I got sold on the new earbuds.",
+     "zh": "我本来没打算买东西，但看完那篇测评后，我被种草了那款新耳机。"
+    },
+    {
+     "en": "She got sold on the idea of a weekend getaway after seeing her friend's photos.",
+     "zh": "看到朋友的照片后，她被种草了周末短途旅行这个主意。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "get sold on something",
+   "pair": "en-zh",
+   "slug": "get-sold-on-something",
+   "lang": "en",
+   "translation": "种草",
+   "shortAnswer": "get sold on something 的中文意思是“种草”，即被说服、被打动而产生购买欲。它侧重“被安利成功”的结果，不强调主动喜欢。",
+   "definition": "get sold on something 为口语短语，指被理由、推荐或内容说服而接受或想买某物。常搭配 on，如 I got sold on it。不是被动语态，易误用成 sell。",
+   "examples": [
+    {
+     "en": "I wasn't planning to buy anything, but after watching that review I got sold on the new earbuds.",
+     "zh": "我本来没打算买东西，但看完那篇测评后，我被种草了那款新耳机。"
+    },
+    {
+     "en": "She got sold on the idea of a weekend getaway after seeing her friend's photos.",
+     "zh": "看到朋友的照片后，她被种草了周末短途旅行这个主意。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "满减",
+   "pair": "zh-en",
+   "slug": "man-jian",
+   "lang": "zh",
+   "translation": "spend-more-save-more deal",
+   "shortAnswer": "满减的英文是 spend-more-save-more deal，指消费满一定金额就减钱，常见于电商与外卖。",
+   "definition": "满减是中国电商和外卖的常见促销，英文常说 spend-more-save-more deal 或 spend X get Y off。它靠达到门槛才减钱，和直接降价的折扣不同。常见搭配：满减活动、满减优惠、跨店满减。",
+   "examples": [
+    {
+     "en": "The store is running a spend-more-save-more deal: spend 200 yuan and get 30 yuan off.",
+     "zh": "这家店正在搞满减活动：满两百元减三十元。"
+    },
+    {
+     "en": "To hit the spend-more-save-more deal, she added extra snacks to her cart, a trick called coudan in Chinese.",
+     "zh": "为了凑满减，她往购物车里加了些零食，中文里这叫“凑单”。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "spend-more-save-more deal",
+   "pair": "en-zh",
+   "slug": "spend-more-save-more-deal",
+   "lang": "en",
+   "translation": "满减",
+   "shortAnswer": "spend-more-save-more deal 的中文是满减，指消费达到门槛就减钱，常见于中国电商和外卖。",
+   "definition": "spend-more-save-more deal 指满一定金额减一定金额的促销，口语也可说 spend X get Y off。多用于电商、外卖场景，正式程度中等。易错点：它不等于直接降价的折扣。",
+   "examples": [
+    {
+     "en": "The store is running a spend-more-save-more deal: spend 200 yuan and get 30 yuan off.",
+     "zh": "这家店正在搞满减活动：满两百元减三十元。"
+    },
+    {
+     "en": "To hit the spend-more-save-more deal, she added extra snacks to her cart, a trick called coudan in Chinese.",
+     "zh": "为了凑满减，她往购物车里加了些零食，中文里这叫“凑单”。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "临期食品",
+   "pair": "zh-en",
+   "slug": "lin-qi-shi-pin",
+   "lang": "zh",
+   "translation": "near-expiry food",
+   "shortAnswer": "「临期食品」的英文是 near-expiry food，指快到保质期、通常打折出售的食品，超市里常有专设的临期食品区。",
+   "definition": "常用于超市、电商语境，搭配有 near-expiry food section（临期专区）、buy near-expiry food to save money（买临期食品省钱）。它侧重临近保质期但仍可安全食用，不同于过期食品。",
+   "examples": [
+    {
+     "en": "Many young people buy near-expiry food to save money and reduce waste.",
+     "zh": "许多年轻人购买临期食品，既省钱又减少浪费。"
+    },
+    {
+     "en": "The supermarket has a near-expiry food section where everything is half price.",
+     "zh": "这家超市设有临期食品专区，所有商品都半价出售。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "near-expiry food",
+   "pair": "en-zh",
+   "slug": "near-expiry-food",
+   "lang": "en",
+   "translation": "临期食品",
+   "shortAnswer": "「near-expiry food」的中文意思是「临期食品」，指快到保质期、常打折促销的食品，仍可安全食用。",
+   "definition": "英式英语也常用 short-dated products 指临期食品。常见搭配：sell near-expiry food at a discount（临期食品打折卖）、near-expiry food store（临期特卖店）。",
+   "examples": [
+    {
+     "en": "Many young people buy near-expiry food to save money and reduce waste.",
+     "zh": "许多年轻人购买临期食品，既省钱又减少浪费。"
+    },
+    {
+     "en": "The supermarket has a near-expiry food section where everything is half price.",
+     "zh": "这家超市设有临期食品专区，所有商品都半价出售。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "病假条",
+   "pair": "zh-en",
+   "slug": "bing-jia-tiao",
+   "lang": "zh",
+   "translation": "sick note",
+   "shortAnswer": "「病假条」英文是 sick note，指医生开具证明你因病无法上班的条子，常与 get 连用。",
+   "definition": "病假条英文叫 sick note，常与 get、have、need 连用。英式英语中也指学生请假条，美式英语多用 doctor's note。",
+   "examples": [
+    {
+     "en": "I had to get a sick note from my doctor before my manager would approve the sick leave.",
+     "zh": "我得先找医生开病假条，经理才会批准我的病假。"
+    },
+    {
+     "en": "HR says any absence over three days requires a sick note, no exceptions.",
+     "zh": "人事部说，缺勤超过三天就必须交病假条，没有例外。"
+    }
+   ],
+   "tags": [
+    "职场黑话与规则"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "sick note",
+   "pair": "en-zh",
+   "slug": "sick-note",
+   "lang": "en",
+   "translation": "病假条",
+   "shortAnswer": "A sick note is a 病假条, a doctor's written proof you are too ill to work or study.",
+   "definition": "Sick note is common in British English; American English prefers doctor's note. It proves illness, not the time off itself.",
+   "examples": [
+    {
+     "en": "I had to get a sick note from my doctor before my manager would approve the sick leave.",
+     "zh": "我得先找医生开病假条，经理才会批准我的病假。"
+    },
+    {
+     "en": "HR says any absence over three days requires a sick note, no exceptions.",
+     "zh": "人事部说，缺勤超过三天就必须交病假条，没有例外。"
+    }
+   ],
+   "tags": [
+    "职场黑话与规则"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "踩雷",
+   "pair": "zh-en",
+   "slug": "cai-lei",
+   "lang": "zh",
+   "translation": "get burned by a bad buy",
+   "shortAnswer": "「踩雷」的英文可以说 get burned by a bad buy，指买到不划算或糟糕的东西。它更强调购物后的受骗感或失望感，常用于网购、海淘、团购等消费场景。",
+   "definition": "get burned by a bad buy 是口语化表达，强调花钱买到差东西后的懊恼，类似「被坑了」；比单纯说 buy the wrong thing 更突出损失和负面情绪。",
+   "examples": [
+    {
+     "en": "I didn't read the reviews carefully and got burned by a bad buy—the dress looked nothing like the pictures.",
+     "zh": "我没仔细看评价就踩雷了，那条裙子跟图片完全不一样。"
+    },
+    {
+     "en": "If you always chase limited-time discounts, you might get burned by a bad buy and end up eating dirt.",
+     "zh": "如果你总是追限时折扣，就可能踩雷买到烂东西，最后只能吃土。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "get burned by a bad buy",
+   "pair": "en-zh",
+   "slug": "get-burned-by-a-bad-buy",
+   "lang": "en",
+   "translation": "踩雷",
+   "shortAnswer": "“get burned by a bad buy”的中文意思是「踩雷」，通常指买到了质量差、不划算或与宣传不符的东西。它侧重消费后的受骗或失望体验，不等于一般的买错东西。",
+   "definition": "get burned by a bad buy 常用于非正式口语，核心是“买到烂东西而吃亏”；搭配有 get burned、a bad buy，可指网购、代购、二手交易等；注意 burned 是比喻义，不是真的被火烧。",
+   "examples": [
+    {
+     "en": "I didn't read the reviews carefully and got burned by a bad buy—the dress looked nothing like the pictures.",
+     "zh": "我没仔细看评价就踩雷了，那条裙子跟图片完全不一样。"
+    },
+    {
+     "en": "If you always chase limited-time discounts, you might get burned by a bad buy and end up eating dirt.",
+     "zh": "如果你总是追限时折扣，就可能踩雷买到烂东西，最后只能吃土。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "白嫖",
+   "pair": "zh-en",
+   "slug": "bai-piao",
+   "lang": "zh",
+   "translation": "enjoy without paying",
+   "shortAnswer": "「白嫖」的英文是 enjoy without paying，指享受服务或资源却不付费。在追星语境里，只看不打投也叫白嫖，常含贬义或自嘲，相当于 freeloading。",
+   "definition": "白嫖强调「白拿不付费」，如白嫖游戏、白嫖课程；英文常用 freeloading 或 enjoying without paying。它可作贬义指责，也可自嘲省钱。",
+   "examples": [
+    {
+     "en": "He always tries to enjoy without paying, like using free trials to watch whole seasons.",
+     "zh": "他总是想白嫖，比如用免费试用看完整季剧集。"
+    },
+    {
+     "en": "Some fans just enjoy without paying, watching clips but never buying albums or voting.",
+     "zh": "有些粉丝就是白嫖，只看片段，从不买专辑也不打投。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "enjoy without paying",
+   "pair": "en-zh",
+   "slug": "enjoy-without-paying",
+   "lang": "en",
+   "translation": "白嫖",
+   "shortAnswer": "「enjoy without paying」的中文意思是「白嫖」，即不花钱享受资源或服务。与 freeloading 相比，它更口语化，且常带贬义或自嘲语气。",
+   "definition": "enjoy without paying 指免费享用本应付费的东西，如游戏、课程、内容。中文说「白嫖」，对应 freeloading，但更强调占便宜，常见于购物消费和追星语境。",
+   "examples": [
+    {
+     "en": "He always tries to enjoy without paying, like using free trials to watch whole seasons.",
+     "zh": "他总是想白嫖，比如用免费试用看完整季剧集。"
+    },
+    {
+     "en": "Some fans just enjoy without paying, watching clips but never buying albums or voting.",
+     "zh": "有些粉丝就是白嫖，只看片段，从不买专辑也不打投。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "吃土",
+   "pair": "zh-en",
+   "slug": "chi-tu",
+   "lang": "zh",
+   "translation": "broke after spending",
+   "shortAnswer": "「吃土」的英文是 broke after spending，指剁手购物后穷到没钱吃饭。注意它是自嘲式口语，多用于网购超支后的调侃，不是正式财务用语。",
+   "definition": "吃土常与剁手、种草、拔草连用，构成「种草→拔草→吃土」消费链。英文可说 broke after a shopping spree，直译 eating dirt 只用于自嘲，需解释。搭配：I'm broke after spending too much。指短暂缺钱，非长期贫困。",
+   "examples": [
+    {
+     "en": "I'm totally broke after spending my whole paycheck on sneakers during the sale.",
+     "zh": "大促时把整月工资都花在运动鞋上，我现在彻底吃土了。"
+    },
+    {
+     "en": "She was broke after spending too much on 618 shopping, so she ate instant noodles for a week.",
+     "zh": "618 购物花太多钱后她吃土了，连吃了一周泡面。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "broke after spending",
+   "pair": "en-zh",
+   "slug": "broke-after-spending",
+   "lang": "en",
+   "translation": "吃土",
+   "shortAnswer": "「broke after spending」的中文意思是「吃土」，即购物大花一笔后没钱了。它强调花钱导致的暂时拮据，与泛指贫穷的 poor 不同，多带自嘲语气。",
+   "definition": "broke after spending 是口语说法，指把预算花光后的短暂缺钱，常接 on clothes / at the mall 等。正式场合宜用 short on cash after expenses。注意 broke 在英语里多指暂时没钱，不指长期贫困。",
+   "examples": [
+    {
+     "en": "I'm totally broke after spending my whole paycheck on sneakers during the sale.",
+     "zh": "大促时把整月工资都花在运动鞋上，我现在彻底吃土了。"
+    },
+    {
+     "en": "She was broke after spending too much on 618 shopping, so she ate instant noodles for a week.",
+     "zh": "618 购物花太多钱后她吃土了，连吃了一周泡面。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "薅羊毛",
+   "pair": "zh-en",
+   "slug": "hao-yang-mao",
+   "lang": "zh",
+   "translation": "score freebies and deals",
+   "shortAnswer": "「薅羊毛」的英文是 score freebies and deals，指集中搜集优惠、占商家便宜，比 bargain hunting 更口语。",
+   "definition": "薅羊毛指利用优惠券、满减、返现等规则以极低代价甚至免费获取商品或服务。搭配：score freebies and deals on Black Friday。注意「羊毛出在羊身上」：商家让利最终仍由消费者买单。",
+   "examples": [
+    {
+     "en": "Every Double Eleven, I stay up late to score freebies and deals with coupons and flash sales.",
+     "zh": "每年双十一，我都熬夜用优惠券和限时抢购来薅羊毛。"
+    },
+    {
+     "en": "She knows how to score freebies and deals, but remember: the wool comes from the sheep.",
+     "zh": "她很会薅羊毛，但要记住：羊毛出在羊身上。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "score freebies and deals",
+   "pair": "en-zh",
+   "slug": "score-freebies-and-deals",
+   "lang": "en",
+   "translation": "薅羊毛",
+   "shortAnswer": "score freebies and deals 的中文意思是「薅羊毛」，即集中搜集免费赠品和优惠、占商家便宜。",
+   "definition": "score freebies and deals 多用于口语和非正式购物场景，指通过优惠券、满减、赠品、返现等低成本获取商品。搭配：score freebies and deals with coupons。易错点：score 此处是“弄到、搞到”，不是“得分”。",
+   "examples": [
+    {
+     "en": "Every Double Eleven, I stay up late to score freebies and deals with coupons and flash sales.",
+     "zh": "每年双十一，我都熬夜用优惠券和限时抢购来薅羊毛。"
+    },
+    {
+     "en": "She knows how to score freebies and deals, but remember: the wool comes from the sheep.",
+     "zh": "她很会薅羊毛，但要记住：羊毛出在羊身上。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "拔草",
+   "pair": "zh-en",
+   "slug": "ba-cao",
+   "lang": "zh",
+   "translation": "kill the desire to buy",
+   "shortAnswer": "「拔草」的英文可说 kill the desire to buy，指打消购买欲；但网络语境下「拔草」还可指终于买下种草之物，此时英文另有说法。",
+   "definition": "拔草在中文网购圈有两义：① 冷静后打消购买念头，英文常用 kill the desire to buy 或 kill the urge to buy；② 把长期种草的物品买下，相当于「终于下手」。后一义不能直译，否则意思完全反了。",
+   "examples": [
+    {
+     "en": "I watched so many review videos that I almost bought the air fryer, but my budget finally killed the desire to buy.",
+     "zh": "我看了好多测评视频，差点就买那台空气炸锅了，但最后预算让我拔草了。"
+    },
+    {
+     "en": "She added the designer bag to her cart three times, but reading the negative comments killed the desire to buy.",
+     "zh": "她三次把那个名牌包加入购物车，但看了差评后就拔草了。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "kill the desire to buy",
+   "pair": "en-zh",
+   "slug": "kill-the-desire-to-buy",
+   "lang": "en",
+   "translation": "拔草",
+   "shortAnswer": "kill the desire to buy 的中文意思是「拔草」，指打消购买欲、忍住不买；但中文「拔草」还可指终于买下种草之物，此时不能用此英文。",
+   "definition": "kill the desire to buy 字面是「杀死购买欲」，对应中文「拔草」的第一义：冷静后决定不买，也可说 kill the urge to buy。它与「种草」方向相反；若想表达买下种草商品，英文应用 finally bought it 等。",
+   "examples": [
+    {
+     "en": "I watched so many review videos that I almost bought the air fryer, but my budget finally killed the desire to buy.",
+     "zh": "我看了好多测评视频，差点就买那台空气炸锅了，但最后预算让我拔草了。"
+    },
+    {
+     "en": "She added the designer bag to her cart three times, but reading the negative comments killed the desire to buy.",
+     "zh": "她三次把那个名牌包加入购物车，但看了差评后就拔草了。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "月光族",
+   "pair": "zh-en",
+   "slug": "yue-guang-zu",
+   "lang": "zh",
+   "translation": "live paycheck to paycheck",
+   "shortAnswer": "「月光族」英文是 live paycheck to paycheck，指工资月月花光、存不下钱。",
+   "definition": "live paycheck to paycheck 是固定搭配，paycheck 不能换成 salary，形容月月清零、靠下一份薪水过活。",
+   "examples": [
+    {
+     "en": "After paying rent and bills, I'm living paycheck to paycheck and can't save anything.",
+     "zh": "交完房租和各种账单后，我成了月光族，根本存不下钱。"
+    },
+    {
+     "en": "Many young people in big cities live paycheck to paycheck because of high living costs.",
+     "zh": "大城市里很多年轻人因为生活成本高，都过着月光族的日子。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "live paycheck to paycheck",
+   "pair": "en-zh",
+   "slug": "live-paycheck-to-paycheck",
+   "lang": "en",
+   "translation": "月光族",
+   "shortAnswer": "live paycheck to paycheck means 「月光族」, spending all your pay each month and saving little.",
+   "definition": "live paycheck to paycheck is a fixed phrase; paycheck cannot be replaced by salary. It means having no savings buffer.",
+   "examples": [
+    {
+     "en": "After paying rent and bills, I'm living paycheck to paycheck and can't save anything.",
+     "zh": "交完房租和各种账单后，我成了月光族，根本存不下钱。"
+    },
+    {
+     "en": "Many young people in big cities live paycheck to paycheck because of high living costs.",
+     "zh": "大城市里很多年轻人因为生活成本高，都过着月光族的日子。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "回购",
+   "pair": "zh-en",
+   "slug": "hui-gou",
+   "lang": "zh",
+   "translation": "rebuy",
+   "shortAnswer": "「回购」的英文是 rebuy，指对用过的商品满意而再次购买，常见于美妆护肤等消费场景中。",
+   "definition": "rebuy 作动词，指对用过的商品满意而再次购买，常见搭配有 rebuy rate（回购率），也常用来描述消费者重复购买同一产品。",
+   "examples": [
+    {
+     "en": "I loved this serum so much that I decided to rebuy it during the big sale.",
+     "zh": "我太喜欢这款精华了，决定在大促时回购它。"
+    },
+    {
+     "en": "She keeps a list of products she will rebuy, and anything that breaks her out goes straight back.",
+     "zh": "她会列一份会回购的清单，而任何让她爆痘的产品都会直接退掉。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "rebuy",
+   "pair": "en-zh",
+   "slug": "rebuy",
+   "lang": "en",
+   "translation": "回购",
+   "shortAnswer": "Rebuy means 回购: to buy a product again after liking it, a common term in shopping and beauty talk.",
+   "definition": "Rebuy is a verb meaning to purchase something again, often a cosmetic or skincare item you were happy with, as in rebuy rate.",
+   "examples": [
+    {
+     "en": "I loved this serum so much that I decided to rebuy it during the big sale.",
+     "zh": "我太喜欢这款精华了，决定在大促时回购它。"
+    },
+    {
+     "en": "She keeps a list of products she will rebuy, and anything that breaks her out goes straight back.",
+     "zh": "她会列一份会回购的清单，而任何让她爆痘的产品都会直接退掉。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "断舍离",
+   "pair": "zh-en",
+   "slug": "duan-she-li",
+   "lang": "zh",
+   "translation": "declutter and let go",
+   "shortAnswer": "「断舍离」常译 declutter and let go，指清理杂物、放下执念，少买、清库存、处理闲置。",
+   "definition": "「断舍离」源自日式整理术，强调清理物品来整理内心；英文 declutter and let go 偏动作与放下，不等于单纯打扫。",
+   "examples": [
+    {
+     "en": "After a year of impulse shopping, I decided to declutter and let go of everything I hadn't used, starting with the clothes still tagged.",
+     "zh": "在冲动购物一年后，我决定断舍离，从那些还带着吊牌的衣服开始，把没用过的东西都处理掉。"
+    },
+    {
+     "en": "Her approach to declutter and let go is simple: before buying anything new, she clears out one item at home, especially near-expiry food or unused gadgets.",
+     "zh": "她的断舍离方法很简单：买新东西前，先在家清理掉一件物品，尤其是临期食品或没用过的小家电。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "declutter and let go",
+   "pair": "en-zh",
+   "slug": "declutter-and-let-go",
+   "lang": "en",
+   "translation": "断舍离",
+   "shortAnswer": "Declutter and let go 中文常译「断舍离」，指清理杂物并放下执念，强调少买与不囤积。",
+   "definition": "Declutter and let go 是清理与放手的表达，可指物理空间或消费习惯，如少买、退掉闲置，比 tidy up 更重心理放下。",
+   "examples": [
+    {
+     "en": "After a year of impulse shopping, I decided to declutter and let go of everything I hadn't used, starting with the clothes still tagged.",
+     "zh": "在冲动购物一年后，我决定断舍离，从那些还带着吊牌的衣服开始，把没用过的东西都处理掉。"
+    },
+    {
+     "en": "Her approach to declutter and let go is simple: before buying anything new, she clears out one item at home, especially near-expiry food or unused gadgets.",
+     "zh": "她的断舍离方法很简单：买新东西前，先在家清理掉一件物品，尤其是临期食品或没用过的小家电。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "二手闲置",
+   "pair": "zh-en",
+   "slug": "er-shou-xian-zhi",
+   "lang": "zh",
+   "translation": "secondhand idle items",
+   "shortAnswer": "二手闲置英文是 secondhand idle items，指个人不用但仍可转卖或赠送的物品，强调闲置。",
+   "definition": "常见搭配：sell/buy secondhand idle items、secondhand idle items 平台。idle 强调未被使用，不等于破旧。",
+   "examples": [
+    {
+     "en": "She listed her secondhand idle items on a resale app and sold most of them within a week.",
+     "zh": "她把二手闲置挂到转卖应用上，一周内就卖掉了大部分。"
+    },
+    {
+     "en": "Buying secondhand idle items can save money and reduce waste, but always check the return policy and authenticity guarantee.",
+     "zh": "购买二手闲置可以省钱又减少浪费，但一定要看清退货政策和正品保障。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "secondhand idle items",
+   "pair": "en-zh",
+   "slug": "secondhand-idle-items",
+   "lang": "en",
+   "translation": "二手闲置",
+   "shortAnswer": "Secondhand idle items means 二手闲置: used personal items no longer in use but available for resale.",
+   "definition": "Common in resale contexts: sell/buy secondhand idle items. 二手闲置 stresses personally unused items, not worn-out goods.",
+   "examples": [
+    {
+     "en": "She listed her secondhand idle items on a resale app and sold most of them within a week.",
+     "zh": "她把二手闲置挂到转卖应用上，一周内就卖掉了大部分。"
+    },
+    {
+     "en": "Buying secondhand idle items can save money and reduce waste, but always check the return policy and authenticity guarantee.",
+     "zh": "购买二手闲置可以省钱又减少浪费，但一定要看清退货政策和正品保障。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "出闲置",
+   "pair": "zh-en",
+   "slug": "chu-xian-zhi",
+   "lang": "zh",
+   "translation": "sell unused stuff",
+   "shortAnswer": "「出闲置」的英文是 sell unused stuff，常用于二手平台，强调把不再使用的东西卖掉，比 sell second-hand 更口语。",
+   "definition": "「出闲置」指把家里不用的物品转卖，常见搭配有 sell unused stuff online、sell unused stuff on Xianyu。注意与「断舍离」不同，后者侧重丢弃，前者侧重卖掉。",
+   "examples": [
+    {
+     "en": "I decided to sell unused stuff online to make some extra money after spring cleaning.",
+     "zh": "大扫除后，我决定在网上出闲置，赚点外快。"
+    },
+    {
+     "en": "She often sells unused stuff on second-hand platforms instead of throwing it away.",
+     "zh": "她经常在二手平台上出闲置，而不是直接扔掉。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "sell unused stuff",
+   "pair": "en-zh",
+   "slug": "sell-unused-stuff",
+   "lang": "en",
+   "translation": "出闲置",
+   "shortAnswer": "Sell unused stuff 的中文意思是「出闲置」，强调把不再使用的物品卖掉，比 sell second-hand items 更口语，常见于二手平台。",
+   "definition": "Sell unused stuff 是口语表达，意思是出售自己不再使用的物品，常见搭配有 sell unused stuff online、sell unused stuff for cash。正式场合可用 sell surplus items。",
+   "examples": [
+    {
+     "en": "I decided to sell unused stuff online to make some extra money after spring cleaning.",
+     "zh": "大扫除后，我决定在网上出闲置，赚点外快。"
+    },
+    {
+     "en": "She often sells unused stuff on second-hand platforms instead of throwing it away.",
+     "zh": "她经常在二手平台上出闲置，而不是直接扔掉。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "退货包运费",
+   "pair": "zh-en",
+   "slug": "tui-huo-bao-yun-fei",
+   "lang": "zh",
+   "translation": "free return shipping",
+   "shortAnswer": "退货包运费英语说 free return shipping，指商家承担退货运费，区别于仅免手续费的 free returns。",
+   "definition": "退货包运费指退货时运费由商家承担，英文固定说法是 free return shipping，常与运费险配合使用。",
+   "examples": [
+    {
+     "en": "This store offers free return shipping on all orders, so you don't have to pay extra if you need to send something back.",
+     "zh": "这家店所有订单都退货包运费，所以如果你需要退货，不用额外付钱。"
+    },
+    {
+     "en": "I always check whether a product comes with free return shipping before buying, especially for clothes.",
+     "zh": "我买东西前总会检查是否退货包运费，尤其是买衣服的时候。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "free return shipping",
+   "pair": "en-zh",
+   "slug": "free-return-shipping",
+   "lang": "en",
+   "translation": "退货包运费",
+   "shortAnswer": "Free return shipping 即退货包运费，指商家承担退货运费，比 free returns 更具体，强调运费免费。",
+   "definition": "Free return shipping 指商家或平台承担退货产生的运费，常见于电商政策，需与仅免退货手续的 free returns 区分。",
+   "examples": [
+    {
+     "en": "This store offers free return shipping on all orders, so you don't have to pay extra if you need to send something back.",
+     "zh": "这家店所有订单都退货包运费，所以如果你需要退货，不用额外付钱。"
+    },
+    {
+     "en": "I always check whether a product comes with free return shipping before buying, especially for clothes.",
+     "zh": "我买东西前总会检查是否退货包运费，尤其是买衣服的时候。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "电子收费",
+   "pair": "zh-en",
+   "slug": "dian-zi-shou-fei",
+   "lang": "zh",
+   "translation": "ETC tolling",
+   "shortAnswer": "「电子收费」的英文是 ETC tolling，即高速公路不停车收费系统。注意 ETC 是电子不停车收费的缩写，tolling 强调收费行为。",
+   "definition": "常见搭配：ETC tolling lane（电子收费车道）、ETC tolling system（电子收费系统）。易错点：人工车道是 manual toll lane 或 cash lane，不要混淆电子收费车道与人工车道。",
+   "examples": [
+    {
+     "en": "The new ETC tolling system has significantly reduced congestion at the highway exits.",
+     "zh": "新的电子收费系统大大缓解了高速公路出口的拥堵。"
+    },
+    {
+     "en": "If your car doesn't have an ETC tag, you'll have to use the manual toll lane instead of the ETC tolling lane.",
+     "zh": "如果你的车没有安装电子收费标签，你就必须走人工收费车道，而不是电子收费车道。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "ETC tolling",
+   "pair": "en-zh",
+   "slug": "etc-tolling",
+   "lang": "en",
+   "translation": "电子收费",
+   "shortAnswer": "ETC tolling 的中文意思是「电子收费」，特指高速公路不停车收费系统。与普通 tolling 不同，ETC 强调电子化、不停车。",
+   "definition": "核心词义：电子收费系统。常见搭配：ETC tolling lane（电子收费车道）、ETC tolling system（电子收费系统）。正式场合常用，口语中也可直接说 ETC。易错点：不要与 manual toll lane（人工收费车道）混淆。",
+   "examples": [
+    {
+     "en": "The new ETC tolling system has significantly reduced congestion at the highway exits.",
+     "zh": "新的电子收费系统大大缓解了高速公路出口的拥堵。"
+    },
+    {
+     "en": "If your car doesn't have an ETC tag, you'll have to use the manual toll lane instead of the ETC tolling lane.",
+     "zh": "如果你的车没有安装电子收费标签，你就必须走人工收费车道，而不是电子收费车道。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "七天无理由退货",
+   "pair": "zh-en",
+   "slug": "qi-tian-wu-li-you-tui-huo",
+   "lang": "zh",
+   "translation": "seven-day no-reason return",
+   "shortAnswer": "「七天无理由退货」英文是 seven-day no-reason return，指网购法定冷静期，非商家自愿承诺。",
+   "definition": "seven-day no-reason return 是「七天无理由退货」的英文说法，法律上称冷静期，买家无需说明理由即可退货，属法定权利。",
+   "examples": [
+    {
+     "en": "As a cross-border shopper, I always check whether the store honors a seven-day no-reason return before adding items to my cart.",
+     "zh": "作为跨境买家，我总要先确认店铺是否支持七天无理由退货，才把商品加入购物车。"
+    },
+    {
+     "en": "The seller refused my seven-day no-reason return, claiming the item was on the exclusion list, so I filed a complaint.",
+     "zh": "卖家拒绝了我的七天无理由退货，说该商品在排除清单里，于是我发起了投诉。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "seven-day no-reason return",
+   "pair": "en-zh",
+   "slug": "seven-day-no-reason-return",
+   "lang": "en",
+   "translation": "七天无理由退货",
+   "shortAnswer": "seven-day no-reason return means 七天无理由退货, China's statutory cooling-off period for online shopping.",
+   "definition": "seven-day no-reason return is the English for 七天无理由退货, China's legal right to return online purchases without a reason, not a courtesy.",
+   "examples": [
+    {
+     "en": "As a cross-border shopper, I always check whether the store honors a seven-day no-reason return before adding items to my cart.",
+     "zh": "作为跨境买家，我总要先确认店铺是否支持七天无理由退货，才把商品加入购物车。"
+    },
+    {
+     "en": "The seller refused my seven-day no-reason return, claiming the item was on the exclusion list, so I filed a complaint.",
+     "zh": "卖家拒绝了我的七天无理由退货，说该商品在排除清单里，于是我发起了投诉。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "过户",
+   "pair": "zh-en",
+   "slug": "guo-hu",
+   "lang": "zh",
+   "translation": "transfer ownership",
+   "shortAnswer": "过户的英文是 transfer ownership，指车辆、房产等所有权正式转移登记，不是单纯交钥匙。",
+   "definition": "过户强调法律上的所有权转移，常搭配 transfer ownership of a car/house。正式文件多用此说法。",
+   "examples": [
+    {
+     "en": "You need to transfer ownership of the vehicle at the DMV before you can legally drive it.",
+     "zh": "你必须先在车管所办理车辆过户，才能合法上路。"
+    },
+    {
+     "en": "The seller agreed to transfer ownership to the buyer after the full payment was made.",
+     "zh": "卖方同意在收到全款后把所有权过户给买方。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "transfer ownership",
+   "pair": "en-zh",
+   "slug": "transfer-ownership",
+   "lang": "en",
+   "translation": "过户",
+   "shortAnswer": "transfer ownership 的中文意思是过户，特指车辆、房产等所有权的正式转移登记，比 give 更正式。",
+   "definition": "transfer ownership 常用于车辆、房产等资产，搭配 of 或 to：transfer ownership of the car to someone。",
+   "examples": [
+    {
+     "en": "You need to transfer ownership of the vehicle at the DMV before you can legally drive it.",
+     "zh": "你必须先在车管所办理车辆过户，才能合法上路。"
+    },
+    {
+     "en": "The seller agreed to transfer ownership to the buyer after the full payment was made.",
+     "zh": "卖方同意在收到全款后把所有权过户给买方。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "正品保障",
+   "pair": "zh-en",
+   "slug": "zheng-pin-bao-zhang",
+   "lang": "zh",
+   "translation": "authenticity guarantee",
+   "shortAnswer": "「正品保障」的英文是 authenticity guarantee，指平台承诺所售商品为真品而非假货。",
+   "definition": "常见搭配：offer/provide an authenticity guarantee。易错点：不要直译为 genuine guarantee，常与 100% authentic 并用。",
+   "examples": [
+    {
+     "en": "This online store offers an authenticity guarantee on all luxury bags, so you can shop without worrying about fakes.",
+     "zh": "这家网店对所有奢侈品包提供正品保障，所以你可以放心购物，不用担心买到假货。"
+    },
+    {
+     "en": "Before buying second-hand sneakers, check whether the platform provides an authenticity guarantee.",
+     "zh": "购买二手运动鞋前，先确认平台是否提供正品保障。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "authenticity guarantee",
+   "pair": "en-zh",
+   "slug": "authenticity-guarantee",
+   "lang": "en",
+   "translation": "正品保障",
+   "shortAnswer": "Authenticity guarantee 的中文意思是「正品保障」，指商家承诺商品为正品而非假冒。",
+   "definition": "核心义：对商品真实性的正式保证，常见搭配有 offer/provide an authenticity guarantee，多用于电商和奢侈品交易。",
+   "examples": [
+    {
+     "en": "This online store offers an authenticity guarantee on all luxury bags, so you can shop without worrying about fakes.",
+     "zh": "这家网店对所有奢侈品包提供正品保障，所以你可以放心购物，不用担心买到假货。"
+    },
+    {
+     "en": "Before buying second-hand sneakers, check whether the platform provides an authenticity guarantee.",
+     "zh": "购买二手运动鞋前，先确认平台是否提供正品保障。"
+    }
+   ],
+   "tags": [
+    "购物消费"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "大巴",
+   "pair": "zh-en",
+   "slug": "da-ba",
+   "lang": "zh",
+   "translation": "intercity coach",
+   "shortAnswer": "「大巴」的英文是 intercity coach，指城市间或团体出行的大型客车。注意与市内公交 bus 区分，英式常说 coach，美式常说 intercity bus。",
+   "definition": "大巴通常指长途或团体用的大型客车，如旅游大巴、长途大巴；常见搭配有 by intercity coach、charter an intercity coach。市内线路公交一般说 city bus 或 public bus。",
+   "examples": [
+    {
+     "en": "We took an intercity coach from Shanghai to Hangzhou and arrived in about three hours.",
+     "zh": "我们坐大巴从上海到杭州，大约三个小时就到了。"
+    },
+    {
+     "en": "The travel agency chartered an intercity coach to take the group to the ancient town.",
+     "zh": "旅行社包了一辆大巴，送团队去古镇。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "intercity coach",
+   "pair": "en-zh",
+   "slug": "intercity-coach",
+   "lang": "en",
+   "translation": "大巴",
+   "shortAnswer": "intercity coach 的中文意思是「大巴」，指城市间或团体出行的大型客车。它区别于市内公交 bus，英式英语多用 coach，美式英语多用 intercity bus。",
+   "definition": "intercity coach 指长途或团体用的大型客车，常见搭配有 travel by intercity coach、a charter coach。正式场合和英式英语常用 coach，美式口语也可说 intercity bus。",
+   "examples": [
+    {
+     "en": "We took an intercity coach from Shanghai to Hangzhou and arrived in about three hours.",
+     "zh": "我们坐大巴从上海到杭州，大约三个小时就到了。"
+    },
+    {
+     "en": "The travel agency chartered an intercity coach to take the group to the ancient town.",
+     "zh": "旅行社包了一辆大巴，送团队去古镇。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "实习期",
+   "pair": "zh-en",
+   "slug": "shi-xi-qi",
+   "lang": "zh",
+   "translation": "new-driver probation",
+   "shortAnswer": "「实习期」在驾驶语境下英文是 new-driver probation，指拿到驾照后的一年考察期。注意：职场上的实习叫 internship，别把这俩搞混。",
+   "definition": "new-driver probation 专指驾照实习期，通常为 12 个月，需贴实习标，上高速须有三年以上驾龄者陪同。职场实习则用 internship，同词两境，千万别用错。",
+   "examples": [
+    {
+     "en": "During my new-driver probation, I had to display a probation sign on my car and couldn't drive on the highway alone.",
+     "zh": "在我的驾照实习期内，我必须在车上贴实习标志，而且不能独自上高速。"
+    },
+    {
+     "en": "She got her license last month, so she's still in her new-driver probation and needs a licensed driver beside her on the expressway.",
+     "zh": "她上个月刚拿到驾照，所以还在实习期内，上高速公路时需要有持证驾驶员陪同。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "new-driver probation",
+   "pair": "en-zh",
+   "slug": "new-driver-probation",
+   "lang": "en",
+   "translation": "实习期",
+   "shortAnswer": "「new-driver probation」的中文意思是「实习期」，特指新驾驶员领证后的考察阶段。它和职场里的 internship 完全不同，别混淆。",
+   "definition": "new-driver probation 指新驾驶员必须经历的考察期，通常一年，需贴实习标志，部分路段或高速有特殊限制。口语中也说 probationary period for new drivers，但别和 intern 的实习期混用。",
+   "examples": [
+    {
+     "en": "During my new-driver probation, I had to display a probation sign on my car and couldn't drive on the highway alone.",
+     "zh": "在我的驾照实习期内，我必须在车上贴实习标志，而且不能独自上高速。"
+    },
+    {
+     "en": "She got her license last month, so she's still in her new-driver probation and needs a licensed driver beside her on the expressway.",
+     "zh": "她上个月刚拿到驾照，所以还在实习期内，上高速公路时需要有持证驾驶员陪同。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "拍牌",
+   "pair": "zh-en",
+   "slug": "pai-pai",
+   "lang": "zh",
+   "translation": "bid for a license plate",
+   "shortAnswer": "「拍牌」的英文是 bid for a license plate，指出价竞拍上海车牌额度，价高者得，不同于北京摇号。",
+   "definition": "拍牌指上海每月举行的私车额度拍卖，价高者得，中标价常近十万，故称「最贵铁皮」。常说拍牌价格、拍中、拍牌失败。英文 bid for a license plate 强调竞价，勿与 lottery 混用。",
+   "examples": [
+    {
+     "en": "In Shanghai, you have to bid for a license plate, and the winning price can be nearly 100,000 yuan.",
+     "zh": "在上海，你得拍牌，中标价可能接近十万元。"
+    },
+    {
+     "en": "She failed to bid for a license plate last month, so her new car still has no local plates.",
+     "zh": "她上个月拍牌失败，所以新车还没上本地牌照。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "bid for a license plate",
+   "pair": "en-zh",
+   "slug": "bid-for-a-license-plate",
+   "lang": "en",
+   "translation": "拍牌",
+   "shortAnswer": "bid for a license plate 的中文意思是「拍牌」，指竞拍上海私车牌照额度，与北京摇号的抽签机制不同。",
+   "definition": "bid for a license plate 指通过出价竞标取得车牌，多用于上海车牌拍卖。搭配：bid for a license plate successfully（拍中）、fail to bid。易错点是与 lottery（摇号）混用。",
+   "examples": [
+    {
+     "en": "In Shanghai, you have to bid for a license plate, and the winning price can be nearly 100,000 yuan.",
+     "zh": "在上海，你得拍牌，中标价可能接近十万元。"
+    },
+    {
+     "en": "She failed to bid for a license plate last month, so her new car still has no local plates.",
+     "zh": "她上个月拍牌失败，所以新车还没上本地牌照。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "候补",
+   "pair": "zh-en",
+   "slug": "hou-bu",
+   "lang": "zh",
+   "translation": "waitlist for tickets",
+   "shortAnswer": "「候补」的英文是 waitlist for tickets，特指中国12306无票时排队等退票的机制。日常口语也可说 get on the waitlist。",
+   "definition": "候补购票是中国铁路12306的独特功能：车票售罄后先付款排队，有人退票或改签时系统按顺序自动分配。英文常说 waitlist for tickets 或 join the waitlist，注意不是普通排队 queue。",
+   "examples": [
+    {
+     "en": "During the Spring Festival travel rush, I always waitlist for tickets on 12306 because they sell out in seconds.",
+     "zh": "春运期间，我总是在12306上候补购票，因为车票几秒钟就卖光了。"
+    },
+    {
+     "en": "She waitlisted for tickets and got a seat the day before departure when someone refunded theirs.",
+     "zh": "她提交了候补订单，出发前一天有人退票，她就成功补到了座位。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "waitlist for tickets",
+   "pair": "en-zh",
+   "slug": "waitlist-for-tickets",
+   "lang": "en",
+   "translation": "候补",
+   "shortAnswer": "waitlist for tickets 的中文意思是「候补」，指中国火车票无票时排队等退票的购票机制。它与普通 waitlist 不同，有自动抢票和先付款后兑现的特点。",
+   "definition": "waitlist for tickets 是中国特色铁路购票术语，指在12306上预付票款、按排队顺序等待退票或余票自动补位。比普通 waitlist 多了自动分配和先付款机制，常用于高铁和火车票语境。",
+   "examples": [
+    {
+     "en": "During the Spring Festival travel rush, I always waitlist for tickets on 12306 because they sell out in seconds.",
+     "zh": "春运期间，我总是在12306上候补购票，因为车票几秒钟就卖光了。"
+    },
+    {
+     "en": "She waitlisted for tickets and got a seat the day before departure when someone refunded theirs.",
+     "zh": "她提交了候补订单，出发前一天有人退票，她就成功补到了座位。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "站票",
+   "pair": "zh-en",
+   "slug": "zhan-piao",
+   "lang": "zh",
+   "translation": "standing ticket",
+   "shortAnswer": "「站票」的英文是 standing ticket，指无座位、需站立的车票。注意：站票通常与坐票同价，但可乘同一趟车，英文也说 standing room only。",
+   "definition": "铁路出行中，站票常译作 standing ticket；若强调车厢只有站位，用 standing room only。买站票上车后有空座可暂坐，但让座给持坐票乘客是基本礼仪。",
+   "examples": [
+    {
+     "en": "During the Spring Festival travel rush, I could only get a standing ticket for the high-speed train.",
+     "zh": "春运期间，我只买到了高铁的站票。"
+    },
+    {
+     "en": "The conductor announced standing room only, so we squeezed into the carriage with our standing tickets.",
+     "zh": "列车员宣布只有站票了，我们便拿着站票挤进了车厢。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "standing ticket",
+   "pair": "en-zh",
+   "slug": "standing-ticket",
+   "lang": "en",
+   "translation": "站票",
+   "shortAnswer": "「standing ticket」的中文意思是「站票」，即无座、需站立的车票。它不同于 seat reservation，不保证有座位，常见于火车和演出。",
+   "definition": "standing ticket 指无座票，与坐票同价但只能站立；列车长常喊 standing room only 表示仅剩站位。口语中也可说 standing-room ticket，注意不是站台票。",
+   "examples": [
+    {
+     "en": "During the Spring Festival travel rush, I could only get a standing ticket for the high-speed train.",
+     "zh": "春运期间，我只买到了高铁的站票。"
+    },
+    {
+     "en": "The conductor announced standing room only, so we squeezed into the carriage with our standing tickets.",
+     "zh": "列车员宣布只有站票了，我们便拿着站票挤进了车厢。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "中转",
+   "pair": "zh-en",
+   "slug": "zhong-zhuan",
+   "lang": "zh",
+   "translation": "layover stop",
+   "shortAnswer": "中转 的英文是 layover stop，指行程中途换乘，在航班语境中常用 layover 或 transfer。注意 layover 更强调停留等待，transfer 更强调换乘动作。",
+   "definition": "layover stop 指长途旅行中在中途城市停留换乘，常见搭配有 have a layover stop in、a long layover stop。航班中转常说 layover，机场内换乘则说 transfer。",
+   "examples": [
+    {
+     "en": "We have a three-hour layover stop in Hong Kong before flying to Sydney.",
+     "zh": "我们在香港中转停留三个小时，然后飞往悉尼。"
+    },
+    {
+     "en": "Because of the weather, our layover stop in Chicago was extended by two hours.",
+     "zh": "因为天气原因，我们在芝加哥的中转停留延长了两个小时。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "layover stop",
+   "pair": "en-zh",
+   "slug": "layover-stop",
+   "lang": "en",
+   "translation": "中转",
+   "shortAnswer": "layover stop 的中文意思是 中转，指旅程中途停留换乘，尤其常用于航班。区别在于 layover 强调停留等待，transfer 更强调换乘动作。",
+   "definition": "layover stop 指旅行中途停留换乘点，常用于航班，也可用于长途巴士或火车。常见搭配：have a layover stop in、a two-hour layover stop。正式场合可用 transfer，口语中常用 layover。",
+   "examples": [
+    {
+     "en": "We have a three-hour layover stop in Hong Kong before flying to Sydney.",
+     "zh": "我们在香港中转停留三个小时，然后飞往悉尼。"
+    },
+    {
+     "en": "Because of the weather, our layover stop in Chicago was extended by two hours.",
+     "zh": "因为天气原因，我们在芝加哥的中转停留延长了两个小时。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "接站",
+   "pair": "zh-en",
+   "slug": "jie-zhan",
+   "lang": "zh",
+   "translation": "pick up at the station",
+   "shortAnswer": "「接站」的英文是 pick up at the station，指到车站接人。注意：这里的“站”通常指火车站或汽车站，不是地铁站；若接机则说 pick up at the airport。",
+   "definition": "接站指专程到车站迎接某人，英文用 pick (someone) up at the station，宾语放中间：pick you up at the station。常用于接亲友、客户或同事；若在站台等候可说 meet you at the station。",
+   "examples": [
+    {
+     "en": "I'll pick you up at the station tomorrow morning, so wait by the north exit.",
+     "zh": "我明天早上去车站接你，你在北出口等就行。"
+    },
+    {
+     "en": "He asked his colleague to pick up the client at the station and drive her to the hotel.",
+     "zh": "他请同事去车站接客户，然后开车送她去酒店。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "pick up at the station",
+   "pair": "en-zh",
+   "slug": "pick-up-at-the-station",
+   "lang": "en",
+   "translation": "接站",
+   "shortAnswer": "pick up at the station 的中文意思是「接站」，即到车站接人。它与 meet at the station 略有区别：pick up 强调开车接送并一同离开，meet 只强调见面。",
+   "definition": "pick up at the station 指开车到火车站或汽车站接某人，宾语可置于 pick 与 up 之间，如 pick her up at the station。口语常用，接机则替换为 at the airport；注意不要与地铁站混淆。",
+   "examples": [
+    {
+     "en": "I'll pick you up at the station tomorrow morning, so wait by the north exit.",
+     "zh": "我明天早上去车站接你，你在北出口等就行。"
+    },
+    {
+     "en": "He asked his colleague to pick up the client at the station and drive her to the hotel.",
+     "zh": "他请同事去车站接客户，然后开车送她去酒店。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "卧铺",
+   "pair": "zh-en",
+   "slug": "wo-pu",
+   "lang": "zh",
+   "translation": "sleeper berth",
+   "shortAnswer": "「卧铺」的英文是 sleeper berth，列车供躺卧的铺位，注意与 bunk 区分。",
+   "definition": "火车卧铺英文称 sleeper berth，也简称 berth，车厢叫 sleeper 或 sleeping car。分上中下铺：upper、middle、lower berth。",
+   "examples": [
+    {
+     "en": "I booked a lower sleeper berth for the overnight train to Xi'an.",
+     "zh": "我订了去西安的夜班火车的下铺。"
+    },
+    {
+     "en": "The sleeper berths on the old green train are cheaper than soft sleeper compartments.",
+     "zh": "老式绿皮火车的卧铺比软卧包间便宜。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "sleeper berth",
+   "pair": "en-zh",
+   "slug": "sleeper-berth",
+   "lang": "en",
+   "translation": "卧铺",
+   "shortAnswer": "Sleeper berth is 卧铺 in Chinese—the berth you sleep in on a train.",
+   "definition": "A sleeper berth is a bed on a train, especially in a sleeping car. It is more specific than bunk. Book an upper or lower sleeper berth.",
+   "examples": [
+    {
+     "en": "I booked a lower sleeper berth for the overnight train to Xi'an.",
+     "zh": "我订了去西安的夜班火车的下铺。"
+    },
+    {
+     "en": "The sleeper berths on the old green train are cheaper than soft sleeper compartments.",
+     "zh": "老式绿皮火车的卧铺比软卧包间便宜。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "绿皮车",
+   "pair": "zh-en",
+   "slug": "lv-pi-che",
+   "lang": "zh",
+   "translation": "old green trains",
+   "shortAnswer": "绿皮车的英文是 old green trains，指中国铁路老式绿色涂装的普速列车。",
+   "definition": "绿皮车指中国铁路老式绿色涂装普速列车，速度慢、票价低、停站多。英文常说 old green trains，常带怀旧色彩。",
+   "examples": [
+    {
+     "en": "Many travelers still choose old green trains for the cheap tickets and the nostalgic atmosphere.",
+     "zh": "许多旅客仍然选择绿皮车，因为票价便宜，还有怀旧氛围。"
+    },
+    {
+     "en": "Compared with high-speed rail, old green trains are slower but stop at more small stations.",
+     "zh": "与高铁相比，绿皮车速度较慢，但会停靠更多小站。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "old green trains",
+   "pair": "en-zh",
+   "slug": "old-green-trains",
+   "lang": "en",
+   "translation": "绿皮车",
+   "shortAnswer": "old green trains 的中文是绿皮车，指中国铁路老式绿色涂装的普速列车。",
+   "definition": "old green trains 指中国铁路老式绿色涂装普速列车，速度慢、票价低、停站多，常带怀旧感。",
+   "examples": [
+    {
+     "en": "Many travelers still choose old green trains for the cheap tickets and the nostalgic atmosphere.",
+     "zh": "许多旅客仍然选择绿皮车，因为票价便宜，还有怀旧氛围。"
+    },
+    {
+     "en": "Compared with high-speed rail, old green trains are slower but stop at more small stations.",
+     "zh": "与高铁相比，绿皮车速度较慢，但会停靠更多小站。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "托运",
+   "pair": "zh-en",
+   "slug": "tuo-yun",
+   "lang": "zh",
+   "translation": "check in luggage",
+   "shortAnswer": "「托运」的英文是 check in luggage；指在机场或火车站把行李交给工作人员统一运送，不是快递寄送。",
+   "definition": "在机场、火车站办理行李托运时，用 check in luggage 或 check luggage；注意区分快递托运（ship/consign），后者用于寄包裹，不用于旅客随身行李。",
+   "examples": [
+    {
+     "en": "You need to check in luggage at the counter before going through security.",
+     "zh": "你需要在过安检前到柜台办理行李托运。"
+    },
+    {
+     "en": "We arrived early to check in luggage and avoid the long queue.",
+     "zh": "我们提早到达办理行李托运，以免排长队。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "check in luggage",
+   "pair": "en-zh",
+   "slug": "check-in-luggage",
+   "lang": "en",
+   "translation": "托运",
+   "shortAnswer": "「check in luggage」的中文意思是「托运」；指在机场或火车站把行李交给工作人员统一运送，区别于随身携带。",
+   "definition": "check in luggage 表示办理行李托运，常见于机场和火车站；英式英语也常说 check in baggage，口语中可省略 luggage 只说 check in。",
+   "examples": [
+    {
+     "en": "You need to check in luggage at the counter before going through security.",
+     "zh": "你需要在过安检前到柜台办理行李托运。"
+    },
+    {
+     "en": "We arrived early to check in luggage and avoid the long queue.",
+     "zh": "我们提早到达办理行李托运，以免排长队。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "错峰出行",
+   "pair": "zh-en",
+   "slug": "cuo-feng-chu-xing",
+   "lang": "zh",
+   "translation": "travel off-peak",
+   "shortAnswer": "「错峰出行」的英文是 travel off-peak，指避开客流高峰时段出行。注意「峰」指客流高峰，不是山峰，别逐字译成 wrong peak。",
+   "definition": "常用搭配：travel off-peak、stagger travel times（错开出行时间）。春运、黄金周官方英文提示常建议错峰出行，强调避开拥堵和抢票高峰。反义为 travel at peak times。",
+   "examples": [
+    {
+     "en": "To avoid the crowds during Spring Festival, we decided to travel off-peak and leave two days earlier.",
+     "zh": "为了避开春运人流，我们决定错峰出行，提前两天出发。"
+    },
+    {
+     "en": "The airline offers cheaper tickets if you travel off-peak, such as on weekday mornings.",
+     "zh": "如果你错峰出行，比如选工作日早上，航空公司会提供更便宜的机票。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "travel off-peak",
+   "pair": "en-zh",
+   "slug": "travel-off-peak",
+   "lang": "en",
+   "translation": "错峰出行",
+   "shortAnswer": "travel off-peak 的中文意思是「错峰出行」，即避开客流高峰时段出行。它强调时间选择，不等于 go on a wrong trip 或走错路线。",
+   "definition": "travel off-peak 为中性偏正式表达，常见于交通公告、春运和黄金周出行建议。peak 指客流高峰，off-peak 即非高峰时段；口语也可说 travel at off-peak times。反义：travel during peak hours。",
+   "examples": [
+    {
+     "en": "To avoid the crowds during Spring Festival, we decided to travel off-peak and leave two days earlier.",
+     "zh": "为了避开春运人流，我们决定错峰出行，提前两天出发。"
+    },
+    {
+     "en": "The airline offers cheaper tickets if you travel off-peak, such as on weekday mornings.",
+     "zh": "如果你错峰出行，比如选工作日早上，航空公司会提供更便宜的机票。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "爱豆",
+   "pair": "zh-en",
+   "slug": "ai-dou",
+   "lang": "zh",
+   "translation": "idol",
+   "shortAnswer": "「爱豆」的英文就是 idol，是 idol 的音译借词，比「偶像」更萌更亲密，专指受粉丝追捧的年轻艺人。注意 idol 在英语里本义是神像或崇拜对象，追星义是后来扩展的。",
+   "definition": "爱豆是 idol 的音译借词，与「粉丝」（fan）同属一套亲密化机制：把外来词直接音译当昵称用，语气比「偶像」更轻松可爱。常见搭配：追爱豆、爱豆回归、爱豆营业。注意：英语 idol 本义是神像、受崇拜的人，追星义在当代口语中才流行。",
+   "examples": [
+    {
+     "en": "My idol just dropped a new album, and I've been streaming it nonstop.",
+     "zh": "我爱豆刚发了新专辑，我一直在循环播放。"
+    },
+    {
+     "en": "She waited outside the venue for hours just to catch a glimpse of her idol.",
+     "zh": "她在场馆外等了好几个小时，就为了看一眼她的爱豆。"
+    }
+   ],
+   "tags": [
+    "追星与线下娱乐"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "idol",
+   "pair": "en-zh",
+   "slug": "idol",
+   "lang": "en",
+   "translation": "爱豆",
+   "shortAnswer": "「idol」的中文意思是「爱豆」，即受粉丝追捧的年轻艺人，是 idol 的音译借词，比「偶像」更亲切。与「明星」不同，idol 强调粉丝情感投射和流量属性。",
+   "definition": "idol 本义是神像、受崇拜的对象，后引申为被狂热追捧的艺人。在追星语境下，中文常译为「爱豆」，比「偶像」更口语化、萌化。常见搭配：pop idol、teen idol、idol group。正式场合仍可用 idol 指偶像，但追星义更常见于娱乐新闻和粉丝圈。",
+   "examples": [
+    {
+     "en": "My idol just dropped a new album, and I've been streaming it nonstop.",
+     "zh": "我爱豆刚发了新专辑，我一直在循环播放。"
+    },
+    {
+     "en": "She waited outside the venue for hours just to catch a glimpse of her idol.",
+     "zh": "她在场馆外等了好几个小时，就为了看一眼她的爱豆。"
+    }
+   ],
+   "tags": [
+    "追星与线下娱乐"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "年检",
+   "pair": "zh-en",
+   "slug": "nian-jian",
+   "lang": "zh",
+   "translation": "annual vehicle inspection",
+   "shortAnswer": "年检的英文是 annual vehicle inspection，指车辆每年安全与排放检测，不是人体体检。",
+   "definition": "年检即 annual vehicle inspection，指机动车每年例行的安全与排放检验。常见搭配：pass/fail the annual vehicle inspection（年检合格/不合格）。",
+   "examples": [
+    {
+     "en": "My car is due for its annual vehicle inspection next month, so I need to book an appointment at the testing station.",
+     "zh": "我的车下个月该年检了，所以我需要预约检测站。"
+    },
+    {
+     "en": "If your car fails the annual vehicle inspection, you must fix the problems and have it retested before you can legally drive it.",
+     "zh": "如果你的车年检不合格，必须修好问题并重新检测，然后才能合法上路。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "annual vehicle inspection",
+   "pair": "en-zh",
+   "slug": "annual-vehicle-inspection",
+   "lang": "en",
+   "translation": "年检",
+   "shortAnswer": "年检 is annual vehicle inspection, a yearly safety and emissions test for cars.",
+   "definition": "Annual vehicle inspection (年检) is a yearly vehicle safety and emissions test. Common collocations: pass/fail the annual vehicle inspection.",
+   "examples": [
+    {
+     "en": "My car is due for its annual vehicle inspection next month, so I need to book an appointment at the testing station.",
+     "zh": "我的车下个月该年检了，所以我需要预约检测站。"
+    },
+    {
+     "en": "If your car fails the annual vehicle inspection, you must fix the problems and have it retested before you can legally drive it.",
+     "zh": "如果你的车年检不合格，必须修好问题并重新检测，然后才能合法上路。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "绕行",
+   "pair": "zh-en",
+   "slug": "rao-xing",
+   "lang": "zh",
+   "translation": "take a detour",
+   "shortAnswer": "「绕行」的英文是 take a detour，多指因修路、事故或导航提示而绕道走。detour 作名词指「绕行路段」，take a detour 才是动词短语「绕行」。",
+   "definition": "take a detour 意为「绕道、绕行」，常与 have to、be forced to 连用，如 we had to take a detour（我们不得不绕行）。导航中可说 Construction ahead, please take a detour。",
+   "examples": [
+    {
+     "en": "Because of the road construction, we had to take a detour and arrived twenty minutes late.",
+     "zh": "因为道路施工，我们不得不绕行，结果迟到了二十分钟。"
+    },
+    {
+     "en": "The navigation app told us to take a detour to avoid the traffic jam on the highway.",
+     "zh": "导航应用让我们绕行，以避开高速公路上的堵车。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "take a detour",
+   "pair": "en-zh",
+   "slug": "take-a-detour",
+   "lang": "en",
+   "translation": "绕行",
+   "shortAnswer": "「take a detour」的中文意思是「绕行」，指不走直路而绕道走。它比 go around 更正式，常用于交通、导航和修路场景，可主动或被迫绕行。",
+   "definition": "take a detour 是动词短语，意为「绕道、绕行」，常见搭配有 have to take a detour、be forced to take a detour。detour 也可作名词，指「绕行路线」。",
+   "examples": [
+    {
+     "en": "Because of the road construction, we had to take a detour and arrived twenty minutes late.",
+     "zh": "因为道路施工，我们不得不绕行，结果迟到了二十分钟。"
+    },
+    {
+     "en": "The navigation app told us to take a detour to avoid the traffic jam on the highway.",
+     "zh": "导航应用让我们绕行，以避开高速公路上的堵车。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "违章查询",
+   "pair": "zh-en",
+   "slug": "wei-zhang-cha-xun",
+   "lang": "zh",
+   "translation": "check traffic violations",
+   "shortAnswer": "「违章查询」的英文是 check traffic violations，用于查看交通违法记录，不含缴罚款。",
+   "definition": "check traffic violations 指查询交通违法记录，可搭配 online、app、车管所等。注意不是缴罚款。",
+   "examples": [
+    {
+     "en": "Before the annual inspection, you should check traffic violations online to make sure there are no unpaid fines.",
+     "zh": "年检前，你应该在线查询违章，确认没有未缴罚款。"
+    },
+    {
+     "en": "Drivers can check traffic violations through the official app or at the vehicle management office.",
+     "zh": "司机可以通过官方应用或去车管所查询违章。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "check traffic violations",
+   "pair": "en-zh",
+   "slug": "check-traffic-violations",
+   "lang": "en",
+   "translation": "违章查询",
+   "shortAnswer": "check traffic violations 的中文是「违章查询」，指查看交通违法记录，不含缴罚款。",
+   "definition": "check traffic violations 用于交通出行，可在线或去车管所查询违章记录。常见搭配：online、app。",
+   "examples": [
+    {
+     "en": "Before the annual inspection, you should check traffic violations online to make sure there are no unpaid fines.",
+     "zh": "年检前，你应该在线查询违章，确认没有未缴罚款。"
+    },
+    {
+     "en": "Drivers can check traffic violations through the official app or at the vehicle management office.",
+     "zh": "司机可以通过官方应用或去车管所查询违章。"
+    }
+   ],
+   "tags": [
+    "交通出行"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "打榜",
+   "pair": "zh-en",
+   "slug": "da-bang",
+   "lang": "zh",
+   "translation": "vote for the charts",
+   "shortAnswer": "「打榜」的英文是 vote for the charts，指粉丝投票刷数据，把偶像推上音乐榜或热搜榜。贬义语境常用 chart manipulation。",
+   "definition": "打榜常与「打投」联动，即粉丝集中投票、刷播放量把偶像推上榜单。vote for the charts 较中性，chart manipulation 带贬义。",
+   "examples": [
+    {
+     "en": "Fans stayed up all night to vote for the charts and push their idol's new single to number one.",
+     "zh": "粉丝们通宵打榜，把偶像的新单曲推上第一名。"
+    },
+    {
+     "en": "Some critics accuse agencies of chart manipulation, saying the mass voting is less about music than about a desire to vote for the charts.",
+     "zh": "一些批评者指责经纪公司操纵榜单，称这种大规模投票与其说是为了音乐，不如说是出于打榜的欲望。"
+    }
+   ],
+   "tags": [
+    "追星与线下娱乐"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "vote for the charts",
+   "pair": "en-zh",
+   "slug": "vote-for-the-charts",
+   "lang": "en",
+   "translation": "打榜",
+   "shortAnswer": "vote for the charts 的中文是「打榜」，指粉丝为偶像冲榜单排名而投票刷数据，负面语境下近于 chart manipulation。",
+   "definition": "vote for the charts 多用于饭圈，指粉丝投票刷数据冲榜。中性强调投票冲榜，若指操纵排名则用 chart manipulation。",
+   "examples": [
+    {
+     "en": "Fans stayed up all night to vote for the charts and push their idol's new single to number one.",
+     "zh": "粉丝们通宵打榜，把偶像的新单曲推上第一名。"
+    },
+    {
+     "en": "Some critics accuse agencies of chart manipulation, saying the mass voting is less about music than about a desire to vote for the charts.",
+     "zh": "一些批评者指责经纪公司操纵榜单，称这种大规模投票与其说是为了音乐，不如说是出于打榜的欲望。"
+    }
+   ],
+   "tags": [
+    "追星与线下娱乐"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "唁CP",
+   "pair": "zh-en",
+   "slug": "yan-cp",
+   "lang": "zh",
+   "translation": "ship a couple",
+   "shortAnswer": "「唁CP」用英语说是 ship a couple，指粉丝把两个人物配对并希望他们在一起。",
+   "definition": "ship a couple 是粉丝圈常用表达，ship 源自 relationship，作动词表示支持某对 CP 的恋爱关系。常见搭配：ship them、ship a couple hard。",
+   "examples": [
+    {
+     "en": "I ship a couple from that new idol drama so hard that I keep rewatching their scenes.",
+     "zh": "我特别嗑那部新爱豆剧里的一对 CP，以至于反复重看他们的片段。"
+    },
+    {
+     "en": "Fans often ship a couple based on chemistry, even if the show never makes them canon.",
+     "zh": "粉丝常常根据化学反应来嗑 CP，即使剧里从未让他们成为官方配对。"
+    }
+   ],
+   "tags": [
+    "追星与线下娱乐"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "ship a couple",
+   "pair": "en-zh",
+   "slug": "ship-a-couple",
+   "lang": "en",
+   "translation": "唁CP",
+   "shortAnswer": "ship a couple 的中文意思是「唁CP」，即粉丝把两个人配对并希望他们发展恋爱关系。",
+   "definition": "ship a couple 是粉丝文化口语表达，ship 作动词，源自 relationship。常见搭配：ship them、ship a couple hard、I don't ship it。",
+   "examples": [
+    {
+     "en": "I ship a couple from that new idol drama so hard that I keep rewatching their scenes.",
+     "zh": "我特别嗑那部新爱豆剧里的一对 CP，以至于反复重看他们的片段。"
+    },
+    {
+     "en": "Fans often ship a couple based on chemistry, even if the show never makes them canon.",
+     "zh": "粉丝常常根据化学反应来嗑 CP，即使剧里从未让他们成为官方配对。"
+    }
+   ],
+   "tags": [
+    "追星与线下娱乐"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "追星",
+   "pair": "zh-en",
+   "slug": "zhui-xing",
+   "lang": "zh",
+   "translation": "fandom life",
+   "shortAnswer": "「追星」的英文常译作 fandom life，指围绕偶像展开的粉丝生活总称。它比单说 following idols 更强调日常化、持续性的追星状态，不是一次性的喜欢。",
+   "definition": "fandom life 侧重「粉丝生活方式」，口语常说 live the fandom life、my fandom life。若强调具体追随行为，用 following idols；若强调狂热粉丝文化，用 stan culture，stan 源自 Eminem 歌曲，已进词典。",
+   "examples": [
+    {
+     "en": "Since she started living the fandom life, her weekends are all about concerts and fan events.",
+     "zh": "自从她开始追星，周末就全被演唱会和粉丝活动占满了。"
+    },
+    {
+     "en": "For many students, fandom life is a way to relieve stress, but they still need to balance it with study.",
+     "zh": "对很多学生来说，追星是一种减压方式，但仍需与学习平衡。"
+    }
+   ],
+   "tags": [
+    "追星与线下娱乐"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "fandom life",
+   "pair": "en-zh",
+   "slug": "fandom-life",
+   "lang": "en",
+   "translation": "追星",
+   "shortAnswer": "Fandom life 的中文意思是「追星」，即作为粉丝追随偶像的整套生活状态。它不等于一次追现场，而更强调长期投入、应援、打榜、嗑 CP 等日常。",
+   "definition": "Fandom life 指粉丝群体的生活方式与情感投入，常搭配 live the fandom life、part of my fandom life。口语、社媒常用；正式写作可说 fan culture。注意它不是「同人圈」本身，而是以偶像追随为核心的粉丝生活。",
+   "examples": [
+    {
+     "en": "Since she started living the fandom life, her weekends are all about concerts and fan events.",
+     "zh": "自从她开始追星，周末就全被演唱会和粉丝活动占满了。"
+    },
+    {
+     "en": "For many students, fandom life is a way to relieve stress, but they still need to balance it with study.",
+     "zh": "对很多学生来说，追星是一种减压方式，但仍需与学习平衡。"
+    }
+   ],
+   "tags": [
+    "追星与线下娱乐"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "应援",
+   "pair": "zh-en",
+   "slug": "ying-yuan",
+   "lang": "zh",
+   "translation": "fan support",
+   "shortAnswer": "「应援」的英文是 fan support，指粉丝集体出钱出力为偶像造势、宣传或送礼物。",
+   "definition": "应援源自日语「応援」，经韩流传入中国，现包括灯牌、物资、控评等。英文常用不可数名词 fan support，动词可说 support the idol。",
+   "examples": [
+    {
+     "en": "The fan club organized fan support for the singer's birthday, buying subway ads and light sticks.",
+     "zh": "粉丝团为这位歌手的生日组织了应援，购买了地铁广告和灯牌。"
+    },
+    {
+     "en": "Fans gave strong fan support to the actor after his new drama aired, trending his name online.",
+     "zh": "新剧播出后，粉丝们给这位演员做了强力应援，把他的名字刷上了热搜。"
+    }
+   ],
+   "tags": [
+    "追星与线下娱乐"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "fan support",
+   "pair": "en-zh",
+   "slug": "fan-support",
+   "lang": "en",
+   "translation": "应援",
+   "shortAnswer": "Fan support means 应援: fans backing an idol with money, gifts or publicity.",
+   "definition": "Fan support covers cheering, light sticks, gifts and online drives for a celebrity. It is uncountable: give fan support, not a fan support.",
+   "examples": [
+    {
+     "en": "The fan club organized fan support for the singer's birthday, buying subway ads and light sticks.",
+     "zh": "粉丝团为这位歌手的生日组织了应援，购买了地铁广告和灯牌。"
+    },
+    {
+     "en": "Fans gave strong fan support to the actor after his new drama aired, trending his name online.",
+     "zh": "新剧播出后，粉丝们给这位演员做了强力应援，把他的名字刷上了热搜。"
+    }
+   ],
+   "tags": [
+    "追星与线下娱乐"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "代拍",
+   "pair": "zh-en",
+   "slug": "dai-pai",
+   "lang": "zh",
+   "translation": "paid paparazzi shots",
+   "shortAnswer": "「代拍」的英文是 paid paparazzi shots，指粉丝付费请人拍摄的明星路透照片。",
+   "definition": "代拍指粉丝付费委托他人拍摄的明星照片，英文为 paid paparazzi shots。与主动偷拍隐私的狗仔不同，代拍多拍公开行程，属灰色产业链。",
+   "examples": [
+    {
+     "en": "The fan club raised money to buy paid paparazzi shots of the idol at the airport.",
+     "zh": "粉丝团凑钱购买偶像在机场的代拍照片。"
+    },
+    {
+     "en": "She was criticized for selling paid paparazzi shots of celebrities to gossip accounts.",
+     "zh": "她因向八卦账号出售明星代拍照片而受到批评。"
+    }
+   ],
+   "tags": [
+    "追星与线下娱乐"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "paid paparazzi shots",
+   "pair": "en-zh",
+   "slug": "paid-paparazzi-shots",
+   "lang": "en",
+   "translation": "代拍",
+   "shortAnswer": "paid paparazzi shots 的中文是「代拍」，即粉丝付费请人拍摄的明星路透照片。",
+   "definition": "paid paparazzi shots 指粉丝付费给拍摄者拍到的明星照片，属粉丝文化中的灰色产业链。常见搭配：sell paid paparazzi shots、leak paid paparazzi shots。",
+   "examples": [
+    {
+     "en": "The fan club raised money to buy paid paparazzi shots of the idol at the airport.",
+     "zh": "粉丝团凑钱购买偶像在机场的代拍照片。"
+    },
+    {
+     "en": "She was criticized for selling paid paparazzi shots of celebrities to gossip accounts.",
+     "zh": "她因向八卦账号出售明星代拍照片而受到批评。"
+    }
+   ],
+   "tags": [
+    "追星与线下娱乐"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "私生饭",
+   "pair": "zh-en",
+   "slug": "si-sheng-fan",
+   "lang": "zh",
+   "translation": "sasaeng fan",
+   "shortAnswer": "「私生饭」的英文是 sasaeng fan，指跟踪、偷拍、骚扰偶像私生活的极端粉丝。",
+   "definition": "sasaeng fan 借自韩语，专指侵犯偶像隐私、跟踪偷拍的极端粉丝，不能泛指普通追星族。",
+   "examples": [
+    {
+     "en": "The agency filed a lawsuit against a sasaeng fan who followed the idol to a private schedule.",
+     "zh": "经纪公司对一名跟踪偶像私人行程的私生饭提起了诉讼。"
+    },
+    {
+     "en": "She was labeled a sasaeng fan after illegally getting the singer's flight info and waiting at the airport.",
+     "zh": "她因非法获取歌手的航班信息并在机场蹲守，被贴上了私生饭的标签。"
+    }
+   ],
+   "tags": [
+    "追星与线下娱乐"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "sasaeng fan",
+   "pair": "en-zh",
+   "slug": "sasaeng-fan",
+   "lang": "en",
+   "translation": "私生饭",
+   "shortAnswer": "Sasaeng fan is 私生饭 in Chinese: an obsessive fan who invades an idol's privacy.",
+   "definition": "Sasaeng fan means 私生饭: a Korean-derived term for an extreme fan who stalks or harasses idols. Not for ordinary fans.",
+   "examples": [
+    {
+     "en": "The agency filed a lawsuit against a sasaeng fan who followed the idol to a private schedule.",
+     "zh": "经纪公司对一名跟踪偶像私人行程的私生饭提起了诉讼。"
+    },
+    {
+     "en": "She was labeled a sasaeng fan after illegally getting the singer's flight info and waiting at the airport.",
+     "zh": "她因非法获取歌手的航班信息并在机场蹲守，被贴上了私生饭的标签。"
+    }
+   ],
+   "tags": [
+    "追星与线下娱乐"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "演唱会",
+   "pair": "zh-en",
+   "slug": "yan-chang-hui",
+   "lang": "zh",
+   "translation": "live concert",
+   "shortAnswer": "「演唱会」的英文是 live concert，指歌手现场真唱演出；live 在此读 /laɪv/，不是「居住」的 /lɪv/。",
+   "definition": "live concert 强调现场演出、非录播，常搭 go to、attend、hold、ticket，如 live concert ticket（演唱会门票）；口语也常只说 concert。",
+   "examples": [
+    {
+     "en": "I queued for three hours to get a live concert ticket for my favorite idol.",
+     "zh": "我排了三个小时的队，就为了买到我最喜欢的偶像的演唱会门票。"
+    },
+    {
+     "en": "The live concert lasted until midnight, and the whole stadium sang along.",
+     "zh": "这场演唱会一直持续到午夜，整个体育场的人都跟着一起唱。"
+    }
+   ],
+   "tags": [
+    "追星与线下娱乐"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "live concert",
+   "pair": "en-zh",
+   "slug": "live-concert",
+   "lang": "en",
+   "translation": "演唱会",
+   "shortAnswer": "live concert 的中文意思是「演唱会」，指歌手或乐队当着现场观众演唱的音乐演出。",
+   "definition": "live concert 指观众到场、歌手当场演唱的音乐会，常说 go to / attend / hold a live concert；live 作「现场」时读 /laɪv/。",
+   "examples": [
+    {
+     "en": "I queued for three hours to get a live concert ticket for my favorite idol.",
+     "zh": "我排了三个小时的队，就为了买到我最喜欢的偶像的演唱会门票。"
+    },
+    {
+     "en": "The live concert lasted until midnight, and the whole stadium sang along.",
+     "zh": "这场演唱会一直持续到午夜，整个体育场的人都跟着一起唱。"
+    }
+   ],
+   "tags": [
+    "追星与线下娱乐"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "发糖",
+   "pair": "zh-en",
+   "slug": "fa-tang",
+   "lang": "zh",
+   "translation": "drop sweet moments",
+   "shortAnswer": "「发糖」英文常说 drop sweet moments，指偶像或剧集给粉丝制造甜蜜互动，属饭圈口语。",
+   "definition": "「发糖」指偶像、CP 或剧组放出甜蜜互动让粉丝「吃到糖」。英文 drop sweet moments 强调投放动作，feed the fans 强调投喂粉丝。",
+   "examples": [
+    {
+     "en": "The two leads dropped sweet moments behind the scenes, and fans immediately started shipping them even harder.",
+     "zh": "两位主演在幕后发糖，粉丝立刻嗑得更起劲了。"
+    },
+    {
+     "en": "My favorite idol loves to drop sweet moments on Weibo before a comeback, which always sends the fandom into a frenzy.",
+     "zh": "我最喜欢的偶像总爱在回归前在微博上发糖，每次都让饭圈沸腾。"
+    }
+   ],
+   "tags": [
+    "追星与线下娱乐"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "drop sweet moments",
+   "pair": "en-zh",
+   "slug": "drop-sweet-moments",
+   "lang": "en",
+   "translation": "发糖",
+   "shortAnswer": "Drop sweet moments means 发糖: idols or shows release sweet interactions for fans. It is fandom slang.",
+   "definition": "Drop sweet moments is fandom slang meaning 发糖: an idol or on-screen couple releases cute moments to feed fans, often alongside ship.",
+   "examples": [
+    {
+     "en": "The two leads dropped sweet moments behind the scenes, and fans immediately started shipping them even harder.",
+     "zh": "两位主演在幕后发糖，粉丝立刻嗑得更起劲了。"
+    },
+    {
+     "en": "My favorite idol loves to drop sweet moments on Weibo before a comeback, which always sends the fandom into a frenzy.",
+     "zh": "我最喜欢的偶像总爱在回归前在微博上发糖，每次都让饭圈沸腾。"
+    }
+   ],
+   "tags": [
+    "追星与线下娱乐"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "刀子",
+   "pair": "zh-en",
+   "slug": "dao-zi",
+   "lang": "zh",
+   "translation": "heartbreak plot",
+   "shortAnswer": "中文「刀子」在饭圈指虐心剧情，英文常说 heartbreak plot，与发糖相反。",
+   "definition": "粉丝圈用语，指影视、小说或偶像内容里官方刻意安排的虐心情节，常说「发刀子」「吃刀子」，不是现实伤心事。",
+   "examples": [
+    {
+     "en": "The writer dropped a major heartbreak plot in episode ten, right after two episodes of pure fluff.",
+     "zh": "编剧在第十集扔下一把大刀子，前两集还全是纯甜发糖。"
+    },
+    {
+     "en": "Fans keep joking that this show serves a heartbreak plot every other week to keep them emotionally hooked.",
+     "zh": "粉丝老开玩笑说这剧每隔一周就发一次刀子，好让大家一直上头。"
+    }
+   ],
+   "tags": [
+    "追星与线下娱乐"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "heartbreak plot",
+   "pair": "en-zh",
+   "slug": "heartbreak-plot",
+   "lang": "en",
+   "translation": "刀子",
+   "shortAnswer": "Chinese fan slang 「刀子」 means a sad storyline, known in English as a heartbreak plot.",
+   "definition": "Fandom term for a plot beat made to break viewers' hearts in dramas, novels, or idol content; informal and fan-specific, not real grief.",
+   "examples": [
+    {
+     "en": "The writer dropped a major heartbreak plot in episode ten, right after two episodes of pure fluff.",
+     "zh": "编剧在第十集扔下一把大刀子，前两集还全是纯甜发糖。"
+    },
+    {
+     "en": "Fans keep joking that this show serves a heartbreak plot every other week to keep them emotionally hooked.",
+     "zh": "粉丝老开玩笑说这剧每隔一周就发一次刀子，好让大家一直上头。"
+    }
+   ],
+   "tags": [
+    "追星与线下娱乐"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "签售会",
+   "pair": "zh-en",
+   "slug": "qian-shou-hui",
+   "lang": "zh",
+   "translation": "autograph session",
+   "shortAnswer": "「签售会」英文是 autograph session，指艺人现场签名并常卖专辑周边的互动活动。",
+   "definition": "autograph session 强调签名环节，常搭配 hold/attend an autograph session；若侧重卖专辑可叫 signing event。",
+   "examples": [
+    {
+     "en": "Hundreds of fans lined up outside the bookstore for the author's autograph session.",
+     "zh": "数百名粉丝在书店外排队等待作者的签售会。"
+    },
+    {
+     "en": "The K-pop group held an autograph session after their comeback showcase, and fans brought albums to be signed.",
+     "zh": "这个韩流组合在回归秀之后举办了签售会，粉丝们带着专辑来签名。"
+    }
+   ],
+   "tags": [
+    "追星与线下娱乐"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "autograph session",
+   "pair": "en-zh",
+   "slug": "autograph-session",
+   "lang": "en",
+   "translation": "签售会",
+   "shortAnswer": "Autograph session means 签售会: a signing event where fans meet a star and get items signed.",
+   "definition": "autograph session 指明星粉丝签名会，常与专辑、书籍或周边售卖绑定。搭配 hold/attend an autograph session。",
+   "examples": [
+    {
+     "en": "Hundreds of fans lined up outside the bookstore for the author's autograph session.",
+     "zh": "数百名粉丝在书店外排队等待作者的签售会。"
+    },
+    {
+     "en": "The K-pop group held an autograph session after their comeback showcase, and fans brought albums to be signed.",
+     "zh": "这个韩流组合在回归秀之后举办了签售会，粉丝们带着专辑来签名。"
+    }
+   ],
+   "tags": [
+    "追星与线下娱乐"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "荧光棒",
+   "pair": "zh-en",
+   "slug": "ying-guang-bang",
+   "lang": "zh",
+   "translation": "glow stick",
+   "shortAnswer": "荧光棒英文是glow stick，演唱会粉丝常挥舞它为爱豆应援，是追星必备道具。",
+   "definition": "glow stick指内含化学发光液的塑料软管，演唱会和夜跑常见；在粉丝应援中也叫light stick。",
+   "examples": [
+    {
+     "en": "She waved a pink glow stick in the crowd to support her favorite idol.",
+     "zh": "她在人群中挥舞着粉色荧光棒，为最喜欢的爱豆应援。"
+    },
+    {
+     "en": "The venue was filled with thousands of glow sticks in different colors, each marking a fan group.",
+     "zh": "现场满是颜色各异的荧光棒，每种颜色都代表不同的粉丝群体。"
+    }
+   ],
+   "tags": [
+    "追星与线下娱乐"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "glow stick",
+   "pair": "en-zh",
+   "slug": "glow-stick",
+   "lang": "en",
+   "translation": "荧光棒",
+   "shortAnswer": "A glow stick, 荧光棒 in Chinese, is waved by fans at concerts to cheer for idols.",
+   "definition": "A glow stick is a chemiluminescent tube used at concerts; in fan culture it is a light stick in many colors.",
+   "examples": [
+    {
+     "en": "She waved a pink glow stick in the crowd to support her favorite idol.",
+     "zh": "她在人群中挥舞着粉色荧光棒，为最喜欢的爱豆应援。"
+    },
+    {
+     "en": "The venue was filled with thousands of glow sticks in different colors, each marking a fan group.",
+     "zh": "现场满是颜色各异的荧光棒，每种颜色都代表不同的粉丝群体。"
+    }
+   ],
+   "tags": [
+    "追星与线下娱乐"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "抢票",
+   "pair": "zh-en",
+   "slug": "qiang-piao",
+   "lang": "zh",
+   "translation": "snap up tickets",
+   "shortAnswer": "「抢票」英文是 snap up tickets，指开票瞬间飞快抢购，强调速度与竞争。",
+   "definition": "抢票即 snap up tickets，多用于演唱会、球赛开票即售罄的场景，比 buy tickets 更突出秒杀感。",
+   "examples": [
+    {
+     "en": "Thousands of fans tried to snap up tickets for the reunion tour, but the site crashed within seconds.",
+     "zh": "成千上万的粉丝试图抢重组巡演的票，但网站几秒钟就崩溃了。"
+    },
+    {
+     "en": "She set three alarms to snap up tickets the moment they were released, and still missed out.",
+     "zh": "她设了三个闹钟，就为了在开票那一刻抢票，结果还是没抢到。"
+    }
+   ],
+   "tags": [
+    "追星与线下娱乐"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "snap up tickets",
+   "pair": "en-zh",
+   "slug": "snap-up-tickets",
+   "lang": "en",
+   "translation": "抢票",
+   "shortAnswer": "Snap up tickets means 抢票: buying tickets fast the moment they go on sale.",
+   "definition": "Snap up tickets is informal, used for concerts or limited events where tickets sell out fast.",
+   "examples": [
+    {
+     "en": "Thousands of fans tried to snap up tickets for the reunion tour, but the site crashed within seconds.",
+     "zh": "成千上万的粉丝试图抢重组巡演的票，但网站几秒钟就崩溃了。"
+    },
+    {
+     "en": "She set three alarms to snap up tickets the moment they were released, and still missed out.",
+     "zh": "她设了三个闹钟，就为了在开票那一刻抢票，结果还是没抢到。"
+    }
+   ],
+   "tags": [
+    "追星与线下娱乐"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "加场",
+   "pair": "zh-en",
+   "slug": "jia-chang",
+   "lang": "zh",
+   "translation": "extra show",
+   "shortAnswer": "「加场」的英文是 extra show，指热门演出因需求火爆而临时追加的场次，不要直译成 add a show。",
+   "definition": "extra show 多用于演唱会、音乐剧等售票演出，常搭配 announce an extra show、due to overwhelming demand。added date 更强调新增日期，常见于票务网站；加场不等于加座。",
+   "examples": [
+    {
+     "en": "Due to overwhelming demand, the promoter announced an extra show in Shanghai.",
+     "zh": "由于需求火爆，主办方宣布在上海加场。"
+    },
+    {
+     "en": "Tickets for the extra show sold out in less than ten minutes.",
+     "zh": "加场的门票不到十分钟就卖光了。"
+    }
+   ],
+   "tags": [
+    "追星与线下娱乐"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "extra show",
+   "pair": "en-zh",
+   "slug": "extra-show",
+   "lang": "en",
+   "translation": "加场",
+   "shortAnswer": "extra show 的中文意思是「加场」，指在原定场次之外临时增加的演出场次，与 extra seats（加座）不同。",
+   "definition": "extra show 用于演唱会、戏剧等售票演出，常见搭配 announce an extra show、due to overwhelming demand。正式票务文案也写作 added date，语气更中性。",
+   "examples": [
+    {
+     "en": "Due to overwhelming demand, the promoter announced an extra show in Shanghai.",
+     "zh": "由于需求火爆，主办方宣布在上海加场。"
+    },
+    {
+     "en": "Tickets for the extra show sold out in less than ten minutes.",
+     "zh": "加场的门票不到十分钟就卖光了。"
+    }
+   ],
+   "tags": [
+    "追星与线下娱乐"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "返图",
+   "pair": "zh-en",
+   "slug": "fan-tu",
+   "lang": "zh",
+   "translation": "fan-taken photos",
+   "shortAnswer": "「返图」英文是 fan-taken photos，指粉丝拍完并分享回圈内的照片，强调分享闭环。",
+   "definition": "fan-taken photos 多指粉丝在活动或机场拍到并修好发回圈内的照片，重点在拍完分享回圈内。",
+   "examples": [
+    {
+     "en": "She posted a set of fan-taken photos from the concert, and the whole fandom saved them.",
+     "zh": "她发了演唱会的返图，整个饭圈都保存了。"
+    },
+    {
+     "en": "These fan-taken photos are so clear that some people mistook them for official teasers.",
+     "zh": "这些返图太清晰了，有人误以为是官方预告照。"
+    }
+   ],
+   "tags": [
+    "追星与线下娱乐"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "fan-taken photos",
+   "pair": "en-zh",
+   "slug": "fan-taken-photos",
+   "lang": "en",
+   "translation": "返图",
+   "shortAnswer": "Fan-taken photos 中文叫「返图」，指粉丝拍摄并分享回圈内的照片，常会先修图再发回圈子。",
+   "definition": "Fan-taken photos means pictures shot by fans and shared back to the fandom, often edited first before posting.",
+   "examples": [
+    {
+     "en": "She posted a set of fan-taken photos from the concert, and the whole fandom saved them.",
+     "zh": "她发了演唱会的返图，整个饭圈都保存了。"
+    },
+    {
+     "en": "These fan-taken photos are so clear that some people mistook them for official teasers.",
+     "zh": "这些返图太清晰了，有人误以为是官方预告照。"
+    }
+   ],
+   "tags": [
+    "追星与线下娱乐"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "见面会",
+   "pair": "zh-en",
+   "slug": "jian-mian-hui",
+   "lang": "zh",
+   "translation": "fan meeting",
+   "shortAnswer": "「见面会」的英文就是 fan meeting，指偶像与粉丝近距离互动的线下活动，常包含聊天、游戏与合影。",
+   "definition": "fan meeting 源自韩流文化，常搭配 hold、attend 等动词；它比演唱会更重互动，包括聊天、游戏、合影等环节。",
+   "examples": [
+    {
+     "en": "I flew to Seoul just to attend my favorite idol's fan meeting.",
+     "zh": "我专门飞首尔，就为了参加我最喜欢的偶像的见面会。"
+    },
+    {
+     "en": "The fan meeting included a Q&A session, games, and a group photo with the singer.",
+     "zh": "这场见面会包括问答环节、游戏，还有和歌手的合影。"
+    }
+   ],
+   "tags": [
+    "追星与线下娱乐"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "fan meeting",
+   "pair": "en-zh",
+   "slug": "fan-meeting",
+   "lang": "en",
+   "translation": "见面会",
+   "shortAnswer": "A fan meeting is「见面会」in Chinese, an intimate offline event where idols interact closely with fans.",
+   "definition": "A fan meeting is an intimate event where idols chat, play games and take photos with fans, focusing on interaction rather than performance.",
+   "examples": [
+    {
+     "en": "I flew to Seoul just to attend my favorite idol's fan meeting.",
+     "zh": "我专门飞首尔，就为了参加我最喜欢的偶像的见面会。"
+    },
+    {
+     "en": "The fan meeting included a Q&A session, games, and a group photo with the singer.",
+     "zh": "这场见面会包括问答环节、游戏，还有和歌手的合影。"
+    }
+   ],
+   "tags": [
+    "追星与线下娱乐"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "柱子票",
+   "pair": "zh-en",
+   "slug": "zhu-zi-piao",
+   "lang": "zh",
+   "translation": "pillar-blocked seat",
+   "shortAnswer": "「柱子票」英文是 pillar-blocked seat，指视线被场馆立柱遮挡的座位。",
+   "definition": "pillar-blocked seat 指视线被立柱遮挡的座位，区别于泛指的 obstructed view seat。",
+   "examples": [
+    {
+     "en": "Many fans complained after buying pillar-blocked seats at the concert and demanded refunds.",
+     "zh": "许多粉丝在演唱会上买到柱子票后纷纷投诉，要求退款。"
+    },
+    {
+     "en": "The venue apologized and offered to exchange pillar-blocked seats for better ones.",
+     "zh": "场馆道歉，并提出将柱子票更换为视野更好的座位。"
+    }
+   ],
+   "tags": [
+    "追星与线下娱乐"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "pillar-blocked seat",
+   "pair": "en-zh",
+   "slug": "pillar-blocked-seat",
+   "lang": "en",
+   "translation": "柱子票",
+   "shortAnswer": "A pillar-blocked seat is 柱子票, a seat with a view blocked by a venue pillar.",
+   "definition": "Pillar-blocked seat means 柱子票, a seat whose view is blocked by a pillar. Narrower than obstructed view seat.",
+   "examples": [
+    {
+     "en": "Many fans complained after buying pillar-blocked seats at the concert and demanded refunds.",
+     "zh": "许多粉丝在演唱会上买到柱子票后纷纷投诉，要求退款。"
+    },
+    {
+     "en": "The venue apologized and offered to exchange pillar-blocked seats for better ones.",
+     "zh": "场馆道歉，并提出将柱子票更换为视野更好的座位。"
+    }
+   ],
+   "tags": [
+    "追星与线下娱乐"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "周边",
+   "pair": "zh-en",
+   "slug": "zhou-bian",
+   "lang": "zh",
+   "translation": "official merch",
+   "shortAnswer": "「周边」的英文是 official merch，口语常简作 merch，正式场合用 official merchandise。",
+   "definition": "official merch 指围绕某个 IP、艺人或作品推出的官方授权衍生品，包括徽章、立牌、痛包等。",
+   "examples": [
+    {
+     "en": "I spent way too much on official merch at the concert last night.",
+     "zh": "昨晚演唱会上我花太多钱买官方周边了。"
+    },
+    {
+     "en": "The official merch store just dropped a new line of ita bags and badges.",
+     "zh": "官方周边店刚上架了一批新的痛包和徽章。"
+    }
+   ],
+   "tags": [
+    "追星与线下娱乐"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "official merch",
+   "pair": "en-zh",
+   "slug": "official-merch",
+   "lang": "en",
+   "translation": "周边",
+   "shortAnswer": "Official merch is the English for 周边, meaning licensed products tied to an IP, idol, or franchise.",
+   "definition": "Official merch means licensed merchandise from a brand or creator, not fan-made goods; often shortened to merch.",
+   "examples": [
+    {
+     "en": "I spent way too much on official merch at the concert last night.",
+     "zh": "昨晚演唱会上我花太多钱买官方周边了。"
+    },
+    {
+     "en": "The official merch store just dropped a new line of ita bags and badges.",
+     "zh": "官方周边店刚上架了一批新的痛包和徽章。"
+    }
+   ],
+   "tags": [
+    "追星与线下娱乐"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "吧唧",
+   "pair": "zh-en",
+   "slug": "ba-ji",
+   "lang": "zh",
+   "translation": "anime badge",
+   "shortAnswer": "「吧唧」的英文是 anime badge，特指动漫、游戏等二次元周边中的马口铁徽章。注意别直接说 badge，那只是普通徽章，anime badge 才对应粉丝圈语境。",
+   "definition": "吧唧是 badge 的音译，专指二次元圈的马口铁徽章（pin badge），常印角色或CP图案，用于装饰痛包、交换、应援。口语也作「谷子」的一种；说英语时用 anime badge 或 can badge，别只说 badge。",
+   "examples": [
+    {
+     "en": "She decorated her ita bag with dozens of anime badges of her favorite character.",
+     "zh": "她用几十个最喜欢的角色的吧唧装饰了自己的痛包。"
+    },
+    {
+     "en": "I traded an anime badge with a fellow fan at the convention.",
+     "zh": "我在漫展上和一位同好交换了一个吧唧。"
+    }
+   ],
+   "tags": [
+    "追星与线下娱乐"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "anime badge",
+   "pair": "en-zh",
+   "slug": "anime-badge",
+   "lang": "en",
+   "translation": "吧唧",
+   "shortAnswer": "Anime badge 的中文意思是「吧唧」，即二次元粉丝圈常见的马口铁徽章。它与普通 pin badge 不同，专指印有动漫、游戏角色的周边徽章。",
+   "definition": "Anime badge 指动漫周边中的马口铁徽章，中文音译为「吧唧」，是「谷子」的核心品类。英语中也可说 can badge 或 pin badge，但在粉丝语境下 anime badge 更准确，不要与普通徽章混用。",
+   "examples": [
+    {
+     "en": "She decorated her ita bag with dozens of anime badges of her favorite character.",
+     "zh": "她用几十个最喜欢的角色的吧唧装饰了自己的痛包。"
+    },
+    {
+     "en": "I traded an anime badge with a fellow fan at the convention.",
+     "zh": "我在漫展上和一位同好交换了一个吧唧。"
+    }
+   ],
+   "tags": [
+    "追星与线下娱乐"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "开场嘉宾",
+   "pair": "zh-en",
+   "slug": "kai-chang-jia-bin",
+   "lang": "zh",
+   "translation": "opening act",
+   "shortAnswer": "「开场嘉宾」的英文是 opening act，指演唱会正式开场前登台暖场的表演者。注意 opening act 是整场演出的第一个表演环节，不是主持人。",
+   "definition": "opening act 常与 tour、concert 搭配，如 be the opening act for…；口语中也说 opener。它特指为压轴主秀（headliner）暖场的艺人，与嘉宾主持（host）概念不同。",
+   "examples": [
+    {
+     "en": "The opening act played for only twenty minutes before the headliner took the stage.",
+     "zh": "开场嘉宾只表演了二十分钟，随后主秀就登台了。"
+    },
+    {
+     "en": "She got her start as an opening act for a famous rock band on their world tour.",
+     "zh": "她最初是在一支著名摇滚乐队的世界巡演中担任开场嘉宾起步的。"
+    }
+   ],
+   "tags": [
+    "追星与线下娱乐"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "opening act",
+   "pair": "en-zh",
+   "slug": "opening-act",
+   "lang": "en",
+   "translation": "开场嘉宾",
+   "shortAnswer": "Opening act 的中文意思是「开场嘉宾」，即演唱会主秀前先登台暖场的表演者。它强调暖场功能，不等同于客串嘉宾（guest performer）。",
+   "definition": "Opening act 指演出中为主打艺人（headliner）预热的第一组表演者，常见搭配 open for sb、serve as the opening act。口语缩略为 opener，正式报道中仍用 opening act。",
+   "examples": [
+    {
+     "en": "The opening act played for only twenty minutes before the headliner took the stage.",
+     "zh": "开场嘉宾只表演了二十分钟，随后主秀就登台了。"
+    },
+    {
+     "en": "She got her start as an opening act for a famous rock band on their world tour.",
+     "zh": "她最初是在一支著名摇滚乐队的世界巡演中担任开场嘉宾起步的。"
+    }
+   ],
+   "tags": [
+    "追星与线下娱乐"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "返场",
+   "pair": "zh-en",
+   "slug": "fan-chang",
+   "lang": "zh",
+   "translation": "encore",
+   "shortAnswer": "「返场」的英文是 encore，源自法语 encore（意为“再来一次”）。注意：返场是观众喊出来的加演，不是歌手主动加歌。",
+   "definition": "encore 作名词指“返场加演”，作动词/感叹词指“喊返场”。常见搭配：do an encore（返场表演）、call for an encore（喊返场）、encore performance（返场演出）。易错点：返场不是安可，安可只是音译。",
+   "examples": [
+    {
+     "en": "The audience shouted for an encore, and the band came back to play two more songs.",
+     "zh": "观众大喊返场，乐队又回来加演了两首歌。"
+    },
+    {
+     "en": "She performed an encore of her biggest hit, even though her voice was slightly hoarse.",
+     "zh": "尽管嗓子有点哑，她还是返场表演了她的最热门歌曲。"
+    }
+   ],
+   "tags": [
+    "追星与线下娱乐"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "encore",
+   "pair": "en-zh",
+   "slug": "encore",
+   "lang": "en",
+   "translation": "返场",
+   "shortAnswer": "Encore 的中文意思是「返场」，即演出结束后观众要求加演的环节。与中文「加演」不同，encore 强调观众喊出来的互动。",
+   "definition": "Encore 源自法语 encore（再次），在英语中作名词指返场表演，作动词/感叹词指观众喊返场。常见搭配：play an encore、encore call。注意：encore 不指正式演出中的加演曲目。",
+   "examples": [
+    {
+     "en": "The audience shouted for an encore, and the band came back to play two more songs.",
+     "zh": "观众大喊返场，乐队又回来加演了两首歌。"
+    },
+    {
+     "en": "She performed an encore of her biggest hit, even though her voice was slightly hoarse.",
+     "zh": "尽管嗓子有点哑，她还是返场表演了她的最热门歌曲。"
+    }
+   ],
+   "tags": [
+    "追星与线下娱乐"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "巡演",
+   "pair": "zh-en",
+   "slug": "xun-yan",
+   "lang": "zh",
+   "translation": "concert tour",
+   "shortAnswer": "「巡演」的英文是 concert tour，指歌手在多座城市连续举办的系列演唱会。注意它区别于单场演出。",
+   "definition": "concert tour 指同一主题在多座城市巡回举办的系列演出。常见搭配：go on a concert tour、a world concert tour。",
+   "examples": [
+    {
+     "en": "The band announced a world concert tour to promote their new album, with stops in Shanghai, Tokyo, and London.",
+     "zh": "这支乐队宣布开启世界巡演以宣传新专辑，途经上海、东京和伦敦。"
+    },
+    {
+     "en": "She cried when the concert tour ended because she had followed her idol to five different cities.",
+     "zh": "巡演结束时她哭了，因为她一路追着偶像跑了五座城市。"
+    }
+   ],
+   "tags": [
+    "追星与线下娱乐"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "concert tour",
+   "pair": "en-zh",
+   "slug": "concert-tour",
+   "lang": "en",
+   "translation": "巡演",
+   "shortAnswer": "Concert tour means 「巡演」: a series of concerts by an artist in many cities, not just one show.",
+   "definition": "A concert tour is a planned series of concerts in different cities. Common collocations: go on a concert tour, kick off a concert tour.",
+   "examples": [
+    {
+     "en": "The band announced a world concert tour to promote their new album, with stops in Shanghai, Tokyo, and London.",
+     "zh": "这支乐队宣布开启世界巡演以宣传新专辑，途经上海、东京和伦敦。"
+    },
+    {
+     "en": "She cried when the concert tour ended because she had followed her idol to five different cities.",
+     "zh": "巡演结束时她哭了，因为她一路追着偶像跑了五座城市。"
+    }
+   ],
+   "tags": [
+    "追星与线下娱乐"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "谷子",
+   "pair": "zh-en",
+   "slug": "gu-zi",
+   "lang": "zh",
+   "translation": "anime merch goods",
+   "shortAnswer": "「谷子」英文是 anime merch goods，指动漫游戏周边；吧唧即徽章，吃谷即买周边。",
+   "definition": "谷子是 goods 音译黑话，指动漫游戏等二次元周边，如吧唧、立牌、色纸。英语多说 anime merch goods 或 merch。",
+   "examples": [
+    {
+     "en": "She spent all her savings on anime merch goods at the convention, especially badges and acrylic stands.",
+     "zh": "她在漫展上把积蓄全花在了谷子上，尤其是徽章和立牌。"
+    },
+    {
+     "en": "Fans often trade anime merch goods online to complete their collections.",
+     "zh": "粉丝们经常在网上交换谷子来集齐收藏。"
+    }
+   ],
+   "tags": [
+    "追星与线下娱乐"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "anime merch goods",
+   "pair": "en-zh",
+   "slug": "anime-merch-goods",
+   "lang": "en",
+   "translation": "谷子",
+   "shortAnswer": "谷子 in Chinese means anime merch goods, i.e. anime and game merchandise such as badges and stands.",
+   "definition": "Anime merch goods are physical products tied to anime or games, like badges and acrylic stands. In casual English, merch is more common.",
+   "examples": [
+    {
+     "en": "She spent all her savings on anime merch goods at the convention, especially badges and acrylic stands.",
+     "zh": "她在漫展上把积蓄全花在了谷子上，尤其是徽章和立牌。"
+    },
+    {
+     "en": "Fans often trade anime merch goods online to complete their collections.",
+     "zh": "粉丝们经常在网上交换谷子来集齐收藏。"
+    }
+   ],
+   "tags": [
+    "追星与线下娱乐"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "痛包",
+   "pair": "zh-en",
+   "slug": "tong-bao",
+   "lang": "zh",
+   "translation": "ita bag",
+   "shortAnswer": "痛包英文叫 ita bag，指带透明夹层、挂满徽章周边的展示包，源自日语痛バッグ。",
+   "definition": "痛包即 ita bag，源自日语「痛バッグ」，指用透明夹层展示徽章、吧唧等周边的包。常见搭配：make an ita bag。易错：别译成 painful bag。",
+   "examples": [
+    {
+     "en": "She spent the whole weekend arranging her badges on her ita bag before the fan meeting.",
+     "zh": "为了粉丝见面会，她整个周末都在把徽章往痛包上摆。"
+    },
+    {
+     "en": "At the concert, everyone carried an ita bag covered in merch, so the queue looked like a mini exhibition.",
+     "zh": "演唱会上每个人都背着挂满周边的痛包，排队队伍像个小展览。"
+    }
+   ],
+   "tags": [
+    "追星与线下娱乐"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "ita bag",
+   "pair": "en-zh",
+   "slug": "ita-bag",
+   "lang": "en",
+   "translation": "痛包",
+   "shortAnswer": "An ita bag is a 痛包: a bag with clear panels packed with badges and idol merch, from Japanese 痛バッグ.",
+   "definition": "Ita bag means 痛包, a bag with transparent panels displaying pins and idol goods, from Japanese 痛バッグ. Not a plain backpack.",
+   "examples": [
+    {
+     "en": "She spent the whole weekend arranging her badges on her ita bag before the fan meeting.",
+     "zh": "为了粉丝见面会，她整个周末都在把徽章往痛包上摆。"
+    },
+    {
+     "en": "At the concert, everyone carried an ita bag covered in merch, so the queue looked like a mini exhibition.",
+     "zh": "演唱会上每个人都背着挂满周边的痛包，排队队伍像个小展览。"
+    }
+   ],
+   "tags": [
+    "追星与线下娱乐"
+   ],
+   "searchIntentType": "meaning"
+  }
+ ]
+}
