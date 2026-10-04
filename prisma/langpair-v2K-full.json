@@ -1,0 +1,5538 @@
+{
+ "meta": {
+  "version": "v2-K-full",
+  "date": "2026-10-05",
+  "model": "deepseek-chat",
+  "source": "langpair-v2-batchK-20261005.json",
+  "pairCounts": {
+   "zh-en": 120,
+   "en-zh": 120
+  },
+  "slugStrategy": "zh=pinyin-pro (toneless, v), en=slugify",
+  "handPatched": [
+   "白灼|plain poached zh fields"
+  ]
+ },
+ "entries": [
+  {
+   "term": "黑色星期五",
+   "pair": "zh-en",
+   "slug": "hei-se-xing-qi-wu",
+   "lang": "zh",
+   "translation": "Black Friday",
+   "shortAnswer": "黑色星期五的英文是 Black Friday。它指美国感恩节次日的年末大促开端，名字里的“黑色”是商家账本盈利（in the black），并非倒霉的黑色星期五。",
+   "definition": "Black Friday 特指感恩节后首日的大促，常与 Cyber Monday 连成购物季。搭配：Black Friday sale/deal。注意：中文也说“黑五”，但不要与西方“13号星期五”的不祥含义混淆。",
+   "examples": [
+    {
+     "en": "Many stores offer huge discounts on Black Friday, so shoppers line up before dawn.",
+     "zh": "许多商店在黑色星期五推出大幅折扣，因此购物者天不亮就排队。"
+    },
+    {
+     "en": "We waited for the Black Friday sale to buy a new laptop and saved a lot.",
+     "zh": "我们等到黑色星期五大促才买新笔记本电脑，省了不少钱。"
+    }
+   ],
+   "tags": [
+    "购物节与大促"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "Black Friday",
+   "pair": "en-zh",
+   "slug": "black-friday",
+   "lang": "en",
+   "translation": "黑色星期五",
+   "shortAnswer": "Black Friday 的中文意思是黑色星期五。它指美国感恩节次日的购物大促，标志年末购物季开始，名字来自商家账本由亏转盈，即“in the black”。",
+   "definition": "Black Friday 是感恩节次日的大型促销日，线上常延续到 Cyber Monday。常见搭配：Black Friday deal/sale/shopping。口语可简称 “Black Friday”，注意与“13号星期五”的不祥含义区分。",
+   "examples": [
+    {
+     "en": "Many stores offer huge discounts on Black Friday, so shoppers line up before dawn.",
+     "zh": "许多商店在黑色星期五推出大幅折扣，因此购物者天不亮就排队。"
+    },
+    {
+     "en": "We waited for the Black Friday sale to buy a new laptop and saved a lot.",
+     "zh": "我们等到黑色星期五大促才买新笔记本电脑，省了不少钱。"
+    }
+   ],
+   "tags": [
+    "购物节与大促"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "直播带货",
+   "pair": "zh-en",
+   "slug": "zhi-bo-dai-huo",
+   "lang": "zh",
+   "translation": "livestream selling",
+   "shortAnswer": "「直播带货」的英文是 livestream selling，指主播边直播边卖货。注意它强调「带销量」，不是简单的 live streaming。",
+   "definition": "livestream selling 或 livestream commerce，突出主播实时推销、观众边看边下单。不同于西方 QVC 式电视购物，中国直播带货由李佳琦、薇娅等带火，常与双11、618 大促绑定，核心是「带销量」的转化力。",
+   "examples": [
+    {
+     "en": "During Double 11, brands rely heavily on livestream selling to boost their sales.",
+     "zh": "双11期间，品牌严重依赖直播带货来提升销量。"
+    },
+    {
+     "en": "Her livestream selling session attracted millions of viewers and sold out in minutes.",
+     "zh": "她的直播带货场次吸引了数百万观众，几分钟内就售罄了。"
+    }
+   ],
+   "tags": [
+    "购物节与大促"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "livestream selling",
+   "pair": "en-zh",
+   "slug": "livestream-selling",
+   "lang": "en",
+   "translation": "直播带货",
+   "shortAnswer": "livestream selling 的中文意思是「直播带货」，即主播在直播中实时推销商品。它侧重卖货转化，而 live streaming 仅指直播行为本身。",
+   "definition": "livestream selling（也作 livestream commerce）指通过直播实时推销并促成购买，常见于中国电商大促如双11、618。与西方 QVC 电视购物不同，它更依赖主播个人IP和互动秒杀。",
+   "examples": [
+    {
+     "en": "During Double 11, brands rely heavily on livestream selling to boost their sales.",
+     "zh": "双11期间，品牌严重依赖直播带货来提升销量。"
+    },
+    {
+     "en": "Her livestream selling session attracted millions of viewers and sold out in minutes.",
+     "zh": "她的直播带货场次吸引了数百万观众，几分钟内就售罄了。"
+    }
+   ],
+   "tags": [
+    "购物节与大促"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "双十二",
+   "pair": "zh-en",
+   "slug": "shuang-shi-er",
+   "lang": "zh",
+   "translation": "Dec 12 mega sale",
+   "shortAnswer": "「双十二」的英文是 Dec 12 mega sale，指12月12日的大型电商促销节。注意它与 Black Friday 不同，是中国平台自造的购物节。",
+   "definition": "双十二是淘宝、京东等平台在12月12日举办的年度大促，地位类似“双11”的延续。英文常写作 Dec 12 mega sale 或 Double 12，搭配 shop the Dec 12 mega sale、during the Dec 12 mega sale 等。",
+   "examples": [
+    {
+     "en": "I saved up for months to shop the Dec 12 mega sale and finally bought a new laptop.",
+     "zh": "我攒了好几个月的钱，就为了在双十二大促时买一台新笔记本电脑。"
+    },
+    {
+     "en": "Many brands offer their biggest discounts of the year during the Dec 12 mega sale.",
+     "zh": "许多品牌会在双十二大促期间提供全年最大的折扣。"
+    }
+   ],
+   "tags": [
+    "购物节与大促"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "Dec 12 mega sale",
+   "pair": "en-zh",
+   "slug": "dec-12-mega-sale",
+   "lang": "en",
+   "translation": "双十二",
+   "shortAnswer": "Dec 12 mega sale 的中文意思是「双十二」，即中国电商在12月12日举办的大型促销活动。它不同于美国黑五，是平台自造的购物节。",
+   "definition": "Dec 12 mega sale 指中国每年12月12日的电商大促，由阿里巴巴等平台发起，与双11、618并称三大购物节。常见搭配：shop the Dec 12 mega sale、Dec 12 mega sale deals。口语中也可说 Double 12。",
+   "examples": [
+    {
+     "en": "I saved up for months to shop the Dec 12 mega sale and finally bought a new laptop.",
+     "zh": "我攒了好几个月的钱，就为了在双十二大促时买一台新笔记本电脑。"
+    },
+    {
+     "en": "Many brands offer their biggest discounts of the year during the Dec 12 mega sale.",
+     "zh": "许多品牌会在双十二大促期间提供全年最大的折扣。"
+    }
+   ],
+   "tags": [
+    "购物节与大促"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "网络星期一",
+   "pair": "zh-en",
+   "slug": "wang-luo-xing-qi-yi",
+   "lang": "zh",
+   "translation": "Cyber Monday",
+   "shortAnswer": "「网络星期一」的英文是 Cyber Monday，指感恩节黑五后的周一，人们回办公室用电脑线上抢购。与线下主打的黑色星期五互补，别混用。",
+   "definition": "固定译法 Cyber Monday，源于网购兴起的年代，Cyber 是早期「网络」前缀。常与 Black Friday 并列，指黑五后的周一线上大促；说「网一」时英文仍用 Cyber Monday。",
+   "examples": [
+    {
+     "en": "We waited for Cyber Monday to buy the laptop because the online discounts were better than on Black Friday.",
+     "zh": "我们等到网络星期一才买那台笔记本电脑，因为线上折扣比黑色星期五更好。"
+    },
+    {
+     "en": "Many retailers now stretch Cyber Monday into a week of online deals.",
+     "zh": "许多零售商现在把网络星期一延长成整整一周的线上促销。"
+    }
+   ],
+   "tags": [
+    "购物节与大促"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "Cyber Monday",
+   "pair": "en-zh",
+   "slug": "cyber-monday",
+   "lang": "en",
+   "translation": "网络星期一",
+   "shortAnswer": "Cyber Monday 的中文意思是「网络星期一」，指感恩节后的周一，人们回到办公室网购的大促日。与主打线下的 Black Friday 相对，它更强调线上折扣。",
+   "definition": "美国购物季线上促销日，紧跟 Black Friday 之后的周一，因早期员工回办公室用高速网络下单得名。常与 Black Friday、holiday shopping 连用，口语可简称 Cyber Monday deals。",
+   "examples": [
+    {
+     "en": "We waited for Cyber Monday to buy the laptop because the online discounts were better than on Black Friday.",
+     "zh": "我们等到网络星期一才买那台笔记本电脑，因为线上折扣比黑色星期五更好。"
+    },
+    {
+     "en": "Many retailers now stretch Cyber Monday into a week of online deals.",
+     "zh": "许多零售商现在把网络星期一延长成整整一周的线上促销。"
+    }
+   ],
+   "tags": [
+    "购物节与大促"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "618",
+   "pair": "zh-en",
+   "slug": "618",
+   "lang": "zh",
+   "translation": "June 18 shopping festival",
+   "shortAnswer": "618 的英文是 June 18 shopping festival，指京东发起的年中大促，与双11并列，不要直译成“six-one-eight”。",
+   "definition": "618 指每年6月18日前后京东发起、后扩展至全平台的年中购物节。常见搭配：618大促、618预售。与双11对应。",
+   "examples": [
+    {
+     "en": "Many brands offer their biggest discounts of the first half of the year during the June 18 shopping festival.",
+     "zh": "许多品牌在618购物节期间提供上半年最大力度的折扣。"
+    },
+    {
+     "en": "The June 18 shopping festival, started by JD.com, now rivals Double 11 in sales volume across all major platforms.",
+     "zh": "由京东发起的618购物节，如今在全平台的销售额上已可与双11媲美。"
+    }
+   ],
+   "tags": [
+    "购物节与大促"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "June 18 shopping festival",
+   "pair": "en-zh",
+   "slug": "june-18-shopping-festival",
+   "lang": "en",
+   "translation": "618",
+   "shortAnswer": "June 18 shopping festival 的中文是“618”，即中国每年6月18日前后的年中大促，源自京东店庆，与双11并列。",
+   "definition": "June 18 shopping festival 指中国电商平台在6月18日前后的大型促销，由京东发起并扩展至全网。也写作 618 shopping festival。",
+   "examples": [
+    {
+     "en": "Many brands offer their biggest discounts of the first half of the year during the June 18 shopping festival.",
+     "zh": "许多品牌在618购物节期间提供上半年最大力度的折扣。"
+    },
+    {
+     "en": "The June 18 shopping festival, started by JD.com, now rivals Double 11 in sales volume across all major platforms.",
+     "zh": "由京东发起的618购物节，如今在全平台的销售额上已可与双11媲美。"
+    }
+   ],
+   "tags": [
+    "购物节与大促"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "蹲直播",
+   "pair": "zh-en",
+   "slug": "dun-zhi-bo",
+   "lang": "zh",
+   "translation": "camping in livestreams",
+   "shortAnswer": "蹲直播的英文是 camping in livestreams，指守在直播间等开播或等秒杀。注意 camp 借自游戏蹲守语境，强调长时间等待，不是露营。",
+   "definition": "蹲直播=camping in livestreams，常见搭配：camp in someone's livestream（蹲某人直播间）、camp for the flash sale（蹲秒杀）。「蹲」家族：蹲优惠、蹲链接、蹲回复，都表示守株待兔式等待。",
+   "examples": [
+    {
+     "en": "I spent all night camping in livestreams to grab the limited-edition sneakers.",
+     "zh": "我整晚蹲直播，就为了抢到那双限量版球鞋。"
+    },
+    {
+     "en": "She is camping in livestreams for the Double 11 presale link.",
+     "zh": "她正在蹲直播，等双11预售链接。"
+    }
+   ],
+   "tags": [
+    "购物节与大促"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "camping in livestreams",
+   "pair": "en-zh",
+   "slug": "camping-in-livestreams",
+   "lang": "en",
+   "translation": "蹲直播",
+   "shortAnswer": "camping in livestreams 的中文意思是蹲直播，指在直播间里长时间等待开播或抢购。与 watching a livestream 不同，camping 强调守候和蹲点。",
+   "definition": "camping in livestreams 核心义：在直播间蹲守，等主播开播、发链接或秒杀。口语常用，camp 借自游戏蹲守。注意：不是露营，也不只是观看。",
+   "examples": [
+    {
+     "en": "I spent all night camping in livestreams to grab the limited-edition sneakers.",
+     "zh": "我整晚蹲直播，就为了抢到那双限量版球鞋。"
+    },
+    {
+     "en": "She is camping in livestreams for the Double 11 presale link.",
+     "zh": "她正在蹲直播，等双11预售链接。"
+    }
+   ],
+   "tags": [
+    "购物节与大促"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "白条",
+   "pair": "zh-en",
+   "slug": "bai-tiao",
+   "lang": "zh",
+   "translation": "BNPL credit line",
+   "shortAnswer": "白条英文是 BNPL credit line，即京东先买后付的消费信贷，购物节可分期。",
+   "definition": "白条指京东先消费后付款的信贷服务，英文常用 BNPL credit line，不是普通欠条，大促时常免息分期。",
+   "examples": [
+    {
+     "en": "During Double 11, many shoppers use a BNPL credit line to split payments without interest.",
+     "zh": "双11期间，许多消费者使用白条免息分期付款。"
+    },
+    {
+     "en": "JD’s BNPL credit line works like Alipay’s Huabei, letting you buy now and pay later.",
+     "zh": "京东白条运作方式类似支付宝花呗，让你先消费后付款。"
+    }
+   ],
+   "tags": [
+    "购物节与大促"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "BNPL credit line",
+   "pair": "en-zh",
+   "slug": "bnpl-credit-line",
+   "lang": "en",
+   "translation": "白条",
+   "shortAnswer": "BNPL credit line is 白条, JD’s buy-now-pay-later service for shopping festivals.",
+   "definition": "BNPL credit line means 白条: JD’s buy-now-pay-later credit service, often used for interest-free installments.",
+   "examples": [
+    {
+     "en": "During Double 11, many shoppers use a BNPL credit line to split payments without interest.",
+     "zh": "双11期间，许多消费者使用白条免息分期付款。"
+    },
+    {
+     "en": "JD’s BNPL credit line works like Alipay’s Huabei, letting you buy now and pay later.",
+     "zh": "京东白条运作方式类似支付宝花呗，让你先消费后付款。"
+    }
+   ],
+   "tags": [
+    "购物节与大促"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "秒杀价",
+   "pair": "zh-en",
+   "slug": "miao-sha-jia",
+   "lang": "zh",
+   "translation": "flash sale price",
+   "shortAnswer": "「秒杀价」的英文是 flash sale price，指限时限量的超低价，手快才抢得到。",
+   "definition": "flash sale price 强调限时抢购、售完即止的极低价，常见搭配 grab the flash sale price、at a flash sale price，比普通折扣更紧迫。",
+   "examples": [
+    {
+     "en": "I set an alarm for midnight so I could grab the flash sale price on that air fryer.",
+     "zh": "我定了午夜闹钟，就为了抢那台空气炸锅的秒杀价。"
+    },
+    {
+     "en": "The flash sale price only lasted ten minutes, and the item sold out almost instantly.",
+     "zh": "秒杀价只持续了十分钟，商品几乎瞬间就被抢光了。"
+    }
+   ],
+   "tags": [
+    "购物节与大促"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "flash sale price",
+   "pair": "en-zh",
+   "slug": "flash-sale-price",
+   "lang": "en",
+   "translation": "秒杀价",
+   "shortAnswer": "flash sale price 的中文意思是「秒杀价」，即限时限量、手快才抢得到的超低价。",
+   "definition": "flash sale price 指短时间内的超低促销价，常见搭配 at a flash sale price、snag the flash sale price，多用于电商口语和营销。",
+   "examples": [
+    {
+     "en": "I set an alarm for midnight so I could grab the flash sale price on that air fryer.",
+     "zh": "我定了午夜闹钟，就为了抢那台空气炸锅的秒杀价。"
+    },
+    {
+     "en": "The flash sale price only lasted ten minutes, and the item sold out almost instantly.",
+     "zh": "秒杀价只持续了十分钟，商品几乎瞬间就被抢光了。"
+    }
+   ],
+   "tags": [
+    "购物节与大促"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "购物津贴",
+   "pair": "zh-en",
+   "slug": "gou-wu-jin-tie",
+   "lang": "zh",
+   "translation": "shopping voucher",
+   "shortAnswer": "「购物津贴」的英文是 shopping voucher。它专指双11等大促中平台发放的可叠加满减券，与商家券不同。",
+   "definition": "购物津贴是电商平台补贴的部分，通常可跨店叠加使用，形成“津贴雨”玩法。英文常说 shopping voucher 或 platform subsidy coupon，注意与店铺优惠券（store coupon）区分。",
+   "examples": [
+    {
+     "en": "During Double 11, I collected a shopping voucher that could be stacked with store coupons for extra discounts.",
+     "zh": "双11期间，我领了一张购物津贴，可以和店铺优惠券叠加使用，获得额外折扣。"
+    },
+    {
+     "en": "The platform released a shower of shopping vouchers, allowing users to save more on cross-store purchases.",
+     "zh": "平台下了一场购物津贴雨，让用户跨店购物时省得更多。"
+    }
+   ],
+   "tags": [
+    "购物节与大促"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "shopping voucher",
+   "pair": "en-zh",
+   "slug": "shopping-voucher",
+   "lang": "en",
+   "translation": "购物津贴",
+   "shortAnswer": "shopping voucher 的中文意思是「购物津贴」。它特指中国电商平台在大促时发放的可叠加满减券，类似平台补贴券。",
+   "definition": "shopping voucher 通常指电商平台提供的折扣券，可跨店叠加，用于双11等购物节。与 store coupon 不同，它由平台出资补贴，常以“津贴雨”形式发放。",
+   "examples": [
+    {
+     "en": "During Double 11, I collected a shopping voucher that could be stacked with store coupons for extra discounts.",
+     "zh": "双11期间，我领了一张购物津贴，可以和店铺优惠券叠加使用，获得额外折扣。"
+    },
+    {
+     "en": "The platform released a shower of shopping vouchers, allowing users to save more on cross-store purchases.",
+     "zh": "平台下了一场购物津贴雨，让用户跨店购物时省得更多。"
+    }
+   ],
+   "tags": [
+    "购物节与大促"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "限量抢购",
+   "pair": "zh-en",
+   "slug": "xian-liang-qiang-gou",
+   "lang": "zh",
+   "translation": "limited drop",
+   "shortAnswer": "“限量抢购”用英语说是 limited drop，特指潮牌在固定时间投放少量单品、卖完即止的销售模式，带有饥饿营销和抢购的意味。",
+   "definition": "limited drop 强调定时定量发售且售罄不补，源自潮牌每周固定上新的 drop 文化；口语常说抢到限量发售。注意与限时优惠不同，后者不强调稀缺和抢购。",
+   "examples": [
+    {
+     "en": "Supreme's weekly limited drop sold out in seconds, leaving many fans empty-handed.",
+     "zh": "某潮牌每周的限量抢购几秒内就售罄，许多粉丝空手而归。"
+    },
+    {
+     "en": "She set an alarm to cop the limited drop of the sneaker collaboration before it disappeared.",
+     "zh": "她设好闹钟，准备在联名球鞋限量抢购结束前抢到一双。"
+    }
+   ],
+   "tags": [
+    "购物节与大促"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "limited drop",
+   "pair": "en-zh",
+   "slug": "limited-drop",
+   "lang": "en",
+   "translation": "限量抢购",
+   "shortAnswer": "“limited drop”的中文意思是“限量抢购”，指品牌在特定时间发布少量商品、售完即止的发售方式，核心是稀缺性和抢购的紧迫感。",
+   "definition": "limited drop 指潮牌或品牌在固定时间点限量发售新品，常搭配抢到、售罄等动词。多用于街头服饰、球鞋、联名款等非正式语境；正式场合可用限量发售。",
+   "examples": [
+    {
+     "en": "Supreme's weekly limited drop sold out in seconds, leaving many fans empty-handed.",
+     "zh": "某潮牌每周的限量抢购几秒内就售罄，许多粉丝空手而归。"
+    },
+    {
+     "en": "She set an alarm to cop the limited drop of the sneaker collaboration before it disappeared.",
+     "zh": "她设好闹钟，准备在联名球鞋限量抢购结束前抢到一双。"
+    }
+   ],
+   "tags": [
+    "购物节与大促"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "跨店满减",
+   "pair": "zh-en",
+   "slug": "kua-dian-man-jian",
+   "lang": "zh",
+   "translation": "cross-store threshold discount",
+   "shortAnswer": "跨店满减英文是 cross-store threshold discount，指跨店铺累计消费满门槛后立减的平台促销。",
+   "definition": "常见搭配“跨店满减活动”“参与跨店满减”。易错点：不能简单说成 store discount，cross-store 强调可跨不同店铺合并计算；threshold 指满减门槛。",
+   "examples": [
+    {
+     "en": "During Double 11, the platform offers a cross-store threshold discount: spend 300 yuan across any shops and get 50 yuan off.",
+     "zh": "双十一期间，平台推出跨店满减：跨任意店铺消费满300元减50元。"
+    },
+    {
+     "en": "To hit the cross-store threshold discount, she added a few cheap items from other stores to her cart.",
+     "zh": "为了凑够跨店满减，她往购物车里加了几件其他店铺的便宜商品。"
+    }
+   ],
+   "tags": [
+    "购物节与大促"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "cross-store threshold discount",
+   "pair": "en-zh",
+   "slug": "cross-store-threshold-discount",
+   "lang": "en",
+   "translation": "跨店满减",
+   "shortAnswer": "Cross-store threshold discount 即“跨店满减”，指跨店铺累计消费达到门槛后立减的平台促销机制。",
+   "definition": "常见搭配：offer/run a cross-store threshold discount。易错点：不是单一店铺折扣，而是平台机制，cross-store 强调可跨店合并计算，threshold 指满减门槛。",
+   "examples": [
+    {
+     "en": "During Double 11, the platform offers a cross-store threshold discount: spend 300 yuan across any shops and get 50 yuan off.",
+     "zh": "双十一期间，平台推出跨店满减：跨任意店铺消费满300元减50元。"
+    },
+    {
+     "en": "To hit the cross-store threshold discount, she added a few cheap items from other stores to her cart.",
+     "zh": "为了凑够跨店满减，她往购物车里加了几件其他店铺的便宜商品。"
+    }
+   ],
+   "tags": [
+    "购物节与大促"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "会员日",
+   "pair": "zh-en",
+   "slug": "hui-yuan-ri",
+   "lang": "zh",
+   "translation": "member day",
+   "shortAnswer": "会员日用英语说是 member day，特指 88VIP、京东 PLUS 等付费会员专属的促销日，靠付费身份换额外折扣。",
+   "definition": "会员日指电商平台为付费会员设立的专属大促日，常见搭配有会员日专享价、会员日领券。注意与会员注册日区分：前者靠付费身份解锁，后者只是注册纪念。",
+   "examples": [
+    {
+     "en": "During the member day sale, 88VIP users can get an extra 10% off on top of the store discount.",
+     "zh": "在会员日大促期间，八八会员用户可以叠加店铺折扣再享九折优惠。"
+    },
+    {
+     "en": "She waits for the member day every month to stock up on daily necessities because the prices are lower than on Black Friday.",
+     "zh": "她每个月都等会员日囤日用品，因为价格比黑色星期五还低。"
+    }
+   ],
+   "tags": [
+    "购物节与大促"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "member day",
+   "pair": "en-zh",
+   "slug": "member-day",
+   "lang": "en",
+   "translation": "会员日",
+   "shortAnswer": "Member day 的中文意思是会员日，指电商平台为付费会员举办的专属促销日，核心是付费身份带来的额外折扣。",
+   "definition": "member day 指电商为付费会员设立的专属促销日，常见搭配有 member day sale、member day exclusive。注意不要与 membership registration day 混淆，后者只是注册纪念日。",
+   "examples": [
+    {
+     "en": "During the member day sale, 88VIP users can get an extra 10% off on top of the store discount.",
+     "zh": "在会员日大促期间，八八会员用户可以叠加店铺折扣再享九折优惠。"
+    },
+    {
+     "en": "She waits for the member day every month to stock up on daily necessities because the prices are lower than on Black Friday.",
+     "zh": "她每个月都等会员日囤日用品，因为价格比黑色星期五还低。"
+    }
+   ],
+   "tags": [
+    "购物节与大促"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "羊毛党",
+   "pair": "zh-en",
+   "slug": "yang-mao-dang",
+   "lang": "zh",
+   "translation": "deal hunter",
+   "shortAnswer": "羊毛党常用英文 deal hunter 表示，指专门搜集优惠券和限时折扣来省钱的人。",
+   "definition": "deal hunter 常与优惠券、限时折扣搭配，偏中性；若钻漏洞套利则近贬义。中文「党」是人群后缀。",
+   "examples": [
+    {
+     "en": "As a seasoned deal hunter, she never buys anything without checking for coupon codes first.",
+     "zh": "作为一名经验丰富的羊毛党，她买东西前一定会先找优惠券。"
+    },
+    {
+     "en": "During Black Friday, deal hunters camp on websites to grab limited-time offers.",
+     "zh": "黑色星期五期间，羊毛党们蹲守在网站上抢限时优惠。"
+    }
+   ],
+   "tags": [
+    "购物节与大促"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "deal hunter",
+   "pair": "en-zh",
+   "slug": "deal-hunter",
+   "lang": "en",
+   "translation": "羊毛党",
+   "shortAnswer": "deal hunter 对应中文羊毛党，指爱搜集折扣券和限时优惠来省钱的人，口语常用。",
+   "definition": "deal hunter 是口语词，常见于购物节语境；近义词 bargain hunter，通常不含贬义。",
+   "examples": [
+    {
+     "en": "As a seasoned deal hunter, she never buys anything without checking for coupon codes first.",
+     "zh": "作为一名经验丰富的羊毛党，她买东西前一定会先找优惠券。"
+    },
+    {
+     "en": "During Black Friday, deal hunters camp on websites to grab limited-time offers.",
+     "zh": "黑色星期五期间，羊毛党们蹲守在网站上抢限时优惠。"
+    }
+   ],
+   "tags": [
+    "购物节与大促"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "百亿补贴",
+   "pair": "zh-en",
+   "slug": "bai-yi-bu-tie",
+   "lang": "zh",
+   "translation": "group-buying subsidy",
+   "shortAnswer": "「百亿补贴」英文说 group-buying subsidy，指平台出巨资直接补商品差价，由拼多多2019年带火，如今是大促标配。",
+   "definition": "直译 multi-billion-yuan subsidy。subsidy 强调平台自掏腰包补差价，区别于满减和优惠券；「百亿」是宣传量级说法。",
+   "examples": [
+    {
+     "en": "Pinduoduo kicked off its group-buying subsidy in 2019, and rival platforms soon copied the model.",
+     "zh": "拼多多在二零一九年推出百亿补贴，竞争对手平台很快跟进效仿。"
+    },
+    {
+     "en": "During the shopping festival, the group-buying subsidy let shoppers buy phones well below the official price.",
+     "zh": "购物节期间，百亿补贴让消费者能以远低于官方价的价格买到手机。"
+    }
+   ],
+   "tags": [
+    "购物节与大促"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "group-buying subsidy",
+   "pair": "en-zh",
+   "slug": "group-buying-subsidy",
+   "lang": "en",
+   "translation": "百亿补贴",
+   "shortAnswer": "group-buying subsidy 就是「百亿补贴」，指电商平台砸重金补贴商品价格，强调平台直接补差价，是拼多多带火、全行业跟进的促销机制。",
+   "definition": "也可说 multi-billion-yuan subsidy program 或 platform subsidy，常搭配 offer/provide a group-buying subsidy，口语中简称 the subsidy，指平台出资降价。",
+   "examples": [
+    {
+     "en": "Pinduoduo kicked off its group-buying subsidy in 2019, and rival platforms soon copied the model.",
+     "zh": "拼多多在二零一九年推出百亿补贴，竞争对手平台很快跟进效仿。"
+    },
+    {
+     "en": "During the shopping festival, the group-buying subsidy let shoppers buy phones well below the official price.",
+     "zh": "购物节期间，百亿补贴让消费者能以远低于官方价的价格买到手机。"
+    }
+   ],
+   "tags": [
+    "购物节与大促"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "超级品牌日",
+   "pair": "zh-en",
+   "slug": "chao-ji-pin-pai-ri",
+   "lang": "zh",
+   "translation": "brand mega day",
+   "shortAnswer": "超级品牌日的英文是 brand mega day，也常写作 Super Brand Day，指平台为单个品牌包下一天核心资源位的专属大促。",
+   "definition": "超级品牌日指电商平台为单一品牌定制的24小时专属大促，当天首页焦点图、搜索入口、直播位等核心资源集中给该品牌。常见搭配：打造超级品牌日、超级品牌日当天。易与双11、618等全平台多品牌购物节混用。",
+   "examples": [
+    {
+     "en": "The skincare label sold out its hero serum within two hours during its first brand mega day on Tmall.",
+     "zh": "这个护肤品牌在天猫首个超级品牌日期间，两小时内就卖光了主推精华。"
+    },
+    {
+     "en": "Unlike Double 11, a brand mega day gives one brand the entire homepage, search banner, and livestream slot for a full day.",
+     "zh": "与双11不同，超级品牌日会把首页、搜索横幅和直播位全天都给到同一个品牌。"
+    }
+   ],
+   "tags": [
+    "购物节与大促"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "brand mega day",
+   "pair": "en-zh",
+   "slug": "brand-mega-day",
+   "lang": "en",
+   "translation": "超级品牌日",
+   "shortAnswer": "brand mega day 的中文是超级品牌日，指平台为单个品牌包下一天核心资源位的专属大促，官方文案常写作 Super Brand Day。",
+   "definition": "brand mega day 指电商平台把首页焦点图、搜索入口、直播位等资源在24小时内集中给一个品牌的专属促销日。常见搭配：launch a brand mega day、during the brand mega day。不要与 shopping festival 混用。",
+   "examples": [
+    {
+     "en": "The skincare label sold out its hero serum within two hours during its first brand mega day on Tmall.",
+     "zh": "这个护肤品牌在天猫首个超级品牌日期间，两小时内就卖光了主推精华。"
+    },
+    {
+     "en": "Unlike Double 11, a brand mega day gives one brand the entire homepage, search banner, and livestream slot for a full day.",
+     "zh": "与双11不同，超级品牌日会把首页、搜索横幅和直播位全天都给到同一个品牌。"
+    }
+   ],
+   "tags": [
+    "购物节与大促"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "求链接",
+   "pair": "zh-en",
+   "slug": "qiu-lian-jie",
+   "lang": "zh",
+   "translation": "drop the link",
+   "shortAnswer": "「求链接」的英文是 drop the link，用于评论区请求分享商品或资源。drop 在此是美式口语「分享出来」。",
+   "definition": "「求链接」是「求」字开头的网络祈使句，语气礼貌又急切。英文对应 drop the link，常见于 TikTok、Instagram 评论区，比 share the link 更随意。",
+   "examples": [
+    {
+     "en": "That jacket is exactly what I have been looking for—drop the link, please!",
+     "zh": "那件外套正是我一直在找的，求链接！"
+    },
+    {
+     "en": "She dropped the link to the Double Eleven live stream in the comments.",
+     "zh": "她在评论区放出了双十一直播的链接。"
+    }
+   ],
+   "tags": [
+    "购物节与大促"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "drop the link",
+   "pair": "en-zh",
+   "slug": "drop-the-link",
+   "lang": "en",
+   "translation": "求链接",
+   "shortAnswer": "「drop the link」的中文意思是「求链接」，即在评论区请求对方分享商品或资源。比 share the link 更口语。",
+   "definition": "drop the link 是美式口语祈使句，drop 意为「发布、分享」。多用于 TikTok、Instagram 评论，请求商品、直播链接。正式场合用 please share the link。",
+   "examples": [
+    {
+     "en": "That jacket is exactly what I have been looking for—drop the link, please!",
+     "zh": "那件外套正是我一直在找的，求链接！"
+    },
+    {
+     "en": "She dropped the link to the Double Eleven live stream in the comments.",
+     "zh": "她在评论区放出了双十一直播的链接。"
+    }
+   ],
+   "tags": [
+    "购物节与大促"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "年货节",
+   "pair": "zh-en",
+   "slug": "nian-huo-jie",
+   "lang": "zh",
+   "translation": "New Year shopping festival",
+   "shortAnswer": "「年货节」英文是 New Year shopping festival，指春节前电商平台推出的大促。",
+   "definition": "年货节译作 New Year shopping festival，指春节前电商围绕置办年货的促销活动。",
+   "examples": [
+    {
+     "en": "Taobao's New Year shopping festival kicks off weeks before the Spring Festival, when families stock up on nuts, candies and decorations.",
+     "zh": "淘宝年货节在春节前几周就开始了，家家户户趁此时囤坚果、糖果和装饰品。"
+    },
+    {
+     "en": "During the New Year shopping festival, couriers stay busy delivering festive goods to towns and villages across the country.",
+     "zh": "年货节期间，快递员忙着把年货送到全国各地的乡镇和村庄。"
+    }
+   ],
+   "tags": [
+    "购物节与大促"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "New Year shopping festival",
+   "pair": "en-zh",
+   "slug": "new-year-shopping-festival",
+   "lang": "en",
+   "translation": "年货节",
+   "shortAnswer": "New Year shopping festival 即「年货节」，指春节前电商平台的年货大促。",
+   "definition": "New Year shopping festival 译为「年货节」，指天猫、京东等春节前推出的年货促销。",
+   "examples": [
+    {
+     "en": "Taobao's New Year shopping festival kicks off weeks before the Spring Festival, when families stock up on nuts, candies and decorations.",
+     "zh": "淘宝年货节在春节前几周就开始了，家家户户趁此时囤坚果、糖果和装饰品。"
+    },
+    {
+     "en": "During the New Year shopping festival, couriers stay busy delivering festive goods to towns and villages across the country.",
+     "zh": "年货节期间，快递员忙着把年货送到全国各地的乡镇和村庄。"
+    }
+   ],
+   "tags": [
+    "购物节与大促"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "好价",
+   "pair": "zh-en",
+   "slug": "hao-jia",
+   "lang": "zh",
+   "translation": "great deal alert",
+   "shortAnswer": "「好价」的英文是 great deal alert，指社区里值友爆料的高性价比折扣信息。",
+   "definition": "「好价」是购物社区术语，指用户爆料的高性价比折扣，英文常说 great deal alert。常见搭配：蹲好价、发好价。",
+   "examples": [
+    {
+     "en": "I set up a great deal alert for the double eleven sale so I won't miss any bargains.",
+     "zh": "我为双十一设置了好价提醒，这样就不会错过任何便宜货了。"
+    },
+    {
+     "en": "She posted a great deal alert in the community after finding a half-price air fryer.",
+     "zh": "她发现半价空气炸锅后，在社区里发了一条好价爆料。"
+    }
+   ],
+   "tags": [
+    "购物节与大促"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "great deal alert",
+   "pair": "en-zh",
+   "slug": "great-deal-alert",
+   "lang": "en",
+   "translation": "好价",
+   "shortAnswer": "great deal alert 的中文意思是「好价」，特指社区里值友分享的超值折扣爆料。",
+   "definition": "great deal alert 指发现并分享超值折扣的提醒，常见于购物社区，对应中文「好价」。搭配：post a great deal alert。",
+   "examples": [
+    {
+     "en": "I set up a great deal alert for the double eleven sale so I won't miss any bargains.",
+     "zh": "我为双十一设置了好价提醒，这样就不会错过任何便宜货了。"
+    },
+    {
+     "en": "She posted a great deal alert in the community after finding a half-price air fryer.",
+     "zh": "她发现半价空气炸锅后，在社区里发了一条好价爆料。"
+    }
+   ],
+   "tags": [
+    "购物节与大促"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "跨年促销",
+   "pair": "zh-en",
+   "slug": "kua-nian-cu-xiao",
+   "lang": "zh",
+   "translation": "year-end sale",
+   "shortAnswer": "「跨年促销」的英文是 year-end sale，指元旦前后清仓打折。但该词多指财年清库存或圣诞后促销，与国内元旦大促氛围略有差异。",
+   "definition": "中文「跨年促销」指12月底至1月初围绕元旦的电商大促，常配跨店满减、限时秒杀。英文 year-end sale 侧重年末清仓，时间可早至12月中旬；强调节日时也可用 New Year sale。",
+   "examples": [
+    {
+     "en": "Many online stores launch a year-end sale in late December, offering steep discounts on winter clothing.",
+     "zh": "许多网店在12月底推出跨年促销，对冬装提供大幅折扣。"
+    },
+    {
+     "en": "I waited for the year-end sale to buy a new laptop because the prices usually drop after Christmas.",
+     "zh": "我等跨年促销才买新笔记本电脑，因为圣诞后价格通常会下降。"
+    }
+   ],
+   "tags": [
+    "购物节与大促"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "year-end sale",
+   "pair": "en-zh",
+   "slug": "year-end-sale",
+   "lang": "en",
+   "translation": "跨年促销",
+   "shortAnswer": "「year-end sale」的中文意思是「跨年促销」，即年末清仓打折活动。它常指财年结束或圣诞后清库存，与专指元旦前后的「跨年促销」时间略有不同。",
+   "definition": "year-end sale 指商家在年末进行的清仓促销，美式英语中与 after-Christmas sale、New Year sale 近义。注意不要与11月底的 Black Friday 混淆。",
+   "examples": [
+    {
+     "en": "Many online stores launch a year-end sale in late December, offering steep discounts on winter clothing.",
+     "zh": "许多网店在12月底推出跨年促销，对冬装提供大幅折扣。"
+    },
+    {
+     "en": "I waited for the year-end sale to buy a new laptop because the prices usually drop after Christmas.",
+     "zh": "我等跨年促销才买新笔记本电脑，因为圣诞后价格通常会下降。"
+    }
+   ],
+   "tags": [
+    "购物节与大促"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "不给糖就捣蛋",
+   "pair": "zh-en",
+   "slug": "bu-gei-tang-jiu-dao-dan",
+   "lang": "zh",
+   "translation": "trick-or-treat",
+   "shortAnswer": "「不给糖就捣蛋」的英文是 trick-or-treat。这是万圣节前夜小孩挨家挨户讨糖时说的固定句式，trick 是威胁，treat 是交换。",
+   "definition": "trick-or-treat 是万圣节前夜（Halloween）小孩的固定用语，字面意思“恶作剧或款待”：不给糖就捣蛋，给了糖就罢休。中文意译“不给糖就捣蛋”完整保留了威胁—交换的句式逻辑。常用作动词：go trick-or-treating 表示去讨糖。",
+   "examples": [
+    {
+     "en": "The children shouted \"trick-or-treat\" as soon as the door opened.",
+     "zh": "门一开，孩子们就喊“不给糖就捣蛋”。"
+    },
+    {
+     "en": "We took the kids trick-or-treating around the neighborhood last Halloween.",
+     "zh": "去年万圣节，我们带孩子们在附近街区挨家挨户讨糖。"
+    }
+   ],
+   "tags": [
+    "秋冬节令"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "trick-or-treat",
+   "pair": "en-zh",
+   "slug": "trick-or-treat",
+   "lang": "en",
+   "translation": "不给糖就捣蛋",
+   "shortAnswer": "trick-or-treat 的中文意思是“不给糖就捣蛋”。这是万圣节前夜小孩挨家讨糖时的固定说法，隐含“不给糖就捣蛋”的威胁-交换结构。",
+   "definition": "trick-or-treat 是万圣节前夜的传统活动，小孩挨家挨户敲门喊这句话讨糖果。名词形式常见于 go trick-or-treating，口语中常连字符连接。注意与 trick（恶作剧）和 treat（款待）区分。",
+   "examples": [
+    {
+     "en": "The children shouted \"trick-or-treat\" as soon as the door opened.",
+     "zh": "门一开，孩子们就喊“不给糖就捣蛋”。"
+    },
+    {
+     "en": "We took the kids trick-or-treating around the neighborhood last Halloween.",
+     "zh": "去年万圣节，我们带孩子们在附近街区挨家挨户讨糖。"
+    }
+   ],
+   "tags": [
+    "秋冬节令"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "感恩节",
+   "pair": "zh-en",
+   "slug": "gan-en-jie",
+   "lang": "zh",
+   "translation": "Thanksgiving",
+   "shortAnswer": "感恩节的英文是 Thanksgiving，专指北美秋收感恩的节日；注意它不等于 generic 的“感谢”，不要写成 Thanks Giving。",
+   "definition": "Thanksgiving 首字母大写，指美国11月第四个周四、加拿大10月第二个周一的法定节日；常搭配 turkey（火鸡）、Black Friday（黑色星期五），中国电商常借它启动“黑五”大促。",
+   "examples": [
+    {
+     "en": "We always have turkey and pumpkin pie on Thanksgiving.",
+     "zh": "我们感恩节总是吃火鸡和南瓜派。"
+    },
+    {
+     "en": "Black Friday sales often start right after Thanksgiving.",
+     "zh": "黑色星期五大促常常紧跟在感恩节之后开始。"
+    }
+   ],
+   "tags": [
+    "秋冬节令"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "Thanksgiving",
+   "pair": "en-zh",
+   "slug": "thanksgiving",
+   "lang": "en",
+   "translation": "感恩节",
+   "shortAnswer": "Thanksgiving 的中文意思是“感恩节”，是北美秋收后家庭团聚、吃火鸡的节日；不要与普通名词“感谢”混淆，它作节日名时通常大写。",
+   "definition": "Thanksgiving 作专有名词指美加法定节日；口语常说 Thanksgiving dinner / Happy Thanksgiving，紧接其后的 Black Friday 是购物大促，中国电商也常借“黑五”造节。",
+   "examples": [
+    {
+     "en": "We always have turkey and pumpkin pie on Thanksgiving.",
+     "zh": "我们感恩节总是吃火鸡和南瓜派。"
+    },
+    {
+     "en": "Black Friday sales often start right after Thanksgiving.",
+     "zh": "黑色星期五大促常常紧跟在感恩节之后开始。"
+    }
+   ],
+   "tags": [
+    "秋冬节令"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "神券",
+   "pair": "zh-en",
+   "slug": "shen-quan",
+   "lang": "zh",
+   "translation": "mega coupon drop",
+   "shortAnswer": "「神券」英文说 mega coupon drop，指大促时平台集中放出的大额优惠券，手快才有。",
+   "definition": "神券＝mega coupon drop，强调平台集中放出的大额优惠，常见于双11、618。搭配：抢神券、神券秒光。别直译成 god coupon，这里「神」是程度前缀，表示好到离谱。",
+   "examples": [
+    {
+     "en": "The platform's mega coupon drop at midnight was gone in three seconds — I didn't get a single one.",
+     "zh": "平台零点放出的神券三秒就没了，我一张都没抢到。"
+    },
+    {
+     "en": "She set three alarms for the Double 11 mega coupon drop and still bought the coat at full price.",
+     "zh": "她为双11的神券设了三个闹钟，结果那件大衣还是原价买的。"
+    }
+   ],
+   "tags": [
+    "购物节与大促"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "mega coupon drop",
+   "pair": "en-zh",
+   "slug": "mega-coupon-drop",
+   "lang": "en",
+   "translation": "神券",
+   "shortAnswer": "mega coupon drop 就是中文「神券」，指大促时平台集中放出的大额优惠券，瞬间被抢空。",
+   "definition": "mega coupon drop 是口语说法，指大促时平台集中放出的大额券。搭配：score a mega coupon drop。mega 突出面额大且稀缺，不同于普通 coupon。",
+   "examples": [
+    {
+     "en": "The platform's mega coupon drop at midnight was gone in three seconds — I didn't get a single one.",
+     "zh": "平台零点放出的神券三秒就没了，我一张都没抢到。"
+    },
+    {
+     "en": "She set three alarms for the Double 11 mega coupon drop and still bought the coat at full price.",
+     "zh": "她为双11的神券设了三个闹钟，结果那件大衣还是原价买的。"
+    }
+   ],
+   "tags": [
+    "购物节与大促"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "南瓜灯",
+   "pair": "zh-en",
+   "slug": "nan-gua-deng",
+   "lang": "zh",
+   "translation": "jack-o-lantern",
+   "shortAnswer": "「南瓜灯」的英文是 jack-o-lantern，指万圣节雕刻并点亮的南瓜灯笼。",
+   "definition": "万圣节经典装饰；动词常搭配 carve a jack-o-lantern（刻南瓜灯），注意与南瓜 pumpkin 区分。",
+   "examples": [
+    {
+     "en": "Every October, my family carves a jack-o-lantern and puts a candle inside.",
+     "zh": "每年十月，我们家都会刻一个南瓜灯，并在里面放一根蜡烛。"
+    },
+    {
+     "en": "The children paraded down the street carrying their jack-o-lanterns, their faces glowing in the dark.",
+     "zh": "孩子们提着南瓜灯在街上游行，那些脸在黑暗中闪闪发光。"
+    }
+   ],
+   "tags": [
+    "秋冬节令"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "jack-o-lantern",
+   "pair": "en-zh",
+   "slug": "jack-o-lantern",
+   "lang": "en",
+   "translation": "南瓜灯",
+   "shortAnswer": "南瓜灯 in English is jack-o-lantern, a carved pumpkin lit at Halloween night.",
+   "definition": "Countable noun; a lit pumpkin carved at Halloween. Say carve a jack-o-lantern, not simply pumpkin.",
+   "examples": [
+    {
+     "en": "Every October, my family carves a jack-o-lantern and puts a candle inside.",
+     "zh": "每年十月，我们家都会刻一个南瓜灯，并在里面放一根蜡烛。"
+    },
+    {
+     "en": "The children paraded down the street carrying their jack-o-lanterns, their faces glowing in the dark.",
+     "zh": "孩子们提着南瓜灯在街上游行，那些脸在黑暗中闪闪发光。"
+    }
+   ],
+   "tags": [
+    "秋冬节令"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "赏月",
+   "pair": "zh-en",
+   "slug": "shang-yue",
+   "lang": "zh",
+   "translation": "moon gazing",
+   "shortAnswer": "赏月用英语说是 moon gazing，字面即凝视月亮；中秋语境下也常说 moon viewing，但 gazing 更强调沉浸与审美。",
+   "definition": "「赏」与赏花、赏画同款，是主动审美的看，不是随便抬头看一眼；英语 moon gazing 对应这种审美动作。注意别和 moonbathe（月光浴，为健康或放松而晒月亮）混用，中秋赏月重文化乡愁。",
+   "examples": [
+    {
+     "en": "Every Mid-Autumn Festival, my family gathers on the balcony for moon gazing while sharing mooncakes.",
+     "zh": "每年中秋节，我们一家人都会聚在阳台上赏月、分吃月饼。"
+    },
+    {
+     "en": "We went moon gazing by the lake last night, and the full moon turned homesickness into something you could almost touch.",
+     "zh": "昨晚我们去湖边赏月，那轮满月把乡愁变得几乎触手可及。"
+    }
+   ],
+   "tags": [
+    "秋冬节令"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "moon gazing",
+   "pair": "en-zh",
+   "slug": "moon-gazing",
+   "lang": "en",
+   "translation": "赏月",
+   "shortAnswer": "Moon gazing 的中文意思是赏月，特指带着审美和情感沉浸地看月亮；它和 moon viewing 接近，但比后者更强调凝视的专注与诗意。",
+   "definition": "Moon gazing 指把月亮当作审美对象来观看，常见于中秋等节令语境；搭配有 go moon gazing、have a moon gazing night。它不同于 moonbathe（月光浴，偏健康休闲），也不只是 glance at the moon。",
+   "examples": [
+    {
+     "en": "Every Mid-Autumn Festival, my family gathers on the balcony for moon gazing while sharing mooncakes.",
+     "zh": "每年中秋节，我们一家人都会聚在阳台上赏月、分吃月饼。"
+    },
+    {
+     "en": "We went moon gazing by the lake last night, and the full moon turned homesickness into something you could almost touch.",
+     "zh": "昨晚我们去湖边赏月，那轮满月把乡愁变得几乎触手可及。"
+    }
+   ],
+   "tags": [
+    "秋冬节令"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "万圣节",
+   "pair": "zh-en",
+   "slug": "wan-sheng-jie",
+   "lang": "zh",
+   "translation": "Halloween",
+   "shortAnswer": "万圣节英文是 Halloween，10月31日孩童装扮讨糖，别与中国鬼节混为一谈。",
+   "definition": "万圣节即 Halloween，指10月31日夜晚，人们穿装扮、讨糖果；11月1日诸圣节才是宗教节日。",
+   "examples": [
+    {
+     "en": "Children go door to door saying \"trick or treat\" on Halloween.",
+     "zh": "万圣节时，孩子们挨家挨户说“不给糖就捣蛋”。"
+    },
+    {
+     "en": "She spent weeks making her Halloween costume for the party.",
+     "zh": "她花了好几周为派对制作万圣节装扮。"
+    }
+   ],
+   "tags": [
+    "秋冬节令"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "Halloween",
+   "pair": "en-zh",
+   "slug": "halloween",
+   "lang": "en",
+   "translation": "万圣节",
+   "shortAnswer": "Halloween means 万圣节, the October 31 holiday for costumes and candy, not China's Ghost Festival.",
+   "definition": "Halloween is the October 31 holiday of costumes and trick-or-treating, translated as 万圣节 in Chinese.",
+   "examples": [
+    {
+     "en": "Children go door to door saying \"trick or treat\" on Halloween.",
+     "zh": "万圣节时，孩子们挨家挨户说“不给糖就捣蛋”。"
+    },
+    {
+     "en": "She spent weeks making her Halloween costume for the party.",
+     "zh": "她花了好几周为派对制作万圣节装扮。"
+    }
+   ],
+   "tags": [
+    "秋冬节令"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "登高",
+   "pair": "zh-en",
+   "slug": "deng-gao",
+   "lang": "zh",
+   "translation": "autumn height climb",
+   "shortAnswer": "登高的英文是 autumn height climb，专指重阳登高习俗；日常爬山仍说 climb a mountain。",
+   "definition": "登高指重阳节登高山或高处的习俗，译为 autumn height climb，属文化直译，需说明是重阳节活动。",
+   "examples": [
+    {
+     "en": "On the Double Ninth Festival, many Chinese families go for an autumn height climb to pray for health and good fortune.",
+     "zh": "重阳节时，许多中国家庭会去登高，祈求健康与好运。"
+    },
+    {
+     "en": "The poet Wang Wei wrote about an autumn height climb, missing his brothers far away.",
+     "zh": "诗人王维写过登高，思念远方的兄弟。"
+    }
+   ],
+   "tags": [
+    "秋冬节令"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "autumn height climb",
+   "pair": "en-zh",
+   "slug": "autumn-height-climb",
+   "lang": "en",
+   "translation": "登高",
+   "shortAnswer": "Autumn height climb is 登高, the Double Ninth custom of climbing high to pray for luck.",
+   "definition": "Autumn height climb means 登高, a Double Ninth Festival custom of going up a hill to avoid disaster and pray for health.",
+   "examples": [
+    {
+     "en": "On the Double Ninth Festival, many Chinese families go for an autumn height climb to pray for health and good fortune.",
+     "zh": "重阳节时，许多中国家庭会去登高，祈求健康与好运。"
+    },
+    {
+     "en": "The poet Wang Wei wrote about an autumn height climb, missing his brothers far away.",
+     "zh": "诗人王维写过登高，思念远方的兄弟。"
+    }
+   ],
+   "tags": [
+    "秋冬节令"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "重阳节",
+   "pair": "zh-en",
+   "slug": "chong-yang-jie",
+   "lang": "zh",
+   "translation": "Double Ninth Festival",
+   "shortAnswer": "重阳节的英文是 Double Ninth Festival，因农历九月初九双九相重得名，别只写拼音 Chongyang 不解释。",
+   "definition": "Double Ninth Festival 是重阳节标准英文名，来自农历九月初九。常用搭配：celebrate the Double Ninth Festival、on the Double Ninth Festival。习俗有登高赏菊敬老。",
+   "examples": [
+    {
+     "en": "During the Double Ninth Festival, many families climb mountains and enjoy chrysanthemums together.",
+     "zh": "重阳节期间，许多家庭一起登高赏菊。"
+    },
+    {
+     "en": "The Double Ninth Festival is also known as Senior Citizens' Day in China, when people show respect for the elderly.",
+     "zh": "重阳节在中国也被称为老年节，人们在这一天表达对长辈的尊敬。"
+    }
+   ],
+   "tags": [
+    "秋冬节令"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "Double Ninth Festival",
+   "pair": "en-zh",
+   "slug": "double-ninth-festival",
+   "lang": "en",
+   "translation": "重阳节",
+   "shortAnswer": "Double Ninth Festival 的中文意思是重阳节，指中国农历九月初九的节日，因两九相重得名，并非西方节日。",
+   "definition": "Double Ninth Festival 即重阳节，在农历九月初九。常用搭配：celebrate the Double Ninth Festival、the Double Ninth Festival falls on...。当代也是敬老节。",
+   "examples": [
+    {
+     "en": "During the Double Ninth Festival, many families climb mountains and enjoy chrysanthemums together.",
+     "zh": "重阳节期间，许多家庭一起登高赏菊。"
+    },
+    {
+     "en": "The Double Ninth Festival is also known as Senior Citizens' Day in China, when people show respect for the elderly.",
+     "zh": "重阳节在中国也被称为老年节，人们在这一天表达对长辈的尊敬。"
+    }
+   ],
+   "tags": [
+    "秋冬节令"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "灯笼",
+   "pair": "zh-en",
+   "slug": "deng-long",
+   "lang": "zh",
+   "translation": "lantern",
+   "shortAnswer": "「灯笼」的英文是 lantern，指中秋、元宵和春节挂的传统纸灯。注意 lantern 也指手提的提灯或路灯，不限于中国红灯笼。",
+   "definition": "lantern 是可数名词，常见搭配有 paper lantern（纸灯笼）、red lantern（红灯笼）、lantern festival（元宵节，固定译法）。中秋赏灯、元宵灯会都用它，别直译成 lamp 或 light。",
+   "examples": [
+    {
+     "en": "During the Mid-Autumn Festival, children carry glowing paper lanterns through the streets.",
+     "zh": "中秋节时，孩子们提着发光的纸灯笼穿过街道。"
+    },
+    {
+     "en": "We hung a red lantern above the door to welcome the Lantern Festival.",
+     "zh": "我们在门上挂了一盏红灯笼来迎接元宵节。"
+    }
+   ],
+   "tags": [
+    "秋冬节令"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "lantern",
+   "pair": "en-zh",
+   "slug": "lantern",
+   "lang": "en",
+   "translation": "灯笼",
+   "shortAnswer": "lantern 的中文意思是「灯笼」，特指中秋、元宵挂的纸灯或提灯。它与 lamp 的关键区别在于：lantern 通常有外壳或提手，可以提着走。",
+   "definition": "lantern 指带框架或提手的灯，常见搭配 paper lantern（纸灯笼）、Chinese lantern（中式灯笼）、Lantern Festival（元宵节）。口语中也可指手提提灯或路灯，并非只指中国节日灯笼。",
+   "examples": [
+    {
+     "en": "During the Mid-Autumn Festival, children carry glowing paper lanterns through the streets.",
+     "zh": "中秋节时，孩子们提着发光的纸灯笼穿过街道。"
+    },
+    {
+     "en": "We hung a red lantern above the door to welcome the Lantern Festival.",
+     "zh": "我们在门上挂了一盏红灯笼来迎接元宵节。"
+    }
+   ],
+   "tags": [
+    "秋冬节令"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "冬至",
+   "pair": "zh-en",
+   "slug": "dong-zhi",
+   "lang": "zh",
+   "translation": "Winter Solstice",
+   "shortAnswer": "冬至的英文是 Winter Solstice，指太阳直射南回归线、北半球白昼最短的天文时刻，也是中国吃饺子或汤圆的传统节日。",
+   "definition": "Winter Solstice 既指天文上的至点，也指冬至节。常见搭配：on the Winter Solstice 等。西方无吃饺子或汤圆的习俗，解释「冬至大如年」时需加说明。",
+   "examples": [
+    {
+     "en": "In China, families gather on the Winter Solstice to eat dumplings in the north or tangyuan in the south.",
+     "zh": "在中国，冬至这天家人团聚，北方吃饺子，南方吃汤圆。"
+    },
+    {
+     "en": "The Winter Solstice marks the shortest day of the year in the Northern Hemisphere, but it is not a public holiday in most Western countries.",
+     "zh": "冬至标志着北半球一年中白昼最短的一天，但在大多数西方国家并不是公共假日。"
+    }
+   ],
+   "tags": [
+    "秋冬节令"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "Winter Solstice",
+   "pair": "en-zh",
+   "slug": "winter-solstice",
+   "lang": "en",
+   "translation": "冬至",
+   "shortAnswer": "Winter Solstice 的中文是「冬至」，既是北半球白昼最短的天文节点，也是中国重要节日，北方吃饺子，南方吃汤圆。",
+   "definition": "Winter Solstice 指北半球白昼最短的一天，约在 12 月 21 或 22 日。常见搭配：the winter solstice、on the winter solstice。口语可指冬至节。",
+   "examples": [
+    {
+     "en": "In China, families gather on the Winter Solstice to eat dumplings in the north or tangyuan in the south.",
+     "zh": "在中国，冬至这天家人团聚，北方吃饺子，南方吃汤圆。"
+    },
+    {
+     "en": "The Winter Solstice marks the shortest day of the year in the Northern Hemisphere, but it is not a public holiday in most Western countries.",
+     "zh": "冬至标志着北半球一年中白昼最短的一天，但在大多数西方国家并不是公共假日。"
+    }
+   ],
+   "tags": [
+    "秋冬节令"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "小年",
+   "pair": "zh-en",
+   "slug": "xiao-nian",
+   "lang": "zh",
+   "translation": "Little New Year",
+   "shortAnswer": "小年英文是 Little New Year，指祭灶、扫尘的节前预热日，北方腊月二十三、南方二十四。",
+   "definition": "Little New Year 指农历年末的小年，核心习俗是祭灶、吃糖瓜、扫尘。属文化专有词，需与元旦、春节区分。",
+   "examples": [
+    {
+     "en": "In northern China, families celebrate Little New Year on the 23rd day of the last lunar month.",
+     "zh": "在中国北方，家家户户在腊月二十三过小年。"
+    },
+    {
+     "en": "My grandmother says Little New Year is when we start preparing for Spring Festival.",
+     "zh": "我奶奶说，小年就是我们开始备年货、迎春节的日子。"
+    }
+   ],
+   "tags": [
+    "秋冬节令"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "Little New Year",
+   "pair": "en-zh",
+   "slug": "little-new-year",
+   "lang": "en",
+   "translation": "小年",
+   "shortAnswer": "Little New Year means 小年, the pre-Spring Festival day for honoring the Kitchen God.",
+   "definition": "Little New Year 指农历腊月二十三或二十四的小年，习俗有祭灶、扫尘。需与 New Year's Day、Spring Festival 区分。",
+   "examples": [
+    {
+     "en": "In northern China, families celebrate Little New Year on the 23rd day of the last lunar month.",
+     "zh": "在中国北方，家家户户在腊月二十三过小年。"
+    },
+    {
+     "en": "My grandmother says Little New Year is when we start preparing for Spring Festival.",
+     "zh": "我奶奶说，小年就是我们开始备年货、迎春节的日子。"
+    }
+   ],
+   "tags": [
+    "秋冬节令"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "腊八",
+   "pair": "zh-en",
+   "slug": "la-ba",
+   "lang": "zh",
+   "translation": "Laba Festival",
+   "shortAnswer": "腊八的英文是 Laba Festival，指农历十二月初八，这天要喝腊八粥、泡腊八蒜。",
+   "definition": "腊八即农历腊月初八，有喝腊八粥、泡腊八蒜的习俗；英文固定用 Laba Festival 音译，保留其文化身份。",
+   "examples": [
+    {
+     "en": "On Laba Festival, my grandmother always cooks a big pot of Laba porridge with eight different grains.",
+     "zh": "腊八那天，我奶奶总会熬一大锅八样谷物的腊八粥。"
+    },
+    {
+     "en": "As the saying goes, after Laba Festival comes the Chinese New Year, so everyone starts cleaning the house.",
+     "zh": "俗话说“过了腊八就是年”，所以大家开始打扫房屋。"
+    }
+   ],
+   "tags": [
+    "秋冬节令"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "Laba Festival",
+   "pair": "en-zh",
+   "slug": "laba-festival",
+   "lang": "en",
+   "translation": "腊八",
+   "shortAnswer": "Laba Festival means 腊八, the eighth day of the twelfth lunar month in China.",
+   "definition": "Laba Festival is the Chinese 腊八, a day for eating Laba porridge and making Laba garlic; it marks the start of Spring Festival preparations.",
+   "examples": [
+    {
+     "en": "On Laba Festival, my grandmother always cooks a big pot of Laba porridge with eight different grains.",
+     "zh": "腊八那天，我奶奶总会熬一大锅八样谷物的腊八粥。"
+    },
+    {
+     "en": "As the saying goes, after Laba Festival comes the Chinese New Year, so everyone starts cleaning the house.",
+     "zh": "俗话说“过了腊八就是年”，所以大家开始打扫房屋。"
+    }
+   ],
+   "tags": [
+    "秋冬节令"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "火鸡",
+   "pair": "zh-en",
+   "slug": "huo-ji",
+   "lang": "zh",
+   "translation": "turkey",
+   "shortAnswer": "「火鸡」的英文是 turkey，指感恩节和圣诞节餐桌上的传统主菜。注意别把它和土耳其（Turkey）搞混，两者拼写相同但语境完全不同。",
+   "definition": "turkey 可作可数名词，指火鸡这种禽类或火鸡肉。常见搭配：roast turkey（烤火鸡）、Thanksgiving turkey（感恩节火鸡）。口语中 turkey 还可指“失败之作”或“笨蛋”，需根据语境判断。",
+   "examples": [
+    {
+     "en": "My aunt always roasts a huge turkey for Thanksgiving dinner.",
+     "zh": "我姑姑总是为感恩节晚餐烤一只大火鸡。"
+    },
+    {
+     "en": "We had leftover turkey sandwiches for lunch the day after Christmas.",
+     "zh": "圣诞节第二天午餐我们吃了剩下的火鸡三明治。"
+    }
+   ],
+   "tags": [
+    "秋冬节令"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "turkey",
+   "pair": "en-zh",
+   "slug": "turkey",
+   "lang": "en",
+   "translation": "火鸡",
+   "shortAnswer": "turkey 的中文意思是「火鸡」，即感恩节和圣诞节常吃的家禽。它和表示国家“土耳其”的 Turkey 拼写相同，但首字母大写时通常指国家。",
+   "definition": "turkey 作名词指火鸡或火鸡肉，常见搭配有 roast turkey、Thanksgiving turkey。口语中可指“失败的作品”或“蠢人”，如 a real turkey。注意与国名 Turkey 区分，语境决定词义。",
+   "examples": [
+    {
+     "en": "My aunt always roasts a huge turkey for Thanksgiving dinner.",
+     "zh": "我姑姑总是为感恩节晚餐烤一只大火鸡。"
+    },
+    {
+     "en": "We had leftover turkey sandwiches for lunch the day after Christmas.",
+     "zh": "圣诞节第二天午餐我们吃了剩下的火鸡三明治。"
+    }
+   ],
+   "tags": [
+    "秋冬节令"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "打年货",
+   "pair": "zh-en",
+   "slug": "da-nian-huo",
+   "lang": "zh",
+   "translation": "New Year stock-up",
+   "shortAnswer": "「打年货」的英文是 New Year stock-up，指年前集中采办年货。「打」是方言采购动词，不译 hit。",
+   "definition": "「打」在方言里等于买、采办，如打酒、打油、打年货。New Year stock-up 强调年前一次性囤足，比 do New Year shopping 更突出囤的仪式感。",
+   "examples": [
+    {
+     "en": "Every family does a New Year stock-up before the Spring Festival, filling the house with cured meats, candies and red couplets.",
+     "zh": "家家户户年前都要打年货，把腊味、糖果和春联备满屋子。"
+    },
+    {
+     "en": "My grandmother said a proper New Year stock-up starts with wine, oil and rice, all bought with the dialect verb da.",
+     "zh": "我奶奶说，像样的打年货要从打酒、打油、打米开始。"
+    }
+   ],
+   "tags": [
+    "秋冬节令"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "New Year stock-up",
+   "pair": "en-zh",
+   "slug": "new-year-stock-up",
+   "lang": "en",
+   "translation": "打年货",
+   "shortAnswer": "New Year stock-up means 打年货: the pre-holiday bulk buying of festive goods. It stresses stocking up.",
+   "definition": "New Year stock-up is the pre-Spring Festival spree for cured meats, candies and couplets, more specific than general New Year shopping.",
+   "examples": [
+    {
+     "en": "Every family does a New Year stock-up before the Spring Festival, filling the house with cured meats, candies and red couplets.",
+     "zh": "家家户户年前都要打年货，把腊味、糖果和春联备满屋子。"
+    },
+    {
+     "en": "My grandmother said a proper New Year stock-up starts with wine, oil and rice, all bought with the dialect verb da.",
+     "zh": "我奶奶说，像样的打年货要从打酒、打油、打米开始。"
+    }
+   ],
+   "tags": [
+    "秋冬节令"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "秋裤",
+   "pair": "zh-en",
+   "slug": "qiu-ku",
+   "lang": "zh",
+   "translation": "long johns",
+   "shortAnswer": "秋裤的英文是 long johns，指秋冬贴身穿的保暖长裤。注意：long johns 偏口语，正式场合说 thermal underwear 更稳妥。",
+   "definition": "long johns 源自拳王约翰·L·沙利文的连体保暖衣，现指秋裤；英式常说 thermals，美式口语常用 long johns。搭配：put on/wear long johns。",
+   "examples": [
+    {
+     "en": "My mom always tells me to put on long johns before going out in winter.",
+     "zh": "我妈总让我冬天出门前穿上秋裤。"
+    },
+    {
+     "en": "Even though it was freezing, he refused to wear long johns because he thought they were uncool.",
+     "zh": "尽管天寒地冻，他还是拒绝穿秋裤，因为他觉得秋裤不酷。"
+    }
+   ],
+   "tags": [
+    "秋冬节令"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "long johns",
+   "pair": "en-zh",
+   "slug": "long-johns",
+   "lang": "en",
+   "translation": "秋裤",
+   "shortAnswer": "Long johns 的中文意思是秋裤，即秋冬穿在裤子里的保暖长内裤。它比 thermal underwear 更口语化，常指传统棉质或羊毛款。",
+   "definition": "long johns 指秋裤，常见搭配 wear/put on long johns；口语常用，正式场合多用 thermal underwear 或 thermals。注意它是复数名词，不说 a long john。",
+   "examples": [
+    {
+     "en": "My mom always tells me to put on long johns before going out in winter.",
+     "zh": "我妈总让我冬天出门前穿上秋裤。"
+    },
+    {
+     "en": "Even though it was freezing, he refused to wear long johns because he thought they were uncool.",
+     "zh": "尽管天寒地冻，他还是拒绝穿秋裤，因为他觉得秋裤不酷。"
+    }
+   ],
+   "tags": [
+    "秋冬节令"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "守岁",
+   "pair": "zh-en",
+   "slug": "shou-sui",
+   "lang": "zh",
+   "translation": "New Year Eve vigil",
+   "shortAnswer": "守岁即 New Year Eve vigil，指除夕夜不眠辞旧迎新，英文强调家庭团聚与祈福。",
+   "definition": "守岁指除夕整夜不眠、灯火长明，辞旧迎新并祈求家人平安。英文常译 New Year Eve vigil，突出家庭团聚与新年祝福。",
+   "examples": [
+    {
+     "en": "In many Chinese families, the New Year Eve vigil is a time to gather and keep the lights on until dawn.",
+     "zh": "在许多中国家庭里，守岁是团聚、让灯火亮到天明的时刻。"
+    },
+    {
+     "en": "My grandmother insists on the New Year Eve vigil every year, saying it brings good luck.",
+     "zh": "我奶奶每年都坚持守岁，说这样能为来年带来好运。"
+    }
+   ],
+   "tags": [
+    "秋冬节令"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "New Year Eve vigil",
+   "pair": "en-zh",
+   "slug": "new-year-eve-vigil",
+   "lang": "en",
+   "translation": "守岁",
+   "shortAnswer": "New Year Eve vigil means 守岁, the custom of staying up all night on Lunar New Year's Eve.",
+   "definition": "New Year Eve vigil is the Chinese custom 守岁: staying awake all night on Lunar New Year's Eve to welcome the new year with family.",
+   "examples": [
+    {
+     "en": "In many Chinese families, the New Year Eve vigil is a time to gather and keep the lights on until dawn.",
+     "zh": "在许多中国家庭里，守岁是团聚、让灯火亮到天明的时刻。"
+    },
+    {
+     "en": "My grandmother insists on the New Year Eve vigil every year, saying it brings good luck.",
+     "zh": "我奶奶每年都坚持守岁，说这样能为来年带来好运。"
+    }
+   ],
+   "tags": [
+    "秋冬节令"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "拉郎",
+   "pair": "zh-en",
+   "slug": "la-lang",
+   "lang": "zh",
+   "translation": "crossover ship",
+   "shortAnswer": "「拉郎」英文是crossover ship，指把不同作品角色强行配对的同人玩法。",
+   "definition": "「拉郎」来自「拉郎配」，现指同人圈把原作无交集的角色凑成一对。英文常说crossover ship，强调跨界配对。",
+   "examples": [
+    {
+     "en": "My favorite crossover ship pairs a wizard from one series with a detective from another.",
+     "zh": "我最喜欢的拉郎把一部的巫师和另一部的侦探配成一对。"
+    },
+    {
+     "en": "Some say real-person crossover ships cross an ethical line because the subjects never agreed.",
+     "zh": "有人认为真人拉郎越过了伦理边界，因为当事人从未同意。"
+    }
+   ],
+   "tags": [
+    "嗑CP与同人文化"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "crossover ship",
+   "pair": "en-zh",
+   "slug": "crossover-ship",
+   "lang": "en",
+   "translation": "拉郎",
+   "shortAnswer": "Crossover ship means 「拉郎」: pairing characters from different works who never meet in canon.",
+   "definition": "A crossover ship is a fan pairing of characters from separate universes. It is non-canon and often cracky, not an official romance.",
+   "examples": [
+    {
+     "en": "My favorite crossover ship pairs a wizard from one series with a detective from another.",
+     "zh": "我最喜欢的拉郎把一部的巫师和另一部的侦探配成一对。"
+    },
+    {
+     "en": "Some say real-person crossover ships cross an ethical line because the subjects never agreed.",
+     "zh": "有人认为真人拉郎越过了伦理边界，因为当事人从未同意。"
+    }
+   ],
+   "tags": [
+    "嗑CP与同人文化"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "冰糖葫芦",
+   "pair": "zh-en",
+   "slug": "bing-tang-hu-lu",
+   "lang": "zh",
+   "translation": "candied hawthorn skewer",
+   "shortAnswer": "冰糖葫芦的英文是 candied hawthorn skewer，海外社媒常音译作 tanghulu。",
+   "definition": "竹签串山楂、裹脆糖衣的秋冬街头小吃；英文准确说法是 candied hawthorn skewer，勿与焦糖苹果混淆。",
+   "examples": [
+    {
+     "en": "During the first cold snap, street vendors in Beijing start selling candied hawthorn skewers, and the sweet-tart crunch is irresistible.",
+     "zh": "第一波寒潮来临时，北京的街头小贩开始卖冰糖葫芦，那种酸甜脆爽的口感让人无法抗拒。"
+    },
+    {
+     "en": "She tried a candied hawthorn skewer for the first time at a night market and understood why it went viral online.",
+     "zh": "她在夜市第一次尝了冰糖葫芦，立刻明白了为什么它会在网上爆红。"
+    }
+   ],
+   "tags": [
+    "秋冬节令"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "candied hawthorn skewer",
+   "pair": "en-zh",
+   "slug": "candied-hawthorn-skewer",
+   "lang": "en",
+   "translation": "冰糖葫芦",
+   "shortAnswer": "冰糖葫芦 is candied hawthorn skewer in English—hawthorn berries on a stick with hard sugar.",
+   "definition": "A Chinese winter street snack: hawthorn berries skewered and dipped in hot sugar that hardens glassy. Often called tanghulu online.",
+   "examples": [
+    {
+     "en": "During the first cold snap, street vendors in Beijing start selling candied hawthorn skewers, and the sweet-tart crunch is irresistible.",
+     "zh": "第一波寒潮来临时，北京的街头小贩开始卖冰糖葫芦，那种酸甜脆爽的口感让人无法抗拒。"
+    },
+    {
+     "en": "She tried a candied hawthorn skewer for the first time at a night market and understood why it went viral online.",
+     "zh": "她在夜市第一次尝了冰糖葫芦，立刻明白了为什么它会在网上爆红。"
+    }
+   ],
+   "tags": [
+    "秋冬节令"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "磕糖",
+   "pair": "zh-en",
+   "slug": "ke-tang",
+   "lang": "zh",
+   "translation": "savoring sweet scenes",
+   "shortAnswer": "「磕糖」用英文说是 savoring sweet scenes，指反复回味 CP 的甜蜜片段。",
+   "definition": "「磕糖」即「嗑糖」，指粉丝反复回味喜欢的 CP 之间甜蜜互动或浪漫情节，从中获得满足与快乐。",
+   "examples": [
+    {
+     "en": "After the new episode aired, fans spent the whole night savoring sweet scenes between the two leads.",
+     "zh": "新一集播出后，粉丝们整晚都在磕两位主角的糖。"
+    },
+    {
+     "en": "She keeps rewatching that clip, savoring sweet scenes like a jar of honey.",
+     "zh": "她反复重看那个片段，像抱着一罐蜂蜜一样磕糖。"
+    }
+   ],
+   "tags": [
+    "嗑CP与同人文化"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "savoring sweet scenes",
+   "pair": "en-zh",
+   "slug": "savoring-sweet-scenes",
+   "lang": "en",
+   "translation": "磕糖",
+   "shortAnswer": "Savoring sweet scenes is the English for 「磕糖」: repeatedly enjoying a ship's sweet moments.",
+   "definition": "Savoring sweet scenes refers to 「磕糖」, a fandom term for relishing a pairing's romantic or fluffy moments again and again.",
+   "examples": [
+    {
+     "en": "After the new episode aired, fans spent the whole night savoring sweet scenes between the two leads.",
+     "zh": "新一集播出后，粉丝们整晚都在磕两位主角的糖。"
+    },
+    {
+     "en": "She keeps rewatching that clip, savoring sweet scenes like a jar of honey.",
+     "zh": "她反复重看那个片段，像抱着一罐蜂蜜一样磕糖。"
+    }
+   ],
+   "tags": [
+    "嗑CP与同人文化"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "二创",
+   "pair": "zh-en",
+   "slug": "er-chuang",
+   "lang": "zh",
+   "translation": "fan-made content",
+   "shortAnswer": "「二创」的英文是 fan-made content，指粉丝基于原作进行的再创作。注意不要与官方衍生（official spin-off）混淆。",
+   "definition": "fan-made content 涵盖同人图、同人文、混剪视频等。常见搭配：create/produce fan-made content。易错点：不要用于描述官方续作或商业改编。",
+   "examples": [
+    {
+     "en": "She spends her weekends creating fan-made content for her favorite anime series.",
+     "zh": "她周末都在为自己最喜欢的动漫创作二创作品。"
+    },
+    {
+     "en": "The artist's fan-made content went viral and even caught the attention of the original creator.",
+     "zh": "这位画师的二创作品走红，甚至引起了原作者的关注。"
+    }
+   ],
+   "tags": [
+    "嗑CP与同人文化"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "fan-made content",
+   "pair": "en-zh",
+   "slug": "fan-made-content",
+   "lang": "en",
+   "translation": "二创",
+   "shortAnswer": "Fan-made content 的中文意思是「二创」，即粉丝在原作基础上创作的新作品。它与官方衍生（official spin-off）不同，强调非官方、非商业。",
+   "definition": "指粉丝基于已有作品（如动漫、游戏、影视）创作的同人图、同人文、视频等。常见搭配：create fan-made content。口语中也可说 fan works。注意不要与 canon（官方设定）混淆。",
+   "examples": [
+    {
+     "en": "She spends her weekends creating fan-made content for her favorite anime series.",
+     "zh": "她周末都在为自己最喜欢的动漫创作二创作品。"
+    },
+    {
+     "en": "The artist's fan-made content went viral and even caught the attention of the original creator.",
+     "zh": "这位画师的二创作品走红，甚至引起了原作者的关注。"
+    }
+   ],
+   "tags": [
+    "嗑CP与同人文化"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "嗑cp",
+   "pair": "zh-en",
+   "slug": "ke-cp",
+   "lang": "zh",
+   "translation": "shipping a couple",
+   "shortAnswer": "「嗑cp」英文说 shipping a couple，指着迷地支持两人配对，享受甜蜜互动。",
+   "definition": "shipping 由 relationship 动词化，搭配 a couple 或角色名；同人圈常说 I ship them，侧重享受配对甜感。",
+   "examples": [
+    {
+     "en": "I've been shipping a couple from that anime for months, reading every fanfic I can find.",
+     "zh": "我嗑那部动漫里的一对cp好几个月了，能找到的同人文都看了。"
+    },
+    {
+     "en": "She keeps shipping a couple that never even met in canon, which is pure fanon.",
+     "zh": "她一直嗑一对原著里根本没见过的cp，这纯属同人设定。"
+    }
+   ],
+   "tags": [
+    "嗑CP与同人文化"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "shipping a couple",
+   "pair": "en-zh",
+   "slug": "shipping-a-couple",
+   "lang": "en",
+   "translation": "嗑cp",
+   "shortAnswer": "Shipping a couple means 嗑cp in Chinese—rooting for two people to be together.",
+   "definition": "Fandom slang: I ship them, my ship. It means enjoying a romantic pairing, often in fan works.",
+   "examples": [
+    {
+     "en": "I've been shipping a couple from that anime for months, reading every fanfic I can find.",
+     "zh": "我嗑那部动漫里的一对cp好几个月了，能找到的同人文都看了。"
+    },
+    {
+     "en": "She keeps shipping a couple that never even met in canon, which is pure fanon.",
+     "zh": "她一直嗑一对原著里根本没见过的cp，这纯属同人设定。"
+    }
+   ],
+   "tags": [
+    "嗑CP与同人文化"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "cp",
+   "pair": "zh-en",
+   "slug": "cp",
+   "lang": "zh",
+   "translation": "couple pairing",
+   "shortAnswer": "cp 的英文是 couple pairing，也常说 ship。cp 在中文里可作动词，如组 cp、炒 cp。",
+   "definition": "cp 是 couple pairing 的缩写，指同人圈中任意两人的配对关系。英文常用 ship 或 pairing 表达，ship 还可作动词。中文 cp 可作动词，如组 cp、炒 cp，指人为制造或营销配对。",
+   "examples": [
+    {
+     "en": "Fans love to discuss their favorite couple pairing from the show.",
+     "zh": "粉丝们喜欢讨论剧中最喜欢的 cp。"
+    },
+    {
+     "en": "The writer created a new couple pairing in the fan fiction.",
+     "zh": "作者在同人小说里创作了一对新 cp。"
+    }
+   ],
+   "tags": [
+    "嗑CP与同人文化"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "couple pairing",
+   "pair": "en-zh",
+   "slug": "couple-pairing",
+   "lang": "en",
+   "translation": "cp",
+   "shortAnswer": "couple pairing 的中文是 cp，指人物配对。它和 ship 相近，但 ship 更强调粉丝主动支持。",
+   "definition": "couple pairing 指将两个角色或人物配成一对，常见于同人创作。英文中 ship 更口语且可作动词，pairing 更中性。中文 cp 还可作动词，如组 cp、炒 cp 等。",
+   "examples": [
+    {
+     "en": "Fans love to discuss their favorite couple pairing from the show.",
+     "zh": "粉丝们喜欢讨论剧中最喜欢的 cp。"
+    },
+    {
+     "en": "The writer created a new couple pairing in the fan fiction.",
+     "zh": "作者在同人小说里创作了一对新 cp。"
+    }
+   ],
+   "tags": [
+    "嗑CP与同人文化"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "同人",
+   "pair": "zh-en",
+   "slug": "tong-ren",
+   "lang": "zh",
+   "translation": "fandom doujin",
+   "shortAnswer": "「同人」即英文 fandom doujin，指粉丝基于原作的二次创作，如小说、绘画。",
+   "definition": "「同人」指粉丝基于原作的自发创作，英文常说 fandom doujin，强调创作圈，搭配如 write fandom doujin。",
+   "examples": [
+    {
+     "en": "She spends her weekends writing fandom doujin for her favorite anime.",
+     "zh": "她周末都在为自己喜欢的动漫写同人作品。"
+    },
+    {
+     "en": "The convention had a huge section dedicated to fandom doujin.",
+     "zh": "漫展上有一大块区域专门展示同人作品。"
+    }
+   ],
+   "tags": [
+    "嗑CP与同人文化"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "fandom doujin",
+   "pair": "en-zh",
+   "slug": "fandom-doujin",
+   "lang": "en",
+   "translation": "同人",
+   "shortAnswer": "Fandom doujin is the English term for 同人, fan-made works based on originals.",
+   "definition": "Fandom doujin means 同人: fan-created works like fanfiction or fan art. It highlights fan creation, not real-person stan culture.",
+   "examples": [
+    {
+     "en": "She spends her weekends writing fandom doujin for her favorite anime.",
+     "zh": "她周末都在为自己喜欢的动漫写同人作品。"
+    },
+    {
+     "en": "The convention had a huge section dedicated to fandom doujin.",
+     "zh": "漫展上有一大块区域专门展示同人作品。"
+    }
+   ],
+   "tags": [
+    "嗑CP与同人文化"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "纸片人",
+   "pair": "zh-en",
+   "slug": "zhi-pian-ren",
+   "lang": "zh",
+   "translation": "two-dimensional crush",
+   "shortAnswer": "「纸片人」在英文里常说 two-dimensional crush，指迷恋的虚构角色。",
+   "definition": "「纸片人」是二次元圈自嘲说法：角色薄如纸片并非真人，却照样让人心动。英文 two-dimensional crush 强调恋爱对象，多一层迷恋感。",
+   "examples": [
+    {
+     "en": "My two-dimensional crush is a side character who barely appears, but I still write fanfic about him every week.",
+     "zh": "我的纸片人老公是个几乎不露面的配角，但我每周还是给他写同人文。"
+    },
+    {
+     "en": "She says having a two-dimensional crush is cheaper than dating, but she still cries when her favorite character dies.",
+     "zh": "她说嗑纸片人比谈恋爱省钱，但喜欢的角色一死她还是哭。"
+    }
+   ],
+   "tags": [
+    "嗑CP与同人文化"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "two-dimensional crush",
+   "pair": "en-zh",
+   "slug": "two-dimensional-crush",
+   "lang": "en",
+   "translation": "纸片人",
+   "shortAnswer": "Two-dimensional crush is「纸片人」in Chinese: a fictional character you have a crush on.",
+   "definition": "A two-dimensional crush is a fictional character you are attracted to, casual fan talk that is warmer than neutral 2D character.",
+   "examples": [
+    {
+     "en": "My two-dimensional crush is a side character who barely appears, but I still write fanfic about him every week.",
+     "zh": "我的纸片人老公是个几乎不露面的配角，但我每周还是给他写同人文。"
+    },
+    {
+     "en": "She says having a two-dimensional crush is cheaper than dating, but she still cries when her favorite character dies.",
+     "zh": "她说嗑纸片人比谈恋爱省钱，但喜欢的角色一死她还是哭。"
+    }
+   ],
+   "tags": [
+    "嗑CP与同人文化"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "同人图",
+   "pair": "zh-en",
+   "slug": "tong-ren-tu",
+   "lang": "zh",
+   "translation": "fan art",
+   "shortAnswer": "「同人图」英文是 fan art，指粉丝基于已有作品二次创作的画。注意 fan art 通常带署名和转载规范，不等于可随意商用的官方图。",
+   "definition": "同人图 = fan art，多指动漫、游戏、影视角色的非官方绘画。常见搭配：draw fan art、post fan art、fan art of a character。发图常标「禁止转载/二传」并署名画师；漫展同人摊位是主要流通场景。",
+   "examples": [
+    {
+     "en": "She spent the weekend drawing fan art of her favorite couple and posted it with a no-repost watermark.",
+     "zh": "她周末画了最喜欢的CP的同人图，并加上禁止转载的水印发了出来。"
+    },
+    {
+     "en": "At the comic convention, artists sell prints of their fan art and label each piece with credit and usage rules.",
+     "zh": "在漫展上，画师们售卖同人图的印刷品，并为每幅作品标注署名和使用规则。"
+    }
+   ],
+   "tags": [
+    "嗑CP与同人文化"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "fan art",
+   "pair": "en-zh",
+   "slug": "fan-art",
+   "lang": "en",
+   "translation": "同人图",
+   "shortAnswer": "「fan art」中文意思是「同人图」，即粉丝为原作角色或作品创作的画。它强调非官方二次创作，常涉及署名、转载授权，不可与官方美术稿混为一谈。",
+   "definition": "fan art 指粉丝基于已有作品画的同人图，常见搭配：draw/post/create fan art；在漫展、社交平台、同人志中流通。正式场合写作 fan art，口语可说 fanart；注意勿与 official art 混淆，商用需获授权。",
+   "examples": [
+    {
+     "en": "She spent the weekend drawing fan art of her favorite couple and posted it with a no-repost watermark.",
+     "zh": "她周末画了最喜欢的CP的同人图，并加上禁止转载的水印发了出来。"
+    },
+    {
+     "en": "At the comic convention, artists sell prints of their fan art and label each piece with credit and usage rules.",
+     "zh": "在漫展上，画师们售卖同人图的印刷品，并为每幅作品标注署名和使用规则。"
+    }
+   ],
+   "tags": [
+    "嗑CP与同人文化"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "乙女游戏",
+   "pair": "zh-en",
+   "slug": "yi-nv-you-xi",
+   "lang": "zh",
+   "translation": "otome game",
+   "shortAnswer": "「乙女游戏」的英文是 otome game，指女性向恋爱模拟游戏，玩家代入女主角攻略男性角色。",
+   "definition": "otome game 源自日语「乙女ゲーム」，指女性向恋爱模拟游戏，玩家扮演女主角攻略男性角色，与男性向的 galgame 方向相反。",
+   "examples": [
+    {
+     "en": "She spends hours playing her favorite otome game, romancing every eligible bachelor in the story.",
+     "zh": "她花好几个小时玩最喜欢的乙女游戏，攻略故事里每一个单身帅哥。"
+    },
+    {
+     "en": "The new otome game adaptation stays faithful to the original visual novel and has won over many female fans.",
+     "zh": "这部新的乙女游戏改编作品忠于原版视觉小说，已经赢得许多女性粉丝的喜爱。"
+    }
+   ],
+   "tags": [
+    "嗑CP与同人文化"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "otome game",
+   "pair": "en-zh",
+   "slug": "otome-game",
+   "lang": "en",
+   "translation": "乙女游戏",
+   "shortAnswer": "An otome game (乙女游戏) is a romance simulation for women where you date male characters.",
+   "definition": "An otome game (Chinese: 乙女游戏) is a Japanese-style dating sim for women: you play the heroine pursuing male love interests.",
+   "examples": [
+    {
+     "en": "She spends hours playing her favorite otome game, romancing every eligible bachelor in the story.",
+     "zh": "她花好几个小时玩最喜欢的乙女游戏，攻略故事里每一个单身帅哥。"
+    },
+    {
+     "en": "The new otome game adaptation stays faithful to the original visual novel and has won over many female fans.",
+     "zh": "这部新的乙女游戏改编作品忠于原版视觉小说，已经赢得许多女性粉丝的喜爱。"
+    }
+   ],
+   "tags": [
+    "嗑CP与同人文化"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "番位",
+   "pair": "zh-en",
+   "slug": "fan-wei",
+   "lang": "zh",
+   "translation": "billing order",
+   "shortAnswer": "番位的英文是 billing order，指演员在片头或海报上的排名顺序，一番即 top billing。",
+   "definition": "常见搭配：top billing（一番）、second billing（二番）、billing block（海报演员表）。易错点：番位不等于戏份，一番常被期待扛剧。",
+   "examples": [
+    {
+     "en": "Fans argued for weeks about the billing order of the two leads, because top billing means carrying the show.",
+     "zh": "粉丝为两位主演的番位争论了好几周，因为一番就意味着要扛剧。"
+    },
+    {
+     "en": "In Hollywood, agents negotiate billing order as carefully as salary, though the public rarely notices.",
+     "zh": "在好莱坞，经纪人谈番位和谈片酬一样仔细，只是公众很少注意到。"
+    }
+   ],
+   "tags": [
+    "嗑CP与同人文化"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "billing order",
+   "pair": "en-zh",
+   "slug": "billing-order",
+   "lang": "en",
+   "translation": "番位",
+   "shortAnswer": "Billing order means 番位, the ranked listing of actors in credits or posters.",
+   "definition": "Common collocations: top billing, second billing, billing block. Note: 番位 implies rank and responsibility; billing order is more neutral.",
+   "examples": [
+    {
+     "en": "Fans argued for weeks about the billing order of the two leads, because top billing means carrying the show.",
+     "zh": "粉丝为两位主演的番位争论了好几周，因为一番就意味着要扛剧。"
+    },
+    {
+     "en": "In Hollywood, agents negotiate billing order as carefully as salary, though the public rarely notices.",
+     "zh": "在好莱坞，经纪人谈番位和谈片酬一样仔细，只是公众很少注意到。"
+    }
+   ],
+   "tags": [
+    "嗑CP与同人文化"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "剧粉",
+   "pair": "zh-en",
+   "slug": "ju-fen",
+   "lang": "zh",
+   "translation": "show-only fan",
+   "shortAnswer": "「剧粉」的英文是 show-only fan，指只追剧、不追演员也不看原著的粉丝，常与「原著党」形成微妙对立。",
+   "definition": "show-only fan 是「剧粉」最贴切的对应，指只喜欢某部影视剧本身、不延伸关注演员或原著的观众。常见搭配：a show-only fan of the series。易错点：它强调「只看剧」，不等于「剧迷」。",
+   "examples": [
+    {
+     "en": "As a show-only fan, I had no idea the book ending was completely different.",
+     "zh": "作为剧粉，我完全不知道原著结局和剧里完全不一样。"
+    },
+    {
+     "en": "Book readers and show-only fans constantly argue about which version is better.",
+     "zh": "原著党和剧粉经常争论哪个版本更好。"
+    }
+   ],
+   "tags": [
+    "嗑CP与同人文化"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "show-only fan",
+   "pair": "en-zh",
+   "slug": "show-only-fan",
+   "lang": "en",
+   "translation": "剧粉",
+   "shortAnswer": "show-only fan 的中文意思是「剧粉」，指只看剧、不追演员也不看原著的观众，与 book fan（原著党）相对。",
+   "definition": "show-only fan 指只通过影视剧接触作品、不读原著也不关注演员其他作品的观众。常见搭配：be a show-only fan; show-only fans of the adaptation。易错点：它强调「只看剧」的边界感，不等于中文的「剧迷」。",
+   "examples": [
+    {
+     "en": "As a show-only fan, I had no idea the book ending was completely different.",
+     "zh": "作为剧粉，我完全不知道原著结局和剧里完全不一样。"
+    },
+    {
+     "en": "Book readers and show-only fans constantly argue about which version is better.",
+     "zh": "原著党和剧粉经常争论哪个版本更好。"
+    }
+   ],
+   "tags": [
+    "嗑CP与同人文化"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "书粉",
+   "pair": "zh-en",
+   "slug": "shu-fen",
+   "lang": "zh",
+   "translation": "book-purist fan",
+   "shortAnswer": "「书粉」的英语是 book-purist fan，指忠于原著、对改编选角和剧情魔改敏感的书迷。",
+   "definition": "由 book + purist（纯粹主义者）+ fan 构成，核心诉求是忠实改编。常见搭配：a book-purist fan of the novel、book-purist fan backlash。",
+   "examples": [
+    {
+     "en": "As a book-purist fan, she refused to watch the series after they changed her favorite character's backstory.",
+     "zh": "作为书粉，她拒绝看这部剧，因为他们把最喜欢的角色的背景故事都改了。"
+    },
+    {
+     "en": "The casting of a blond actor for the dark-haired protagonist sparked a book-purist fan backlash online.",
+     "zh": "让一个金发演员来演原著里的深发主角，在网上引发了书粉的强烈抗议。"
+    }
+   ],
+   "tags": [
+    "嗑CP与同人文化"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "book-purist fan",
+   "pair": "en-zh",
+   "slug": "book-purist-fan",
+   "lang": "en",
+   "translation": "书粉",
+   "shortAnswer": "Book-purist fan means 书粉: a reader who demands that adaptations stay faithful to the original novel.",
+   "definition": "A book-purist fan prioritizes fidelity to the source text in adaptation debates. Not to be confused with bookworm, a mere avid reader.",
+   "examples": [
+    {
+     "en": "As a book-purist fan, she refused to watch the series after they changed her favorite character's backstory.",
+     "zh": "作为书粉，她拒绝看这部剧，因为他们把最喜欢的角色的背景故事都改了。"
+    },
+    {
+     "en": "The casting of a blond actor for the dark-haired protagonist sparked a book-purist fan backlash online.",
+     "zh": "让一个金发演员来演原著里的深发主角，在网上引发了书粉的强烈抗议。"
+    }
+   ],
+   "tags": [
+    "嗑CP与同人文化"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "对家",
+   "pair": "zh-en",
+   "slug": "dui-jia",
+   "lang": "zh",
+   "translation": "rival ship camp",
+   "shortAnswer": "「对家」的英文是 rival ship camp，指同人圈中与你所站 CP 阵营竞争、粉丝常互撕的另一方。",
+   "definition": "「家」是粉丝阵营的隐喻，本家指自己支持的 CP，对家即 rival ship camp。常见搭配：对家 CP、对家粉、爬墙到对家。易错点：不能直译成 opponent 或 enemy，那会丢掉同人圈阵营对立的语境。",
+   "examples": [
+    {
+     "en": "She used to be in the rival ship camp, but she switched sides after reading one fanfic.",
+     "zh": "她以前是对方阵营的，但看了一篇同人文后就爬墙了。"
+    },
+    {
+     "en": "The two rival ship camps fought over screen time for their favorite characters.",
+     "zh": "两个对家阵营为了自家喜欢的角色的戏份撕了起来。"
+    }
+   ],
+   "tags": [
+    "嗑CP与同人文化"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "rival ship camp",
+   "pair": "en-zh",
+   "slug": "rival-ship-camp",
+   "lang": "en",
+   "translation": "对家",
+   "shortAnswer": "「rival ship camp」的中文意思是「对家」，指同人圈中与你支持的 CP 阵营竞争、常粉丝互撕的另一方。",
+   "definition": "rival ship camp 用于同人圈，核心是「对立的 CP 粉丝阵营」，常见于同人文与 CP 争论。口语可简作 rival camp。易错点：别与 rival pairing 混淆，后者指对立的 CP 配对本身。",
+   "examples": [
+    {
+     "en": "She used to be in the rival ship camp, but she switched sides after reading one fanfic.",
+     "zh": "她以前是对方阵营的，但看了一篇同人文后就爬墙了。"
+    },
+    {
+     "en": "The two rival ship camps fought over screen time for their favorite characters.",
+     "zh": "两个对家阵营为了自家喜欢的角色的戏份撕了起来。"
+    }
+   ],
+   "tags": [
+    "嗑CP与同人文化"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "爬墙",
+   "pair": "zh-en",
+   "slug": "pa-qiang",
+   "lang": "zh",
+   "translation": "switching fandoms",
+   "shortAnswer": "「爬墙」英文是 switching fandoms，指粉丝从原偶像或CP转向他人支持。",
+   "definition": "爬墙源自墙头意象，指粉丝从喜欢一个偶像或CP转向另一个，常带不专一意味，但可能同时喜欢多个。",
+   "examples": [
+    {
+     "en": "After the scandal, she ended up switching fandoms and now stans a rookie group.",
+     "zh": "丑闻之后她爬墙了，现在粉上了一个新人组合。"
+    },
+    {
+     "en": "Switching fandoms is common in the CP circle, but solo stans often call it disloyal.",
+     "zh": "在嗑CP圈里爬墙很常见，但唯粉常说这不专一。"
+    }
+   ],
+   "tags": [
+    "嗑CP与同人文化"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "switching fandoms",
+   "pair": "en-zh",
+   "slug": "switching-fandoms",
+   "lang": "en",
+   "translation": "爬墙",
+   "shortAnswer": "Switching fandoms means 爬墙: leaving one idol or ship to support another.",
+   "definition": "Switching fandoms means moving your fan devotion from one idol, group, or ship to another. It can imply disloyalty among solo stans.",
+   "examples": [
+    {
+     "en": "After the scandal, she ended up switching fandoms and now stans a rookie group.",
+     "zh": "丑闻之后她爬墙了，现在粉上了一个新人组合。"
+    },
+    {
+     "en": "Switching fandoms is common in the CP circle, but solo stans often call it disloyal.",
+     "zh": "在嗑CP圈里爬墙很常见，但唯粉常说这不专一。"
+    }
+   ],
+   "tags": [
+    "嗑CP与同人文化"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "路好",
+   "pair": "zh-en",
+   "slug": "lu-hao",
+   "lang": "zh",
+   "translation": "casual well-wisher fan",
+   "shortAnswer": "「路好」英文是 casual well-wisher fan，指不混圈、不花钱但对某艺人有好感的圈外路人。",
+   "definition": "路好即路人好感粉：不混粉圈、不氪金或偶尔消费，却对艺人或CP抱有好感。粉圈梯度常为死忠粉>活跃粉>路好>路人>黑，路好是国民度与作品出圈的基本盘。",
+   "examples": [
+    {
+     "en": "She's not in the fandom, just a casual well-wisher fan who likes his music.",
+     "zh": "她不混粉圈，只是喜欢他音乐的路好。"
+    },
+    {
+     "en": "A casual well-wisher fan can still boost an artist's national recognition without spending money.",
+     "zh": "路好即使不花钱，也能提升艺人的国民度。"
+    }
+   ],
+   "tags": [
+    "嗑CP与同人文化"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "casual well-wisher fan",
+   "pair": "en-zh",
+   "slug": "casual-well-wisher-fan",
+   "lang": "en",
+   "translation": "路好",
+   "shortAnswer": "casual well-wisher fan 的中文是「路好」，即圈外有好感但不深入粉圈、不氪金的路人。",
+   "definition": "casual well-wisher fan 指圈外有好感的路人粉，非正式说法。语义重点是善意但低投入，与 casual fan（可能仍属粉丝）不同。",
+   "examples": [
+    {
+     "en": "She's not in the fandom, just a casual well-wisher fan who likes his music.",
+     "zh": "她不混粉圈，只是喜欢他音乐的路好。"
+    },
+    {
+     "en": "A casual well-wisher fan can still boost an artist's national recognition without spending money.",
+     "zh": "路好即使不花钱，也能提升艺人的国民度。"
+    }
+   ],
+   "tags": [
+    "嗑CP与同人文化"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "梦女",
+   "pair": "zh-en",
+   "slug": "meng-nv",
+   "lang": "zh",
+   "translation": "self-insert fan",
+   "shortAnswer": "「梦女」英文是 self-insert fan，指幻想自己与虚构角色恋爱的女性粉丝。",
+   "definition": "源自日语「夢女子」。名词。指幻想自己与虚构角色恋爱、并常写同人作品的女性粉丝。不直译 dream girl。",
+   "examples": [
+    {
+     "en": "She is a self-insert fan, writing stories where she dates the villain.",
+     "zh": "她是梦女，写自己和反派谈恋爱的故事。"
+    },
+    {
+     "en": "Some self-insert fan stories let anyone be the heroine through a blank placeholder.",
+     "zh": "有些梦女作品用空白占位符，让任何人都能当女主角。"
+    }
+   ],
+   "tags": [
+    "嗑CP与同人文化"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "self-insert fan",
+   "pair": "en-zh",
+   "slug": "self-insert-fan",
+   "lang": "en",
+   "translation": "梦女",
+   "shortAnswer": "Self-insert fan is 梦女 in Chinese: a female fan who fantasizes romance with a fictional character.",
+   "definition": "Noun. A fan, usually female, who enjoys fan works where she romances a canon character. Common in reader-insert fic using y/n.",
+   "examples": [
+    {
+     "en": "She is a self-insert fan, writing stories where she dates the villain.",
+     "zh": "她是梦女，写自己和反派谈恋爱的故事。"
+    },
+    {
+     "en": "Some self-insert fan stories let anyone be the heroine through a blank placeholder.",
+     "zh": "有些梦女作品用空白占位符，让任何人都能当女主角。"
+    }
+   ],
+   "tags": [
+    "嗑CP与同人文化"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "糖刀",
+   "pair": "zh-en",
+   "slug": "tang-dao",
+   "lang": "zh",
+   "translation": "sweetness with knives",
+   "shortAnswer": "糖刀的英文是 sweetness with knives，指剧情发糖和发刀交替、又甜又虐的节奏。",
+   "definition": "嗑CP时形容编剧先甜后虐、糖里藏刀的圈内说法。近义 bittersweet，但更强调突然反转刀人。",
+   "examples": [
+    {
+     "en": "The finale was pure sweetness with knives: the couple confessed, then one lost their memory.",
+     "zh": "大结局简直是纯糖刀：这对刚告白，其中一人就失忆了。"
+    },
+    {
+     "en": "I can't handle this author's sweetness with knives; every sweet chapter is followed by pain.",
+     "zh": "我受不了这位作者的糖刀了，每章甜完下一章就虐心。"
+    }
+   ],
+   "tags": [
+    "嗑CP与同人文化"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "sweetness with knives",
+   "pair": "en-zh",
+   "slug": "sweetness-with-knives",
+   "lang": "en",
+   "translation": "糖刀",
+   "shortAnswer": "「糖刀」 in Chinese is sweetness with knives: a plot that gives sweet ship moments then stabs you.",
+   "definition": "Fandom slang for a story mixing fluff with angst. More vivid than bittersweet; the knives are emotional stabs.",
+   "examples": [
+    {
+     "en": "The finale was pure sweetness with knives: the couple confessed, then one lost their memory.",
+     "zh": "大结局简直是纯糖刀：这对刚告白，其中一人就失忆了。"
+    },
+    {
+     "en": "I can't handle this author's sweetness with knives; every sweet chapter is followed by pain.",
+     "zh": "我受不了这位作者的糖刀了，每章甜完下一章就虐心。"
+    }
+   ],
+   "tags": [
+    "嗑CP与同人文化"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "玻璃糖",
+   "pair": "zh-en",
+   "slug": "bo-li-tang",
+   "lang": "zh",
+   "translation": "bittersweet ship moment",
+   "shortAnswer": "「玻璃糖」英文常说 bittersweet ship moment，指嗑CP时甜中带虐、像玻璃渣里找糖的瞬间，不是普通甜。",
+   "definition": "同人圈用「玻璃糖」形容表面甜、细看却带碎裂感和虐点的CP互动，英文可用 bittersweet ship moment。常见搭配：发玻璃糖、玻璃糖里找糖。它与纯糖不同，比纯刀多一层甜，核心是自虐式追CP快感。",
+   "examples": [
+    {
+     "en": "That finale gave us the ultimate bittersweet ship moment: they finally held hands, but only because they were saying goodbye.",
+     "zh": "大结局给了我们最极致的玻璃糖：他们终于牵了手，却是因为在告别。"
+    },
+    {
+     "en": "I keep rewatching episode seven for that bittersweet ship moment, even though it breaks my heart every time.",
+     "zh": "我反复重看第七集就为了那个玻璃糖瞬间，尽管每次都被虐得心碎。"
+    }
+   ],
+   "tags": [
+    "嗑CP与同人文化"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "bittersweet ship moment",
+   "pair": "en-zh",
+   "slug": "bittersweet-ship-moment",
+   "lang": "en",
+   "translation": "玻璃糖",
+   "shortAnswer": "bittersweet ship moment 中文常译「玻璃糖」，指嗑CP时甜中带虐、脆弱易碎的瞬间，甜里藏着刀，不是纯甜。",
+   "definition": "bittersweet ship moment 是同人圈口语表达，指CP互动既甜又带心碎感，类似中文「玻璃糖」。常见搭配：a bittersweet ship moment。多用于粉丝讨论、同人文推荐，正式场合少用；易错点是别等同于纯甜。",
+   "examples": [
+    {
+     "en": "That finale gave us the ultimate bittersweet ship moment: they finally held hands, but only because they were saying goodbye.",
+     "zh": "大结局给了我们最极致的玻璃糖：他们终于牵了手，却是因为在告别。"
+    },
+    {
+     "en": "I keep rewatching episode seven for that bittersweet ship moment, even though it breaks my heart every time.",
+     "zh": "我反复重看第七集就为了那个玻璃糖瞬间，尽管每次都被虐得心碎。"
+    }
+   ],
+   "tags": [
+    "嗑CP与同人文化"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "别客气当自己家",
+   "pair": "zh-en",
+   "slug": "bie-ke-qi-dang-zi-ji-jia",
+   "lang": "zh",
+   "translation": "make yourself at home",
+   "shortAnswer": "「别客气当自己家」的英文是 make yourself at home。主人对刚进门的客人说，请对方随意坐、随意吃喝，不必拘束。",
+   "definition": "用于迎客进门的场合，主人对客人说，表示把这里当自己家一样随意。常说 make yourself at home, please 或 just make yourself at home。注意不要照字面译成 don't be polite，那听起来像在纠正对方。",
+   "examples": [
+    {
+     "en": "Come in, make yourself at home, and help yourself to anything in the fridge.",
+     "zh": "进来吧，别客气当自己家，冰箱里的东西随便拿。"
+    },
+    {
+     "en": "The host smiled and said, \"Make yourself at home, I'll be back in a minute.\"",
+     "zh": "主人笑着说：「别客气当自己家，我马上就回来。」"
+    }
+   ],
+   "tags": [
+    "社交寒暄"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "make yourself at home",
+   "pair": "en-zh",
+   "slug": "make-yourself-at-home",
+   "lang": "en",
+   "translation": "别客气当自己家",
+   "shortAnswer": "make yourself at home 的中文意思是「别客气当自己家」。主人对来访客人说，让对方随意、不必拘束，重点在请对方放松并自由取用。",
+   "definition": "礼貌而亲切的待客用语，常用于把客人迎进家门或办公室后。相当于 please relax and be comfortable。多用于主人对客人说，不说 make yourself at my home；正式场合可加 please。",
+   "examples": [
+    {
+     "en": "Come in, make yourself at home, and help yourself to anything in the fridge.",
+     "zh": "进来吧，别客气当自己家，冰箱里的东西随便拿。"
+    },
+    {
+     "en": "The host smiled and said, \"Make yourself at home, I'll be back in a minute.\"",
+     "zh": "主人笑着说：「别客气当自己家，我马上就回来。」"
+    }
+   ],
+   "tags": [
+    "社交寒暄"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "早日康复",
+   "pair": "zh-en",
+   "slug": "zao-ri-kang-fu",
+   "lang": "zh",
+   "translation": "get well soon",
+   "shortAnswer": "「早日康复」的英文是 get well soon，用于探望病人、发消息问候时祝对方快点好起来。注意它偏口语关切，正式信函可用 wishing you a speedy recovery。",
+   "definition": "get well soon 是最常见的探病问候语，对朋友、同事、家人都能用，常用于卡片、短信结尾。它只用于对方已经生病或受伤的情况；若对方只是心情差，应说 feel better soon 或 cheer up。",
+   "examples": [
+    {
+     "en": "I heard you caught a cold, so get well soon and take good care of yourself.",
+     "zh": "听说你感冒了，祝你早日康复，好好照顾自己。"
+    },
+    {
+     "en": "We all signed the card to say get well soon after your surgery.",
+     "zh": "手术后我们都在卡片上签名祝你早日康复。"
+    }
+   ],
+   "tags": [
+    "社交寒暄"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "get well soon",
+   "pair": "en-zh",
+   "slug": "get-well-soon",
+   "lang": "en",
+   "translation": "早日康复",
+   "shortAnswer": "get well soon 的中文意思是「早日康复」，是对生病或受伤的人说的关切祝福。它与 feel better soon 不同，前者强调痊愈，后者多指心情或身体感觉好转。",
+   "definition": "get well soon 用于探病、慰问卡、短信，语气亲切口语，适用于朋友、同事、家人。正式场合可说 wishing you a speedy recovery。它只针对已生病或受伤的人，不可用于一般告别。",
+   "examples": [
+    {
+     "en": "I heard you caught a cold, so get well soon and take good care of yourself.",
+     "zh": "听说你感冒了，祝你早日康复，好好照顾自己。"
+    },
+    {
+     "en": "We all signed the card to say get well soon after your surgery.",
+     "zh": "手术后我们都在卡片上签名祝你早日康复。"
+    }
+   ],
+   "tags": [
+    "社交寒暄"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "我的错",
+   "pair": "zh-en",
+   "slug": "wo-de-cuo",
+   "lang": "zh",
+   "translation": "my bad",
+   "shortAnswer": "「我的错」的英文常用表达是 my bad，用于轻松场合承认小过失。注意 my bad 比 sorry 更口语，不用于正式道歉。",
+   "definition": "my bad 是美式口语，承认小错误或小失误，语气轻松，常用于朋友、同事间。比 I'm sorry 随意，正式场合或严重错误仍用 sorry。",
+   "examples": [
+    {
+     "en": "My bad, I forgot to bring your book.",
+     "zh": "我的错，我忘记带你的书了。"
+    },
+    {
+     "en": "My bad for being late — the traffic was terrible.",
+     "zh": "我迟到了，我的错——交通太糟糕了。"
+    }
+   ],
+   "tags": [
+    "社交寒暄"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "my bad",
+   "pair": "en-zh",
+   "slug": "my-bad",
+   "lang": "en",
+   "translation": "我的错",
+   "shortAnswer": "“my bad”的中文意思是「我的错」，用于口语中轻松承认小过失。它比“sorry”更随意，不适用于正式道歉。",
+   "definition": "“my bad”是美式口语，表示“我的错”，用于承认小错误，语气轻松，常见于朋友或熟人之间。正式场合或严重错误用“sorry”或“I apologize”。",
+   "examples": [
+    {
+     "en": "My bad, I forgot to bring your book.",
+     "zh": "我的错，我忘记带你的书了。"
+    },
+    {
+     "en": "My bad for being late — the traffic was terrible.",
+     "zh": "我迟到了，我的错——交通太糟糕了。"
+    }
+   ],
+   "tags": [
+    "社交寒暄"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "唯粉",
+   "pair": "zh-en",
+   "slug": "wei-fen",
+   "lang": "zh",
+   "translation": "solo stan",
+   "shortAnswer": "「唯粉」英文是 solo stan，指只支持团体中某一位成员、对其他成员无感的粉丝。",
+   "definition": "solo stan 源自饭圈，指只支持团体中单个成员、对其他成员无感的粉丝，常与团粉对立。",
+   "examples": [
+    {
+     "en": "As a solo stan, she only buys albums that feature her favorite member.",
+     "zh": "作为唯粉，她只买有自己最爱成员出现的专辑。"
+    },
+    {
+     "en": "The feud between solo stans and group fans often floods social media with arguments.",
+     "zh": "唯粉和团粉之间的骂战经常让社交媒体上充斥争论。"
+    }
+   ],
+   "tags": [
+    "嗑CP与同人文化"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "solo stan",
+   "pair": "en-zh",
+   "slug": "solo-stan",
+   "lang": "en",
+   "translation": "唯粉",
+   "shortAnswer": "Solo stan means a fan who supports only one group member; in Chinese it is 唯粉.",
+   "definition": "A solo stan is a fan devoted to one group member, ignoring the rest. Common in K-pop, it often implies fandom division.",
+   "examples": [
+    {
+     "en": "As a solo stan, she only buys albums that feature her favorite member.",
+     "zh": "作为唯粉，她只买有自己最爱成员出现的专辑。"
+    },
+    {
+     "en": "The feud between solo stans and group fans often floods social media with arguments.",
+     "zh": "唯粉和团粉之间的骂战经常让社交媒体上充斥争论。"
+    }
+   ],
+   "tags": [
+    "嗑CP与同人文化"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "请随意",
+   "pair": "zh-en",
+   "slug": "qing-sui-yi",
+   "lang": "zh",
+   "translation": "help yourself",
+   "shortAnswer": "「请随意」的英文是 help yourself，主人请客人自取食物或物品时常用。",
+   "definition": "help yourself 常与 to 连用，如 help yourself to cake，表示不必拘礼，自己拿。",
+   "examples": [
+    {
+     "en": "Help yourself to some fruit and snacks on the table.",
+     "zh": "请随意吃桌上的水果和零食。"
+    },
+    {
+     "en": "The host said, 'Please help yourself to anything you like.'",
+     "zh": "主人说：「请随意拿你喜欢的任何东西。」"
+    }
+   ],
+   "tags": [
+    "社交寒暄"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "help yourself",
+   "pair": "en-zh",
+   "slug": "help-yourself",
+   "lang": "en",
+   "translation": "请随意",
+   "shortAnswer": "Help yourself is the English for 「请随意」, said by a host inviting guests to take things freely.",
+   "definition": "Help yourself is a polite phrase a host says, followed by to and food or items. It doesn't mean asking for help.",
+   "examples": [
+    {
+     "en": "Help yourself to some fruit and snacks on the table.",
+     "zh": "请随意吃桌上的水果和零食。"
+    },
+    {
+     "en": "The host said, 'Please help yourself to anything you like.'",
+     "zh": "主人说：「请随意拿你喜欢的任何东西。」"
+    }
+   ],
+   "tags": [
+    "社交寒暄"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "必须的",
+   "pair": "zh-en",
+   "slug": "bi-xu-de",
+   "lang": "zh",
+   "translation": "you bet",
+   "shortAnswer": "「必须的」用英语可以说 you bet，表示热情肯定或爽快答应。注意 you bet 偏口语，适合朋友间回应感谢或请求，正式场合少用。",
+   "definition": "you bet 常用于回应感谢或请求，相当于「当然」「没问题」「必须的」。比 sure 更热情，比 of course 更随意。不用于正式商务邮件。",
+   "examples": [
+    {
+     "en": "Thanks for helping me move. — You bet! Anytime.",
+     "zh": "谢谢你帮我搬家。——必须的！随时都行。"
+    },
+    {
+     "en": "Can you pick me up at the airport? — You bet, just text me the time.",
+     "zh": "你能来机场接我吗？——必须的，把时间发我就行。"
+    }
+   ],
+   "tags": [
+    "社交寒暄"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "you bet",
+   "pair": "en-zh",
+   "slug": "you-bet",
+   "lang": "en",
+   "translation": "必须的",
+   "shortAnswer": "You bet 的中文意思是「必须的」，表示热情肯定或爽快答应。它比 sure 更口语化，比 of course 更随意，常用于朋友间回应感谢或请求。",
+   "definition": "you bet 是口语表达，意为「当然」「没问题」「必须的」。用于回应感谢（如“Thanks!”“You bet!”）或同意请求。非正式，不适用于商务场合。",
+   "examples": [
+    {
+     "en": "Thanks for helping me move. — You bet! Anytime.",
+     "zh": "谢谢你帮我搬家。——必须的！随时都行。"
+    },
+    {
+     "en": "Can you pick me up at the airport? — You bet, just text me the time.",
+     "zh": "你能来机场接我吗？——必须的，把时间发我就行。"
+    }
+   ],
+   "tags": [
+    "社交寒暄"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "饭撒",
+   "pair": "zh-en",
+   "slug": "fan-sa",
+   "lang": "zh",
+   "translation": "fan service",
+   "shortAnswer": "「饭撒」的英文常说是 fan service，指偶像在演出现场给粉丝比心、眨眼等互动福利。",
+   "definition": "「饭撒」源自日语，指偶像在演唱会或见面会上对粉丝比心、眨眼、眼神交流等现场互动；英文 fan service 虽常对应，但在英语里更多指作品讨好粉丝的内容。",
+   "examples": [
+    {
+     "en": "The idol blew a kiss to the crowd, a classic bit of fan service that drove the fans wild.",
+     "zh": "那位偶像向人群飞吻，这是经典的饭撒，让粉丝们疯狂。"
+    },
+    {
+     "en": "Some critics argue that the anime relies too much on fan service instead of developing its story.",
+     "zh": "一些评论家认为这部动漫过于依赖讨好粉丝的内容，而忽略了剧情发展。"
+    }
+   ],
+   "tags": [
+    "嗑CP与同人文化"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "fan service",
+   "pair": "en-zh",
+   "slug": "fan-service",
+   "lang": "en",
+   "translation": "饭撒",
+   "shortAnswer": "fan service 的中文常译作「饭撒」，指偶像在演出现场给粉丝的互动福利。",
+   "definition": "fan service 在英语中常指动漫、游戏里为讨好粉丝而加的内容，也可指偶像对粉丝的现场互动；中文「饭撒」专指现场互动，如比心、眨眼等。",
+   "examples": [
+    {
+     "en": "The idol blew a kiss to the crowd, a classic bit of fan service that drove the fans wild.",
+     "zh": "那位偶像向人群飞吻，这是经典的饭撒，让粉丝们疯狂。"
+    },
+    {
+     "en": "Some critics argue that the anime relies too much on fan service instead of developing its story.",
+     "zh": "一些评论家认为这部动漫过于依赖讨好粉丝的内容，而忽略了剧情发展。"
+    }
+   ],
+   "tags": [
+    "嗑CP与同人文化"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "没事儿",
+   "pair": "zh-en",
+   "slug": "mei-shi-er",
+   "lang": "zh",
+   "translation": "no worries",
+   "shortAnswer": "「没事儿」用英语最常说是 no worries，用于回应道歉或感谢。它比 You're welcome 更轻松随意，多用于朋友间，正式场合少用。",
+   "definition": "no worries 源自澳大利亚英语，现已全球通用。可回应道歉（约等于「没关系」）或感谢（约等于「不客气」）。语气轻松友好，适合口语和非正式书面。注意正式商务场合宜用 That's quite all right 或 You're welcome。",
+   "examples": [
+    {
+     "en": "Sorry I'm late — no worries, we just got here too.",
+     "zh": "抱歉我迟到了——没事儿，我们也刚到。"
+    },
+    {
+     "en": "Thanks for the ride! No worries, it was on my way.",
+     "zh": "谢谢你载我！没事儿，正好顺路。"
+    }
+   ],
+   "tags": [
+    "社交寒暄"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "no worries",
+   "pair": "en-zh",
+   "slug": "no-worries",
+   "lang": "en",
+   "translation": "没事儿",
+   "shortAnswer": "no worries 的中文意思是「没事儿」，用来回应道歉或感谢。它与 You're welcome 的关键区别是更口语、更随和，常用于澳洲和英美日常对话。",
+   "definition": "no worries 是口语寒暄语，双用：回应道歉时意为「没事儿、别放心上」，回应感谢时意为「不客气」。源出澳大利亚英语，语气轻松友好，适合朋友、同事间；正式文书或庄重场合宜改用 You're welcome 或 Certainly。",
+   "examples": [
+    {
+     "en": "Sorry I'm late — no worries, we just got here too.",
+     "zh": "抱歉我迟到了——没事儿，我们也刚到。"
+    },
+    {
+     "en": "Thanks for the ride! No worries, it was on my way.",
+     "zh": "谢谢你载我！没事儿，正好顺路。"
+    }
+   ],
+   "tags": [
+    "社交寒暄"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "回聊",
+   "pair": "zh-en",
+   "slug": "hui-liao",
+   "lang": "zh",
+   "translation": "catch you later",
+   "shortAnswer": "「回聊」的英文是 catch you later，用于非正式告别，意思和 see you later 相近但更随意。注意它不能用于正式场合或写邮件。",
+   "definition": "catch you later 是口语寒暄，用于朋友、同事之间临时结束对话或离开时。常见搭配：Anyway, catch you later. 不宜对上级或客户说；正式表达用 goodbye 或 I'll be in touch。",
+   "examples": [
+    {
+     "en": "I have to run to a meeting, so catch you later!",
+     "zh": "我得赶去开会，回聊！"
+    },
+    {
+     "en": "It was great chatting, but I need to go now. Catch you later!",
+     "zh": "聊得很开心，但我现在得走了。回聊！"
+    }
+   ],
+   "tags": [
+    "社交寒暄"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "catch you later",
+   "pair": "en-zh",
+   "slug": "catch-you-later",
+   "lang": "en",
+   "translation": "回聊",
+   "shortAnswer": "“catch you later”的中文意思是「回聊」，用于非正式告别，相当于“回头聊”或“待会儿见”。它比 goodbye 更随意，比 see you later 更口语化。",
+   "definition": "catch you later 是口语化告别语，常用于朋友、熟人之间结束对话或离开时。常见搭配：I gotta go, catch you later. 正式场合应改用 goodbye 或 see you soon。",
+   "examples": [
+    {
+     "en": "I have to run to a meeting, so catch you later!",
+     "zh": "我得赶去开会，回聊！"
+    },
+    {
+     "en": "It was great chatting, but I need to go now. Catch you later!",
+     "zh": "聊得很开心，但我现在得走了。回聊！"
+    }
+   ],
+   "tags": [
+    "社交寒暄"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "放轻松",
+   "pair": "zh-en",
+   "slug": "fang-qing-song",
+   "lang": "zh",
+   "translation": "take it easy",
+   "shortAnswer": "「放轻松」的英文是 take it easy，用于劝人别紧张或告别时用。注意：告别时意为“保重”，不是“慢走”。",
+   "definition": "take it easy 有两用：安慰他人别着急、别生气，或告别时表示“保重”。非正式口语，对朋友、家人说。别与 take your time（慢慢来，不催你）混淆。",
+   "examples": [
+    {
+     "en": "Take it easy, we still have plenty of time to finish the project.",
+     "zh": "放轻松，我们还有足够的时间完成这个项目。"
+    },
+    {
+     "en": "I'm heading home now. Take it easy, see you tomorrow!",
+     "zh": "我现在要回家了。保重，明天见！"
+    }
+   ],
+   "tags": [
+    "社交寒暄"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "take it easy",
+   "pair": "en-zh",
+   "slug": "take-it-easy",
+   "lang": "en",
+   "translation": "放轻松",
+   "shortAnswer": "take it easy 的中文意思是「放轻松」，也可译为「别紧张」或告别时的「保重」。与 calm down 不同，它更温和，不暗示对方失控。",
+   "definition": "take it easy 是口语常用语，用于安抚情绪（别急、别生气）或告别（保重）。不用于正式场合，对上级慎用。也可写 take things easy，指不过度劳累。",
+   "examples": [
+    {
+     "en": "Take it easy, we still have plenty of time to finish the project.",
+     "zh": "放轻松，我们还有足够的时间完成这个项目。"
+    },
+    {
+     "en": "I'm heading home now. Take it easy, see you tomorrow!",
+     "zh": "我现在要回家了。保重，明天见！"
+    }
+   ],
+   "tags": [
+    "社交寒暄"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "撑住",
+   "pair": "zh-en",
+   "slug": "cheng-zhu",
+   "lang": "zh",
+   "translation": "hang in there",
+   "shortAnswer": "「撑住」的英文是 hang in there，口语中用来鼓励人别放弃，坚持过难关。",
+   "definition": "hang in there 表示在困难中坚持住，常对正在受苦或快放弃的人说。比 keep going 更强调忍耐当下困境，语气偏口语安慰。",
+   "examples": [
+    {
+     "en": "I know finals are rough, but hang in there—only two more days.",
+     "zh": "我知道期末很难熬，但撑住——只剩两天了。"
+    },
+    {
+     "en": "She told her sick friend to hang in there and that things would get better.",
+     "zh": "她让生病的朋友撑住，说情况会好起来的。"
+    }
+   ],
+   "tags": [
+    "社交寒暄"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "hang in there",
+   "pair": "en-zh",
+   "slug": "hang-in-there",
+   "lang": "en",
+   "translation": "撑住",
+   "shortAnswer": "Hang in there means 「撑住」 in Chinese, urging someone not to give up during a hard time.",
+   "definition": "Hang in there is informal encouragement meaning keep enduring a difficult time. More emotional than keep going; avoid in formal writing.",
+   "examples": [
+    {
+     "en": "I know finals are rough, but hang in there—only two more days.",
+     "zh": "我知道期末很难熬，但撑住——只剩两天了。"
+    },
+    {
+     "en": "She told her sick friend to hang in there and that things would get better.",
+     "zh": "她让生病的朋友撑住，说情况会好起来的。"
+    }
+   ],
+   "tags": [
+    "社交寒暄"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "保持联系",
+   "pair": "zh-en",
+   "slug": "bao-chi-lian-xi",
+   "lang": "zh",
+   "translation": "keep in touch",
+   "shortAnswer": "「保持联系」的英文是 keep in touch，用于告别或久未见面时表示别断了联络。注意它是动词短语，不能说成 keep in touch with sb 之外漏掉 with。",
+   "definition": "keep in touch 多用于告别、聚会结束或老友叙旧，语气友好而不沉重。常见搭配：keep in touch with sb（和某人保持联系）、let's keep in touch（咱们常联系）。比 stay in contact 更口语、更亲切。",
+   "examples": [
+    {
+     "en": "It was great seeing you—let's keep in touch.",
+     "zh": "见到你真好，咱们保持联系。"
+    },
+    {
+     "en": "Even after moving abroad, we kept in touch through video calls.",
+     "zh": "即使搬到了国外，我们也通过视频通话保持联系。"
+    }
+   ],
+   "tags": [
+    "社交寒暄"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "keep in touch",
+   "pair": "en-zh",
+   "slug": "keep-in-touch",
+   "lang": "en",
+   "translation": "保持联系",
+   "shortAnswer": "keep in touch 的中文意思是「保持联系」，指分别后别断了联络。它强调双方互相往来，与 stay in contact 意思相近，但更口语、更有温度。",
+   "definition": "keep in touch 是社交寒暄常用语，用于告别或久别时表达希望继续联络。常见搭配：keep in touch with sb、let's keep in touch。比 stay in contact 更亲切口语，正式邮件中也常作结尾。",
+   "examples": [
+    {
+     "en": "It was great seeing you—let's keep in touch.",
+     "zh": "见到你真好，咱们保持联系。"
+    },
+    {
+     "en": "Even after moving abroad, we kept in touch through video calls.",
+     "zh": "即使搬到了国外，我们也通过视频通话保持联系。"
+    }
+   ],
+   "tags": [
+    "社交寒暄"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "一路平安",
+   "pair": "zh-en",
+   "slug": "yi-lu-ping-an",
+   "lang": "zh",
+   "translation": "safe travels",
+   "shortAnswer": "「一路平安」的英文是 safe travels，用于送别即将出行的人。注意它是固定搭配，不能按中文逐字直译成一路和平安的英文单词。",
+   "definition": "safe travels 是英语国家常见的送别祝福，多用于对方即将坐飞机、开车或长途旅行时。比 have a good trip 更强调旅途平安，适合亲友、同事之间。不可说成 safe travel（单数）指一次出行。",
+   "examples": [
+    {
+     "en": "Safe travels! Text me when you land.",
+     "zh": "一路平安！落地后给我发消息。"
+    },
+    {
+     "en": "She hugged her son and said, “Safe travels, and don’t forget to call.”",
+     "zh": "她拥抱儿子说：“一路平安，别忘了打电话。”"
+    }
+   ],
+   "tags": [
+    "社交寒暄"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "safe travels",
+   "pair": "en-zh",
+   "slug": "safe-travels",
+   "lang": "en",
+   "translation": "一路平安",
+   "shortAnswer": "safe travels 的中文意思是「一路平安」，是送别时祝对方旅途顺利平安的固定短语。它比 have a good trip 更侧重平安，而非玩得开心。",
+   "definition": "safe travels 用于对方即将出行时的道别祝福，正式和口语场合均可，常单独使用。注意 travel 在此固定用复数 travels，不说 safe travel。回应可说 thanks, you too。",
+   "examples": [
+    {
+     "en": "Safe travels! Text me when you land.",
+     "zh": "一路平安！落地后给我发消息。"
+    },
+    {
+     "en": "She hugged her son and said, “Safe travels, and don’t forget to call.”",
+     "zh": "她拥抱儿子说：“一路平安，别忘了打电话。”"
+    }
+   ],
+   "tags": [
+    "社交寒暄"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "早该来了",
+   "pair": "zh-en",
+   "slug": "zao-gai-lai-le",
+   "lang": "zh",
+   "translation": "long overdue",
+   "shortAnswer": "「早该来了」英文是 long overdue，多用于期待已久终于发生的事，语气带抱怨或欣喜。注意它不用于人到达某地，别直译成 You should have come earlier。",
+   "definition": "long overdue 常搭配 changes、apology、decision、visit 等，表示某事拖得太久、早该处理。正式邮件或日常口语均可，语气比 late 更强调「欠了很久」。",
+   "examples": [
+    {
+     "en": "Your promotion is long overdue—you've earned it.",
+     "zh": "你早该升职了，这是你应得的。"
+    },
+    {
+     "en": "The company finally issued a long overdue apology to its customers.",
+     "zh": "公司终于向顾客发表了一份早该给出的道歉。"
+    }
+   ],
+   "tags": [
+    "社交寒暄"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "long overdue",
+   "pair": "en-zh",
+   "slug": "long-overdue",
+   "lang": "en",
+   "translation": "早该来了",
+   "shortAnswer": "long overdue 中文意思是「早该来了」，形容某事拖延过久、现在才发生。它强调迟到已久，比 just late 多一层「本应更早」的责备或感慨。",
+   "definition": "long overdue 修饰改革、道歉、决定、拜访等，指拖得太久早该完成。正式和口语都常用，但不用于人迟到到场；不说 The guest is long overdue，应说 The guest is late。",
+   "examples": [
+    {
+     "en": "Your promotion is long overdue—you've earned it.",
+     "zh": "你早该升职了，这是你应得的。"
+    },
+    {
+     "en": "The company finally issued a long overdue apology to its customers.",
+     "zh": "公司终于向顾客发表了一份早该给出的道歉。"
+    }
+   ],
+   "tags": [
+    "社交寒暄"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "说曹操曹操到",
+   "pair": "zh-en",
+   "slug": "shuo-cao-cao-cao-cao-dao",
+   "lang": "zh",
+   "translation": "speak of the devil",
+   "shortAnswer": "「说曹操曹操到」的英文是 speak of the devil。多用于刚提到某人，那人就出现时的调侃，完整说法是 speak of the devil and he shall appear。",
+   "definition": "日常口语寒暄，常省略后半句，直接说 Speak of the devil! 即可。注意：中文说曹操曹操到可指好事或坏事，英文 speak of the devil 偏调侃，一般不含恶意，正式场合少用。",
+   "examples": [
+    {
+     "en": "Speak of the devil, we were just talking about you!",
+     "zh": "说曹操曹操到，我们刚还在说你呢！"
+    },
+    {
+     "en": "I was about to call him, and then speak of the devil, he walked in.",
+     "zh": "我正要给他打电话，结果说曹操曹操到，他就走进来了。"
+    }
+   ],
+   "tags": [
+    "社交寒暄"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "speak of the devil",
+   "pair": "en-zh",
+   "slug": "speak-of-the-devil",
+   "lang": "en",
+   "translation": "说曹操曹操到",
+   "shortAnswer": "「speak of the devil」的中文意思是「说曹操曹操到」。用于刚提到某人，那人就恰好出现时的调侃，比「what a coincidence」更口语、更俏皮。",
+   "definition": "口语寒暄用语，完整形式为 speak of the devil and he shall appear，常省略后半句。可单独成句，也可说 Speak of the devil, here he is。多含轻松调侃，不宜用于严肃或悲伤场合。",
+   "examples": [
+    {
+     "en": "Speak of the devil, we were just talking about you!",
+     "zh": "说曹操曹操到，我们刚还在说你呢！"
+    },
+    {
+     "en": "I was about to call him, and then speak of the devil, he walked in.",
+     "zh": "我正要给他打电话，结果说曹操曹操到，他就走进来了。"
+    }
+   ],
+   "tags": [
+    "社交寒暄"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "慢慢来不急",
+   "pair": "zh-en",
+   "slug": "man-man-lai-bu-ji",
+   "lang": "zh",
+   "translation": "take your time",
+   "shortAnswer": "「慢慢来不急」的英文是 take your time。常用于宽慰对方不用赶时间，语气轻松友善，而非命令或敷衍。",
+   "definition": "take your time 用于允许或鼓励对方按自己的节奏做事，常见于服务、等候和关心场景，如 take your time, no rush。注意与 hurry up 语气相反，不宜对上级催促时反用。",
+   "examples": [
+    {
+     "en": "Take your time — there's no need to rush through the paperwork.",
+     "zh": "慢慢来不急，这些文件不用赶着填完。"
+    },
+    {
+     "en": "\"Can I have a few more minutes?\" \"Of course, take your time.\"",
+     "zh": "“能再给我几分钟吗？”“当然，慢慢来不急。”"
+    }
+   ],
+   "tags": [
+    "社交寒暄"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "take your time",
+   "pair": "en-zh",
+   "slug": "take-your-time",
+   "lang": "en",
+   "translation": "慢慢来不急",
+   "shortAnswer": "\"take your time\" 的中文意思是「慢慢来不急」。它表示允许对方从容不迫、不施加时间压力，语气温和体贴。",
+   "definition": "核心义为让对方随意支配时间、不必着急，常用于服务对话、安慰或等候场合；口语与正式场合皆可。与 no rush 近义，但 take your time 更强调许可与体贴，不含催促意味。",
+   "examples": [
+    {
+     "en": "Take your time — there's no need to rush through the paperwork.",
+     "zh": "慢慢来不急，这些文件不用赶着填完。"
+    },
+    {
+     "en": "\"Can I have a few more minutes?\" \"Of course, take your time.\"",
+     "zh": "“能再给我几分钟吗？”“当然，慢慢来不急。”"
+    }
+   ],
+   "tags": [
+    "社交寒暄"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "宠物店",
+   "pair": "zh-en",
+   "slug": "chong-wu-dian",
+   "lang": "zh",
+   "translation": "pet store",
+   "shortAnswer": "「宠物店」的英文是 pet store。日常口语也常听到 pet shop，两者通用；英式英语里 shop 更常见，美式英语则多用 store。",
+   "definition": "pet store 指售卖宠物及宠物用品的零售店，可搭配 go to / work at / a chain of pet stores。注意：只卖宠物食品和用品的店也叫 pet store，不一定卖活体动物；专门卖猫的店是 cattery。",
+   "examples": [
+    {
+     "en": "I stopped by the pet store to pick up a bag of freeze-dried treats for my cat.",
+     "zh": "我顺路去宠物店给我家猫买了一袋冻干零食。"
+    },
+    {
+     "en": "That pet store only sells supplies like harnesses and cat trees; it doesn't sell live animals.",
+     "zh": "那家宠物店只卖胸背带和猫爬架这类用品，不卖活体动物。"
+    }
+   ],
+   "tags": [
+    "养宠生活"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "pet store",
+   "pair": "en-zh",
+   "slug": "pet-store",
+   "lang": "en",
+   "translation": "宠物店",
+   "shortAnswer": "pet store 的中文意思是「宠物店」，指售卖宠物或宠物用品的商店。近义词 pet shop 在英式英语中更常用，美式英语则偏好 pet store。",
+   "definition": "pet store 是常见复合名词，口语和书面语都适用，可指卖活体宠物的店，也可指只卖粮、玩具、猫爬架等用品的店。搭配：a local pet store、pet store chain、go to the pet store。注意不要与 vet clinic（宠物医院）混淆。",
+   "examples": [
+    {
+     "en": "I stopped by the pet store to pick up a bag of freeze-dried treats for my cat.",
+     "zh": "我顺路去宠物店给我家猫买了一袋冻干零食。"
+    },
+    {
+     "en": "That pet store only sells supplies like harnesses and cat trees; it doesn't sell live animals.",
+     "zh": "那家宠物店只卖胸背带和猫爬架这类用品，不卖活体动物。"
+    }
+   ],
+   "tags": [
+    "养宠生活"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "但愿顺利",
+   "pair": "zh-en",
+   "slug": "dan-yuan-shun-li",
+   "lang": "zh",
+   "translation": "fingers crossed",
+   "shortAnswer": "「但愿顺利」的英文是 fingers crossed，常与 I'll keep my fingers crossed 或 Fingers crossed! 连用，表示祈求好运。",
+   "definition": "fingers crossed 源于西方交叉手指祈求好运的手势，是口语化的祝福语。常见搭配：keep one's fingers crossed、Fingers crossed for you。比 I hope 生动，但不宜在正式场合使用。",
+   "examples": [
+    {
+     "en": "I have a job interview tomorrow, so fingers crossed!",
+     "zh": "我明天有个工作面试，但愿顺利！"
+    },
+    {
+     "en": "We're keeping our fingers crossed for your exam results.",
+     "zh": "我们都在为你的考试成绩祈祷，但愿顺利。"
+    }
+   ],
+   "tags": [
+    "社交寒暄"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "fingers crossed",
+   "pair": "en-zh",
+   "slug": "fingers-crossed",
+   "lang": "en",
+   "translation": "但愿顺利",
+   "shortAnswer": "Fingers crossed 的中文意思是「但愿顺利」，用于祈求好运或希望事情成功，比 I hope 更口语化，常伴手势。",
+   "definition": "Fingers crossed 是英语中常见祝福语，表示希望某人好运或某事顺利，常搭配 keep one's fingers crossed for someone。适用于非正式场合；正式场合宜用 I hope everything goes well。",
+   "examples": [
+    {
+     "en": "I have a job interview tomorrow, so fingers crossed!",
+     "zh": "我明天有个工作面试，但愿顺利！"
+    },
+    {
+     "en": "We're keeping our fingers crossed for your exam results.",
+     "zh": "我们都在为你的考试成绩祈祷，但愿顺利。"
+    }
+   ],
+   "tags": [
+    "社交寒暄"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "介意我加入吗",
+   "pair": "zh-en",
+   "slug": "jie-yi-wo-jia-ru-ma",
+   "lang": "zh",
+   "translation": "mind if i join",
+   "shortAnswer": "「介意我加入吗」的英文是 mind if i join，礼貌询问能否参与，比 Can I join 更委婉。",
+   "definition": "mind if i join 是 Do you mind if I join 的省略，用于熟人、同事或半正式场合。同意说 Not at all 或 Sure，介意才说 Yes。",
+   "examples": [
+    {
+     "en": "Mind if I join? I brought some snacks for the group.",
+     "zh": "介意我加入吗？我带了些零食给大家。"
+    },
+    {
+     "en": "We're about to start the game. Mind if I join in?",
+     "zh": "我们正要开始游戏。介意我加入吗？"
+    }
+   ],
+   "tags": [
+    "社交寒暄"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "mind if i join",
+   "pair": "en-zh",
+   "slug": "mind-if-i-join",
+   "lang": "en",
+   "translation": "介意我加入吗",
+   "shortAnswer": "mind if i join means「介意我加入吗」in Chinese, a polite way to ask to take part.",
+   "definition": "mind if i join is a short form of Do you mind if I join, used with friends or colleagues. To agree, say Not at all or Sure.",
+   "examples": [
+    {
+     "en": "Mind if I join? I brought some snacks for the group.",
+     "zh": "介意我加入吗？我带了些零食给大家。"
+    },
+    {
+     "en": "We're about to start the game. Mind if I join in?",
+     "zh": "我们正要开始游戏。介意我加入吗？"
+    }
+   ],
+   "tags": [
+    "社交寒暄"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "猫舍",
+   "pair": "zh-en",
+   "slug": "mao-she",
+   "lang": "zh",
+   "translation": "cattery",
+   "shortAnswer": "「猫舍」的英文是 cattery，指繁育或寄养猫的场所，正规猫舍通常有血统证书。",
+   "definition": "cattery 指繁育或寄养猫的场所，宠物语境中常指有血统证书的正规猫舍，与后院猫舍相对。",
+   "examples": [
+    {
+     "en": "We spent months looking for a reputable cattery with registered bloodlines before getting our kitten.",
+     "zh": "我们花了几个月寻找一家有注册血统的正规猫舍，才接回小猫。"
+    },
+    {
+     "en": "Backyard breeders sell kittens cheaply, but a good cattery provides health tests and pedigree papers.",
+     "zh": "后院繁育者卖猫很便宜，但正规猫舍会提供健康检测和血统证书。"
+    }
+   ],
+   "tags": [
+    "养宠生活"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "cattery",
+   "pair": "en-zh",
+   "slug": "cattery",
+   "lang": "en",
+   "translation": "猫舍",
+   "shortAnswer": "A cattery is a place where cats are bred or boarded, called 猫舍 in Chinese, often a pedigree breeder.",
+   "definition": "Cattery means a cat breeding or boarding facility; it usually refers to a registered breeder with pedigree papers, not a backyard breeder.",
+   "examples": [
+    {
+     "en": "We spent months looking for a reputable cattery with registered bloodlines before getting our kitten.",
+     "zh": "我们花了几个月寻找一家有注册血统的正规猫舍，才接回小猫。"
+    },
+    {
+     "en": "Backyard breeders sell kittens cheaply, but a good cattery provides health tests and pedigree papers.",
+     "zh": "后院繁育者卖猫很便宜，但正规猫舍会提供健康检测和血统证书。"
+    }
+   ],
+   "tags": [
+    "养宠生活"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "训犬",
+   "pair": "zh-en",
+   "slug": "xun-quan",
+   "lang": "zh",
+   "translation": "dog training",
+   "shortAnswer": "训犬的英文是 dog training，指用奖励与引导教会狗狗坐下、随行等基本行为。",
+   "definition": "dog training 是名词短语，指犬只行为训练；常见搭配有 basic dog training、dog training class。注意 trainer 指人，training 指过程。",
+   "examples": [
+    {
+     "en": "We signed up for a puppy dog training class to help our dog learn to sit and walk nicely on a leash.",
+     "zh": "我们报了一个幼犬训犬课，帮狗狗学会坐下和随行不拽绳。"
+    },
+    {
+     "en": "Modern dog training uses positive reinforcement, so treats and praise replace shouting or punishment.",
+     "zh": "现代训犬采用正向强化，用零食和夸奖代替吼叫或惩罚。"
+    }
+   ],
+   "tags": [
+    "养宠生活"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "dog training",
+   "pair": "en-zh",
+   "slug": "dog-training",
+   "lang": "en",
+   "translation": "训犬",
+   "shortAnswer": "Dog training means 训犬, teaching a dog commands and behavior with rewards.",
+   "definition": "Dog training is the process of teaching a dog behavior, as in basic dog training or a dog training class. A dog trainer is the person.",
+   "examples": [
+    {
+     "en": "We signed up for a puppy dog training class to help our dog learn to sit and walk nicely on a leash.",
+     "zh": "我们报了一个幼犬训犬课，帮狗狗学会坐下和随行不拽绳。"
+    },
+    {
+     "en": "Modern dog training uses positive reinforcement, so treats and praise replace shouting or punishment.",
+     "zh": "现代训犬采用正向强化，用零食和夸奖代替吼叫或惩罚。"
+    }
+   ],
+   "tags": [
+    "养宠生活"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "猫草",
+   "pair": "zh-en",
+   "slug": "mao-cao",
+   "lang": "zh",
+   "translation": "cat grass",
+   "shortAnswer": "猫草的英文是 cat grass，通常指专供猫咪啃食的禾本科嫩草。注意别和 catnip（猫薄荷）搞混，后者是让猫兴奋的荆芥类植物。",
+   "definition": "常见搭配有 grow cat grass、cat grass kit、wheat cat grass。猫草多为小麦、燕麦或大麦苗，用于帮助猫咪吐毛球、补充纤维，属于日常养宠用品。",
+   "examples": [
+    {
+     "en": "My cat ignores expensive toys but goes crazy for the pot of cat grass on the windowsill.",
+     "zh": "我家猫对贵玩具不屑一顾，却对窗台上那盆猫草爱得发狂。"
+    },
+    {
+     "en": "If your cat throws up hairballs often, try growing cat grass at home; it is cheap and easy.",
+     "zh": "如果你家猫经常吐毛球，可以在家种点猫草，便宜又省事。"
+    }
+   ],
+   "tags": [
+    "养宠生活"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "cat grass",
+   "pair": "en-zh",
+   "slug": "cat-grass",
+   "lang": "en",
+   "translation": "猫草",
+   "shortAnswer": "cat grass 的中文意思是猫草，指专门种给猫啃的禾本科嫩草，不是让猫兴奋的 catnip。",
+   "definition": "cat grass 是养宠场景常用词，常见搭配有 grow cat grass、cat grass seeds、wheat cat grass。口语里统称猫草，与 catnip（猫薄荷）功能不同，别混用。",
+   "examples": [
+    {
+     "en": "My cat ignores expensive toys but goes crazy for the pot of cat grass on the windowsill.",
+     "zh": "我家猫对贵玩具不屑一顾，却对窗台上那盆猫草爱得发狂。"
+    },
+    {
+     "en": "If your cat throws up hairballs often, try growing cat grass at home; it is cheap and easy.",
+     "zh": "如果你家猫经常吐毛球，可以在家种点猫草，便宜又省事。"
+    }
+   ],
+   "tags": [
+    "养宠生活"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "狗牌",
+   "pair": "zh-en",
+   "slug": "gou-pai",
+   "lang": "zh",
+   "translation": "dog tag",
+   "shortAnswer": "「狗牌」的英文是 dog tag，指挂在项圈上的宠物身份牌。注意 dog tag 也可指美军士兵的身份牌，语境不同意思就不同。",
+   "definition": "养宠场景里 dog tag 指刻有狗狗名字和主人电话的金属或塑料身份牌，常搭配 wear a dog tag、engrave a dog tag，也可说 ID tag。想强调是宠物牌时，可用 pet ID tag 以免和军用身份牌混淆。",
+   "examples": [
+    {
+     "en": "Make sure your dog wears a dog tag with your current phone number before you let it off-leash.",
+     "zh": "松开牵引绳之前，一定要确保狗狗戴着写有你现在电话号码的狗牌。"
+    },
+    {
+     "en": "The shelter gave every adopted puppy a free dog tag, so even if it slips out the door, someone can call the owner.",
+     "zh": "收容所给每只被领养的小狗免费配了一块狗牌，这样即使它溜出门，也有人能联系上主人。"
+    }
+   ],
+   "tags": [
+    "养宠生活"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "dog tag",
+   "pair": "en-zh",
+   "slug": "dog-tag",
+   "lang": "en",
+   "translation": "狗牌",
+   "shortAnswer": "dog tag 的中文意思是「狗牌」，即挂在宠物项圈上的身份识别牌。它还可指美军士兵的身份牌，靠语境区分。",
+   "definition": "dog tag 在养宠语境指刻有宠物名字、主人联系方式的 ID 牌，常见搭配 wear a dog tag、get a dog tag engraved；口语中也说 pet tag。军用义项同样常见，写宠物内容时最好加 pet 限定。",
+   "examples": [
+    {
+     "en": "Make sure your dog wears a dog tag with your current phone number before you let it off-leash.",
+     "zh": "松开牵引绳之前，一定要确保狗狗戴着写有你现在电话号码的狗牌。"
+    },
+    {
+     "en": "The shelter gave every adopted puppy a free dog tag, so even if it slips out the door, someone can call the owner.",
+     "zh": "收容所给每只被领养的小狗免费配了一块狗牌，这样即使它溜出门，也有人能联系上主人。"
+    }
+   ],
+   "tags": [
+    "养宠生活"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "化毛膏",
+   "pair": "zh-en",
+   "slug": "hua-mao-gao",
+   "lang": "zh",
+   "translation": "hairball remedy",
+   "shortAnswer": "「化毛膏」英文是 hairball remedy，常写作 hairball gel。它靠润滑肠道帮猫排毛球，不是溶解毛球，别被商家话术误导。",
+   "definition": "化毛膏是膏状补充剂，靠矿物油、凡士林等润滑成分促排毛球，并非溶解。英文常说 hairball remedy 或 hairball gel，给猫喂时叫 give the cat hairball remedy。和猫草、排毛粉是替代关系。",
+   "examples": [
+    {
+     "en": "My vet recommended a hairball remedy because my cat kept coughing up fur.",
+     "zh": "兽医推荐了化毛膏，因为我的猫老是咳毛。"
+    },
+    {
+     "en": "If your cat hates hairball gel, you can try cat grass as an alternative.",
+     "zh": "如果你的猫讨厌化毛膏，可以试试猫草作为替代。"
+    }
+   ],
+   "tags": [
+    "养宠生活"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "hairball remedy",
+   "pair": "en-zh",
+   "slug": "hairball-remedy",
+   "lang": "en",
+   "translation": "化毛膏",
+   "shortAnswer": "Hairball remedy 中文意思是「化毛膏」，指帮猫排出毛球的膏状补充剂。它靠润滑促排，不是溶解毛球，和商家宣传有差别。",
+   "definition": "Hairball remedy 是宠物护理词，指猫用化毛膏，也作 hairball gel。常见搭配 give a hairball remedy、hairball remedy for cats。口语里铲屎官直接说 hairball gel。它只润滑促排，不能真正溶解毛球。",
+   "examples": [
+    {
+     "en": "My vet recommended a hairball remedy because my cat kept coughing up fur.",
+     "zh": "兽医推荐了化毛膏，因为我的猫老是咳毛。"
+    },
+    {
+     "en": "If your cat hates hairball gel, you can try cat grass as an alternative.",
+     "zh": "如果你的猫讨厌化毛膏，可以试试猫草作为替代。"
+    }
+   ],
+   "tags": [
+    "养宠生活"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "冻干",
+   "pair": "zh-en",
+   "slug": "dong-gan",
+   "lang": "zh",
+   "translation": "freeze-dried treats",
+   "shortAnswer": "「冻干」的英文是 freeze-dried treats，指低温真空脱水制成的宠物零食，常指零食而非完整主食。",
+   "definition": "冻干即低温真空脱水锁鲜，动词用 freeze-dry。宠物语境下 freeze-dried treats 多指冻干零食，如冻干鸡肉粒。",
+   "examples": [
+    {
+     "en": "I always bring freeze-dried treats on walks because they don't crumble in my pocket.",
+     "zh": "遛狗时我总带冻干零食，因为装在口袋里不会碎。"
+    },
+    {
+     "en": "My cat ignores ordinary kibble but goes crazy for freeze-dried treats.",
+     "zh": "我家猫对普通猫粮爱答不理，却对冻干零食疯狂上头。"
+    }
+   ],
+   "tags": [
+    "养宠生活"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "freeze-dried treats",
+   "pair": "en-zh",
+   "slug": "freeze-dried-treats",
+   "lang": "en",
+   "translation": "冻干",
+   "shortAnswer": "Freeze-dried treats 的中文意思是「冻干」，即低温真空脱水制成的宠物零食，侧重零食而非主食。",
+   "definition": "Freeze-dried treats 指经冷冻干燥处理的宠物零食，常见搭配有 chicken freeze-dried treats。",
+   "examples": [
+    {
+     "en": "I always bring freeze-dried treats on walks because they don't crumble in my pocket.",
+     "zh": "遛狗时我总带冻干零食，因为装在口袋里不会碎。"
+    },
+    {
+     "en": "My cat ignores ordinary kibble but goes crazy for freeze-dried treats.",
+     "zh": "我家猫对普通猫粮爱答不理，却对冻干零食疯狂上头。"
+    }
+   ],
+   "tags": [
+    "养宠生活"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "疫苗",
+   "pair": "zh-en",
+   "slug": "yi-miao",
+   "lang": "zh",
+   "translation": "vaccination shots",
+   "shortAnswer": "「疫苗」在宠物语境下最地道的英文说法是 vaccination shots，比如「打疫苗」就是 get vaccination shots。注意别直译成 vaccine injection。",
+   "definition": "宠物疫苗通常说 vaccination shots，猫三联犬五联叫 combo shots，狂犬疫苗是 rabies shot。动词搭配用 get 或 have：My cat needs her vaccination shots。",
+   "examples": [
+    {
+     "en": "Before boarding your cat, the pet hotel will ask for proof of vaccination shots, so keep the record book handy.",
+     "zh": "寄养猫咪之前，宠物酒店会要求提供疫苗针的接种证明，所以要把疫苗本放在手边。"
+    },
+    {
+     "en": "My dog just got his annual vaccination shots, including the rabies shot, so he's all set for the flight.",
+     "zh": "我的狗刚打完今年的疫苗，包括狂犬疫苗，所以可以放心坐飞机了。"
+    }
+   ],
+   "tags": [
+    "养宠生活"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "vaccination shots",
+   "pair": "en-zh",
+   "slug": "vaccination-shots",
+   "lang": "en",
+   "translation": "疫苗",
+   "shortAnswer": "「vaccination shots」的中文意思是「疫苗」，尤指宠物打的疫苗针，如猫三联、犬五联和狂犬疫苗。shots 更口语，强调打针。",
+   "definition": "Vaccination shots 指宠物接种的疫苗，常说 get/have vaccination shots。a shot 是一针，rabies shot 是狂犬疫苗，combo shots 是联苗。",
+   "examples": [
+    {
+     "en": "Before boarding your cat, the pet hotel will ask for proof of vaccination shots, so keep the record book handy.",
+     "zh": "寄养猫咪之前，宠物酒店会要求提供疫苗针的接种证明，所以要把疫苗本放在手边。"
+    },
+    {
+     "en": "My dog just got his annual vaccination shots, including the rabies shot, so he's all set for the flight.",
+     "zh": "我的狗刚打完今年的疫苗，包括狂犬疫苗，所以可以放心坐飞机了。"
+    }
+   ],
+   "tags": [
+    "养宠生活"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "狗零食",
+   "pair": "zh-en",
+   "slug": "gou-ling-shi",
+   "lang": "zh",
+   "translation": "dog treats",
+   "shortAnswer": "「狗零食」的英文是 dog treats，常用复数；单说 dog treat 指一块零食。",
+   "definition": "dog treats 泛指训练奖励或日常投喂的狗零食，可数，单数 a dog treat。常见搭配：training treats、healthy dog treats、give the dog a treat。",
+   "examples": [
+    {
+     "en": "I always keep a few dog treats in my pocket for training sessions.",
+     "zh": "我总在口袋里放几块狗零食，训练时用。"
+    },
+    {
+     "en": "These freeze-dried dog treats are healthy and easy to break into small pieces.",
+     "zh": "这些冻干狗零食很健康，也容易掰成小块。"
+    }
+   ],
+   "tags": [
+    "养宠生活"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "dog treats",
+   "pair": "en-zh",
+   "slug": "dog-treats",
+   "lang": "en",
+   "translation": "狗零食",
+   "shortAnswer": "dog treats 的中文意思是「狗零食」，指给狗吃的奖励小食，可数，单数 a dog treat。",
+   "definition": "dog treats 是养宠口语与商品页常用词，指狗零食，常用于训练奖励，别与主食 dog food 混用。",
+   "examples": [
+    {
+     "en": "I always keep a few dog treats in my pocket for training sessions.",
+     "zh": "我总在口袋里放几块狗零食，训练时用。"
+    },
+    {
+     "en": "These freeze-dried dog treats are healthy and easy to break into small pieces.",
+     "zh": "这些冻干狗零食很健康，也容易掰成小块。"
+    }
+   ],
+   "tags": [
+    "养宠生活"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "猫条",
+   "pair": "zh-en",
+   "slug": "mao-tiao",
+   "lang": "zh",
+   "translation": "lickable cat treat",
+   "shortAnswer": "「猫条」英文说 lickable cat treat，指管装挤着喂的湿粮猫零食。",
+   "definition": "lickable cat treat 是描述说法，电商常写 lickable treat；日本品牌带火品类，口语常代指猫条。",
+   "examples": [
+    {
+     "en": "My cat goes crazy the moment I tear open a lickable cat treat.",
+     "zh": "我一撕开猫条，我家猫立马就疯了。"
+    },
+    {
+     "en": "Vets suggest mixing a lickable cat treat with water to keep cats hydrated.",
+     "zh": "兽医建议把猫条兑水，帮猫多补充水分。"
+    }
+   ],
+   "tags": [
+    "养宠生活"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "lickable cat treat",
+   "pair": "en-zh",
+   "slug": "lickable-cat-treat",
+   "lang": "en",
+   "translation": "猫条",
+   "shortAnswer": "A lickable cat treat is a 猫条, a creamy tube snack cats lick from the wrapper.",
+   "definition": "A lickable cat treat is a soft paste in a tear-open tube, squeezed out for cats to lick; an informal pet-owner word.",
+   "examples": [
+    {
+     "en": "My cat goes crazy the moment I tear open a lickable cat treat.",
+     "zh": "我一撕开猫条，我家猫立马就疯了。"
+    },
+    {
+     "en": "Vets suggest mixing a lickable cat treat with water to keep cats hydrated.",
+     "zh": "兽医建议把猫条兑水，帮猫多补充水分。"
+    }
+   ],
+   "tags": [
+    "养宠生活"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "航空箱",
+   "pair": "zh-en",
+   "slug": "hang-kong-xiang",
+   "lang": "zh",
+   "translation": "pet travel carrier",
+   "shortAnswer": "航空箱英文是 pet travel carrier，指航司认可的宠物托运箱，可货舱或客舱使用。",
+   "definition": "航空箱是符合国际航协及航司规格的宠物运输箱：宠物能站立转身、三面通风、底盘防漏、门锁牢固，常用于货舱托运或客舱携带。",
+   "examples": [
+    {
+     "en": "Most airlines require your dog to fly in an airline-approved pet travel carrier that meets IATA size and ventilation rules.",
+     "zh": "大多数航空公司要求狗狗乘坐符合国际航协尺寸和通风规定的航空箱飞行。"
+    },
+    {
+     "en": "She bought a sturdy pet travel carrier with a leak-proof tray before the international move.",
+     "zh": "国际搬家前，她买了一个带防漏底盘、结实的航空箱。"
+    }
+   ],
+   "tags": [
+    "养宠生活"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "pet travel carrier",
+   "pair": "en-zh",
+   "slug": "pet-travel-carrier",
+   "lang": "en",
+   "translation": "航空箱",
+   "shortAnswer": "航空箱 in English is pet travel carrier, an airline-approved crate for pets in cargo or cabin.",
+   "definition": "A pet travel carrier is a hard or soft crate meeting IATA and airline rules, used for cargo or cabin pet travel.",
+   "examples": [
+    {
+     "en": "Most airlines require your dog to fly in an airline-approved pet travel carrier that meets IATA size and ventilation rules.",
+     "zh": "大多数航空公司要求狗狗乘坐符合国际航协尺寸和通风规定的航空箱飞行。"
+    },
+    {
+     "en": "She bought a sturdy pet travel carrier with a leak-proof tray before the international move.",
+     "zh": "国际搬家前，她买了一个带防漏底盘、结实的航空箱。"
+    }
+   ],
+   "tags": [
+    "养宠生活"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "指甲剪",
+   "pair": "zh-en",
+   "slug": "zhi-jia-jian",
+   "lang": "zh",
+   "translation": "pet nail trim",
+   "shortAnswer": "「指甲剪」在养宠场景常说 pet nail trim，指宠物指甲剪或给宠物剪指甲。",
+   "definition": "养宠场景里，pet nail trim 可指宠物指甲剪，也可指给宠物剪指甲的护理行为。常见搭配有 do a pet nail trim、pet nail trim clipper。",
+   "examples": [
+    {
+     "en": "My cat hates getting a pet nail trim, so I have to wrap her in a towel first.",
+     "zh": "我家猫特别讨厌剪指甲，所以我得先用毛巾把它裹起来。"
+    },
+    {
+     "en": "Before you buy a pet nail trim, check whether the blade is sharp enough for thick dog claws.",
+     "zh": "买宠物指甲剪之前，先确认刀片是否够锋利，能剪得动狗狗厚厚的爪子。"
+    }
+   ],
+   "tags": [
+    "养宠生活"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "pet nail trim",
+   "pair": "en-zh",
+   "slug": "pet-nail-trim",
+   "lang": "en",
+   "translation": "指甲剪",
+   "shortAnswer": "Pet nail trim 就是「指甲剪」，指宠物指甲剪或给宠物剪指甲，别和人用的 nail clipper 混用。",
+   "definition": "Pet nail trim 指宠物指甲修剪，既可作名词，也可表示护理行为。常见搭配有 give the dog a pet nail trim、pet nail trim clipper。",
+   "examples": [
+    {
+     "en": "My cat hates getting a pet nail trim, so I have to wrap her in a towel first.",
+     "zh": "我家猫特别讨厌剪指甲，所以我得先用毛巾把它裹起来。"
+    },
+    {
+     "en": "Before you buy a pet nail trim, check whether the blade is sharp enough for thick dog claws.",
+     "zh": "买宠物指甲剪之前，先确认刀片是否够锋利，能剪得动狗狗厚厚的爪子。"
+    }
+   ],
+   "tags": [
+    "养宠生活"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "洗澡",
+   "pair": "zh-en",
+   "slug": "xi-zao",
+   "lang": "zh",
+   "translation": "pet bath session",
+   "shortAnswer": "「洗澡」在养宠语境下常说的英文是 pet bath session；给宠物洗澡通常用 give a pet bath session。",
+   "definition": "pet bath session 特指给宠物（猫狗等）洗澡的完整流程，从打湿、上宠物香波到冲洗吹干。日常也说 bath time，但 pet bath session 更强调一次完整洗护。",
+   "examples": [
+    {
+     "en": "My dog hates water, so a pet bath session usually turns into a wrestling match in the tub.",
+     "zh": "我的狗怕水，所以给它洗澡通常变成在浴缸里的一场摔跤。"
+    },
+    {
+     "en": "After the pet bath session, I always give my cat a treat and let her nap in the sun.",
+     "zh": "给猫洗完澡后，我总会给它一点零食，让它在太阳下打个盹。"
+    }
+   ],
+   "tags": [
+    "养宠生活"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "pet bath session",
+   "pair": "en-zh",
+   "slug": "pet-bath-session",
+   "lang": "en",
+   "translation": "洗澡",
+   "shortAnswer": "pet bath session 的中文意思是「洗澡」，尤其指给宠物做一次完整洗护；专用于猫狗等宠物的洗澡场景。",
+   "definition": "pet bath session 指给宠物洗澡的一次完整流程，包括打湿、上宠物香波、冲洗和吹干。常见搭配：give the dog a pet bath session、a weekly pet bath session。",
+   "examples": [
+    {
+     "en": "My dog hates water, so a pet bath session usually turns into a wrestling match in the tub.",
+     "zh": "我的狗怕水，所以给它洗澡通常变成在浴缸里的一场摔跤。"
+    },
+    {
+     "en": "After the pet bath session, I always give my cat a treat and let her nap in the sun.",
+     "zh": "给猫洗完澡后，我总会给它一点零食，让它在太阳下打个盹。"
+    }
+   ],
+   "tags": [
+    "养宠生活"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "狗公园",
+   "pair": "zh-en",
+   "slug": "gou-gong-yuan",
+   "lang": "zh",
+   "translation": "dog park",
+   "shortAnswer": "「狗公园」的英文是 dog park，指专门让狗不牵绳自由活动的封闭场地。别直译成 dog garden，那是「狗的花园」。",
+   "definition": "dog park 是可数名词，美式常用，指围起来、允许狗不牵绳社交奔跑的公共绿地。常见搭配：go to the dog park、dog park etiquette（礼仪）。英式有时说 dog walking field。",
+   "examples": [
+    {
+     "en": "We take our golden retriever to the dog park every Saturday morning so she can run off-leash.",
+     "zh": "我们每周六早上带金毛去狗公园，让它不牵绳自由奔跑。"
+    },
+    {
+     "en": "Before entering the dog park, make sure your dog is vaccinated and not aggressive toward other dogs.",
+     "zh": "进狗公园之前，要确认你的狗已接种疫苗，且对其他狗没有攻击性。"
+    }
+   ],
+   "tags": [
+    "养宠生活"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "dog park",
+   "pair": "en-zh",
+   "slug": "dog-park",
+   "lang": "en",
+   "translation": "狗公园",
+   "shortAnswer": "dog park 的中文意思是「狗公园」，即供狗不牵绳自由活动的封闭场地，强调不牵绳社交空间。",
+   "definition": "dog park 是可数名词，多用于美式英语，指专门划出、通常有围栏、允许狗不牵绳活动的公园区域。常见搭配：take the dog to the dog park。不要与 dog run（较小的围栏活动区）混淆。",
+   "examples": [
+    {
+     "en": "We take our golden retriever to the dog park every Saturday morning so she can run off-leash.",
+     "zh": "我们每周六早上带金毛去狗公园，让它不牵绳自由奔跑。"
+    },
+    {
+     "en": "Before entering the dog park, make sure your dog is vaccinated and not aggressive toward other dogs.",
+     "zh": "进狗公园之前，要确认你的狗已接种疫苗，且对其他狗没有攻击性。"
+    }
+   ],
+   "tags": [
+    "养宠生活"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "训猫",
+   "pair": "zh-en",
+   "slug": "xun-mao",
+   "lang": "zh",
+   "translation": "cat training",
+   "shortAnswer": "训猫的英文是 cat training，指用奖励教会猫咪用猫砂、不抓家具等行为。",
+   "definition": "cat training 常搭配 do、start、tips、pads。训练猫讲究短时多次、零食奖励，铲屎官常说 training my cat to use the litter box。",
+   "examples": [
+    {
+     "en": "With patience and treats, cat training can teach your kitten to use the litter box in days.",
+     "zh": "只要有耐心和零食，训猫能在几天内教会小猫使用猫砂盆。"
+    },
+    {
+     "en": "Many cat training guides suggest short sessions because cats lose interest quickly.",
+     "zh": "许多训猫指南建议每次训练时间要短，因为猫很快就会失去兴趣。"
+    }
+   ],
+   "tags": [
+    "养宠生活"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "cat training",
+   "pair": "en-zh",
+   "slug": "cat-training",
+   "lang": "en",
+   "translation": "训猫",
+   "shortAnswer": "Cat training is 训猫 in Chinese: teaching a cat good habits like using a litter box.",
+   "definition": "Cat training means shaping behavior with treats or clickers. Common collocations: cat training tips, litter box training, cat training pads.",
+   "examples": [
+    {
+     "en": "With patience and treats, cat training can teach your kitten to use the litter box in days.",
+     "zh": "只要有耐心和零食，训猫能在几天内教会小猫使用猫砂盆。"
+    },
+    {
+     "en": "Many cat training guides suggest short sessions because cats lose interest quickly.",
+     "zh": "许多训猫指南建议每次训练时间要短，因为猫很快就会失去兴趣。"
+    }
+   ],
+   "tags": [
+    "养宠生活"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "猫爬架",
+   "pair": "zh-en",
+   "slug": "mao-pa-jia",
+   "lang": "zh",
+   "translation": "cat tree",
+   "shortAnswer": "「猫爬架」英文是 cat tree，宠物店和电商都这么说，别直译成 cat climbing frame。",
+   "definition": "cat tree 是可数名词，指供猫攀爬、磨爪、休息的多层家具，也叫 cat tower 或 cat condo。买用品说 buy a cat tree。",
+   "examples": [
+    {
+     "en": "We bought a tall cat tree so our two cats would stop scratching the sofa.",
+     "zh": "我们买了一个高的猫爬架，这样两只猫就不会再抓沙发了。"
+    },
+    {
+     "en": "The kitten spends all afternoon napping on the top platform of the cat tree.",
+     "zh": "这只小猫整个下午都趴在猫爬架顶层的平台上打盹。"
+    }
+   ],
+   "tags": [
+    "养宠生活"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "cat tree",
+   "pair": "en-zh",
+   "slug": "cat-tree",
+   "lang": "en",
+   "translation": "猫爬架",
+   "shortAnswer": "A cat tree is a 猫爬架 in Chinese: a multi-level piece for cats to climb and scratch.",
+   "definition": "cat tree 指多层猫用攀爬家具，口语常与 cat tower、cat condo 换用。搭配：climb the cat tree、a tall cat tree。",
+   "examples": [
+    {
+     "en": "We bought a tall cat tree so our two cats would stop scratching the sofa.",
+     "zh": "我们买了一个高的猫爬架，这样两只猫就不会再抓沙发了。"
+    },
+    {
+     "en": "The kitten spends all afternoon napping on the top platform of the cat tree.",
+     "zh": "这只小猫整个下午都趴在猫爬架顶层的平台上打盹。"
+    }
+   ],
+   "tags": [
+    "养宠生活"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "私教",
+   "pair": "zh-en",
+   "slug": "si-jiao",
+   "lang": "zh",
+   "translation": "personal trainer",
+   "shortAnswer": "「私教」的英文是 personal trainer，指一对一指导你训练的人。注意 personal trainer 侧重健身教练，学校的私人教师一般说 private tutor。",
+   "definition": "personal trainer 指在健身房提供一对一指导的专业教练，常搭配 hire a personal trainer、work with a personal trainer。若指学科补习的私教，英语更常用 private tutor，别混用。",
+   "examples": [
+    {
+     "en": "I hired a personal trainer to help me improve my squat form.",
+     "zh": "我请了一位私教来帮我改进深蹲姿势。"
+    },
+    {
+     "en": "My personal trainer designed a weekly plan that mixes strength training with cardio.",
+     "zh": "我的私教制定了一份把力量训练和有氧结合起来的每周计划。"
+    }
+   ],
+   "tags": [
+    "健身与健康"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "personal trainer",
+   "pair": "en-zh",
+   "slug": "personal-trainer",
+   "lang": "en",
+   "translation": "私教",
+   "shortAnswer": "personal trainer 的中文意思是「私教」，即健身房裡一对一指导你训练的教练。它强调健身训练，不等同于教文化课的 private tutor。",
+   "definition": "personal trainer 指受雇于个人、定制训练计划的健身教练。常见搭配 hire/work with a personal trainer、certified personal trainer。口语中可简称 PT，正式场合仍用全称。",
+   "examples": [
+    {
+     "en": "I hired a personal trainer to help me improve my squat form.",
+     "zh": "我请了一位私教来帮我改进深蹲姿势。"
+    },
+    {
+     "en": "My personal trainer designed a weekly plan that mixes strength training with cardio.",
+     "zh": "我的私教制定了一份把力量训练和有氧结合起来的每周计划。"
+    }
+   ],
+   "tags": [
+    "健身与健康"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "代餐",
+   "pair": "zh-en",
+   "slug": "dai-can",
+   "lang": "zh",
+   "translation": "meal replacement",
+   "shortAnswer": "「代餐」的英文是 meal replacement，指替代正餐的粉末或奶昔，主打控热量。",
+   "definition": "代餐对应 meal replacement，常见搭配有 meal replacement shake 与 meal replacement powder。它多用于减重语境，长期替代三餐易营养不足。",
+   "examples": [
+    {
+     "en": "She skipped lunch and had a meal replacement shake instead, hoping to cut calories.",
+     "zh": "她没吃午饭，只喝了一杯代餐奶昔，想减少热量摄入。"
+    },
+    {
+     "en": "Nutritionists warn that using meal replacement products for all three meals can lead to nutrient deficiencies.",
+     "zh": "营养学家警告，一日三餐都吃代餐产品可能导致营养缺乏。"
+    }
+   ],
+   "tags": [
+    "健身与健康"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "meal replacement",
+   "pair": "en-zh",
+   "slug": "meal-replacement",
+   "lang": "en",
+   "translation": "代餐",
+   "shortAnswer": "meal replacement 的中文是「代餐」，指替代正餐的粉末或奶昔，主打低热量与减重。",
+   "definition": "meal replacement 指代餐，常见搭配有 meal replacement shake 和 meal replacement powder。它不等于可长期代替三餐，营养易失衡。",
+   "examples": [
+    {
+     "en": "She skipped lunch and had a meal replacement shake instead, hoping to cut calories.",
+     "zh": "她没吃午饭，只喝了一杯代餐奶昔，想减少热量摄入。"
+    },
+    {
+     "en": "Nutritionists warn that using meal replacement products for all three meals can lead to nutrient deficiencies.",
+     "zh": "营养学家警告，一日三餐都吃代餐产品可能导致营养缺乏。"
+    }
+   ],
+   "tags": [
+    "健身与健康"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "健身打卡",
+   "pair": "zh-en",
+   "slug": "jian-shen-da-ka",
+   "lang": "zh",
+   "translation": "gym check-in",
+   "shortAnswer": "「健身打卡」英文常说 gym check-in，指每天坚持去健身房并记录晒图，是社交坚持文化",
+   "definition": "gym check-in 侧重坚持记录并晒出，可搭配 do a gym check-in；若只表示到店签到，用 check in at the gym 更准确。",
+   "examples": [
+    {
+     "en": "I’ve kept up my gym check-in for thirty days straight, and my friends are all reacting to my posts.",
+     "zh": "我已经连续三十天健身打卡，朋友们都在给我的帖子点赞留言。"
+    },
+    {
+     "en": "Her gym check-in photos always include a sweaty selfie and a short note about her workout.",
+     "zh": "她的健身打卡照片总是包括一张流汗自拍和一段简短的训练记录。"
+    }
+   ],
+   "tags": [
+    "健身与健康"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "gym check-in",
+   "pair": "en-zh",
+   "slug": "gym-check-in",
+   "lang": "en",
+   "translation": "健身打卡",
+   "shortAnswer": "Gym check-in means “健身打卡”: the social habit of logging and posting your daily workout online.",
+   "definition": "Gym check-in 指“健身打卡”，常搭配 do a gym check-in、daily gym check-in，多用于社交媒体；若指实体签到，则用 check in at the gym。",
+   "examples": [
+    {
+     "en": "I’ve kept up my gym check-in for thirty days straight, and my friends are all reacting to my posts.",
+     "zh": "我已经连续三十天健身打卡，朋友们都在给我的帖子点赞留言。"
+    },
+    {
+     "en": "Her gym check-in photos always include a sweaty selfie and a short note about her workout.",
+     "zh": "她的健身打卡照片总是包括一张流汗自拍和一段简短的训练记录。"
+    }
+   ],
+   "tags": [
+    "健身与健康"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "戒糖",
+   "pair": "zh-en",
+   "slug": "jie-tang",
+   "lang": "zh",
+   "translation": "quitting sugar",
+   "shortAnswer": "「戒糖」的英文是 quitting sugar，指主动停止吃添加糖或含糖食品，强调戒断行为。",
+   "definition": "quitting sugar 常与 quit 或 be 连用，表示正在戒糖或已戒糖；口语中也可说 give up sugar，但 quitting sugar 更突出戒断过程。",
+   "examples": [
+    {
+     "en": "Since quitting sugar three months ago, she has lost weight and her skin has cleared up.",
+     "zh": "自从三个月前戒糖以来，她瘦了，皮肤也变好了。"
+    },
+    {
+     "en": "Quitting sugar is harder than it sounds because added sugar hides in sauces and drinks.",
+     "zh": "戒糖说起来容易做起来难，因为添加糖藏在酱料和饮料里。"
+    }
+   ],
+   "tags": [
+    "健身与健康"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "quitting sugar",
+   "pair": "en-zh",
+   "slug": "quitting-sugar",
+   "lang": "en",
+   "translation": "戒糖",
+   "shortAnswer": "Quitting sugar 的中文意思是「戒糖」，即停止摄入添加糖或高糖食物，强调彻底戒断。",
+   "definition": "quitting sugar 是口语和书面皆可的动名词短语，常搭配 try、be、go through with。注意 quit 后直接跟 sugar，不说 quit from sugar。",
+   "examples": [
+    {
+     "en": "Since quitting sugar three months ago, she has lost weight and her skin has cleared up.",
+     "zh": "自从三个月前戒糖以来，她瘦了，皮肤也变好了。"
+    },
+    {
+     "en": "Quitting sugar is harder than it sounds because added sugar hides in sauces and drinks.",
+     "zh": "戒糖说起来容易做起来难，因为添加糖藏在酱料和饮料里。"
+    }
+   ],
+   "tags": [
+    "健身与健康"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "轻断食",
+   "pair": "zh-en",
+   "slug": "qing-duan-shi",
+   "lang": "zh",
+   "translation": "intermittent fasting",
+   "shortAnswer": "「轻断食」的英文是 intermittent fasting，常缩写为 IF。注意「轻」指限时段或限热量，不是完全不吃。",
+   "definition": "指 16:8、5:2 等限时或限热量进食法。常用搭配：do intermittent fasting、try 16:8。英文口语常说 IF，不说 light fasting。",
+   "examples": [
+    {
+     "en": "She practices intermittent fasting with an 8-hour eating window and skips breakfast.",
+     "zh": "她采用轻断食，把进食窗口控制在八小时，并且不吃早餐。"
+    },
+    {
+     "en": "Many people try intermittent fasting to lose weight, but it is not a magic cure.",
+     "zh": "很多人尝试轻断食来减肥，但它并不是灵丹妙药。"
+    }
+   ],
+   "tags": [
+    "健身与健康"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "intermittent fasting",
+   "pair": "en-zh",
+   "slug": "intermittent-fasting",
+   "lang": "en",
+   "translation": "轻断食",
+   "shortAnswer": "Intermittent fasting 的中文是「轻断食」，指 16:8 或 5:2 等限时进食法。不是完全禁食，而是限制进食窗口或热量。",
+   "definition": "常见搭配：practice/do intermittent fasting、16:8 intermittent fasting。正式场合用全称，口语常缩写为 IF。注意与 starvation、full fasting 区分。",
+   "examples": [
+    {
+     "en": "She practices intermittent fasting with an 8-hour eating window and skips breakfast.",
+     "zh": "她采用轻断食，把进食窗口控制在八小时，并且不吃早餐。"
+    },
+    {
+     "en": "Many people try intermittent fasting to lose weight, but it is not a magic cure.",
+     "zh": "很多人尝试轻断食来减肥，但它并不是灵丹妙药。"
+    }
+   ],
+   "tags": [
+    "健身与健康"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "增重",
+   "pair": "zh-en",
+   "slug": "zeng-zhong",
+   "lang": "zh",
+   "translation": "bulking up",
+   "shortAnswer": "「增重」的英文是 bulking up，特指健身增肌，常与 go on a bulk 搭配。",
+   "definition": "bulking up 指健身者通过力量训练与高蛋白饮食增加肌肉量。名词形式 a bulk，如 clean bulk 指干净增肌。",
+   "examples": [
+    {
+     "en": "He's been bulking up for six months and has gained ten pounds of muscle.",
+     "zh": "他增重了六个月，长了十磅肌肉。"
+    },
+    {
+     "en": "If you want to bulk up, you need to eat more protein and lift heavy weights.",
+     "zh": "如果你想增重，就需要多吃蛋白质并做大重量训练。"
+    }
+   ],
+   "tags": [
+    "健身与健康"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "bulking up",
+   "pair": "en-zh",
+   "slug": "bulking-up",
+   "lang": "en",
+   "translation": "增重",
+   "shortAnswer": "Bulking up means 增重 in fitness, gaining muscle via training and a calorie surplus.",
+   "definition": "Bulking up is gaining weight, mostly muscle, through strength training and eating more. The noun is a bulk, as in a clean bulk.",
+   "examples": [
+    {
+     "en": "He's been bulking up for six months and has gained ten pounds of muscle.",
+     "zh": "他增重了六个月，长了十磅肌肉。"
+    },
+    {
+     "en": "If you want to bulk up, you need to eat more protein and lift heavy weights.",
+     "zh": "如果你想增重，就需要多吃蛋白质并做大重量训练。"
+    }
+   ],
+   "tags": [
+    "健身与健康"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "跑步机",
+   "pair": "zh-en",
+   "slug": "pao-bu-ji",
+   "lang": "zh",
+   "translation": "treadmill",
+   "shortAnswer": "「跑步机」的英文是 treadmill，指健身房中让人原地跑动的有氧器械；注意其也可引申为「枯燥单调的工作或生活」。",
+   "definition": "作「跑步机」时是可数名词，常用搭配：run on the treadmill、treadmill workout、set the treadmill to incline。口语也说 hop on the treadmill。",
+   "examples": [
+    {
+     "en": "He runs on the treadmill for thirty minutes every morning before breakfast.",
+     "zh": "他每天早饭前在跑步机上跑三十分钟。"
+    },
+    {
+     "en": "The treadmill at the gym was broken, so she decided to run outside instead.",
+     "zh": "健身房那台跑步机坏了，所以她决定改去户外跑。"
+    }
+   ],
+   "tags": [
+    "健身与健康"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "treadmill",
+   "pair": "en-zh",
+   "slug": "treadmill",
+   "lang": "en",
+   "translation": "跑步机",
+   "shortAnswer": "Treadmill 的中文意思是「跑步机」，即健身房中让人原地跑动的有氧器械，也可引申指「枯燥单调的工作或生活」。",
+   "definition": "核心义为「跑步机」，常见搭配有 on the treadmill、treadmill run、treadmill belt。口语常用 go on the treadmill。引申义指周而复始的枯燥状态。",
+   "examples": [
+    {
+     "en": "He runs on the treadmill for thirty minutes every morning before breakfast.",
+     "zh": "他每天早饭前在跑步机上跑三十分钟。"
+    },
+    {
+     "en": "The treadmill at the gym was broken, so she decided to run outside instead.",
+     "zh": "健身房那台跑步机坏了，所以她决定改去户外跑。"
+    }
+   ],
+   "tags": [
+    "健身与健康"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "体测",
+   "pair": "zh-en",
+   "slug": "ti-ce",
+   "lang": "zh",
+   "translation": "body composition test",
+   "shortAnswer": "体测的英文是 body composition test，指健身房用仪器测体脂率、肌肉量的身体成分测试，不等于体检。",
+   "definition": "体测即身体成分测试，常用搭配 do a body composition test、get a body composition test。它测的是体脂率、肌肉量等健身数据，体检则是查疾病的健康筛查。",
+   "examples": [
+    {
+     "en": "I get a body composition test every three months to track my body fat percentage.",
+     "zh": "我每三个月做一次体测，跟踪自己的体脂率。"
+    },
+    {
+     "en": "The gym offers a free body composition test for new members.",
+     "zh": "这家健身房为新会员提供一次免费体测。"
+    }
+   ],
+   "tags": [
+    "健身与健康"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "body composition test",
+   "pair": "en-zh",
+   "slug": "body-composition-test",
+   "lang": "en",
+   "translation": "体测",
+   "shortAnswer": "body composition test 的中文意思是体测，指测量体脂率、肌肉量等身体成分的测试，不同于体检。",
+   "definition": "body composition test 是健身语境下的体测，常用搭配 get a body composition test、body comp test。易错点：别和 medical checkup 体检混淆。",
+   "examples": [
+    {
+     "en": "I get a body composition test every three months to track my body fat percentage.",
+     "zh": "我每三个月做一次体测，跟踪自己的体脂率。"
+    },
+    {
+     "en": "The gym offers a free body composition test for new members.",
+     "zh": "这家健身房为新会员提供一次免费体测。"
+    }
+   ],
+   "tags": [
+    "健身与健康"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "燃脂",
+   "pair": "zh-en",
+   "slug": "ran-zhi",
+   "lang": "zh",
+   "translation": "fat burning",
+   "shortAnswer": "「燃脂」的英文是 fat burning，作形容词或名词短语，如 fat-burning workout。别直译成 burn fat，那是动词短语。",
+   "definition": "fat burning 指身体消耗脂肪供能的过程，常见搭配有 fat burning zone、fat burning exercise。作定语时通常加连字符写成 fat-burning。口语中也可说 burn fat，但那是动词用法。",
+   "examples": [
+    {
+     "en": "To stay in the fat burning zone, keep your heart rate between 60 and 70 percent of your maximum.",
+     "zh": "为了保持在燃脂心率区间，请将心率控制在最大心率的百分之六十到七十之间。"
+    },
+    {
+     "en": "Many people believe that morning cardio is the best fat burning workout, but consistency matters more.",
+     "zh": "很多人认为晨间有氧是最好的燃脂训练，但坚持比训练时间更重要。"
+    }
+   ],
+   "tags": [
+    "健身与健康"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "fat burning",
+   "pair": "en-zh",
+   "slug": "fat-burning",
+   "lang": "en",
+   "translation": "燃脂",
+   "shortAnswer": "fat burning 的中文意思是「燃脂」，指身体消耗脂肪供能的过程，强调脂肪作为燃料被氧化，不同于单纯减重。",
+   "definition": "fat burning 作名词或形容词，常见搭配有 fat burning zone、fat-burning foods。健身语境中指中低强度长时间运动；口语中也可说 burn fat。注意与 fat loss 区别。",
+   "examples": [
+    {
+     "en": "To stay in the fat burning zone, keep your heart rate between 60 and 70 percent of your maximum.",
+     "zh": "为了保持在燃脂心率区间，请将心率控制在最大心率的百分之六十到七十之间。"
+    },
+    {
+     "en": "Many people believe that morning cardio is the best fat burning workout, but consistency matters more.",
+     "zh": "很多人认为晨间有氧是最好的燃脂训练，但坚持比训练时间更重要。"
+    }
+   ],
+   "tags": [
+    "健身与健康"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "节食",
+   "pair": "zh-en",
+   "slug": "jie-shi",
+   "lang": "zh",
+   "translation": "dieting",
+   "shortAnswer": "「节食」的英文是 dieting，指为减重而控制饮食，注意与名词 diet（日常饮食）区分。",
+   "definition": "dieting 侧重长期限制热量摄入来减重，常搭配 go on a diet、crash dieting；与 healthy eating 不同，它隐含减肥目的。",
+   "examples": [
+    {
+     "en": "She has been dieting for three months and finally lost five kilos.",
+     "zh": "她已经节食三个月，终于瘦了五公斤。"
+    },
+    {
+     "en": "Crash dieting may help you lose weight fast, but it is hard to keep the results.",
+     "zh": "极端节食也许能让你快速瘦身，但效果很难保持。"
+    }
+   ],
+   "tags": [
+    "健身与健康"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "dieting",
+   "pair": "en-zh",
+   "slug": "dieting",
+   "lang": "en",
+   "translation": "节食",
+   "shortAnswer": "Dieting means 「节食」in Chinese: eating less to lose weight, unlike a diet (日常饮食) or healthy eating.",
+   "definition": "Dieting is restricting food or calories to lose weight, as in crash dieting. It implies a weight-loss goal and can sound slightly negative.",
+   "examples": [
+    {
+     "en": "She has been dieting for three months and finally lost five kilos.",
+     "zh": "她已经节食三个月，终于瘦了五公斤。"
+    },
+    {
+     "en": "Crash dieting may help you lose weight fast, but it is hard to keep the results.",
+     "zh": "极端节食也许能让你快速瘦身，但效果很难保持。"
+    }
+   ],
+   "tags": [
+    "健身与健康"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "平板支撑",
+   "pair": "zh-en",
+   "slug": "ping-ban-zhi-cheng",
+   "lang": "zh",
+   "translation": "plank",
+   "shortAnswer": "「平板支撑」的英文是 plank，指一种用前臂和脚尖撑地、身体保持一条直线的核心训练动作。注意别和「侧平板支撑」side plank 混淆，后者是侧向支撑。",
+   "definition": "plank 是核心训练的基础静力动作，常见搭配有 do a plank、hold a plank、front plank，复数 planks 指多组。日常说「撑平板」就用 hold a plank。",
+   "examples": [
+    {
+     "en": "She holds a plank for two minutes every morning to strengthen her core.",
+     "zh": "她每天早上做两分钟平板支撑来强化核心。"
+    },
+    {
+     "en": "If regular planks feel too easy, try lifting one arm or leg while you hold the position.",
+     "zh": "如果普通平板支撑对你来说太轻松，可以尝试在保持姿势时抬起一只手臂或一条腿。"
+    }
+   ],
+   "tags": [
+    "健身与健康"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "plank",
+   "pair": "en-zh",
+   "slug": "plank",
+   "lang": "en",
+   "translation": "平板支撑",
+   "shortAnswer": "Plank 在中文里是「平板支撑」，一种用前臂和脚尖撑地、身体绷直的核心静力训练动作。它和 side plank（侧平板支撑）不同，后者身体侧向支撑。",
+   "definition": "plank 作名词指平板支撑动作，也作动词表示做平板支撑。常见搭配有 hold a plank、do planks、plank challenge。口语中常说 I'm gonna plank for two minutes。",
+   "examples": [
+    {
+     "en": "She holds a plank for two minutes every morning to strengthen her core.",
+     "zh": "她每天早上做两分钟平板支撑来强化核心。"
+    },
+    {
+     "en": "If regular planks feel too easy, try lifting one arm or leg while you hold the position.",
+     "zh": "如果普通平板支撑对你来说太轻松，可以尝试在保持姿势时抬起一只手臂或一条腿。"
+    }
+   ],
+   "tags": [
+    "健身与健康"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "核心训练",
+   "pair": "zh-en",
+   "slug": "he-xin-xun-lian",
+   "lang": "zh",
+   "translation": "core training",
+   "shortAnswer": "核心训练用英语说是 core training，指针对腰腹、下背和骨盆区域稳定肌群的训练体系。口语也常说 core workout，但更强调单次训练课。",
+   "definition": "常见搭配有 do core training、core training exercises、core strength。注意它指训练方式，不是肌肉本身；也不宜一律译为核心力量训练，后者更接近 core strength training。",
+   "examples": [
+    {
+     "en": "I do core training three times a week to improve my posture and reduce lower back pain.",
+     "zh": "我每周做三次核心训练，以改善体态并减轻下背疼痛。"
+    },
+    {
+     "en": "Our coach says core training is more important than endless sit-ups for building real strength.",
+     "zh": "我们的教练说，想要真正提升力量，核心训练比没完没了地做仰卧起坐更重要。"
+    }
+   ],
+   "tags": [
+    "健身与健康"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "core training",
+   "pair": "en-zh",
+   "slug": "core-training",
+   "lang": "en",
+   "translation": "核心训练",
+   "shortAnswer": "Core training 的中文意思是核心训练，指锻炼腹部、下背和骨盆稳定肌群的训练。与 core workout 不同，core training 更强调系统性和长期性。",
+   "definition": "Core training 是健身领域常用中性表达，可搭配 do core training、core training routine、core training exercises。它不等于 abs training，核心训练还包括稳定、平衡和发力传导。",
+   "examples": [
+    {
+     "en": "I do core training three times a week to improve my posture and reduce lower back pain.",
+     "zh": "我每周做三次核心训练，以改善体态并减轻下背疼痛。"
+    },
+    {
+     "en": "Our coach says core training is more important than endless sit-ups for building real strength.",
+     "zh": "我们的教练说，想要真正提升力量，核心训练比没完没了地做仰卧起坐更重要。"
+    }
+   ],
+   "tags": [
+    "健身与健康"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "心率",
+   "pair": "zh-en",
+   "slug": "xin-lv",
+   "lang": "zh",
+   "translation": "heart rate",
+   "shortAnswer": "「心率」的英文是 heart rate，指每分钟心跳的次数。注意与 pulse（脉搏）区分：heart rate 是数值，pulse 是能摸到的跳动。",
+   "definition": "heart rate 常用于运动与医疗语境，如 resting heart rate（静息心率）、target heart rate（目标心率）、elevated heart rate（心率升高）。健身里说的燃脂心率即 fat-burning heart rate zone。",
+   "examples": [
+    {
+     "en": "My resting heart rate dropped from 78 to 62 after three months of regular running.",
+     "zh": "坚持跑步三个月后，我的静息心率从 78 降到了 62。"
+    },
+    {
+     "en": "The smartwatch keeps tracking your heart rate during the whole workout.",
+     "zh": "这款智能手表会在整个训练过程中持续监测你的心率。"
+    }
+   ],
+   "tags": [
+    "健身与健康"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "heart rate",
+   "pair": "en-zh",
+   "slug": "heart-rate",
+   "lang": "en",
+   "translation": "心率",
+   "shortAnswer": "「heart rate」的中文意思是「心率」，即每分钟心跳的次数。它与 pulse（脉搏）不同：heart rate 是频率数值，pulse 是触摸到的搏动。",
+   "definition": "heart rate 是健身与医学常用词，指静息、运动或异常状态下的心跳频率。常见搭配有 resting heart rate、max heart rate、heart rate monitor（心率监测器）。",
+   "examples": [
+    {
+     "en": "My resting heart rate dropped from 78 to 62 after three months of regular running.",
+     "zh": "坚持跑步三个月后，我的静息心率从 78 降到了 62。"
+    },
+    {
+     "en": "The smartwatch keeps tracking your heart rate during the whole workout.",
+     "zh": "这款智能手表会在整个训练过程中持续监测你的心率。"
+    }
+   ],
+   "tags": [
+    "健身与健康"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "退款保证",
+   "pair": "zh-en",
+   "slug": "tui-kuan-bao-zheng",
+   "lang": "zh",
+   "translation": "money-back guarantee",
+   "shortAnswer": "「退款保证」的英文是 money-back guarantee，常见于欧美电商退换货政策。注意不要写成 refund guarantee，后者不是固定搭配。",
+   "definition": "money-back guarantee 指商家承诺不满意可全额退款，常与 offer、come with、under 搭配，如 offer a 30-day money-back guarantee。与 return policy 不同，它强调退款承诺本身。",
+   "examples": [
+    {
+     "en": "This vacuum cleaner comes with a 30-day money-back guarantee, so you can try it risk-free.",
+     "zh": "这款吸尘器提供 30 天退款保证，你可以零风险试用。"
+    },
+    {
+     "en": "The store offers a money-back guarantee on all unopened items within 60 days of purchase.",
+     "zh": "该店对所有未开封商品提供购买后 60 天内的退款保证。"
+    }
+   ],
+   "tags": [
+    "海淘网购英文"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "money-back guarantee",
+   "pair": "en-zh",
+   "slug": "money-back-guarantee",
+   "lang": "en",
+   "translation": "退款保证",
+   "shortAnswer": "Money-back guarantee 的中文意思是「退款保证」，指商家承诺不满意可全额退款。与普通 return policy 不同，它更强调退款承诺而非退货流程。",
+   "definition": "money-back guarantee 指商家承诺不满意即全额退款，常用于零售、电商、订阅服务。搭配：offer/come with/have a money-back guarantee。口语中可省略 guarantee，说 money back。",
+   "examples": [
+    {
+     "en": "This vacuum cleaner comes with a 30-day money-back guarantee, so you can try it risk-free.",
+     "zh": "这款吸尘器提供 30 天退款保证，你可以零风险试用。"
+    },
+    {
+     "en": "The store offers a money-back guarantee on all unopened items within 60 days of purchase.",
+     "zh": "该店对所有未开封商品提供购买后 60 天内的退款保证。"
+    }
+   ],
+   "tags": [
+    "海淘网购英文"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "白灼",
+   "pair": "zh-en",
+   "slug": "bai-zhuo",
+   "lang": "zh",
+   "translation": "plain poached",
+   "shortAnswer": "「白灼」的英文常用 plain poached，白灼虾可说 plain poached shrimp，强调清水烫熟、吃食材原味。",
+   "definition": "白灼是粤菜经典技法：滚水或高汤快烫，不加浓酱，吃食材本味，白灼虾、白灼菜心都是代表菜；向英文用户解释时可说 blanched or poached in plain water，突出「清鲜」时用 plain poached。",
+   "examples": [
+    {
+     "en": "For a light and healthy dinner, I ordered plain poached shrimp with ginger and scallion oil.",
+     "zh": "为了清淡健康的晚餐，我点了姜葱油白灼虾。"
+    },
+    {
+     "en": "The chef recommends plain poached choy sum to preserve its crisp texture and natural sweetness.",
+     "zh": "厨师推荐白灼菜心，以保持其爽脆口感和自然清甜。"
+    }
+   ],
+   "tags": [
+    "健身与健康"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "plain poached",
+   "pair": "en-zh",
+   "slug": "plain-poached",
+   "lang": "en",
+   "translation": "白灼",
+   "shortAnswer": "Plain poached (白灼) means briefly boiling food until just done and serving it with soy sauce.",
+   "definition": "Plain poached (白灼) is a Cantonese method of boiling food just until done, then serving it with soy sauce; it keeps dishes lean and light.",
+   "examples": [
+    {
+     "en": "For a light and healthy dinner, I ordered plain poached shrimp with ginger and scallion oil.",
+     "zh": "为了清淡健康的晚餐，我点了姜葱油白灼虾。"
+    },
+    {
+     "en": "The chef recommends plain poached choy sum to preserve its crisp texture and natural sweetness.",
+     "zh": "厨师推荐白灼菜心，以保持其爽脆口感和自然清甜。"
+    }
+   ],
+   "tags": [
+    "健身与健康"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "包邮门槛",
+   "pair": "zh-en",
+   "slug": "bao-you-men-kan",
+   "lang": "zh",
+   "translation": "free shipping threshold",
+   "shortAnswer": "包邮门槛的英文是 free shipping threshold。注意 threshold 指最低金额，不是 shipping fee。",
+   "definition": "free shipping threshold 指订单满一定金额才免运费，常见搭配 reach/meet the free shipping threshold。中国常说“满X包邮”，英文更强调 threshold 这个金额门槛，不是“免邮费”本身。",
+   "examples": [
+    {
+     "en": "I added a few more items to my cart to reach the free shipping threshold.",
+     "zh": "我又往购物车里加了几件商品，以达到包邮门槛。"
+    },
+    {
+     "en": "The store lowered its free shipping threshold from fifty dollars to thirty-five.",
+     "zh": "这家店把包邮门槛从五十美元降到了三十五美元。"
+    }
+   ],
+   "tags": [
+    "海淘网购英文"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "free shipping threshold",
+   "pair": "en-zh",
+   "slug": "free-shipping-threshold",
+   "lang": "en",
+   "translation": "包邮门槛",
+   "shortAnswer": "free shipping threshold 的中文意思是包邮门槛。它指达到一定订单金额才免运费，不是免运费本身。",
+   "definition": "free shipping threshold 指免运费所需的最低订单金额，常用于电商结账页和促销说明。口语也说 free shipping minimum；threshold 强调金额门槛，不是运费。",
+   "examples": [
+    {
+     "en": "I added a few more items to my cart to reach the free shipping threshold.",
+     "zh": "我又往购物车里加了几件商品，以达到包邮门槛。"
+    },
+    {
+     "en": "The store lowered its free shipping threshold from fifty dollars to thirty-five.",
+     "zh": "这家店把包邮门槛从五十美元降到了三十五美元。"
+    }
+   ],
+   "tags": [
+    "海淘网购英文"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "官方翻新",
+   "pair": "zh-en",
+   "slug": "guan-fang-fan-xin",
+   "lang": "zh",
+   "translation": "refurbished",
+   "shortAnswer": "官方翻新的英文是 refurbished，指厂商回收检测后重新销售的认证产品，非全新但通常带保修。",
+   "definition": "官方翻新即 refurbished，强调由厂商或授权方检测维修后重新出售，常与 certified 连用，区别于二手(used)和开箱(open box)。",
+   "examples": [
+    {
+     "en": "I bought a refurbished iPad from the official store and it works like new.",
+     "zh": "我从官方商店买了一台官方翻新平板电脑，用起来跟新的一样。"
+    },
+    {
+     "en": "Certified refurbished products often come with a one-year warranty.",
+     "zh": "官方认证翻新产品通常带一年保修。"
+    }
+   ],
+   "tags": [
+    "海淘网购英文"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "refurbished",
+   "pair": "en-zh",
+   "slug": "refurbished",
+   "lang": "en",
+   "translation": "官方翻新",
+   "shortAnswer": "Refurbished 中文意思是官方翻新，指退货或旧机经厂商检测维修后重新出售，通常有官方保修。",
+   "definition": "Refurbished 指官方或授权翻新，常见搭配 certified refurbished、manufacturer refurbished；比 used 更可靠，但非全新，购买时注意保修范围。",
+   "examples": [
+    {
+     "en": "I bought a refurbished iPad from the official store and it works like new.",
+     "zh": "我从官方商店买了一台官方翻新平板电脑，用起来跟新的一样。"
+    },
+    {
+     "en": "Certified refurbished products often come with a one-year warranty.",
+     "zh": "官方认证翻新产品通常带一年保修。"
+    }
+   ],
+   "tags": [
+    "海淘网购英文"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "会员积分",
+   "pair": "zh-en",
+   "slug": "hui-yuan-ji-fen",
+   "lang": "zh",
+   "translation": "loyalty points",
+   "shortAnswer": "「会员积分」的英文是 loyalty points。它指顾客在商店或平台消费后累积的奖励分，与 membership points 不同，loyalty points 更强调品牌忠诚度计划。",
+   "definition": "loyalty points 常用于海淘和电商语境，搭配 earn/redeem/redeem for 等动词。注意：它是可数名词复数，单数 a loyalty point 极少用；积分兑换说 redeem loyalty points for rewards。",
+   "examples": [
+    {
+     "en": "You can redeem your loyalty points for a free gift or a discount on your next order.",
+     "zh": "你可以用会员积分兑换免费礼品或下次订单的折扣。"
+    },
+    {
+     "en": "I earned a lot of loyalty points during the Black Friday sale, so I'm saving them for a big purchase.",
+     "zh": "我在黑色星期五促销期间赚了很多会员积分，所以打算攒着买大件。"
+    }
+   ],
+   "tags": [
+    "海淘网购英文"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "loyalty points",
+   "pair": "en-zh",
+   "slug": "loyalty-points",
+   "lang": "en",
+   "translation": "会员积分",
+   "shortAnswer": "loyalty points 的中文意思是「会员积分」。它特指商家为鼓励重复消费而给的奖励分，不同于普通 discount 或 cashback，通常可兑换商品或折扣。",
+   "definition": "loyalty points 是美式电商常用词，口语也说 points。常见搭配：earn/redeem/accumulate loyalty points。注意：它属于奖励计划机制，不是直接现金，兑换时可能有门槛或过期限制。",
+   "examples": [
+    {
+     "en": "You can redeem your loyalty points for a free gift or a discount on your next order.",
+     "zh": "你可以用会员积分兑换免费礼品或下次订单的折扣。"
+    },
+    {
+     "en": "I earned a lot of loyalty points during the Black Friday sale, so I'm saving them for a big purchase.",
+     "zh": "我在黑色星期五促销期间赚了很多会员积分，所以打算攒着买大件。"
+    }
+   ],
+   "tags": [
+    "海淘网购英文"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "开箱二手品",
+   "pair": "zh-en",
+   "slug": "kai-xiang-er-shou-pin",
+   "lang": "zh",
+   "translation": "open box",
+   "shortAnswer": "开箱二手品的英文是 open box，指拆封过但功能完好的商品，不等于全新，也不同于翻新。",
+   "definition": "open box 指顾客拆封或退货后经检查、配件较全、成色近新的商品，售价低于全新品，常见搭配 open box deal、open box condition。",
+   "examples": [
+    {
+     "en": "I saved almost a hundred dollars by buying an open box laptop instead of a brand-new one.",
+     "zh": "我买了一台开箱二手品笔记本电脑，而不是全新的，省了将近一百美元。"
+    },
+    {
+     "en": "The listing says it's an open box item, so all accessories are included but the original packaging is slightly damaged.",
+     "zh": "商品描述说这是开箱二手品，所以配件齐全，但原包装有轻微破损。"
+    }
+   ],
+   "tags": [
+    "海淘网购英文"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "open box",
+   "pair": "en-zh",
+   "slug": "open-box",
+   "lang": "en",
+   "translation": "开箱二手品",
+   "shortAnswer": "open box 的中文意思是开箱二手品，指已拆封、可能被短暂使用但功能正常的商品。",
+   "definition": "open box 指被顾客拆封或退回、经商家检查后重新出售的商品，并非全新，也不同于厂家翻新的 refurbished。",
+   "examples": [
+    {
+     "en": "I saved almost a hundred dollars by buying an open box laptop instead of a brand-new one.",
+     "zh": "我买了一台开箱二手品笔记本电脑，而不是全新的，省了将近一百美元。"
+    },
+    {
+     "en": "The listing says it's an open box item, so all accessories are included but the original packaging is slightly damaged.",
+     "zh": "商品描述说这是开箱二手品，所以配件齐全，但原包装有轻微破损。"
+    }
+   ],
+   "tags": [
+    "海淘网购英文"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "退货期限",
+   "pair": "zh-en",
+   "slug": "tui-huo-qi-xian",
+   "lang": "zh",
+   "translation": "return window",
+   "shortAnswer": "退货期限的英文是 return window，特指商家允许退货的有效时间段。别和 return policy（退货政策）混用，window 强调的是那段可退的时间窗口。",
+   "definition": "return window 常与 within、miss、extend 搭配，如 within the 30-day return window。美式零售中窗口长短因店而异，超过 window 就只能换货或拿 store credit。",
+   "examples": [
+    {
+     "en": "The return window for this jacket is 30 days from the delivery date, so you still have time.",
+     "zh": "这件夹克的退货期限是送达日起 30 天，所以你还有时间。"
+    },
+    {
+     "en": "I missed the return window by one day, so the store only offered me store credit instead of a refund.",
+     "zh": "我晚了一天错过退货期限，所以店家只给我店铺余额，而不是退款。"
+    }
+   ],
+   "tags": [
+    "海淘网购英文"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "return window",
+   "pair": "en-zh",
+   "slug": "return-window",
+   "lang": "en",
+   "translation": "退货期限",
+   "shortAnswer": "Return window 的中文意思是退货期限，指商家规定可以退货的那段时间，不指退货政策全文。它强调时间窗口，所以常和 miss、within 连用。",
+   "definition": "Return window 是美式零售常用词，指可退货的有效时段，如 a 30-day return window。口语常说 I missed the return window。注意它不等于退款到账时间，也不是保修期。",
+   "examples": [
+    {
+     "en": "The return window for this jacket is 30 days from the delivery date, so you still have time.",
+     "zh": "这件夹克的退货期限是送达日起 30 天，所以你还有时间。"
+    },
+    {
+     "en": "I missed the return window by one day, so the store only offered me store credit instead of a refund.",
+     "zh": "我晚了一天错过退货期限，所以店家只给我店铺余额，而不是退款。"
+    }
+   ],
+   "tags": [
+    "海淘网购英文"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "礼品小票",
+   "pair": "zh-en",
+   "slug": "li-pin-xiao-piao",
+   "lang": "zh",
+   "translation": "gift receipt",
+   "shortAnswer": "礼品小票的英文是 gift receipt，即不显示价格的购物凭证，方便收礼人退换货。",
+   "definition": "gift receipt 指不列价格的收据，用于退换货时证明购买来源。美国零售商普遍提供，退换常受退货窗口限制，可能只能换货或获得店铺余额。",
+   "examples": [
+    {
+     "en": "When you buy a gift for someone, always ask for a gift receipt so they can exchange it if needed.",
+     "zh": "给别人买礼物时，一定要索要礼品小票，这样他们需要时就能退换。"
+    },
+    {
+     "en": "The store accepts returns with a gift receipt within 30 days, but you'll get store credit instead of a cash refund.",
+     "zh": "该店接受凭礼品小票在三十天内退货，但你会获得店铺余额而非现金退款。"
+    }
+   ],
+   "tags": [
+    "海淘网购英文"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "gift receipt",
+   "pair": "en-zh",
+   "slug": "gift-receipt",
+   "lang": "en",
+   "translation": "礼品小票",
+   "shortAnswer": "gift receipt 的中文是礼品小票，一种不显示价格的购物凭证，随礼物附赠方便退换。",
+   "definition": "gift receipt 是零售术语，指专为送礼设计的收据，省略价格但保留交易信息。常见搭配 include a gift receipt。退换时常受退货窗口限制，可能只能换货或获得店铺余额。",
+   "examples": [
+    {
+     "en": "When you buy a gift for someone, always ask for a gift receipt so they can exchange it if needed.",
+     "zh": "给别人买礼物时，一定要索要礼品小票，这样他们需要时就能退换。"
+    },
+    {
+     "en": "The store accepts returns with a gift receipt within 30 days, but you'll get store credit instead of a cash refund.",
+     "zh": "该店接受凭礼品小票在三十天内退货，但你会获得店铺余额而非现金退款。"
+    }
+   ],
+   "tags": [
+    "海淘网购英文"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "清仓甩卖",
+   "pair": "zh-en",
+   "slug": "qing-cang-shuai-mai",
+   "lang": "zh",
+   "translation": "clearance",
+   "shortAnswer": "「清仓甩卖」的英文是 clearance，指商家清空库存的降价促销。注意 clearance 是商家主动清货，不是我们常说的“打折” discount。",
+   "definition": "clearance 常见搭配：clearance sale（清仓特卖）、on clearance（处于清仓价）、final clearance（最终清仓）。它强调清空库存，价格常为最低，且多不退不换。",
+   "examples": [
+    {
+     "en": "I bought these running shoes on clearance for half price.",
+     "zh": "我趁清仓甩卖半价买了这双跑鞋。"
+    },
+    {
+     "en": "The store is having a clearance sale to make room for new arrivals.",
+     "zh": "这家店正在清仓甩卖，为新货腾地方。"
+    }
+   ],
+   "tags": [
+    "海淘网购英文"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "clearance",
+   "pair": "en-zh",
+   "slug": "clearance",
+   "lang": "en",
+   "translation": "清仓甩卖",
+   "shortAnswer": "Clearance 的中文意思是「清仓甩卖」，指商家为清空库存而大幅降价。它与 discount 不同：discount 泛指打折，clearance 特指清货。",
+   "definition": "clearance 指零售商用低价清空剩余库存，常见搭配：clearance sale、on clearance、clearance rack。常为最终降价，商品可能断码、不可退换。",
+   "examples": [
+    {
+     "en": "I bought these running shoes on clearance for half price.",
+     "zh": "我趁清仓甩卖半价买了这双跑鞋。"
+    },
+    {
+     "en": "The store is having a clearance sale to make room for new arrivals.",
+     "zh": "这家店正在清仓甩卖，为新货腾地方。"
+    }
+   ],
+   "tags": [
+    "海淘网购英文"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "订阅盲盒",
+   "pair": "zh-en",
+   "slug": "ding-yue-mang-he",
+   "lang": "zh",
+   "translation": "subscription box",
+   "shortAnswer": "「订阅盲盒」英文是 subscription box，按月或按季定期寄送主题商品。",
+   "definition": "subscription box 指按月配送美妆、零食或宠物用品等主题盒，与一次性盲盒不同，多含自动续费。",
+   "examples": [
+    {
+     "en": "I signed up for a coffee subscription box that delivers a new roast every month.",
+     "zh": "我订阅了一个每月寄送新烘焙咖啡豆的订阅盲盒。"
+    },
+    {
+     "en": "Before canceling your subscription box, check whether the next billing cycle has already started.",
+     "zh": "取消订阅盲盒前，先确认下一个扣费周期是否已经开始。"
+    }
+   ],
+   "tags": [
+    "海淘网购英文"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "subscription box",
+   "pair": "en-zh",
+   "slug": "subscription-box",
+   "lang": "en",
+   "translation": "订阅盲盒",
+   "shortAnswer": "A subscription box is 「订阅盲盒」, a recurring delivery of themed products.",
+   "definition": "Subscription box means a recurring curated package; common collocations: monthly subscription box, cancel a subscription box.",
+   "examples": [
+    {
+     "en": "I signed up for a coffee subscription box that delivers a new roast every month.",
+     "zh": "我订阅了一个每月寄送新烘焙咖啡豆的订阅盲盒。"
+    },
+    {
+     "en": "Before canceling your subscription box, check whether the next billing cycle has already started.",
+     "zh": "取消订阅盲盒前，先确认下一个扣费周期是否已经开始。"
+    }
+   ],
+   "tags": [
+    "海淘网购英文"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "店铺抵用余额",
+   "pair": "zh-en",
+   "slug": "dian-pu-di-yong-yu-e",
+   "lang": "zh",
+   "translation": "store credit",
+   "shortAnswer": "店铺抵用余额的英文是 store credit，指退货后不退款到银行卡，而是把金额留在店铺里下次消费抵扣。注意它只能在该店铺用，不能提现。",
+   "definition": "常见搭配：issue store credit（发放店铺抵用余额）、use/apply store credit（使用抵用余额）、store credit only（只退店铺余额）。它和 refund（原路退款）不同，通常不可提现，且可能过期。",
+   "examples": [
+    {
+     "en": "Since I lost the receipt, the store gave me store credit instead of a cash refund.",
+     "zh": "因为我把收据弄丢了，店家没退现金，而是给了我店铺抵用余额。"
+    },
+    {
+     "en": "You can use your store credit online or in any physical store location.",
+     "zh": "你可以在网上或任何实体店使用你的店铺抵用余额。"
+    }
+   ],
+   "tags": [
+    "海淘网购英文"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "store credit",
+   "pair": "en-zh",
+   "slug": "store-credit",
+   "lang": "en",
+   "translation": "店铺抵用余额",
+   "shortAnswer": "store credit 中文意思是店铺抵用余额，即退货时商家不退现金，而是把等额金额存到你的账户供下次购物抵扣。与 refund 不同，它通常不能提现。",
+   "definition": "store credit 常见于美国零售退货，搭配有 issue store credit、use store credit、store credit only。口语中也可说 merchandise credit。注意它只能在该商家使用，可能设有效期。",
+   "examples": [
+    {
+     "en": "Since I lost the receipt, the store gave me store credit instead of a cash refund.",
+     "zh": "因为我把收据弄丢了，店家没退现金，而是给了我店铺抵用余额。"
+    },
+    {
+     "en": "You can use your store credit online or in any physical store location.",
+     "zh": "你可以在网上或任何实体店使用你的店铺抵用余额。"
+    }
+   ],
+   "tags": [
+    "海淘网购英文"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "礼品包装",
+   "pair": "zh-en",
+   "slug": "li-pin-bao-zhuang",
+   "lang": "zh",
+   "translation": "gift wrap",
+   "shortAnswer": "「礼品包装」的英文是 gift wrap，指用彩纸、缎带把商品包成礼物的材料或做法。",
+   "definition": "gift wrap 作名词指礼品包装纸或包装服务，如 free gift wrap；作动词指包装礼物，常写作 gift-wrap。",
+   "examples": [
+    {
+     "en": "The store offers free gift wrap during the holiday season.",
+     "zh": "这家店在节日期间提供免费礼品包装。"
+    },
+    {
+     "en": "Could you gift-wrap this necklace? It's for my mother's birthday.",
+     "zh": "你能把这条项链做礼品包装吗？这是送给我妈妈生日的。"
+    }
+   ],
+   "tags": [
+    "海淘网购英文"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "gift wrap",
+   "pair": "en-zh",
+   "slug": "gift-wrap",
+   "lang": "en",
+   "translation": "礼品包装",
+   "shortAnswer": "gift wrap 的中文意思是「礼品包装」，指把商品用彩纸、缎带包成礼物的材料或服务。",
+   "definition": "gift wrap 指礼品包装纸或商家的包装服务，也可作动词表示包装礼物，常写作 gift-wrap。",
+   "examples": [
+    {
+     "en": "The store offers free gift wrap during the holiday season.",
+     "zh": "这家店在节日期间提供免费礼品包装。"
+    },
+    {
+     "en": "Could you gift-wrap this necklace? It's for my mother's birthday.",
+     "zh": "你能把这条项链做礼品包装吗？这是送给我妈妈生日的。"
+    }
+   ],
+   "tags": [
+    "海淘网购英文"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "分期留货",
+   "pair": "zh-en",
+   "slug": "fen-qi-liu-huo",
+   "lang": "zh",
+   "translation": "layaway",
+   "shortAnswer": "「分期留货」的英文是 layaway，指先付定金让商家留货、之后分期付清再取货。注意它不是分期付款（installment），而是付清前商品由商家保管。",
+   "definition": "layaway 常见搭配：put sth on layaway（把某物办分期留货）、layaway plan（分期留货方案）。与 installment plan 不同：layaway 付清前拿不到货，且通常不计利息，多见于节日促销。",
+   "examples": [
+    {
+     "en": "I put the winter coat on layaway so I could pay for it a little at a time before Christmas.",
+     "zh": "我把那件冬季外套办了分期留货，这样就能在圣诞节前一点一点付清。"
+    },
+    {
+     "en": "The store offers a layaway plan, but you can't take the item home until it's fully paid off.",
+     "zh": "这家店提供分期留货方案，但你要付清全款才能把商品拿回家。"
+    }
+   ],
+   "tags": [
+    "海淘网购英文"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "layaway",
+   "pair": "en-zh",
+   "slug": "layaway",
+   "lang": "en",
+   "translation": "分期留货",
+   "shortAnswer": "Layaway 的中文意思是「分期留货」，即先付定金、分期付清后商家才交货。与 installment plan 的关键区别是付清前商品由商家保留，顾客拿不到货。",
+   "definition": "layaway 指商家为顾客保留商品、顾客分次付款的购买方式，常见搭配 put sth on layaway、layaway plan。多用于美国零售（如节日促销），口语正式均可；注意不同于先拿货后付款的 installment。",
+   "examples": [
+    {
+     "en": "I put the winter coat on layaway so I could pay for it a little at a time before Christmas.",
+     "zh": "我把那件冬季外套办了分期留货，这样就能在圣诞节前一点一点付清。"
+    },
+    {
+     "en": "The store offers a layaway plan, but you can't take the item home until it's fully paid off.",
+     "zh": "这家店提供分期留货方案，但你要付清全款才能把商品拿回家。"
+    }
+   ],
+   "tags": [
+    "海淘网购英文"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "比价保障",
+   "pair": "zh-en",
+   "slug": "bi-jia-bao-zhang",
+   "lang": "zh",
+   "translation": "price match guarantee",
+   "shortAnswer": "“比价保障”英文是 price match guarantee，指商家承诺他处更便宜就补差价。",
+   "definition": "price match guarantee 常见于美国零售：购买后限期内发现更低价可退差价。搭配 ask for a price match。",
+   "examples": [
+    {
+     "en": "I bought this laptop yesterday, and now it's on sale at another store. Can I use the price match guarantee?",
+     "zh": "我昨天买了这台笔记本电脑，现在另一家店在打折。我能用比价保障吗？"
+    },
+    {
+     "en": "Thanks to the price match guarantee, I got a refund for the difference when I found the same shoes cheaper online.",
+     "zh": "多亏了比价保障，我在网上找到同款鞋子更便宜后拿到了差价退款。"
+    }
+   ],
+   "tags": [
+    "海淘网购英文"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "price match guarantee",
+   "pair": "en-zh",
+   "slug": "price-match-guarantee",
+   "lang": "en",
+   "translation": "比价保障",
+   "shortAnswer": "Price match guarantee is “比价保障”: a store refunds the difference if you find a lower price.",
+   "definition": "A price match guarantee is a retailer promise to match a competitor’s lower price, with conditions like same item and time limit.",
+   "examples": [
+    {
+     "en": "I bought this laptop yesterday, and now it's on sale at another store. Can I use the price match guarantee?",
+     "zh": "我昨天买了这台笔记本电脑，现在另一家店在打折。我能用比价保障吗？"
+    },
+    {
+     "en": "Thanks to the price match guarantee, I got a refund for the difference when I found the same shoes cheaper online.",
+     "zh": "多亏了比价保障，我在网上找到同款鞋子更便宜后拿到了差价退款。"
+    }
+   ],
+   "tags": [
+    "海淘网购英文"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "换货政策",
+   "pair": "zh-en",
+   "slug": "huan-huo-zheng-ce",
+   "lang": "zh",
+   "translation": "exchange policy",
+   "shortAnswer": "「换货政策」的英文是 exchange policy，指商家允许顾客把商品换成同款其他尺码或颜色的规定，通常不等于退货退款。",
+   "definition": "常见搭配：check the exchange policy（查换货政策）、within the exchange policy（在换货政策范围内）。注意它只管换同款商品，退货退款是 return policy，退成店铺余额叫 store credit。",
+   "examples": [
+    {
+     "en": "Before you buy, check the exchange policy in case the size doesn't fit.",
+     "zh": "买之前先看一下换货政策，以防尺码不合适。"
+    },
+    {
+     "en": "Their exchange policy lets you swap an item within 30 days as long as you keep the receipt.",
+     "zh": "他们的换货政策允许你在三十天内换货，只要保留收据就行。"
+    }
+   ],
+   "tags": [
+    "海淘网购英文"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "exchange policy",
+   "pair": "en-zh",
+   "slug": "exchange-policy",
+   "lang": "en",
+   "translation": "换货政策",
+   "shortAnswer": "exchange policy 的中文意思是「换货政策」，指商家允许顾客把商品换成其他尺码、颜色或款式的规定，和退货政策 return policy 不同。",
+   "definition": "美国零售常见说法：under our exchange policy（按我们的换货政策）、a strict exchange policy，口语也说 exchange-only policy，即只换不退。换货一般要求保留收据、商品未穿未洗且吊牌完好。",
+   "examples": [
+    {
+     "en": "Before you buy, check the exchange policy in case the size doesn't fit.",
+     "zh": "买之前先看一下换货政策，以防尺码不合适。"
+    },
+    {
+     "en": "Their exchange policy lets you swap an item within 30 days as long as you keep the receipt.",
+     "zh": "他们的换货政策允许你在三十天内换货，只要保留收据就行。"
+    }
+   ],
+   "tags": [
+    "海淘网购英文"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "降价提醒",
+   "pair": "zh-en",
+   "slug": "jiang-jia-ti-xing",
+   "lang": "zh",
+   "translation": "price drop alert",
+   "shortAnswer": "「降价提醒」的英文是 price drop alert，电商平台在你关注商品降价时发的通知。",
+   "definition": "可数名词，常说 set up / get a price drop alert。海淘常见于亚马逊等平台，与到货提醒 back-in-stock alert 并列。",
+   "examples": [
+    {
+     "en": "I set up a price drop alert for the headphones I wanted, and got an email when they went on sale.",
+     "zh": "我给自己想买的耳机设置了降价提醒，它打折时我就收到了邮件。"
+    },
+    {
+     "en": "Before you buy anything on Amazon, turn on a price drop alert so you don't miss a better deal.",
+     "zh": "在亚马逊买东西前，先打开降价提醒，这样就不会错过更划算的价格。"
+    }
+   ],
+   "tags": [
+    "海淘网购英文"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "price drop alert",
+   "pair": "en-zh",
+   "slug": "price-drop-alert",
+   "lang": "en",
+   "translation": "降价提醒",
+   "shortAnswer": "price drop alert 的中文意思是「降价提醒」，指关注的商品降价时收到的通知。",
+   "definition": "常用搭配 set up a price drop alert、get a price drop alert。属电商中性术语，口语也说 price alert。",
+   "examples": [
+    {
+     "en": "I set up a price drop alert for the headphones I wanted, and got an email when they went on sale.",
+     "zh": "我给自己想买的耳机设置了降价提醒，它打折时我就收到了邮件。"
+    },
+    {
+     "en": "Before you buy anything on Amazon, turn on a price drop alert so you don't miss a better deal.",
+     "zh": "在亚马逊买东西前，先打开降价提醒，这样就不会错过更划算的价格。"
+    }
+   ],
+   "tags": [
+    "海淘网购英文"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "优惠码",
+   "pair": "zh-en",
+   "slug": "you-hui-ma",
+   "lang": "zh",
+   "translation": "promo code",
+   "shortAnswer": "「优惠码」的英文是 promo code，海淘结账时输入可享折扣，线上比 coupon 更常用。",
+   "definition": "promo code 是促销代码的缩写，结账时输入可享折扣或免邮。常见搭配：enter a promo code、apply a promo code。",
+   "examples": [
+    {
+     "en": "Don't forget to enter the promo code at checkout to get 20% off your order.",
+     "zh": "结账时别忘了输入优惠码，可以享受订单八折优惠。"
+    },
+    {
+     "en": "I found a promo code online that gives free shipping on orders over $50.",
+     "zh": "我在网上找到了一个优惠码，订单满五十美元可免运费。"
+    }
+   ],
+   "tags": [
+    "海淘网购英文"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "promo code",
+   "pair": "en-zh",
+   "slug": "promo-code",
+   "lang": "en",
+   "translation": "优惠码",
+   "shortAnswer": "“promo code”的中文意思是「优惠码」，即结账时输入的线上折扣码，比 coupon 更常用于网购。",
+   "definition": "promo code 指线上购物时输入的字母数字折扣代码，常见搭配：enter、apply、redeem a promo code，正式说法为 promotional code。",
+   "examples": [
+    {
+     "en": "Don't forget to enter the promo code at checkout to get 20% off your order.",
+     "zh": "结账时别忘了输入优惠码，可以享受订单八折优惠。"
+    },
+    {
+     "en": "I found a promo code online that gives free shipping on orders over $50.",
+     "zh": "我在网上找到了一个优惠码，订单满五十美元可免运费。"
+    }
+   ],
+   "tags": [
+    "海淘网购英文"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "礼品卡",
+   "pair": "zh-en",
+   "slug": "li-pin-ka",
+   "lang": "zh",
+   "translation": "gift card",
+   "shortAnswer": "「礼品卡」的英文是 gift card，指预付一定金额、可在指定商店或网站消费的卡片，常可反复使用至余额用完。",
+   "definition": "gift card 常用于电商和实体店语境，搭配 buy/redeem/reload a gift card。易错点：它一般不能提现，丢失常无法补办；与退货产生的 store credit 不同。",
+   "examples": [
+    {
+     "en": "I bought a gift card for my sister so she could pick out her own birthday present.",
+     "zh": "我给妹妹买了一张礼品卡，这样她就能自己挑生日礼物了。"
+    },
+    {
+     "en": "You can redeem this gift card online or at any of our stores.",
+     "zh": "这张礼品卡可以在网上或我们任意一家门店兑换使用。"
+    }
+   ],
+   "tags": [
+    "海淘网购英文"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "gift card",
+   "pair": "en-zh",
+   "slug": "gift-card",
+   "lang": "en",
+   "translation": "礼品卡",
+   "shortAnswer": "gift card 的中文意思是「礼品卡」，是一种预付金额、可在特定商店或网站消费的卡片，多为塑料卡并可分期用完余额。",
+   "definition": "gift card 指零售商或平台发行的预付消费卡，常见搭配有 buy/redeem/reload a gift card、digital gift card。注意它通常不可提现，也不能用于其他商家。",
+   "examples": [
+    {
+     "en": "I bought a gift card for my sister so she could pick out her own birthday present.",
+     "zh": "我给妹妹买了一张礼品卡，这样她就能自己挑生日礼物了。"
+    },
+    {
+     "en": "You can redeem this gift card online or at any of our stores.",
+     "zh": "这张礼品卡可以在网上或我们任意一家门店兑换使用。"
+    }
+   ],
+   "tags": [
+    "海淘网购英文"
+   ],
+   "searchIntentType": "meaning"
+  },
+  {
+   "term": "限时特惠",
+   "pair": "zh-en",
+   "slug": "xian-shi-te-hui",
+   "lang": "zh",
+   "translation": "flash deal",
+   "shortAnswer": "「限时特惠」英文是 flash deal，指电商短时折扣；别与亚马逊商标 lightning deal 混用。",
+   "definition": "flash deal 强调限时、限量，通常持续几小时到一天，常见搭配 grab a flash deal、flash deal on 某商品。错过就恢复原价。",
+   "examples": [
+    {
+     "en": "I grabbed a flash deal on a pair of running shoes last night, but it expired in two hours.",
+     "zh": "我昨晚抢到一双跑鞋的限时特惠，但两小时后就过期了。"
+    },
+    {
+     "en": "During Black Friday, many stores offer flash deals that last only a few hours.",
+     "zh": "黑色星期五期间，许多商店会推出仅持续几小时的限时特惠。"
+    }
+   ],
+   "tags": [
+    "海淘网购英文"
+   ],
+   "searchIntentType": "how_to_say"
+  },
+  {
+   "term": "flash deal",
+   "pair": "en-zh",
+   "slug": "flash-deal",
+   "lang": "en",
+   "translation": "限时特惠",
+   "shortAnswer": "「限时特惠」英文是 flash deal，指电商限时几小时或一天的快速折扣，与 lightning deal 近义。",
+   "definition": "flash deal 指短暂、限量的促销，强调先到先得和倒计时。常见搭配 grab a flash deal, flash deal on electronics。",
+   "examples": [
+    {
+     "en": "I grabbed a flash deal on a pair of running shoes last night, but it expired in two hours.",
+     "zh": "我昨晚抢到一双跑鞋的限时特惠，但两小时后就过期了。"
+    },
+    {
+     "en": "During Black Friday, many stores offer flash deals that last only a few hours.",
+     "zh": "黑色星期五期间，许多商店会推出仅持续几小时的限时特惠。"
+    }
+   ],
+   "tags": [
+    "海淘网购英文"
+   ],
+   "searchIntentType": "meaning"
+  }
+ ]
+}
