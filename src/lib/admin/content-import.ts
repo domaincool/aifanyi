@@ -13,6 +13,7 @@ import { prisma } from '@/lib/db';
 import { Prisma } from '@prisma/client';
 import type { OpsIdentity } from './ops-auth';
 import { logAdminAction } from './ops-auth';
+import { normalizeExamples } from './example-normalize'; // __p07__ examples 归一化（与 meme-import 同源，两通道输出一致 {zh,en}）
 
 export type ContentType = 'idiom' | 'slang' | 'untranslatable' | 'food' | 'expression' | 'scene' | 'menu' | 'recipe';
 
@@ -205,7 +206,7 @@ function buildData(it: ContentImportItem): any {
       ...(it.tone !== undefined ? { tone: it.tone || null } : {}),
       ...(it.collocations !== undefined ? { collocations: Array.isArray(it.collocations) ? (it.collocations as any) : null } : {}),
       ...(it.misTranslated !== undefined ? { misTranslated: Array.isArray(it.misTranslated) ? (it.misTranslated as any) : null } : {}),
-      examples: Array.isArray(it.examples) ? it.examples : [],
+      examples: (normalizeExamples(it.examples) ?? []) as any, // __p07__ 折叠数组对，防 [[zh,en]] 形态入库
       tags: it.tags || [],
     };
   }
@@ -215,7 +216,7 @@ function buildData(it: ContentImportItem): any {
     term: it.term, type: t, lang: it.lang || 'zh-CN',
     meaning: it.meaning, translation: it.translation,
     pinyin: it.pinyin || null, literal: it.literal || null,
-    examples: it.examples as any,
+    examples: normalizeExamples(it.examples) as any, // __p07__ 折叠；undefined/null 透传（buildUpdateData 保 passthrough 语义）
     usage: it.usage || null, note: it.note || null, source: it.source || null, culture: it.culture || null,
     shortAnswer: it.shortAnswer || null, definition: it.definition || null, searchIntentType: it.searchIntentType || null,
     misTranslated: it.misTranslated as any, multiLang: it.multiLang as any,

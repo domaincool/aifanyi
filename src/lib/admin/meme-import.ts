@@ -10,6 +10,7 @@
 import { prisma } from '@/lib/db';
 import type { OpsIdentity } from './ops-auth';
 import { logAdminAction } from './ops-auth';
+import { normalizeExamples } from './example-normalize'; // __p07__ examples 归一化（数组对折叠，两通道输出一致 {zh,en}）
 
 export interface MemeImportItem {
   term: string;
@@ -143,11 +144,12 @@ export async function importMemes(input: {
     // ── 事务：更新 → 新建 ──
     await prisma.$transaction(async (tx) => {
       for (const it of toUpdate) {
+        const normEx = normalizeExamples(it.examples); // __p07__ 折叠 [zh,en] 数组对为 {zh,en}
         const data: Record<string, unknown> = {
           slug: it.slug,
           meaning: it.meaning,
           translation: it.translation,
-          examples: (it.examples ?? []) as unknown as object,
+          examples: (normEx ?? []) as unknown as object,
           tags: it.tags ?? [],
           popularity: it.popularity ?? 0,
         };
@@ -166,7 +168,7 @@ export async function importMemes(input: {
             slug: it.slug,
             meaning: it.meaning,
             translation: it.translation,
-            examples: (it.examples ?? []) as unknown as object,
+            examples: (normalizeExamples(it.examples) ?? []) as unknown as object, // __p07__ 折叠与 update 分支一致
             tags: it.tags ?? [],
             popularity: it.popularity ?? 0,
             status: 'published',
