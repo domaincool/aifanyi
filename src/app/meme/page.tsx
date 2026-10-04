@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { prisma } from '@/lib/db';
 import { getTrendingMemes } from '@/lib/metrics/trending';
-import { buildListMetadata } from '@/lib/seo';
+import { buildListMetadata, SITE_URL } from '@/lib/seo';
 import Link from 'next/link';
 
 export const dynamic = 'force-dynamic';
@@ -61,6 +61,24 @@ export default async function MemeIndexPage({
   const totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE));
   const tagList = tags.map((t) => ({ tag: t.tag, cnt: Number(t.cnt) }));
 
+  // __p0coll__ 默认列表页（无筛选）补 CollectionPage + ItemList schema
+  const itemListLd = !q && !tag && memes.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: '网络用语翻译大全',
+    url: SITE_URL + '/meme',
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: total,
+      itemListElement: memes.map((m, i) => ({
+        '@type': 'ListItem',
+        position: (page - 1) * PAGE_SIZE + i + 1,
+        name: m.term,
+        url: SITE_URL + (m.lang === 'en' ? '/understand/meaning/' : '/meme/') + m.slug,
+      })),
+    },
+  } : null;
+
   const href = (extra: { q?: string; tag?: string; page?: string }) => {
     const usp = new URLSearchParams();
     const qq = extra.q !== undefined ? extra.q : q;
@@ -75,6 +93,7 @@ export default async function MemeIndexPage({
 
   return (
     <div>
+      {itemListLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListLd) }} />}
       {/* 顶部 */}
       <section className="hero">
         <h1>网络用语翻译大全</h1>

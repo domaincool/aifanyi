@@ -205,7 +205,7 @@ const OPPORTUNITY_VARIANT_CAP = 20;
 // type 映射：idiom→idiom、untranslatable→untranslatable、slang/food/expression→expression。
 // 查询失败一律静默返回 null（covered 保持 false，不影响聚合主链路）。
 
-type CoverageHit = { kind: 'meme' | 'expression' | 'idiom' | 'untranslatable'; slug: string };
+type CoverageHit = { kind: 'meme' | 'expression' | 'idiom' | 'untranslatable' | 'phrase'; slug: string };
 
 async function findExistingCoverage(term: string): Promise<CoverageHit | null> {
   try {
@@ -217,6 +217,14 @@ async function findExistingCoverage(term: string): Promise<CoverageHit | null> {
       orderBy: [{ popularity: 'desc' }, { id: 'asc' }],
     });
     if (meme) return { kind: 'meme', slug: meme.slug };
+    // __p0cov__ PhraseEntry 覆盖检查（say 双向词条页）：优先级 meme > phrase > expression
+    // 9-19 后内容线主要落 PhraseEntry（say 页），不查这张表会让 covered 回写停更（锅气/纸箱类误报未覆盖）
+    const phrase = await prisma.phraseEntry.findFirst({
+      where: { term: { equals: normalized, mode: 'insensitive' }, status: 'published' },
+      select: { slug: true },
+      orderBy: [{ popularity: 'desc' }, { id: 'asc' }],
+    });
+    if (phrase) return { kind: 'phrase', slug: phrase.slug };
     const expr = await prisma.expressionEntry.findFirst({
       where: { term: { equals: normalized, mode: 'insensitive' }, status: 'published' },
       select: { slug: true, type: true },

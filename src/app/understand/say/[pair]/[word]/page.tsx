@@ -25,6 +25,8 @@ const PAIR_META: Record<Pair, { title: (w: string) => string; desc: (w: string, 
   },
 };
 
+const fmtDate = (d: Date) => d.toISOString().slice(0, 10);
+
 export async function generateMetadata({ params }: { params: Promise<{ pair: string; word: string }> }): Promise<Metadata> {
   const { pair, word } = await params;
   if (!PAIRS.includes(pair as Pair)) return {};
@@ -53,22 +55,37 @@ export default async function SayPairPage({ params }: { params: Promise<{ pair: 
 
   const meta = PAIR_META[pair as Pair];
   const examples = (entry.examples as { en: string; zh: string }[]) || [];
+  const tags = (entry.tags as string[]) || [];
+  const primaryTag = tags[0] || null;
 
-  // 相关词：同 pair 优先 + tags 交叉的词条页内链
-  const [samePair, crossEntries] = await Promise.all([
+  // __p0rel__ 相关表达升级：同标签 ×6 + 同类目（主标签）×6 + 跨库梗卡 ×4（同标签），全部按 popularity 降序
+  const [sameTag, sameCategoryRaw, crossEntries] = await Promise.all([
     prisma.phraseEntry.findMany({
-      where: { pair: entry.pair, status: 'published', id: { not: entry.id }, tags: { hasSome: entry.tags } },
+      where: { pair: entry.pair, status: 'published', id: { not: entry.id }, tags: { hasSome: tags } },
       orderBy: { popularity: 'desc' },
-      take: 4,
+      take: 6,
       select: { slug: true, term: true, translation: true },
-    }).catch(() => []),
+    }).catch(() => [] as { slug: string; term: string; translation: string }[]),
+    primaryTag
+      ? prisma.phraseEntry.findMany({
+          where: { pair: entry.pair, status: 'published', id: { not: entry.id }, tags: { has: primaryTag } },
+          orderBy: { popularity: 'desc' },
+          take: 8,
+          select: { slug: true, term: true, translation: true },
+        }).catch(() => [] as { slug: string; term: string; translation: string }[])
+      : Promise.resolve([] as { slug: string; term: string; translation: string }[]),
     prisma.memeEntry.findMany({
-      where: { status: 'published', tags: { hasSome: entry.tags } },
+      where: { status: 'published', tags: { hasSome: tags } },
       orderBy: { popularity: 'desc' },
       take: 4,
       select: { slug: true, term: true, translation: true, lang: true },
-    }).catch(() => []),
+    }).catch(() => [] as { slug: string; term: string; translation: string; lang: string }[]),
   ]);
+
+  // 同标签在前，同类目补位去重，合计 12 张词条卡
+  const seenSlugs = new Set(sameTag.map((s) => s.slug));
+  const categoryExtra = sameCategoryRaw.filter((s) => !seenSlugs.has(s.slug)).slice(0, Math.max(0, 12 - sameTag.length));
+  const relatedEntries = [...sameTag, ...categoryExtra];
 
   // 服务端意图埋点（speak 类：怎么说场景）
   void recordLanguageIntent({
@@ -82,7 +99,13 @@ export default async function SayPairPage({ params }: { params: Promise<{ pair: 
     toolUsed: 'say_page',
   }).catch(() => {});
 
-  const jsonLd = {
+  // __p0schema__ 三件套：QAPage + DefinedTerm + BreadcrumbList（照搬 meme 模板标准）
+  const pagePath = `/understand/say/${pair}/${entry.slug}`;
+  const pageUrl = SITE_URL + pagePath;
+  const datePublished = entry.createdAt.toISOString();
+  const dateModified = entry.updatedAt.toISOString();
+
+  const jsonLdQa = {
     '@context': 'https://schema.org',
     '@type': 'QAPage',
     mainEntity: {
@@ -90,11 +113,35 @@ export default async function SayPairPage({ params }: { params: Promise<{ pair: 
       name: meta.h1(entry.term),
       text: meta.h1(entry.term),
       answerCount: 1,
+      datePublished,
       acceptedAnswer: {
         '@type': 'Answer',
         text: entry.shortAnswer,
+        dateCreated: datePublished,
       },
     },
+  };
+
+  const jsonLdTerm = {
+    '@context': 'https://schema.org',
+    '@type': 'DefinedTerm',
+    name: entry.term,
+    description: entry.shortAnswer,
+    translation: entry.translation,
+    inDefinedTermSet: `${SITE_URL}/understand/say`,
+    inLanguage: pair === 'zh-en' ? 'zh-CN' : 'en',
+    termCode: entry.slug,
+    dateModified,
+  };
+
+  const jsonLdBreadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: '看懂语言', item: `${SITE_URL}/understand` },
+      { '@type': 'ListItem', position: 2, name: '怎么说 · 高频词双语词典', item: `${SITE_URL}/understand/say` },
+      { '@type': 'ListItem', position: 3, name: entry.term, item: pageUrl },
+    ],
   };
 
   const otherPair = pair === 'zh-en' ? 'en-zh' : 'zh-en';
@@ -105,10 +152,13 @@ export default async function SayPairPage({ params }: { params: Promise<{ pair: 
 
   return (
     <div>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdQa) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdTerm) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
+
       <section className="hero">
         <h1>{meta.h1(entry.term)}</h1>
-        <p>{PAIR_META[pair as Pair].label} · {entry.tags[0] || '高频表达'}</p>
+        <p>{PAIR_META[pair as Pair].label} · {tags[0] || '高频表达'}</p>
       </section>
 
       <div className="result" style={{ margin: '18px auto', maxWidth: 680 }}>
@@ -135,16 +185,28 @@ export default async function SayPairPage({ params }: { params: Promise<{ pair: 
         </>
       )}
 
-      {(samePair.length > 0 || crossEntries.length > 0) && (
+      <p style={{ color: 'var(--muted)', fontSize: 13, maxWidth: 680, margin: '14px auto 0' }}>
+        发布于 {fmtDate(entry.createdAt)} · 更新于 {fmtDate(entry.updatedAt)} · 收录于 <Link href="/understand/say">怎么说 · 高频词双语词典</Link>
+      </p>
+
+      {relatedEntries.length > 0 && (
         <>
           <h2 className="section-title">相关表达</h2>
           <div className="entry-grid">
-            {samePair.map((s) => (
+            {relatedEntries.map((s) => (
               <Link key={'p' + s.slug} className="entry-card" href={`/understand/say/${pair}/${s.slug}`}>
                 <div className="term">{s.term}</div>
                 <div className="tr">{s.translation}</div>
               </Link>
             ))}
+          </div>
+        </>
+      )}
+
+      {crossEntries.length > 0 && (
+        <>
+          <h2 className="section-title">相关网络用语</h2>
+          <div className="entry-grid">
             {crossEntries.map((c) => (
               <Link key={'m' + c.slug} className="entry-card" href={(c.lang === 'en' ? '/understand/meaning/' : '/meme/') + c.slug}>
                 <div className="term">{c.term}</div>
@@ -153,6 +215,14 @@ export default async function SayPairPage({ params }: { params: Promise<{ pair: 
             ))}
           </div>
         </>
+      )}
+
+      {tags.length > 0 && (
+        <p style={{ maxWidth: 680, margin: '16px auto 0' }}>
+          {tags.map((t) => (
+            <span key={t} className="chip" style={{ marginRight: 8, display: 'inline-block' }}>#{t}</span>
+          ))}
+        </p>
       )}
 
       <div className="cta-box" style={{ marginTop: 24 }}>

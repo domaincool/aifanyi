@@ -69,10 +69,15 @@ export async function GET(_req: Request, { params }: { params: Promise<{ group: 
     const blindtests = await prisma.blindtest.findMany({ where: { status: 'published' }, select: { id: true, createdAt: true }, orderBy: { createdAt: 'desc' } });
     for (const b of blindtests) entries.push({ loc: `${SITE_URL}/arena/${b.id}`, lastmod: b.createdAt });
 
-    // meme tag 聚合页（52 个）
-    const tagRows = await prisma.$queryRaw`SELECT DISTINCT unnest(tags) AS tag FROM "MemeEntry" WHERE status = 'published'`;
-    for (const t of tagRows as { tag: string }[]) {
-      entries.push({ loc: `${SITE_URL}/meme/tag/${encodeURIComponent(t.tag)}` });
+    // meme tag 聚合页（52 个）—— __p0lastmod__ 按 tag 分组 max(updatedAt) 补真实 lastmod（此前缺失）
+    const tagRows = await prisma.$queryRaw<{ tag: string; lastmod: Date | null }[]>`
+      SELECT t.tag, max(m."updatedAt") AS lastmod
+      FROM "MemeEntry" m, unnest(m.tags) AS t(tag)
+      WHERE m.status = 'published'
+      GROUP BY t.tag
+    `;
+    for (const t of tagRows) {
+      entries.push({ loc: `${SITE_URL}/meme/tag/${encodeURIComponent(t.tag)}`, lastmod: t.lastmod || undefined });
     }
   } catch {
     // DB 不可用时输出已收集部分（不让 sitemap 500）

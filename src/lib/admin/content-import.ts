@@ -42,6 +42,8 @@ export interface ContentImportItem {
   shortAnswer?: string; // V1.0 P6：一句话快答（推荐 40-100 字符，质量优先）
   definition?: string; // 详解定义（语境分层）
   searchIntentType?: string; // 七枚举：definition|meaning|translation|how_to_say|hidden_meaning|comparison|cultural_context
+  tone?: string; // V1.1 P0-2：语气（多值逗号分隔）—— M1 补映射：slang 分支此前漏掉该字段
+  collocations?: unknown[]; // V1.1 P0-2：常见搭配 [{phrase, zh?, note?}] —— M1 补映射
   tags?: string[];
   country?: string;
   scene?: string;
@@ -189,6 +191,8 @@ function buildData(it: ContentImportItem): any {
   }
   if (t === 'slang') {
     // 2026-09-01 运营拍板：slang 统一走 /meme 体系（MemeEntry 表）
+    // __m1fix__ 补 usage/tone/collocations/misTranslated 映射：此前仅 shortAnswer/definition/searchIntentType/examples/tags 落库
+    // 注意：条件展开保持「省略即 undefined」→ buildUpdateData 里 delete → update 保留旧值（与探针确认的 passthrough 行为一致，不得用 || null 把省略变 null 清空旧值）
     return {
       ...base,
       slug: it.slug || slugify(it.term || ''),
@@ -197,6 +201,10 @@ function buildData(it: ContentImportItem): any {
       shortAnswer: it.shortAnswer || null,
       definition: it.definition || null,
       searchIntentType: it.searchIntentType || null,
+      ...(it.usage !== undefined ? { usage: it.usage || null } : {}),
+      ...(it.tone !== undefined ? { tone: it.tone || null } : {}),
+      ...(it.collocations !== undefined ? { collocations: Array.isArray(it.collocations) ? (it.collocations as any) : null } : {}),
+      ...(it.misTranslated !== undefined ? { misTranslated: Array.isArray(it.misTranslated) ? (it.misTranslated as any) : null } : {}),
       examples: Array.isArray(it.examples) ? it.examples : [],
       tags: it.tags || [],
     };
@@ -219,13 +227,13 @@ function buildData(it: ContentImportItem): any {
 function buildUpdateData(it: ContentImportItem): any {
   const data: any = buildData(it);
   delete data.slug;
-  const jsonFields = ['tips', 'cautions', 'dialogue', 'related', 'pairings', 'multiLang', 'misTranslated', 'vocab', 'examples'];
+  const jsonFields = ['tips', 'cautions', 'dialogue', 'related', 'pairings', 'multiLang', 'misTranslated', 'vocab', 'examples', 'collocations']; // __m1fix__ collocations passthrough
   for (const f of jsonFields) {
     if (data[f] === null) data[f] = Prisma.JsonNull;
     else if (data[f] === undefined) delete data[f];
   }
   // 标量省略（undefined）保留旧值
-  const scalarFields = ['pinyin', 'literal', 'usage', 'note', 'source', 'culture', 'romanized', 'en', 'description', 'category', 'originalName', 'enName', 'country', 'intro', 'cookTime', 'difficulty', 'servings', 'term', 'meaning', 'translation', 'lang', 'zh', 'dish', 'title', 'shortAnswer', 'definition', 'searchIntentType'];
+  const scalarFields = ['pinyin', 'literal', 'usage', 'note', 'source', 'culture', 'romanized', 'en', 'description', 'category', 'originalName', 'enName', 'country', 'intro', 'cookTime', 'difficulty', 'servings', 'term', 'meaning', 'translation', 'lang', 'zh', 'dish', 'title', 'shortAnswer', 'definition', 'searchIntentType', 'tone']; // __m1fix__ tone passthrough
   for (const f of scalarFields) {
     if (data[f] === undefined) delete data[f];
   }

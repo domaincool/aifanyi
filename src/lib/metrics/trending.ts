@@ -51,7 +51,7 @@ export async function getTrendingMemes(limit = 10) {
       where: { status: 'published' },
       orderBy: { popularity: 'desc' },
       take: limit,
-      select: { id: true, slug: true, term: true, meaning: true, translation: true, popularity: true },
-    }).then((rows) => rows.map((e) => ({ ...e, pv: 0, score: 0 }))); // __p0mlink-trending2__
+      select: { id: true, slug: true, term: true, meaning: true, translation: true, popularity: true, lang: true }, // __p0mlink-trending2__ lang 补齐（与主路径 select 对齐，路由分流需要）
+    }).then((rows) => rows.map((e) => ({ ...e, pv: 0, score: 0 })));
   }
 }
